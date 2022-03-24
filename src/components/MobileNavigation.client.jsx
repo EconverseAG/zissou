@@ -4,6 +4,8 @@ import {FocusTrap} from '@headlessui/react';
 
 import OpenIcon from './OpenIcon';
 
+import * as styles from './header.module.scss';
+
 let scrollPosition = 0;
 
 /**
@@ -23,7 +25,7 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
   }, [isOpen]);
 
   return (
-    <div className="lg:hidden">
+    <div className={styles.menuHamburguer}>
       <OpenFocusTrap>
         <button
           type="button"
@@ -67,7 +69,7 @@ function CloseIcon() {
     >
       <path
         d="M1 17L17 1M1 1L17 17"
-        stroke="black"
+        stroke="#fff"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
