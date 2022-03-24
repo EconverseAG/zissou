@@ -1,0 +1,11 @@
+@import '../index.css';
+
+.containerTeste {
+  background: var(--gray-color-300);
+
+  .title {
+    color: #0f0;
+    font-family: 'ZonaPro';
+    font-size: 80px;
+  }
+}
