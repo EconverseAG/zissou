@@ -1,0 +1,445 @@
+.container {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all ease-in-out .3s;
+  padding-bottom: 20px;
+
+  .header {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    @media only screen and (max-width: 1024px) {
+      padding: 8px 0;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .logo {
+        width: 60px;
+        height: 36px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-left: 50px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .buyOptions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >a {
+          margin-right: 15px;
+
+          &.stores {
+            display: none;
+            font-size: 14px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            color: var(--white-color);
+            font-family: "ZonaProSemiBold";
+            letter-spacing: 1px;
+
+            @media only screen and (min-width: 1024px) {
+              display: block;
+            }
+          }
+        }
+      }
+
+      //menu desktop
+      .navigation {
+        display: none;
+
+        @media only screen and (min-width: 1024px) {
+          display: block;
+        }
+
+        >ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          >li {
+            margin-right: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            >a {
+              font-family: 'ZonaProSemiBold';
+              font-size: 14px;
+              line-height: 19px;
+              color: var(--white-color);
+              text-decoration: none;
+              text-transform: uppercase;
+              padding: 0;
+              letter-spacing: 1px;
+            }
+
+            .subMenu {
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              position: absolute;
+              background: rgba(255, 255, 255, .95);
+              box-shadow: 0 0 10px rgb(42 53 65 / 25%);
+              padding: 15px;
+              min-width: 235px;
+              text-align: center;
+              transition: all .35s ease-in-out;
+              top: 30px;
+              opacity: 0;
+              overflow: hidden;
+
+              >li {
+                margin: 0;
+                padding: 7.5px 0;
+
+                &:after {
+                  margin-top: 5px;
+                  content: '';
+                  width: 0;
+                  opacity: 0;
+                  height: 2px;
+                  background: var(--blue-color-500);
+                  display: block;
+                  transition: all .35s ease-in-out;
+                }
+
+                &.coral {
+                  &:hover {
+                    &:after {
+                      width: 100%;
+                      opacity: 1;
+                      background: var(--coral-color-500);
+                    }
+                  }
+                }
+
+                &.blue {
+                  &:hover {
+                    &:after {
+                      width: 100%;
+                      opacity: 1;
+                      background: var(--blue-color-500);
+                    }
+                  }
+                }
+
+                >a {
+                  &.descubra {
+                    background: var(--purple-color-100);
+                    border: 1px solid var(--purple-color-100);
+                    color: var(--white-color);
+                    border-radius: 200px;
+                    padding: 1em 0.5em;
+                    font-size: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    line-height: 13px;
+                    font-family: "ZonaPro";
+                    margin-top: 5px;
+
+                    &:hover {
+                      background: var(--white-color);
+                      color: var(--purple-color-100);
+                    }
+                  }
+
+                  &.compare {
+                    border-bottom: 2px solid rgba(66, 82, 100, .25);
+                    color: var(--blue-color-500);
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: fit-content;
+                    margin: 0 auto;
+                    font-family: "ZonaProSemiBold";
+                    letter-spacing: 1px;
+                  }
+                }
+              }
+
+            }
+
+            &:hover {
+              .subMenu {
+                top: 42px;
+                opacity: 1;
+              }
+            }
+
+            &.novo {
+              display: flex;
+              align-items: center;
+
+              &:before {
+                content: '';
+                background: url('../../assets/seloNovo.png') no-repeat center;
+                background-size: contain;
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      // menu mobile
+      .menuHamburguer {
+        display: none;
+
+        @media only screen and (max-width: 1024px) {
+          display: block;
+        }
+
+        .buttonOpenCloseMenu {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 1.75rem;
+        }
+
+        .menuMobileWrapper {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, .5);
+          z-index: 10;
+
+          .menuMobileContent {
+            height: 100%;
+            width: 85%;
+            padding: 1rem;
+            background: var(--white-color);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            overflow: auto;
+
+            .menuMobileContentTop {
+              >div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                border-bottom: 1px solid var(--gray-color-300);
+                padding-bottom: 1.5rem;
+
+                .logoMenu {
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+
+              >ul {
+                >li {
+                  display: flex;
+                  flex-direction: column;
+                  padding: 20px 0;
+                  border-bottom: 1px solid rgba(66, 82, 100, .5);
+
+                  &.novo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    padding: 10px 0;
+
+                    &:after {
+                      content: '';
+                      background: url('../../assets/seloNovo.png') no-repeat center;
+                      background-size: contain;
+                      display: block;
+                      width: 40px;
+                      height: 40px;
+                      margin-left: 10px;
+                    }
+                  }
+
+                  a {
+                    font-family: 'ZonaProBold';
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: var(--blue-color-500);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 0;
+                    letter-spacing: 1px;
+                  }
+
+                  .subMenu {
+                    flex-direction: column;
+                    align-items: stretch;
+                    background: rgba(255, 255, 255, .95);
+                    min-width: 235px;
+                    text-align: center;
+                    transition: all .35s ease-in-out;
+                    top: 30px;
+                    opacity: 0;
+                    width: 100%;
+                    max-height: 0;
+                    z-index: 1;
+
+                    >li {
+                      margin: 0;
+                      padding: 7.5px 0;
+
+                      &:after {
+                        margin-top: 5px;
+                        content: '';
+                        width: 0;
+                        opacity: 0;
+                        height: 2px;
+                        background: var(--blue-color-500);
+                        display: block;
+                        transition: all .35s ease-in-out;
+                      }
+
+                      &.coral {
+                        &:hover {
+                          &:after {
+                            width: 100%;
+                            opacity: 1;
+                            background: var(--coral-color-500);
+                          }
+                        }
+                      }
+
+                      &.blue {
+                        &:hover {
+                          &:after {
+                            width: 100%;
+                            opacity: 1;
+                            background: var(--blue-color-500);
+                          }
+                        }
+                      }
+
+                      >a {
+                        &.descubra {
+                          background: var(--purple-color-100);
+                          border: 1px solid var(--purple-color-100);
+                          color: var(--white-color);
+                          border-radius: 200px;
+                          padding: 1em 0.5em;
+                          font-size: 11px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          text-transform: uppercase;
+                          letter-spacing: 1px;
+                          font-weight: 700;
+                          line-height: 13px;
+                          font-family: "ZonaPro";
+                          margin-top: 5px;
+
+                          &:hover {
+                            background: var(--white-color);
+                            color: var(--purple-color-100);
+                          }
+                        }
+
+                        &.compare {
+                          border-bottom: 2px solid rgba(66, 82, 100, .25);
+                          color: var(--blue-color-500);
+                          text-transform: uppercase;
+                          font-size: 11px;
+                          text-align: center;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: fit-content;
+                          margin: 0 auto;
+                          font-family: "ZonaProSemiBold";
+                          letter-spacing: 1px;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .titleWithArrow {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  .arrowDown {
+                    width: 30px;
+                    padding: 5px;
+                  }
+                }
+              }
+            }
+
+            .menuMobileContentBottom {
+              margin-top: 50px;
+
+              .menuMobileItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                border-bottom: 1px solid var(--gray-color-300);
+
+                >div {
+                  display: flex;
+                  align-items: center;
+
+                  a {
+                    padding: 15px 5px;
+                  }
+                }
+
+                > a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 15px 5px;
+                  font-size: 11px;
+                  color: var(--blue-color-500);
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  font-family: "ZonaProBold";
+
+                  img {
+                    margin-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

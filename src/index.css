@@ -30,6 +30,10 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  .bg-coral-400 {
+    background-color: var(--coral-color-400);
+  }
 }
 
 * {
@@ -108,8 +112,9 @@ button {
   --white-color: #FFFFFF;
   --gray-color-100: #F0F0F0;
   --gray-color-200: #D8D6D6;
-  --gray-color-300: #707070;
-  --gray-color-400: #706F6F;
+  --gray-color-300: #C6C6C6;
+  --gray-color-400: #707070;
+  --gray-color-500: #706F6F;
   --black-color: #000000;
 }
 

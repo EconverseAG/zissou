@@ -1,15 +1,15 @@
 import {useEffect, useState} from 'react';
 import {Link} from '@shopify/hydrogen/client';
 
-import CartToggle from './CartToggle.client';
-import {useCartUI} from './CartUIProvider.client';
+import CartToggle from '../CartToggle.client';
+import {useCartUI} from '../CartUIProvider.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
 
 import {Image} from '@shopify/hydrogen';
 
-import LogoZissou from '../assets/logo-zissou.svg';
-import LogoWhatsApp from '../assets/logo-whatsapp.svg';
+import LogoZissou from '../../assets/logo-zissou.svg';
+import LogoWhatsApp from '../../assets/logo-whatsapp.svg';
 
 import * as styles from './header.module.scss';
 
@@ -51,7 +51,7 @@ export default function Header({collections, storeName}) {
 
   return (
     <>
-      <styles.StyleTag />
+      {/* <styles.StyleTag /> */}
       <header
         className={styles.container}
         style={{
@@ -79,6 +79,9 @@ export default function Header({collections, storeName}) {
             </Link>
             <Navigation collections={collections} storeName={storeName} />
             <div className={styles.buyOptions}>
+              <Link to="/casa-zissou" className={styles.stores}>
+                Lojas
+              </Link>
               <Link to="https://api.whatsapp.com/send?phone=5511932858213">
                 <Image src={LogoWhatsApp} width="26" height="30" />
               </Link>
