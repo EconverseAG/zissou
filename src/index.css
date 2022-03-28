@@ -97,6 +97,8 @@ button {
   --blue-color-300: #779ABF;
   --blue-color-400: #8891BA;
   --blue-color-500: #415264;
+  --blue-color-600: #455362;
+  --blue-color-700: #425264;
   --blue-color-800: #2C3540;
   --blue-color-1000:#183242;
 
@@ -104,6 +106,7 @@ button {
   --coral-color-500: #F48580;
 
   --purple-color-100: #CCC1DB;
+  --purple-color-200: #a49caf;
   --purple-color-300: #D4A8BF;
   --purple-color-500: #BB73A9;
   --purple-color-600: #9F85B2;

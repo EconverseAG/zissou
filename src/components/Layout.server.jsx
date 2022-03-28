@@ -10,11 +10,12 @@ import Header from './Header/Header.client';
 import Footer from './Footer/Footer.server';
 import Cart from './Cart.client';
 import {Suspense} from 'react';
+import CinematographyBanner from './CinematographyBanner/CinematographyBanner.client';
 
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
  */
-export default function Layout({children, hero}) {
+export default function Layout({children /*, hero*/}) {
   const {data} = useShopQuery({
     query: QUERY,
     variables: {
@@ -44,7 +45,8 @@ export default function Layout({children, hero}) {
           <Cart />
         </Suspense>
         <main role="main" id="mainContent" className="relative bg-gray-50">
-          {hero}
+          {/* {hero} */}
+          <CinematographyBanner />
           <div className="mx-auto max-w-7xl p-4 md:py-5 md:px-8">
             <Suspense fallback={null}>{children}</Suspense>
           </div>
