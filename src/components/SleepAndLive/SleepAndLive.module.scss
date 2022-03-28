@@ -1,0 +1,191 @@
+.SleepAndLiveContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-color-100);
+
+  >span {
+    display: block;
+    margin-bottom: 49px;
+    color: var(--blue-color-1000);
+    font-family: "ZonaProLight";
+    font-size: 36px;
+    margin-top: 67px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 1023px) {
+      margin-top: 34px;
+      margin-bottom: 46px;
+      font-size: 20px;
+    }
+  }
+
+  .SleepAndLiveContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 93px;
+
+    @media only screen and (max-width: 1023px) {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 80px;
+    }
+
+    >div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 440px;
+      background: var(--white-color);
+      position: relative;
+
+      @media only screen and (max-width: 1023px) {
+        width: 80%;
+      }
+
+      >p {
+        position: absolute;
+        top: -14px;
+        right: 20px;
+        background: var(--purple-color-300);
+        color: var(--white-color);
+        font-family: "ZonaPro";
+        font-size: 17px;
+        padding: 2px 30px;
+        text-transform: uppercase;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        @media only screen and (max-width: 1023px) {
+          padding: 2px 20px;
+          font-size: 11px;
+          top: -23px;
+          right: 15px;
+        }
+      }
+
+      &:first-child {
+        margin-right: 85px;
+
+        >strong {
+          color: var(--coral-color-500);
+          font-size: 30px;
+          line-height: 30px;
+          font-family: "ZonaProBlack";
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          margin-top: 54px;
+
+          @media only screen and (max-width: 1023px) {
+            margin-top: 20px;
+            font-size: 22px;
+            margin-bottom: 3px;
+            line-height: 22px;
+          }
+        }
+
+        >span {
+          color: var(--coral-color-500);
+          font-size: 17px;
+          font-family: "ZonaPro";
+          text-transform: uppercase;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+          }
+        }
+
+        >a {
+          &:last-child {
+            background: var(--coral-color-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 78px;
+            width: 100%;
+            color: var(--white-color);
+            text-decoration: underline;
+            font-family: "ZonaPro";
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 20px;
+
+            &:hover {
+              background: var(--coral-color-300);
+            }
+
+            @media only screen and (max-width: 1023px) {
+              height: 44px;
+              margin-top: 0;
+              font-size: 14px;
+            }
+          }
+        }
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+
+      &:last-child {
+        >strong {
+          color: var(--blue-color-500);
+          font-size: 30px;
+          font-family: "ZonaProBlack";
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          margin-top: 54px;
+
+          @media only screen and (max-width: 1023px) {
+            margin-top: 20px;
+            font-size: 22px;
+            margin-bottom: 3px;
+            line-height: 22px;
+          }
+        }
+
+        >span {
+          color: var(--blue-color-500);
+          font-size: 17px;
+          font-family: "ZonaPro";
+          text-transform: uppercase;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+          }
+        }
+
+        >a {
+          &:last-child {
+            background: var(--blue-color-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 78px;
+            width: 100%;
+            color: var(--white-color);
+            text-decoration: underline;
+            font-family: "ZonaPro";
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 20px;
+
+            &:hover {
+              background: var(--blue-color-450);
+            }
+
+            @media only screen and (max-width: 1023px) {
+              height: 44px;
+              margin-top: 0;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

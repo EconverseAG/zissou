@@ -6,6 +6,12 @@
     top: 15%;
     right: 50%;
     transform: translateX(50%);
+
+    @media only screen and (max-width: 1023px) {
+      height: 41px;
+      width: 160px;
+      top: 20%;
+    }
   }
 
   .videoContent {
@@ -13,6 +19,10 @@
       height: 890px;
       width: 100vw;
       object-fit: cover;
+
+      @media only screen and (max-width: 1023px) {
+        height: 460px;
+      }
     }
   }
 
@@ -38,6 +48,13 @@
 
     &:hover {
       background: var(--purple-color-500);
+    }
+
+    @media only screen and (max-width: 1023px) {
+      height: 40px;
+      padding: 0px;
+      font-size: 14px;
+      width: 70%;
     }
   }
 }

@@ -10,8 +10,10 @@ import gql from 'graphql-tag';
 import Layout from '../components/Layout.server';
 import FeaturedCollection from '../components/FeaturedCollection';
 import ProductCard from '../components/ProductCard';
-import Welcome from '../components/Welcome.server';
 import {Suspense} from 'react';
+
+import CinematographyBanner from '../components/CinematographyBanner/CinematographyBanner.client';
+import SleepAndLive from '../components/SleepAndLive/SleepAndLive.client';
 
 export default function Index({country = {isoCode: 'BR'}}) {
   return (
@@ -20,7 +22,9 @@ export default function Index({country = {isoCode: 'BR'}}) {
         <SeoForHomepage />
       </Suspense>
       <div className="relative mb-12">
-        <Welcome />
+        {/* <Welcome /> */}
+        <CinematographyBanner />
+        <SleepAndLive />
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>

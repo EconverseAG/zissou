@@ -104,6 +104,7 @@
               top: 30px;
               opacity: 0;
               overflow: hidden;
+              visibility: hidden;
 
               >li {
                 margin: 0;
@@ -187,6 +188,7 @@
               .subMenu {
                 top: 42px;
                 opacity: 1;
+                visibility: visible;
               }
             }
 
