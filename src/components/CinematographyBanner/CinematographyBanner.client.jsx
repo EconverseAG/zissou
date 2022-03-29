@@ -40,10 +40,10 @@ export default function CinematographyBanner() {
 
       <div className={styles.videoContent}>
         {bannerFiltered.length ? (
-          bannerFiltered.map((banner, index) => {
+          bannerFiltered.map((banner) => {
             return (
               <>
-                <Link key={index} to={banner.link}>
+                <Link key={banner.link} to={banner.link}>
                   <video
                     className={styles.video}
                     src={banner.banner}

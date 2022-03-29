@@ -34,15 +34,15 @@ export default function Footer(/*{collection, product}*/) {
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/products/toca-zissou">
+                <Link to="https://www.zissou.com.br/pages/lencol-e-duvet-zissou">
                   Lençol & Duvet Zissou
                 </Link>
               </li>
-              <li>
-                <Link to="https://www.zissou.com.br/products/base-zissou">
+              {/* <li>
+                <Link to="https://www.zissou.com.br/products/toca-zissou">
                   Toca Zissou
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="https://www.zissou.com.br/products/base-zissou">
                   Base Zissou

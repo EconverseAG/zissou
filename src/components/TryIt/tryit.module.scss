@@ -1,0 +1,88 @@
+.TryItContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 105px;
+  padding-bottom: 94px;
+  background: var(--gray-color-150);
+
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column-reverse;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .TryItLeft {
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+
+    strong {
+      font-family: "ZonaPro";
+      font-size: 36px;
+      line-height: 42px;
+      color: var(--blue-color-500);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 23px;
+
+      >p {
+        display: inline;
+        color: var(--purple-color-300);
+      }
+    }
+
+    span {
+      color: var(--blue-color-500);
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    a {
+      background: var(--purple-color-300);
+      color: var(--white-color);
+      font-size: 21px;
+      line-height: 26px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 200px;
+      height: 60px;
+      width: 293px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      margin-top: 39px;
+
+      &:hover {
+        background: var(--purple-color-500);
+      }
+    }
+    
+    @media only screen and (max-width: 1023px) {
+      margin-right: 0;
+      margin-top: 13px;
+      justify-content: center;
+      align-items: center;
+
+      strong {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      span {
+        text-align: center;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      a {
+        width: 152px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 24px;
+      }
+    }
+  }
+}
