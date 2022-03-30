@@ -15,7 +15,11 @@ import {Suspense} from 'react';
 import CinematographyBanner from '../components/CinematographyBanner/CinematographyBanner.client';
 import SleepAndLive from '../components/SleepAndLive/SleepAndLive.client';
 import ChooseYourDestiny from '../components/ChooseYourDestiny/ChooseYourDestiny.client';
+import ZissouStores from '../components/ZissouStores/ZissouStores.client';
 import TryIt from '../components/TryIt/TryIt.client';
+import Partners from '../components/Partners/Partners.client';
+import OpenYourHeart from '../components/OpenYourHeart/OpenYourHeart.client';
+import ZissouNaMidia from '../components/ZissouNaMidia/ZissouNaMidia.client';
 
 export default function Index({country = {isoCode: 'BR'}}) {
   return (
@@ -28,6 +32,10 @@ export default function Index({country = {isoCode: 'BR'}}) {
         <SleepAndLive />
         <ChooseYourDestiny />
         <TryIt />
+        <ZissouStores />
+        <Partners />
+        <OpenYourHeart />
+        <ZissouNaMidia />
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>

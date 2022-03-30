@@ -39,6 +39,13 @@ export default function Slick(props) {
           {props.banners.map((banner) => {
             return (
               <>
+                {banner.caption && (
+                  <span className={styles.caption}>
+                    {banner.titleCaption}
+                    <br />
+                    {banner.caption}
+                  </span>
+                )}
                 <Image
                   key={banner.link}
                   src={!isMobile ? banner.banner : banner.mobileImage}

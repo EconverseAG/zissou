@@ -1,0 +1,133 @@
+.OpenContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--gray-color-150);
+
+  >strong {
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--blue-color-1000);
+    font-family: "ZonaPro";
+    letter-spacing: 3px;
+    margin-bottom: 21px;
+    margin-top: 104px;
+    letter-spacing: 5px;
+
+    >p {
+      color: var(--coral-color-500);
+      display: inline;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 15px;
+      letter-spacing: 3px;
+    }
+  }
+
+  >span {
+    text-align: center;
+    font-size: 21px;
+    line-height: 28px;
+    color: var(--gray-color-500);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 19px;
+      width: 90%;
+    }
+  }
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 90px;
+
+    @media only screen and (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    > a {
+      @media only screen and (max-width: 1023px) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .OpenLeft {
+      img {
+        margin-right: 29px;
+
+        @media only screen and (max-width: 1023px) {
+          margin: 0 auto 21px;
+        }
+      }
+    }
+
+    .OpenRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 404px;
+      height: 140px;
+      background: var(--white-color);
+      border-radius: 200px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+      @media only screen and (max-width: 1023px) {
+        width: 70%;
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      >span {
+        font-size: 12px;
+        line-height: 17px;
+        color: var(--gray-color-500);
+        max-width: 170px;
+        letter-spacing: 2px;
+        margin-right: 60px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: 37px;
+          font-size: 8px;
+          line-height: 11px;
+          max-width: 120px;
+        }
+      }
+
+      >div {
+        width: 84px;
+        height: 84px;
+        background: var(--blue-color-200);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      &:hover {
+        >div {
+          background: var(--blue-color-300);
+        }
+      }
+    }
+  }
+}

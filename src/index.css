@@ -137,7 +137,6 @@ button {
   font-weight: 900;
 }
 
-
 @font-face {
   font-family: 'ZonaProSemiBold';
   src: local("ZonaProSemiBold"), url("./fonts/ZonaPro-SemiBold.ttf") format("truetype");

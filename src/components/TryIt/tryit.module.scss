@@ -6,6 +6,10 @@
   padding-bottom: 94px;
   background: var(--gray-color-150);
 
+  @media only screen and (max-width: 1024px) {
+    padding: 105px 30px 94px;
+  }
+
   @media only screen and (max-width: 1023px) {
     flex-direction: column-reverse;
     padding-top: 40px;
