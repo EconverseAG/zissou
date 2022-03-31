@@ -1,0 +1,78 @@
+.InstagramContainer {
+  background: linear-gradient(180deg, rgba(119, 154, 191, 1) 0%, rgba(119, 154, 191, 1) 35%, rgba(136, 145, 186, 1) 80%, rgba(159, 133, 178, 1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .InstagramTitle {
+    font-family: "ZonaProLight";
+    font-size: 36px;
+    line-height: 42px;
+    margin: 105px 0 50px;
+    color: var(--white-color);
+    letter-spacing: 5px;
+
+    @media only screen and (max-width: 1023px) {
+      margin: 35px 0 27px;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  .InstagramPosts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 116px;
+
+    @media only screen and (max-width: 1023px) {
+      justify-content: flex-start;
+      margin-bottom: 40px;
+      width: 100%;
+      overflow: scroll;
+    }
+
+    .BigPost {
+      margin-right: 16px;
+
+      @media only screen and (max-width: 1023px) {
+        margin: 0 12px;
+      }
+
+      .Post {
+        border-radius: 33px;
+
+        @media only screen and (max-width: 1023px) {
+          border-radius: 0;
+          max-width: none;
+          height: 100%;
+        }
+      }
+    }
+
+    .SmallPost {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 18px 16px;
+
+      @media only screen and (max-width: 1023px) {
+        gap: 15px 12px;
+        margin-right: 12px;
+      }
+
+      .Post {
+        border-radius: 33px;
+
+        @media only screen and (max-width: 1023px) {
+          border-radius: 0;
+          max-width: none;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

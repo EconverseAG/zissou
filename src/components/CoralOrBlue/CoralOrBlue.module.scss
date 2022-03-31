@@ -1,0 +1,54 @@
+.CoralOrBlueContainer {
+  background: linear-gradient(135deg, rgba(152, 115, 172, 1) 0%, rgba(244, 133, 128, 1) 50%, rgba(65, 82, 100, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .CoralOrBlueTitle {
+    display: block;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'ZonaProLight';
+    color: var(--white-color);
+    text-transform: uppercase;
+    padding-top: 102px;
+    text-align: center;
+    letter-spacing: 5px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      padding-top: 47px;
+      letter-spacing: 3px;
+    }
+  }
+
+  .CoralOrBlueLink {
+    background: var(--purple-color-300);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 427px;
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--white-color);
+    border-radius: 200px;
+    text-transform: uppercase;
+    margin-bottom: 107px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-bottom: 40px;
+      height: 44px;
+      width: 70%;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &:hover {
+      background: var(--purple-color-500);
+    }
+  }
+}

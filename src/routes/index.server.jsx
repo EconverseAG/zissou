@@ -1,10 +1,4 @@
-import {
-  useShopQuery,
-  flattenConnection,
-  Link,
-  Seo,
-  CacheDays,
-} from '@shopify/hydrogen';
+import {useShopQuery, flattenConnection, Link} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
 import Layout from '../components/Layout.server';
@@ -20,13 +14,13 @@ import TryIt from '../components/TryIt/TryIt.client';
 import Partners from '../components/Partners/Partners.client';
 import OpenYourHeart from '../components/OpenYourHeart/OpenYourHeart.client';
 import ZissouNaMidia from '../components/ZissouNaMidia/ZissouNaMidia.client';
+import Instagram from '../components/InstagramZissou/InstagramZissou.client';
+import Reviews from '../components/Reviews/Reviews.client';
+import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
 
 export default function Index({country = {isoCode: 'BR'}}) {
   return (
     <Layout>
-      <Suspense fallback={null}>
-        <SeoForHomepage />
-      </Suspense>
       <div>
         <CinematographyBanner />
         <SleepAndLive />
@@ -36,6 +30,9 @@ export default function Index({country = {isoCode: 'BR'}}) {
         <Partners />
         <OpenYourHeart />
         <ZissouNaMidia />
+        <Instagram />
+        <Reviews />
+        <CoralOrBlue />
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>
@@ -44,28 +41,6 @@ export default function Index({country = {isoCode: 'BR'}}) {
         </Suspense>
       </div>
     </Layout>
-  );
-}
-
-function SeoForHomepage() {
-  const {
-    data: {
-      shop: {title, description},
-    },
-  } = useShopQuery({
-    query: SEO_QUERY,
-    cache: CacheDays(),
-    preload: true,
-  });
-
-  return (
-    <Seo
-      type="homepage"
-      data={{
-        title,
-        description,
-      }}
-    />
   );
 }
 
@@ -141,14 +116,6 @@ function FeaturedCollectionBox({country}) {
 
   return <FeaturedCollection collection={featuredCollection} />;
 }
-
-const SEO_QUERY = gql`
-  query homeShopInfo {
-    shop {
-      description
-    }
-  }
-`;
 
 const QUERY = gql`
   query indexContent($country: CountryCode) @inContext(country: $country) {
