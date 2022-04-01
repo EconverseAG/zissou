@@ -1,9 +1,7 @@
-import {useState, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 import Slider from 'react-slick/lib/slider';
 import * as styles from './Reviews.module.scss';
-
-import reviewsData from './reviews_data';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -15,12 +13,25 @@ export default function Reviews() {
   const [lastView, setLastView] = useState(SLIDES_TO_SHOW);
   const sliderRef = useRef(null);
 
+  const [reviewData, setReviewData] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      `https://cdn.shopify.com/s/files/1/1526/6199/t/95/assets/ZissouStoreReviews.json`,
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setReviewData(res.reviews);
+      });
+  }, []);
+
   const settings = {
     dots: false,
     arrows: true,
     infinite: true,
     slidesToShow: SLIDES_TO_SHOW,
     slidesToScroll: 1,
+    autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
       {
@@ -38,7 +49,7 @@ export default function Reviews() {
     const current_index = index + 1;
     const last_index = SLIDES_TO_SHOW + index;
 
-    if (last_index > reviewsData.length) {
+    if (last_index > reviewData.length) {
       setFirstView(1);
       setLastView(SLIDES_TO_SHOW);
 
@@ -60,11 +71,18 @@ export default function Reviews() {
         O QUE ESTÃO FALANDO SOBRE A GENTE?
       </strong>
       <Slider ref={sliderRef} {...settings} beforeChange={handleIndex}>
-        {reviewsData.map((review, index) => (
+        {reviewData.map((review, index) => (
           <div className={styles.ReviewsItem} key={index}>
-            <strong className={styles.ReviewsItemName}>{review.name}</strong>
-            <span className={styles.ReviewsItemCity}>{review.city}</span>
-            <p className={styles.ReviewsItemDesc}>{review.description}</p>
+            <strong className={styles.ReviewsItemName}>
+              {review.customer.name}
+            </strong>
+            <span className={styles.ReviewsItemCity}>
+              {review.customer.location}
+            </span>
+            <span
+              className={styles.ReviewsItemDesc}
+              dangerouslySetInnerHTML={{__html: review.content.testimonial}}
+            />
             <Stars />
           </div>
         ))}
@@ -73,7 +91,7 @@ export default function Reviews() {
         Mostrando
         <p>
           {isMobile ? null : ` ${firstView} -`} {lastView} de{' '}
-          {reviewsData.length}
+          {reviewData.length}
         </p>{' '}
         REVIEWS
       </span>

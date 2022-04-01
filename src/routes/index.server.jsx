@@ -17,6 +17,7 @@ import ZissouNaMidia from '../components/ZissouNaMidia/ZissouNaMidia.client';
 import Instagram from '../components/InstagramZissou/InstagramZissou.client';
 import Reviews from '../components/Reviews/Reviews.client';
 import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
+import Klabin from '../components/Klabin/Klabin.client';
 
 export default function Index({country = {isoCode: 'BR'}}) {
   return (
@@ -33,6 +34,7 @@ export default function Index({country = {isoCode: 'BR'}}) {
         <Instagram />
         <Reviews />
         <CoralOrBlue />
+        <Klabin />
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>

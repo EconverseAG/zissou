@@ -14,7 +14,7 @@ import MobileBanner_6 from '../../assets/slick_lojas_mobile_6.png';
 
 import Slick from '../Slick/Slick.client';
 
-export default function ChooseYourDestiny() {
+export default function ZissouStores() {
   const banners = [
     {
       titleCaption: 'CASA ZISSOU',

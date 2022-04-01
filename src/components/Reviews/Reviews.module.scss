@@ -71,15 +71,19 @@
       color: var(--gray-color-600);
       margin-bottom: 26px;
       text-align: center;
+      max-height: 250px;
+      overflow-y: hidden;
 
       @media only screen and (max-width: 1023px) {
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 25px;
+        max-height: 200px;
       }
     }
 
     .Stars {
+      margin-top: auto;
       margin-bottom: 5px;
     }
   }
@@ -87,6 +91,10 @@
   :global(.slick-slider.slick-initialized) {
     width: 70%;
     margin: 0 auto 60px;
+
+    @media only screen and (max-width: 1024px) {
+      width: 85%;
+    }
 
     @media only screen and (max-width: 1023px) {
       width: 100%;
