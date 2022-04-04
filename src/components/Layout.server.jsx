@@ -29,13 +29,12 @@ export default function Layout({children, hero}) {
 
   return (
     <LocalizationProvider preload="*">
-      <div className="min-h-screen max-w-screen text-gray-700 font-sans">
-        {/* TODO: Find out why Suspense needs to be here to prevent hydration errors. */}
+      <div>
         <Suspense fallback={null}>
           <Header collections={collections} storeName={storeName} />
           <Cart />
         </Suspense>
-        <main role="main" id="mainContent" className="relative bg-gray-50">
+        <main role="main" id="mainContent">
           {hero}
           <div>
             <Suspense fallback={null}>{children}</Suspense>

@@ -37,7 +37,10 @@
     "vitest": "^0.5.9"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
     "@headlessui/react": "^1.5.0",
+    "@mui/material": "^5.5.3",
     "@shopify/hydrogen": "^0.13.0",
     "body-parser": "^1.19.1",
     "compression": "^1.7.4",

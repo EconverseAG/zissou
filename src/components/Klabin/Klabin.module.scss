@@ -16,6 +16,13 @@
     margin: 109px 0 40px;
     letter-spacing: 5px;
 
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 3px;
+      margin: 34px 0 27px;
+    }
+
     .KlabinOtherColorTitle {
       color: var(--coral-color-500);
       display: inline;
@@ -33,6 +40,13 @@
     text-align: center;
     margin-bottom: 40px;
     letter-spacing: 2px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 19px;
+      width: 70%;
+      margin-bottom: 30px;
+    }
   }
 
   .KlabinImage {
@@ -44,108 +58,94 @@
     }
 
     .KlabinDots {
-      :global(#target-floresta) {
+      .target {
         position: absolute;
-        top: 20%;
-        left: 23.5%;
         width: 20px;
         height: 20px;
-      }
 
-      :global(#target-biodiversidade) {
-        position: absolute;
-        top: 22%;
-        left: 40%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-producao) {
-        position: absolute;
-        top: 22%;
-        left: 57%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-relacaoSono) {
-        position: absolute;
-        bottom: 30%;
-        left: 23.5%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-pesquisa) {
-        position: absolute;
-        bottom: 20%;
-        left: 42%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-produtos) {
-        position: absolute;
-        bottom: 26%;
-        left: 59%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-shipping) {
-        position: absolute;
-        bottom: 55%;
-        right: 21%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(#target-imaginacao) {
-        position: absolute;
-        bottom: 50%;
-        right: 4%;
-        width: 20px;
-        height: 20px;
-      }
-
-      :global(.KlabinDot) {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: var(--blue-color-1000);
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      :global(.SWAL-container) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 240px;
-        height: 160px;
-        border-radius: 22px;
-        background: var(--white-color);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-        padding: 20px 25px;
-
-        :global(.swal2-popup) {
-          height: 100%;
+        &:global(.floresta) {
+          top: 20%;
+          left: 23.5%;
         }
 
-        :global(.swal2-html-container) {
-          display: flex !important;
+        &:global(.biodiversidade) {
+          top: 22%;
+          left: 40%;
+        }
+
+        &:global(.producao) {
+          top: 22%;
+          left: 57%;
+        }
+
+        &:global(.relacaosono) {
+          bottom: 30%;
+          left: 23.5%;
+        }
+
+        &:global(.pesquisa) {
+          bottom: 20%;
+          left: 42%;
+        }
+
+        &:global(.produtos) {
+          bottom: 26%;
+          left: 59%;
+        }
+
+        &:global(.shipping) {
+          bottom: 55%;
+          right: 21%;
+        }
+
+        &:global(.imaginacao) {
+          bottom: 50%;
+          right: 4%;
+        }
+
+        .buttonOpenModal {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: var(--blue-color-1000);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .modalContainer {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 240px;
+          height: 160px;
+          border-radius: 22px;
+          background: var(--white-color);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          padding: 20px 25px;
+          display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
 
-          :global(.modal-top) {
+          @media only screen and (max-width: 1023px) {
+            width: 197px;
+            height: 98px;
+            z-index: 1;
+            padding: 10px;
+          }
+
+          .modalTop {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 10px;
 
-            :global(.modal-top-title) {
+            @media only screen and (max-width: 1023px) {
+              margin-bottom: 3px;
+            }
+
+            .modalTopTitle {
               font-family: "ZonaPro";
               font-size: 11px;
               line-height: 15px;
@@ -153,23 +153,141 @@
               text-transform: uppercase;
               margin-left: 10px;
               letter-spacing: 2px;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 8px;
+                line-height: 11px;
+              }
             }
           }
 
-          :global(.modal-bottom-text) {
+          .modalBottomText {
             font-family: "ZonaPro";
             font-size: 9px;
             line-height: 12px;
             color: var(--gray-color-500);
             text-align: center;
             width: 85%;
+            display: block;
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 7px;
+              line-height: 8px;
+            }
           }
         }
+      }
+    }
+  }
 
-        :global(.swal2-close) {
-          position: absolute;
-          top: 15px;
-          right: 20px;
+  //Somente mobile
+  .KlabinZissouTabs {
+    .KlabinZissouToggleTabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 7px;
+
+      .BrandActive {
+        height: 65px;
+        width: 133px;
+        background: var(--blue-color-500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+          pointer-events: none;
+        }
+      }
+
+      .BrandInactive {
+        height: 65px;
+        width: 133px;
+        border: 2px solid var(--blue-color-500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+          pointer-events: none;
+        }
+      }
+
+    }
+
+    .KlabinImage {
+      width: 100%;
+
+      .KlabinDots {
+        :global(.floresta),
+        :global(.biodiversidade),
+        :global(.producao) {
+          display: none;
+        }
+
+        :global(.floresta) {
+          top: 16%;
+          left: 47%;
+        }
+
+        :global(.biodiversidade) {
+          top: 30%;
+          left: 64%;
+        }
+
+        :global(.producao) {
+          top: 48%;
+          left: 34%;
+        }
+
+        :global(.relacaosono) {
+          bottom: 73%;
+          left: 55%;
+        }
+
+        :global(.pesquisa) {
+          bottom: 64.5%;
+          left: 43%;
+        }
+
+        :global(.produtos) {
+          bottom: 42%;
+          left: 55%;
+        }
+
+        :global(.shipping) {
+          bottom: 14%;
+          right: 69%;
+        }
+        
+        :global(.imaginacao) {
+          bottom: 14%;
+          right: 20%;
+        }
+
+        &.KlabinDotsLeftBrandActive {
+          :global(.relacaosono),
+          :global(.pesquisa),
+          :global(.produtos) {
+            display: none;
+          }
+          
+          :global(.floresta),
+          :global(.biodiversidade),
+          :global(.producao) {
+            display: block;
+          }
+          
+          :global(.shipping) {
+            bottom: 18%;
+            right: 69%;
+          }
+  
+          :global(.imaginacao) {
+            bottom: 18%;
+            right: 20%;
+          }
         }
       }
     }

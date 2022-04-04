@@ -22,26 +22,24 @@ import Klabin from '../components/Klabin/Klabin.client';
 export default function Index({country = {isoCode: 'BR'}}) {
   return (
     <Layout>
-      <div>
-        <CinematographyBanner />
-        <SleepAndLive />
-        <ChooseYourDestiny />
-        <TryIt />
-        <ZissouStores />
-        <Partners />
-        <OpenYourHeart />
-        <ZissouNaMidia />
-        <Instagram />
-        <Reviews />
-        <CoralOrBlue />
-        <Klabin />
-        <Suspense fallback={<BoxFallback />}>
-          <FeaturedProductsBox country={country} />
-        </Suspense>
-        <Suspense fallback={<BoxFallback />}>
-          <FeaturedCollectionBox country={country} />
-        </Suspense>
-      </div>
+      <CinematographyBanner />
+      <SleepAndLive />
+      <ChooseYourDestiny />
+      <TryIt />
+      <ZissouStores />
+      <Partners />
+      <OpenYourHeart />
+      <ZissouNaMidia />
+      <Instagram />
+      <Reviews />
+      <CoralOrBlue />
+      <Klabin />
+      <Suspense fallback={<BoxFallback />}>
+        <FeaturedProductsBox country={country} />
+      </Suspense>
+      <Suspense fallback={<BoxFallback />}>
+        <FeaturedCollectionBox country={country} />
+      </Suspense>
     </Layout>
   );
 }

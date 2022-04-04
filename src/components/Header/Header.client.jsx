@@ -51,7 +51,6 @@ export default function Header({collections, storeName}) {
 
   return (
     <>
-      {/* <styles.StyleTag /> */}
       <header
         className={styles.container}
         style={{
