@@ -145,3 +145,8 @@ export default function Klabin() {
     </div>
   );
 }
+
+
+// aqui usaria o ClickAwayListener, existem varios compoentes prontos disso, um exenmplar: https://mui.com/pt/components/click-away-listener/
+// Usaria tambem o Pooper, que funciona como um poopover, vc consegue pre posicionar ele direto no react, tiraria muita  coisa que vc fez em CSS
+// Todos esses componentes de "...Modal.jsx" poderiam ser apenas um JSON em um arquivo separado, pois o layouyt é identico, so muda conteudo, usando o pooper com o awayListener, ficaria perfeito
