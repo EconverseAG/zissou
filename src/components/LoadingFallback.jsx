@@ -1,4 +1,4 @@
-import CartIcon from './CartIcon';
+import CartIcon from '../components/Cart/CartIcon';
 import OpenIcon from './OpenIcon';
 
 /**

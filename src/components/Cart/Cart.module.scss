@@ -1,0 +1,144 @@
+.cartOverlay {
+  position: fixed;
+  opacity: .75;
+  background-color: rgb(249 250 251 / 1);
+  z-index: 20;
+  inset: 0;
+}
+
+.cartContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 20;
+  overflow-y: auto;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  max-width: 380px;
+
+  .cartHeader {
+    background: var(--blue-color-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+
+    &Title {
+      color: var(--coral-color-500);
+      font-size: 13px;
+      font-family: "ZonaProBold";
+      text-transform: uppercase;
+
+      .cartHeaderOtherColor {
+        color: var(--white-color);
+      }
+    }
+  }
+
+  .cartItems {
+    padding: 0 1.75rem;
+    flex-grow: 1;
+    background: var(--white-color);
+  }
+
+  .cartFooter {
+    box-shadow: 0 -10px 23px -10px #42526440;
+    background: #f9f9f9;
+    padding: 1.75rem;
+
+    .cartSubtotal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .cartSubtotalTitle {
+        font-family: 'ZonaProBold';
+        font-size: 14px;
+        color: var(--blue-color-600);
+      }
+      
+      .cartSubtotalPrice {
+        font-family: 'ZonaProBold';
+        font-size: 14px;
+        color: var(--blue-color-600);
+        letter-spacing: 1px;
+      }
+    }
+
+    .cartDiscount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+
+      .cartDiscountTitle {
+        font-family: 'ZonaProBold';
+        font-size: 12px;
+        color: var(--blue-color-600);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cartDiscountLabel {
+          margin-right: 10px;
+        }
+      }
+
+      .cartDiscountPrice {
+        font-family: 'ZonaProBold';
+        font-size: 14px;
+        color: var(--coral-color-500);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+
+    .cartTotal {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 15px;
+      padding-top: 10px;  
+      border-top: 1px solid #cfcfcf;
+
+      .cartTotalTitle {
+        font-family: 'ZonaProBold';
+        font-size: 14px;
+        color: var(--blue-color-600);
+      }
+      
+      .cartTotalPrice {
+        font-family: 'ZonaProBold';
+        font-size: 14px;
+        color: var(--blue-color-600);
+        letter-spacing: 1px;
+        text-align: right;
+      }
+
+      .cartTotalInstallments {
+        font-family: 'ZonaProSemiBold';
+        font-size: 11px;
+        color: #7b7d7e;
+        text-transform: uppercase;
+      }
+    }
+
+    .cartCheckout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--coral-color-500);
+      color: var(--white-color);
+      width: 100%;
+      line-height: 2;
+      font-family: 'ZonaProBlack';
+      font-size: 16px;
+      height: 52px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}

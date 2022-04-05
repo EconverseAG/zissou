@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react';
 import {Link} from '@shopify/hydrogen/client';
 
-import CartToggle from '../CartToggle.client';
-import {useCartUI} from '../CartUIProvider.client';
+import CartToggle from '../Cart/CartToggle.client';
+import {useCartUI} from '../Cart/CartUIProvider.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
 

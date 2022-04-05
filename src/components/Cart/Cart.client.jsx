@@ -8,19 +8,16 @@ import {
   CartLineQuantityAdjustButton,
   CartLinePrice,
   CartLineQuantity,
-  CartShopPayButton,
   CartEstimatedCost,
   useCartLine,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
 import {useCartUI} from './CartUIProvider.client';
-import CartIconWithItems from './CartIconWithItems.client';
-import {BUTTON_PRIMARY_CLASSES} from './Button.client';
+import {BUTTON_PRIMARY_CLASSES} from '../Button.client';
 
-/**
- * A client component that contains the merchandise that a customer intends to purchase, and the estimated cost associated with the cart
- */
+import * as styles from './Cart.module.scss';
+
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
   const {totalQuantity} = useCart();
@@ -35,12 +32,8 @@ export default function Cart() {
         onClick={isCartOpen ? closeCart : null}
       />
       <Dialog open={isCartOpen} onClose={closeCart}>
-        <Dialog.Overlay className="fixed z-20 inset-0 bg-gray-50 opacity-75" />
-        <div
-          className={`absolute flex flex-col md:block z-20 top-0 left-0 right-0 bottom-0 md:top-7 h-full md:left-auto md:right-7 md:bottom-auto md:h-auto md:max-h-[calc(100vh-56px)] bg-gray-50 w-full md:w-[470px] rounded-b-lg shadow-2xl ${
-            totalQuantity === 0 ? 'overflow-hidden' : 'overflow-y-scroll'
-          }`}
-        >
+        <Dialog.Overlay className={styles.cartOverlay} />
+        <div className={styles.cartContainer}>
           <CartHeader />
           {totalQuantity === 0 ? (
             <CartEmpty />
@@ -57,24 +50,20 @@ export default function Cart() {
 }
 
 function CartHeader() {
-  const {closeCart} = useCartUI();
   return (
-    <header className="border-b border-gray-300 bg-white py-3 px-6 flex justify-between items-center sticky top-0">
-      <button type="button" onClick={closeCart}>
-        <ArrowIcon />
-        <span className="sr-only">Close cart</span>
-      </button>
-      <span className="text-xs text-gray-500">
-        Free shipping on orders over $50
-      </span>
-      <CartIconWithItems />
+    <header className={styles.cartHeader}>
+      <strong className={styles.cartHeaderTitle}>
+        100 dias de teste<span className={styles.cartHeaderOtherColor}>,</span>{' '}
+        pronta entrega <span className={styles.cartHeaderOtherColor}>e</span>{' '}
+        frete grátis
+      </strong>
     </header>
   );
 }
 
 function CartItems() {
   return (
-    <div className="px-7 flex-grow" role="table" aria-label="Shopping cart">
+    <div className={styles.cartItems} role="table" aria-label="Shopping cart">
       <div role="row" className="sr-only">
         <div role="columnheader">Product image</div>
         <div role="columnheader">Product details</div>
@@ -194,34 +183,48 @@ function CartItemQuantity() {
 }
 
 function CartFooter() {
+  const {discountCodes, estimatedCost} = useCart();
+  console.log('>>> ~ CartFooter ~ useCart', useCart());
+
+  let subtotal = +estimatedCost.subtotalAmount.amount;
+  let total = +estimatedCost.totalAmount.amount;
+
   return (
-    <footer className="bottom-0 sticky pb-8 border-t border-black border-opacity-5">
-      <div className="relative h-60 bg-white text-gray-900 p-7">
-        <div role="table" aria-label="Cost summary">
-          <div role="row" className="flex justify-between">
-            <span className="font-semibold" role="rowheader">
-              Subtotal
+    <footer className={styles.cartFooter}>
+      <div>
+        <div className={styles.cartSubtotal}>
+          <span className={styles.cartSubtotalTitle}>SUBTOTAL</span>
+          <CartEstimatedCost
+            amountType="subtotal"
+            className={styles.cartSubtotalPrice}
+            style={{textDecoration: total > subtotal ? 'line-through' : 'none'}}
+          />
+        </div>
+        {discountCodes ? (
+          <div className={styles.cartDiscount}>
+            <span className={styles.cartDiscountTitle}>
+              <Label />
+              SEU DESCONTO:
             </span>
-            <CartEstimatedCost
-              amountType="subtotal"
-              role="cell"
-              className="text-right "
-            />
+            <span className={styles.cartDiscountPrice}>Free</span>
           </div>
-          <div role="row" className="flex justify-between mt-2">
-            <span className="font-semibold" role="rowheader">
-              Shipping
-            </span>
-            <span role="cell" className="uppercase">
-              Free
+        ) : null}
+        <div className={styles.cartTotal}>
+          <span className={styles.cartTotalTitle}>TOTAL</span>
+          <div>
+            <CartEstimatedCost
+              amountType="total"
+              className={styles.cartTotalPrice}
+            />
+            <span className={styles.cartTotalInstallments}>
+              EM ATÉ 10X SEM JUROS
             </span>
           </div>
         </div>
-        <CartShopPayButton className="flex my-4 justify-center w-full bg-[#5a31f4] py-2 rounded-md" />
-        <CartCheckoutButton className={BUTTON_PRIMARY_CLASSES}>
-          Checkout
-        </CartCheckoutButton>
       </div>
+      <CartCheckoutButton className={styles.cartCheckout}>
+        FINALIZAR COMPRA
+      </CartCheckoutButton>
     </footer>
   );
 }
@@ -244,22 +247,36 @@ function CartEmpty() {
   );
 }
 
-function ArrowIcon() {
+function Label() {
   return (
     <svg
-      width="20"
-      height="17"
-      viewBox="0 0 20 17"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width={16}
+      height={16}
+      viewBox="0 0 436.38 436.38"
+      className={styles.cartDiscountLabel}
     >
-      <path
-        d="M12 1.5L19 8.5M19 8.5L12 15.5M19 8.5L1 8.5"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <g transform="matrix(1,0,0,1,0,1.4210854715202004e-13)">
+        <g xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M340.38,23.224H206.396c-8.48,0-16.624,3.376-22.624,9.376L9.372,206.968c-12.496,12.496-12.496,32.752,0,45.264    l133.984,133.984c12.496,12.496,32.752,12.496,45.248,0l174.4-174.368c6-6.016,9.376-14.16,9.376-22.656V55.224    C372.38,37.544,358.06,23.224,340.38,23.224z M284.38,135.224c-13.248,0-24-10.752-24-24s10.752-24,24-24s24,10.752,24,24    S297.628,135.224,284.38,135.224z"
+              fill="#f48580"
+              data-original="#000000"
+            />
+          </g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M404.38,55.224l-0.016,148.944c0,7.376-2.928,14.464-8.16,19.68L218.988,401.064l2.72,2.72    c12.496,12.496,32.752,12.496,45.248,0l160.032-160c6.016-6,9.392-14.144,9.392-22.624V87.224    C436.38,69.544,422.06,55.224,404.38,55.224z"
+              fill="#f48580"
+              data-original="#000000"
+            />
+          </g>
+        </g>
+      </g>
     </svg>
   );
 }
