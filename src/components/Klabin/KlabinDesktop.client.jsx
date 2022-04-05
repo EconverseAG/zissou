@@ -1,11 +1,11 @@
 import {Image} from '@shopify/hydrogen';
 
-import * as styles from '../Klabin/Klabin.module.scss';
+import * as styles from './Klabin.module.scss';
 
 import KlabinFundo from '../../assets/klabin_fundo.png';
-import modalData from '../Klabin/ModalKlabinData';
+import modalData from './ModalKlabinData';
 
-import PopupContent from '../Klabin/Modal.client';
+import PopupContent from './Modal.client';
 
 export default function KlabinDesktop() {
   return (

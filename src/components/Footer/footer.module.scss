@@ -8,7 +8,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
       flex-direction: column;
     }
 
@@ -16,7 +16,7 @@
       width: 20%;
       padding: 10px;
 
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         width: 100%;
 
         &:last-child {
@@ -81,14 +81,14 @@
     justify-content: space-between;
     padding: 10px 0;
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
       flex-direction: column;
     }
 
     .footerLeft {
       display: flex;
 
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         flex-direction: column;
       }
 
@@ -104,7 +104,7 @@
         font-family: "ZonaProBold";
         letter-spacing: 1px;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1023px) {
           margin: 5px 0;
         }
 
@@ -123,7 +123,7 @@
       padding-right: 20px;
       text-align: right;
 
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         text-align: center;
         margin: 10px 0 0 0;
         padding: 0 10px;

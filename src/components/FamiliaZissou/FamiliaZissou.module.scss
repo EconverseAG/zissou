@@ -1,0 +1,206 @@
+.FamiliaZissouContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  @media only screen and (max-width: 1023px) {
+    margin-bottom: 38px;
+  }
+
+  .FamiliaZissouTitle {
+    font-family: 'ZonaProLight';
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 5px;
+    color: var(--blue-color-500);
+    margin-bottom: 22px;
+    margin-top: 100px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 4px;
+      margin-top: 46px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .FamiliaZissouSubtitle {
+    font-family: 'ZonaProLight';
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: var(--gray-color-500);
+    display: block;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 1px;
+      width: 65%;
+      text-align: center;
+    }
+  }
+
+  .FamiliaZissouImage {
+    position: relative;
+
+    @media only screen and (max-width: 1200px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      width: auto;
+    }
+
+    .target {
+      position: absolute;
+
+      .buttonOpenModal {
+        width: 33px;
+        height: 33px;
+        background: var(--purple-color-100);
+        border-radius: 50%;
+
+        @media only screen and (max-width: 1023px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &:global(.toca) {
+        top: 43%;
+        left: 13%;
+
+        .modalContainer {
+          position: absolute;
+          bottom: 50%;
+          right: 30%;
+
+          @media only screen and (max-width: 1023px) {
+            bottom: -90%;
+          }
+        }
+      }
+
+      &:global(.colchoes) {
+        left: 37%;
+        top: 1%;
+
+        .modalContainer {
+          position: absolute;
+          top: 60%;
+          right: 50%;
+          transform: translate(50%, 0px);
+
+          @media only screen and (max-width: 1023px) {
+            top: 40%;
+            right: -40%;
+            transform: none;
+          }
+        }
+      }
+
+      &:global(.travesseiro) {
+        left: 65%;
+        top: -1%;
+
+        .modalContainer {
+          position: absolute;
+          top: 55%;
+          left: 55%;
+
+          @media only screen and (max-width: 1023px) {
+            bottom: 50%;
+            top: unset;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      &:global(.duvet) {
+        top: 40.4%;
+        left: 77.5%;
+
+        .modalContainer {
+          position: absolute;
+          top: -20%;
+          right: 55%;
+
+          @media only screen and (max-width: 1023px) {
+            top: 10%;
+            right: 40%;
+          }
+        }
+      }
+
+      &:global(.lencol) {
+        top: 84.5%;
+        left: 95%;
+
+        .modalContainer {
+          position: absolute;
+          bottom: 50%;
+          right: 50%;
+          transform: translate(50%, 0);
+
+          @media only screen and (max-width: 1023px) {
+            right: 40%;
+            top: 10%;
+            bottom: unset;
+            transform: none;
+          }
+        }
+      }
+
+      .modalContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--gray-color-150);
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+        padding: 20px 35px;
+
+        @media only screen and (max-width: 1023px) {
+          z-index: 1;
+          padding: 10px 15px;
+        }
+
+        .modalTitle {
+          font-family: 'ZonaProLight';
+          font-size: 18px;
+          line-height: 23px;
+          color: var(--blue-color-500);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 1px;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 8px;
+            line-height: 10px;
+            letter-spacing: 2px;
+          }
+        }
+
+        .modalText {
+          font-family: 'ZonaProLight';
+          font-size: 15px;
+          line-height: 23px;
+          color: var(--coral-color-500);
+          text-decoration: underline;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 6px;
+            line-height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

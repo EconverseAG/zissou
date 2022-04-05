@@ -1,5 +1,5 @@
-import KlabinMobile from '../KlabinMobile/KlabinMobile.client';
-import KlabinDesktop from '../KlabinDesktop/KlabinDesktop.client';
+import KlabinMobile from './KlabinMobile.client';
+import KlabinDesktop from './KlabinDesktop.client';
 
 import useMobile from '../../hooks/useMobile';
 
