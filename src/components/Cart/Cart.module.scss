@@ -101,6 +101,116 @@
     }
   }
 
+  .cartShelfContainer {
+    background: #f9f9f9;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .cartShelfTitle {
+      font-size: 11px;
+      font-family: 'ZonaProBlack';
+      color: var(--blue-color-700);
+      text-align: center;
+      margin: 0 auto 10px;
+
+      &OtherColor {
+        display: inline;
+        color: var(--coral-color-500);
+      }
+    }
+
+    .cartShelfSlider {
+      max-width: 100%;
+
+      :global(.slick-slider.slick-initialized) {
+        :global(.slick-list) {
+          max-width: calc(100% - 25px);
+          margin: 0 auto;
+        }
+
+        :global(.slick-arrow) {
+          z-index: 1;
+          width: 15px;
+          height: 30px;
+        }
+
+        :global(.slick-prev) {
+          left: -2%;
+
+          &:global(.slick-disabled) {
+            display: none !important;
+          }
+
+          &::before {
+            content: '';
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 28' width='15' height='30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Bundle/Primary' transform='translate(0.000000, -41.000000)' fill='%23F48580' fill-rule='nonzero'%3E%3Cg id='Bundle'%3E%3Cg id='/ArrowPrev' transform='translate(0.000000, 41.000000)'%3E%3Cpath d='M13.3581147,27.1114963 C13.2486476,27.1121831 13.1432591,27.0681562 13.0644434,26.9888129 L0.105145814,13.8441666 C-0.0401029378,13.6724862 -0.034194972,13.4129252 0.118700668,13.2486468 C0.271596308,13.0843685 0.519856704,13.0708388 0.688293228,13.2176052 L13.6475908,26.3622514 C13.7711134,26.4865879 13.8097063,26.6769419 13.7450379,26.8428955 C13.6803695,27.0088491 13.5254711,27.1169609 13.3539194,27.1158859 L13.3581147,27.1114963 Z' id='Path'/%3E%3Cpath d='M0.422080574,14.1158859 C0.250528871,14.1169609 0.0956305179,14.0088491 0.0309621069,13.8428955 C-0.0337063041,13.6769419 0.00488659761,13.4865879 0.128409215,13.3622514 L13.0877068,0.217605166 C13.2561433,0.0708387543 13.5044037,0.0843684618 13.6572993,0.24864685 C13.810195,0.412925238 13.8161029,0.672486175 13.6708542,0.844166638 L0.711556628,13.9888129 C0.63445165,14.0687064 0.530683675,14.1142551 0.422080574,14.1158859 Z' id='Path'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center;
+            width: 15px;
+            height: 30px;
+            display: block;
+          }
+        }
+
+        :global(.slick-next) {
+          right: -2%;
+
+          &:global(.slick-disabled) {
+            display: none !important;
+          }
+
+          &::before {
+            content: '';
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 28' width='15' height='30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Bundle/Primary' transform='translate(-322.000000, -41.000000)' fill='%23F48580' fill-rule='nonzero'%3E%3Cg id='Bundle'%3E%3Cg id='/ArrowNext' transform='translate(329.000000, 55.000000) rotate(-180.000000) translate(-329.000000, -55.000000) translate(322.000000, 41.000000)'%3E%3Cpath d='M13.3581147,27.1252335 C13.2486476,27.1259203 13.1432591,27.0818935 13.0644434,27.0025501 L0.105145814,13.8579039 C-0.0401029378,13.6862234 -0.034194972,13.4266625 0.118700668,13.2623841 C0.271596308,13.0981057 0.519856704,13.084576 0.688293228,13.2313424 L13.6475908,26.3759887 C13.7711134,26.5003251 13.8097063,26.6906791 13.7450379,26.8566327 C13.6803695,27.0225863 13.5254711,27.1306981 13.3539194,27.1296231 L13.3581147,27.1252335 Z' id='Path'/%3E%3Cpath d='M0.422080574,14.1296231 C0.250528871,14.1306981 0.0956305179,14.0225863 0.0309621069,13.8566327 C-0.0337063041,13.6906791 0.00488659761,13.5003251 0.128409215,13.3759887 L13.0877068,0.231342398 C13.2561433,0.0845759858 13.5044037,0.0981056932 13.6572993,0.262384081 C13.810195,0.426662469 13.8161029,0.686223406 13.6708542,0.857903869 L0.711556628,14.0025501 C0.63445165,14.0824436 0.530683675,14.1279924 0.422080574,14.1296231 Z' id='Path'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center;
+            width: 15px;
+            height: 30px;
+            display: block;
+          }
+        }
+
+        :global(.slick-slide) {
+          padding-right: 10px;
+          padding-bottom: 7.5px;
+
+          .slideItem {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px -2px #1b365d40;
+            border-radius: 20px;
+            background: var(--white-color);
+            min-height: 110px;
+            padding: 15px 10px 10px;
+
+            >span {
+              display: block;
+              text-align: center;
+              font-family: 'ZonaProBlack';
+              color: #425264;
+              letter-spacing: 1px;
+              font-size: 10px;
+              text-transform: uppercase;
+            }
+
+            >button {
+              background: #f48580;
+              color: #f9f9f9;
+              margin-top: 17px;
+              padding: 5px;
+              border-radius: 5px;
+              font-family: 'ZonaProBlack';
+              font-size: 10px;
+              text-transform: uppercase;
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .cartItems {
     padding: 0 28px;
     flex-grow: 1;

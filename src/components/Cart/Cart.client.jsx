@@ -10,7 +10,6 @@ import {
   CartLineQuantity,
   CartEstimatedCost,
   useCartLine,
-  // AddToCartButton,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
@@ -19,7 +18,7 @@ import {useCartUI} from './CartUIProvider.client';
 import CartEmpyGif from '../../assets/CartEmptyIcon.gif';
 
 import * as styles from './Cart.module.scss';
-// import Slider from 'react-slick/lib/slider';
+import Slider from 'react-slick/lib/slider';
 
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
@@ -36,7 +35,7 @@ export default function Cart() {
             <>
               <CartHeader />
               <CartItems />
-              {/* <CartShelf /> */}
+              <CartShelf />
               <CartFooter />
             </>
           )}
@@ -122,47 +121,85 @@ function CartItemQuantity() {
   );
 }
 
-// function CartShelf() {
-//   const {linesAdd} = useCart();
-//   const hook = useCart();
+function CartShelf() {
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+  };
 
-//   console.log(hook);
-
-//   const line = {
-//     attributes: [],
-//     merchandiseId: 'Z118',
-//     quantity: '1',
-//   };
-
-//   // const settings = {
-//   //   dots: false,
-//   //   infinite: false,
-//   //   slidesToShow: 3,
-//   //   slidesToScroll: 1,
-//   //   arrows: true,
-//   // };
-
-//   function handleAddToCart() {
-//     linesAdd(line);
-//   }
-
-//   return (
-//     <div className={styles.cartShelfContainer}>
-//       <span className={styles.cartShelfTitle}>
-//         COMPLETE SUA <p>EXPERIÊNCIA DE SONO</p>
-//         <br />
-//         QUANTO MAIS PRODUTOS, MAIS VOCÊ <p>ECONOMIZA</p>
-//       </span>
-//       <div className={styles.cartShelfSlider}>
-//         {/* <Slider {...settings}></Slider> */}
-//         <div>
-//           <p>Travesseiro Zissou</p>
-//           <button onClick={handleAddToCart}>Add ao carrinho</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div className={styles.cartShelfContainer}>
+      <span className={styles.cartShelfTitle}>
+        COMPLETE SUA{' '}
+        <p className={styles.cartShelfTitleOtherColor}>EXPERIÊNCIA DE SONO</p>
+        <br />
+        QUANTO MAIS PRODUTOS, MAIS VOCÊ{' '}
+        <p className={styles.cartShelfTitleOtherColor}>ECONOMIZA</p>
+      </span>
+      <div className={styles.cartShelfSlider}>
+        <Slider {...settings}>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Zissou</span>
+            <Image
+              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
+              width="45"
+              height="30"
+            />
+            <button>Adicionar</button>
+          </div>
+        </Slider>
+      </div>
+    </div>
+  );
+}
 
 function CartFooter() {
   const {discountCodes, estimatedCost} = useCart();
