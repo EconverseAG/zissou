@@ -58,6 +58,20 @@
             }
           }
         }
+
+        .cartIconWithItemsBadge {
+          position: absolute;
+          top: 8px;
+          right: 0px;
+          color: var(--white-color);
+          background: #d47c7a;
+          font-size: 8px;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          font-family: 'ZonaPro';
+          border-radius: 100%;
+        }
       }
 
       //menu desktop
@@ -422,7 +436,7 @@
                   }
                 }
 
-                > a {
+                >a {
                   display: flex;
                   align-items: center;
                   justify-content: center;

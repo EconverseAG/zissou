@@ -37,10 +37,7 @@
     "vitest": "^0.5.9"
   },
   "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
     "@headlessui/react": "^1.5.0",
-    "@mui/material": "^5.5.3",
     "@shopify/hydrogen": "^0.13.0",
     "body-parser": "^1.19.1",
     "compression": "^1.7.4",
@@ -49,8 +46,6 @@
     "react-dom": "0.0.0-experimental-2bf7c02f0-20220314",
     "react-slick": "^0.28.1",
     "sass": "^1.49.9",
-    "serve-static": "^1.14.1",
-    "sweetalert2": "^11.4.8",
-    "sweetalert2-react-content": "^4.2.0"
+    "serve-static": "^1.14.1"
   }
 }

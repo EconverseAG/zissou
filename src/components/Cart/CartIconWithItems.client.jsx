@@ -1,5 +1,7 @@
 import {useCart} from '@shopify/hydrogen/client';
 
+import * as styles from '../Header/header.module.scss';
+
 import CartIcon from './CartIcon';
 
 /**
@@ -13,12 +15,7 @@ export default function CartIconWithItems() {
       <div className="relative">
         <CartIcon />
 
-        <div
-          className={`bg-coral-400 text-xs rounded-full leading-none text-white absolute bottom-3 right-1 flex items-center justify-center transform translate-y-1/2 transition-all ${
-            totalQuantity > 0 ? 'h-4 w-4 top-0' : 'h-4 w-4 top-0'
-          }`}
-          aria-hidden
-        >
+        <div className={styles.cartIconWithItemsBadge}>
           {totalQuantity > 0 ? totalQuantity : 0}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import {
   useCart,
   CartCheckoutButton,
-  Link,
+  Image,
   CartLines,
   CartLineImage,
   CartLineProductTitle,
@@ -10,13 +10,16 @@ import {
   CartLineQuantity,
   CartEstimatedCost,
   useCartLine,
+  // AddToCartButton,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
 import {useCartUI} from './CartUIProvider.client';
-import {BUTTON_PRIMARY_CLASSES} from '../Button.client';
+
+import CartEmpyGif from '../../assets/CartEmptyIcon.gif';
 
 import * as styles from './Cart.module.scss';
+// import Slider from 'react-slick/lib/slider';
 
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
@@ -24,22 +27,16 @@ export default function Cart() {
 
   return (
     <div>
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
-      <div
-        className={`z-20 fixed top-0 bottom-0 left-0 right-0 bg-black transition-opacity duration-400 ${
-          isCartOpen ? 'opacity-20' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={isCartOpen ? closeCart : null}
-      />
       <Dialog open={isCartOpen} onClose={closeCart}>
         <Dialog.Overlay className={styles.cartOverlay} />
         <div className={styles.cartContainer}>
-          <CartHeader />
           {totalQuantity === 0 ? (
             <CartEmpty />
           ) : (
             <>
+              <CartHeader />
               <CartItems />
+              {/* <CartShelf /> */}
               <CartFooter />
             </>
           )}
@@ -63,12 +60,7 @@ function CartHeader() {
 
 function CartItems() {
   return (
-    <div className={styles.cartItems} role="table" aria-label="Shopping cart">
-      <div role="row" className="sr-only">
-        <div role="columnheader">Product image</div>
-        <div role="columnheader">Product details</div>
-        <div role="columnheader">Price</div>
-      </div>
+    <div className={styles.cartItems}>
       <CartLines>
         <LineInCart />
       </CartLines>
@@ -78,58 +70,30 @@ function CartItems() {
 
 function LineInCart() {
   const {merchandise} = useCartLine();
+
   return (
-    <div
-      role="row"
-      className="flex py-7 border-b last:border-b-0 border-gray-300 text-gray-900"
-    >
-      <div role="cell" className="flex-shrink-0 mr-7">
-        <Link to={`/products/${merchandise.product.handle}`}>
-          <CartLineImage
-            className="bg-white border border-black border-opacity-5 rounded-xl "
-            options={{width: 98, height: 98, crop: 'center'}}
+    <div className={styles.cartItem}>
+      <div className={styles.cartItemTop}>
+        <CartLineImage options={{width: '76', height: '48', crop: 'center'}} />
+        <div className={styles.cartItemTopRight}>
+          <CartLineProductTitle
+            className={styles.cartItemTopRightProductName}
           />
-        </Link>
+          <ul className={styles.cartItemTopRightSpecs}>
+            {merchandise.selectedOptions.map(({value}) => (
+              <>
+                <IconSize />
+                <li key={value} className={styles.cartItemTopRightSpecsList}>
+                  {value}
+                </li>
+              </>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div
-        role="cell"
-        className="flex flex-col w-full justify-between items-start flex-grow-1 mr-4"
-      >
-        <Link
-          to={`/products/${merchandise.product.handle}`}
-          className="hover:underline"
-        >
-          <CartLineProductTitle className="text-lg font-medium" />
-        </Link>
-        <ul className="text-xs space-y-1">
-          {merchandise.selectedOptions.map(({name, value}) => (
-            <li key={name}>
-              {name}: {value}
-            </li>
-          ))}
-        </ul>
+      <div className={styles.cartItemBottom}>
         <CartItemQuantity />
-      </div>
-      <div role="cell" className="flex flex-col justify-between items-end">
-        <CartLineQuantityAdjustButton
-          adjust="remove"
-          aria-label="Remove from cart"
-          className="disabled:pointer-events-all disabled:cursor-wait"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </CartLineQuantityAdjustButton>
-        <CartLinePrice className="text-lg" />
+        <CartLinePrice className={styles.cartItemBottomPrice} />
       </div>
     </div>
   );
@@ -137,54 +101,71 @@ function LineInCart() {
 
 function CartItemQuantity() {
   return (
-    <div className="flex border rounded border-gray-300 items-center overflow-auto mt-2">
+    <div className={styles.cartItemBottomQuantity}>
       <CartLineQuantityAdjustButton
         adjust="decrease"
         aria-label="Decrease quantity"
-        className="p-2 disabled:pointer-events-all disabled:cursor-wait"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-gray-400"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <MinusQuantity />
       </CartLineQuantityAdjustButton>
       <CartLineQuantity
         as="div"
-        className="p-2 text-gray-900 text-xs text-center"
+        className={styles.cartItemBottomQuantityValue}
       />
       <CartLineQuantityAdjustButton
         adjust="increase"
         aria-label="Increase quantity"
-        className="p-2 text-gray-400 disabled:pointer-events-all disabled:cursor-wait"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <PlusQuantity />
       </CartLineQuantityAdjustButton>
     </div>
   );
 }
 
+// function CartShelf() {
+//   const {linesAdd} = useCart();
+//   const hook = useCart();
+
+//   console.log(hook);
+
+//   const line = {
+//     attributes: [],
+//     merchandiseId: 'Z118',
+//     quantity: '1',
+//   };
+
+//   // const settings = {
+//   //   dots: false,
+//   //   infinite: false,
+//   //   slidesToShow: 3,
+//   //   slidesToScroll: 1,
+//   //   arrows: true,
+//   // };
+
+//   function handleAddToCart() {
+//     linesAdd(line);
+//   }
+
+//   return (
+//     <div className={styles.cartShelfContainer}>
+//       <span className={styles.cartShelfTitle}>
+//         COMPLETE SUA <p>EXPERIÊNCIA DE SONO</p>
+//         <br />
+//         QUANTO MAIS PRODUTOS, MAIS VOCÊ <p>ECONOMIZA</p>
+//       </span>
+//       <div className={styles.cartShelfSlider}>
+//         {/* <Slider {...settings}></Slider> */}
+//         <div>
+//           <p>Travesseiro Zissou</p>
+//           <button onClick={handleAddToCart}>Add ao carrinho</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 function CartFooter() {
   const {discountCodes, estimatedCost} = useCart();
-  console.log('>>> ~ CartFooter ~ useCart', useCart());
 
   let subtotal = +estimatedCost.subtotalAmount.amount;
   let total = +estimatedCost.totalAmount.amount;
@@ -232,17 +213,20 @@ function CartFooter() {
 function CartEmpty() {
   const {closeCart} = useCartUI();
   return (
-    <div className="p-7 flex flex-col">
-      <p className="mb-4 text-lg text-gray-500 text-center">
-        Your cart is empty
-      </p>
-      <button
-        type="button"
-        onClick={closeCart}
-        className={BUTTON_PRIMARY_CLASSES}
-      >
-        Continue Shopping
+    <div className={styles.cartEmptyContainer}>
+      <button className={styles.cartEmptyCloseCart} onClick={closeCart}>
+        FECHAR
       </button>
+      <Image src={CartEmpyGif} width="100" height="100" />
+      <div className={styles.cartEmptyContainerContent}>
+        <strong className={styles.cartEmptyContainerContentTitle}>OPS,</strong>
+        <span className={styles.cartEmptyContainerContentSubtitle}>
+          SEU CARRINHO ESTÁ VAZIO.
+        </span>
+        <p className={styles.cartEmptyContainerContentText}>
+          DESCUBRA OS PRODUTOS ZISSOU E REDEFINA A SUA RELAÇÃO COM O SONO
+        </p>
+      </div>
     </div>
   );
 }
@@ -274,6 +258,104 @@ function Label() {
               fill="#f48580"
               data-original="#000000"
             />
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+function IconSize() {
+  return (
+    <svg width={16} viewBox="0 0 16 7" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" fillRule="evenodd" className="Symbols">
+        <g fill="#425264" fillRule="nonzero" className="LineItem">
+          <g className="CartItem-Inner">
+            <g className="CartItemContent">
+              <g className="Size">
+                <g className="Ruler">
+                  <path
+                    d="M15.037 0c.532 0 .963.421.963.941V6.06c0 .52-.43.941-.962.941H.962A.952.952 0 0 1 0 6.059V.94C0 .421.43 0 .962 0h14.075ZM15 6V1h-1.366v1.804h-.798V1h-.947v2.906h-.798V1h-.947v1.804h-.798V1H8.4v2.906h-.8V1h-.947v1.782h-.798V1H4.91v2.883h-.8V1h-.947v1.782h-.798V1H1v5h14Z"
+                    className="Shape"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+function MinusQuantity() {
+  return (
+    <svg
+      width="20px"
+      height="20px"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g
+        id="Symbols"
+        stroke="none"
+        strokeWidth={1}
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g id="LineItem" transform="translate(-72.000000, -30.000000)">
+          <g id="CartItem-Inner" transform="translate(12.000000, 9.000000)">
+            <g id="CartItemContent" transform="translate(60.000000, 1.000000)">
+              <g id="qtySelector" transform="translate(1.000000, 17.000000)">
+                <g id="btn-qty--" transform="translate(0.000000, 4.000000)">
+                  <rect
+                    id="MinusIcon"
+                    fill="#f48580"
+                    x={3}
+                    y={8}
+                    width={12}
+                    height={2}
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+function PlusQuantity() {
+  return (
+    <svg
+      width="20px"
+      height="20px"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g
+        id="Symbols"
+        stroke="none"
+        strokeWidth={1}
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g id="LineItem" transform="translate(-118.000000, -30.000000)">
+          <g id="CartItem-Inner" transform="translate(12.000000, 9.000000)">
+            <g id="CartItemContent" transform="translate(60.000000, 1.000000)">
+              <g id="qtySelector" transform="translate(1.000000, 17.000000)">
+                <g id="btn-qty-+" transform="translate(46.000000, 4.000000)">
+                  <path
+                    d="M10,3 L10,8 L15,8 L15,10 L10,10 L10,15 L8,15 L8,10 L3,10 L3,8 L8,8 L8,3 L10,3 Z"
+                    id="PlusIcon"
+                    fill="#f48580"
+                  />
+                </g>
+              </g>
+            </g>
           </g>
         </g>
       </g>
