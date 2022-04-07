@@ -6,7 +6,7 @@
   background-color: var(--gray-color-100);
 
   .KlabinTitle {
-    font-family: "ZonaProLight";
+    font-family: "ZonaProBold";
     font-size: 36px;
     line-height: 42px;
     color: var(--blue-color-1000);
@@ -34,6 +34,7 @@
   }
 
   .KlabinSubtitle {
+    font-family: 'ZonaPro';
     font-size: 21px;
     line-height: 28px;
     color: var(--gray-color-500);
@@ -146,7 +147,7 @@
             }
 
             .modalTopTitle {
-              font-family: "ZonaPro";
+              font-family: "ZonaProBlack";
               font-size: 11px;
               line-height: 15px;
               color: var(--coral-color-500);
@@ -247,8 +248,8 @@
         }
 
         :global(.pesquisa) {
-          bottom: 64.5%;
-          left: 43%;
+          bottom: 60%;
+          left: 35%;
         }
 
         :global(.produtos) {

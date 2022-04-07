@@ -1,0 +1,144 @@
+.SleepAndLiveContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 66.4px 0 91px;
+
+  .SleepAndLiveContainerTitle {
+    font-family: 'ZonaProBold';
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--blue-color-1000);
+    letter-spacing: 3px;
+    margin-bottom: 78px;
+  }
+
+  .SleepAndLiveContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .SleepAndLiveColchao {
+      max-width: 572px;
+      height: 730px;
+      background: var(--gray-color-100);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      &.SleepAndLiveCoral {
+        margin-right: 20px;
+
+        .SleepAndLiveTitle, .SleepAndLiveSubtitle, .SleepAndLivePrice {
+          color: var(--coral-color-500);
+        }
+
+        .SleepAndLiveButtonCTA {
+          background: var(--coral-color-500);
+        }
+      }
+      &.SleepAndLiveBlue {
+        .SleepAndLiveTitle, .SleepAndLiveSubtitle, .SleepAndLivePrice {
+          color: var(--blue-color-1000);
+        }
+        
+        .SleepAndLiveButtonCTA {
+          background: var(--blue-color-1000);
+        }
+      }
+
+      .SleepAndLiveFlag {
+        position: absolute;
+        top: -20px;
+        right: 10px;
+        background: var(--purple-color-300);
+        color: var(--white-color);
+        font-family: 'ZonaProBlack';
+        font-size: 17px;
+        line-height: 20px;
+        padding: 2px 30px;
+        text-transform: uppercase;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      }
+
+      .SleepAndLiveTitle {
+        font-size: 30px;
+        line-height: 30px;
+        font-family: "ZonaProBlack";
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        margin-top: 54px;
+        letter-spacing: 3px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-top: 20px;
+          font-size: 22px;
+          margin-bottom: 3px;
+          line-height: 22px;
+          letter-spacing: 2px;
+        }
+      }
+
+      .SleepAndLiveSubtitle {
+        font-size: 17px;
+        line-height: 28px;
+        font-family: "ZonaProBold";
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 29px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 10px;
+          line-height: 18px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .SleepAndLiveText {
+        font-family: 'ZonaPro';
+        font-size: 14px;
+        line-height: 19px;
+        text-align: left;
+        color: var(--gray-color-600);
+        width: 75%;
+
+        > strong {
+          font-family: 'ZonaProBlack';
+        }
+      }
+
+      .SleepAndLivePrice {
+        font-family: 'ZonaProBlack';
+        font-size: 19px;
+        line-height: 19px;
+        margin-top: auto;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 75%;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 22px;
+          line-height: 22px;
+        }
+      }
+
+      .SleepAndLiveButtonCTA {
+        height: 78px;
+        width: 100%;
+        font-family: 'ZonaProBlack';
+        font-size: 18px;
+        line-height: 29px;
+        color: var(--white-color);
+        text-transform: uppercase;
+        text-decoration: underline;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

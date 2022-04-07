@@ -1,6 +1,6 @@
 .ReviewsContainer {
   .ReviewsTitle {
-    font-family: "ZonaProLight";
+    font-family: "ZonaProSemiBold";
     font-size: 36px;
     line-height: 42px;
     color: var(--blue-color-1000);
@@ -37,7 +37,7 @@
     }
 
     &Name {
-      font-family: "ZonaPro";
+      font-family: "ZonaProBlack";
       font-size: 17px;
       line-height: 21px;
       color: var(--blue-color-1000);
@@ -51,7 +51,7 @@
     }
 
     &City {
-      font-family: "ZonaPro";
+      font-family: "ZonaProSemiBold";
       font-size: 17px;
       line-height: 21px;
       color: var(--gray-color-600);
@@ -65,7 +65,7 @@
     }
 
     &Desc {
-      font-family: "ZonaPro";
+      font-family: "ZonaProSemiBold";
       font-size: 17px;
       line-height: 21px;
       color: var(--gray-color-600);
@@ -136,6 +136,7 @@
 
   .ReviewCount {
     text-align: center;
+    font-family: 'ZonaProSemiBold';
     font-size: 21px;
     line-height: 28px;
     color: var(--blue-color-1000);
@@ -146,6 +147,7 @@
     >p {
       color: var(--purple-color-700);
       display: inline;
+      font-family: 'ZonaProBlack';
     }
 
     @media only screen and (max-width: 1023px) {

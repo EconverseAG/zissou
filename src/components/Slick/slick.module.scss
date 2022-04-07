@@ -53,7 +53,7 @@
     }
 
     >strong {
-      font-family: "ZonaProLight";
+      font-family: "ZonaProBold";
       font-size: 36px;
       line-height: 42px;
       color: var(--blue-color-500);
@@ -74,12 +74,14 @@
       color: var(--gray-color-500);
       letter-spacing: 1px;
       line-height: 28px;
+      white-space: nowrap;
 
       @media only screen and (max-width: 1023px) {
         width: 70%;
         font-size: 14px;
         line-height: 19px;
         text-align: center;
+        white-space: normal;
       }
     }
   }
@@ -129,13 +131,9 @@
         width: 454px;
         z-index: 1;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-        font-size: 20px;
-        line-height: 28px;
-        letter-spacing: 2px;
-        color: #6D6C6C;
-        font-family: "ZonaPro";
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: center;
         padding-left: 120px;
         padding-right: 20px;
@@ -148,7 +146,35 @@
           font-size: 9px;
           line-height: 13px;
         }
+        
+        .titleCaption {
+          font-family: "ZonaProBlack";
+          font-size: 20px;
+          line-height: 28px;
+          letter-spacing: 2px;
+          color: #6D6C6C;
+          
+          @media only screen and (max-width: 1023px) {
+            font-size: 9px;
+            line-height: 13px;
+          }
+        }
+        
+        .subtitleCaption {
+          font-size: 20px;
+          line-height: 28px;
+          letter-spacing: 2px;
+          color: #6D6C6C;
+          font-family: "ZonaProSemiBold";
+          
+          @media only screen and (max-width: 1023px) {
+            font-size: 9px;
+            line-height: 13px;
+            width: 90%;
+          }
+        }
       }
+
 
       img {
         width: 100%;
@@ -167,11 +193,14 @@
           transform: translateX(-50%);
           bottom: 80px;
           height: 60px;
-          width: 322px;
+          width: auto;
+          padding: 0 50px;
           background: var(--purple-color-300);
           color: var(--white-color);
-          font-family: "ZonaPro";
+          font-family: "ZonaProBlack";
           font-size: 21px;
+          line-height: 26px;
+          letter-spacing: 3px;
           text-transform: uppercase;
           border-radius: 200px;
           display: flex;
@@ -185,9 +214,10 @@
           }
 
           @media only screen and (max-width: 1023px) {
-            width: 200px;
             font-size: 14px;
-            line-height: 23px;
+            line-height: 21px;
+            padding: 0 40px;
+            white-space: nowrap;
           }
         }
       }

@@ -1,0 +1,93 @@
+.FormulaDoConfortoContainer {
+  background: linear-gradient(180deg, rgba(204,223,233,1) 0%, rgba(255,255,255,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .FormulaDoConfortoTitle {
+    margin-top: 79px;
+    font-family: 'ZonaProBold';
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 3px;
+    color: var(--blue-color-1000);
+  }
+
+  .FormulaDoConfortoTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 73px;
+
+    &Content {
+      max-width: 450px;
+      margin-left: 84px;
+
+      &Title {
+        display: block;
+        font-family: 'ZonaProBlack';
+        font-size: 21px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: var(--gray-color-600);
+        margin-bottom: 34px;
+        text-align: center;
+      }
+
+      &Subtitle {
+        display: block;
+        font-family: 'ZonaPro';
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: var(--gray-color-600);
+        margin-bottom: 16px;
+      }
+      
+      &List {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: var(--gray-color-600);
+
+        &Bold {
+          font-family: 'ZonaProBlack';
+        }
+      }
+    }
+  }
+
+  .FormulaDoConfortoBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    &Content {
+      max-width: 450px;
+      margin-left: 84px;
+
+      &Title {
+        display: block;
+        font-family: 'ZonaProBlack';
+        font-size: 21px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: var(--gray-color-600);
+        margin-bottom: 34px;
+        text-align: center;
+      }
+
+      &Text {
+        display: block;
+        font-family: 'ZonaPro';
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: var(--gray-color-600);
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -30,7 +30,7 @@ export default function Layout({children, hero}) {
   return (
     <LocalizationProvider preload="*">
       <div>
-        <Suspense fallback={null}>
+        <Suspense fallback={<BoxFallback />}>
           <Header collections={collections} storeName={storeName} />
           <Cart />
         </Suspense>
@@ -44,6 +44,10 @@ export default function Layout({children, hero}) {
       </div>
     </LocalizationProvider>
   );
+}
+
+function BoxFallback() {
+  return <div className="bg-white p-12 shadow-xl rounded-xl mb-10 h-40"></div>;
 }
 
 const QUERY = gql`

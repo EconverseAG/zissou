@@ -22,7 +22,7 @@
     margin-right: 150px;
 
     strong {
-      font-family: "ZonaPro";
+      font-family: "ZonaProBold";
       font-size: 36px;
       line-height: 42px;
       color: var(--blue-color-500);
@@ -35,16 +35,23 @@
         color: var(--purple-color-300);
       }
     }
-
+    
     span {
       color: var(--blue-color-500);
+      font-family: "ZonaPro";
       font-size: 20px;
       line-height: 28px;
+      
+      >p {
+        font-family: 'ZonaProBlack';
+        display: inline;
+      }
     }
 
     a {
       background: var(--purple-color-300);
       color: var(--white-color);
+      font-family: 'ZonaProBlack';
       font-size: 21px;
       line-height: 26px;
       text-transform: uppercase;
@@ -56,6 +63,7 @@
       width: 293px;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
       margin-top: 39px;
+      letter-spacing: 3px;
 
       &:hover {
         background: var(--purple-color-500);

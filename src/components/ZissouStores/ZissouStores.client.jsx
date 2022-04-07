@@ -18,7 +18,7 @@ export default function ZissouStores() {
   const banners = [
     {
       titleCaption: 'CASA ZISSOU',
-      caption: `Nossa flagship no coração dos Jardins`,
+      subtitleCaption: `Nossa flagship no coração dos Jardins`,
       banner: Banner_1,
       mobileImage: MobileBanner_1,
       link: 'https://www.zissou.com.br/pages/casa-zissou',
@@ -26,7 +26,7 @@ export default function ZissouStores() {
     },
     {
       titleCaption: 'CASA ZISSOU',
-      caption: 'Nossa flagship no coração dos Jardins',
+      subtitleCaption: 'Nossa flagship no coração dos Jardins',
       banner: Banner_2,
       mobileImage: MobileBanner_2,
       link: 'https://www.zissou.com.br/pages/casa-zissou',
@@ -34,7 +34,7 @@ export default function ZissouStores() {
     },
     {
       titleCaption: 'CASA ZISSOU',
-      caption: 'Nossa flagship no coração dos Jardins',
+      subtitleCaption: 'Nossa flagship no coração dos Jardins',
       banner: Banner_3,
       mobileImage: MobileBanner_3,
       link: 'https://www.zissou.com.br/pages/casa-zissou',
@@ -42,7 +42,7 @@ export default function ZissouStores() {
     },
     {
       titleCaption: 'ZISSOU NORMANDIA',
-      caption:
+      subtitleCaption:
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_4,
       mobileImage: MobileBanner_4,
@@ -51,7 +51,7 @@ export default function ZissouStores() {
     },
     {
       titleCaption: 'ZISSOU NORMANDIA',
-      caption:
+      subtitleCaption:
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_5,
       mobileImage: MobileBanner_5,
@@ -60,7 +60,7 @@ export default function ZissouStores() {
     },
     {
       titleCaption: 'ZISSOU NORMANDIA',
-      caption:
+      subtitleCaption:
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_6,
       mobileImage: MobileBanner_6,
