@@ -10,6 +10,11 @@ import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
 import TryIt from '../../components/TryIt/TryIt.client';
 import ZissouStores from '../../components/ZissouStores/ZissouStores.client';
 import Partners from '../../components/Partners/Partners.client';
+import Combinacao from '../../components/ComparativoColchoes/Combinacao/Combinacao.client';
+import FormulaMagica from '../../components/ComparativoColchoes/FormulaMagica/FormulaMagica.client';
+import Legget from '../../components/ComparativoColchoes/Legget/Legget.client';
+import SuporteIdeal from '../../components/ComparativoColchoes/SuporteIdeal/SuporteIdeal.client';
+import Faq from '../../components/ComparativoColchoes/Faq/Faq.client';
 
 export default function ComparativoColchoes() {
   return (
@@ -18,6 +23,11 @@ export default function ComparativoColchoes() {
         <CinematographBanner />
         <SleepAndLiveComparativo />
         <FormulaDoConforto />
+        <Combinacao />
+        <SuporteIdeal />
+        <Legget />
+        <Faq />
+        <FormulaMagica />
         <OpenYourHeart />
         <CoralOrBlue />
         <TryIt />

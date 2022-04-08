@@ -1,0 +1,21 @@
+.LeggetContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-color-100);
+  padding: 58px 0;
+
+  .LeggetImage {
+    margin-right: 29px;
+  }
+
+  .LeggetTitle {
+    max-width: 840px;
+    text-align: center;
+    font-family: 'ZonaPro';
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--blue-color-1000);
+    letter-spacing: 1px;
+  }
+}

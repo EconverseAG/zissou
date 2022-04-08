@@ -1,0 +1,91 @@
+.FaqContainer {
+  background: linear-gradient(90deg, rgba(212, 168, 191, 1) 0%, rgba(207, 193, 210, 1) 50%, rgba(203, 215, 227, 1) 80%, rgba(202, 222, 232, 1) 100%);
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .FaqTitle {
+    color: var(--white-color);
+    font-family: 'ZonaProBold';
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 5px;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+  }
+
+  .FaqContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    .FaqList {
+      max-width: 930px;
+
+      .FaqAccordion {
+        background: transparent;
+        color: var(--white-color);
+        box-shadow: none;
+        border-radius: 0;
+        border-top: 3px solid #fff;
+
+        &:last-child {
+          border-bottom: 3px solid #fff;
+        }
+
+        .FaqAccordionTitle {
+          font-family: 'ZonaProBold';
+          color: var(--white-color);
+          font-size: 19px;
+          line-height: 42px;
+          text-transform: uppercase;
+        }
+
+        .FaqAccordionAnswer {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+
+          > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .FaqAccordionAnswerTitle {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 16px;
+            font-family: 'ZonaProBlack';
+            font-size: 16px;
+            line-height: 28px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            letter-spacing: 2px;
+          }
+
+          .FaqAccordionAnswerText {
+            font-family: 'ZonaProSemiBold';
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+
+    .FaqImage {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+}

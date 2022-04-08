@@ -1,0 +1,27 @@
+.CombinacaoContainer {
+  background: var(--gray-color-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+
+  .CombinacaoImage {
+    margin-bottom: 34px;
+  }
+
+  .CombinacaoText {
+    width: 55%;
+    text-align: center;
+    font-size: 21px;
+    line-height: 28px;
+    font-family: 'ZonaPro';
+    letter-spacing: 2px;
+    color: var(--gray-color-600);
+
+    .CombinacaoBolder {
+      font-family: 'ZonaProBold';
+      color: var(--blue-color-300);
+    }
+  }
+}
