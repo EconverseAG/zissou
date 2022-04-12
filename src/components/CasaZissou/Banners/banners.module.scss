@@ -1,0 +1,77 @@
+.bannersContainer {
+  position: relative;
+
+  .bannersText {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1023px) {
+      top: 25%;
+    }
+
+    .bannersTitle {
+      font-size: 36px;
+      line-height: 42px;
+      font-family: 'ZonaProBold';
+      letter-spacing: 5px;
+      color: var(--white-color);
+      text-transform: uppercase;
+      margin-bottom: 9px;
+
+      @media only screen and (max-width: 1023px) {
+        white-space: nowrap;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 3px;
+      }
+    }
+
+    .bannersSubtitle {
+      font-size: 20px;
+      line-height: 28px;
+      font-family: 'ZonaPro';
+      color: var(--white-color);
+      letter-spacing: 1px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+
+    @media only screen and (max-width: 1023px) {
+      height: auto;
+    }
+  }
+
+  .arrowDown {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: 1023px) {
+      width: 60px;
+      height: 20px;
+    }
+
+    svg {
+      @media only screen and (max-width: 1023px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
