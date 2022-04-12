@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: 1023px) {
+    padding: 40px 0;
+  }
+
   .FaqTitle {
     color: var(--white-color);
     font-family: 'ZonaProBold';
@@ -14,17 +18,40 @@
     letter-spacing: 5px;
     margin-bottom: 70px;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 3px;
+      margin-bottom: 32px;
+    }
   }
 
   .FaqContent {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     position: relative;
+    padding-left: 100px;
+
+    @media only screen and (max-width: 1400px) {
+      padding-left: 40px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      justify-content: center;
+      padding-left: 0;
+      width: 90%;
+    }
 
     .FaqList {
       max-width: 930px;
+
+      @media only screen and (max-width: 1023px) {
+        max-width: 100%;
+      }
 
       .FaqAccordion {
         background: transparent;
@@ -43,6 +70,11 @@
           font-size: 19px;
           line-height: 42px;
           text-transform: uppercase;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+            line-height: 19px;
+          }
         }
 
         .FaqAccordionAnswer {
@@ -51,7 +83,43 @@
           justify-content: center;
           flex-direction: column;
 
-          > div {
+          &.FaqAccordionAnswer2 {
+            .FaqAccordionAnswerContainer {
+              @media only screen and (max-width: 1023px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              .FaqAccordionAnswerText {
+                @media only screen and (max-width: 1023px) {
+                  margin-top: 11px;
+                }
+              }
+            }
+          }
+
+          &.FaqAccordionAnswer4 {
+            .FaqAccordionAnswerContainer {
+              flex-direction: column;
+              align-items: flex-start;
+
+              .FaqAccordionAnswerTitle {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          &.FaqAccordionAnswer5 {
+            .FaqAccordionAnswerContainer {
+              .FaqAccordionAnswerText {
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          .FaqAccordionAnswerContainer {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,6 +136,12 @@
             text-transform: uppercase;
             text-decoration: underline;
             letter-spacing: 2px;
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+              letter-spacing: 1px;
+            }
           }
 
           .FaqAccordionAnswerText {
@@ -76,6 +150,31 @@
             line-height: 28px;
             letter-spacing: 1px;
             margin-bottom: 16px;
+
+            &Bolder {
+              font-family: 'ZonaProBlack';
+            }
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+            }
+          }
+
+          .FaqAccordionAnswerLink {
+            display: block;
+            font-family: 'ZonaProBlack';
+            font-size: 16px;
+            line-height: 28px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+            }
           }
         }
       }
@@ -86,6 +185,10 @@
       top: 50%;
       transform: translateY(-50%);
       right: 0;
+
+      @media only screen and (max-width: 1300px) {
+        display: none;
+      }
     }
   }
 }

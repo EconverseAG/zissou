@@ -131,30 +131,30 @@ button {
 /* Fontes */
 @font-face {
   font-family: 'ZonaProBold';
-  src: local("ZonaProBold"), url("./fonts/ZonaPro-Bold.ttf") format("truetype");
+  src: local("ZonaProBold"), url("./fonts/ZonaPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'ZonaProBlack';
-  src: local("ZonaProBlack"), url("./fonts/ZonaPro-Black.ttf") format("truetype");
+  src: local("ZonaProBlack"), url("./fonts/ZonaPro-Black.otf") format("opentype");
   font-weight: 900;
 }
 
 @font-face {
   font-family: 'ZonaProSemiBold';
-  src: local("ZonaProSemiBold"), url("./fonts/ZonaPro-SemiBold.ttf") format("truetype");
+  src: local("ZonaProSemiBold"), url("./fonts/ZonaPro-SemiBold.otf") format("opentype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'ZonaPro';
-  src: local("ZonaPro"), url("./fonts/ZonaPro.ttf") format("truetype");
+  src: local("ZonaPro"), url("./fonts/ZonaPro.otf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'ZonaProLight';
-  src: local("ZonaPro"), url("./fonts/ZonaPro-Light.ttf") format("truetype");
+  src: local("ZonaPro"), url("./fonts/ZonaPro-Light.otf") format("opentype");
   font-weight: 300;
 }

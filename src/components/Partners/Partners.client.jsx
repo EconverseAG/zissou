@@ -18,9 +18,7 @@ export default function Partners() {
         <p>
           Experimente nossos produtos <br /> de Norte a Sul do Brasil
         </p>
-        <Link to="https://www.zissou.com.br/pages/casa-zissou">
-          Quero Visitar
-        </Link>
+        <Link to="/pages/casa-zissou">Quero Visitar</Link>
       </div>
       <div className={styles.PartnersRight}>
         <span>Marcas Parceiras</span>

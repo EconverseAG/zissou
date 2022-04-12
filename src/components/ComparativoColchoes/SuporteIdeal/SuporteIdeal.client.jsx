@@ -15,7 +15,7 @@ export default function SuporteIdeal() {
           Na hora de escolher o colchão, você precisa tratar como prioridade
           <br />
           quem sempre te apoia:{' '}
-          <strong className={styles.SuporteIdealTopBolder}>
+          <strong className={styles.SuporteIdealTopSubtitleBolder}>
             o sistema de suporte
           </strong>
         </span>
@@ -40,8 +40,8 @@ export default function SuporteIdeal() {
           </strong>
           <Image src={Espuma} width="520" height="297" />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
-            Espuma de poliuretano de alta <br /> densidade para distribuição{' '}
-            <br /> uniforme de peso
+            Espuma de poliuretano de alta densidade para distribuição uniforme
+            de peso
           </span>
         </div>
         <div
@@ -55,8 +55,8 @@ export default function SuporteIdeal() {
           </strong>
           <Image src={Mola} width="520" height="188" />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
-            Sistema híbrido com molas <br /> Leggett & Platt para maior <br />{' '}
-            adaptabilidade aos movimentos
+            Sistema híbrido com molas Leggett & Platt para maior adaptabilidade
+            aos movimentos
           </span>
         </div>
       </div>

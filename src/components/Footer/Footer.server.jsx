@@ -71,9 +71,7 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Zissou</strong>
             <ul>
               <li>
-                <Link to="https://www.zissou.com.br/pages/casa-zissou">
-                  Lojas
-                </Link>
+                <Link to="/pages/casa-zissou">Lojas</Link>
               </li>
               <li>
                 <Link to="https://www.zissou.com.br/blogs/midia">

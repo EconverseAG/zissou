@@ -5,6 +5,10 @@
   align-items: center;
   margin: 66.4px 0 91px;
 
+  @media only screen and (max-width: 1023px) {
+    margin: 34px 0 40px;
+  }
+
   .SleepAndLiveContainerTitle {
     font-family: 'ZonaProBold';
     font-size: 36px;
@@ -12,6 +16,13 @@
     color: var(--blue-color-1000);
     letter-spacing: 3px;
     margin-bottom: 78px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 44px;
+    }
   }
 
   .SleepAndLiveContent {
@@ -19,8 +30,17 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 1200px) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      flex-direction: column;
+    }
+
     .SleepAndLiveColchao {
       max-width: 572px;
+      width: 50%;
       height: 730px;
       background: var(--gray-color-100);
       position: relative;
@@ -29,10 +49,27 @@
       justify-content: flex-start;
       align-items: center;
 
+      @media only screen and (max-width: 1200px) {
+        height: 700px;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        max-width: 85%;
+        width: 100%;
+        height: auto;
+      }
+
       &.SleepAndLiveCoral {
         margin-right: 20px;
 
-        .SleepAndLiveTitle, .SleepAndLiveSubtitle, .SleepAndLivePrice {
+        @media only screen and (max-width: 1023px) {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+
+        .SleepAndLiveTitle,
+        .SleepAndLiveSubtitle,
+        .SleepAndLivePrice {
           color: var(--coral-color-500);
         }
 
@@ -40,11 +77,15 @@
           background: var(--coral-color-500);
         }
       }
+
       &.SleepAndLiveBlue {
-        .SleepAndLiveTitle, .SleepAndLiveSubtitle, .SleepAndLivePrice {
+
+        .SleepAndLiveTitle,
+        .SleepAndLiveSubtitle,
+        .SleepAndLivePrice {
           color: var(--blue-color-1000);
         }
-        
+
         .SleepAndLiveButtonCTA {
           background: var(--blue-color-1000);
         }
@@ -63,6 +104,22 @@
         text-transform: uppercase;
         text-align: center;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 11px;
+          line-height: 13px;
+          padding: 2px 20px;
+        }
+      }
+
+      .SleepAndLiveCTAImage {
+        @media only screen and (max-width: 1023px) {
+          width: 100%;
+
+          >img {
+            width: 100%;
+          }
+        }
       }
 
       .SleepAndLiveTitle {
@@ -92,9 +149,10 @@
         margin-bottom: 29px;
 
         @media only screen and (max-width: 1023px) {
-          font-size: 10px;
+          font-size: 11px;
           line-height: 18px;
           letter-spacing: 1px;
+          margin-bottom: 20px;
         }
       }
 
@@ -106,8 +164,15 @@
         color: var(--gray-color-600);
         width: 75%;
 
-        > strong {
+        >strong {
           font-family: 'ZonaProBlack';
+        }
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 9px;
+          line-height: 12px;
+          letter-spacing: 1px;
+          width: 85%;
         }
       }
 
@@ -121,8 +186,11 @@
         width: 75%;
 
         @media only screen and (max-width: 1023px) {
-          font-size: 22px;
-          line-height: 22px;
+          font-size: 13px;
+          line-height: 13px;
+          width: 85%;
+          margin-top: 24px;
+          margin-bottom: 23px;
         }
       }
 
@@ -138,6 +206,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          height: 54px;
+          font-size: 12px;
+          line-height: 19px;
+        }
       }
     }
   }

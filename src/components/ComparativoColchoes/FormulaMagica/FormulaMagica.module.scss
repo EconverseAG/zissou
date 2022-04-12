@@ -5,6 +5,10 @@
   align-items: center;
   padding: 75px 0;
 
+  @media only screen and (max-width: 1023px) {
+    padding: 40px 0 50px;
+  }
+
   .FormulaMagicaTitle {
     font-family: 'ZonaProBold';
     font-size: 36px;
@@ -12,10 +16,20 @@
     color: var(--blue-color-1000);
     letter-spacing: 3px;
     margin-bottom: 35px;
+    width: 95%;
+    text-align: center;
 
     &OtherColor {
       display: inline;
       color: var(--purple-color-300);
+    }
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 23px;
+      text-align: center;
+      width: 70%;
     }
   }
 
@@ -28,5 +42,12 @@
     width: 65%;
     margin-bottom: 48px;
     text-align: center;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 34px;
+      width: 90%;
+    }
   }
 }

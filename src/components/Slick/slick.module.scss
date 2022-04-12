@@ -138,6 +138,11 @@
         padding-left: 120px;
         padding-right: 20px;
 
+        @media only screen and (max-width: 1200px) {
+          width: 340px;
+          padding-left: 50px;
+        }
+
         @media only screen and (max-width: 1023px) {
           width: 207px;
           height: 73px;

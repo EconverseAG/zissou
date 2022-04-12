@@ -1,3 +1,5 @@
+import useMobile from '../../../../../hooks/useMobile';
+
 import {Image} from '@shopify/hydrogen';
 
 import Accordion from '@mui/material/Accordion';
@@ -11,11 +13,17 @@ import Eua from '../../../../../assets/bandeira_eua.png';
 import Belgica from '../../../../../assets/bandeira_belgica.png';
 
 export default function Question1() {
+  const {isMobile} = useMobile();
+
   return (
     <Accordion className={styles.FaqAccordion}>
       <AccordionSummary
         expandIcon={
-          <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+          isMobile ? (
+            <AddIcon style={{color: 'fff', width: '21px', height: '21px'}} />
+          ) : (
+            <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+          )
         }
         aria-controls="panel1a-content"
         id="panel1a-header"
@@ -27,8 +35,16 @@ export default function Question1() {
       <AccordionDetails className={styles.FaqAccordionAnswer}>
         <div className={styles.FaqAccordionAnswerTitle}>
           As melhores matérias-primas do mundo
-          <Image src={Belgica} width="47" height="47" />
-          <Image src={Eua} width="47" height="47" />
+          <Image
+            src={Belgica}
+            width={isMobile ? '20' : '47'}
+            height={isMobile ? '20' : '47'}
+          />
+          <Image
+            src={Eua}
+            width={isMobile ? '20' : '47'}
+            height={isMobile ? '20' : '47'}
+          />
         </div>
         <span className={styles.FaqAccordionAnswerText}>
           Materiais rigorosamente selecionados entre os melhores fornecedores do

@@ -21,7 +21,7 @@ export default function ZissouStores() {
       subtitleCaption: `Nossa flagship no coração dos Jardins`,
       banner: Banner_1,
       mobileImage: MobileBanner_1,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
     {
@@ -29,7 +29,7 @@ export default function ZissouStores() {
       subtitleCaption: 'Nossa flagship no coração dos Jardins',
       banner: Banner_2,
       mobileImage: MobileBanner_2,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
     {
@@ -37,7 +37,7 @@ export default function ZissouStores() {
       subtitleCaption: 'Nossa flagship no coração dos Jardins',
       banner: Banner_3,
       mobileImage: MobileBanner_3,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
     {
@@ -46,7 +46,7 @@ export default function ZissouStores() {
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_4,
       mobileImage: MobileBanner_4,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
     {
@@ -55,7 +55,7 @@ export default function ZissouStores() {
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_5,
       mobileImage: MobileBanner_5,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
     {
@@ -64,7 +64,7 @@ export default function ZissouStores() {
         'Uma imersão no universo do sono, na rua mais charmosa de São Paulo',
       banner: Banner_6,
       mobileImage: MobileBanner_6,
-      link: 'https://www.zissou.com.br/pages/casa-zissou',
+      link: '/pages/casa-zissou',
       CTA: 'CONHEÇA NOSSAS LOJAS',
     },
   ];

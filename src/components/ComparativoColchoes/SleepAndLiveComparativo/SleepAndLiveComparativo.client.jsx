@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import useMobile from '../../../hooks/useMobile';
 
 import {Link, Image} from '@shopify/hydrogen';
 
@@ -13,6 +14,7 @@ import ColchaoBlueHover from '../../../assets/ColchaoBlueHover.png';
 export default function SleepAndLiveComparativo() {
   const [changeUrlCoral, setChangeUrlCoral] = useState(ColchaoCoral);
   const [changeUrlBlue, setChangeUrlBlue] = useState(ColchaoBlue);
+  const {isMobile} = useMobile();
 
   function handleImageEnterCoral() {
     setChangeUrlCoral(ColchaoCoralHover);
@@ -45,8 +47,15 @@ export default function SleepAndLiveComparativo() {
           <p className={styles.SleepAndLiveFlag}>
             Mais <br /> vendido
           </p>
-          <Link to="https://www.zissou.com.br/products/colchao-zissou-coral-original">
-            <Image src={changeUrlCoral} width="572" height="302" />
+          <Link
+            to="https://www.zissou.com.br/products/colchao-zissou-coral-original"
+            className={styles.SleepAndLiveCTAImage}
+          >
+            <Image
+              src={changeUrlCoral}
+              width={isMobile ? '304' : '572'}
+              height={isMobile ? '154' : '302'}
+            />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>CORAL</strong>
           <span className={styles.SleepAndLiveSubtitle}>
@@ -79,8 +88,15 @@ export default function SleepAndLiveComparativo() {
           <p className={styles.SleepAndLiveFlag}>
             Mais <br /> avançado
           </p>
-          <Link to="https://www.zissou.com.br/products/colchao-zissou-blue">
-            <Image src={changeUrlBlue} width="572" height="302" />
+          <Link
+            to="https://www.zissou.com.br/products/colchao-zissou-blue"
+            className={styles.SleepAndLiveCTAImage}
+          >
+            <Image
+              src={changeUrlBlue}
+              width={isMobile ? '304' : '572'}
+              height={isMobile ? '154' : '302'}
+            />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>Blue</strong>
           <span className={styles.SleepAndLiveSubtitle}>

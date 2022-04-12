@@ -1,4 +1,6 @@
-import {Image} from '@shopify/hydrogen';
+import useMobile from '../../../../../hooks/useMobile';
+
+import {Image, Link} from '@shopify/hydrogen';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -11,11 +13,17 @@ import ColchaoCoral from '../../../../../assets/colchao-coral-faq.png';
 import ColchaoBlue from '../../../../../assets/colchao-blue-faq.png';
 
 export default function Question2() {
+  const {isMobile} = useMobile();
+
   return (
     <Accordion className={styles.FaqAccordion}>
       <AccordionSummary
         expandIcon={
-          <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+          isMobile ? (
+            <AddIcon style={{color: 'fff', width: '21px', height: '21px'}} />
+          ) : (
+            <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+          )
         }
         aria-controls="panel2a-content"
         id="panel2a-header"
@@ -24,32 +32,48 @@ export default function Question2() {
           Qual é o colchão ideal para mim?
         </strong>
       </AccordionSummary>
-      <AccordionDetails className={styles.FaqAccordionAnswer}>
-        <div>
+      <AccordionDetails
+        className={[styles.FaqAccordionAnswer, styles.FaqAccordionAnswer2].join(
+          ' ',
+        )}
+      >
+        <div className={styles.FaqAccordionAnswerContainer}>
           <Image
             src={ColchaoCoral}
-            width="296"
-            height="106"
+            width={isMobile ? '135' : '296'}
+            height={isMobile ? '48' : '106'}
             style={{marginRight: '39px'}}
           />
           <span className={styles.FaqAccordionAnswerText}>
-            O <strong>CORAL</strong> é perfeito para quem busca suporte e
-            conforto na medida certa, unindo conforto térmico e resiliência
+            O{' '}
+            <strong className={styles.FaqAccordionAnswerTextBolder}>
+              CORAL
+            </strong>{' '}
+            é perfeito para quem busca suporte e conforto na medida certa,
+            unindo conforto térmico e resiliência
           </span>
         </div>
-        <div>
+        <div className={styles.FaqAccordionAnswerContainer}>
           <Image
             src={ColchaoBlue}
-            width="296"
-            height="106"
+            width={isMobile ? '135' : '296'}
+            height={isMobile ? '48' : '106'}
             style={{marginRight: '39px'}}
           />
           <span className={styles.FaqAccordionAnswerText}>
             Se você busca o que há de mais avançado no mundo em termos de
-            tecnologia do sono, confira o <strong>Blue</strong>, sinônimo de
-            aconchego e refrescância
+            tecnologia do sono, confira o{' '}
+            <strong className={styles.FaqAccordionAnswerTextBolder}>
+              Blue
+            </strong>
+            , sinônimo de aconchego e refrescância
           </span>
         </div>
+        <Link to="/pages/comparativo-colchoes">
+          <strong className={styles.FaqAccordionAnswerLink}>
+            Comparar os colchões &gt;&gt;&gt;
+          </strong>
+        </Link>
       </AccordionDetails>
     </Accordion>
   );
