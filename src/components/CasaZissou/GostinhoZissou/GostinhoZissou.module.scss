@@ -1,0 +1,74 @@
+.GostinhoZissouContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-color-300);
+  padding: 98px 0;
+
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column;
+    padding: 55px 0;
+  }
+
+  .GostinhoZissouLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1023px) {
+      margin-bottom: 27px;
+    }
+
+    &Title {
+      font-family: 'ZonaProBold';
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 5px;
+      color: var(--white-color);
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 31px;
+      width: 70%;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+      }
+    }
+    
+    &Subtitle {
+      font-family: 'ZonaPro';
+      font-size: 21px;
+      line-height: 28px;
+      color: var(--white-color);
+      text-align: center;
+      letter-spacing: 1px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .GostinhoZissouRight {
+    height: 160px;
+    background: var(--white-color);
+    border-radius: 89px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,.16);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    padding: 0 50px;
+
+    @media only screen and (max-width: 1023px) {
+      width: 90%;
+      height: 120px;
+      padding: 0 30px;
+    }
+  }
+}

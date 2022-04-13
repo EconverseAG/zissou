@@ -1,0 +1,83 @@
+.WhatsAppContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  background: var(--gray-color-100);
+
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column;
+    padding: 35px 0;
+  }
+
+  .WhatsAppTitle {
+    max-width: 600px;
+    font-family: 'ZonaProBold';
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--gray-color-600);
+    text-align: center;
+    margin-right: 52px;
+    letter-spacing: 1px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-right: 0;
+      margin-bottom: 23px;
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 80%;
+    }
+  }
+
+  .WhatsAppButton {
+    background: var(--white-color);
+    border-radius: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    @media only screen and (max-width: 1023px) {
+      width: 50%;
+      padding: 15px 20px;
+    }
+
+    &:hover {
+      .WhatsAppBackground {
+        background: var(--purple-color-500);
+      }
+    }
+    .WhatsAppBackground {
+      width: 68px;
+      height: 68px;
+      background: var(--purple-color-300);
+      border-radius: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width: 1023px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .WhatsAppText {
+      font-family: 'ZonaProBlack';
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--blue-color-1000);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-left: 26px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 10px;
+        line-height: 15px;
+        margin-left: 16px;
+        width: 100px;
+      }
+    }
+  }
+}
