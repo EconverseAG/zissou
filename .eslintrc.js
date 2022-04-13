@@ -3,5 +3,11 @@ module.exports = {
   rules: {
     'eslint-comments/no-unlimited-disable': 'off',
     'eslint-comments/disable-enable-pair': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
