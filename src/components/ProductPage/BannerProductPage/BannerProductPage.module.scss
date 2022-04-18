@@ -1,0 +1,32 @@
+.BannerProductPageContainer {
+  position: relative;
+
+  .BannerProductPageTitle {
+    font-family: 'ZonaProBlack';
+    font-size: 38px;
+    line-height: 62px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    letter-spacing: 3px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  .BannerProductPageImage {
+    height: 89vh;
+    width: 100vw;
+    object-fit: cover;
+
+    @media only screen and (max-width: 1023px) {
+      height: 460px;
+    }
+  }
+}
