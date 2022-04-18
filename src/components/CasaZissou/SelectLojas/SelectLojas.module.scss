@@ -1,10 +1,10 @@
 .SelectLojasContainer {
   background: var(--blue-color-500);
-  padding: 50px 0 80px;
+  padding: 50px 20px 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   @media only screen and (max-width: 1023px) {
     flex-direction: column;
   }
@@ -45,7 +45,7 @@
         margin-top: 35px;
       }
     }
-    
+
     .SelectLojasSubtitle {
       font-family: 'ZonaPro';
       color: var(--white-color);
@@ -75,19 +75,24 @@
         font-size: 20px;
         line-height: 27px;
         letter-spacing: 2px;
-        // color: var(--blue-color-500);
-        
+        padding-left: 64px;
+
         @media only screen and (max-width: 1023px) {
           font-size: 11px;
           line-height: 15px;
-          padding-top: 7px;
+          padding-left: 37px;
+          padding-top: 4px;
         }
 
         &:global(.Mui-focused) {
           padding-top: 0;
         }
+
+        &:global(.MuiFormLabel-filled) {
+          display: none;
+        }
       }
-      
+
       .SelectLojasSelect {
         border-radius: 33px;
         border: 3px solid var(--blue-color-200);
@@ -95,6 +100,75 @@
 
         :global(.MuiOutlinedInput-notchedOutline) {
           border: none;
+        }
+
+        :global(.MuiSelect-select) {
+          font-family: 'ZonaProBold';
+          text-transform: uppercase;
+          font-size: 20px;
+          line-height: 27px;
+          letter-spacing: 2px;
+          color: var(--blue-color-500);
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 11px;
+            line-height: 15px;
+          }
+        }
+      }
+
+    }
+
+    .SelectedStore {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &Address {
+        font-family: 'ZonaPro';
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: var(--white-color);
+        margin-top: 41px;
+        margin-bottom: 26px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 1px;
+          margin-top: 22px;
+          margin-bottom: 20px;
+        }
+      }
+
+      &Link {
+        background: var(--blue-color-300);
+        color: var(--white-color);
+        border-radius: 33px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'ZonaProBlack';
+        font-size: 17px;
+        line-height: 15px;
+        text-transform: uppercase;
+        padding: 0 27px;
+        letter-spacing: 2px;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+
+        &:hover {
+          background: var(--blue-color-1000);
+        }
+
+        @media only screen and (max-width: 1023px) {
+          height: 32px;
+          padding: 0 25px;
+          font-size: 8px;
+          line-height: 7px;
         }
       }
     }

@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import useMobile from '../../../hooks/useMobile';
 
-import {Image} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -15,8 +15,11 @@ import * as styles from './SelectLojas.module.scss';
 import ZissouFastShop from '../../../assets/zissou-fastshop.png';
 import CamaZissouFastshop from '../../../assets/cama-zissou-fastshop.png';
 
+import data from './data';
+
 export default function SelectLojas() {
   const {isMobile} = useMobile();
+  const stores = data;
 
   const [loja, setLoja] = useState('');
 
@@ -24,15 +27,18 @@ export default function SelectLojas() {
     setLoja(event.target.value);
   };
 
+  const lojaFiltered = stores.filter((store) => store.value == loja);
+
   return (
     <div className={styles.SelectLojasContainer}>
       {isMobile ? <Image src={ZissouFastShop} width="204" height="36" /> : null}
-      <Image
-        src={CamaZissouFastshop}
-        width={isMobile ? '266' : '582'}
-        height={isMobile ? '208' : '516'}
-        className={styles.CamaZissouFastshop}
-      />
+      <div className={styles.CamaZissouFastshop}>
+        <Image
+          src={CamaZissouFastshop}
+          width={isMobile ? '266' : '582'}
+          height={isMobile ? '208' : '516'}
+        />
+      </div>
       <div className={styles.SelectLojasContent}>
         {isMobile ? null : (
           <Image src={ZissouFastShop} width="380" height="68" />
@@ -60,11 +66,28 @@ export default function SelectLojas() {
             IconComponent={ExpandMoreIcon}
             className={styles.SelectLojasSelect}
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            {stores.map((store) => (
+              <MenuItem key={store.value} value={store.value}>
+                {store.name}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
+
+        {lojaFiltered.length ? (
+          <div className={styles.SelectedStore}>
+            <span
+              dangerouslySetInnerHTML={{__html: lojaFiltered[0].address}}
+              className={styles.SelectedStoreAddress}
+            />
+            <Link
+              to={lojaFiltered[0].link}
+              className={styles.SelectedStoreLink}
+            >
+              Como chegar
+            </Link>
+          </div>
+        ) : null}
       </div>
     </div>
   );
