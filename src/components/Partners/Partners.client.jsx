@@ -8,20 +8,23 @@ import Ornare from '../../assets/logo_Ornare.png';
 
 import useMobile from '../../hooks/useMobile';
 
-export default function Partners() {
+export default function Partners({color}) {
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.PartnersContainer}>
+    <div
+      className={styles.PartnersContainer}
+      style={{background: color ? color : ''}}
+    >
       <div className={styles.PartnersLeft}>
-        <strong>ONDE TEM ZISSOU</strong>
+        <strong style={{color: color ? '#fff' : ''}}>ONDE TEM ZISSOU</strong>
         <p>
           Experimente nossos produtos <br /> de Norte a Sul do Brasil
         </p>
         <Link to="/pages/casa-zissou">Quero Visitar</Link>
       </div>
       <div className={styles.PartnersRight}>
-        <span>Marcas Parceiras</span>
+        <span style={{color: color ? '#fff' : ''}}>Marcas Parceiras</span>
         <div>
           <Image
             src={Fasano}

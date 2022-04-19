@@ -5,7 +5,7 @@ import CinematographyBanner from '../components/CinematographyBanner/Cinematogra
 import SleepAndLive from '../components/SleepAndLive/SleepAndLive.client';
 import ChooseYourDestiny from '../components/ChooseYourDestiny/ChooseYourDestiny.client';
 import ZissouStores from '../components/ZissouStores/ZissouStores.client';
-import TryIt from '../components/TryIt/TryIt.client';
+import TryItFor100Days from '../components/TryItFor100Days/TryItFor100Days.client';
 import Partners from '../components/Partners/Partners.client';
 import OpenYourHeart from '../components/OpenYourHeart/OpenYourHeart.client';
 import ZissouNaMidia from '../components/ZissouNaMidia/ZissouNaMidia.client';
@@ -22,7 +22,7 @@ export default function Index() {
         <CinematographyBanner />
         <SleepAndLive />
         <ChooseYourDestiny />
-        <TryIt />
+        <TryItFor100Days />
         <ZissouStores />
         <Partners />
         <OpenYourHeart />

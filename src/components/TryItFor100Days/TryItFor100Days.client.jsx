@@ -4,7 +4,7 @@ import * as styles from './tryit.module.scss';
 
 import Gif100Dias from '../../assets/gif_100dias.gif';
 
-export default function TryIt() {
+export default function TryItFor100Days() {
   return (
     <div className={styles.TryItContainer}>
       <div className={styles.TryItLeft}>

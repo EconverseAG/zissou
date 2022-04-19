@@ -7,7 +7,7 @@ import SleepAndLiveComparativo from '../../components/ComparativoColchoes/SleepA
 import FormulaDoConforto from '../../components/ComparativoColchoes/FormulaDoConforto/FormulaDoConforto.client';
 import OpenYourHeart from '../../components/OpenYourHeart/OpenYourHeart.client';
 import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
-import TryIt from '../../components/TryIt/TryIt.client';
+import TryItFor100Days from '../../components/TryItFor100Days/TryItFor100Days.client';
 import ZissouStores from '../../components/ZissouStores/ZissouStores.client';
 import Partners from '../../components/Partners/Partners.client';
 import Combinacao from '../../components/ComparativoColchoes/Combinacao/Combinacao.client';
@@ -30,7 +30,7 @@ export default function ComparativoColchoes() {
         <FormulaMagica />
         <OpenYourHeart />
         <CoralOrBlue />
-        <TryIt />
+        <TryItFor100Days />
         <ZissouStores />
         <Partners />
       </Suspense>
