@@ -1,11 +1,254 @@
 .SpecsColchaoSlickContainer {
-  .SpecsColchaoSlickTitle {
-    &.coral {
-      color: coral;
+  position: relative;
+
+  .SpecsColchaoSlickFirstSlider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7%;
+    z-index: 1;
+    width: 60%;
+
+    @media only screen and (max-width: 1400px) {
+      width: 90%;
     }
 
-    &.blue {
-      color: blue;
+    @media only screen and (max-width: 1023px) {
+      width: 100%;
+    }
+
+    &.SpecsColchaoSlickFirstSliderCoral {
+      :global(.slick-slide.slick-active.slick-current) {
+        .SpecsColchaoSlickFirstSliderTabs {
+          background: rgba(244, 133, 128, .7);
+
+          &Title {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickFirstSliderBlue {
+      :global(.slick-slide.slick-active.slick-current) {
+        .SpecsColchaoSlickFirstSliderTabs {
+          background: rgba(65, 82, 100, .7);
+
+          &Title {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+
+    :global(.slick-slide) {
+      &+ :global(.slick-slide) {
+        padding-left: 14px;
+      }
+
+      &:last-child {
+        padding-right: 10px;
+      }
+
+      .SpecsColchaoSlickFirstSliderTabs {
+        background: rgba(255, 255, 255, .7);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        border-radius: 20px;
+        height: 73px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &Title {
+          font-family: 'ZonaProBold';
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          text-transform: uppercase;
+          color: var(--gray-color-600);
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .SpecsColchaoSlickSecondSlider {
+    position: relative;
+    height: 800px;
+
+    @media only screen and (max-width: 1023px) {
+      height: 700px;
+    }
+
+    &.SpecsColchaoSlickSecondSliderCoral {
+      .SpecsColchaoSlickSecondSliderBackground3 {
+        height: 800px;
+        background: linear-gradient(90deg, rgba(212,168,191,1) 53%, rgba(252,241,240,1) 53%);
+        
+        @media only screen and (max-width: 1023px) {
+          background: linear-gradient(180deg, rgba(212,168,191,1) 58%, rgba(252,241,240,1) 58%);
+          height: 700px;
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderBlue {
+      .SpecsColchaoSlickSecondSliderBackground3 {
+        height: 800px;
+        background: linear-gradient(90deg, rgba(210,218,227,1) 53%, rgba(125,144,165,1) 53%);
+
+        @media only screen and (max-width: 1023px) {
+          background: linear-gradient(180deg, rgba(210,218,227,1) 56%, rgba(125,144,165,1) 56%);
+          height: 700px;
+        }
+      }
+    }
+
+    &Background {
+      position: relative;
+
+      &Image {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+
+        @media only screen and (max-width: 1023px) {
+          height: 700px;
+        }
+      }
+
+      &.SpecsColchaoSlickSecondSliderBackground2 {
+        .SpecsColchaoSlickSecondSliderBackgroundContent {
+          top: 20%;
+        }
+      }
+
+      .SpecsColchaoSlickSecondSliderBackgroundContent {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+        @media only screen and (max-width: 1023px) {
+          flex-direction: column;
+          top: 25%;
+        }
+      }
+
+      &Info {
+        background: rgba(255, 255, 255, .7);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 572px;
+
+        @media only screen and (max-width: 1023px) {
+          max-width: 90%;
+          padding: 20px;
+
+          &.SpecsColchaoSlickSecondSliderBackgroundInfo2 {
+            margin-bottom: 10px;
+          }
+        }
+
+        &Title {
+          font-family: 'ZonaProBlack';
+          font-size: 17px;
+          line-height: 24px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 25px;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+          }
+
+          &Coral {
+            color: var(--coral-color-500);
+          }
+
+          &Blue {
+            color: var(--blue-color-500);
+          }
+
+          &Flag {
+            margin-left: 5px;
+          }
+        }
+
+        &Subtitle {
+          font-family: 'ZonaProBold';
+          font-size: 13px;
+          line-height: 22px;
+          text-transform: uppercase;
+          color: var(--gray-color-500);
+          margin-bottom: 25px;
+          letter-spacing: 1px;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+            line-height: 16px;
+            margin-bottom: 20px;
+          }
+        }
+
+        &Text {
+          font-family: 'ZonaPro';
+          font-size: 13px;
+          line-height: 22px;
+          color: var(--gray-color-600);
+          letter-spacing: 1px;
+          display: block;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
+    :global(.slick-dots) {
+      display: none !important;
+
+      @media only screen and (max-width: 1023px) {
+        display: block !important;
+        bottom: 0px;
+
+        li {
+          button {
+            &::before {
+              content: '';
+              width: 10px;
+              height: 10px;
+              background: var(--gray-color-200);
+              border-radius: 200px;
+              display: block;
+              opacity: 1;
+            }
+          }
+        }
+
+        :global(li.slick-active) {
+          button {
+            &::before {
+              background: var(--purple-color-500);
+            }
+          }
+        }
+      }
     }
   }
 }
