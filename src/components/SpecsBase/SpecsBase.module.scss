@@ -93,6 +93,11 @@
         top: 490px;
       }
     }
+    :global(.slick-slide[data-index="3"]) {
+      p {
+        margin-top: 30px;
+      }
+    }
   }
   
   .contentSlide {
@@ -100,10 +105,11 @@
     height: 732px;
 
     p {
+      
       font-size: 20px;
       font-weight: 400;
       line-height: 33px;
-      letter-spacing: 5%;
+      letter-spacing: 0.05em;
       color: #245066;
       
       strong {
@@ -119,6 +125,13 @@
     .imageSeloMontagemGratis {
       margin-top: 73px;
       margin-left: 78px;
+    }
+
+    .gifMontagem {
+      position: absolute;
+      right: 0;
+      top: -20px;
+      z-index: -1;
     }
 
     &Cols {
