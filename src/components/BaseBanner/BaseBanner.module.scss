@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  aspect-ratio: 384/199;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../assets/base-banner.gif');
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 182px;
+    height: 100%;
+
+    strong, span {
+      font-family: ZonaProBlack;
+      text-transform: uppercase;
+      font-size: 37px;
+      line-height: 51px;
+      letter-spacing: 0.10em;
+      text-align: center;
+      color: #fff;
+    }
+
+    strong {
+      color: #f08590;
+    }
+  }
+}
