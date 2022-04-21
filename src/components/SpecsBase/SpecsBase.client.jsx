@@ -56,10 +56,12 @@ export default function SpecsBase() {
               <div className={styles.contentSlideColsLeft}>
                 <p>
                   A <strong>Base Zissou</strong> é superior a qualquer cama box
-                  tradicional. A madeira de eucalipto de reflorestamento usada
-                  em sua composição proporciona{' '}
+                  <br />
+                  tradicional. A madeira de eucalipto <br /> de reflorestamento
+                  usada em sua composição
+                  <br /> proporciona{' '}
                   <strong>
-                    estabilidade, força, resistência e durabilidade
+                    estabilidade, força, resistência e<br /> durabilidade
                   </strong>
                   , com pés de altíssima qualidade
                 </p>
@@ -82,31 +84,42 @@ export default function SpecsBase() {
           </div>
           <div className={styles.contentSlide}>
             <p>
-              A menor distância entre as ripas é fundamental e garante o melhor
-              conforto dos colchões. A Base Zissou possui{' '}
-              <strong>ripas de pinus com distância de apenas 5cm</strong>. Além
-              disso, elas são envelopadas individualmente em material
-              resistente, fazendo com que o colchão não escorregue e evitando os
+              A menor distância entre as ripas é fundamental e<br /> garante o
+              melhor conforto dos colchões. A Base
+              <br /> Zissou possui{' '}
+              <strong>
+                ripas de pinus com distância de
+                <br /> apenas 5cm
+              </strong>
+              . Além disso, elas são envelopadas
+              <br /> individualmente em material resistente, fazendo
+              <br /> com que o colchão não escorregue e evitando os
+              <br />
               nhec nhecs indesejáveis
             </p>
           </div>
           <div className={styles.contentSlide}>
             <p>
               <strong>
-                Linhas retas, bordas arredondas e revestimentos em tecido
-                estofado com fibras volumosas de alta tecnologia, de cor neutra,
+                Linhas retas, bordas arredondas
+                <br /> e revestimentos em tecido estofado
+                <br /> com fibras volumosas de alta tecnologia,
+                <br /> de cor neutra,
               </strong>{' '}
-              que combina com qualquer ambiente. Possui{' '}
-              <strong>altura total de 30cm</strong> para harmonizar com móveis
-              de cabeceira.
+              que combina com qualquer
+              <br /> ambiente. Possui <strong>altura total de 30cm</strong> para
+              <br /> harmonizar com móveis de cabeceira.
             </p>
           </div>
           <div className={styles.contentSlide}>
             <p>
-              Montar um móvel de qualidade é tarefa desafiadora. Não se
-              preocupe! Para sua comodidade,{' '}
+              Montar um móvel de qualidade é tarefa
+              <br /> desafiadora. Não se preocupe! Para sua
+              <br /> comodidade,{' '}
               <strong>
-                a instalação da Base Zissou é feita por um especialista de forma
+                a instalação da Base Zissou
+                <br /> é feita por um especialista de forma
+                <br />
                 rápida, prática e segura.
               </strong>
             </p>
