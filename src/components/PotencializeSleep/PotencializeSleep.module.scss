@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #CBC1DA;
+  padding-top: 149px;
+
+  h2 {
+    color: #707070;
+    max-width: 967px;
+    font-family: ZonaProSemiBold;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    strong {
+      font-weight: inherit;
+      color: #fff;
+    }
+  }
+}
