@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import {Image} from '@shopify/hydrogen';
 
 import SelosBase from '../../assets/selos-base.png';
+import SeloMontagemGratis from '../../assets/selo-montagem-gratis.png';
 import ComparacaoBase from '../../assets/comparacao-base.png';
 
 import * as styles from './SpecsBase.module.scss';
@@ -109,6 +110,12 @@ export default function SpecsBase() {
                 rápida, prática e segura.
               </strong>
             </p>
+            <Image
+              src={SeloMontagemGratis}
+              width={207}
+              height={219}
+              className={styles.imageSeloMontagemGratis}
+            />
           </div>
         </Slider>
       </div>
