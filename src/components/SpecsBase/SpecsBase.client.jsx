@@ -57,8 +57,8 @@ export default function SpecsBase() {
                 <p>
                   A <strong>Base Zissou</strong> é superior a qualquer cama box
                   <br />
-                  tradicional. A madeira de eucalipto <br /> de reflorestamento
-                  usada em sua composição
+                  tradicional. A madeira de eucalipto de
+                  <br /> reflorestamento usada em sua composição
                   <br /> proporciona{' '}
                   <strong>
                     estabilidade, força, resistência e<br /> durabilidade
