@@ -42,6 +42,20 @@
     margin-bottom: 94px;
     border-bottom: 1px solid #707070;
 
+    :global(.slick-track) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &::before, &::after {
+        display: none;
+      }
+
+      * {
+        max-width: max-content;
+      }
+    }
+
     :global(.slick-slide.slick-active.slick-current) {
       span {
         color: #245066;
