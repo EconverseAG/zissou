@@ -1,0 +1,79 @@
+.wrapper {
+  position: relative;
+  font-family: ZonaPro;
+  padding-block: 148px 137px;
+  background: #fff;
+  transition: .25s;
+  
+  &Center {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &[data-currentSlide="0"] {
+    background: #CADEE8;
+
+    .nav {
+      span {
+        color: #fff;
+      }
+    }
+  }
+  &[data-currentSlide="3"] {
+    background: #E8EDF0;
+  }
+
+  .nav {
+    padding-bottom: 72px;
+    margin-bottom: 94px;
+    border-bottom: 1px solid #707070;
+
+    :global(.slick-slide.slick-active.slick-current) {
+      span {
+        color: #245066;
+        cursor: default;
+      }
+    }
+
+    span {
+      font-size: 20px;
+      font-family: ZonaProBold;
+      color: #707070;
+      font-weight: 800;
+      line-height: 26px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+  }
+  
+  .contentSlide {
+    position: relative;
+    height: 732px;
+
+    p {
+      max-width: 568px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 5%;
+      color: #245066;
+      
+      strong {
+        font-family: ZonaProBold;
+        font-weight: 700;
+      }
+    }
+    
+    .imageSelosBase {
+      margin-top: 51px;
+    }
+
+    &Cols {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+}
