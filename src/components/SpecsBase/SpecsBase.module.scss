@@ -3,7 +3,8 @@
   font-family: ZonaPro;
   padding-block: 148px 137px;
   background: #fff;
-  transition: .25s;
+  transition: background .25s;
+  overflow: hidden;
   
   &Center {
     max-width: 1440px;
@@ -19,6 +20,12 @@
         color: #fff;
       }
     }
+  }
+  &[data-currentSlide="1"] {
+    background-image: url('../../assets/base-background-second-slide.png');
+    background-repeat: no-repeat;
+    background-position: right 365px;
+    transition: background-position 0s;
   }
   &[data-currentSlide="3"] {
     background: #E8EDF0;
@@ -44,6 +51,15 @@
       line-height: 26px;
       cursor: pointer;
       transition: 0.25s;
+    }
+  }
+
+  .mainSlider {
+    :global(.slick-slide[data-index="1"]) {
+      p {
+        position: absolute;
+        top: 122px;
+      }
     }
   }
   

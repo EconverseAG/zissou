@@ -48,6 +48,7 @@ export default function SpecsBase() {
           arrows={false}
           dots={false}
           fade={true}
+          className={styles.mainSlider}
         >
           <div className={styles.contentSlide}>
             <div className={styles.contentSlideCols}>
