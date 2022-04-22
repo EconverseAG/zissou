@@ -5,6 +5,7 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import PotencializeSleep from '../PotencializeSleep/PotencializeSleep.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
+import BaseTechnical from '../BaseTechnical/BaseTechnical.client';
 
 export default function Base() {
   return (
@@ -13,6 +14,7 @@ export default function Base() {
       <PotencializeSleep />
       <SpecsBase />
       <InteractiveComparatorColchoes />
+      <BaseTechnical />
       <TryItFor100Days />
       <ZissouStores />
       <Partners color="#779ABF" />
