@@ -6,6 +6,25 @@
   flex-direction: column;
   align-items: center;
   background-image: url('../../assets/base-banner.gif');
+
+  &.mobile {
+    background-image: none;
+    aspect-ratio: initial;
+
+    .content {
+      margin-block: 71px 13px;
+      padding: 0;
+
+      strong, span {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      span {
+        color: #245066;
+      }
+    }
+  }
   
   .content {
     display: flex;
