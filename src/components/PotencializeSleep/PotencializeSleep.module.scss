@@ -2,8 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background: #CBC1DA;
   padding-top: 149px;
+  min-height: 942px;
+
+  &.mobile {
+    padding-top: 50px;
+    min-height: 484px;
+
+    h2 {
+      max-width: 282px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
 
   h2 {
     color: #707070;
