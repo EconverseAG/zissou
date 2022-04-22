@@ -3,8 +3,8 @@ import SpecsBase from '../SpecsBase/SpecsBase.client';
 import InteractiveComparatorColchoes from '../InteractiveComparatorColchoes/InteractiveComparatorColchoes.client';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import PotencializeSleep from '../PotencializeSleep/PotencializeSleep.client';
-import ExperienciaZissouDesktop from '../CasaZissou/ExperienciaZissou/ExperienciaZissouDesktop';
-import Banners from '../CasaZissou/Banners/Banners.client';
+import ZissouStores from '../ZissouStores/ZissouStores.client';
+import Partners from '../Partners/Partners.client';
 
 export default function Base() {
   return (
@@ -14,8 +14,8 @@ export default function Base() {
       <SpecsBase />
       <InteractiveComparatorColchoes />
       <TryItFor100Days />
-      <Banners />
-      <ExperienciaZissouDesktop />
+      <ZissouStores />
+      <Partners color="#779ABF" />
     </div>
   );
 }
