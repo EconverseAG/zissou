@@ -10,8 +10,12 @@ import * as styles from './BaseTechnical.module.scss';
 
 import BackgroundImage from '../../assets/base-technical-background.png';
 
+import useMobile from '../../hooks/useMobile';
+
 export default function BaseTechnical() {
   const [expanded, setExpanded] = useState(false);
+
+  const {isMobile} = useMobile();
 
   const handleChange = useCallback(
     (panel) => (_, isExpanded) => {
@@ -21,8 +25,8 @@ export default function BaseTechnical() {
   );
 
   return (
-    <div className={`flex ${styles.wrapper}`}>
-      <Image src={BackgroundImage} width="763" height="540" />
+    <div className={`flex ${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
+      {!isMobile && <Image src={BackgroundImage} width="763" height="540" />}
       <div className={`flex flex-col ${styles.content}`}>
         <h2>Informações técnicas</h2>
         <Accordion

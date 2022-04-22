@@ -4,6 +4,46 @@
   color: #245066;
   background: #CADEE8;
   padding-block: 200px 150px;
+  
+  &.mobile {
+    min-height: 342px;
+    padding-block: 57px 43px;
+
+    .content {
+      padding-inline: 16px;
+
+      h2 {
+        margin-bottom: 34px;
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      .accordion {
+        &Summary {
+          height: 61px;
+
+          * {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+
+        &Details {
+          font-size: 16px;
+          line-height: 24px;
+          padding-bottom: 70px;
+
+          &Grid {
+            grid-template-columns: 1fr;
+            font-size: 14px;
+            line-height: 18px;
+            gap: 20px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
 
   .content {
     width: 100%;
