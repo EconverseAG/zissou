@@ -9,13 +9,20 @@ import ComparacaoBase from '../../assets/comparacao-base.png';
 
 import * as styles from './SpecsBase.module.scss';
 
+import useMobile from '../../hooks/useMobile';
+
 export default function SpecsBase() {
   const [nav, setNav] = useState();
   const [slider, setSlider] = useState();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const {isMobile} = useMobile();
+
   return (
-    <div className={styles.wrapper} data-currentSlide={currentSlide}>
+    <div
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+      data-currentSlide={currentSlide}
+    >
       <div className={styles.wrapperCenter}>
         <Slider
           asNavFor={slider}

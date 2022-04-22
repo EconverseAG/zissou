@@ -5,6 +5,45 @@
   background: #fff;
   transition: background .25s;
   overflow: hidden;
+
+  &.mobile {
+    padding: 0;
+    padding-bottom: 64px;
+
+    .nav {
+      background: #fff;
+      padding: 0 16px;
+      height: 100px;
+
+      :global(.slick-list) {
+        height: 100%;
+      }
+
+      :global(.slick-track) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+      }
+
+      :global(.slick-slide) {
+        display: flex;
+        align-items: center;
+        
+        span {
+          color: #707070;
+          font-size: 9px;
+          line-height: 12px;
+        }
+      }
+
+      :global(.slick-slide.slick-active.slick-current) {
+        span {
+          color: #245066;
+        }
+      }
+    }
+  }
   
   &Center {
     max-width: 1440px;
