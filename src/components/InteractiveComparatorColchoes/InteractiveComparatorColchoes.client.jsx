@@ -16,7 +16,9 @@ export default function InteractiveComparatorColchoes() {
     (e) => {
       if (!isHolding) return;
 
-      const percent = (e.clientX / window.innerWidth) * 100;
+      const xPos = e.client || e.touches[0].clientX;
+
+      const percent = (xPos / window.innerWidth) * 100;
 
       setSliderPercent(percent);
     },
