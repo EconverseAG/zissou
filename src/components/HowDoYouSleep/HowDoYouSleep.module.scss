@@ -1,0 +1,44 @@
+.wrapper {
+  align-items: center;
+  padding-block: 148px 136px;
+  font-family: ZonaPro;
+  background: #F5F6F5;
+
+  h2 {
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #f08590;
+    text-transform: uppercase;
+
+    strong {
+      color: #245066;
+      font-weight: inherit;
+    }
+  }
+
+  span {
+    color: #707070;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    margin-top: 25px;
+    margin-bottom: 78px;
+  }
+
+  &.mobile {
+    padding: 62px 28px 47px;
+
+    h2 {
+      font-size: 23px;
+      line-height: 30px;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+  }
+}

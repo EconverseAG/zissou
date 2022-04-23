@@ -1,3 +1,5 @@
+import HowDoYouSleep from '../HowDoYouSleep/HowDoYouSleep.client';
+
 export default function Travesseiro() {
-  return <p>Travesseiro</p>;
+  return <HowDoYouSleep />;
 }
