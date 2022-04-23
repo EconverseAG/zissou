@@ -2,21 +2,15 @@ import {useEffect, useState} from 'react';
 
 import {
   flattenConnection,
-  useProduct,
   ProductTitle,
   ProductDescription,
   ProductPrice,
-  AddToCartButton,
-  BuyNowButton,
 } from '@shopify/hydrogen/client';
-
-import {
-  BUTTON_PRIMARY_CLASSES,
-  BUTTON_SECONDARY_CLASSES,
-} from '../Button.client';
 
 import ProductOptions from '../ProductOptions.client';
 import Gallery from '../Gallery.client';
+
+import AddToCartMarkup from '../AddToCartMarkup/AddToCartMarkup.client';
 
 import BannerCoralPDP from '../../assets/pdp-coral.png';
 import BannerBluePDP from '../../assets/pdp-blue.png';
@@ -31,32 +25,6 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import DoubtsProductPage from '../ProductPage/DoubtsProductPage/DoubtsProductPage.client';
 import InstagramZissou from '../../components/InstagramZissou/InstagramZissou.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
-
-function AddToCartMarkup() {
-  const {selectedVariant} = useProduct();
-  const isOutOfStock = !selectedVariant.availableForSale;
-
-  return (
-    <div className="space-y-2 mb-8">
-      <AddToCartButton
-        className={BUTTON_PRIMARY_CLASSES}
-        disabled={isOutOfStock}
-      >
-        {isOutOfStock ? 'Out of stock' : 'Add to bag'}
-      </AddToCartButton>
-      {isOutOfStock ? (
-        <p className="text-black text-center">Available in 2-3 weeks</p>
-      ) : (
-        <BuyNowButton
-          variantId={selectedVariant.id}
-          className={BUTTON_SECONDARY_CLASSES}
-        >
-          Buy it now
-        </BuyNowButton>
-      )}
-    </div>
-  );
-}
 
 export default function Colchao({title, product}) {
   const initialVariant = flattenConnection(product.variants)[0];
