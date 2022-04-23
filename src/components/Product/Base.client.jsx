@@ -6,11 +6,13 @@ import PotencializeSleep from '../PotencializeSleep/PotencializeSleep.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
 import BaseTechnical from '../BaseTechnical/BaseTechnical.client';
+import ProductSection from './ProductSection.client';
 
-export default function Base() {
+export default function Base({product}) {
   return (
     <div className="flex flex-col">
       <BaseBanner />
+      <ProductSection product={product} />
       <PotencializeSleep />
       <SpecsBase />
       <InteractiveComparatorColchoes />
