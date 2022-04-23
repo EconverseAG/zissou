@@ -39,7 +39,7 @@ export default function ProductDetails({product}) {
         ) : isBase ? (
           <Base product={product} />
         ) : isTravesseiro ? (
-          <Travesseiro />
+          <Travesseiro product={product} />
         ) : isLencol ? (
           <Lencol />
         ) : isDuvet ? (
