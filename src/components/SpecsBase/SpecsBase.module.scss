@@ -13,64 +13,74 @@
     padding: 0;
     padding-bottom: 64px;
 
-    .nav {
+    .nav, &[data-currentContent="0"] .nav {
       background: #fff;
       padding: 0 16px;
-      margin-bottom: 53px;
+      margin-bottom: 35px;
       height: 100px;
+      gap: 20px;
 
-      :global(.slick-list) {
-        height: 100%;
-      }
-
-      :global(.slick-track) {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        height: 100%;
-      }
-
-      :global(.slick-slide) {
-        display: flex;
-        align-items: center;
+      span {
+        color: #707070;
+        font-size: 9px;
+        line-height: 12px;
         
-        span {
-          color: #707070;
-          font-size: 9px;
-          line-height: 12px;
-        }
-      }
-
-      :global(.slick-slide.slick-active.slick-current) {
-        span {
+        &.activeNav {
           color: #245066;
         }
       }
     }
 
-    .mainSlider {
-      :global(.slick-slide[data-index="0"]) {
-        p {
-          line-height: 13px;
-        }
+    .contentWrapper {
+      .secondContentBackground {
+        position: absolute;
+        max-width: unset;
+        width: 800px;
+        top: 100px;
+        right: unset;
+        bottom: unset;
       }
-      :global(.slick-slide[data-index="1"]) {
-        .contentItem {
-          height: 450px;
-        }
-        p {
-          position: relative;
-          top: 0;
-        }
+      
+      .thirdContentBackground {
+        position: relative;
+        top: unset;
+        left: 20px;
+        max-width: unset;
+        width: 600px;
+        margin-top: 35px;
       }
-      :global(.slick-slide[data-index="2"]) {
-        p {
-          position: relative;
-          top: 0;
-        }
-      }
+
       .contentItem {
+        min-height: unset;
+        padding: 0;
         padding-inline: 16px;
+        
+        &[data-tab="0"] {
+          height: auto;
+
+          p {
+            line-height: 13px;
+          }
+        }
+        &[data-tab="1"] {
+          height: 500px;
+
+          p {
+            position: relative;
+            top: 0;
+          }
+        }
+        &[data-tab="2"] {
+          p {
+            position: relative;
+            top: 0;
+          }
+        }
+        &[data-tab="3"] {
+          p {
+            margin-top: 0;
+          }
+        }
   
         p {
           position: relative;
