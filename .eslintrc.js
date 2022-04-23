@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     'eslint-comments/no-unlimited-disable': 'off',
     'eslint-comments/disable-enable-pair': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
     'prettier/prettier': [
       'error',
       {

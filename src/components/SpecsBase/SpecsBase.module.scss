@@ -1,7 +1,10 @@
 .wrapper {
   position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   font-family: ZonaPro;
-  padding: 148px 16px 137px;
   background: #fff;
   transition: background .25s;
   overflow: hidden;
@@ -52,7 +55,7 @@
         }
       }
       :global(.slick-slide[data-index="1"]) {
-        .contentSlide {
+        .contentItem {
           height: 450px;
         }
         p {
@@ -66,7 +69,7 @@
           top: 0;
         }
       }
-      .contentSlide {
+      .contentItem {
         padding-inline: 16px;
   
         p {
@@ -96,14 +99,8 @@
       }
     }
   }
-  
-  &Center {
-    max-width: 1440px;
-    height: 100%;
-    margin: 0 auto;
-  }
 
-  &[data-currentSlide="0"] {
+  &[data-currentContent="0"] {
     background: #CADEE8;
 
     .nav {
@@ -113,48 +110,22 @@
       }
     }
   }
-  &[data-currentSlide="1"] {
-    background-image: url('../../assets/base-background-second-slide.png');
-    background-repeat: no-repeat;
-    background-position: right 365px;
-    transition: background-position 0s;
-  }
-  &[data-currentSlide="2"] {
-    background-image: url('../../assets/base-background-third-slide.png');
-    background-repeat: no-repeat;
-    background-position: 450px 365px;
-    transition: background-position 0s;
-  }
-  &[data-currentSlide="3"] {
+  &[data-currentContent="3"] {
     background: #E8EDF0;
   }
 
   .nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 148px;
     padding-bottom: 72px;
-    margin-bottom: 94px;
     border-bottom: 1px solid #707070;
-
-    :global(.slick-track) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      &::before, &::after {
-        display: none;
-      }
-
-      * {
-        max-width: max-content;
-      }
-    }
-
-    :global(.slick-slide.slick-active.slick-current) {
-      span {
-        color: #245066;
-        cursor: default;
-      }
-    }
-
+    
     span {
       font-size: 20px;
       font-family: ZonaProBold;
@@ -163,73 +134,102 @@
       line-height: 26px;
       cursor: pointer;
       transition: 0.25s;
+      
+      &.activeNav {
+        color: #245066;
+        cursor: default;
+      }
     }
   }
 
-  .mainSlider {
-    :global(.slick-slide[data-index="1"]) {
-      p {
-        position: absolute;
-        top: 122px;
-      }
-    }
-    :global(.slick-slide[data-index="0"]) {
-      p {
-        line-height: 29px;
-      }
-    }
-    :global(.slick-slide[data-index="2"]) {
-      p {
-        position: absolute;
-        top: 490px;
-      }
-    }
-    :global(.slick-slide[data-index="3"]) {
-      p {
-        margin-top: 30px;
-      }
-    }
-  }
-  
-  .contentSlide {
+  .contentWrapper {
     position: relative;
-    height: 732px;
-
-    p {
-      
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 33px;
-      letter-spacing: 0.05em;
-      color: #245066;
-      
-      strong {
-        font-family: ZonaProBold;
-        font-weight: 700;
-      }
-    }
+    width: 100%;
     
-    .imageSelosBase {
-      margin-top: 51px;
-    }
-
-    .imageSeloMontagemGratis {
-      margin-top: 73px;
-      margin-left: 78px;
-    }
-
-    .gifMontagem {
+    .secondContentBackground {
       position: absolute;
+      top: 0;
       right: 0;
-      top: -20px;
-      z-index: -1;
     }
 
-    &Cols {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
+    .thirdContentBackground {
+      position: absolute;
+      top: 81px;
+      right: -100px;
+    }
+
+    .contentItem {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1440px;
+      min-height: 878px;
+      padding: 100px 16px 137px;
+      margin-inline: auto;
+  
+      &[data-tab="0"] {
+        height: 981px;
+
+        p {
+          line-height: 29px;
+        }
+      }
+
+      &[data-tab="1"] {
+        p {
+          position: absolute;
+          top: 122px;
+        }
+      }
+      &[data-tab="2"] {
+        p {
+          position: absolute;
+          bottom: 190px
+        }
+      }
+      &[data-tab="3"] {
+        p {
+          margin-top: 30px;
+        }
+      }
+  
+      p {
+        position: relative;
+        z-index: 1;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        color: #245066;
+        
+        strong {
+          font-family: ZonaProBold;
+          font-weight: 700;
+        }
+      }
+      
+      .imageSelosBase {
+        margin-top: 51px;
+      }
+  
+      .imageSeloMontagemGratis {
+        margin-top: 73px;
+        margin-left: 78px;
+      }
+  
+      .gifMontagem {
+        position: absolute;
+        right: 0;
+        top: 106px;
+        z-index: 0;
+      }
+  
+      &Cols {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
     }
   }
 }

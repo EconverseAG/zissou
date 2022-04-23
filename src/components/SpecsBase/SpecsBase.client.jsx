@@ -1,67 +1,74 @@
-import {useState} from 'react';
-import Slider from 'react-slick';
+import {useCallback, useState} from 'react';
 import {Image} from '@shopify/hydrogen';
 
 import SelosBase from '../../assets/selos-base.png';
 import GifMontagem from '../../assets/base-montagem.gif';
 import SeloMontagemGratis from '../../assets/selo-montagem-gratis.png';
 import ComparacaoBase from '../../assets/comparacao-base.png';
+import SecondContentBackground from '../../assets/base-background-second-slide.png';
+import ThirdContentBackground from '../../assets/base-background-third-slide.png';
 
 import * as styles from './SpecsBase.module.scss';
 
 import useMobile from '../../hooks/useMobile';
 
 export default function SpecsBase() {
-  const [nav, setNav] = useState();
-  const [slider, setSlider] = useState();
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentContent, setCurrentContent] = useState(0);
 
   const {isMobile} = useMobile();
+
+  const handleContentChange = useCallback((index) => {
+    setCurrentContent(index);
+  }, []);
 
   return (
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
-      data-currentSlide={currentSlide}
+      data-currentContent={currentContent}
     >
-      <div className={styles.wrapperCenter}>
-        <Slider
-          asNavFor={slider}
-          ref={(slider) => setNav(slider)}
-          slidesToShow={4}
-          focusOnSelect={true}
-          arrows={false}
-          className={styles.nav}
-          beforeChange={(_, slide) => setCurrentSlide(slide)}
+      <div className={styles.nav}>
+        <span
+          className={currentContent === 0 ? styles.activeNav : ''}
+          role="button"
+          onClick={() => handleContentChange(0)}
+          tabIndex={0}
         >
-          <span>
-            Estrutura de
-            <br /> madeira maciça
-          </span>
-          <span>
-            Quanto mais
-            <br /> ripas, melhor
-          </span>
-          <span>
-            Design versátil
-            <br /> minimalista
-          </span>
-          <span>
-            Montagem por um <br />
-            especialista do sono
-          </span>
-        </Slider>
-        <Slider
-          asNavFor={nav}
-          ref={(slider) => setSlider(slider)}
-          slidesToShow={1}
-          arrows={false}
-          dots={false}
-          fade={true}
-          className={styles.mainSlider}
+          Estrutura de
+          <br /> madeira maciça
+        </span>
+        <span
+          className={currentContent === 1 ? styles.activeNav : ''}
+          role="button"
+          onClick={() => handleContentChange(1)}
+          tabIndex={-1}
         >
-          <div className={styles.contentSlide}>
-            <div className={styles.contentSlideCols}>
-              <div className={styles.contentSlideColsLeft}>
+          Quanto mais
+          <br /> ripas, melhor
+        </span>
+        <span
+          className={currentContent === 2 ? styles.activeNav : ''}
+          role="button"
+          onClick={() => handleContentChange(2)}
+          tabIndex={-2}
+        >
+          Design versátil
+          <br /> minimalista
+        </span>
+        <span
+          className={currentContent === 3 ? styles.activeNav : ''}
+          role="button"
+          onClick={() => handleContentChange(3)}
+          tabIndex={-3}
+        >
+          Montagem por um <br />
+          especialista do sono
+        </span>
+      </div>
+      <div className={styles.contentWrapper}>
+        {(currentContent === 0 && (
+          <div className={styles.contentItem} data-tab="0">
+            <div className={styles.contentItemCols}>
+              <div className={styles.contentItemColsLeft}>
                 <p>
                   A <strong>Base Zissou</strong> é superior a qualquer cama box
                   <br />
@@ -80,7 +87,7 @@ export default function SpecsBase() {
                   className={styles.imageSelosBase}
                 />
               </div>
-              <div className={styles.contentSlideColsRight}>
+              <div className={styles.contentItemColsRight}>
                 <Image
                   src={ComparacaoBase}
                   width={611}
@@ -90,61 +97,86 @@ export default function SpecsBase() {
               </div>
             </div>
           </div>
-          <div className={styles.contentSlide}>
-            <p>
-              A menor distância entre as ripas é fundamental e<br /> garante o
-              melhor conforto dos colchões. A Base
-              <br /> Zissou possui{' '}
-              <strong>
-                ripas de pinus com distância de
-                <br /> apenas 5cm
-              </strong>
-              . Além disso, elas são envelopadas
-              <br /> individualmente em material resistente, fazendo
-              <br /> com que o colchão não escorregue e evitando os
-              <br />
-              nhec nhecs indesejáveis
-            </p>
-          </div>
-          <div className={styles.contentSlide}>
-            <p>
-              <strong>
-                Linhas retas, bordas arredondas
-                <br /> e revestimentos em tecido estofado
-                <br /> com fibras volumosas de alta tecnologia,
-                <br /> de cor neutra,
-              </strong>{' '}
-              que combina com qualquer
-              <br /> ambiente. Possui <strong>altura total de 30cm</strong> para
-              <br /> harmonizar com móveis de cabeceira.
-            </p>
-          </div>
-          <div className={styles.contentSlide}>
-            <p>
-              Montar um móvel de qualidade é tarefa
-              <br /> desafiadora. Não se preocupe! Para sua
-              <br /> comodidade,{' '}
-              <strong>
-                a instalação da Base Zissou
-                <br /> é feita por um especialista de forma
-                <br />
-                rápida, prática e segura.
-              </strong>
-            </p>
-            <Image
-              src={SeloMontagemGratis}
-              width={207}
-              height={219}
-              className={styles.imageSeloMontagemGratis}
-            />
-            <Image
-              src={GifMontagem}
-              width={1037}
-              height={635}
-              className={styles.gifMontagem}
-            />
-          </div>
-        </Slider>
+        )) ||
+          (currentContent === 1 && (
+            <>
+              <div className={styles.contentItem} data-tab="1">
+                <p>
+                  A menor distância entre as ripas é fundamental e<br /> garante
+                  o melhor conforto dos colchões. A Base
+                  <br /> Zissou possui{' '}
+                  <strong>
+                    ripas de pinus com distância de
+                    <br /> apenas 5cm
+                  </strong>
+                  . Além disso, elas são envelopadas
+                  <br /> individualmente em material resistente, fazendo
+                  <br /> com que o colchão não escorregue e evitando os
+                  <br />
+                  nhec nhecs indesejáveis
+                </p>
+              </div>
+              <Image
+                src={SecondContentBackground}
+                width={1735}
+                height={1294}
+                className={styles.secondContentBackground}
+              />
+            </>
+          )) ||
+          (currentContent === 2 && (
+            <>
+              <div className={styles.contentItem} data-tab="2">
+                <p>
+                  <strong>
+                    Linhas retas, bordas arredondas
+                    <br /> e revestimentos em tecido estofado
+                    <br /> com fibras volumosas de alta tecnologia,
+                    <br /> de cor neutra,
+                  </strong>{' '}
+                  que combina com qualquer
+                  <br /> ambiente. Possui <strong>
+                    altura total de 30cm
+                  </strong>{' '}
+                  para
+                  <br /> harmonizar com móveis de cabeceira.
+                </p>
+              </div>
+              <Image
+                src={ThirdContentBackground}
+                width={1581}
+                height={488}
+                className={styles.thirdContentBackground}
+              />
+            </>
+          )) ||
+          (currentContent === 3 && (
+            <div className={styles.contentItem} data-tab="3">
+              <p>
+                Montar um móvel de qualidade é tarefa
+                <br /> desafiadora. Não se preocupe! Para sua
+                <br /> comodidade,{' '}
+                <strong>
+                  a instalação da Base Zissou
+                  <br /> é feita por um especialista de forma
+                  <br />
+                  rápida, prática e segura.
+                </strong>
+              </p>
+              <Image
+                src={SeloMontagemGratis}
+                width={207}
+                height={219}
+                className={styles.imageSeloMontagemGratis}
+              />
+              <Image
+                src={GifMontagem}
+                width={1037}
+                height={635}
+                className={styles.gifMontagem}
+              />
+            </div>
+          ))}
       </div>
     </div>
   );
