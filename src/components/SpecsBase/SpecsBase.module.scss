@@ -13,6 +13,7 @@
     .nav {
       background: #fff;
       padding: 0 16px;
+      margin-bottom: 53px;
       height: 100px;
 
       :global(.slick-list) {
@@ -40,6 +41,57 @@
       :global(.slick-slide.slick-active.slick-current) {
         span {
           color: #245066;
+        }
+      }
+    }
+
+    .mainSlider {
+      :global(.slick-slide[data-index="0"]) {
+        p {
+          line-height: 13px;
+        }
+      }
+      :global(.slick-slide[data-index="1"]) {
+        .contentSlide {
+          height: 450px;
+        }
+        p {
+          position: relative;
+          top: 0;
+        }
+      }
+      :global(.slick-slide[data-index="2"]) {
+        p {
+          position: relative;
+          top: 0;
+        }
+      }
+      .contentSlide {
+        padding-inline: 16px;
+  
+        p {
+          position: relative;
+          font-size: 10px;
+          line-height: 13px;
+          text-align: center;
+        }
+
+        .imageSeloMontagemGratis {
+          width: 100px;
+          margin: 20px auto;
+        }
+    
+        .gifMontagem {
+          position: relative;
+          top: 0;
+        }
+  
+        &Cols {
+          flex-direction: column;
+  
+          &Right {
+            margin-top: 31px;
+          }
         }
       }
     }
