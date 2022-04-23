@@ -5,14 +5,14 @@
   background-image: url('../../assets/blue-comparador.png');
   background-position: center;
   background-size: auto 100%;
-  min-height: 474px;
+  min-height: 360px;
   overflow: hidden;
 
   &.mobile {
     aspect-ratio: initial;
 
     .content {
-      height: 474px;
+      height: 360px;
       
       h2 {
         font-size: 16px;
@@ -38,7 +38,7 @@
     background-image: url('../../assets/coral-comparador.png');
     background-position: center;
     background-size: auto 100%;
-    min-height: 474px;
+    min-height: 360px;
   }
   
   .slider {
