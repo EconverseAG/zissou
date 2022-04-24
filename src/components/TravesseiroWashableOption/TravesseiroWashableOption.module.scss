@@ -1,0 +1,154 @@
+.wrapper {
+  position: relative;
+  padding-block: 124px;
+  background: #F5F6F5;
+  font-family: ZonaPro;
+  min-height: 1191px;
+  justify-content: space-between;
+
+  &Top, &Bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 37px;
+    line-height: 48px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #245066;
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: 15px;  
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #707070;
+    text-align: center;
+  }
+
+  &Image {
+    position: relative;
+    height: 100%;
+
+    img {
+      margin-top: 56px;
+      width: 100%;
+      max-width: 1610px;
+    }
+  }
+
+
+  .tip {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #245066;
+    font-weight: 600;
+    max-width: 235px;
+    letter-spacing: 0.05em;
+
+    &Left {
+      top: 120px;
+      left: 240px;
+    }
+
+    &Right {
+      top: 70px;
+      right: 151px;
+    }
+
+    @media (max-width: 1500px) {
+      &Left {
+        top: 80px;
+        left: 150px;
+      }
+
+      &Right {
+        top: 40px;
+        right: 120px;
+      }
+    }
+
+    @media (max-width: 1400px) {
+      &Left {
+        top: 50px;
+        left: 130px;
+      }
+
+      &Right {
+        top: 0px;
+        right: 100px;
+      }
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 234px;
+      background: #245066;
+      font-weight: inherit;
+      margin-top: 32px;
+      top: 100%;
+    }
+  }
+
+  &.mobile {
+    padding-block: 55px 70px;
+    min-height: 625px;
+
+    h2 {
+      font-size: 23px;
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
+
+    span {
+      font-size: 10px;
+      line-height: 13px;
+      
+      &.firstText {
+        max-width: 248px;
+      }
+
+      &.reminderText {
+        margin-top: 40px;
+      }
+    }
+
+    .tip {
+      max-width: 172px;
+
+      &Left, &Right {
+        top: 286px;
+      }
+
+      &Left {
+        left: 24px;
+      }
+
+      &Right {
+        right: 6px;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 90px;
+        background: #245066;
+        font-weight: inherit;
+        margin-bottom: 11px;
+        bottom: 100%;
+      }
+    }
+  }
+}
