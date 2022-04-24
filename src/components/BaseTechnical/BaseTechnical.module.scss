@@ -19,8 +19,11 @@
       }
 
       .accordion {
+        margin: 0;
+        
         &Summary {
           height: 61px;
+          min-height: unset;
 
           * {
             font-size: 14px;
