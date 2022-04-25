@@ -7,10 +7,12 @@ import TravesseiroTechnical from '../TravesseiroTechnical/TravesseiroTechnical.c
 import TravesseiroWashableOption from '../TravesseiroWashableOption';
 import TravesseiroXRay from '../TravesseiroXRay';
 import TravesseiroBagCustomization from '../TravesseiroBagCustomization';
+import TravesseiroBanner from '../TravesseiroBanner/TravesseiroBanner.client';
 
 export default function Travesseiro({product}) {
   return (
     <div className="flex flex-col">
+      <TravesseiroBanner />
       <ProductSection product={product} />
       <HowDoYouSleep />
       <TravesseiroXRay />
