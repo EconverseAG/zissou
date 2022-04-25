@@ -5,12 +5,14 @@ import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
 import TravesseiroTechnical from '../TravesseiroTechnical/TravesseiroTechnical.client';
 import TravesseiroWashableOption from '../TravesseiroWashableOption';
+import TravesseiroXRay from '../TravesseiroXRay';
 
 export default function Travesseiro({product}) {
   return (
     <div className="flex flex-col">
       <ProductSection product={product} />
       <HowDoYouSleep />
+      <TravesseiroXRay />
       <TravesseiroWashableOption />
       <TravesseiroTechnical />
       <TryItFor100Days />
