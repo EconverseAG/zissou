@@ -1,3 +1,5 @@
+import {useCallback, useState} from 'react';
+
 import useMobile from '../../../../../hooks/useMobile';
 
 import {Image} from '@shopify/hydrogen';
@@ -6,6 +8,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
 
@@ -13,16 +16,34 @@ import Eua from '../../../../../assets/bandeira_eua.png';
 import Belgica from '../../../../../assets/bandeira_belgica.png';
 
 export default function Question1() {
+  const [expanded, setExpanded] = useState(false);
+
   const {isMobile} = useMobile();
 
+  const handleChange = useCallback(
+    (panel) => (_, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    },
+    [],
+  );
+
   return (
-    <Accordion className={styles.FaqAccordion}>
+    <Accordion
+      className={styles.FaqAccordion}
+      onChange={handleChange('panel1')}
+    >
       <AccordionSummary
         expandIcon={
-          isMobile ? (
-            <AddIcon style={{color: 'fff', width: '21px', height: '21px'}} />
+          expanded !== 'panel1' ? (
+            isMobile ? (
+              <AddIcon style={{color: 'fff', width: '21px', height: '21px'}} />
+            ) : (
+              <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+            )
+          ) : isMobile ? (
+            <RemoveIcon style={{color: 'fff', width: '21px', height: '21px'}} />
           ) : (
-            <AddIcon style={{color: 'fff', width: '41px', height: '41px'}} />
+            <RemoveIcon style={{color: 'fff', width: '41px', height: '41px'}} />
           )
         }
         aria-controls="panel1a-content"

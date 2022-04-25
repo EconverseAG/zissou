@@ -3,12 +3,12 @@ import * as styles from './Faq.module.scss';
 
 import Colchao from '../../../assets/colchao_faq.png';
 
-import Question1 from './Questions/Question1/Question1';
-import Question2 from './Questions/Question2/Question2';
-import Question3 from './Questions/Question3/Question3';
-import Question4 from './Questions/Question4/Question4';
-import Question5 from './Questions/Question5/Question5';
-import Question6 from './Questions/Question6/Question6';
+import Question1 from './Questions/Question1/Question1.client';
+import Question2 from './Questions/Question2/Question2.client';
+import Question3 from './Questions/Question3/Question3.client';
+import Question4 from './Questions/Question4/Question4.client';
+import Question5 from './Questions/Question5/Question5.client';
+import Question6 from './Questions/Question6/Question6.client';
 
 export default function Faq() {
   return (
