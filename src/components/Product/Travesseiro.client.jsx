@@ -6,6 +6,7 @@ import Partners from '../Partners/Partners.client';
 import TravesseiroTechnical from '../TravesseiroTechnical/TravesseiroTechnical.client';
 import TravesseiroWashableOption from '../TravesseiroWashableOption';
 import TravesseiroXRay from '../TravesseiroXRay';
+import TravesseiroBagCustomization from '../TravesseiroBagCustomization';
 
 export default function Travesseiro({product}) {
   return (
@@ -14,6 +15,7 @@ export default function Travesseiro({product}) {
       <HowDoYouSleep />
       <TravesseiroXRay />
       <TravesseiroWashableOption />
+      <TravesseiroBagCustomization />
       <TravesseiroTechnical />
       <TryItFor100Days />
       <ZissouStores />

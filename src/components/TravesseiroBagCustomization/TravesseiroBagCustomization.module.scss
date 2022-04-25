@@ -1,0 +1,61 @@
+.wrapper {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 640/427;
+  margin-top: 56px;
+  font-family: ZonaPro;
+
+  h2 {
+    color: #f08590;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 48px;
+    text-transform: uppercase;
+  }
+
+  .customizationText {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 72px;
+    width: 33%;
+  }
+
+  .customizationAnimation {
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 20%;
+    max-width: max-content;
+    overflow: hidden;
+    border: 6px solid #f08590;
+    border-radius: 50%;
+    bottom: 22%;
+    left: 12%;
+  }
+
+  .background {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &.mobile {
+    aspect-ratio: 215/197;
+    margin-top: 34px;
+
+    h2 {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    .customizationAnimation {
+      border-width: 3px;
+      min-width: 98px;
+      bottom: 25%;
+      left: 5%;
+    }
+  }
+}
