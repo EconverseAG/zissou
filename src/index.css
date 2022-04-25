@@ -92,12 +92,14 @@ button {
 
 :root {
   /* Paleta de cores */
+  --blue-color-50:  #D2DAE3;
   --blue-color-100: #CEDDE7;
   --blue-color-200: #CADEE8;
   --blue-color-250: #92AECC;
   --blue-color-290: #85A4C6;
   --blue-color-300: #779ABF;
   --blue-color-400: #8891BA;
+  --blue-color-430: #7D90A5;
   --blue-color-450: #7D8C9D;
   --blue-color-500: #415264;
   --blue-color-600: #455362;

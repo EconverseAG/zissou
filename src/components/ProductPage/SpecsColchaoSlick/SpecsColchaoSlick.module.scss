@@ -85,10 +85,10 @@
     &.SpecsColchaoSlickSecondSliderCoral {
       .SpecsColchaoSlickSecondSliderBackground3 {
         height: 800px;
-        background: linear-gradient(90deg, rgba(212,168,191,1) 53%, rgba(252,241,240,1) 53%);
-        
+        background: linear-gradient(90deg, rgba(212, 168, 191, 1) 53%, rgba(252, 241, 240, 1) 53%);
+
         @media only screen and (max-width: 1023px) {
-          background: linear-gradient(180deg, rgba(212,168,191,1) 58%, rgba(252,241,240,1) 58%);
+          background: linear-gradient(180deg, rgba(212, 168, 191, 1) 58%, rgba(252, 241, 240, 1) 58%);
           height: 700px;
         }
       }
@@ -97,11 +97,206 @@
     &.SpecsColchaoSlickSecondSliderBlue {
       .SpecsColchaoSlickSecondSliderBackground3 {
         height: 800px;
-        background: linear-gradient(90deg, rgba(210,218,227,1) 53%, rgba(125,144,165,1) 53%);
+        background: linear-gradient(90deg, rgba(210, 218, 227, 1) 53%, rgba(125, 144, 165, 1) 53%);
 
         @media only screen and (max-width: 1023px) {
-          background: linear-gradient(180deg, rgba(210,218,227,1) 56%, rgba(125,144,165,1) 56%);
+          background: linear-gradient(180deg, rgba(210, 218, 227, 1) 56%, rgba(125, 144, 165, 1) 56%);
           height: 700px;
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderCoral {
+      .SpecsColchaoSlickSecondSliderBackground4 {
+        height: 800px;
+        background: linear-gradient(90deg, rgba(240, 240, 240, 1) 50.5%, rgba(255, 204, 199, 1) 50.5%);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+
+        @media only screen and (max-width: 1023px) {
+          background: linear-gradient(180deg, rgba(240, 240, 240, 1) 50.5%, rgba(255, 204, 199, 1) 50.5%);
+          flex-direction: column;
+          height: 700px;
+          padding-top: 90px;
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderBlue {
+      .SpecsColchaoSlickSecondSliderBackground4 {
+        height: 800px;
+        background: var(--blue-color-50);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+
+        @media only screen and (max-width: 1023px) {
+          flex-direction: column;
+          height: 700px;
+          padding-top: 90px;
+        }
+
+        .SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal {
+          width: 376px;
+
+          @media only screen and (max-width: 1023px) {
+            width: 90%;
+            background: var(--white-color);
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            padding: 20px;
+
+            .SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalBolder {
+              margin: 0 15px 16px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderCoral {
+      .SpecsColchaoSlickSecondSliderBackground5 {
+        height: 800px;
+        background: #FFCCC7;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          height: 700px;
+          padding-top: 80px;
+        }
+
+        &Grid {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          max-width: 1200px;
+          gap: 50px 70px;
+
+          @media only screen and (max-width: 1023px) {
+            max-width: 100%;
+            gap: 30px;
+          }
+
+          .GridItem {
+            width: 245px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            @media only screen and (max-width: 1023px) {
+              width: 155px;
+            }
+
+            >span {
+              margin-top: 10px;
+              font-family: 'ZonaPro';
+              font-size: 14px;
+              line-height: 20px;
+              text-align: center;
+              color: var(--gray-color-600);
+
+              >strong {
+                font-family: 'ZonaProBlack';
+              }
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 10px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderBlue {
+      .SpecsColchaoSlickSecondSliderBackground5 {
+        height: 800px;
+        background: var(--blue-color-430);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          height: 700px;
+          padding-top: 80px;
+        }
+
+        &Grid {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-rows: 1fr 1fr;
+          gap: 50px 70px;
+          place-items: center;
+
+          @media only screen and (max-width: 1023px) {
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 15px 50px;
+          }
+
+          .GridItem {
+            width: 245px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            @media only screen and (max-width: 1023px) {
+              width: 130px;
+            }
+
+            >span {
+              margin-top: 10px;
+              font-family: 'ZonaPro';
+              font-size: 14px;
+              line-height: 20px;
+              text-align: center;
+              color: var(--white-color);
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 10px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .SpecsColchaoSlickSecondSliderBackground6 {
+      height: 800px;
+      background: var(--gray-color-100);
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding-top: 50px;
+
+      @media only screen and (max-width: 1023px) {
+        height: 700px;
+        padding-top: 90px;
+      }
+    }
+
+    &.SpecsColchaoSlickSecondSliderBlue {
+      .SpecsColchaoSlickSecondSliderBackground6 {
+        .Icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .Icon {
+            &Title {
+              color: var(--blue-color-500);
+            }
+          }
         }
       }
     }
@@ -132,8 +327,13 @@
         transform: translateX(-50%);
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 90%;
+        justify-content: flex-start;
+        width: 60%;
+
+        @media only screen and (max-width: 1400px) {
+          width: 90%;
+          justify-content: flex-start;
+        }
 
         @media only screen and (max-width: 1023px) {
           flex-direction: column;
@@ -216,6 +416,339 @@
             font-size: 10px;
             line-height: 16px;
           }
+        }
+      }
+
+      &SuporteLeft {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 40px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: 0;
+          margin-bottom: 50px;
+          flex-direction: row-reverse;
+        }
+
+        &Image {
+          position: relative;
+          margin-right: 50px;
+
+          @media only screen and (max-width: 1023px) {
+            margin-right: 0;
+          }
+
+          &Title {
+            font-family: 'ZonaProBlack';
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: var(--coral-color-500);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -15%;
+
+            @media only screen and (max-width: 1200px) {
+              top: -20%;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              display: none;
+            }
+          }
+        }
+
+        &Minimodal {
+          width: 263px;
+          background: var(--white-color);
+          border-radius: 10px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          padding: 30px;
+
+          @media only screen and (max-width: 1023px) {
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+            width: 180px;
+          }
+
+          &Bolder {
+            font-family: 'ZonaProBlack';
+            font-size: 13px;
+            line-height: 22px;
+            color: var(--blue-color-500);
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+
+            @media only screen and (max-width: 1200px) {
+              font-size: 12px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+              margin: 26px 15px 0;
+            }
+          }
+
+          &Title {
+            font-family: 'ZonaPro';
+            font-size: 13px;
+            line-height: 22px;
+            color: var(--gray-color-500);
+            display: block;
+
+            @media only screen and (max-width: 1200px) {
+              font-size: 12px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+              margin: 0 15px;
+            }
+          }
+        }
+
+        .seta {
+          position: absolute;
+          left: 80%;
+          bottom: -20px;
+
+          @media only screen and (max-width: 1200px) {
+            left: 70%;
+            bottom: -40px;
+          }
+
+          @media only screen and (max-width: 1023px) {
+            display: none;
+          }
+        }
+      }
+
+      &SuporteRight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          flex-direction: row-reverse;
+        }
+
+        &Image {
+          position: relative;
+
+          &Title {
+            font-family: 'ZonaProBlack';
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: var(--coral-color-500);
+            position: absolute;
+            left: 25%;
+            top: -15%;
+            text-align: right;
+
+            @media only screen and (max-width: 1200px) {
+              top: -25%;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              display: none;
+            }
+          }
+        }
+
+        &Minimodal {
+          width: 291px;
+          background: var(--white-color);
+          border-radius: 10px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          padding: 30px;
+          margin-right: 20px;
+
+          @media only screen and (max-width: 1023px) {
+            margin-left: 0;
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+            width: 180px;
+          }
+
+          &Bolder {
+            font-family: 'ZonaProBlack';
+            font-size: 13px;
+            line-height: 22px;
+            color: var(--gray-color-500);
+            display: block;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 1200px) {
+              font-size: 12px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+              margin: 26px 15px 0;
+            }
+          }
+
+          &Title {
+            font-family: 'ZonaPro';
+            font-size: 13px;
+            line-height: 22px;
+            color: var(--gray-color-500);
+            display: block;
+
+            @media only screen and (max-width: 1200px) {
+              font-size: 12px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 10px;
+              line-height: 16px;
+              margin: 0 15px;
+            }
+          }
+        }
+
+        .seta {
+          position: absolute;
+          right: 80%;
+          bottom: 0px;
+          transform: scaleX(-1);
+
+          @media only screen and (max-width: 1200px) {
+            right: 70%;
+            bottom: 0px;
+          }
+
+          @media only screen and (max-width: 1100px) {
+            right: 65%;
+            bottom: 0px;
+          }
+
+          @media only screen and (max-width: 1023px) {
+            display: none;
+          }
+        }
+      }
+
+      &BeneficiosLeft {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background: var(--white-color);
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 30px;
+        margin-right: 100px;
+        max-width: 570px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: 0;
+          max-width: 80%;
+          align-items: center;
+        }
+
+        .Icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .Icon {
+            &Title {
+              display: block;
+              font-family: 'ZonaProBlack';
+              font-size: 10px;
+              line-height: 12px;
+              text-transform: uppercase;
+              color: var(--coral-color-500);
+              text-align: center;
+              margin-top: 12.5px;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 7px;
+                line-height: 9px;
+                margin-top: 11px;
+              }
+            }
+
+            &+.Icon {
+              margin-left: 34px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-left: 25px;
+              }
+            }
+          }
+        }
+
+        .BeneficiosZissou {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          .BeneficiosItem {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
+
+            @media only screen and (max-width: 1023px) {
+              margin-top: 20px;
+            }
+
+            &+.BeneficiosItem {
+              margin-top: 16px;
+            }
+
+            &Title {
+              font-family: 'ZonaProBold';
+              font-size: 13px;
+              line-height: 22px;
+              color: var(--gray-color-500);
+              text-transform: uppercase;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 10px;
+                line-height: 16px;
+              }
+            }
+
+            &Subtitle {
+              font-family: 'ZonaPro';
+              font-size: 13px;
+              line-height: 22px;
+              color: var(--gray-color-500);
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 10px;
+                line-height: 16px;
+              }
+
+              &Link {
+                font-family: 'ZonaProBold';
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      &BeneficiosRight {
+        @media only screen and (max-width: 1023px) {
+          display: none;
         }
       }
     }
