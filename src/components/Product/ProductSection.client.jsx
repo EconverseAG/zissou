@@ -1,7 +1,7 @@
 import {ProductTitle, ProductDescription} from '@shopify/hydrogen/client';
 
 import ZissouProductOptions from '../ZissouProductOptions';
-import Gallery from '../Gallery.client';
+import ZissouProductImages from '../ZissouProductImages';
 
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouAddToCart from '../ZissouAddToCart';
@@ -20,7 +20,7 @@ export default function ProductSection({product}) {
         <ZissouProductPrice />
       </div>
 
-      <Gallery />
+      <ZissouProductImages thumbs />
 
       <div>
         <div className="hidden md:block">
