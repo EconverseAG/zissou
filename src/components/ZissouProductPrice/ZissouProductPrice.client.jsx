@@ -9,16 +9,21 @@ function ZissouProductPrice() {
 
   return (
     <>
-      <span className={`${styles.listPrice} ${isMobile ? styles.mobile : ''}`}>
-        De{' '}
-        <ProductPrice
-          className={styles.listPriceValue}
-          priceType="compareAt"
-          variantId={selectedVariant.id}
-          as="strong"
-        />{' '}
-        Por
-      </span>
+      {selectedVariant.compareAtPriceV2.amount !==
+        selectedVariant.priceV2.amount && (
+        <span
+          className={`${styles.listPrice} ${isMobile ? styles.mobile : ''}`}
+        >
+          De{' '}
+          <ProductPrice
+            className={styles.listPriceValue}
+            priceType="compareAt"
+            variantId={selectedVariant.id}
+            as="strong"
+          />{' '}
+          Por
+        </span>
+      )}
       <div className={`${styles.bestPrice} ${isMobile ? styles.mobile : ''}`}>
         <ProductPrice
           className={styles.bestPriceValue}
