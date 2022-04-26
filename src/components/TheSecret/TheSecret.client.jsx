@@ -2,11 +2,11 @@ import {useState} from 'react';
 
 import useMobile from '../../hooks/useMobile';
 
-import * as styles from './LencolTheSecret.module.scss';
+import * as styles from './TheSecret.module.scss';
 
 import Panda from '../../assets/panda.mp4';
 
-function LencolTheSecret() {
+function TheSecret({productName}) {
   const [showSecret, setShowSecret] = useState(false);
 
   const {isMobile} = useMobile();
@@ -19,7 +19,7 @@ function LencolTheSecret() {
             <h2>O segredo</h2>
             <button onClick={() => setShowSecret(true)}>Saiba mais +</button>
           </div>
-          <p>Descubra o segredo por trás do Lençol Zissou</p>
+          <p>Descubra o segredo por trás do {productName}</p>
         </div>
       )}
       {showSecret && (
@@ -35,7 +35,7 @@ function LencolTheSecret() {
               playsInline
             />
             <p>
-              O Lençol Zissou foi desenvolvido com tecido de polpa de bambu, que
+              O {productName} foi desenvolvido com tecido de polpa de bambu, que
               potencializa seu frescor. Possui alta durabilidade e propriedades
               naturais absorventes, antibacterianas e desodorizantes. Resumindo,
               confere um dos toques mais macios, suaves e acetinados do mundo.
@@ -47,4 +47,4 @@ function LencolTheSecret() {
   );
 }
 
-export default LencolTheSecret;
+export default TheSecret;

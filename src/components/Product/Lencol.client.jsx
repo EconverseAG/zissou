@@ -4,7 +4,7 @@ import LencolTechnical from '../LencolTechnical';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
-import LencolTheSecret from '../LencolTheSecret';
+import TheSecret from '../TheSecret';
 import LencolBanner from '../LencolBanner';
 
 function Lencol() {
@@ -13,7 +13,7 @@ function Lencol() {
       <LencolBanner />
       <LencolProduct />
       <LencolHowToDescribe />
-      <LencolTheSecret />
+      <TheSecret productName="Lençol Zissou" />
       <LencolTechnical />
       <TryItFor100Days />
       <ZissouStores />
