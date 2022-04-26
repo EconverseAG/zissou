@@ -20,7 +20,6 @@ function ZissouAddToCart({...rest}) {
         rest.className || ''
       }`}
       disabled={isOutOfStock}
-      {...rest}
     >
       {isOutOfStock ? 'Indisponível' : 'Adicionar ao carrinho'}
     </AddToCartButton>
