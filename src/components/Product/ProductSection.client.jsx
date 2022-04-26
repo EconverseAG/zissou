@@ -3,8 +3,8 @@ import {ProductTitle, ProductDescription} from '@shopify/hydrogen/client';
 import ProductOptions from '../ProductOptions.client';
 import Gallery from '../Gallery.client';
 
-import AddToCartMarkup from '../AddToCartMarkup/AddToCartMarkup.client';
 import ZissouProductPrice from '../ZissouProductPrice';
+import ZissouAddToCart from '../ZissouAddToCart';
 
 export default function ProductSection({product}) {
   return (
@@ -37,7 +37,7 @@ export default function ProductSection({product}) {
         </div>
         <div className="mt-8">
           <ProductOptions />
-          <AddToCartMarkup />
+          <ZissouAddToCart />
         </div>
         <ProductDescription className="prose border-t border-gray-200 pt-6 text-black text-md" />
       </div>
