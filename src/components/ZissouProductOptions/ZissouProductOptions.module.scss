@@ -23,6 +23,17 @@
     position: relative;
     font-family: ZonaPro;
     color: #D4A8BF;
+
+    .selectIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+
+      & + p {
+        margin-left: 0;
+      }
+    }
     
     &Open {
       width: 100%;
@@ -38,15 +49,23 @@
       align-items: center;
       justify-content: space-between;
       overflow: hidden;
-      padding-left: 26px;
       text-transform: uppercase;
 
-      strong {
-        font-family: ZonaProBold;
+      p {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 26px;
+
+        strong {
+          font-family: ZonaProBold;
+        }
       }
       
       &Arrow {
-        width: 72px;
+        margin-left: 28px;
+        min-width: 72px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -58,12 +77,20 @@
     &Dropdown {
       position: absolute;
       top: 0;
+      width: 100%;
       border-radius: 17px;
       background: #FFFFFF;
       border: 2px solid #D4A8BF;
       
       &Option {
+        display: flex;
+        align-items: center;
         text-transform: uppercase;
+        height: 64px;
+
+        p {
+          margin-left: 28px;
+        }
       }
     }
   }
@@ -75,10 +102,23 @@
         font-size: 11px; 
         line-height: 14px;
 
-        strong {
-          font-size: 14px;
-          line-height: 18px;
+        p {
+          flex-direction: column;
+          align-items: flex-start;
+
+          span, strong {
+            display: block;
+          }
+
+          strong {
+            font-size: 14px;
+            line-height: 18px;
+          }
         }
+      }
+
+      &Dropdown { 
+        height: 60px;
       }
     }
   }
