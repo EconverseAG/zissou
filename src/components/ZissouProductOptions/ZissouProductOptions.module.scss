@@ -1,3 +1,16 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ZonaPro;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 37px;
+  color: #707070;
+  font-weight: 600;
+}
+
 .select {
   position: relative;
   font-family: ZonaPro;

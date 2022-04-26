@@ -20,7 +20,7 @@ function ZissouProductOptions({title}) {
 
   return (
     <>
-      {title && <h2>{title}</h2>}
+      {title && <h2 className={styles.title}>{title}</h2>}
       {options.map(({name, values}) => (
         <fieldset className={styles.select} key={name}>
           <button className={styles.selectOpen} onClick={() => setIsOpen(true)}>
