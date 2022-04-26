@@ -1,0 +1,22 @@
+.addToCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 529px;
+  height: 72px;
+  color: #fff;
+  background: #f08590;
+  text-transform: uppercase;
+  font-size: 27px;
+  line-height: 36px;
+  font-weight: 700;
+  font-family: ZonaProBold;
+  border-radius: 77px;
+
+  &.mobile {
+    height: 43px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
