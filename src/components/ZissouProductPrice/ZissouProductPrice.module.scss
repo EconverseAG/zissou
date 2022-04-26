@@ -46,4 +46,21 @@
       line-height: 16px;
     }
   }
+
+  &.mobile {
+    .bestPriceValue {
+      font-size: 21px;
+      line-height: 28px;
+    }
+
+    .bestpriceInfo {
+      font-size: 14px;
+      line-height: 18px;
+
+      small {
+        font-size: 9px;
+        line-height: 12px;
+      }
+    }
+  }
 }

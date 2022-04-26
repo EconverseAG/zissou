@@ -1,13 +1,15 @@
 import {ProductPrice, useProduct} from '@shopify/hydrogen/client';
+import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductPrice.module.scss';
 
 function ZissouProductPrice() {
   const {selectedVariant} = useProduct();
+  const {isMobile} = useMobile();
 
   return (
     <>
-      <span className={styles.listPrice}>
+      <span className={`${styles.listPrice} ${isMobile ? styles.mobile : ''}`}>
         De{' '}
         <ProductPrice
           className={styles.listPriceValue}
@@ -17,7 +19,7 @@ function ZissouProductPrice() {
         />{' '}
         Por
       </span>
-      <div className={styles.bestPrice}>
+      <div className={`${styles.bestPrice} ${isMobile ? styles.mobile : ''}`}>
         <ProductPrice
           className={styles.bestPriceValue}
           variantId={selectedVariant.id}
