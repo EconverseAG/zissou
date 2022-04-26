@@ -81,7 +81,10 @@ function ZissouProductImages({title, thumbs, ...rest}) {
   }, [mediaFiltered]);
 
   return (
-    <div className={styles.wrapper} {...rest}>
+    <div
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+      {...rest}
+    >
       {!isMobile && title && <h2 className={styles.title}>{title}</h2>}
       <div className={styles.wrapperSlider}>
         <button

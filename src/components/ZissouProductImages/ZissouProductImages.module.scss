@@ -64,9 +64,15 @@
   }
 
   &.mobile {
+    display: block;
+    
     .title {
       margin-top: 31px;
       margin-bottom: 0;
+    }
+
+    &Slider {
+      max-width: 100%;
     }
 
     &Nav {
