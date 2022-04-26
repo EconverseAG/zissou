@@ -5,7 +5,7 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouAddToCart.module.scss';
 
-function ZissouAddToCart({...rest}) {
+function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
   const {selectedVariant} = useProduct();
   const {isMobile} = useMobile();
 
@@ -21,7 +21,7 @@ function ZissouAddToCart({...rest}) {
       }`}
       disabled={isOutOfStock}
     >
-      {isOutOfStock ? 'Indisponível' : 'Adicionar ao carrinho'}
+      {isOutOfStock ? 'Indisponível' : text}
     </AddToCartButton>
   );
 }
