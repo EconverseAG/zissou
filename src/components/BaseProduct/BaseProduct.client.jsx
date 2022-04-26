@@ -15,7 +15,10 @@ function BaseProduct() {
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <ZissouProductImages title="Estilosa, resistente e perfeita" thumbs />
       <div className={styles.productInfo}>
-        <ZissouProductOptions title="Selecione o tamanho da sua base:" />
+        <ZissouProductOptions
+          title="Selecione o tamanho da sua base:"
+          uppercaseTitle={isMobile}
+        />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />

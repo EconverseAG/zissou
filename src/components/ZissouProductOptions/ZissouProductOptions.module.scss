@@ -2,6 +2,10 @@
   max-width: 529px;
   width: 100%;
 
+  .uppercase {
+    text-transform: uppercase;
+  }
+
   .title {
     display: flex;
     align-items: center;

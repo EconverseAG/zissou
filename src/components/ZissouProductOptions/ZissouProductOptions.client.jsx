@@ -5,7 +5,7 @@ import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
 
 import * as styles from './ZissouProductOptions.module.scss';
 
-function ZissouProductOptions({title, ...rest}) {
+function ZissouProductOptions({title, uppercaseTitle, className, ...rest}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const {options, setSelectedOption, selectedOptions} = useProduct();
@@ -19,8 +19,16 @@ function ZissouProductOptions({title, ...rest}) {
   );
 
   return (
-    <div className={`${styles.wrapper} ${rest.className || ''}`}>
-      {title && <h2 className={styles.title}>{title}</h2>}
+    <div className={`${styles.wrapper} ${className || ''}`} {...rest}>
+      {title && (
+        <h2
+          className={`${styles.title} ${
+            uppercaseTitle ? styles.uppercase : ''
+          }`}
+        >
+          {title}
+        </h2>
+      )}
       {options.map(({name, values}) => (
         <fieldset className={styles.select} key={name}>
           <button className={styles.selectOpen} onClick={() => setIsOpen(true)}>
