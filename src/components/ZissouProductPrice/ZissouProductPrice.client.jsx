@@ -8,12 +8,13 @@ function ZissouProductPrice({...rest}) {
   const {isMobile} = useMobile();
 
   return (
-    <div {...rest}>
+    <div
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+      {...rest}
+    >
       {selectedVariant.compareAtPriceV2.amount !==
         selectedVariant.priceV2.amount && (
-        <span
-          className={`${styles.listPrice} ${isMobile ? styles.mobile : ''}`}
-        >
+        <span className={styles.listPrice}>
           De{' '}
           <ProductPrice
             className={styles.listPriceValue}
@@ -24,7 +25,7 @@ function ZissouProductPrice({...rest}) {
           Por
         </span>
       )}
-      <div className={`${styles.bestPrice} ${isMobile ? styles.mobile : ''}`}>
+      <div className={styles.bestPrice}>
         <ProductPrice
           className={styles.bestPriceValue}
           variantId={selectedVariant.id}
