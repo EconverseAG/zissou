@@ -1,5 +1,6 @@
 import DuvetBanner from '../DuvetBanner';
 import DuvetHowToDescribe from '../DuvetHowToDescribe';
+import DuvetProduct from '../DuvetProduct';
 import DuvetTechnical from '../DuvetTechnical';
 import Partners from '../Partners/Partners.client';
 import TheSecret from '../TheSecret';
@@ -10,6 +11,7 @@ export default function Duvet() {
   return (
     <div className="flex flex-col">
       <DuvetBanner />
+      <DuvetProduct />
       <DuvetHowToDescribe />
       <TheSecret productName="Duvet Zissou" />
       <DuvetTechnical />
