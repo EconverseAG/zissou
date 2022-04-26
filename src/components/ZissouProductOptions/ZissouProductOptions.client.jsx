@@ -19,7 +19,7 @@ function ZissouProductOptions({title, ...rest}) {
   );
 
   return (
-    <div {...rest}>
+    <div className={`${styles.wrapper} ${rest.className || ''}`}>
       {title && <h2 className={styles.title}>{title}</h2>}
       {options.map(({name, values}) => (
         <fieldset className={styles.select} key={name}>

@@ -16,7 +16,9 @@ function ZissouAddToCart({...rest}) {
 
   return (
     <AddToCartButton
-      className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''}`}
+      className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
+        rest.className || ''
+      }`}
       disabled={isOutOfStock}
       {...rest}
     >

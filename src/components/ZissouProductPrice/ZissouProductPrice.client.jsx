@@ -9,8 +9,9 @@ function ZissouProductPrice({...rest}) {
 
   return (
     <div
-      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
-      {...rest}
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
+        rest.className || ''
+      } `}
     >
       {selectedVariant.compareAtPriceV2.amount !==
         selectedVariant.priceV2.amount && (
