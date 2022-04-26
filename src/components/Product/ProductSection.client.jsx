@@ -9,6 +9,7 @@ import ProductOptions from '../ProductOptions.client';
 import Gallery from '../Gallery.client';
 
 import AddToCartMarkup from '../AddToCartMarkup/AddToCartMarkup.client';
+import ZissouProductPrice from '../ZissouProductPrice';
 
 export default function ProductSection({product}) {
   const initialVariant = flattenConnection(product.variants)[0];
@@ -49,15 +50,7 @@ export default function ProductSection({product}) {
               {product.vendor}
             </div>
           )}
-          <ProductPrice
-            className="text-gray-500 line-through text-lg font-semibold"
-            priceType="compareAt"
-            variantId={initialVariant.id}
-          />
-          <ProductPrice
-            className="text-gray-900 text-lg font-semibold"
-            variantId={initialVariant.id}
-          />
+          <ZissouProductPrice />
         </div>
         <div className="mt-8">
           <ProductOptions />

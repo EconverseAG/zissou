@@ -1,0 +1,49 @@
+.listPrice, .bestPrice, .installments {
+  font-family: ZonaPro;
+  font-weight: 600;
+  color: #245066;
+  text-transform: uppercase;
+}
+
+.listPrice {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 16px;
+  gap: 6px;
+  margin-bottom: 10px;
+
+  &Value {
+    display: inline;
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.bestPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &Value {
+    font-family: ZonaProBold;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 23px;
+
+    small {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
