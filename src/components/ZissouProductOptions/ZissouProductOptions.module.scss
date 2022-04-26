@@ -34,6 +34,18 @@
         margin-left: 0;
       }
     }
+
+    .info {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #979797;
+    }
     
     &Open {
       width: 100%;
@@ -97,6 +109,10 @@
 
   &.mobile {
     .select {
+      .info {
+        margin-top: 12px;
+      }
+
       &Open {
         height: 60px;
         font-size: 11px; 

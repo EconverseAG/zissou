@@ -14,7 +14,13 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductOptions.module.scss';
 
-function ZissouProductOptions({title, uppercaseTitle, className, ...rest}) {
+function ZissouProductOptions({
+  title,
+  info,
+  uppercaseTitle,
+  className,
+  ...rest
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const {isMobile} = useMobile();
@@ -111,6 +117,7 @@ function ZissouProductOptions({title, uppercaseTitle, className, ...rest}) {
               <Image src={DropdownArrow} width={26} height={13} />
             </span>
           </button>
+          {info && <span className={styles.info}>{info}</span>}
           {isOpen && (
             <div className={styles.selectDropdown}>
               {values.map((value) => (
