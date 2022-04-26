@@ -14,6 +14,7 @@ import DoubtsProductPage from '../ProductPage/DoubtsProductPage/DoubtsProductPag
 import InstagramZissou from '../../components/InstagramZissou/InstagramZissou.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
 import ProductSection from './ProductSection.client';
+import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 
 export default function Colchao({title, product}) {
   const [isCoral, setIsCoral] = useState(false);
@@ -37,11 +38,9 @@ export default function Colchao({title, product}) {
 
       <CinematographyBanner />
 
-      {isCoral ? (
-        <SpecsColchaoSlick coral={isCoral} />
-      ) : (
-        <SpecsColchaoSlick coral={isCoral} />
-      )}
+      <TourColchao coral={isCoral} />
+
+      <SpecsColchaoSlick coral={isCoral} />
 
       {isCoral ? (
         <DoubtsProductPage color={'#D4A8BF'} />
@@ -68,6 +67,7 @@ export default function Colchao({title, product}) {
       <TryItFor100Days />
 
       <ZissouStores />
+
       {isCoral ? (
         <Partners color={'#F48580'} />
       ) : (
