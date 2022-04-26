@@ -40,6 +40,10 @@
       overflow: hidden;
       padding-left: 26px;
       text-transform: uppercase;
+
+      strong {
+        font-family: ZonaProBold;
+      }
       
       &Arrow {
         width: 72px;
@@ -60,6 +64,21 @@
       
       &Option {
         text-transform: uppercase;
+      }
+    }
+  }
+
+  &.mobile {
+    .select {
+      &Open {
+        height: 60px;
+        font-size: 11px; 
+        line-height: 14px;
+
+        strong {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
     }
   }

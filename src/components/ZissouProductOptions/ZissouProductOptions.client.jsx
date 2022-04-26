@@ -2,11 +2,14 @@ import {useProduct, Image} from '@shopify/hydrogen/client';
 import {useCallback, useState} from 'react';
 
 import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
+import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductOptions.module.scss';
 
 function ZissouProductOptions({title, uppercaseTitle, className, ...rest}) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const {isMobile} = useMobile();
 
   const {options, setSelectedOption, selectedOptions} = useProduct();
 
@@ -19,7 +22,12 @@ function ZissouProductOptions({title, uppercaseTitle, className, ...rest}) {
   );
 
   return (
-    <div className={`${styles.wrapper} ${className || ''}`} {...rest}>
+    <div
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
+        className || ''
+      }`}
+      {...rest}
+    >
       {title && (
         <h2
           className={`${styles.title} ${
