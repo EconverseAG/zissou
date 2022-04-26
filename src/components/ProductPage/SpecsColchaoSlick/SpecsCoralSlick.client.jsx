@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Image} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen';
 import * as styles from './SpecsColchaoSlick.module.scss';
 
 import Slider from 'react-slick';
@@ -18,6 +18,30 @@ import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termic
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+
+import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_1.png';
+import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_2.png';
+import SistemaDeSuporte1Mobile from '../../../assets/colchao_sistema_suporte_1_mobile.png';
+import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_mobile.png';
+
+import SetaPDP from '../../../assets/seta_pdp.png';
+
+import Legget from '../../../assets/selo-legget.png';
+
+import ToquePDP from '../../../assets/toque_pdp_coral.png';
+import AquecimentoPDP from '../../../assets/aquecimento_pdp_coral.png';
+import BouncePDP from '../../../assets/bounce_pdp_coral.png';
+import SetasPDP from '../../../assets/setas_pdp_coral.png';
+import SuportePDP from '../../../assets/suporte_pdp_coral.png';
+import IsolamentoPDP from '../../../assets/isolamento_pdp_coral.png';
+import AdaptacaoPDP from '../../../assets/adaptacao_pdp_coral.png';
+
+import ColchoesCoral from '../../../assets/colchoes_coral.png';
+
+import IconeGarantia from '../../../assets/icone_garantia.png';
+import IconeEntrega from '../../../assets/icone_entrega.png';
+import IconeFrete from '../../../assets/icone_frete.png';
+import Icone100Dias from '../../../assets/icone_100_dias.png';
 
 export default function SpecsCoralSlick() {
   const [nav1, setNav1] = useState();
@@ -276,14 +300,315 @@ export default function SpecsCoralSlick() {
             </div>
           </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>4</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground4}`}
+        >
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
+            }
+          >
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImage
+              }
+            >
+              <span
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImageTitle
+                }
+              >
+                sistema <br /> de suporte
+              </span>
+              <Image
+                src={isMobile ? SistemaDeSuporte1Mobile : SistemaDeSuporte1}
+                width={isMobile ? '213' : '368'}
+                height={isMobile ? '181' : '305'}
+              />
+              <Image
+                src={SetaPDP}
+                width="137"
+                height="82"
+                className={styles.seta}
+              />
+            </div>
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal
+              }
+            >
+              {isMobile ? (
+                <span
+                  className={
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
+                  }
+                >
+                  Base de espuma de poliuretano de alta densidade para maior
+                  suporte e isolamento de movimentos
+                </span>
+              ) : (
+                <span
+                  className={
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
+                  }
+                >
+                  Base de espuma de poliuretano de alta densidade e
+                  durabilidade. Oferece suporte uniforme ao corpo e às camadas
+                  de conforto, além de reforçar o isolamento de movimentos
+                </span>
+              )}
+            </div>
+          </div>
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRight
+            }
+          >
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal
+              }
+            >
+              {isMobile ? (
+                <>
+                  <Image src={Legget} width={81} height={63} />
+                  <strong
+                    className={
+                      styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalBolder
+                    }
+                  >
+                    Adicionando o sistema de suporte Leggett & Platt Inside:
+                  </strong>
+                  <br />
+                </>
+              ) : (
+                <>
+                  <span
+                    className={
+                      styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
+                    }
+                  >
+                    Adicionando o sistema de suporte Leggett & Platt Inside:
+                  </span>
+                  <br />
+                </>
+              )}
+              {isMobile ? (
+                <span
+                  className={
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
+                  }
+                >
+                  Base de sustentação composta por molas Leggett & Platt
+                  ensacadas individualmente Maior adaptabilidade do colchão às
+                  curvas do corpo e circulação de ar potencialiada
+                </span>
+              ) : (
+                <span
+                  className={
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
+                  }
+                >
+                  - Camada de transição para suporte adequado e protege as
+                  camadas de conforto
+                  <br />
+                  <br />
+                  - Molas Laggett&Platt ensacadas individualmente, garantindo
+                  sustentação plena em toda a área do colchão, aumentando da
+                  adaptabilidade às curvas do corpo e a circulação interna de ar
+                  <br />
+                  <br />- Reforço nas bordas, com molas mais firmes em todo o
+                  perímetro
+                </span>
+              )}
+            </div>
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
+              }
+            >
+              <span
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImageTitle
+                }
+              >
+                OPÇÃO DE SISTEMA
+                <br />
+                DE SUPORTE
+                <br />
+                LEGGETT & PLATT
+              </span>
+              <Image
+                src={isMobile ? SistemaDeSuporte2Mobile : SistemaDeSuporte2}
+                width={isMobile ? '213' : '368'}
+                height={isMobile ? '181' : '333'}
+              />
+              <Image
+                src={SetaPDP}
+                width="137"
+                height="82"
+                className={styles.seta}
+              />
+            </div>
+          </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>5</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground5}`}
+        >
+          <div className={styles.SpecsColchaoSlickSecondSliderBackground5Grid}>
+            <div className={styles.GridItem}>
+              <Image
+                src={ToquePDP}
+                width={isMobile ? 73 : 137}
+                height={isMobile ? 36 : 67}
+              />
+              <span>Toque suave e macio</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={AquecimentoPDP}
+                width={isMobile ? 48 : 91}
+                height={isMobile ? 43 : 81}
+              />
+              <span>Previne o aquecimento do corpo</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={BouncePDP}
+                width={isMobile ? 43 : 80}
+                height={isMobile ? 49 : 92}
+              />
+              <span>
+                Elasticidade moderada que dá aquela ajudinha ao se virar na cama
+                durante a noite
+              </span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SetasPDP}
+                width={isMobile ? 48 : 92}
+                height={isMobile ? 40 : 74}
+              />
+              <span>Alívio dos pontos de pressão</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SuportePDP}
+                width={isMobile ? 91 : 171}
+                height={isMobile ? 41 : 77}
+              />
+              <span>Suporte estável e uniforme</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={IsolamentoPDP}
+                width={isMobile ? 119 : 223}
+                height={isMobile ? 35 : 65}
+              />
+              <span>Isolamento de ondas de movimento</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={AdaptacaoPDP}
+                width={isMobile ? 51 : 96}
+                height={isMobile ? 45 : 85}
+              />
+              <span>
+                <strong>OPCIONAL:</strong> Adaptação às curvas do corpo na opção
+                com adicional de sistema de molas Leggett & Platt
+              </span>
+            </div>
+          </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>6</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground6}`}
+        >
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosLeft
+            }
+          >
+            <div className={styles.Icons}>
+              <div className={styles.Icon}>
+                <Image src={IconeGarantia} width={62} height={43} />
+                <strong className={styles.IconTitle}>
+                  10 anos de <br /> garantia
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={IconeEntrega} width={53} height={59} />
+                <strong className={styles.IconTitle}>
+                  entrega <br /> expressa
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={IconeFrete} width={58} height={40} />
+                <strong className={styles.IconTitle}>
+                  frete <br /> grátis
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={Icone100Dias} width={41} height={36} />
+                <strong className={styles.IconTitle}>
+                  100 dias <br /> de teste
+                </strong>
+              </div>
+            </div>
+            <div className={styles.BeneficiosZissou}>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  100 dias de teste
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Caso não esteja satisfeito com o produto, entre em contato com
+                  nosso atendimento através do Whatsapp 11 93285-8213
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  ENTREGA EXPRESSA E FRETE GRÁTIS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  A entrega é por nossa conta para todo o Brasil
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  GARANTIA DE 5 ANOS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Para saber mais sobre os termos de garantia,{' '}
+                  <Link
+                    to="https://www.zissou.com.br/blogs/faq/como-funciona-a-garantia-de-um-colchao"
+                    className={styles.BeneficiosItemSubtitleLink}
+                  >
+                    clique aqui
+                  </Link>
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  INFORMAÇÕES TÉCNICAS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Para saber mais sobre informações técnicas dos colchões,{' '}
+                  <Link
+                    to="/pages/comparativo-colchoes"
+                    className={styles.BeneficiosItemSubtitleLink}
+                  >
+                    clique aqui
+                  </Link>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
+            }
+          >
+            <Image src={ColchoesCoral} width={496} height={523} />
+          </div>
         </div>
       </Slider>
     </div>

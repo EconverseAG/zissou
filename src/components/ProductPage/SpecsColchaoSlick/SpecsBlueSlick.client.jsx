@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Image} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen';
 import * as styles from './SpecsColchaoSlick.module.scss';
 
 import Slider from 'react-slick';
@@ -18,6 +18,24 @@ import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termic
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+
+import SuporteBlue from '../../../assets/suporte_blue.png';
+
+import ConfortoPDP from '../../../assets/conforto_pdp.png';
+import SuperficiePDP from '../../../assets/superficie_pdp.png';
+import BouncePDP from '../../../assets/bounce_pdp.png';
+import SensacaoPDP from '../../../assets/sensacao_pdp.png';
+import IsolamentoPDP from '../../../assets/isolamento_pdp.png';
+import SetasPDP from '../../../assets/setas_pdp.png';
+import ControlePDP from '../../../assets/controle_pdp.png';
+import SuportePDP from '../../../assets/suporte_pdp.png';
+
+import IconeGarantia from '../../../assets/icone_garantia_blue.png';
+import IconeEntregaPrime from '../../../assets/icone_entrega_prime.png';
+import IconeFrete from '../../../assets/icone_frete_blue.png';
+import Icone100Dias from '../../../assets/icone_100_dias_blue.png';
+
+import ColchoesBlue from '../../../assets/colchoes_blue.png';
 
 export default function SpecsBlueSlick() {
   const [nav1, setNav1] = useState();
@@ -287,14 +305,252 @@ export default function SpecsBlueSlick() {
             </div>
           </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>4</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground4}`}
+        >
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
+            }
+          >
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal
+              }
+            >
+              <strong
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalBolder
+                }
+              >
+                Sistema de suporte Leggett & Platt com molas setorizadas
+                ergonomicamente
+              </strong>
+              <span
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
+                }
+              >
+                - Maior adaptabilidade às curvas do corpo e mais sustentação na
+                altura do quadril, para melhor alinhamento da coluna
+                <br />
+                <br />
+                - Base de espuma de poliuretano de alta densidade para maior
+                suporte e isolamento de movimentos
+                <br />
+                <br />- Melhor circulação de ar internamente, potencializando a
+                refrescância
+              </span>
+            </div>
+          </div>
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRight
+            }
+          >
+            <div
+              className={
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
+              }
+            >
+              <Image
+                src={SuporteBlue}
+                width={isMobile ? 327 : 739}
+                height={isMobile ? 150 : 342}
+              />
+            </div>
+          </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>5</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground5}`}
+        >
+          <div className={styles.SpecsColchaoSlickSecondSliderBackground5Grid}>
+            <div className={styles.GridItem}>
+              <Image
+                src={ConfortoPDP}
+                width={isMobile ? 70 : 125}
+                height={isMobile ? 33 : 60}
+              />
+              <span>Conforto excepcional</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SuperficiePDP}
+                width={isMobile ? 62 : 110}
+                height={isMobile ? 71 : 126}
+              />
+              <span>Superfície que refresca</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={BouncePDP}
+                width={isMobile ? 43 : 80}
+                height={isMobile ? 49 : 92}
+              />
+              {isMobile ? (
+                <span>
+                  Elasticidade na superfície que facilita movimentação na cama
+                </span>
+              ) : (
+                <span>
+                  Bounce extra, para facilitar a movimentação na cama durante o
+                  sono
+                </span>
+              )}
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SensacaoPDP}
+                width={isMobile ? 62 : 110}
+                height={isMobile ? 43 : 77}
+              />
+              {isMobile ? (
+                <span>Aconchego extraordinário</span>
+              ) : (
+                <span>Sensação extraordinária de aconchego</span>
+              )}
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={IsolamentoPDP}
+                width={isMobile ? 120 : 223}
+                height={isMobile ? 35 : 65}
+              />
+              <span>Isolamento de ondas de movimento</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SetasPDP}
+                width={isMobile ? 48 : 92}
+                height={isMobile ? 40 : 74}
+              />
+              <span>Alívio dos pontos de pressão</span>
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={ControlePDP}
+                width={isMobile ? 73 : 129}
+                height={isMobile ? 61 : 108}
+              />
+              {isMobile ? (
+                <span>
+                  Controle otimizado de temperatura e refrescância extra
+                </span>
+              ) : (
+                <span>
+                  Controle otimizado de temperatura e refrescância extra no
+                  núcleo do colchão
+                </span>
+              )}
+            </div>
+            <div className={styles.GridItem}>
+              <Image
+                src={SuportePDP}
+                width={isMobile ? 51 : 96}
+                height={isMobile ? 45 : 85}
+              />
+              {isMobile ? (
+                <span>
+                  Suporte ergonômico para melhor alinhamento da coluna
+                </span>
+              ) : (
+                <span>
+                  Suporte ergonômico com adaptação ao corpo e reforço na região
+                  do quadril para melhorar o alinhamento da coluna
+                </span>
+              )}
+            </div>
+          </div>
         </div>
-        <div className={styles.SpecsColchaoSlickSecondSliderBackground}>
-          <h3>6</h3>
+        <div
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground6}`}
+        >
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosLeft
+            }
+          >
+            <div className={styles.Icons}>
+              <div className={styles.Icon}>
+                <Image src={IconeGarantia} width={62} height={43} />
+                <strong className={styles.IconTitle}>
+                  10 anos de <br /> garantia
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={IconeEntregaPrime} width={59} height={39} />
+                <strong className={styles.IconTitle}>
+                  entrega <br /> prime
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={IconeFrete} width={58} height={41} />
+                <strong className={styles.IconTitle}>
+                  frete <br /> grátis
+                </strong>
+              </div>
+              <div className={styles.Icon}>
+                <Image src={Icone100Dias} width={42} height={37} />
+                <strong className={styles.IconTitle}>
+                  100 dias <br /> de teste
+                </strong>
+              </div>
+            </div>
+            <div className={styles.BeneficiosZissou}>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  100 dias de teste
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Caso não esteja satisfeito com o produto, entre em contato com
+                  nosso atendimento através do Whatsapp 11 93285-8213
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  ENTREGA EXPRESSA E FRETE GRÁTIS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  A entrega é por nossa conta para todo o Brasil
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  GARANTIA DE 5 ANOS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Para saber mais sobre os termos de garantia,{' '}
+                  <Link
+                    to="https://www.zissou.com.br/blogs/faq/como-funciona-a-garantia-de-um-colchao"
+                    className={styles.BeneficiosItemSubtitleLink}
+                  >
+                    clique aqui
+                  </Link>
+                </span>
+              </div>
+              <div className={styles.BeneficiosItem}>
+                <strong className={styles.BeneficiosItemTitle}>
+                  INFORMAÇÕES TÉCNICAS
+                </strong>
+                <span className={styles.BeneficiosItemSubtitle}>
+                  Para saber mais sobre informações técnicas dos colchões,{' '}
+                  <Link
+                    to="/pages/comparativo-colchoes"
+                    className={styles.BeneficiosItemSubtitleLink}
+                  >
+                    clique aqui
+                  </Link>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
+            }
+          >
+            <Image src={ColchoesBlue} width={496} height={523} />
+          </div>
         </div>
       </Slider>
     </div>
