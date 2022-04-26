@@ -139,8 +139,11 @@
   
           &Details {
             padding-bottom: 70px;
-            font-size: 11px;
-            line-height: 24px;
+
+            &, p {
+              font-size: 11px;
+              line-height: 24px;
+            }
 
             h4 {
               font-size: 12px;
