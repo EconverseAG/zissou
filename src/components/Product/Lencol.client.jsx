@@ -5,10 +5,12 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
 import LencolTheSecret from '../LencolTheSecret';
+import LencolBanner from '../LencolBanner';
 
 function Lencol() {
   return (
     <div className="flex flex-col">
+      <LencolBanner />
       <LencolProduct />
       <LencolHowToDescribe />
       <LencolTheSecret />
