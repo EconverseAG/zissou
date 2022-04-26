@@ -4,12 +4,14 @@ import LencolTechnical from '../LencolTechnical';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
+import LencolTheSecret from '../LencolTheSecret';
 
 function Lencol() {
   return (
     <div className="flex flex-col">
       <LencolProduct />
       <LencolHowToDescribe />
+      <LencolTheSecret />
       <LencolTechnical />
       <TryItFor100Days />
       <ZissouStores />
