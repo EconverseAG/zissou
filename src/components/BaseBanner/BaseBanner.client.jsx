@@ -7,7 +7,7 @@ export default function BaseBanner() {
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.content}>
-        <strong>Base Zissou</strong>
+        <h1>Base Zissou</h1>
         <span>Estabilidade para dormir e viver</span>
       </div>
     </div>

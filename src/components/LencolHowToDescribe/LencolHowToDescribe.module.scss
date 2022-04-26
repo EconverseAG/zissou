@@ -1,0 +1,150 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 136px 109px;
+  font-family: ZonaPro;
+  background: #F5F6F5;
+
+  h2 {
+    color: #F08590;
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 48px;
+    text-transform: uppercase;
+
+    strong {
+      color: #245066;
+      font-weight: inherit;
+    }
+  }
+
+  .content {
+    margin-top: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+
+    p, span {
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: #245066;
+    }
+
+    &Text {
+      p {
+        max-width: 554px;
+      }
+
+      .quote {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 102px;
+
+        &::before, &::after {
+          position: absolute;
+          color: #F08590;
+          font-size: 167px;
+          line-height: 0;
+        }
+
+        &::before {
+          content: '“';
+          top: 60%;
+          left: 0;
+        }
+
+        &::after {
+          content: '”';
+          bottom: 0;
+          right: 0;
+        }
+
+        p, span {
+          color: #F08590;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 37px;
+          line-height: 47px;
+          padding-inline: 86px;
+        }
+
+        span {
+          font-size: 20px;
+          line-height: 32px;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+
+    &Images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      span {
+        margin-top: 29px;
+      }
+    }
+  }
+
+  &.mobile {
+    padding-block: 62px 39px;
+
+    h2 {
+      max-width: 166px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    .content {
+      flex-direction: column;
+      margin-top: 32px;
+
+      &Text {
+        max-width: 361px;
+        
+        > p {
+          font-size: 12px;
+          line-height: 15px;
+          color: #707070;
+          margin-inline: 35px;
+        }
+
+        .quote {
+          margin-top: 59px;
+
+          &::after, &::before {
+            font-size: 84px;
+            top: 48%;
+            bottom: unset;
+          }
+
+          p {
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 600;
+            padding-inline: 36px;
+          }
+          
+          span {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 18px;
+          }
+        }
+      }
+
+      &Images {
+        margin-inline: 28px;
+      }
+    }
+  }
+}

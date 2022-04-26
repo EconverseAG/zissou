@@ -37,9 +37,9 @@ export default function ProductDetails({product}) {
         {isColchao ? (
           <Colchao title={title} product={product} />
         ) : isBase ? (
-          <Base product={product} />
+          <Base />
         ) : isTravesseiro ? (
-          <Travesseiro product={product} />
+          <Travesseiro />
         ) : isLencol ? (
           <Lencol />
         ) : isDuvet ? (

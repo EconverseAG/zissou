@@ -1,18 +1,12 @@
-import {
-  flattenConnection,
-  ProductTitle,
-  ProductDescription,
-  ProductPrice,
-} from '@shopify/hydrogen/client';
+import {ProductTitle, ProductDescription} from '@shopify/hydrogen/client';
 
-import ProductOptions from '../ProductOptions.client';
-import Gallery from '../Gallery.client';
+import ZissouProductOptions from '../ZissouProductOptions';
+import ZissouProductImages from '../ZissouProductImages';
 
-import AddToCartMarkup from '../AddToCartMarkup/AddToCartMarkup.client';
+import ZissouProductPrice from '../ZissouProductPrice';
+import ZissouAddToCart from '../ZissouAddToCart';
 
 export default function ProductSection({product}) {
-  const initialVariant = flattenConnection(product.variants)[0];
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-x-8 my-16">
       <div className="md:hidden mt-5 mb-8">
@@ -23,20 +17,10 @@ export default function ProductSection({product}) {
           </div>
         )}
         <span />
-        <div className="flex justify-between md:block">
-          <ProductPrice
-            className="text-gray-500 line-through text-lg font-semibold"
-            priceType="compareAt"
-            variantId={initialVariant.id}
-          />
-          <ProductPrice
-            className="text-gray-900 text-lg font-semibold"
-            variantId={initialVariant.id}
-          />
-        </div>
+        <ZissouProductPrice />
       </div>
 
-      <Gallery />
+      <ZissouProductImages thumbs />
 
       <div>
         <div className="hidden md:block">
@@ -49,19 +33,11 @@ export default function ProductSection({product}) {
               {product.vendor}
             </div>
           )}
-          <ProductPrice
-            className="text-gray-500 line-through text-lg font-semibold"
-            priceType="compareAt"
-            variantId={initialVariant.id}
-          />
-          <ProductPrice
-            className="text-gray-900 text-lg font-semibold"
-            variantId={initialVariant.id}
-          />
+          <ZissouProductPrice />
         </div>
         <div className="mt-8">
-          <ProductOptions />
-          <AddToCartMarkup />
+          <ZissouProductOptions />
+          <ZissouAddToCart />
         </div>
         <ProductDescription className="prose border-t border-gray-200 pt-6 text-black text-md" />
       </div>

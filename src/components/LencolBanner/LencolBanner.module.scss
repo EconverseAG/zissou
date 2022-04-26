@@ -1,18 +1,18 @@
 .wrapper {
   position: relative;
-  aspect-ratio: 384/199;
+  aspect-ratio: 1920/995;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../../assets/travesseiro-banner-background.png');
+  background-image: url('../../assets/lencol-banner-background.png');
 
   &.mobile {
     background-image: none;
     aspect-ratio: initial;
 
     .content {
-      margin-block: 71px 13px;
+      margin-block: 21px 13px;
       padding: 0;
 
       h1, span {
@@ -32,8 +32,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 202px;
-    padding-bottom: 182px;
+    padding-top: 141px;
+    padding-bottom: 758px;
     height: 100%;
 
     h1, span {
@@ -41,7 +41,6 @@
       text-transform: uppercase;
       font-size: 37px;
       line-height: 51px;
-      letter-spacing: 0.10em;
       text-align: center;
       color: #f08590;
     }
@@ -49,5 +48,10 @@
     h1 {
       color: #245066;
     }
+  }
+
+  .vejaMais {
+    position: absolute;
+    bottom: 70px;
   }
 }

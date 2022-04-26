@@ -7,7 +7,7 @@ export default function TravesseiroBanner() {
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.content}>
-        <strong>Travesseiro Zissou</strong>
+        <h1>Travesseiro Zissou</h1>
         <span>O conforto que você define</span>
       </div>
     </div>
