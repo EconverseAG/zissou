@@ -12,7 +12,7 @@ function LencolBanner() {
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.content}>
-        <strong>Lençol Zissou</strong>
+        <h1>Lençol Zissou</h1>
         <span>Simplesmente UAU!</span>
       </div>
       {!isMobile && (
