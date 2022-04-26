@@ -21,4 +21,26 @@
       margin-top: 161px;
     }
   }
+
+  &.mobile {
+    display: block;
+    padding-block: 13px 37px;
+
+    .productInfo {
+      padding-inline: 16px;
+      margin-top: 20px;
+
+      &Price {
+        margin-top: 22px;
+      }
+
+      &AddToCart {
+        margin-top: 21px;
+      }
+
+      &WhatsApp {
+        margin-top: 22px;
+      }
+    }
+  }
 }

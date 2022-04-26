@@ -4,11 +4,15 @@ import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import WhatsAppBanner from '../WhatsAppBanner';
 
+import useMobile from '../../hooks/useMobile';
+
 import * as styles from './BaseProduct.module.scss';
 
 function BaseProduct() {
+  const {isMobile} = useMobile();
+
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <ZissouProductImages title="Estilosa, resistente e perfeita" thumbs />
       <div className={styles.productInfo}>
         <ZissouProductOptions title="Selecione o tamanho da sua base:" />
