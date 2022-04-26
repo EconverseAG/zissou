@@ -1,3 +1,9 @@
+import DuvetBanner from '../DuvetBanner';
+
 export default function Duvet() {
-  return <p>Duvet</p>;
+  return (
+    <div className="flex flex-col">
+      <DuvetBanner />
+    </div>
+  );
 }
