@@ -12,7 +12,7 @@ const MODEL_3D_TYPE = 'MODEL_3D';
 const VIDEO_TYPE = 'VIDEO';
 const EXTERNAL_VIDEO_TYPE = 'EXTERNAL_VIDEO';
 
-function ZissouProductImages({title, thumbs}) {
+function ZissouProductImages({title, thumbs, ...rest}) {
   const [sliderRef, setSliderRef] = useState(null);
   const [navRef, setNavRef] = useState(null);
 
@@ -81,21 +81,41 @@ function ZissouProductImages({title, thumbs}) {
   }, [mediaFiltered]);
 
   return (
-    <>
-      <div className={styles.wrapper}>
-        {!isMobile && title && <h2 className={styles.title}>{title}</h2>}
-        <div className={styles.wrapperSlider}>
-          <button
-            className={`${styles.arrow} ${styles.arrowPrev}`}
-            onClick={sliderRef?.slickPrev}
-          >
-            <Image src={ArrowPrev} width={12} height={35} />
-          </button>
-          <Slider
-            ref={setSliderRef}
-            className={styles.slider}
-            {...sliderSettings}
-          >
+    <div className={styles.wrapper} {...rest}>
+      {!isMobile && title && <h2 className={styles.title}>{title}</h2>}
+      <div className={styles.wrapperSlider}>
+        <button
+          className={`${styles.arrow} ${styles.arrowPrev}`}
+          onClick={sliderRef?.slickPrev}
+        >
+          <Image src={ArrowPrev} width={12} height={35} />
+        </button>
+        <Slider
+          ref={setSliderRef}
+          className={styles.slider}
+          {...sliderSettings}
+        >
+          <div className={styles.imageContainer}>
+            <Image
+              src={featuredMedia.url}
+              width={featuredMedia.width}
+              height={featuredMedia.height}
+              alt={featuredMedia.altText}
+            />
+          </div>
+          {renderImages()}
+        </Slider>
+        <button
+          className={`${styles.arrow} ${styles.arrowNext}`}
+          onClick={sliderRef?.slickNext}
+        >
+          <Image src={ArrowNext} width={12} height={35} />
+        </button>
+      </div>
+      {isMobile && title && <h2 className={styles.title}>{title}</h2>}
+      {!isMobile && thumbs && (
+        <div className={styles.wrapperNav}>
+          <Slider ref={setNavRef} className={styles.nav} {...navSettings}>
             <div className={styles.imageContainer}>
               <Image
                 src={featuredMedia.url}
@@ -106,31 +126,9 @@ function ZissouProductImages({title, thumbs}) {
             </div>
             {renderImages()}
           </Slider>
-          <button
-            className={`${styles.arrow} ${styles.arrowNext}`}
-            onClick={sliderRef?.slickNext}
-          >
-            <Image src={ArrowNext} width={12} height={35} />
-          </button>
         </div>
-        {isMobile && title && <h2 className={styles.title}>{title}</h2>}
-        {!isMobile && thumbs && (
-          <div className={styles.wrapperNav}>
-            <Slider ref={setNavRef} className={styles.nav} {...navSettings}>
-              <div className={styles.imageContainer}>
-                <Image
-                  src={featuredMedia.url}
-                  width={featuredMedia.width}
-                  height={featuredMedia.height}
-                  alt={featuredMedia.altText}
-                />
-              </div>
-              {renderImages()}
-            </Slider>
-          </div>
-        )}
-      </div>
-    </>
+      )}
+    </div>
   );
 }
 

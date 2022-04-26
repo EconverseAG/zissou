@@ -5,7 +5,7 @@ import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
 
 import * as styles from './ZissouProductOptions.module.scss';
 
-function ZissouProductOptions({title}) {
+function ZissouProductOptions({title, ...rest}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const {options, setSelectedOption, selectedOptions} = useProduct();
@@ -19,7 +19,7 @@ function ZissouProductOptions({title}) {
   );
 
   return (
-    <>
+    <div {...rest}>
       {title && <h2 className={styles.title}>{title}</h2>}
       {options.map(({name, values}) => (
         <fieldset className={styles.select} key={name}>
@@ -44,7 +44,7 @@ function ZissouProductOptions({title}) {
           )}
         </fieldset>
       ))}
-    </>
+    </div>
   );
 }
 

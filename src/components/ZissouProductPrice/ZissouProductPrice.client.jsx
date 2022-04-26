@@ -3,12 +3,12 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductPrice.module.scss';
 
-function ZissouProductPrice() {
+function ZissouProductPrice({...rest}) {
   const {selectedVariant} = useProduct();
   const {isMobile} = useMobile();
 
   return (
-    <>
+    <div {...rest}>
       {selectedVariant.compareAtPriceV2.amount !==
         selectedVariant.priceV2.amount && (
         <span
@@ -33,7 +33,7 @@ function ZissouProductPrice() {
           À vista <small>(5% de desconto)</small>
         </span>
       </div>
-    </>
+    </div>
   );
 }
 
