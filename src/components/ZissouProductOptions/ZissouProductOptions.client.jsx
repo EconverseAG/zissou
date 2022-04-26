@@ -35,6 +35,7 @@ function ZissouProductOptions({title}) {
                 <button
                   key={value}
                   onClick={() => handleSelection(name, value)}
+                  className={styles.selectDropdownOption}
                 >
                   {value}
                 </button>

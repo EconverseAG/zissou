@@ -19,7 +19,8 @@
     justify-content: space-between;
     overflow: hidden;
     padding-left: 26px;
-
+    text-transform: uppercase;
+    
     &Arrow {
       width: 72px;
       height: 100%;
@@ -36,5 +37,9 @@
     border-radius: 17px;
     background: #FFFFFF;
     border: 2px solid #D4A8BF;
+    
+    &Option {
+      text-transform: uppercase;
+    }
   }
 }
