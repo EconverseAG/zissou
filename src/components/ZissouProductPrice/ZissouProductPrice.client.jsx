@@ -13,8 +13,8 @@ function ZissouProductPrice({...rest}) {
         rest.className || ''
       } `}
     >
-      {selectedVariant.compareAtPriceV2.amount !==
-        selectedVariant.priceV2.amount && (
+      {selectedVariant?.compareAtPriceV2?.amount !==
+        selectedVariant?.priceV2?.amount && (
         <span className={styles.listPrice}>
           De{' '}
           <ProductPrice
