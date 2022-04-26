@@ -1,6 +1,9 @@
 import LencolProduct from '../LencolProduct/LencolProduct.client';
 import LencolHowToDescribe from '../LencolHowToDescribe';
 import LencolTechnical from '../LencolTechnical';
+import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
+import ZissouStores from '../ZissouStores/ZissouStores.client';
+import Partners from '../Partners/Partners.client';
 
 function Lencol() {
   return (
@@ -8,6 +11,9 @@ function Lencol() {
       <LencolProduct />
       <LencolHowToDescribe />
       <LencolTechnical />
+      <TryItFor100Days />
+      <ZissouStores />
+      <Partners color="#779ABF" />
     </div>
   );
 }
