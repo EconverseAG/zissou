@@ -1,6 +1,10 @@
+import {Image} from '@shopify/hydrogen';
+
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './LencolHowToDescribe.module.scss';
+
+import Illustration1 from '../../assets/lencol-how-to-describe-1.png';
 
 function LencolHowToDescribe() {
   const {isMobile} = useMobile();
@@ -26,6 +30,11 @@ function LencolHowToDescribe() {
           </div>
         </div>
         <div className={styles.contentImages}>
+          <Image
+            src={Illustration1}
+            width={isMobile ? 684 : 458}
+            height={isMobile ? 375 : 458}
+          />
           {!isMobile && (
             <span>
               Ou Seja, <strong>UAU!</strong>
