@@ -12,6 +12,10 @@
     }
   }
 
+  .productShipping {
+    margin-top: 126px;
+  }
+
   .productInfo {
     display: flex;
     flex-direction: column;
@@ -40,6 +44,10 @@
   &.mobile {
     display: block;
     padding-block: 13px 37px;
+
+    .productShipping {
+      margin-top: 30px;
+    }
 
     .productInfo {
       padding-inline: 16px;
