@@ -19,6 +19,7 @@ function DuvetProduct() {
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
+          className={styles.productInfoOptions}
           title="Selecione o tamanho do seu Duvet:"
           uppercaseTitle
         />

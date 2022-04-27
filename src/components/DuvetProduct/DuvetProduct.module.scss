@@ -13,6 +13,10 @@
     flex-direction: column;
     align-items: center;
 
+    &Options {
+      max-width: 613px;
+    }
+
     &Price {
       margin-top: 14px;
     }
