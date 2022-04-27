@@ -3,7 +3,6 @@ import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouProductOptions from '../ZissouProductOptions';
 import ZissouAddToCart from '../ZissouAddToCart';
 import WhatsAppBanner from '../WhatsAppBanner';
-import ZissouProductShipping from '../ZissouProductShipping';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -19,9 +18,6 @@ function LencolProduct() {
           className={styles.productImages}
           title="Deite, role, estique, desenrole, abrace e se jogue para aproveitar ao máximo essa experiência :)"
         />
-        {!isMobile && (
-          <ZissouProductShipping className={styles.productShipping} />
-        )}
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -36,9 +32,6 @@ function LencolProduct() {
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />
-        {isMobile && (
-          <ZissouProductShipping className={styles.productShipping} />
-        )}
       </div>
     </div>
   );

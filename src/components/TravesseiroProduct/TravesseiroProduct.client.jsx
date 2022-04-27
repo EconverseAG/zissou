@@ -1,7 +1,6 @@
 import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouAddToCart from '../ZissouAddToCart';
-import ZissouProductShipping from '../ZissouProductShipping';
 import TravesseiroSpecialOptions from '../TravesseiroSpecialOptions';
 
 import useMobile from '../../hooks/useMobile';
@@ -23,9 +22,6 @@ function TravesseiroProduct() {
   às curvas do seu corpo dentro da capa que
   mantém o frescor com toque suave e macio."
         />
-        {!isMobile && (
-          <ZissouProductShipping className={styles.productShipping} />
-        )}
       </div>
       <div className={styles.productInfo}>
         <span>
@@ -37,9 +33,6 @@ function TravesseiroProduct() {
           className={styles.productInfoSpecialOptions}
         />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
-        {isMobile && (
-          <ZissouProductShipping className={styles.productShipping} />
-        )}
       </div>
     </div>
   );
