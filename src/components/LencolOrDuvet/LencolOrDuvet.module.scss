@@ -1,0 +1,65 @@
+.LencolOrDuvetContainer {
+  background: #f5f6f5;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 1023px) {
+    height: 560px;
+    flex-direction: column;
+  }
+
+  .LencolOrDuvetLeft {
+    margin-right: 176px;
+
+    @media only screen and (max-width: 1023px) {
+      margin: 0;
+    }
+  }
+
+  .LencolOrDuvetLeft,
+  .LencolOrDuvetRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 472px;
+
+    @media only screen and (max-width: 1023px) {
+      height: 250px;
+    }
+
+    >img {
+      mix-blend-mode: multiply;
+    }
+
+    .LinkCTA {
+      width: 325px;
+      height: 72px;
+      background: var(--purple-color-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 77px;
+      color: var(--white-color);
+      font-family: 'ZonaProBold';
+      font-size: 27px;
+      line-height: 35px;
+      text-transform: uppercase;
+      margin-top: auto;
+
+      &:hover {
+        background: var(--purple-color-500);
+      }
+
+      @media only screen and (max-width: 1023px) {
+        width: 200px;
+        height: 43px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 0;
+      }
+    }
+  }
+}
