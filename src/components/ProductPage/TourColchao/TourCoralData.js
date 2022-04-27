@@ -14,7 +14,7 @@ export default [
     title: 'Capa',
     imageSrc: CapaFundo,
     modal: {
-      title: 'Tecido CORAL premium <br /> COM COOLING',
+      title: 'Tecido CORAL premium <br> COM COOLING',
       imageTitle: BandeiraEUA,
       width: 30,
       height: 30,
@@ -35,6 +35,7 @@ export default [
         - Por não ser um tratamento e sim parte do tecido, as propriedades não se perdem
         com o tempo
       `,
+      buttonText: 'Continuar →',
     },
   },
   {
@@ -61,6 +62,7 @@ export default [
         <br />
         - Possui propriedades antimicrobianas e resistência a ácaros
       `,
+      buttonText: 'Continuar →',
     },
   },
   {
@@ -86,6 +88,7 @@ export default [
         <br />
         - Absorve ondas de movimento sem deformar
       `,
+      buttonText: 'Continuar →',
     },
   },
   {
@@ -111,6 +114,7 @@ export default [
         <br />
         - Oferece durabilidade às camadas de conforto
       `,
+      buttonText: 'opcão de sistema de SUPORTE HíBRIDO →',
     },
   },
   {
@@ -144,6 +148,7 @@ export default [
         <br />
         - Reforço nas bordas em todas as laterais do colchão com molas mais firmes para garantir a uniformidade do suporte em todas a superfície
       `,
+      buttonText: 'VOLTAR para O TOUR →',
     },
   },
 ];

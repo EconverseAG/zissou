@@ -8,18 +8,28 @@ import {Image} from '@shopify/hydrogen';
 
 let step_content = new Event('step_content');
 
-import modalData from './TourCoralData';
+import modalData from './TourBlueData';
 
-function StepContent({content, setModal}) {
+function StepBlueContent({content, setModal}) {
   const {isMobile} = useMobile();
   const [openModal, setOpenModal] = useState(false);
   const wrapperRef = useRef(null);
 
-  const currentIndex = modalData.findIndex((item) => {
-    return item.modal.title == content.modal.title;
-  });
+  const nextModal = () => {
+    const indexOnClick = modalData.findIndex((item) => {
+      return (
+        item.modal.title == document.querySelector('#modalTitle').innerHTML
+      );
+    });
 
-  const newContent = modalData[currentIndex + 1] || modalData[0];
+    const newContent = modalData[indexOnClick + 1] || modalData[0];
+
+    if (indexOnClick < modalData.length - 1) {
+      setModal(<ModalContent modalContent={newContent} />);
+    } else {
+      setModal(<ModalContent modalContent={modalData[0]} />);
+    }
+  };
 
   const ModalContent = ({modalContent = content}) => (
     <div className={styles.modalContainer}>
@@ -27,6 +37,7 @@ function StepContent({content, setModal}) {
         <div className={styles.modalTop}>
           <strong
             className={styles.modalTopTitle}
+            id="modalTitle"
             dangerouslySetInnerHTML={{__html: modalContent.modal.title}}
           />
           <Image
@@ -45,15 +56,16 @@ function StepContent({content, setModal}) {
         <span
           tabIndex={-1}
           role="button"
-          onClick={() => setModal(<ModalContent modalContent={newContent} />)}
+          onClick={nextModal}
+          className={styles.nextStep}
         >
-          Continuar
+          {modalContent.modal.buttonText}
         </span>
       </div>
       <Image
         src={modalContent.imageSrc}
-        width={isMobile ? 768 : 1980}
-        height={isMobile ? 1024 : 1080}
+        width={isMobile ? 375 : 1980}
+        height={isMobile ? 300 : 1080}
       />
     </div>
   );
@@ -85,12 +97,15 @@ function StepContent({content, setModal}) {
   return (
     <>
       <div
-        className={styles.TourCoralButtons}
+        className={styles.TourBlueButtons}
         ref={openModal ? wrapperRef : null}
       >
-        <button className={styles.TourCoralButton} onClick={handleOpenModal}>
-          <strong dangerouslySetInnerHTML={{__html: content.title}} />
-          <span />
+        <button className={styles.TourBlueButton} onClick={handleOpenModal}>
+          <strong
+            dangerouslySetInnerHTML={{__html: content.title}}
+            className={styles.TourBlueButtonTitle}
+          />
+          <span className={styles.TourBlueButtonCTA} />
         </button>
       </div>
     </>
@@ -135,6 +150,6 @@ function CloseButton() {
   );
 }
 
-export default memo(StepContent, (prevProps, nextProps) => {
+export default memo(StepBlueContent, (prevProps, nextProps) => {
   return prevProps.content.title === nextProps.content.title;
 });

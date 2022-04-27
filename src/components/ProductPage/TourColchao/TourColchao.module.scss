@@ -1,4 +1,5 @@
-.TourCoral {
+.TourCoral,
+.TourBlue {
   background: linear-gradient(90deg, rgba(244, 133, 128, 1) 0%, rgba(255, 255, 255, 1) 100%);
   height: 720px;
   display: flex;
@@ -8,7 +9,13 @@
   z-index: 3;
   position: relative;
 
-  .TourCoralTitle {
+  @media only screen and (max-width: 1023px) {
+    background: linear-gradient(180deg, rgba(244, 133, 128, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    height: 600px;
+  }
+
+  .TourCoralTitle,
+  .TourBlueTitle {
     font-family: 'ZonaProBlack';
     font-size: 36px;
     line-height: 35px;
@@ -17,9 +24,16 @@
     margin-bottom: 30px;
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.30);
     letter-spacing: 5px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 3px;
+    }
   }
 
-  .TourCoralContent {
+  .TourCoralContent,
+  .TourBlueContent {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -30,16 +44,28 @@
       height: 100%;
       z-index: 3;
       inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+      @media only screen and (max-width: 1023px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
       .modalContent {
         z-index: 4;
         position: absolute;
+        top: 50%;
+        right: 20%;
+        transform: translateY(-50%);
         background: #fff;
-        padding: 60px 30px 30px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.30);
+        padding: 30px;
         max-width: 474px;
+
+        @media only screen and (max-width: 1023px) {
+          max-width: 95%;
+          right: unset;
+        }
 
         .modalTop {
           display: flex;
@@ -54,15 +80,20 @@
             color: var(--coral-color-500);
             letter-spacing: 1px;
             margin-right: 5px;
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 12px;
+              line-height: 16px;
+            }
           }
-          
+
           .closeButton {
             position: absolute;
             top: 10.5px;
             right: 10.5px;
           }
         }
-        
+
         .modalBottomText {
           font-family: 'ZonaPro';
           font-size: 15px;
@@ -71,8 +102,31 @@
           display: block;
           margin-top: 23px;
 
-          > strong {
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+            line-height: 16px;
+          }
+
+          >strong {
             font-family: 'ZonaProBold';
+          }
+        }
+
+        .nextStep {
+          display: block;
+          text-align: right;
+          margin-top: 30px;
+          font-family: 'ZonaProBlack';
+          font-size: 13px;
+          line-height: 22px;
+          text-transform: uppercase;
+          text-decoration: underline;
+          color: var(--coral-color-500);
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 10px;
+            line-height: 16px;
+            margin-top: 20px;
           }
         }
       }
@@ -83,86 +137,144 @@
         inset: 0;
         width: 100%;
         height: 100%;
+
+        @media only screen and (max-width: 1023px) {
+          width: 100%;
+          height: 50%;
+        }
       }
     }
 
     >div {
       position: relative;
 
-      .TourCoralButtons {
+      .TourCoralButtons,
+      .TourBlueButtons {
         position: absolute;
-  
+
         &:nth-child(1) {
-          left: 45%;
+          left: 42.7%;
           transform: translateX(-50%);
           top: 7%;
-  
-          .TourCoralButton {
-            >span {
+
+          @media only screen and (max-width: 1023px) {
+            left: 18.5%;
+            transform: none;
+            top: 9%;
+          }
+
+          .TourCoralButton,
+          .TourBlueButton {
+            &CTA {
               margin-left: 22px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-left: 10px;
+              }
             }
           }
         }
-  
+
         &:nth-child(2) {
-          left: 49.5%;
+          left: 46.8%;
           top: 24%;
-  
-          .TourCoralButton {
+
+          @media only screen and (max-width: 1023px) {
+            left: 60%;
+            top: 22%;
+          }
+
+          .TourCoralButton,
+          .TourBlueButton {
             flex-direction: row-reverse;
-  
-            >span {
+
+            &CTA {
               margin-right: 22px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-right: 10px;
+              }
             }
           }
         }
-  
+
         &:nth-child(3) {
-          left: 39.5%;
+          left: 37%;
           transform: translateX(-50%);
           top: 38.5%;
-  
-          .TourCoralButton {
-            >span {
+
+          @media only screen and (max-width: 1023px) {
+            left: 23.5%;
+            top: 36%;
+          }
+
+          .TourCoralButton,
+          .TourBlueButton {
+            &CTA {
               margin-left: 22px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-left: 10px;
+              }
             }
           }
         }
-  
+
         &:nth-child(4) {
           left: -15%;
           top: 58%;
-  
-          .TourCoralButton {
-            >strong {
+
+          @media only screen and (max-width: 1023px) {
+            left: 6%;
+            top: 60%;
+          }
+
+          .TourCoralButton,
+          .TourBlueButton {
+            &Title {
               text-align: right;
             }
-  
-            >span {
+
+            &CTA {
               margin-left: 22px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-left: 10px;
+              }
             }
           }
         }
-  
+
         &:nth-child(5) {
           right: -28%;
           top: 56%;
-  
-          .TourCoralButton {
+
+          @media only screen and (max-width: 1023px) {
+            right: -5%;
+            top: 56.5%;
+          }
+
+          .TourCoralButton,
+          .TourBlueButton {
             flex-direction: row-reverse;
-  
-            >span {
+
+            &CTA {
               margin-right: 22px;
+
+              @media only screen and (max-width: 1023px) {
+                margin-right: 10px;
+              }
             }
           }
         }
-  
-        .TourCoralButton {
+
+        .TourCoralButton,
+        .TourBlueButton {
           display: flex;
           align-items: center;
           justify-content: center;
-  
-          >strong {
+
+          &Title {
             font-family: 'ZonaProBlack';
             font-size: 17px;
             line-height: 20px;
@@ -172,19 +284,30 @@
             display: block;
             text-align: left;
             letter-spacing: .5px;
+
+            @media only screen and (max-width: 1023px) {
+              font-size: 11px;
+              line-height: 15px;
+              letter-spacing: 0;
+            }
           }
-  
-          >span {
+
+          &CTA {
             width: 28px;
             height: 28px;
             border-radius: 200px;
             background: var(--coral-color-500);
             border: 2px solid var(--white-color);
             display: inline-block;
+
+            @media only screen and (max-width: 1023px) {
+              width: 25px;
+              height: 25px;
+            }
           }
-  
+
           &:hover {
-            >span {
+            .TourCoralButtonCTA {
               background: var(--white-color);
               border: 2px solid var(--coral-color-500);
             }
@@ -195,6 +318,121 @@
 
     .Legget {
       margin-left: -30px;
+
+      @media only screen and (max-width: 1023px) {
+        position: absolute;
+        bottom: 28%;
+        right: 20%;
+      }
+    }
+  }
+}
+
+.TourBlue {
+  background: linear-gradient(90deg, rgba(65, 82, 100, 1) 0%, rgba(65, 82, 100, 1) 30%, rgba(255, 255, 255, 1) 100%);
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+
+  @media only screen and (max-width: 1023px) {
+    background: linear-gradient(180deg, rgba(65, 82, 100, 1) 0%, rgba(65, 82, 100, 1) 30%, rgba(255, 255, 255, 1) 100%);
+    height: 600px;
+  }
+
+  .TourBlueContent {
+    >div {
+      .TourBlueButtons {
+        .TourBlueButton {
+          .TourBlueButtonCTA {
+            background: var(--blue-color-500);
+          }
+
+          &:hover {
+            .TourBlueButtonCTA {
+              background: var(--white-color);
+              border: 2px solid var(--blue-color-500);
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          top: 10%;
+          left: 0;
+
+          @media only screen and (max-width: 1023px) {
+            top: 6%;
+            left: 5%;
+          }
+        }
+
+        &:nth-child(2) {
+          right: -26%;
+          left: unset;
+          top: 21%;
+
+          @media only screen and (max-width: 1023px) {
+            right: -5%;
+            top: 20%;
+          }
+        }
+
+        &:nth-child(3) {
+          top: 36%;
+          left: -6%;
+
+          @media only screen and (max-width: 1023px) {
+            top: 34%;
+            left: 9%;
+          }
+        }
+
+        &:nth-child(4) {
+          left: unset;
+          right: -25%;
+          top: 57%;
+
+          @media only screen and (max-width: 1023px) {
+            left: unset;
+            right: -9%;
+            top: 65%;
+          }
+
+          .TourBlueButton {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+
+    .modalContainer {
+      .modalContent {
+        .modalTopTitle {
+          color: var(--blue-color-500);
+        }
+
+        .modalBottomText {
+          color: var(--blue-color-500);
+        }
+
+        .nextStep {
+          color: var(--blue-color-500);
+        }
+      }
+    }
+
+
+    .Legget {
+      margin-left: -10px;
+
+      @media only screen and (max-width: 1023px) {
+        position: absolute;
+        bottom: 23%;
+        right: 14%;
+      }
     }
   }
 }
