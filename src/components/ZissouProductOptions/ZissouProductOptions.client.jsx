@@ -36,44 +36,47 @@ function ZissouProductOptions({
     [setSelectedOption],
   );
 
-  const renderIcon = useCallback((option) => {
-    if (!option || !icons) return;
+  const renderIcon = useCallback(
+    (option) => {
+      if (!option || !icons) return;
 
-    let icon;
-    let width;
-    let height = 40;
+      let icon;
+      let width;
+      let height = 40;
 
-    if (option.includes('Solteiro')) {
-      icon = SolteiroIcon;
-      width = 17;
-    } else if (option.includes('Solteiro Especial')) {
-      icon = SolteiroEspecialIcon;
-      width = 17;
-    } else if (option.includes('Casal')) {
-      icon = CasalIcon;
-      width = 35;
-    } else if (option.includes('King')) {
-      icon = KingIcon;
-      width = 39;
-      height = 46;
-    } else if (option.includes('King Br')) {
-      icon = KingBrIcon;
-      width = 39;
-      height = 46;
-    } else if (option.includes('Queen')) {
-      icon = QueenIcon;
-      width = 37;
-      height = 46;
-    }
+      if (option.includes('Solteiro')) {
+        icon = SolteiroIcon;
+        width = 17;
+      } else if (option.includes('Solteiro Especial')) {
+        icon = SolteiroEspecialIcon;
+        width = 17;
+      } else if (option.includes('Casal')) {
+        icon = CasalIcon;
+        width = 35;
+      } else if (option.includes('King')) {
+        icon = KingIcon;
+        width = 39;
+        height = 46;
+      } else if (option.includes('King Br')) {
+        icon = KingBrIcon;
+        width = 39;
+        height = 46;
+      } else if (option.includes('Queen')) {
+        icon = QueenIcon;
+        width = 37;
+        height = 46;
+      }
 
-    if (!icon) return;
+      if (!icon) return;
 
-    return (
-      <div className={styles.selectIcon}>
-        <Image src={icon} width={width} height={height} />
-      </div>
-    );
-  }, []);
+      return (
+        <div className={styles.selectIcon}>
+          <Image src={icon} width={width} height={height} />
+        </div>
+      );
+    },
+    [icons],
+  );
 
   const renderFormattedName = useCallback((name) => {
     const splittedName = name.split('(');
