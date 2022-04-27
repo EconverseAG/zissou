@@ -2,6 +2,7 @@ import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouProductOptions from '../ZissouProductOptions';
 import ZissouAddToCart from '../ZissouAddToCart';
+import ProductSelectedOptions from '../ProductSelectedOptions';
 import WhatsAppBanner from '../WhatsAppBanner';
 
 import useMobile from '../../hooks/useMobile';
@@ -24,6 +25,7 @@ function DuvetProduct() {
           uppercaseTitle
         />
         <DuvetSpecialOptions className={styles.productInfoSpecialOptions} />
+        <ProductSelectedOptions className={styles.productInfoSelectedOptions} />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />
