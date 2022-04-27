@@ -1,0 +1,59 @@
+.PrivacyContentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .PrivacyContentImage {
+    max-height: 200px;
+
+    img {
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+
+  .PrivacyContentText {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 42px;
+      color: var(--blue-color-500);
+      line-height: 1.5;
+      margin: 30px 0 0;
+      font-family: 'ZonaProBold';
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    p, li {
+      color: #6e6d6d;
+      font-family: 'ZonaProLight';
+      font-size: 14px;
+      line-height: 18px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      b {
+        font-family: 'ZonaProBold';
+      }
+    }
+
+    h3 {
+      color: #425264;
+      font-size: 21px;
+      line-height: 32px;
+      margin: 30px 0 0;
+      text-transform: uppercase;
+      font-family: 'ZonaProBold';
+    }
+  }
+}
