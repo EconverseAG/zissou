@@ -1,6 +1,8 @@
 import {useState, useCallback} from 'react';
 import {Image} from '@shopify/hydrogen';
 
+import BagCustomization from '../BagCustomization';
+
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TravesseiroSpecialOptions.module.scss';
@@ -105,7 +107,9 @@ function TravesseiroSpecialOptions({className, ...rest}) {
             </label>
           </button>
           {customBagSelected && (
-            <div className={styles.selectionOptionContent}>customização</div>
+            <div className={styles.selectionOptionContent}>
+              <BagCustomization />
+            </div>
           )}
         </div>
       </fieldset>
