@@ -4,6 +4,10 @@
   gap: 16px;
   padding-block: 103px 78px;
 
+  .productShipping {
+    margin-top: 126px;
+  }
+
   .productInfo {
     display: flex;
     flex-direction: column;
@@ -40,6 +44,10 @@
 
       &WhatsApp {
         margin-top: 22px;
+      }
+
+      .productShipping {
+        margin-top: 40px;
       }
     }
   }

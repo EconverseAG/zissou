@@ -1,6 +1,7 @@
 import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouAddToCart from '../ZissouAddToCart';
+import ZissouProductShipping from '../ZissouProductShipping';
 import TravesseiroSpecialOptions from '../TravesseiroSpecialOptions';
 
 import useMobile from '../../hooks/useMobile';
@@ -12,15 +13,20 @@ function TravesseiroProduct() {
 
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      <ZissouProductImages
-        className={styles.productImages}
-        title="A conectada. O tranquilão. A preguiçosa.
-O resmungão. Cada um tem o seu jeito de dormir.
-Com o Travesseiro Zissou, você define o conforto
-perfeito com a união de camadas que se adaptam
-às curvas do seu corpo dentro da capa que
-mantém o frescor com toque suave e macio."
-      />
+      <div className={styles.productLeft}>
+        <ZissouProductImages
+          className={styles.productImages}
+          title="A conectada. O tranquilão. A preguiçosa.
+  O resmungão. Cada um tem o seu jeito de dormir.
+  Com o Travesseiro Zissou, você define o conforto
+  perfeito com a união de camadas que se adaptam
+  às curvas do seu corpo dentro da capa que
+  mantém o frescor com toque suave e macio."
+        />
+        {!isMobile && (
+          <ZissouProductShipping className={styles.productShipping} />
+        )}
+      </div>
       <div className={styles.productInfo}>
         <span>
           Seu Travesseiro contém:
@@ -31,6 +37,9 @@ mantém o frescor com toque suave e macio."
           className={styles.productInfoSpecialOptions}
         />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
+        {isMobile && (
+          <ZissouProductShipping className={styles.productShipping} />
+        )}
       </div>
     </div>
   );
