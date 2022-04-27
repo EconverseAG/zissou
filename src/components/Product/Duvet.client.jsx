@@ -1,5 +1,6 @@
 import DuvetBanner from '../DuvetBanner';
 import DuvetHowToDescribe from '../DuvetHowToDescribe';
+import DuvetInside from '../DuvetInside';
 import DuvetProduct from '../DuvetProduct';
 import DuvetTechnical from '../DuvetTechnical';
 import Partners from '../Partners/Partners.client';
@@ -13,6 +14,7 @@ export default function Duvet() {
       <DuvetBanner />
       <DuvetProduct />
       <DuvetHowToDescribe />
+      <DuvetInside />
       <TheSecret productName="Duvet Zissou" />
       <DuvetTechnical />
       <TryItFor100Days />

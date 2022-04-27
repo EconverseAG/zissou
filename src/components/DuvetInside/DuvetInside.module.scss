@@ -1,0 +1,182 @@
+.duvetInside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 129px 52px;
+  font-family: ZonaPro;
+  background: #f08590;
+
+  h2 {
+    color: #fff;
+    font-size: 37px;
+    line-height: 48px;
+    margin-bottom: 125px;
+    text-transform: uppercase;
+  }
+
+  &Image {
+    position: relative; 
+    width: 50%;
+  }
+
+  &Bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 62px;
+    height: 62px;
+
+    &[data-info="duvet"] {
+      top: 40%;
+      left: 25%;
+
+      .duvetInsideBubbleContent {
+        right: calc(62px + 38px);
+
+        &::before {
+          right: -20px;
+        }
+      }
+    }
+
+    &[data-info="enchimento"] {
+      bottom: 18%;
+      right: 20%;
+
+      .duvetInsideBubbleContent {
+        left: calc(62px + 44px);
+
+        &::before {
+          left: -20px;
+        }
+      }
+    }
+
+    &Content { 
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 372px;
+      padding: 42px 62px 59px;
+      background: rgba(255, 255, 255, 0.6);
+      bottom: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 32px;
+        width: 62px;
+        height: 1px;
+        background: #f08590;
+      }
+
+      h3 {
+        font-family: ZonaProBlack;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 22px;
+        margin-bottom: 21px;
+        text-transform: uppercase;
+        color: #f08590;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 27px;
+        color: #415264;
+        text-align: center;
+      }
+    }
+    
+    &::after {
+      content: "";
+      width: 80%;
+      height: 80%;
+      border-radius: 999px;
+      background: #f08590;
+      display: block;
+      animation: pulsate 2s ease-out;
+      animation-iteration-count: infinite;
+      opacity: 0;
+
+      @keyframes pulsate {
+        0% {
+          opacity: 0;
+          width: 0%;
+          height: 0%;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    padding: 62px 18px 32px;
+
+    h2 {
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 600;
+      margin-bottom: 84px;
+    }
+
+    .duvetInsideImage {
+      width: auto;
+    }
+
+    .duvetInsideBubble {
+      &Content {
+        position: relative;
+        padding: 32px 28px 40px;
+        width: 100%;
+
+        &::before {
+          width: 1px;
+          height: 100px;
+          background: #f08590;
+        }
+        
+        &[data-info="duvet"] {
+          margin-bottom: 32px;
+
+          &::before {
+            z-index: 1;
+            bottom: -33%;
+            left: 31%;
+          }
+        }
+
+        &[data-info="enchimento"] {
+          margin-top: 32px;
+
+          &::before {
+            top: -40%;
+            right: 27%;
+          }
+        }
+          
+        h3 {
+          font-size: 16px;
+          line-height: 21px;
+          margin-bottom: 32px;
+        }
+  
+        p {
+          font-size: 11px;
+          line-height: 21px;
+        }
+      }
+    }
+  }  
+}
