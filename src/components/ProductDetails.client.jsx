@@ -6,6 +6,7 @@ import Base from './Product/Base.client';
 import Travesseiro from './Product/Travesseiro.client';
 import Lencol from './Product/Lencol.client';
 import Duvet from './Product/Duvet.client';
+import {ZissouProductProvider} from '../hooks/useZissouProduct';
 
 export default function ProductDetails({product}) {
   const initialVariant = flattenConnection(product.variants)[0];
@@ -34,17 +35,19 @@ export default function ProductDetails({product}) {
   return (
     <>
       <ProductProvider data={product} initialVariantId={initialVariant.id}>
-        {isColchao ? (
-          <Colchao title={title} product={product} />
-        ) : isBase ? (
-          <Base />
-        ) : isTravesseiro ? (
-          <Travesseiro />
-        ) : isLencol ? (
-          <Lencol />
-        ) : isDuvet ? (
-          <Duvet />
-        ) : null}
+        <ZissouProductProvider>
+          {isColchao ? (
+            <Colchao title={title} product={product} />
+          ) : isBase ? (
+            <Base />
+          ) : isTravesseiro ? (
+            <Travesseiro />
+          ) : isLencol ? (
+            <Lencol />
+          ) : isDuvet ? (
+            <Duvet />
+          ) : null}
+        </ZissouProductProvider>
       </ProductProvider>
     </>
   );

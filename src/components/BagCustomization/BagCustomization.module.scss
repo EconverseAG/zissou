@@ -1,0 +1,38 @@
+.customization {
+  display: flex;
+
+  &Image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    span {
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      text-transform: uppercase;
+
+      &.small {
+        font-size: 9px;
+      }
+    }
+  }
+
+  &Control {
+    textarea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center; 
+      resize: none;
+      border: 1px solid #000;
+      width: 100%;
+      height: 48px;
+      line-height: 16px;
+      text-align: center;
+      padding-top: 6px;
+      text-transform: uppercase;
+    }
+  }
+}

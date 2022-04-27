@@ -1,6 +1,8 @@
-import {useProduct, Image} from '@shopify/hydrogen/client';
+import {Image} from '@shopify/hydrogen/client';
 import {useCallback, useMemo, useState} from 'react';
 import Slider from 'react-slick';
+
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductImages.module.scss';
 
@@ -16,7 +18,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [sliderRef, setSliderRef] = useState(null);
   const [navRef, setNavRef] = useState(null);
 
-  const {media, selectedVariant} = useProduct();
+  const {media, selectedVariant} = useZissouProduct();
 
   const {isMobile} = useMobile();
 

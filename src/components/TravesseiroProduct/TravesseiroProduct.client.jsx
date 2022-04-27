@@ -1,6 +1,7 @@
 import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouAddToCart from '../ZissouAddToCart';
+import TravesseiroSpecialOptions from '../TravesseiroSpecialOptions';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -26,6 +27,9 @@ mantém o frescor com toque suave e macio."
           <br /> 1 bag, 1 capa com enchimento e 3 camadas
         </span>
         <ZissouProductPrice className={styles.productInfoPrice} />
+        <TravesseiroSpecialOptions
+          className={styles.productInfoSpecialOptions}
+        />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
       </div>
     </div>
