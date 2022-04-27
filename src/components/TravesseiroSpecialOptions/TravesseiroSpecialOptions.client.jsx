@@ -1,8 +1,9 @@
-import {useState, useCallback} from 'react';
+import {useCallback} from 'react';
 import {Image} from '@shopify/hydrogen';
 
 import BagCustomization from '../BagCustomization';
 
+import useZissouProduct from '../../hooks/useZissouProduct';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TravesseiroSpecialOptions.module.scss';
@@ -10,8 +11,7 @@ import * as styles from './TravesseiroSpecialOptions.module.scss';
 import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
 
 function TravesseiroSpecialOptions({className, ...rest}) {
-  const [washableSelected, setWashableSelected] = useState(false);
-  const [customBagSelected, setCustomBagSelected] = useState(false);
+  const {washable, customBag, setCustomBag, setWashable} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -19,18 +19,18 @@ function TravesseiroSpecialOptions({className, ...rest}) {
     (e) => {
       e.preventDefault();
 
-      setWashableSelected(!washableSelected);
+      setWashable(!washable);
     },
-    [washableSelected],
+    [washable, setWashable],
   );
 
   const toggleBagCustomization = useCallback(
     (e) => {
       e.preventDefault();
 
-      setCustomBagSelected(!customBagSelected);
+      setCustomBag(!customBag);
     },
-    [customBagSelected],
+    [customBag, setCustomBag],
   );
 
   return (
@@ -51,7 +51,7 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               type="checkbox"
               id="travesseiro-washable"
               name="travesseiro-special-options"
-              checked={washableSelected}
+              checked={washable}
             />
             <span className={styles.selectionOptionControlCheckbox}></span>
             <label
@@ -59,10 +59,10 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               htmlFor="travesseiro-washable"
             >
               <span>Opção lavável</span>
-              {washableSelected && <strong>+ R$100,00</strong>}
+              {washable && <strong>+ R$100,00</strong>}
             </label>
           </button>
-          {washableSelected && (
+          {washable && (
             <div className={styles.selectionOptionContent}>
               <Image src={TravesseiroLavavel} width={280} height={91} />
               <p>Chegou a hora do banho :)</p>
@@ -95,7 +95,7 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               type="checkbox"
               id="travesseiro-customization"
               name="travesseiro-special-options"
-              checked={customBagSelected}
+              checked={customBag}
             />
             <span className={styles.selectionOptionControlCheckbox}></span>
             <label
@@ -103,10 +103,10 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               htmlFor="travesseiro-customization"
             >
               <span>Customização na bag</span>
-              {customBagSelected && <strong>+ R$50,00</strong>}
+              {customBag && <strong>+ R$50,00</strong>}
             </label>
           </button>
-          {customBagSelected && (
+          {customBag && (
             <div className={styles.selectionOptionContent}>
               <BagCustomization />
             </div>

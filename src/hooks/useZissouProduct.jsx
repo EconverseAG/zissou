@@ -1,4 +1,4 @@
-import {createContext, useContext, useState, useCallback} from 'react';
+import {createContext, useContext, useState} from 'react';
 import {useProduct} from '@shopify/hydrogen/client';
 
 const ZissouProductContext = createContext();
@@ -12,22 +12,14 @@ function ZissouProductProvider({children}) {
 
   const product = useProduct();
 
-  const toggleWashable = useCallback(() => {
-    setWashable(!washable);
-  }, [washable]);
-
-  const toggleCustomBag = useCallback(() => {
-    setCustomBag(!customBag);
-  }, [customBag]);
-
   return (
     <ZissouProductContext.Provider
       value={{
         ...product,
         washable,
         customBag,
-        toggleWashable,
-        toggleCustomBag,
+        setWashable,
+        setCustomBag,
         customBagText,
         setCustomBagText,
         includeDuvetFilling,
