@@ -7,6 +7,7 @@ import WhatsAppBanner from '../WhatsAppBanner';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './DuvetProduct.module.scss';
+import DuvetSpecialOptions from '../DuvetSpecialOptions';
 
 function DuvetProduct() {
   const {isMobile} = useMobile();
@@ -21,6 +22,7 @@ function DuvetProduct() {
           title="Selecione o tamanho do seu Duvet:"
           uppercaseTitle
         />
+        <DuvetSpecialOptions className={styles.productInfoSpecialOptions} />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />
