@@ -1,4 +1,5 @@
-import {ProductPrice} from '@shopify/hydrogen/client';
+import {ProductPrice, useMoney} from '@shopify/hydrogen/client';
+import {useMemo} from 'react';
 
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
@@ -8,6 +9,16 @@ import * as styles from './ZissouProductPrice.module.scss';
 function ZissouProductPrice({...rest}) {
   const {selectedVariant} = useZissouProduct();
   const {isMobile} = useMobile();
+
+  const rawInstallmentPrice = useMemo(() => {
+    const price = {...selectedVariant.priceV2};
+
+    price.amount = String(Number(price.amount) / 10.0);
+
+    return price;
+  }, [selectedVariant]);
+
+  const installment = useMoney(rawInstallmentPrice);
 
   return (
     <div
@@ -35,8 +46,12 @@ function ZissouProductPrice({...rest}) {
           variantId={selectedVariant.id}
         />
         <span className={styles.bestPriceInfo}>
-          À vista <small>(5% de desconto)</small>
+          Em até <strong>10X</strong>
+          <br /> de <strong>{installment.localizedString}</strong>
         </span>
+      </div>
+      <div className={styles.disclaimer}>
+        <p>Pagamento à vista com 5% de desconto</p>
       </div>
     </div>
   );
