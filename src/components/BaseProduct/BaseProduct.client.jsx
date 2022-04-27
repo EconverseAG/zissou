@@ -18,6 +18,7 @@ function BaseProduct() {
         <ZissouProductOptions
           title="Selecione o tamanho da sua base:"
           uppercaseTitle={isMobile}
+          icons
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />

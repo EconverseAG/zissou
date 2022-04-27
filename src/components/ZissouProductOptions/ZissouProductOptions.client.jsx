@@ -17,6 +17,7 @@ import * as styles from './ZissouProductOptions.module.scss';
 function ZissouProductOptions({
   title,
   info,
+  icons,
   uppercaseTitle,
   className,
   ...rest
@@ -36,7 +37,7 @@ function ZissouProductOptions({
   );
 
   const renderIcon = useCallback((option) => {
-    if (!option) return;
+    if (!option || !icons) return;
 
     let icon;
     let width;
