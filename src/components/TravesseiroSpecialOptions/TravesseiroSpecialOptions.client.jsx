@@ -1,4 +1,4 @@
-import {useCallback} from 'react';
+import {useEffect, useCallback} from 'react';
 import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import BagCustomization from '../BagCustomization';
@@ -31,15 +31,14 @@ function TravesseiroSpecialOptions({className, ...rest}) {
 
       const currentCustomBag = !customBag;
 
-      setSelectedOption(
-        options[0].name,
-        options[0].values[currentCustomBag ? 1 : 0],
-      );
-
       setCustomBag(currentCustomBag);
     },
-    [customBag, setCustomBag, setSelectedOption, options],
+    [customBag, setCustomBag],
   );
+
+  useEffect(() => {
+    setSelectedOption(options[0].name, options[0].values[customBag ? 1 : 0]);
+  }, [washable, customBag, setSelectedOption]);
 
   return (
     <div
