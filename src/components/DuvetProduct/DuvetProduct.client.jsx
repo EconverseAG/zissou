@@ -3,9 +3,9 @@ import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouProductOptions from '../ZissouProductOptions';
 import ZissouAddToCart from '../ZissouAddToCart';
 import ProductSelectedOptions from '../ProductSelectedOptions';
-import DuvetSpecialOptions from '../DuvetSpecialOptions';
 import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 import WhatsAppBanner from '../WhatsAppBanner';
+import ColorSelector from '../ColorSelector';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -25,7 +25,7 @@ function DuvetProduct() {
           title="Selecione o tamanho do seu Duvet:"
           uppercaseTitle
         />
-        <DuvetSpecialOptions className={styles.productInfoSpecialOptions} />
+        <ColorSelector className={styles.productInfoColorSelector} />
         <ProductSelectedOptions className={styles.productInfoSelectedOptions} />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />

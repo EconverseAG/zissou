@@ -1,0 +1,66 @@
+.colorSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 529px;
+  
+  > span {
+    color: #707070;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 16px;
+    font-family: ZonaProBold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  
+  &List {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 27px;
+    
+    &Item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 18px 12px;
+      height: 50px;
+      border: 2px solid #D4A8BF;
+      box-sizing: border-box;
+      border-radius: 13px;
+      transition: 0.15s;
+      
+      &.selected {
+        background: #F1E9ED;
+      }
+      
+      span {
+        text-transform: uppercase;
+        color: #707070;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: ZonaProBold;
+        letter-spacing: 0.05em;
+      }
+
+      &Color {
+        width: 50%;
+        height: 31px;
+        border: 2px solid #D4A8BF;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        &.white {
+          background: #FFFFFF;
+        }
+
+        &.gray {
+          background: #BABABA;
+        }
+      }
+    }
+  }
+}

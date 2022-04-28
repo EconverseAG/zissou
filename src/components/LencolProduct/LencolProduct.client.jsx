@@ -3,11 +3,12 @@ import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouProductOptions from '../ZissouProductOptions';
 import ZissouAddToCart from '../ZissouAddToCart';
 import WhatsAppBanner from '../WhatsAppBanner';
+import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
+import ColorSelector from '../ColorSelector';
 
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './LencolProduct.module.scss';
-import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 
 function LencolProduct() {
   const {isMobile} = useMobile();
@@ -30,6 +31,7 @@ function LencolProduct() {
           info="Contém: 2 fronhas, lençol de cima e lençol de baixo"
           uppercaseTitle={isMobile}
         />
+        <ColorSelector className={styles.productInfoColorSelector} />
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />

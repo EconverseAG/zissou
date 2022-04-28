@@ -22,6 +22,7 @@ function ZissouProductProvider({
   const [includeDuvetFilling, setIncludeDuvetFilling] = useState(false);
   const [includeGrayDuvetCover, setIncludeGrayDuvetCover] = useState(false);
   const [includeWhiteDuvetCover, setIncludeWhiteDuvetCover] = useState(false);
+  const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
 
   const initialVariant = useMemo(
@@ -72,6 +73,8 @@ function ZissouProductProvider({
         setIncludeGrayDuvetCover,
         includeWhiteDuvetCover,
         setIncludeWhiteDuvetCover,
+        selectedColor,
+        setSelectedColor,
       }}
     >
       <ProductProvider data={product} initialVariantId={initialVariant.id}>
