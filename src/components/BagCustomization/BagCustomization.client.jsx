@@ -1,4 +1,4 @@
-import {useCallback} from 'react';
+import {useCallback, useState} from 'react';
 import {Image} from '@shopify/hydrogen';
 
 import useZissouProduct from '../../hooks/useZissouProduct';
@@ -13,6 +13,8 @@ import SeloPata from '../../assets/selo-pata.png';
 import SeloCoracao from '../../assets/selo-coracao.png';
 
 function BagCustomization() {
+  const [customizationConfirmed, setCustomizationConfirmed] = useState(false);
+
   const {customBagText, setCustomBagText} = useZissouProduct();
 
   const renderCustomBagText = useCallback(() => {
@@ -65,36 +67,52 @@ function BagCustomization() {
         </span>
       </div>
       <div className={styles.customizationControl}>
-        <textarea
-          type="text"
-          maxLength={10}
-          placeholder="Escreva aqui&#10;(até 10 caracteres)"
-          onChange={(e) => setCustomBagText(e.target.value)}
-          value={customBagText}
-        />
-        <span className={styles.customizationControlSuggestText}>
-          Ou escolha alguma de nossas sugestões
-        </span>
-        <div className={styles.customizationControlSuggestions}>
-          <button
-            data-suggestion="selo-infinito"
-            onClick={handleClickSuggestion}
-          >
-            <Image src={SeloInfinito} width={20} height={9} />
-          </button>
-          <button data-suggestion="selo-trevo" onClick={handleClickSuggestion}>
-            <Image src={SeloTrevo} width={20} height={20} />
-          </button>
-          <button data-suggestion="selo-pata" onClick={handleClickSuggestion}>
-            <Image src={SeloPata} width={20} height={20} />
-          </button>
-          <button
-            data-suggestion="selo-coracao"
-            onClick={handleClickSuggestion}
-          >
-            <Image src={SeloCoracao} width={20} height={19} />
-          </button>
-        </div>
+        {!customizationConfirmed && (
+          <>
+            <textarea
+              type="text"
+              maxLength={10}
+              placeholder="Escreva aqui&#10;(até 10 caracteres)"
+              onChange={(e) => setCustomBagText(e.target.value)}
+              value={customBagText}
+            />
+            <span className={styles.customizationControlSuggestText}>
+              Ou escolha alguma de nossas sugestões
+            </span>
+            <div className={styles.customizationControlSuggestions}>
+              <button
+                data-suggestion="selo-infinito"
+                onClick={handleClickSuggestion}
+              >
+                <Image src={SeloInfinito} width={20} height={9} />
+              </button>
+              <button
+                data-suggestion="selo-trevo"
+                onClick={handleClickSuggestion}
+              >
+                <Image src={SeloTrevo} width={20} height={20} />
+              </button>
+              <button
+                data-suggestion="selo-pata"
+                onClick={handleClickSuggestion}
+              >
+                <Image src={SeloPata} width={20} height={20} />
+              </button>
+              <button
+                data-suggestion="selo-coracao"
+                onClick={handleClickSuggestion}
+              >
+                <Image src={SeloCoracao} width={20} height={19} />
+              </button>
+            </div>
+          </>
+        )}
+        <button
+          className={styles.customizationControlConfirmation}
+          onClick={() => setCustomizationConfirmed(!customizationConfirmed)}
+        >
+          {customizationConfirmed ? 'Editar' : 'Confirmar'}
+        </button>
       </div>
     </div>
   );

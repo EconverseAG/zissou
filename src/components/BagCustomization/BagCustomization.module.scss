@@ -64,6 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 20px;
       
       button {
         width: 48px;
@@ -73,6 +74,19 @@
         align-items: center;
         justify-content: center;
       }
+    }
+
+    &Confirmation {
+      width: 100%;
+      align-items: center;
+      color: #fff;
+      background: #f08590;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: ZonaProBold;
+      border-radius: 77px;
+      padding: 10px;
     }
   }
 }
