@@ -12,6 +12,8 @@ export default function ProductDetails({
   travesseiroWashable,
   travesseiroWashableCustom,
   duvetFilling,
+  grayDuvetCover,
+  whiteDuvetCover,
 }) {
   const {title} = product;
 
@@ -42,6 +44,8 @@ export default function ProductDetails({
         travesseiroWashable={travesseiroWashable}
         travesseiroWashableCustom={travesseiroWashableCustom}
         duvetFilling={duvetFilling}
+        grayDuvetCover={grayDuvetCover}
+        whiteDuvetCover={whiteDuvetCover}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}

@@ -7,6 +7,7 @@ import WhatsAppBanner from '../WhatsAppBanner';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './LencolProduct.module.scss';
+import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 
 function LencolProduct() {
   const {isMobile} = useMobile();
@@ -30,6 +31,7 @@ function LencolProduct() {
           uppercaseTitle={isMobile}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
+        <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>

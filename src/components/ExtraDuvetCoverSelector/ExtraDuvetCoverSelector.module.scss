@@ -1,0 +1,73 @@
+.extraCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &Item {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 2px solid #D4A8BF;
+    box-sizing: border-box;
+    border-radius: 13px;
+    padding-inline: 21px;
+    width: 100%;
+    max-width: 521px;
+    height: 119px;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    &Checkbox {
+      aspect-ratio: 1/1;
+      width: 45px;
+      height: 45px;
+      border: 2px solid #D4A8BF;
+      border-radius: 13px;
+      transition: 0.15s;
+      font-size: 0;
+      margin-right: 21px;
+    }
+
+    input:checked + .extraCoverItemCheckbox {
+      background: #D4A8BF;
+      background-image: url('../../assets/check.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+    }
+
+    &Info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      text-transform: uppercase; 
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      margin-left: 10px;
+      max-width: 212px;
+      height: 100%;
+      
+      > p {
+        color: #707070;
+        font-family: ZonaProBold;
+
+        strong {
+          color: #D4A8BF;
+          font-family: ZonaProBlack;
+        }
+      }
+
+      &Option {
+        color: #D4A8BF;
+        font-family: ZonaProBlack;
+      }
+    }
+  }
+}

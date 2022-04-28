@@ -11,6 +11,8 @@ function ZissouProductProvider({
   travesseiroWashable,
   travesseiroWashableCustom,
   duvetFilling,
+  grayDuvetCover,
+  whiteDuvetCover,
   isDuvet,
   isTravesseiro,
 }) {
@@ -18,6 +20,8 @@ function ZissouProductProvider({
   const [customBag, setCustomBag] = useState(false);
   const [customBagText, setCustomBagText] = useState('');
   const [includeDuvetFilling, setIncludeDuvetFilling] = useState(false);
+  const [includeGrayDuvetCover, setIncludeGrayDuvetCover] = useState(false);
+  const [includeWhiteDuvetCover, setIncludeWhiteDuvetCover] = useState(false);
   const [product, setProduct] = useState(baseProduct);
 
   const initialVariant = useMemo(

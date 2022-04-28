@@ -3,12 +3,13 @@ import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouProductOptions from '../ZissouProductOptions';
 import ZissouAddToCart from '../ZissouAddToCart';
 import ProductSelectedOptions from '../ProductSelectedOptions';
+import DuvetSpecialOptions from '../DuvetSpecialOptions';
+import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 import WhatsAppBanner from '../WhatsAppBanner';
 
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './DuvetProduct.module.scss';
-import DuvetSpecialOptions from '../DuvetSpecialOptions';
 
 function DuvetProduct() {
   const {isMobile} = useMobile();
@@ -27,6 +28,7 @@ function DuvetProduct() {
         <DuvetSpecialOptions className={styles.productInfoSpecialOptions} />
         <ProductSelectedOptions className={styles.productInfoSelectedOptions} />
         <ZissouProductPrice className={styles.productInfoPrice} />
+        <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>
