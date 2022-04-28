@@ -68,6 +68,10 @@ function ZissouProductProvider({
         setCustomBagText,
         includeDuvetFilling,
         setIncludeDuvetFilling,
+        includeGrayDuvetCover,
+        setIncludeGrayDuvetCover,
+        includeWhiteDuvetCover,
+        setIncludeWhiteDuvetCover,
       }}
     >
       <ProductProvider data={product} initialVariantId={initialVariant.id}>
