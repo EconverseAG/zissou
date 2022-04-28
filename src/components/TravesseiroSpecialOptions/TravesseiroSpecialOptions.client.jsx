@@ -1,5 +1,5 @@
 import {useCallback} from 'react';
-import {Image} from '@shopify/hydrogen';
+import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import BagCustomization from '../BagCustomization';
 
@@ -12,6 +12,7 @@ import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
 
 function TravesseiroSpecialOptions({className, ...rest}) {
   const {washable, customBag, setCustomBag, setWashable} = useZissouProduct();
+  const {options, setSelectedOption} = useProduct();
 
   const {isMobile} = useMobile();
 
@@ -28,9 +29,16 @@ function TravesseiroSpecialOptions({className, ...rest}) {
     (e) => {
       e.preventDefault();
 
-      setCustomBag(!customBag);
+      const currentCustomBag = !customBag;
+
+      setSelectedOption(
+        options[0].name,
+        options[0].values[currentCustomBag ? 1 : 0],
+      );
+
+      setCustomBag(currentCustomBag);
     },
-    [customBag, setCustomBag],
+    [customBag, setCustomBag, setSelectedOption, options],
   );
 
   return (
