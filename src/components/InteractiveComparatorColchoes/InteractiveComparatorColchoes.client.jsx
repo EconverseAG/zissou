@@ -16,7 +16,7 @@ export default function InteractiveComparatorColchoes() {
     (e) => {
       if (!isHolding) return;
 
-      const xPos = e.client || e.touches[0].clientX;
+      const xPos = e.clientX || e.touches[0].clientX;
 
       const percent = (xPos / window.innerWidth) * 100;
 
