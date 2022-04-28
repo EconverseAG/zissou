@@ -38,7 +38,7 @@ function TravesseiroSpecialOptions({className, ...rest}) {
 
   useEffect(() => {
     setSelectedOption(options[0].name, options[0].values[customBag ? 1 : 0]);
-  }, [washable, customBag, setSelectedOption]);
+  }, [washable, customBag, setSelectedOption, options]);
 
   return (
     <div
