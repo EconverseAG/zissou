@@ -1,0 +1,109 @@
+.ShelfContainer {
+  width: 339px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .ShelfTop {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    .ShelfImage {
+      position: relative;
+  
+      .ShelfSoldOut {
+        background: rgba(246, 246, 246, .4);
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+  
+        &Message {
+          position: absolute;
+          top: 25px;
+          left: -55px;
+          background: var(--coral-color-500);
+          transform: rotate(315deg);
+          height: 54px;
+          width: 212px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          > span {
+            font-family: 'ZonaProBlack';
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--white-color);
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    
+    .ShelfInfo {
+      display: flex;
+      width: 100%;
+      background: var(--gray-color-100);
+      height: 76px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  
+      .ShelfTitle {
+        font-family: 'ZonaProBold';
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--gray-color-600);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+  
+      .ShelfOption {
+        font-family: 'ZonaProBold';
+        font-size: 15px;
+        line-height: 24px;
+        color: var(--gray-color-600);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .ShelfBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 27px;
+
+    .ShelfPrice {
+      font-family: 'ZonaProBold';
+      font-size: 22px;
+      line-height: 30px;
+      color: var(--gray-color-600);
+      text-transform: uppercase;
+    }
+
+    .ShelfBuyButton {
+      height: 43px;
+      width: 256px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--purple-color-300);
+      border-radius: 33px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      font-family: 'ZonaProBlack';
+      font-size: 13px;
+      line-height: 22px;
+      color: var(--white-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 20px;
+
+      &:hover {
+        background: var(--purple-color-500);
+      }
+    }
+  }
+}

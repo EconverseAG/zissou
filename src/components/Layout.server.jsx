@@ -34,7 +34,7 @@ export default function Layout({children, hero}) {
           <Header collections={collections} storeName={storeName} />
           <Cart />
         </Suspense>
-        <main role="main" id="mainContent">
+        <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
           {hero}
           <div>
             <Suspense fallback={null}>{children}</Suspense>
