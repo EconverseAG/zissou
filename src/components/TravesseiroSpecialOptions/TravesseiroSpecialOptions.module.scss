@@ -18,9 +18,9 @@
   
   .selection {
     width: 100%;
-    color: #D4A8BF;
+    color: #f08590;
     background: #FFFFFF;
-    border: 2px solid #D4A8BF;
+    border: 2px solid #f08590;
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 17px;
@@ -30,7 +30,7 @@
       flex-direction: column;
       
       & + .selectionOption {
-        border-top: 1px solid #D4A8BF;
+        border-top: 1px solid #f08590;
       }
       
       &Control {
@@ -52,13 +52,13 @@
           aspect-ratio: 1/1;
           width: 18px;
           height: 18px;
-          border: 2px solid #D4A8BF;
+          border: 2px solid #f08590;
           border-radius: 3px;
 
         }
 
         input:checked + .selectionOptionControlCheckbox {
-          background: #D4A8BF;
+          background: #f08590;
 
           &::before {
             content: '';
