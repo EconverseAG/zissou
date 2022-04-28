@@ -5,12 +5,14 @@ import ProductDetails from '../../components/ProductDetails.client';
 import NotFound from '../../components/NotFound.server';
 import Layout from '../../components/Layout.server';
 
+const idDuvetFilling = `gid://shopify/Product/4522066083913`;
+const idTravesseiroWashable = `gid://shopify/Product/4512182992969`;
+const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`;
+
 export default function Product({country = {isoCode: 'US'}}) {
   const {handle} = useRouteParams();
 
-  const {
-    data: {product},
-  } = useShopQuery({
+  const baseProduct = useShopQuery({
     query: QUERY,
     variables: {
       country: country.isoCode,
@@ -19,17 +21,222 @@ export default function Product({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
-  if (!product) {
+  const travesseiroWashable = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idTravesseiroWashable,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
+  const travesseiroWashableCustom = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idTravesseiroWashableCustom,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
+  const duvetFilling = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idDuvetFilling,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
+  if (!baseProduct) {
     return <NotFound />;
   }
 
   return (
     <Layout>
-      <Seo type="product" data={product} />
-      <ProductDetails product={product} />
+      <Seo type="product" data={baseProduct.data.product} />
+      <ProductDetails
+        travesseiroWashable={travesseiroWashable.data.product}
+        travesseiroWashableCustom={travesseiroWashableCustom.data.product}
+        duvetFilling={duvetFilling.data.product}
+        product={baseProduct.data.product}
+      />
     </Layout>
   );
 }
+
+const QUERY_PRODUCT_BY_ID = gql`
+  query getProductById($country: CountryCode, $id: ID!)
+  @inContext(country: $country) {
+    product: product(id: $id) {
+      compareAtPriceRange {
+        maxVariantPrice {
+          currencyCode
+          amount
+        }
+        minVariantPrice {
+          currencyCode
+          amount
+        }
+      }
+      description
+      descriptionHtml
+      handle
+      id
+      media(first: 6) {
+        edges {
+          node {
+            ... on MediaImage {
+              mediaContentType
+              image {
+                id
+                url
+                altText
+                width
+                height
+              }
+            }
+            ... on Video {
+              mediaContentType
+              id
+              previewImage {
+                url
+              }
+              sources {
+                mimeType
+                url
+              }
+            }
+            ... on Model3d {
+              mediaContentType
+              id
+              alt
+              mediaContentType
+              previewImage {
+                url
+              }
+              sources {
+                url
+              }
+            }
+          }
+        }
+      }
+      metafields(first: 20) {
+        edges {
+          node {
+            id
+            type
+            namespace
+            key
+            value
+            createdAt
+            updatedAt
+            description
+            reference {
+              __typename
+              ... on MediaImage {
+                id
+                mediaContentType
+                image {
+                  id
+                  url
+                  altText
+                  width
+                  height
+                }
+              }
+            }
+          }
+        }
+      }
+      priceRange {
+        maxVariantPrice {
+          currencyCode
+          amount
+        }
+        minVariantPrice {
+          currencyCode
+          amount
+        }
+      }
+      seo {
+        description
+        title
+      }
+      title
+      variants(first: 250) {
+        edges {
+          node {
+            availableForSale
+            compareAtPriceV2 {
+              amount
+              currencyCode
+            }
+            id
+            image {
+              id
+              url
+              altText
+              width
+              height
+            }
+            metafields(first: 10) {
+              edges {
+                node {
+                  id
+                  type
+                  namespace
+                  key
+                  value
+                  createdAt
+                  updatedAt
+                  description
+                  reference {
+                    __typename
+                    ... on MediaImage {
+                      id
+                      mediaContentType
+                      image {
+                        id
+                        url
+                        altText
+                        width
+                        height
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            priceV2 {
+              amount
+              currencyCode
+            }
+            selectedOptions {
+              name
+              value
+            }
+            sku
+            title
+            unitPrice {
+              amount
+              currencyCode
+            }
+            unitPriceMeasurement {
+              measuredType
+              quantityUnit
+              quantityValue
+              referenceUnit
+              referenceValue
+            }
+          }
+        }
+      }
+      vendor
+    }
+  }
+`;
 
 const QUERY = gql`
   query product($country: CountryCode, $handle: String!)

@@ -1,13 +1,12 @@
-import {ProductPrice, useMoney} from '@shopify/hydrogen/client';
+import {ProductPrice, useMoney, useProduct} from '@shopify/hydrogen/client';
 import {useMemo} from 'react';
 
 import useMobile from '../../hooks/useMobile';
-import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductPrice.module.scss';
 
 function ZissouProductPrice({...rest}) {
-  const {selectedVariant} = useZissouProduct();
+  const {selectedVariant} = useProduct();
   const {isMobile} = useMobile();
 
   const rawInstallmentPrice = useMemo(() => {

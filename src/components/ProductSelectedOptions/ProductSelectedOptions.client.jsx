@@ -1,7 +1,7 @@
-import useZissouProduct from '../../hooks/useZissouProduct';
+import {useProduct} from '@shopify/hydrogen/client';
 
 function ProductSelectedOptions({className, ...rest}) {
-  const {selectedVariant} = useZissouProduct();
+  const {selectedVariant} = useProduct();
 
   return (
     <div className={className} {...rest}>

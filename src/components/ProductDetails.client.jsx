@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 
-import {flattenConnection, ProductProvider} from '@shopify/hydrogen/client';
 import Colchao from './Product/Colchao.client';
 import Base from './Product/Base.client';
 import Travesseiro from './Product/Travesseiro.client';
@@ -8,8 +7,12 @@ import Lencol from './Product/Lencol.client';
 import Duvet from './Product/Duvet.client';
 import {ZissouProductProvider} from '../hooks/useZissouProduct';
 
-export default function ProductDetails({product}) {
-  const initialVariant = flattenConnection(product.variants)[0];
+export default function ProductDetails({
+  product,
+  travesseiroWashable,
+  travesseiroWashableCustom,
+  duvetFilling,
+}) {
   const {title} = product;
 
   const [isColchao, setIsColchao] = useState(false);
@@ -34,21 +37,29 @@ export default function ProductDetails({product}) {
 
   return (
     <>
-      <ProductProvider data={product} initialVariantId={initialVariant.id}>
-        <ZissouProductProvider>
-          {isColchao ? (
-            <Colchao title={title} product={product} />
-          ) : isBase ? (
-            <Base />
-          ) : isTravesseiro ? (
-            <Travesseiro />
-          ) : isLencol ? (
-            <Lencol />
-          ) : isDuvet ? (
-            <Duvet />
-          ) : null}
-        </ZissouProductProvider>
-      </ProductProvider>
+      <ZissouProductProvider
+        baseProduct={product}
+        travesseiroWashable={travesseiroWashable}
+        travesseiroWashableCustom={travesseiroWashableCustom}
+        duvetFilling={duvetFilling}
+        isColchao={isColchao}
+        isBase={isBase}
+        isDuvet={isDuvet}
+        isLencol={isLencol}
+        isTravesseiro={isTravesseiro}
+      >
+        {isColchao ? (
+          <Colchao title={title} product={product} />
+        ) : isBase ? (
+          <Base />
+        ) : isTravesseiro ? (
+          <Travesseiro />
+        ) : isLencol ? (
+          <Lencol />
+        ) : isDuvet ? (
+          <Duvet />
+        ) : null}
+      </ZissouProductProvider>
     </>
   );
 }

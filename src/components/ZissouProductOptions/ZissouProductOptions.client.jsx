@@ -1,5 +1,5 @@
-import {Image} from '@shopify/hydrogen/client';
 import {useCallback, useState} from 'react';
+import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
 
@@ -10,7 +10,6 @@ import KingIcon from '../../assets/king.png';
 import KingBrIcon from '../../assets/king-br.png';
 import QueenIcon from '../../assets/queen.png';
 
-import useZissouProduct from '../../hooks/useZissouProduct';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductOptions.module.scss';
@@ -27,7 +26,7 @@ function ZissouProductOptions({
 
   const {isMobile} = useMobile();
 
-  const {options, setSelectedOption, selectedOptions} = useZissouProduct();
+  const {options, setSelectedOption, selectedOptions} = useProduct();
 
   const handleSelection = useCallback(
     (name, value) => {
