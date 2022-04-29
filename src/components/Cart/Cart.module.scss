@@ -7,7 +7,7 @@
 }
 
 .cartContainer {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   top: 0;
@@ -214,6 +214,7 @@
   .cartItems {
     padding: 0 28px;
     flex-grow: 1;
+    overflow-y: auto;
 
     .cartItem {
       display: flex;

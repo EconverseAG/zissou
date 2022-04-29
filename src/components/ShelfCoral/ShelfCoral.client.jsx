@@ -1,29 +1,45 @@
+import useMobile from '../../hooks/useMobile';
 import {Image, ProductProvider} from '@shopify/hydrogen';
 
 import * as styles from './ShelfCoral.module.scss';
 
 import SeloCoral from '../../assets/selo_coral.png';
+import SeloCoralMobile from '../../assets/selo_coral_mobile.png';
 import Geracao2021 from '../../assets/geracao_2021.png';
+import Geracao2021Mobile from '../../assets/geracao_2021_mobile.png';
 import ColchaoCoral from '../../assets/foto_coral.png';
 import ColchaoTour from '../../assets/tour_coral_pdp.png';
 
 import Shelf from '../Shelf/Shelf.client';
 
 export default function ShelfCoral({content}) {
+  const {isMobile} = useMobile();
   let variants = content.variants.edges;
 
   return (
     <div className={styles.ShelfCoralContainer}>
       <div className={styles.ShelfCoralTop}>
         <div className={styles.flexItem}>
-          <Image src={SeloCoral} width={284} height={74} />
+          <Image
+            src={isMobile ? SeloCoralMobile : SeloCoral}
+            width={isMobile ? 103 : 284}
+            height={isMobile ? 27 : 74}
+          />
           <strong>Híbrido</strong>
         </div>
         <div className={styles.flexItem}>
-          <Image src={Geracao2021} width={187} height={187} />
+          <Image
+            src={isMobile ? Geracao2021Mobile : Geracao2021}
+            width={isMobile ? 85 : 187}
+            height={isMobile ? 85 : 187}
+          />
         </div>
         <div className={styles.flexItem}>
-          <Image src={ColchaoCoral} width={847} height={303} />
+          <Image
+            src={ColchaoCoral}
+            width={isMobile ? 271 : 847}
+            height={isMobile ? 97 : 303}
+          />
         </div>
       </div>
       <div className={styles.ShelfCoralMiddle}>
@@ -34,7 +50,7 @@ export default function ShelfCoral({content}) {
               data={content}
               initialVariantId={variant.node.id}
             >
-              <Shelf product={content} variant={variant} />
+              <Shelf product={content} variant={variant} color={'#F48580'} />
             </ProductProvider>
           );
         })}

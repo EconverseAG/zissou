@@ -1,16 +1,16 @@
-.ShelfCoralContainer {
+.ShelfBlueContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 100px 0;
-  background: linear-gradient(89.23deg, #F48580 0.74%, #FAC8C6 19.84%, #FFFFFF 44.55%);
+  background: linear-gradient(89.23deg, #415264 0.74%, #F8F8F9 28.78%, #FFFFFF 44.55%);
 
   @media only screen and (max-width: 1023px) {
     padding: 50px 0;
   }
 
-  .ShelfCoralTop {
+  .ShelfBlueTop {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@
     }
   }
 
-  .ShelfCoralMiddle {
+  .ShelfBlueMiddle {
     margin-top: 64px;
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +79,7 @@
     }
   }
 
-  .ShelfCoralBottom {
+  .ShelfBlueBottom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@
     }
   }
 
-  .ShelfCoralRight {
+  .ShelfBlueRight {
     margin-left: 35px;
     display: flex;
     flex-direction: column;

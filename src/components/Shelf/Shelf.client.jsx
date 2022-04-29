@@ -2,7 +2,7 @@ import {AddToCartButton, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './Shelf.module.scss';
 
-export default function Shelf({variant}) {
+export default function Shelf({variant, color}) {
   const {title, availableForSale, image, priceV2} = variant.node;
 
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
@@ -16,7 +16,10 @@ export default function Shelf({variant}) {
         <div className={styles.ShelfImage}>
           {!availableForSale && (
             <div className={styles.ShelfSoldOut}>
-              <div className={styles.ShelfSoldOutMessage}>
+              <div
+                className={styles.ShelfSoldOutMessage}
+                style={{background: color}}
+              >
                 <span>Esgotado</span>
               </div>
             </div>
@@ -36,6 +39,7 @@ export default function Shelf({variant}) {
           className={styles.ShelfBuyButton}
           variantId={variant.node.id}
           quantity={1}
+          disabled={!availableForSale}
         >
           {availableForSale ? 'Adicionar ao carrinho' : 'Indisponível'}
         </AddToCartButton>

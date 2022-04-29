@@ -7,9 +7,10 @@ import CombosBanner from '../../components/CombosBanner/CombosBanner.client';
 import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
 import DoubtsProductPage from '../../components/ProductPage/DoubtsProductPage/DoubtsProductPage.client';
 import ShelfCoral from '../../components/ShelfCoral/ShelfCoral.client';
+import ShelfBlue from '../../components/ShelfBlue/ShelfBlue.client';
 
 const idCoral = `gid://shopify/Product/6581615460546`;
-// const idBlue = `gid://shopify/Product/6581615362242`;
+const idBlue = `gid://shopify/Product/6581615362242`;
 
 export default function PhaseOut({country = {isoCode: 'US'}}) {
   const coral = useShopQuery({
@@ -21,19 +22,20 @@ export default function PhaseOut({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
-  // const blue = useShopQuery({
-  //   query: QUERY_PRODUCT_BY_ID,
-  //   variables: {
-  //     id: idBlue,
-  //     country: country.isoCode,
-  //   },
-  //   preload: true,
-  // });
+  const blue = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idBlue,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
 
   return (
     <Layout>
       <CombosBanner />
       <ShelfCoral content={coral.data.product} />
+      <ShelfBlue content={blue.data.product} />
       <DoubtsProductPage />
       <CoralOrBlue />
     </Layout>
