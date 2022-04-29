@@ -53,7 +53,11 @@ export default function ProductDetails({
         isTravesseiro={isTravesseiro}
       >
         {isColchao ? (
-          <Colchao title={title} product={product} />
+          <Colchao
+            title={title}
+            product={product}
+            travesseiroWashable={travesseiroWashable}
+          />
         ) : isBase ? (
           <Base />
         ) : isTravesseiro ? (

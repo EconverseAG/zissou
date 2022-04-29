@@ -13,10 +13,11 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import DoubtsProductPage from '../ProductPage/DoubtsProductPage/DoubtsProductPage.client';
 import InstagramZissou from '../../components/InstagramZissou/InstagramZissou.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
-import ProductSection from './ProductSection.client';
+// import ProductSection from './ProductSection.client';
 import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
+import CoralProduct from '../CoralProduct';
 
-export default function Colchao({title, product}) {
+export default function Colchao({title, product, travesseiroWashable}) {
   const [isCoral, setIsCoral] = useState(false);
 
   useEffect(() => {
@@ -34,7 +35,11 @@ export default function Colchao({title, product}) {
       )}
 
       {/* DIV DE CONVERSÃO QUE SERÁ ALTERADA DEPOIS */}
-      <ProductSection product={product} />
+      {/* <ProductSection product={product} /> */}
+      <CoralProduct
+        travesseiroWashable={travesseiroWashable}
+        product={product}
+      />
 
       <CinematographyBanner />
 

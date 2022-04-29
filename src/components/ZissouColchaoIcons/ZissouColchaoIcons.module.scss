@@ -1,0 +1,44 @@
+.Icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 46px;
+
+  .Icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 95px;
+
+    &Title {
+      display: block;
+      font-family: 'ZonaProBlack';
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 12.5px;
+      color: var(--blue-color-500);
+      letter-spacing: 2px;
+
+      &.CoralColor {
+        color: var(--coral-color-500);
+      }
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 7px;
+        line-height: 9px;
+        margin-top: 11px;
+      }
+    }
+
+    &+.Icon {
+      margin-left: 34px;
+
+      @media only screen and (max-width: 1023px) {
+        margin-left: 25px;
+      }
+    }
+  }
+}

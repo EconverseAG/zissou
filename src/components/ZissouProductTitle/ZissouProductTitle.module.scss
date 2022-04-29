@@ -1,0 +1,24 @@
+.ZissouProductTitleContainer {
+  margin-top: 41px;
+  margin-bottom: 19px;
+
+  .productTitle {
+    font-family: 'ZonaProBlack';
+    font-size: 21px;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gray-color-400);
+    margin-bottom: 23px;
+    letter-spacing: 2px;
+  }
+
+  .productOption {
+    font-family: 'ZonaProBlack';
+    font-size: 19px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.12em;
+  }
+}
