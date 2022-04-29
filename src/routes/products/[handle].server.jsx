@@ -8,6 +8,8 @@ import Layout from '../../components/Layout.server';
 const idDuvetFilling = `gid://shopify/Product/4522066083913`;
 const idTravesseiroWashable = `gid://shopify/Product/4512182992969`;
 const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`;
+const idGrayDuvetCover = `gid://shopify/Product/7195872362690`;
+const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`;
 
 export default function Product({country = {isoCode: 'US'}}) {
   const {handle} = useRouteParams();
@@ -48,6 +50,24 @@ export default function Product({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
+  const grayDuvetCover = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idGrayDuvetCover,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
+  const whiteDuvetCover = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idWhiteDuvetCover,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
   if (!baseProduct) {
     return <NotFound />;
   }
@@ -59,6 +79,8 @@ export default function Product({country = {isoCode: 'US'}}) {
         travesseiroWashable={travesseiroWashable.data.product}
         travesseiroWashableCustom={travesseiroWashableCustom.data.product}
         duvetFilling={duvetFilling.data.product}
+        grayDuvetCover={grayDuvetCover.data.product}
+        whiteDuvetCover={whiteDuvetCover.data.product}
         product={baseProduct.data.product}
       />
     </Layout>
