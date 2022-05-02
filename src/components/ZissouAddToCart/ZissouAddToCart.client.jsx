@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import {useCallback, useEffect, useMemo} from 'react';
-import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
-=======
 import {useCallback, useMemo} from 'react';
-import {useProduct, useCart} from '@shopify/hydrogen/client';
+import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
 
->>>>>>> b35f71fc28c8840b1afbaec0d4be492dbf3e0ca0
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouAddToCart.module.scss';
@@ -47,7 +42,7 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
         className || ''
       }`}
       disabled={isOutOfStock}
-      onClick={addToCart}
+      onClickCapture={addToCart}
       {...rest}
     >
       {isOutOfStock ? 'Indisponível' : text}
