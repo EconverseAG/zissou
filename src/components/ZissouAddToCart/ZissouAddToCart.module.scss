@@ -13,6 +13,11 @@
   font-weight: 700;
   font-family: ZonaProBold;
   border-radius: 77px;
+  transition: 0.25s;
+
+  &:disabled {
+    opacity: 0.75;
+  }
 
   &.mobile {
     height: 43px;
