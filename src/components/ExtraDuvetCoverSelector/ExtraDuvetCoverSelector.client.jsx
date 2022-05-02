@@ -2,7 +2,8 @@ import {Image} from '@shopify/hydrogen';
 
 import ProductSelectedOptions from '../ProductSelectedOptions';
 
-import useZissouProduct from '../../hooks/useZissouProduct';
+import useBuyTogether from '../../hooks/useBuyTogether';
+
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ExtraDuvetCoverSelector.module.scss';
@@ -16,7 +17,7 @@ function ExtraDuvetCoverSelector({className, ...rest}) {
     includeWhiteDuvetCover,
     setIncludeGrayDuvetCover,
     setIncludeWhiteDuvetCover,
-  } = useZissouProduct();
+  } = useBuyTogether();
 
   const {isMobile} = useMobile();
 

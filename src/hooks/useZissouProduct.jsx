@@ -2,6 +2,8 @@ import {createContext, useContext, useEffect, useState, useMemo} from 'react';
 
 import {flattenConnection, ProductProvider} from '@shopify/hydrogen/client';
 
+import {BuyTogetherProvider} from './useBuyTogether';
+
 const ZissouProductContext = createContext();
 const useZissouProduct = () => useContext(ZissouProductContext);
 
@@ -11,8 +13,8 @@ function ZissouProductProvider({
   travesseiroWashable,
   travesseiroWashableCustom,
   duvetFilling,
-  grayDuvetCover,
   grayLencol,
+  grayDuvetCover,
   whiteDuvetCover,
   isDuvet,
   isLencol,
@@ -22,13 +24,11 @@ function ZissouProductProvider({
   const [customBag, setCustomBag] = useState(false);
   const [customBagText, setCustomBagText] = useState('');
   const [includeDuvetFilling, setIncludeDuvetFilling] = useState(false);
-  const [includeGrayDuvetCover, setIncludeGrayDuvetCover] = useState(false);
-  const [includeWhiteDuvetCover, setIncludeWhiteDuvetCover] = useState(false);
   const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
 
   const initialVariant = useMemo(
-    () => flattenConnection(product.variants)[0],
+    () => product.selectedVariant || flattenConnection(product.variants)[0],
     [product],
   );
 
@@ -43,15 +43,17 @@ function ZissouProductProvider({
           currentProduct = travesseiroWashableCustom;
         }
       }
-    } else if (isDuvet) {
-      if (includeDuvetFilling) {
-        currentProduct = duvetFilling;
-      } else if (selectedColor === 'gray') {
-        currentProduct = grayDuvetCover;
-      }
-    } else if (isLencol) {
-      if (selectedColor === 'gray') {
-        currentProduct = grayLencol;
+    } else if (isDuvet || isLencol) {
+      if (isDuvet) {
+        if (includeDuvetFilling) {
+          currentProduct = duvetFilling;
+        } else if (selectedColor === 'gray') {
+          currentProduct = grayDuvetCover;
+        }
+      } else if (isLencol) {
+        if (selectedColor === 'gray') {
+          currentProduct = grayLencol;
+        }
       }
     }
 
@@ -75,6 +77,8 @@ function ZissouProductProvider({
   return (
     <ZissouProductContext.Provider
       value={{
+        isDuvet,
+        isLencol,
         washable,
         customBag,
         setWashable,
@@ -83,16 +87,17 @@ function ZissouProductProvider({
         setCustomBagText,
         includeDuvetFilling,
         setIncludeDuvetFilling,
-        includeGrayDuvetCover,
-        setIncludeGrayDuvetCover,
-        includeWhiteDuvetCover,
-        setIncludeWhiteDuvetCover,
         selectedColor,
         setSelectedColor,
       }}
     >
       <ProductProvider data={product} initialVariantId={initialVariant.id}>
-        {children}
+        <BuyTogetherProvider
+          grayDuvetCover={grayDuvetCover}
+          whiteDuvetCover={whiteDuvetCover}
+        >
+          {children}
+        </BuyTogetherProvider>
       </ProductProvider>
     </ZissouProductContext.Provider>
   );
