@@ -33,7 +33,7 @@ function ExtraDuvetCoverSelector({className, ...rest}) {
           type="checkbox"
           id="gray-duvet-cover"
           checked={includeGrayDuvetCover}
-          onChange={() => setIncludeGrayDuvetCover(!includeGrayDuvetCover)}
+          onChange={() => setIncludeGrayDuvetCover((state) => !state)}
         />
         <span className={styles.extraCoverItemCheckbox} />
         <Image src={GrayDuvet} width={177} height={74} />
@@ -50,7 +50,7 @@ function ExtraDuvetCoverSelector({className, ...rest}) {
           type="checkbox"
           id="white-duvet-cover"
           checked={includeWhiteDuvetCover}
-          onChange={() => setIncludeWhiteDuvetCover(!includeWhiteDuvetCover)}
+          onChange={() => setIncludeWhiteDuvetCover((state) => !state)}
         />
         <span className={styles.extraCoverItemCheckbox} />
         <Image src={WhiteDuvet} width={177} height={74} />
