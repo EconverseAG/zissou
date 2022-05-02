@@ -6,24 +6,24 @@ import useMobile from '../../hooks/useMobile';
 import * as styles from './ZissouAddToCart.module.scss';
 
 function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
-  const product = useProduct();
+  const {selectedVariant} = useProduct();
   const {linesAdd} = useCart();
   const {isMobile} = useMobile();
 
   const isOutOfStock = useMemo(
-    () => !product.selectedVariant.availableForSale,
-    [product.selectedVariant],
+    () => !selectedVariant.availableForSale,
+    [selectedVariant],
   );
 
   const addToCart = useCallback(() => {
     const lines = [
       {
-        merchandiseId: product?.selectedVariant?.id,
+        merchandiseId: selectedVariant?.id,
       },
     ];
 
     linesAdd(lines);
-  }, [product, linesAdd]);
+  }, [selectedVariant, linesAdd]);
 
   return (
     <button
