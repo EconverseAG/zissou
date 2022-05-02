@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useMemo} from 'react';
-import {useProduct, useCart} from '@shopify/hydrogen/client';
+import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouAddToCart.module.scss';
@@ -30,7 +30,7 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
   }, [status, id]);
 
   return (
-    <button
+    <AddToCartButton
       className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
         rest.className || ''
       }`}
@@ -38,7 +38,7 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
       onClick={addToCart}
     >
       {isOutOfStock ? 'Indisponível' : text}
-    </button>
+    </AddToCartButton>
   );
 }
 
