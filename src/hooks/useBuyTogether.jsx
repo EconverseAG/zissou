@@ -41,8 +41,9 @@ function BuyTogetherProvider({grayDuvetCover, whiteDuvetCover, children}) {
 
       const searchTerm = determineSearchTerm();
 
-      return variants?.find(({title}) =>
-        title.toLowerCase().includes(searchTerm),
+      return (
+        variants?.find(({title}) => title.toLowerCase().includes(searchTerm)) ||
+        variants[0]
       );
     },
     [product],
