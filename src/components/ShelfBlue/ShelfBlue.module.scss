@@ -1,0 +1,138 @@
+.ShelfBlueContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 0;
+  background: linear-gradient(89.23deg, #415264 0.74%, #F8F8F9 28.78%, #FFFFFF 44.55%);
+
+  @media only screen and (max-width: 1023px) {
+    padding: 50px 0;
+  }
+
+  .ShelfBlueTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .flexItem {
+      &+.flexItem {
+        margin-left: 50px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-left: 20px;
+        }
+      }
+
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin-right: -10px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: -5px;
+        }
+      }
+
+      >strong {
+        font-family: 'ZonaProBold';
+        font-size: 38px;
+        line-height: 51px;
+        color: var(--gray-color-600);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: 1.7px;
+        }
+      }
+
+      &:last-child {
+        @media only screen and (max-width: 1440px) {
+          margin-right: -270px;
+        }
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: -150px;
+        }
+      }
+    }
+  }
+
+  .ShelfBlueMiddle {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 62px;
+    max-width: 1400px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-top: 40px;
+      max-width: 100%;
+      gap: 40px 30px;
+    }
+  }
+
+  .ShelfBlueBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 117px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-top: 44px;
+      flex-direction: column;
+      width: 60%;
+    }
+  }
+
+  .ShelfBlueRight {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 535px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-left: 0;
+      max-width: 100%;
+      margin-top: 31px;
+    }
+
+    &Title {
+      font-family: 'ZonaProBold';
+      font-size: 21px;
+      line-height: 28px;
+      color: var(--gray-color-600);
+      margin-bottom: 16px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 10px;
+        line-height: 19px;
+      }
+    }
+
+    &List {
+      font-family: "ZonaPro";
+      font-size: 21px;
+      line-height: 28px;
+      color: var(--gray-color-600);
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 10px;
+        line-height: 19px;
+      }
+
+      li {
+        text-align: center;
+      }
+    }
+  }
+}

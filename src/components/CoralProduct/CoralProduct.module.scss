@@ -1,0 +1,96 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 16px;
+  padding-block: 103px 78px;
+
+  .productShipping {
+    margin-top: 126px;
+  }
+
+  .productLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .productInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &ColorSelector {
+      margin-top: 30px;
+    }
+
+    &Options {
+      max-width: 613px;
+    }
+
+    &SelectedOptions {
+      margin-top: 47px;
+      font-size: 16px;
+      font-family: ZonaProBold;
+      line-height: 22px;
+      color: #f08590;
+      text-transform: uppercase;
+    }
+
+    &Price {
+      margin-top: 14px;
+    }
+
+    &AddToCart {
+      margin-top: 40px;
+    }
+
+    &ExtraCover {
+      margin-top: 40px;
+    }
+
+    &SpecialOptions {
+      margin-top: 31px;
+    }
+
+    &WhatsApp {
+      margin-top: 60px;
+    }
+  }
+
+  &.mobile {
+    display: block;
+    padding-block: 13px 37px;
+
+    .productInfo {
+      padding-inline: 16px;
+      margin-top: 20px;
+
+      &Price {
+        margin-top: 11px;
+      }
+
+      &SelectedOptions {
+        margin-top: 41px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      &AddToCart {
+        margin-top: 21px;
+      }
+
+      &WhatsApp {
+        margin-top: 22px;
+      }
+
+      &SpecialOptions {
+        margin-top: 41px;
+      }
+
+      .productShipping {
+        margin-top: 40px;
+      }
+    }
+  }
+}
