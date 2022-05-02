@@ -14,11 +14,12 @@ import Reviews from '../components/Reviews/Reviews.client';
 import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
 import Klabin from '../components/Klabin/Klabin.client';
 import FamiliaZissou from '../components/FamiliaZissou/FamiliaZissou.client';
+import ZissouLoading from '../components/ZissouLoading';
 
 export default function Index() {
   return (
-    <Layout>
-      <Suspense fallback={<BoxFallback />}>
+    <Suspense fallback={<ZissouLoading />}>
+      <Layout>
         <CinematographyBanner />
         <SleepAndLive />
         <ChooseYourDestiny />
@@ -32,11 +33,7 @@ export default function Index() {
         <CoralOrBlue />
         <Klabin />
         <FamiliaZissou />
-      </Suspense>
-    </Layout>
+      </Layout>
+    </Suspense>
   );
-}
-
-function BoxFallback() {
-  return <div className="bg-white p-12 shadow-xl rounded-xl mb-10 h-40"></div>;
 }
