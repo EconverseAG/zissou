@@ -1,3 +1,4 @@
+import useMobile from '../../hooks/useMobile';
 import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import BaseCompreJunto from '../../assets/base_compre_junto.png';
@@ -14,6 +15,7 @@ export default function ZissouCompreJunto({
   selectedTravesseiro,
   setSelectedTravesseiro,
 }) {
+  const {isMobile} = useMobile();
   const {selectedVariant, title} = useProduct();
 
   const nameSelected = selectedVariant.title.split(' (')[0];
@@ -37,6 +39,7 @@ export default function ZissouCompreJunto({
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
+          checked={selectedBase}
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -44,7 +47,11 @@ export default function ZissouCompreJunto({
           }`}
         ></span>
         <div className={styles.OptionImage}>
-          <Image src={BaseCompreJunto} width={148} height={63} />
+          <Image
+            src={BaseCompreJunto}
+            width={isMobile ? 84 : 148}
+            height={isMobile ? 35 : 63}
+          />
           <span className={styles.SeeMore}>saiba mais</span>
         </div>
         <div className={styles.OptionInfo}>
@@ -67,6 +74,7 @@ export default function ZissouCompreJunto({
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
+          checked={selectedTravesseiro}
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -74,7 +82,11 @@ export default function ZissouCompreJunto({
           }`}
         ></span>
         <div className={styles.OptionImage}>
-          <Image src={TravesseiroCompreJunto} width={144} height={75} />
+          <Image
+            src={TravesseiroCompreJunto}
+            width={isMobile ? 90 : 144}
+            height={isMobile ? 47 : 75}
+          />
         </div>
         <div className={styles.OptionInfo}>
           <span className={styles.OptionInfoTitle}>
@@ -92,6 +104,7 @@ export default function ZissouCompreJunto({
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
+          checked={selectedLencol}
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -99,7 +112,11 @@ export default function ZissouCompreJunto({
           }`}
         ></span>
         <div className={styles.OptionImage}>
-          <Image src={LencolCompreJunto} width={142} height={65} />
+          <Image
+            src={LencolCompreJunto}
+            width={isMobile ? 80 : 142}
+            height={isMobile ? 37 : 65}
+          />
         </div>
         <div className={styles.OptionInfo}>
           <span className={styles.OptionInfoTitle}>

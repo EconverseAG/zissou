@@ -11,6 +11,35 @@
     color: var(--gray-color-400);
     margin-bottom: 23px;
     letter-spacing: 2px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 16px;
+      line-height: 14px;
+      margin-bottom: 15px;
+    }
+
+    >span {
+      height: 37px;
+      border-radius: 13px;
+      background: linear-gradient(#fcf1f0 0%, #f48580 0.12%, #fcf1f0 83.74%, #fcf1f0 100%);
+      font-family: 'ZonaProBlack';
+      font-size: 21px;
+      letter-spacing: 0.12em;
+      line-height: 36px;
+      text-align: center;
+      color: var(--white-color);
+      padding: 5px;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 15.5px;
+
+      @media only screen and (max-width: 1023px) {
+        height: 20px;
+        font-size: 10px;
+        line-height: 18px;
+        margin-left: 6px;
+      }
+    }
   }
 
   .productOption {
@@ -20,5 +49,11 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.12em;
+    display: block;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 12px;
+      line-height: 21px;
+    }
   }
 }

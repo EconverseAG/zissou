@@ -1,3 +1,4 @@
+import useMobile from '../../hooks/useMobile';
 import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import IconeGarantiaCoral from '../../assets/icone_garantia.png';
@@ -12,6 +13,7 @@ import Icone100DiasBlue from '../../assets/icone_100_dias_blue.png';
 import * as styles from './ZissouColchaoIcons.module.scss';
 
 export default function ZissouColchaoIcons() {
+  const {isMobile} = useMobile();
   const {title} = useProduct();
 
   return (
@@ -19,8 +21,8 @@ export default function ZissouColchaoIcons() {
       <div className={styles.Icon}>
         <Image
           src={title.includes('Coral') ? IconeGarantiaCoral : IconeGarantiaBlue}
-          width={62}
-          height={43}
+          width={isMobile ? 40 : 62}
+          height={isMobile ? 28 : 43}
         />
         <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
           10 anos de <br /> garantia
@@ -29,8 +31,8 @@ export default function ZissouColchaoIcons() {
       <div className={styles.Icon}>
         <Image
           src={title.includes('Coral') ? IconeEntregaCoral : IconeEntregaBlue}
-          width={54}
-          height={59}
+          width={isMobile ? 30 : 54}
+          height={isMobile ? 33 : 59}
         />
         {title.includes('Coral') ? (
           <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
@@ -45,8 +47,8 @@ export default function ZissouColchaoIcons() {
       <div className={styles.Icon}>
         <Image
           src={title.includes('Coral') ? IconeFreteCoral : IconeFreteBlue}
-          width={58}
-          height={40}
+          width={isMobile ? 38 : 58}
+          height={isMobile ? 26 : 40}
         />
         <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
           frete <br /> grátis
@@ -55,8 +57,8 @@ export default function ZissouColchaoIcons() {
       <div className={styles.Icon}>
         <Image
           src={title.includes('Coral') ? Icone100DiasCoral : Icone100DiasBlue}
-          width={42}
-          height={37}
+          width={isMobile ? 27 : 42}
+          height={isMobile ? 24 : 37}
         />
         <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
           100 dias <br /> de teste
