@@ -1,0 +1,175 @@
+.ZissouProductIsHybridContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 42px;
+  max-width: 474px;
+  width: 100%;
+
+  @media only screen and (max-width: 1023px) {
+    max-width: unset;
+    margin-top: 26px;
+  }
+
+  .IsHybridTitle {
+    font-family: 'ZonaProBlack';
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    line-height: 21px;
+    text-align: center;
+    color: #717071;
+    margin-bottom: 19px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 12px;
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .toggleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 76px;
+    background: linear-gradient(90deg, rgba(244, 133, 128, 1) 0%, rgba(252, 241, 240, 1) 75%, rgba(252, 241, 240, 1) 100%);
+    border: 3px solid #f48580;
+    width: 100%;
+
+    @media only screen and (max-width: 1023px) {
+      height: 50px;
+      background: linear-gradient(90deg, #f48580 0%, #fcf1f0 68.88%, #fcf1f0 100%);
+      justify-content: flex-start;
+      padding: 15px;
+    }
+
+    input {
+      display: none;
+    }
+
+    .container {
+      height: 27px;
+      width: 80px;
+      position: relative;
+    }
+
+    .toggleWrapperTitle {
+      font-family: 'ZonaProBlack';
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      line-height: 22px;
+      color: #fff;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
+      margin-left: 26px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 10px;
+        line-height: 12px;
+        margin-left: 13.5px;
+      }
+
+      .Bigger {
+        font-size: 20px;
+        font-family: 'ZonaProBold';
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 13px;
+          margin-top: 4px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .selectedHybrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcf1f0;
+    border: 3px solid #f48580;
+    border-top: none;
+    width: 100%;
+    padding: 20px;
+
+    @media only screen and (max-width: 1023px) {
+      padding: 15px;
+    }
+
+    &Left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 312px;
+
+      @media only screen and (max-width: 1023px) {
+        max-width: 147px;
+      }
+
+      .LeftText {
+        font-family: 'ZonaProSemiBold';
+        font-size: 13px;
+        line-height: 18px;
+        color: var(--gray-color-600);
+        display: block;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 10px;
+          line-height: 14px;
+        }
+
+        .Bolder {
+          color: var(--coral-color-500);
+          font-family: 'ZonaProBold';
+        }
+      }
+    }
+  }
+}
+
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 13.52px;
+  background: #f0f0f0;
+  border: 2px solid #F48580;
+}
+
+.slider:before {
+  background-color: #F48580;
+  bottom: 3px;
+  content: "";
+  height: 18px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+}
+
+input:checked+.slider:before {
+  transform: translateX(50px);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

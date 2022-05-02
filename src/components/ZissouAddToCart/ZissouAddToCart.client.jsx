@@ -1,13 +1,12 @@
 import {useCallback, useEffect, useMemo} from 'react';
 import {useProduct, useCart} from '@shopify/hydrogen/client';
-
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouAddToCart.module.scss';
 
 function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
   const product = useProduct();
-  const {linesAdd, status} = useCart();
+  const {linesAdd, status, id} = useCart();
   const {isMobile} = useMobile();
 
   const isOutOfStock = useMemo(
@@ -22,12 +21,13 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
       },
     ];
 
-    linesAdd(lines);
+    linesAdd({lines});
   }, [product, linesAdd]);
 
   useEffect(() => {
     console.log('>>> status', status);
-  }, [status]);
+    console.log('>>> id', id);
+  }, [status, id]);
 
   return (
     <button

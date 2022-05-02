@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: 1023px) {
+    margin-top: 30px;
+    padding: 15px 0;
+    width: 90%;
+  }
+
   .CompreJuntoTitle {
     font-family: 'ZonaProBold';
     font-size: 16px;
@@ -17,6 +23,13 @@
     text-align: center;
     margin-bottom: 29px;
     letter-spacing: 0.12em;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 20px;
+      width: 60%;
+    }
 
     .Bolder {
       font-family: 'ZonaProBlack';
@@ -34,12 +47,21 @@
     border: 3px solid var(--blue-color-430);
     padding: 0 20px;
 
+    @media only screen and (max-width: 1023px) {
+      width: 270px;
+      height: 104px;
+    }
+
     &.OptionContainerSelected {
       border: 3px solid var(--blue-color-500);
     }
 
     &+.OptionContainer {
       margin-top: 29px;
+
+      @media only screen and (max-width: 1023px) {
+        margin-top: 20px;
+      }
     }
 
     input {
@@ -79,6 +101,11 @@
       justify-content: center;
       flex-direction: column;
 
+      @media only screen and (max-width: 1023px) {
+        margin-left: 5px;
+        margin-right: 9px;
+      }
+
       .SeeMore {
         font-family: 'ZonaProBlack';
         text-decoration: underline;
@@ -87,6 +114,11 @@
         line-height: 19px;
         text-align: left;
         color: var(--gray-color-600);
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 10px;
+          line-height: 9px;
+        }
       }
     }
 
@@ -97,6 +129,10 @@
       flex-direction: column;
       max-width: 245px;
 
+      @media only screen and (max-width: 1023px) {
+        max-width: 86px;
+      }
+
       .OptionInfoTitle {
         font-family: 'ZonaProSemiBold';
         font-size: 14px;
@@ -105,6 +141,11 @@
         color: var(--gray-color-600);
         letter-spacing: 0.1em;
         text-transform: uppercase;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 8px;
+          line-height: 12px;
+        }
 
         >strong {
           font-family: 'ZonaProBlack';
@@ -120,6 +161,12 @@
         text-transform: uppercase;
         letter-spacing: 0.1em;
         margin-top: 15px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 8px;
+          line-height: 12px;
+          margin-top: 8px;
+        }
       }
 
       .OptionInfoMeasures {
@@ -130,6 +177,11 @@
         color: var(--blue-color-500);
         text-transform: uppercase;
         letter-spacing: 0.1em;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 8px;
+          line-height: 12px;
+        }
       }
     }
 
