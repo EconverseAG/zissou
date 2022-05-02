@@ -79,6 +79,8 @@ function ZissouProductOptions({
   );
 
   const renderFormattedName = useCallback((name) => {
+    if (!name) return;
+
     const splittedName = name.split('(');
 
     if (splittedName.length <= 1 || !splittedName[0])
@@ -112,7 +114,7 @@ function ZissouProductOptions({
           {title}
         </h2>
       )}
-      {options.map(({name, values}) => (
+      {options?.map(({name, values}) => (
         <fieldset className={styles.select} key={name}>
           <button className={styles.selectOpen} onClick={() => setIsOpen(true)}>
             {renderIcon(selectedOptions[name])}
@@ -124,7 +126,7 @@ function ZissouProductOptions({
           {info && <span className={styles.info}>{info}</span>}
           {isOpen && (
             <div className={styles.selectDropdown}>
-              {values.map((value) => (
+              {values?.map((value) => (
                 <button
                   key={value}
                   onClick={() => handleSelection(name, value)}

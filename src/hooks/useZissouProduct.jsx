@@ -12,8 +12,10 @@ function ZissouProductProvider({
   travesseiroWashableCustom,
   duvetFilling,
   grayDuvetCover,
+  grayLencol,
   whiteDuvetCover,
   isDuvet,
+  isLencol,
   isTravesseiro,
 }) {
   const [washable, setWashable] = useState(false);
@@ -41,8 +43,16 @@ function ZissouProductProvider({
           currentProduct = travesseiroWashableCustom;
         }
       }
-    } else if (isDuvet && includeDuvetFilling) {
-      currentProduct = duvetFilling;
+    } else if (isDuvet) {
+      if (includeDuvetFilling) {
+        currentProduct = duvetFilling;
+      } else if (selectedColor === 'gray') {
+        currentProduct = grayDuvetCover;
+      }
+    } else if (isLencol) {
+      if (selectedColor === 'gray') {
+        currentProduct = grayLencol;
+      }
     }
 
     setProduct(currentProduct);
@@ -56,6 +66,10 @@ function ZissouProductProvider({
     baseProduct,
     isDuvet,
     isTravesseiro,
+    isLencol,
+    grayDuvetCover,
+    grayLencol,
+    selectedColor,
   ]);
 
   return (

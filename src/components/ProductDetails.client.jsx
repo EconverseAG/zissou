@@ -14,6 +14,7 @@ export default function ProductDetails({
   duvetFilling,
   grayDuvetCover,
   whiteDuvetCover,
+  grayLencol,
 }) {
   const {title} = product;
 
@@ -46,6 +47,7 @@ export default function ProductDetails({
         duvetFilling={duvetFilling}
         grayDuvetCover={grayDuvetCover}
         whiteDuvetCover={whiteDuvetCover}
+        grayLencol={grayLencol}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}
