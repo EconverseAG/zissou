@@ -23,9 +23,12 @@ function CoralProduct({travesseiroWashable, product}) {
       <div className={styles.productLeft}>
         <ZissouProductImages />
         <ZissouCompreJunto
-          base={(selectedBase, setSelectedBase)}
-          travesseiro={(selectedTravesseiro, setSelectedTravesseiro)}
-          lencol={(selectedLencol, setSelectedLencol)}
+          selectedBase={selectedBase}
+          setSelectedBase={setSelectedBase}
+          selectedLencol={selectedLencol}
+          setSelectedLencol={setSelectedLencol}
+          selectedTravesseiro={selectedTravesseiro}
+          setSelectedTravesseiro={setSelectedTravesseiro}
         />
       </div>
       <div className={styles.productInfo}>

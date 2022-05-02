@@ -6,7 +6,14 @@ import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
 
-export default function ZissouCompreJunto({base, travesseiro, lencol}) {
+export default function ZissouCompreJunto({
+  selectedBase,
+  setSelectedBase,
+  selectedLencol,
+  setSelectedLencol,
+  selectedTravesseiro,
+  setSelectedTravesseiro,
+}) {
   const {selectedVariant, title} = useProduct();
 
   const nameSelected = selectedVariant.title.split(' (')[0];
@@ -23,8 +30,8 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${base.selectedBase ? styles.OptionContainerSelected : null}`}
-        onClick={() => base.setSelectedBase((prev) => !prev)}
+        } ${selectedBase ? styles.OptionContainerSelected : null}`}
+        onClick={() => setSelectedBase((prev) => !prev)}
       >
         <input
           type="checkbox"
@@ -33,7 +40,7 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
         />
         <span
           className={`${styles.OptionSelect}  ${
-            base.selectedBase ? styles.active : null
+            selectedBase ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -53,12 +60,8 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${
-          travesseiro.selectedTravesseiro
-            ? styles.OptionContainerSelected
-            : null
-        }`}
-        onClick={() => travesseiro.setSelectedTravesseiro((prev) => !prev)}
+        } ${selectedTravesseiro ? styles.OptionContainerSelected : null}`}
+        onClick={() => setSelectedTravesseiro((prev) => !prev)}
       >
         <input
           type="checkbox"
@@ -67,7 +70,7 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
         />
         <span
           className={`${styles.OptionSelect}  ${
-            travesseiro.selectedTravesseiro ? styles.active : null
+            selectedTravesseiro ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -82,8 +85,8 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${lencol.selectedLencol ? styles.OptionContainerSelected : null}`}
-        onClick={() => lencol.setSelectedLencol((prev) => !prev)}
+        } ${selectedLencol ? styles.OptionContainerSelected : null}`}
+        onClick={() => setSelectedLencol((prev) => !prev)}
       >
         <input
           type="checkbox"
@@ -92,7 +95,7 @@ export default function ZissouCompreJunto({base, travesseiro, lencol}) {
         />
         <span
           className={`${styles.OptionSelect}  ${
-            lencol.selectedLencol ? styles.active : null
+            selectedLencol ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
