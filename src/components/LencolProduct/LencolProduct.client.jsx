@@ -20,6 +20,7 @@ function LencolProduct() {
           className={styles.productImages}
           title="Deite, role, estique, desenrole, abrace e se jogue para aproveitar ao máximo essa experiência :)"
         />
+        <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -35,7 +36,6 @@ function LencolProduct() {
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
-        <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>
     </div>
   );

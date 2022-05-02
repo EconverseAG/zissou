@@ -18,6 +18,7 @@ function DuvetProduct() {
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.productLeft}>
         <ZissouProductImages title="Embale no aconchego para um sono mais gostoso" />
+        <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -30,7 +31,6 @@ function DuvetProduct() {
         <ZissouProductPrice className={styles.productInfoPrice} />
         <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
         <ZissouAddToCart className={styles.productInfoAddToCart} />
-        <WhatsAppBanner className={styles.productInfoWhatsApp} />
       </div>
     </div>
   );
