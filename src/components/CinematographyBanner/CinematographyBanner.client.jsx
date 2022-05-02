@@ -1,4 +1,4 @@
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './cinematographyBanner.module.scss';
 
@@ -14,14 +14,14 @@ export default function CinematographyBanner() {
       banner: Video_1,
       horaInicio: 0,
       horaFim: 12,
-      link: 'https://www.zissou.com.br/pages/colchoes-zissou',
+      link: '/pages/colchoes-zissou',
       CTA: 'DESCUBRA OS COLCHÕES',
     },
     {
       banner: Video_2,
       horaInicio: 13,
       horaFim: 23,
-      link: 'https://www.zissou.com.br/pages/colchoes-zissou',
+      link: '/pages/colchoes-zissou',
       CTA: 'DESCUBRA OS COLCHÕES',
     },
   ];

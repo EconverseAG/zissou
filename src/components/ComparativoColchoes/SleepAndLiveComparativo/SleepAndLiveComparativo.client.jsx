@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLiveComparativo.module.scss';
 

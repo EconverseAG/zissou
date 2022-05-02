@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import Post1 from '../../assets/post-1.png';
 import Post2 from '../../assets/post-2.png';

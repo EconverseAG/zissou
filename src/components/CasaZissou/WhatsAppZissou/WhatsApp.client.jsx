@@ -1,7 +1,7 @@
 import * as styles from './WhatsApp.module.scss';
 
 import LogoWhatsApp from '../../../assets/icone-menu-whatsapp-white.png';
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import useMobile from '../../../hooks/useMobile';
 
 export default function WhatsApp() {

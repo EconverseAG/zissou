@@ -2,7 +2,7 @@ import {useCallback, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';

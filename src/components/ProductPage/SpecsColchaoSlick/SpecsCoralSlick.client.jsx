@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './SpecsColchaoSlick.module.scss';
 
 import Slider from 'react-slick';

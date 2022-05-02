@@ -1,4 +1,4 @@
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './footer.module.scss';
 
@@ -24,32 +24,28 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Produtos</strong>
             <ul>
               <li>
-                <Link to="https://www.zissou.com.br/pages/colchoes-zissou">
-                  Colchões
-                </Link>
+                <Link to="/pages/colchoes-zissou">Colchões</Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/products/travesseiro-zissou">
+                <Link to="/products/travesseiro-zissou">
                   Travesseiro Zissou
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/pages/lencol-e-duvet-zissou">
+                <Link to="/pages/lencol-e-duvet-zissou">
                   Lençol & Duvet Zissou
                 </Link>
               </li>
               {/* <li>
-                <Link to="https://www.zissou.com.br/products/toca-zissou">
+                <Link to="/products/toca-zissou">
                   Toca Zissou
                 </Link>
               </li> */}
               <li>
-                <Link to="https://www.zissou.com.br/products/base-zissou">
-                  Base Zissou
-                </Link>
+                <Link to="/products/base-zissou">Base Zissou</Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/pages/bundles">Combos</Link>
+                <Link to="/pages/bundles">Combos</Link>
               </li>
             </ul>
           </div>
@@ -74,19 +70,13 @@ export default function Footer(/*{collection, product}*/) {
                 <Link to="/pages/casa-zissou">Lojas</Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/blogs/midia">
-                  Zissou na mídia
-                </Link>
+                <Link to="/blogs/midia">Zissou na mídia</Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/blogs/redefinaseusono">
-                  Blog
-                </Link>
+                <Link to="/blogs/redefinaseusono">Blog</Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/policies/privacy-policy">
-                  Aviso de privacidade
-                </Link>
+                <Link to="/policies/privacy-policy">Aviso de privacidade</Link>
               </li>
             </ul>
           </div>

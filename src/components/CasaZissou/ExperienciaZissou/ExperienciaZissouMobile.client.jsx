@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import * as styles from './experienciaZissou.module.scss';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';

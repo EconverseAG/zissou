@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
 
 import Fasano from '../../assets/logo_Fasano.png';

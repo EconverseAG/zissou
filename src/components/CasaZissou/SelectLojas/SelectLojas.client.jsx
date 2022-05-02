@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import useMobile from '../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

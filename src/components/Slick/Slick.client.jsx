@@ -1,5 +1,5 @@
 import useMobile from '../../hooks/useMobile';
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import Slider from 'react-slick/lib/slider';
 
 import * as styles from './slick.module.scss';

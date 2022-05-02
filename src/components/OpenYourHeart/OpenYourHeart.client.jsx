@@ -1,4 +1,4 @@
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './OpenYourHeart.module.scss';
 
 import Gif from '../../assets/gif-abra-seu-coracao.gif';

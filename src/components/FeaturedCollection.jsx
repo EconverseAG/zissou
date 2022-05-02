@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 /**
  * A shared component that defines a single featured collection to display on a storefront
