@@ -13,14 +13,7 @@ import useZissouProduct from './useZissouProduct';
 const BuyTogetherContext = createContext({buyTogetherItems: []});
 const useBuyTogether = () => useContext(BuyTogetherContext);
 
-function BuyTogetherProvider({
-  grayDuvetCover,
-  whiteDuvetCover,
-  whiteLencol,
-  travesseiroWashable,
-  base,
-  children,
-}) {
+function BuyTogetherProvider({children}) {
   const [includeGrayDuvetCover, setIncludeGrayDuvetCover] = useState(false);
   const [includeWhiteDuvetCover, setIncludeWhiteDuvetCover] = useState(false);
   const [includeBase, setIncludeBase] = useState(false);
@@ -30,7 +23,17 @@ function BuyTogetherProvider({
   const [buyTogetherItems, setBuyTogetherItems] = useState([]);
 
   const product = useProduct();
-  const {isDuvet, isLencol, isColchao} = useZissouProduct();
+
+  const {
+    isDuvet,
+    isLencol,
+    isColchao,
+    grayDuvetCover,
+    whiteDuvetCover,
+    whiteLencol,
+    travesseiroWashable,
+    base,
+  } = useZissouProduct();
 
   const getProductEquivalentVariant = useCallback(
     ({variants}) => {

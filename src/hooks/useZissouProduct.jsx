@@ -93,18 +93,16 @@ function ZissouProductProvider({
         setIncludeDuvetFilling,
         selectedColor,
         setSelectedColor,
+        grayDuvetCover,
+        whiteDuvetCover,
+        grayLencol,
+        whiteLencol,
+        base,
+        travesseiroWashable,
       }}
     >
       <ProductProvider data={product} initialVariantId={initialVariant.id}>
-        <BuyTogetherProvider
-          grayDuvetCover={grayDuvetCover}
-          whiteDuvetCover={whiteDuvetCover}
-          travesseiroWashable={travesseiroWashable}
-          base={base}
-          whiteLencol={whiteLencol}
-        >
-          {children}
-        </BuyTogetherProvider>
+        <BuyTogetherProvider>{children}</BuyTogetherProvider>
       </ProductProvider>
     </ZissouProductContext.Provider>
   );
