@@ -5,7 +5,7 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouAddToCart.module.scss';
 
-function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
+function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
   const product = useProduct();
   const {linesAdd} = useCart();
   const {isMobile} = useMobile();
@@ -28,10 +28,11 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', ...rest}) {
   return (
     <button
       className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
-        rest.className || ''
+        className || ''
       }`}
       disabled={isOutOfStock}
       onClick={addToCart}
+      {...rest}
     >
       {isOutOfStock ? 'Indisponível' : text}
     </button>
