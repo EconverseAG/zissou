@@ -1,5 +1,7 @@
-import useMobile from '../../hooks/useMobile';
 import {Image, useProduct} from '@shopify/hydrogen/client';
+import useMobile from '../../hooks/useMobile';
+
+import useBuyTogether from '../../hooks/useBuyTogether';
 
 import BaseCompreJunto from '../../assets/base_compre_junto.png';
 import TravesseiroCompreJunto from '../../assets/travesseiro_compre_junto.png';
@@ -7,15 +9,18 @@ import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
 
-export default function ZissouCompreJunto({
-  selectedBase,
-  setSelectedBase,
-  selectedLencol,
-  setSelectedLencol,
-  selectedTravesseiro,
-  setSelectedTravesseiro,
-}) {
+export default function ZissouCompreJunto() {
   const {isMobile} = useMobile();
+
+  const {
+    includeBase,
+    includeLencol,
+    includeTwoWashableTravesseiros,
+    setIncludeBase,
+    setIncludeLencol,
+    setIncludeTwoWashableTravesseiros,
+  } = useBuyTogether();
+
   const {selectedVariant, title} = useProduct();
 
   const nameSelected = selectedVariant.title.split(' (')[0];
@@ -32,18 +37,18 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedBase ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedBase((prev) => !prev)}
+        } ${includeBase ? styles.OptionContainerSelected : null}`}
+        onClick={() => setIncludeBase((state) => !state)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedBase}
+          checked={includeBase}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedBase ? styles.active : null
+            includeBase ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -67,18 +72,20 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedTravesseiro ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedTravesseiro((prev) => !prev)}
+        } ${
+          includeTwoWashableTravesseiros ? styles.OptionContainerSelected : null
+        }`}
+        onClick={() => setIncludeTwoWashableTravesseiros((state) => !state)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedTravesseiro}
+          checked={includeTwoWashableTravesseiros}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedTravesseiro ? styles.active : null
+            includeTwoWashableTravesseiros ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -97,18 +104,18 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedLencol ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedLencol((prev) => !prev)}
+        } ${includeLencol ? styles.OptionContainerSelected : null}`}
+        onClick={() => setIncludeLencol((prev) => !prev)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedLencol}
+          checked={includeLencol}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedLencol ? styles.active : null
+            includeLencol ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
