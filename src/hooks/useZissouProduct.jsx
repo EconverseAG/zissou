@@ -28,7 +28,7 @@ function ZissouProductProvider({
   const [product, setProduct] = useState(baseProduct);
 
   const initialVariant = useMemo(
-    () => flattenConnection(product.variants)[0],
+    () => product.selectedVariant || flattenConnection(product.variants)[0],
     [product],
   );
 
