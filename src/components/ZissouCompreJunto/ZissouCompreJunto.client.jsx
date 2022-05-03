@@ -9,7 +9,7 @@ import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
 
-export default function ZissouCompreJunto() {
+export default function ZissouCompreJunto(props) {
   const {isMobile} = useMobile();
 
   const {

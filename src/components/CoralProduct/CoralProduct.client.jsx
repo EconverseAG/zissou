@@ -23,7 +23,12 @@ function CoralProduct() {
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.productLeft}>
         <ZissouProductImages />
-        {!isMobile && <ZissouCompreJunto />}
+        {!isMobile && (
+          <ZissouCompreJunto
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+          />
+        )}
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -40,7 +45,12 @@ function CoralProduct() {
           isHybrid={isHybrid}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
-        {isMobile && <ZissouCompreJunto />}
+        {isMobile && (
+          <ZissouCompreJunto
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+          />
+        )}
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <ZissouColchaoIcons />
         {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}
