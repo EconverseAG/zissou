@@ -5,6 +5,9 @@ import ZissouAddToCart from '../ZissouAddToCart';
 import WhatsAppBanner from '../WhatsAppBanner';
 import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 import ColorSelector from '../ColorSelector';
+import ProductSection from '../ProductSection';
+import ProductSectionLeft from '../ProductSection/ProductSectionLeft';
+import ProductSectionRight from '../ProductSection/ProductSectionRight';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -14,15 +17,17 @@ function LencolProduct() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      <div className={styles.productLeft}>
+    <ProductSection
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+    >
+      <ProductSectionLeft>
         <ZissouProductImages
-          className={styles.productImages}
+          className={styles.Images}
           title="Deite, role, estique, desenrole, abrace e se jogue para aproveitar ao máximo essa experiência :)"
         />
-        <WhatsAppBanner className={styles.productInfoWhatsApp} />
-      </div>
-      <div className={styles.productInfo}>
+        <WhatsAppBanner className={styles.WhatsApp} />
+      </ProductSectionLeft>
+      <ProductSectionRight>
         <ZissouProductOptions
           title={
             isMobile
@@ -32,12 +37,12 @@ function LencolProduct() {
           info="Contém: 2 fronhas, lençol de cima e lençol de baixo"
           uppercaseTitle={isMobile}
         />
-        <ColorSelector className={styles.productInfoColorSelector} />
-        <ZissouProductPrice className={styles.productInfoPrice} />
-        <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
-        <ZissouAddToCart className={styles.productInfoAddToCart} />
-      </div>
-    </div>
+        <ColorSelector className={styles.ColorSelector} />
+        <ZissouProductPrice className={styles.Price} />
+        <ExtraDuvetCoverSelector className={styles.ExtraCover} />
+        <ZissouAddToCart className={styles.AddToCart} />
+      </ProductSectionRight>
+    </ProductSection>
   );
 }
 

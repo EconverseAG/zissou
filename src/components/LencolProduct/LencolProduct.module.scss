@@ -1,15 +1,5 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  gap: 16px;
-  padding-block: 91px 150px;
-  font-family: ZonaPro;
-
-  .productShipping {
-    margin-top: 126px;
-  }
-
-  .productImages {
+  .Images {
     h2 {
       max-width: 315px;
       font-weight: 400;
@@ -17,62 +7,44 @@
     }
   }
 
-  .productInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .ColorSelector {
+    margin-top: 30px;
+  }
 
-    &ColorSelector {
-      margin-top: 30px;
-    }
+  .Price {
+    margin-top: 28px;
+  }
 
-    &Price {
-      margin-top: 28px;
-    }
+  .ExtraCover {
+    margin-top: 40px;
+  }
 
-    &ExtraCover {
-      margin-top: 40px;
-    }
+  .AddToCart {
+    margin-top: 40px;
+  }
 
-    &AddToCart {
-      margin-top: 40px;
-    }
-
-    &WhatsApp {
-      margin-top: 118px;
-    }
-
-    .productShipping {
-      margin-top: 40px;
-    }
+  .WhatsApp {
+    margin-top: 118px;
   }
 
   &.mobile {
-    display: block;
-    padding-block: 23px 63px;
-
-    .productImages {
+    .Images {
       h2 {
         max-width: 204px;
         margin-top: 47px;
       }
     }
 
-    .productInfo {
-      padding-inline: 16px;
-      margin-top: 20px;
+    .Price {
+      margin-top: 34px;
+    }
 
-      &Price {
-        margin-top: 34px;
-      }
+    .AddToCart {
+      margin-top: 21px;
+    }
 
-      &AddToCart {
-        margin-top: 21px;
-      }
-
-      &WhatsApp {
-        margin-top: 34px;
-      }
+    .WhatsApp {
+      margin-top: 34px;
     }
   }
 }
