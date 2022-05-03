@@ -13,6 +13,7 @@ import QueenIcon from '../../assets/queen.png';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductOptions.module.scss';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 function ZissouProductOptions({
   title,
@@ -22,6 +23,8 @@ function ZissouProductOptions({
   className,
   ...rest
 }) {
+  const {isCoral, isColchao} = useZissouProduct();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const {isMobile} = useMobile();
@@ -115,17 +118,35 @@ function ZissouProductOptions({
         </h2>
       )}
       {options?.map(({name, values}) => (
-        <fieldset className={styles.select} key={name}>
-          <button className={styles.selectOpen} onClick={() => setIsOpen(true)}>
+        <fieldset
+          className={`${styles.select} ${
+            !isCoral && isColchao && styles.selectBlue
+          }`}
+          key={name}
+        >
+          <button
+            className={`${styles.selectOpen} ${
+              !isCoral && isColchao && styles.selectBlue
+            }`}
+            onClick={() => setIsOpen(true)}
+          >
             {renderIcon(selectedOptions[name])}
             {renderFormattedName(selectedOptions[name])}
-            <span className={styles.selectOpenArrow}>
+            <span
+              className={`${styles.selectOpenArrow} ${
+                !isCoral && isColchao && styles.selectBlue
+              }`}
+            >
               <Image src={DropdownArrow} width={26} height={13} />
             </span>
           </button>
           {info && <span className={styles.info}>{info}</span>}
           {isOpen && (
-            <div className={styles.selectDropdown}>
+            <div
+              className={`${styles.selectDropdown} ${
+                !isCoral && isColchao && styles.selectBlue
+              }`}
+            >
               {values?.map((value) => (
                 <button
                   key={value}

@@ -1,5 +1,6 @@
-import useMobile from '../../hooks/useMobile';
 import {Image, useProduct} from '@shopify/hydrogen/client';
+import useZissouProduct from '../../hooks/useZissouProduct';
+import useMobile from '../../hooks/useMobile';
 
 import IconeGarantiaCoral from '../../assets/icone_garantia.png';
 import IconeGarantiaBlue from '../../assets/icone_garantia_blue.png';
@@ -13,8 +14,9 @@ import Icone100DiasBlue from '../../assets/icone_100_dias_blue.png';
 import * as styles from './ZissouColchaoIcons.module.scss';
 
 export default function ZissouColchaoIcons() {
-  const {isMobile} = useMobile();
   const {title} = useProduct();
+  const {isCoral} = useZissouProduct();
+  const {isMobile} = useMobile();
 
   return (
     <div className={styles.Icons}>
@@ -24,7 +26,9 @@ export default function ZissouColchaoIcons() {
           width={isMobile ? 40 : 62}
           height={isMobile ? 28 : 43}
         />
-        <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
+        <strong
+          className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
+        >
           10 anos de <br /> garantia
         </strong>
       </div>
@@ -35,11 +39,15 @@ export default function ZissouColchaoIcons() {
           height={isMobile ? 33 : 59}
         />
         {title.includes('Coral') ? (
-          <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
+          <strong
+            className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
+          >
             entrega <br /> expressa
           </strong>
         ) : (
-          <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
+          <strong
+            className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
+          >
             entrega <br /> prime
           </strong>
         )}
@@ -50,7 +58,9 @@ export default function ZissouColchaoIcons() {
           width={isMobile ? 38 : 58}
           height={isMobile ? 26 : 40}
         />
-        <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
+        <strong
+          className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
+        >
           frete <br /> grátis
         </strong>
       </div>
@@ -60,7 +70,9 @@ export default function ZissouColchaoIcons() {
           width={isMobile ? 27 : 42}
           height={isMobile ? 24 : 37}
         />
-        <strong className={`${styles.IconTitle} ${styles.CoralColor}`}>
+        <strong
+          className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
+        >
           100 dias <br /> de teste
         </strong>
       </div>

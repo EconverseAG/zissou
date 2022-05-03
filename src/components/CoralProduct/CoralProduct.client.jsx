@@ -42,8 +42,10 @@ function CoralProduct() {
         />
         {isCoral && <ZissouProductIsHybrid />}
         <ZissouProductTitle
-          productTitle={'Colchão Zissou Coral'}
-          color={'#F48580'}
+          productTitle={
+            isCoral ? 'Colchão Zissou Coral' : 'Colchão Zissou Blue'
+          }
+          color={isCoral ? '#F48580' : '#415264'}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
         {isMobile && (
