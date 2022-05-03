@@ -1,6 +1,6 @@
-import {createContext, useContext, useEffect, useState, useMemo} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 
-import {flattenConnection, ProductProvider} from '@shopify/hydrogen/client';
+import {ProductProvider} from '@shopify/hydrogen/client';
 
 import {BuyTogetherProvider} from './useBuyTogether';
 
@@ -32,11 +32,6 @@ function ZissouProductProvider({
   const [coralIsHybrid, setCoralIsHybrid] = useState(false);
   const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
-
-  const initialVariant = useMemo(
-    () => product.selectedVariant || flattenConnection(product.variants)[0],
-    [product],
-  );
 
   useEffect(() => {
     let currentProduct = baseProduct;
@@ -116,7 +111,7 @@ function ZissouProductProvider({
         coralHybrid,
       }}
     >
-      <ProductProvider data={product} initialVariantId={initialVariant.id}>
+      <ProductProvider data={product}>
         <BuyTogetherProvider>{children}</BuyTogetherProvider>
       </ProductProvider>
     </ZissouProductContext.Provider>
