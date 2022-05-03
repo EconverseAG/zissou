@@ -86,17 +86,13 @@ function ZissouProductOptions({
     const splittedName = name.split('(');
 
     if (splittedName.length <= 1 || !splittedName[0])
-      return (
-        <p>
-          <strong>{name}</strong>
-        </p>
-      );
+      return <strong>{name}</strong>;
 
     return (
-      <p>
+      <>
         <strong>{splittedName[0]}</strong>
         <span>{splittedName[1].replace(')', '')}</span>
-      </p>
+      </>
     );
   }, []);
 
@@ -129,7 +125,9 @@ function ZissouProductOptions({
           onClick={() => setIsOpen(true)}
         >
           {renderIcon(selectedVariant?.selectedOptions[0].value)}
-          {renderFormattedName(selectedVariant?.selectedOptions[0].value)}
+          <p>
+            {renderFormattedName(selectedVariant?.selectedOptions[0].value)}
+          </p>
           <span
             className={`${styles.selectOpenArrow} ${
               !isCoral && isColchao && styles.selectBlue
@@ -152,7 +150,7 @@ function ZissouProductOptions({
                 className={styles.selectDropdownOption}
               >
                 {renderIcon(selectedOptions[0]?.value)}
-                {renderFormattedName(selectedOptions[0]?.value)}
+                <p>{renderFormattedName(selectedOptions[0]?.value)}</p>
               </button>
             ))}
           </div>
