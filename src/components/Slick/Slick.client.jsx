@@ -55,7 +55,11 @@ export default function Slick(props) {
                   width={!isMobile ? '1400' : '100%'}
                   height={!isMobile ? '650' : '100%'}
                 />
-                <Link to={banner.link} className={styles.buttonCTA}>
+                <Link
+                  reloadDocument
+                  to={banner.link}
+                  className={styles.buttonCTA}
+                >
                   {banner.CTA}
                 </Link>
               </>

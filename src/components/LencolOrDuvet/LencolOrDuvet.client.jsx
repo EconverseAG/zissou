@@ -17,7 +17,11 @@ export default function LencolOrDuvet() {
           width={isMobile ? 260 : 539}
           height={isMobile ? 193 : 400}
         />
-        <Link to="/products/jogo-de-lencol-zissou" className={styles.LinkCTA}>
+        <Link
+          reloadDocument
+          to="/products/jogo-de-lencol-zissou"
+          className={styles.LinkCTA}
+        >
           Lençol Zissou
         </Link>
       </div>
@@ -27,7 +31,11 @@ export default function LencolOrDuvet() {
           width={isMobile ? 260 : 539}
           height={isMobile ? 193 : 400}
         />
-        <Link to="/products/duvet-zissou" className={styles.LinkCTA}>
+        <Link
+          reloadDocument
+          to="/products/duvet-zissou"
+          className={styles.LinkCTA}
+        >
           Duvet Zissou
         </Link>
       </div>

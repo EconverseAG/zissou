@@ -16,10 +16,10 @@ export default function SleepAndLive() {
           </p>
           <strong>Coral</strong>
           <span>A evolução do sono</span>
-          <Link to="/products/colchao-zissou-coral-original">
+          <Link reloadDocument to="/products/colchao-zissou-coral-original">
             <Image src={ColchaoCoral} width="334" height="119" />
           </Link>
-          <Link to="/products/colchao-zissou-coral-original">
+          <Link reloadDocument to="/products/colchao-zissou-coral-original">
             Colchão Zissou Coral
           </Link>
         </div>
@@ -29,10 +29,12 @@ export default function SleepAndLive() {
           </p>
           <strong>Blue</strong>
           <span>Liberte seus sonhos</span>
-          <Link to="/products/colchao-zissou-blue">
+          <Link reloadDocument to="/products/colchao-zissou-blue">
             <Image src={ColchaoBlue} width="334" height="119" />
           </Link>
-          <Link to="/products/colchao-zissou-blue">Colchão Zissou Blue</Link>
+          <Link reloadDocument to="/products/colchao-zissou-blue">
+            Colchão Zissou Blue
+          </Link>
         </div>
       </div>
     </div>

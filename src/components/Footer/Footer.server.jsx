@@ -24,28 +24,34 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Produtos</strong>
             <ul>
               <li>
-                <Link to="/pages/colchoes-zissou">Colchões</Link>
+                <Link reloadDocument to="/pages/colchoes-zissou">
+                  Colchões
+                </Link>
               </li>
               <li>
-                <Link to="/products/travesseiro-zissou">
+                <Link reloadDocument to="/products/travesseiro-zissou">
                   Travesseiro Zissou
                 </Link>
               </li>
               <li>
-                <Link to="/pages/lencol-e-duvet-zissou">
+                <Link reloadDocument to="/pages/lencol-e-duvet-zissou">
                   Lençol & Duvet Zissou
                 </Link>
               </li>
               {/* <li>
-                <Link to="/products/toca-zissou">
+                <Link reloadDocument to="/products/toca-zissou">
                   Toca Zissou
                 </Link>
               </li> */}
               <li>
-                <Link to="/products/base-zissou">Base Zissou</Link>
+                <Link reloadDocument to="/products/base-zissou">
+                  Base Zissou
+                </Link>
               </li>
               <li>
-                <Link to="/pages/bundles">Combos</Link>
+                <Link reloadDocument to="/pages/bundles">
+                  Combos
+                </Link>
               </li>
             </ul>
           </div>
@@ -53,7 +59,10 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Atendimento</strong>
             <ul>
               <li>
-                <Link to="https://api.whatsapp.com/send?phone=5511932858213">
+                <Link
+                  reloadDocument
+                  to="https://api.whatsapp.com/send?phone=5511932858213"
+                >
                   <Image src={WhatsAppMenu} width="19" height="19" />
                   (11) 93285-8213
                 </Link>
@@ -67,16 +76,24 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Zissou</strong>
             <ul>
               <li>
-                <Link to="/pages/casa-zissou">Lojas</Link>
+                <Link reloadDocument to="/pages/casa-zissou">
+                  Lojas
+                </Link>
               </li>
               <li>
-                <Link to="/blogs/midia">Zissou na mídia</Link>
+                <Link reloadDocument to="/blogs/midia">
+                  Zissou na mídia
+                </Link>
               </li>
               <li>
-                <Link to="/blogs/redefinaseusono">Blog</Link>
+                <Link reloadDocument to="/blogs/redefinaseusono">
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link to="/policies/privacy-policy">Aviso de privacidade</Link>
+                <Link reloadDocument to="/policies/privacy-policy">
+                  Aviso de privacidade
+                </Link>
               </li>
             </ul>
           </div>
@@ -98,7 +115,7 @@ export default function Footer(/*{collection, product}*/) {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link reloadDocument to="/">
                   <Image src={IconZissou} width="130" height="35" />
                 </Link>
               </li>

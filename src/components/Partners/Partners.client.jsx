@@ -21,7 +21,9 @@ export default function Partners({color}) {
         <p>
           Experimente nossos produtos <br /> de Norte a Sul do Brasil
         </p>
-        <Link to="/pages/casa-zissou">Quero Visitar</Link>
+        <Link reloadDocument to="/pages/casa-zissou">
+          Quero Visitar
+        </Link>
       </div>
       <div className={styles.PartnersRight}>
         <span style={{color: color ? '#fff' : ''}}>Marcas Parceiras</span>
