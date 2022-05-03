@@ -16,7 +16,6 @@ import * as styles from './CoralProduct.module.scss';
 
 function CoralProduct() {
   const {isMobile} = useMobile();
-  const [isHybrid, setIsHybrid] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -38,11 +37,10 @@ function CoralProduct() {
           }
           uppercaseTitle
         />
-        <ZissouProductIsHybrid isHybrid={isHybrid} setIsHybrid={setIsHybrid} />
+        <ZissouProductIsHybrid />
         <ZissouProductTitle
           productTitle={'Colchão Zissou Coral'}
           color={'#F48580'}
-          isHybrid={isHybrid}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
         {isMobile && (

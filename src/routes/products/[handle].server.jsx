@@ -18,6 +18,7 @@ const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`;
 const idGrayLencol = `gid://shopify/Product/7195869249730`;
 const idWhiteLencol = `gid://shopify/Product/2135741923401`;
 const idBase = `gid://shopify/Product/7145404399810`;
+const idCoralHybrid = `gid://shopify/Product/6587140604098`;
 
 export default function Product({country = {isoCode: 'US'}}) {
   const {handle} = useRouteParams();
@@ -103,6 +104,15 @@ export default function Product({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
+  const coralHybrid = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idCoralHybrid,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
   if (!baseProduct) {
     return <NotFound />;
   }
@@ -120,6 +130,7 @@ export default function Product({country = {isoCode: 'US'}}) {
           grayLencol={grayLencol.data.product}
           whiteLencol={whiteLencol.data.product}
           base={base.data.product}
+          coralHybrid={coralHybrid.data.product}
           product={baseProduct.data.product}
         />
       </Suspense>

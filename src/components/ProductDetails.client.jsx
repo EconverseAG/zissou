@@ -17,6 +17,7 @@ export default function ProductDetails({
   grayLencol,
   whiteLencol,
   base,
+  coralHybrid,
 }) {
   const {title} = product;
 
@@ -52,12 +53,12 @@ export default function ProductDetails({
         grayLencol={grayLencol}
         whiteLencol={whiteLencol}
         base={base}
+        coralHybrid={coralHybrid}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}
         isLencol={isLencol}
         isTravesseiro={isTravesseiro}
-        isColcao={isColchao}
       >
         {isColchao ? (
           <Colchao
