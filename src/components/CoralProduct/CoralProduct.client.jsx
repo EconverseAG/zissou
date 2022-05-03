@@ -10,6 +10,9 @@ import ZissouColchaoIcons from '../ZissouColchaoIcons/ZissouColchaoIcons.client'
 import ZissouCompreJunto from '../ZissouCompreJunto/ZissouCompreJunto.client';
 import ZissouProductIsHybrid from '../ZissouProductIsHybrid/ZissouProductIsHybrid.client';
 import ZissouModalBase from '../ZissouModalBase/ZissouModalBase.client';
+import ProductSection from '../ProductSection';
+import ProductSectionLeft from '../ProductSection/ProductSectionLeft';
+import ProductSectionRight from '../ProductSection/ProductSectionRight';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -22,8 +25,10 @@ function CoralProduct() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      <div className={styles.productLeft}>
+    <ProductSection
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+    >
+      <ProductSectionLeft>
         <ZissouProductImages />
         {!isMobile && (
           <ZissouCompreJunto
@@ -31,10 +36,10 @@ function CoralProduct() {
             modalOpen={modalOpen}
           />
         )}
-      </div>
-      <div className={styles.productInfo}>
+      </ProductSectionLeft>
+      <ProductSectionRight>
         <ZissouProductOptions
-          className={styles.productInfoOptions}
+          className={styles.Options}
           title={
             isMobile ? 'SELECIONE O TAMANHO' : 'QUAL O TAMANHO DO MEU COLCHÃO?'
           }
@@ -47,18 +52,18 @@ function CoralProduct() {
           }
           color={isCoral ? '#F48580' : '#415264'}
         />
-        <ZissouProductPrice className={styles.productInfoPrice} />
+        <ZissouProductPrice className={styles.Price} />
         {isMobile && (
           <ZissouCompreJunto
             setModalOpen={setModalOpen}
             modalOpen={modalOpen}
           />
         )}
-        <ZissouAddToCart className={styles.productInfoAddToCart} />
+        <ZissouAddToCart className={styles.AddToCart} />
         <ZissouColchaoIcons />
         {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}
-      </div>
-    </div>
+      </ProductSectionRight>
+    </ProductSection>
   );
 }
 

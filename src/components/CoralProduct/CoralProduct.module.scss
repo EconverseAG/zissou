@@ -1,96 +1,66 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  gap: 16px;
-  padding-block: 103px 78px;
-
-  .productShipping {
-    margin-top: 126px;
+  .ColorSelector {
+    margin-top: 30px;
   }
 
-  .productLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  .Options {
+    max-width: 613px;
   }
 
-  .productInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .SelectedOptions {
+    margin-top: 47px;
+    font-size: 16px;
+    font-family: ZonaProBold;
+    line-height: 22px;
+    color: #f08590;
+    text-transform: uppercase;
+  }
 
-    &ColorSelector {
-      margin-top: 30px;
-    }
+  .Price {
+    margin-top: 14px;
+  }
 
-    &Options {
-      max-width: 613px;
-    }
+  .AddToCart {
+    margin-top: 40px;
+  }
 
-    &SelectedOptions {
-      margin-top: 47px;
-      font-size: 16px;
-      font-family: ZonaProBold;
-      line-height: 22px;
-      color: #f08590;
-      text-transform: uppercase;
-    }
+  .ExtraCover {
+    margin-top: 40px;
+  }
 
-    &Price {
-      margin-top: 14px;
-    }
+  .SpecialOptions {
+    margin-top: 31px;
+  }
 
-    &AddToCart {
-      margin-top: 40px;
-    }
-
-    &ExtraCover {
-      margin-top: 40px;
-    }
-
-    &SpecialOptions {
-      margin-top: 31px;
-    }
-
-    &WhatsApp {
-      margin-top: 60px;
-    }
+  .WhatsApp {
+    margin-top: 60px;
   }
 
   &.mobile {
-    display: block;
-    padding-block: 13px 37px;
+    .Price {
+      margin-top: 11px;
+    }
 
-    .productInfo {
-      padding-inline: 16px;
-      margin-top: 20px;
+    .SelectedOptions {
+      margin-top: 41px;
+      font-size: 10px;
+      line-height: 14px;
+    }
 
-      &Price {
-        margin-top: 11px;
-      }
+    .AddToCart {
+      margin-top: 21px;
+    }
 
-      &SelectedOptions {
-        margin-top: 41px;
-        font-size: 10px;
-        line-height: 14px;
-      }
+    .WhatsApp {
+      margin-top: 22px;
+    }
 
-      &AddToCart {
-        margin-top: 21px;
-      }
+    .SpecialOptions {
+      margin-top: 41px;
+    }
 
-      &WhatsApp {
-        margin-top: 22px;
-      }
-
-      &SpecialOptions {
-        margin-top: 41px;
-      }
-
-      .productShipping {
-        margin-top: 40px;
-      }
+    .productShipping {
+      margin-top: 40px;
     }
   }
 }
