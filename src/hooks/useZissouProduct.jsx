@@ -24,6 +24,7 @@ function ZissouProductProvider({
   isTravesseiro,
   isColchao,
 }) {
+  const [isCoral, setIsCoral] = useState(false);
   const [washable, setWashable] = useState(false);
   const [customBag, setCustomBag] = useState(false);
   const [customBagText, setCustomBagText] = useState('');
@@ -66,6 +67,7 @@ function ZissouProductProvider({
       }
     }
 
+    setIsCoral(currentProduct.title.includes('Coral'));
     setProduct(currentProduct);
   }, [
     washable,
@@ -92,6 +94,7 @@ function ZissouProductProvider({
         isDuvet,
         isLencol,
         isColchao,
+        isCoral,
         washable,
         customBag,
         setWashable,

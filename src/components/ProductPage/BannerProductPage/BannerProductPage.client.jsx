@@ -1,9 +1,9 @@
-import {Image} from '@shopify/hydrogen';
+import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import * as styles from './BannerProductPage.module.scss';
 
-export default function BannerProductPage({product, src}) {
-  const {title} = product;
+export default function BannerProductPage({src}) {
+  const {title} = useProduct();
 
   return (
     <div className={styles.BannerProductPageContainer}>

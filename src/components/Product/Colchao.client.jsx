@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 import BannerCoralPDP from '../../assets/pdp-coral.png';
 import BannerBluePDP from '../../assets/pdp-blue.png';
@@ -17,35 +17,24 @@ import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlic
 import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 
-export default function Colchao({title, product, travesseiroWashable}) {
-  const [isCoral, setIsCoral] = useState(false);
-
-  useEffect(() => {
-    if (title.includes('Coral')) {
-      setIsCoral(true);
-    }
-  }, [title]);
+export default function Colchao() {
+  const {isCoral} = useZissouProduct();
 
   return (
     <>
       {isCoral ? (
-        <BannerProductPage product={product} src={BannerCoralPDP} />
+        <BannerProductPage src={BannerCoralPDP} />
       ) : (
-        <BannerProductPage product={product} src={BannerBluePDP} />
+        <BannerProductPage src={BannerBluePDP} />
       )}
 
-      {/* DIV DE CONVERSÃO QUE SERÁ ALTERADA DEPOIS */}
-      {/* <ProductSection product={product} /> */}
-      <CoralProduct
-        travesseiroWashable={travesseiroWashable}
-        product={product}
-      />
+      <CoralProduct />
 
       <CinematographyBanner />
 
-      <TourColchao coral={isCoral} />
+      <TourColchao />
 
-      <SpecsColchaoSlick coral={isCoral} />
+      <SpecsColchaoSlick />
 
       {isCoral ? (
         <DoubtsProductPage color={'#D4A8BF'} />

@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
@@ -15,8 +16,10 @@ import useMobile from '../../hooks/useMobile';
 import * as styles from './CoralProduct.module.scss';
 
 function CoralProduct() {
-  const {isMobile} = useMobile();
   const [modalOpen, setModalOpen] = useState(false);
+
+  const {isCoral} = useZissouProduct();
+  const {isMobile} = useMobile();
 
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
@@ -37,7 +40,7 @@ function CoralProduct() {
           }
           uppercaseTitle
         />
-        <ZissouProductIsHybrid />
+        {isCoral && <ZissouProductIsHybrid />}
         <ZissouProductTitle
           productTitle={'Colchão Zissou Coral'}
           color={'#F48580'}
