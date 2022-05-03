@@ -23,22 +23,7 @@ function CoralProduct() {
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.productLeft}>
         <ZissouProductImages />
-<<<<<<< HEAD
-        {!isMobile ? (
-          <ZissouCompreJunto
-            selectedBase={selectedBase}
-            setSelectedBase={setSelectedBase}
-            selectedLencol={selectedLencol}
-            setSelectedLencol={setSelectedLencol}
-            selectedTravesseiro={selectedTravesseiro}
-            setSelectedTravesseiro={setSelectedTravesseiro}
-            modalOpen={modalOpen}
-            setModalOpen={setModalOpen}
-          />
-        ) : null}
-=======
         {!isMobile && <ZissouCompreJunto />}
->>>>>>> 0fa2c1ed60679771ea6603522583f9fc36257252
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -55,22 +40,7 @@ function CoralProduct() {
           isHybrid={isHybrid}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
-<<<<<<< HEAD
-        {isMobile ? (
-          <ZissouCompreJunto
-            selectedBase={selectedBase}
-            setSelectedBase={setSelectedBase}
-            selectedLencol={selectedLencol}
-            setSelectedLencol={setSelectedLencol}
-            selectedTravesseiro={selectedTravesseiro}
-            setSelectedTravesseiro={setSelectedTravesseiro}
-            modalOpen={modalOpen}
-            setModalOpen={setModalOpen}
-          />
-        ) : null}
-=======
         {isMobile && <ZissouCompreJunto />}
->>>>>>> 0fa2c1ed60679771ea6603522583f9fc36257252
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <ZissouColchaoIcons />
         {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}
