@@ -6,6 +6,9 @@ import ProductSelectedOptions from '../ProductSelectedOptions';
 import ExtraDuvetCoverSelector from '../ExtraDuvetCoverSelector';
 import WhatsAppBanner from '../WhatsAppBanner';
 import ColorSelector from '../ColorSelector';
+import ProductSection from '../ProductSection';
+import ProductSectionLeft from '../ProductSection/ProductSectionLeft';
+import ProductSectionRight from '../ProductSection/ProductSectionRight';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -15,24 +18,26 @@ function DuvetProduct() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      <div className={styles.productLeft}>
+    <ProductSection
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+    >
+      <ProductSectionLeft>
         <ZissouProductImages title="Embale no aconchego para um sono mais gostoso" />
-        <WhatsAppBanner className={styles.productInfoWhatsApp} />
-      </div>
-      <div className={styles.productInfo}>
+        <WhatsAppBanner className={styles.WhatsApp} />
+      </ProductSectionLeft>
+      <ProductSectionRight>
         <ZissouProductOptions
-          className={styles.productInfoOptions}
+          className={styles.Options}
           title="Selecione o tamanho do seu Duvet:"
           uppercaseTitle
         />
-        <ColorSelector className={styles.productInfoColorSelector} />
-        <ProductSelectedOptions className={styles.productInfoSelectedOptions} />
-        <ZissouProductPrice className={styles.productInfoPrice} />
-        <ExtraDuvetCoverSelector className={styles.productInfoExtraCover} />
-        <ZissouAddToCart className={styles.productInfoAddToCart} />
-      </div>
-    </div>
+        <ColorSelector className={styles.ColorSelector} />
+        <ProductSelectedOptions className={styles.SelectedOptions} />
+        <ZissouProductPrice className={styles.Price} />
+        <ExtraDuvetCoverSelector className={styles.ExtraCover} />
+        <ZissouAddToCart className={styles.AddToCart} />
+      </ProductSectionRight>
+    </ProductSection>
   );
 }
 
