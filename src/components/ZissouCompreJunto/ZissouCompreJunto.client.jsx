@@ -7,14 +7,7 @@ import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
 
-export default function ZissouCompreJunto({
-  selectedBase,
-  setSelectedBase,
-  selectedLencol,
-  setSelectedLencol,
-  selectedTravesseiro,
-  setSelectedTravesseiro,
-}) {
+export default function ZissouCompreJunto(props) {
   const {isMobile} = useMobile();
   const {selectedVariant, title} = useProduct();
 
@@ -32,18 +25,18 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedBase ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedBase((prev) => !prev)}
+        } ${props.selectedBase ? styles.OptionContainerSelected : null}`}
+        onClick={() => props.setSelectedBase((prev) => !prev)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedBase}
+          checked={props.selectedBase}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedBase ? styles.active : null
+            props.selectedBase ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -52,7 +45,12 @@ export default function ZissouCompreJunto({
             width={isMobile ? 84 : 148}
             height={isMobile ? 35 : 63}
           />
-          <span className={styles.SeeMore}>saiba mais</span>
+          <button
+            className={styles.SeeMore}
+            onClick={() => props.setModalOpen(!props.modalOpen)}
+          >
+            saiba mais
+          </button>
         </div>
         <div className={styles.OptionInfo}>
           <span className={styles.OptionInfoTitle}>
@@ -67,18 +65,18 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedTravesseiro ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedTravesseiro((prev) => !prev)}
+        } ${props.selectedTravesseiro ? styles.OptionContainerSelected : null}`}
+        onClick={() => props.setSelectedTravesseiro((prev) => !prev)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedTravesseiro}
+          checked={props.selectedTravesseiro}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedTravesseiro ? styles.active : null
+            props.selectedTravesseiro ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
@@ -97,18 +95,18 @@ export default function ZissouCompreJunto({
       <button
         className={`${styles.OptionContainer} ${
           title.includes('Coral') ? styles.OptionContainerCoral : null
-        } ${selectedLencol ? styles.OptionContainerSelected : null}`}
-        onClick={() => setSelectedLencol((prev) => !prev)}
+        } ${props.selectedLencol ? styles.OptionContainerSelected : null}`}
+        onClick={() => props.setSelectedLencol((prev) => !prev)}
       >
         <input
           type="checkbox"
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
-          checked={selectedLencol}
+          checked={props.selectedLencol}
         />
         <span
           className={`${styles.OptionSelect}  ${
-            selectedLencol ? styles.active : null
+            props.selectedLencol ? styles.active : null
           }`}
         ></span>
         <div className={styles.OptionImage}>
