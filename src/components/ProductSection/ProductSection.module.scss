@@ -1,0 +1,11 @@
+.productSection {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 16px;
+  padding-block: 103px 78px;
+
+  &.mobile {
+    display: block;
+    padding-block: 13px 37px;
+  }
+}
