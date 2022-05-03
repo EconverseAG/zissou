@@ -1,9 +1,14 @@
+import {Suspense, lazy} from 'react';
 import {useShopQuery, Seo, useRouteParams} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
-import ProductDetails from '../../components/ProductDetails.client';
 import NotFound from '../../components/NotFound.server';
 import Layout from '../../components/Layout.server';
+import ZissouLoading from '../../components/ZissouLoading';
+
+const ProductDetails = lazy(() =>
+  import('../../components/ProductDetails.client'),
+);
 
 const idDuvetFilling = `gid://shopify/Product/4522066083913`;
 const idTravesseiroWashable = `gid://shopify/Product/4512182992969`;
@@ -11,6 +16,8 @@ const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`;
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`;
 const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`;
 const idGrayLencol = `gid://shopify/Product/7195869249730`;
+const idWhiteLencol = `gid://shopify/Product/2135741923401`;
+const idBase = `gid://shopify/Product/7145404399810`;
 
 export default function Product({country = {isoCode: 'US'}}) {
   const {handle} = useRouteParams();
@@ -78,6 +85,24 @@ export default function Product({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
+  const whiteLencol = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idWhiteLencol,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
+  const base = useShopQuery({
+    query: QUERY_PRODUCT_BY_ID,
+    variables: {
+      id: idBase,
+      country: country.isoCode,
+    },
+    preload: true,
+  });
+
   if (!baseProduct) {
     return <NotFound />;
   }
@@ -85,15 +110,19 @@ export default function Product({country = {isoCode: 'US'}}) {
   return (
     <Layout>
       <Seo type="product" data={baseProduct.data.product} />
-      <ProductDetails
-        travesseiroWashable={travesseiroWashable.data.product}
-        travesseiroWashableCustom={travesseiroWashableCustom.data.product}
-        duvetFilling={duvetFilling.data.product}
-        grayDuvetCover={grayDuvetCover.data.product}
-        whiteDuvetCover={whiteDuvetCover.data.product}
-        grayLencol={grayLencol.data.product}
-        product={baseProduct.data.product}
-      />
+      <Suspense fallback={<ZissouLoading />}>
+        <ProductDetails
+          travesseiroWashable={travesseiroWashable.data.product}
+          travesseiroWashableCustom={travesseiroWashableCustom.data.product}
+          duvetFilling={duvetFilling.data.product}
+          grayDuvetCover={grayDuvetCover.data.product}
+          whiteDuvetCover={whiteDuvetCover.data.product}
+          grayLencol={grayLencol.data.product}
+          whiteLencol={whiteLencol.data.product}
+          base={base.data.product}
+          product={baseProduct.data.product}
+        />
+      </Suspense>
     </Layout>
   );
 }

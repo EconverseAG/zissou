@@ -4,18 +4,20 @@ import {Suspense} from 'react';
 import shopifyConfig from '../shopify.config';
 import DefaultSeo from './components/DefaultSeo.server';
 import NotFound from './components/NotFound.server';
-import LoadingFallback from './components/LoadingFallback';
+import ZissouLoading from './components/ZissouLoading';
 import CartProvider from './components/Cart/CartProvider.client';
 
 function App({routes}) {
   return (
-    <Suspense fallback={<LoadingFallback />}>
+    <Suspense fallback={<ZissouLoading />}>
       <ShopifyProvider shopifyConfig={shopifyConfig}>
         <CartProvider>
           <DefaultSeo />
           <Router>
-            <FileRoutes routes={routes} />
-            <Route path="*" page={<NotFound />} />
+            <Suspense fallback={<ZissouLoading />}>
+              <FileRoutes routes={routes} />
+              <Route path="*" page={<NotFound />} />
+            </Suspense>
           </Router>
         </CartProvider>
       </ShopifyProvider>

@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './DoubtsProductPage.module.scss';
 
 import WhatsApp from '../../../assets/icone-menu-whatsapp-white.png';

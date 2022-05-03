@@ -1,6 +1,6 @@
 import * as styles from './experienciaZissou.module.scss';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';
@@ -21,12 +21,14 @@ export default function ExperienciaZissouDesktop() {
               Rua Dr Melo Alves, 383 <br /> Jardins - SP <br /> Cep 01417-010
             </p>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
@@ -42,12 +44,14 @@ export default function ExperienciaZissouDesktop() {
               Rua Normandia, 25 <br /> Moema - SP <br /> Cep 04517-040
             </p>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
@@ -64,12 +68,14 @@ export default function ExperienciaZissouDesktop() {
               <br /> Cep 01442-001
             </p>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
@@ -91,12 +97,14 @@ export default function ExperienciaZissouDesktop() {
               13024-431
             </p>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
+              reloadDocument
               to="/"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >

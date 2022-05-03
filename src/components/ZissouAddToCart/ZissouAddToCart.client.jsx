@@ -2,6 +2,7 @@ import {useCallback, useMemo} from 'react';
 import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -9,6 +10,7 @@ import * as styles from './ZissouAddToCart.module.scss';
 
 function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
   const {selectedVariant} = useProduct();
+  const {customBagText, customBag} = useZissouProduct();
   const {buyTogetherItems} = useBuyTogether();
   const {linesAdd} = useCart();
   const {isMobile} = useMobile();
@@ -25,6 +27,15 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
       },
     ];
 
+    if (customBag) {
+      lines[0].attributes = [
+        {
+          key: 'Customização',
+          value: customBagText,
+        },
+      ];
+    }
+
     buyTogetherItems?.forEach((item) => {
       if (!item.selectedVariant?.id) return;
 
@@ -34,7 +45,7 @@ function ZissouAddToCart({text = 'Adicionar ao carrinho', className, ...rest}) {
     });
 
     linesAdd(lines);
-  }, [selectedVariant, linesAdd, buyTogetherItems]);
+  }, [selectedVariant, linesAdd, buyTogetherItems, customBag, customBagText]);
 
   return (
     <AddToCartButton

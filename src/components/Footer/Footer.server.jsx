@@ -1,4 +1,4 @@
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './footer.module.scss';
 
@@ -24,32 +24,34 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Produtos</strong>
             <ul>
               <li>
-                <Link to="https://www.zissou.com.br/pages/colchoes-zissou">
+                <Link reloadDocument to="/pages/colchoes-zissou">
                   Colchões
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/products/travesseiro-zissou">
+                <Link reloadDocument to="/products/travesseiro-zissou">
                   Travesseiro Zissou
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/pages/lencol-e-duvet-zissou">
+                <Link reloadDocument to="/pages/lencol-e-duvet-zissou">
                   Lençol & Duvet Zissou
                 </Link>
               </li>
               {/* <li>
-                <Link to="https://www.zissou.com.br/products/toca-zissou">
+                <Link reloadDocument to="/products/toca-zissou">
                   Toca Zissou
                 </Link>
               </li> */}
               <li>
-                <Link to="https://www.zissou.com.br/products/base-zissou">
+                <Link reloadDocument to="/products/base-zissou">
                   Base Zissou
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/pages/bundles">Combos</Link>
+                <Link reloadDocument to="/pages/bundles">
+                  Combos
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,7 +59,10 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Atendimento</strong>
             <ul>
               <li>
-                <Link to="https://api.whatsapp.com/send?phone=5511932858213">
+                <Link
+                  reloadDocument
+                  to="https://api.whatsapp.com/send?phone=5511932858213"
+                >
                   <Image src={WhatsAppMenu} width="19" height="19" />
                   (11) 93285-8213
                 </Link>
@@ -71,20 +76,22 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Zissou</strong>
             <ul>
               <li>
-                <Link to="/pages/casa-zissou">Lojas</Link>
+                <Link reloadDocument to="/pages/casa-zissou">
+                  Lojas
+                </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/blogs/midia">
+                <Link reloadDocument to="/blogs/midia">
                   Zissou na mídia
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/blogs/redefinaseusono">
+                <Link reloadDocument to="/blogs/redefinaseusono">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="https://www.zissou.com.br/policies/privacy-policy">
+                <Link reloadDocument to="/policies/privacy-policy">
                   Aviso de privacidade
                 </Link>
               </li>
@@ -108,7 +115,7 @@ export default function Footer(/*{collection, product}*/) {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link reloadDocument to="/">
                   <Image src={IconZissou} width="130" height="35" />
                 </Link>
               </li>

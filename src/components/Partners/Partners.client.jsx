@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
 
 import Fasano from '../../assets/logo_Fasano.png';
@@ -21,7 +21,9 @@ export default function Partners({color}) {
         <p>
           Experimente nossos produtos <br /> de Norte a Sul do Brasil
         </p>
-        <Link to="/pages/casa-zissou">Quero Visitar</Link>
+        <Link reloadDocument to="/pages/casa-zissou">
+          Quero Visitar
+        </Link>
       </div>
       <div className={styles.PartnersRight}>
         <span style={{color: color ? '#fff' : ''}}>Marcas Parceiras</span>

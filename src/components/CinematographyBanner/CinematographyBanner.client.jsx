@@ -1,4 +1,4 @@
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './cinematographyBanner.module.scss';
 
@@ -14,14 +14,14 @@ export default function CinematographyBanner() {
       banner: Video_1,
       horaInicio: 0,
       horaFim: 12,
-      link: 'https://www.zissou.com.br/pages/colchoes-zissou',
+      link: '/pages/colchoes-zissou',
       CTA: 'DESCUBRA OS COLCHÕES',
     },
     {
       banner: Video_2,
       horaInicio: 13,
       horaFim: 23,
-      link: 'https://www.zissou.com.br/pages/colchoes-zissou',
+      link: '/pages/colchoes-zissou',
       CTA: 'DESCUBRA OS COLCHÕES',
     },
   ];
@@ -43,7 +43,7 @@ export default function CinematographyBanner() {
           bannerFiltered.map((banner) => {
             return (
               <>
-                <Link key={banner.link} to={banner.link}>
+                <Link reloadDocument key={banner.link} to={banner.link}>
                   <video
                     className={styles.video}
                     src={banner.banner}
@@ -53,7 +53,11 @@ export default function CinematographyBanner() {
                   />
                 </Link>
 
-                <Link to={banner.link} className={styles.buttonCTA}>
+                <Link
+                  reloadDocument
+                  to={banner.link}
+                  className={styles.buttonCTA}
+                >
                   {banner.CTA}
                 </Link>
               </>

@@ -58,7 +58,7 @@ export default function Button({
   }
 
   return (
-    <Link to={url} className={classes} {...passthroughProps}>
+    <Link reloadDocument to={url} className={classes} {...passthroughProps}>
       {label}
     </Link>
   );

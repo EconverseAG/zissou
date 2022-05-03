@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Link, Image} from '@shopify/hydrogen';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLiveComparativo.module.scss';
 
@@ -48,7 +48,8 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> vendido
           </p>
           <Link
-            to="https://www.zissou.com.br/products/colchao-zissou-coral-original"
+            reloadDocument
+            to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -72,7 +73,8 @@ export default function SleepAndLiveComparativo() {
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 3.610</span>
           <Link
-            to="https://www.zissou.com.br/products/colchao-zissou-coral-original"
+            reloadDocument
+            to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveButtonCTA}
           >
             EXPLORE O CORAL
@@ -89,7 +91,8 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> avançado
           </p>
           <Link
-            to="https://www.zissou.com.br/products/colchao-zissou-blue"
+            reloadDocument
+            to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -117,7 +120,8 @@ export default function SleepAndLiveComparativo() {
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 8.930</span>
           <Link
-            to="https://www.zissou.com.br/products/colchao-zissou-blue"
+            reloadDocument
+            to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveButtonCTA}
           >
             MERGULHE NO BLUE

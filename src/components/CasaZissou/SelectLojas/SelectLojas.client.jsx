@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import useMobile from '../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -81,6 +81,7 @@ export default function SelectLojas() {
               className={styles.SelectedStoreAddress}
             />
             <Link
+              reloadDocument
               to={lojaFiltered[0].link}
               className={styles.SelectedStoreLink}
             >

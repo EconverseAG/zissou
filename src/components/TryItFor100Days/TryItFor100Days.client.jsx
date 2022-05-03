@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import * as styles from './tryit.module.scss';
 
@@ -24,7 +24,9 @@ export default function TryItFor100Days() {
             entrega expressa e <br /> frete grátis para todo o Brasil!
           </p>
         </span>
-        <Link to="https://www.zissou.com.br/pages/100dias">Saiba mais</Link>
+        <Link reloadDocument to="/pages/100dias">
+          Saiba mais
+        </Link>
       </div>
       <div className={styles.TryItRight}>
         <Image src={Gif100Dias} width="483" height="429" />

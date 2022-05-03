@@ -16,9 +16,6 @@ import * as styles from './CoralProduct.module.scss';
 
 function CoralProduct() {
   const {isMobile} = useMobile();
-  const [selectedBase, setSelectedBase] = useState(false);
-  const [selectedTravesseiro, setSelectedTravesseiro] = useState(false);
-  const [selectedLencol, setSelectedLencol] = useState(false);
   const [isHybrid, setIsHybrid] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -26,6 +23,7 @@ function CoralProduct() {
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
       <div className={styles.productLeft}>
         <ZissouProductImages />
+<<<<<<< HEAD
         {!isMobile ? (
           <ZissouCompreJunto
             selectedBase={selectedBase}
@@ -38,6 +36,9 @@ function CoralProduct() {
             setModalOpen={setModalOpen}
           />
         ) : null}
+=======
+        {!isMobile && <ZissouCompreJunto />}
+>>>>>>> 0fa2c1ed60679771ea6603522583f9fc36257252
       </div>
       <div className={styles.productInfo}>
         <ZissouProductOptions
@@ -54,6 +55,7 @@ function CoralProduct() {
           isHybrid={isHybrid}
         />
         <ZissouProductPrice className={styles.productInfoPrice} />
+<<<<<<< HEAD
         {isMobile ? (
           <ZissouCompreJunto
             selectedBase={selectedBase}
@@ -66,6 +68,9 @@ function CoralProduct() {
             setModalOpen={setModalOpen}
           />
         ) : null}
+=======
+        {isMobile && <ZissouCompreJunto />}
+>>>>>>> 0fa2c1ed60679771ea6603522583f9fc36257252
         <ZissouAddToCart className={styles.productInfoAddToCart} />
         <ZissouColchaoIcons />
         {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}

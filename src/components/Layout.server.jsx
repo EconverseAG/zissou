@@ -10,6 +10,7 @@ import Header from './Header/Header.client';
 import Footer from './Footer/Footer.server';
 import Cart from '../components/Cart/Cart.client';
 import {Suspense} from 'react';
+import ZissouLoading from './ZissouLoading';
 
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
@@ -30,24 +31,20 @@ export default function Layout({children, hero}) {
   return (
     <LocalizationProvider preload="*">
       <div>
-        <Suspense fallback={<BoxFallback />}>
+        <Suspense fallback={<ZissouLoading />}>
           <Header collections={collections} storeName={storeName} />
           <Cart />
         </Suspense>
         <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
           {hero}
           <div>
-            <Suspense fallback={null}>{children}</Suspense>
+            <Suspense fallback={<ZissouLoading />}>{children}</Suspense>
           </div>
         </main>
         <Footer collection={collections[0]} product={products[0]} />
       </div>
     </LocalizationProvider>
   );
-}
-
-function BoxFallback() {
-  return <div className="bg-white p-12 shadow-xl rounded-xl mb-10 h-40"></div>;
 }
 
 const QUERY = gql`

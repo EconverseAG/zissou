@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import Post1 from '../../assets/post-1.png';
 import Post2 from '../../assets/post-2.png';
@@ -26,7 +26,7 @@ export default function Instagram({title, background}) {
       </strong>
       <div className={styles.InstagramPosts}>
         <div className={styles.BigPost}>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post1}
               width={isMobile ? '285' : '376'}
@@ -36,7 +36,7 @@ export default function Instagram({title, background}) {
           </Link>
         </div>
         <div className={styles.SmallPost}>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post2}
               width={isMobile ? '136' : '180'}
@@ -44,7 +44,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post3}
               width={isMobile ? '136' : '180'}
@@ -52,7 +52,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post4}
               width={isMobile ? '136' : '180'}
@@ -60,7 +60,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post5}
               width={isMobile ? '136' : '180'}
@@ -68,7 +68,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post6}
               width={isMobile ? '136' : '180'}
@@ -76,7 +76,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post7}
               width={isMobile ? '136' : '180'}
@@ -84,7 +84,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post8}
               width={isMobile ? '136' : '180'}
@@ -92,7 +92,7 @@ export default function Instagram({title, background}) {
               className={styles.Post}
             />
           </Link>
-          <Link to="/">
+          <Link reloadDocument to="/">
             <Image
               src={Post9}
               width={isMobile ? '136' : '180'}

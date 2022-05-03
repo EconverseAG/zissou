@@ -9,7 +9,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
-import {Link} from '@shopify/hydrogen';
+import {Link} from '@shopify/hydrogen/client';
 
 export default function Question4() {
   const [expanded, setExpanded] = useState(false);
@@ -97,7 +97,7 @@ export default function Question4() {
             alinhamento da coluna
           </span>
         </div>
-        <Link to="/pages/comparativo-colchoes">
+        <Link reloadDocument to="/pages/comparativo-colchoes">
           <strong className={styles.FaqAccordionAnswerLink}>
             Comparar os colchões &gt;&gt;&gt;
           </strong>

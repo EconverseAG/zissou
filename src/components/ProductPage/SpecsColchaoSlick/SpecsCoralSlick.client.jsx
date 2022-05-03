@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './SpecsColchaoSlick.module.scss';
 
 import Slider from 'react-slick';
@@ -579,6 +579,7 @@ export default function SpecsCoralSlick() {
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre os termos de garantia,{' '}
                   <Link
+                    reloadDocument
                     to="https://www.zissou.com.br/blogs/faq/como-funciona-a-garantia-de-um-colchao"
                     className={styles.BeneficiosItemSubtitleLink}
                   >
@@ -593,6 +594,7 @@ export default function SpecsCoralSlick() {
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre informações técnicas dos colchões,{' '}
                   <Link
+                    reloadDocument
                     to="/pages/comparativo-colchoes"
                     className={styles.BeneficiosItemSubtitleLink}
                   >

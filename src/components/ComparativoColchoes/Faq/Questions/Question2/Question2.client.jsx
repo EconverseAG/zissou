@@ -2,7 +2,7 @@ import {useCallback, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen';
+import {Image, Link} from '@shopify/hydrogen/client';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -90,7 +90,7 @@ export default function Question2() {
             , sinônimo de aconchego e refrescância
           </span>
         </div>
-        <Link to="/pages/comparativo-colchoes">
+        <Link reloadDocument to="/pages/comparativo-colchoes">
           <strong className={styles.FaqAccordionAnswerLink}>
             Comparar os colchões &gt;&gt;&gt;
           </strong>
