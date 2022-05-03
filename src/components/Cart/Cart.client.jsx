@@ -1,3 +1,5 @@
+import {useEffect, useState} from 'react';
+
 import {
   useCart,
   CartCheckoutButton,
@@ -203,9 +205,14 @@ function CartShelf() {
 
 function CartFooter() {
   const {discountCodes, estimatedCost} = useCart();
+  const [discount, setDiscount] = useState(0);
 
   let subtotal = +estimatedCost.subtotalAmount.amount;
   let total = +estimatedCost.totalAmount.amount;
+
+  useEffect(() => {
+    setDiscount(subtotal - total * 0.95);
+  }, [total, subtotal]);
 
   return (
     <footer className={styles.cartFooter}>
@@ -224,18 +231,38 @@ function CartFooter() {
               <Label />
               SEU DESCONTO:
             </span>
-            <span className={styles.cartDiscountPrice}>Free</span>
+            <span className={styles.cartDiscountPrice}>
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(discount)}
+            </span>
           </div>
         ) : null}
         <div className={styles.cartTotal}>
           <span className={styles.cartTotalTitle}>TOTAL</span>
           <div>
-            <CartEstimatedCost
-              amountType="total"
-              className={styles.cartTotalPrice}
-            />
+            <div className={styles.cartTotalPrice}>
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(total * 0.95)}
+            </div>
+            <p className={styles.cartTotalDiscount}>
+              COM 5% DE DESCONTO À VISTA
+            </p>
             <span className={styles.cartTotalInstallments}>
-              EM ATÉ 10X SEM JUROS
+              OU{' '}
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(total)}{' '}
+              EM ATÉ 10X DE{' '}
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(total / 10)}{' '}
+              SEM JUROS
             </span>
           </div>
         </div>

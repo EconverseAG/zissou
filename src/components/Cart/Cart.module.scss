@@ -297,7 +297,7 @@
   .cartFooter {
     box-shadow: 0 -10px 23px -10px #42526440;
     background: #f9f9f9;
-    padding: 28px;
+    padding: 20px;
 
     .cartSubtotal {
       display: flex;
@@ -368,11 +368,20 @@
         text-align: right;
       }
 
-      .cartTotalInstallments {
+      .cartTotalDiscount {
         font-family: 'ZonaProSemiBold';
         font-size: 11px;
         color: #7b7d7e;
         text-transform: uppercase;
+        text-align: right;
+      }
+
+      .cartTotalInstallments {
+        font-family: 'ZonaProSemiBold';
+        font-size: 10px;
+        color: #7b7d7e;
+        text-transform: uppercase;
+        display: block;
       }
     }
 
