@@ -81,6 +81,7 @@ export default function SelectLojas() {
               className={styles.SelectedStoreAddress}
             />
             <Link
+              reloadDocument
               to={lojaFiltered[0].link}
               className={styles.SelectedStoreLink}
             >

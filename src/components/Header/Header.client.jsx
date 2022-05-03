@@ -1,10 +1,11 @@
-import {useEffect, useState} from 'react';
+import {Suspense, useEffect, useState} from 'react';
 import {Link} from '@shopify/hydrogen/client';
 
 import CartToggle from '../Cart/CartToggle.client';
 import {useCartUI} from '../Cart/CartUIProvider.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
+import ZissouLoading from '../ZissouLoading';
 
 import {Image} from '@shopify/hydrogen';
 
@@ -50,7 +51,7 @@ export default function Header({collections, storeName}) {
   }, [scroll]);
 
   return (
-    <>
+    <Suspense fallback={<ZissouLoading />}>
       <header
         className={styles.container}
         style={{
@@ -93,6 +94,6 @@ export default function Header({collections, storeName}) {
           </div>
         </div>
       </header>
-    </>
+    </Suspense>
   );
 }

@@ -97,7 +97,7 @@ export default function Question4() {
             alinhamento da coluna
           </span>
         </div>
-        <Link to="/pages/comparativo-colchoes">
+        <Link reloadDocument to="/pages/comparativo-colchoes">
           <strong className={styles.FaqAccordionAnswerLink}>
             Comparar os colchões &gt;&gt;&gt;
           </strong>

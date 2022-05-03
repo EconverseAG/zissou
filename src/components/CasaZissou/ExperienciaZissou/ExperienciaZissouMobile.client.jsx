@@ -54,12 +54,14 @@ export default function ExperienciaZissouMobile() {
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to=""
                 >
                   Como chegar
                 </Link>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to=""
                 >
@@ -79,12 +81,14 @@ export default function ExperienciaZissouMobile() {
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to=""
                 >
                   Como chegar
                 </Link>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to=""
                 >
@@ -105,12 +109,14 @@ export default function ExperienciaZissouMobile() {
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to=""
                 >
                   Como chegar
                 </Link>
                 <Link
+                  reloadDocument
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to=""
                 >
@@ -133,12 +139,14 @@ export default function ExperienciaZissouMobile() {
             </div>
             <div className={styles.ExperienciaZissouStoreLinks}>
               <Link
+                reloadDocument
                 className={styles.ExperienciaZissouRightStoreHowToArrive}
                 to=""
               >
                 Como chegar
               </Link>
               <Link
+                reloadDocument
                 className={styles.ExperienciaZissouRightStoreScheduleHere}
                 to=""
               >
