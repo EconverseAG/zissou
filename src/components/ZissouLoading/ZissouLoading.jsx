@@ -16,6 +16,7 @@ function ZissouLoading() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        transition: '0.3s',
       }}
     >
       <Image src={LoadingAnimation} width={500} height={500} />

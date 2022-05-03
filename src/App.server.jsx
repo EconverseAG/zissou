@@ -14,8 +14,10 @@ function App({routes}) {
         <CartProvider>
           <DefaultSeo />
           <Router>
-            <FileRoutes routes={routes} />
-            <Route path="*" page={<NotFound />} />
+            <Suspense fallback={<ZissouLoading />}>
+              <FileRoutes routes={routes} />
+              <Route path="*" page={<NotFound />} />
+            </Suspense>
           </Router>
         </CartProvider>
       </ShopifyProvider>

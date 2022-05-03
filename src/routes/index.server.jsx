@@ -18,8 +18,8 @@ import ZissouLoading from '../components/ZissouLoading';
 
 export default function Index() {
   return (
-    <Suspense fallback={<ZissouLoading />}>
-      <Layout>
+    <Layout>
+      <Suspense fallback={<ZissouLoading />}>
         <CinematographyBanner />
         <SleepAndLive />
         <ChooseYourDestiny />
@@ -33,7 +33,7 @@ export default function Index() {
         <CoralOrBlue />
         <Klabin />
         <FamiliaZissou />
-      </Layout>
-    </Suspense>
+      </Suspense>
+    </Layout>
   );
 }
