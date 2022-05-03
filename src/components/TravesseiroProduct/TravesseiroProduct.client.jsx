@@ -2,6 +2,9 @@ import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
 import ZissouAddToCart from '../ZissouAddToCart';
 import TravesseiroSpecialOptions from '../TravesseiroSpecialOptions';
+import ProductSection from '../ProductSection';
+import ProductSectionLeft from '../ProductSection/ProductSectionLeft';
+import ProductSectionRight from '../ProductSection/ProductSectionRight';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -11,10 +14,12 @@ function TravesseiroProduct() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      <div className={styles.productLeft}>
+    <ProductSection
+      className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
+    >
+      <ProductSectionLeft>
         <ZissouProductImages
-          className={styles.productImages}
+          className={styles.Images}
           title="A conectada. O tranquilão. A preguiçosa.
   O resmungão. Cada um tem o seu jeito de dormir.
   Com o Travesseiro Zissou, você define o conforto
@@ -22,19 +27,17 @@ function TravesseiroProduct() {
   às curvas do seu corpo dentro da capa que
   mantém o frescor com toque suave e macio."
         />
-      </div>
-      <div className={styles.productInfo}>
-        <span>
+      </ProductSectionLeft>
+      <ProductSectionRight>
+        <span className={styles.contentDisclaimer}>
           Seu Travesseiro contém:
           <br /> 1 bag, 1 capa com enchimento e 3 camadas
         </span>
-        <ZissouProductPrice className={styles.productInfoPrice} />
-        <TravesseiroSpecialOptions
-          className={styles.productInfoSpecialOptions}
-        />
-        <ZissouAddToCart className={styles.productInfoAddToCart} />
-      </div>
-    </div>
+        <ZissouProductPrice className={styles.Price} />
+        <TravesseiroSpecialOptions className={styles.SpecialOptions} />
+        <ZissouAddToCart className={styles.AddToCart} />
+      </ProductSectionRight>
+    </ProductSection>
   );
 }
 

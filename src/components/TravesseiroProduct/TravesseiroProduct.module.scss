@@ -1,65 +1,37 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  gap: 16px;
-  padding-block: 140px 184px;
-  font-family: ZonaPro;
-
-  .productImages {
+  .Images {
     h2 {
       max-width: 408px;
       font-weight: 400;
     }
   }
 
-  .productShipping {
-    margin-top: 126px;
+  .contentDisclaimer {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #707070;
   }
 
-  .productInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .Price {
+    margin-top: 60px;
+  }
 
-    > span {
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      color: #707070;
-    }
+  .SpecialOptions {
+    margin-top: 20px;
+  }
 
-    &Price {
-      margin-top: 60px;
-    }
-
-    &SpecialOptions {
-      margin-top: 20px;
-    }
-
-    &AddToCart {
-      margin-top: 46px;
-    }
+  .AddToCart {
+    margin-top: 46px;
   }
 
   &.mobile {
-    display: block;
-    padding-block: 13px 37px;
-
-    .productShipping {
-      margin-top: 30px;
+    .Price {
+      margin-top: 38px;
     }
 
-    .productInfo {
-      padding-inline: 16px;
-      margin-top: 20px;
-
-      &Price {
-        margin-top: 38px;
-      }
-
-      &AddToCart {
-        margin-top: 24px;
-      }
+    .AddToCart {
+      margin-top: 24px;
     }
   }
 }
