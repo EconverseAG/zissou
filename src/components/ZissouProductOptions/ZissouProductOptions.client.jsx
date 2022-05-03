@@ -23,13 +23,12 @@ function ZissouProductOptions({
   className,
   ...rest
 }) {
-  const {isCoral, isColchao} = useZissouProduct();
-
   const [isOpen, setIsOpen] = useState(false);
 
-  const {isMobile} = useMobile();
-
+  const {isCoral, isColchao} = useZissouProduct();
   const {options, setSelectedOption, selectedOptions} = useProduct();
+
+  const {isMobile} = useMobile();
 
   const handleSelection = useCallback(
     (name, value) => {
