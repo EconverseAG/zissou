@@ -26,13 +26,13 @@ function ZissouProductOptions({
   const [isOpen, setIsOpen] = useState(false);
 
   const {isCoral, isColchao} = useZissouProduct();
-  const {options, setSelectedOption, selectedOptions} = useProduct();
+  const {variants, setSelectedOption, selectedVariant} = useProduct();
 
   const {isMobile} = useMobile();
 
   const handleSelection = useCallback(
-    (name, value) => {
-      setSelectedOption(name, value);
+    (selectedOptions) => {
+      setSelectedOption(selectedOptions[0].name, selectedOptions[0].value);
       setIsOpen(false);
     },
     [setSelectedOption],
@@ -86,17 +86,13 @@ function ZissouProductOptions({
     const splittedName = name.split('(');
 
     if (splittedName.length <= 1 || !splittedName[0])
-      return (
-        <p>
-          <strong>{name}</strong>
-        </p>
-      );
+      return <strong>{name}</strong>;
 
     return (
-      <p>
+      <>
         <strong>{splittedName[0]}</strong>
         <span>{splittedName[1].replace(')', '')}</span>
-      </p>
+      </>
     );
   }, []);
 
@@ -116,50 +112,50 @@ function ZissouProductOptions({
           {title}
         </h2>
       )}
-      {options?.map(({name, values}) => (
-        <fieldset
-          className={`${styles.select} ${
+      <fieldset
+        className={`${styles.select} ${
+          !isCoral && isColchao && styles.selectBlue
+        }`}
+        key={name}
+      >
+        <button
+          className={`${styles.selectOpen} ${
             !isCoral && isColchao && styles.selectBlue
           }`}
-          key={name}
+          onClick={() => setIsOpen(true)}
         >
-          <button
-            className={`${styles.selectOpen} ${
+          {renderIcon(selectedVariant?.selectedOptions[0].value)}
+          <p>
+            {renderFormattedName(selectedVariant?.selectedOptions[0].value)}
+          </p>
+          <span
+            className={`${styles.selectOpenArrow} ${
               !isCoral && isColchao && styles.selectBlue
             }`}
-            onClick={() => setIsOpen(true)}
           >
-            {renderIcon(selectedOptions[name])}
-            {renderFormattedName(selectedOptions[name])}
-            <span
-              className={`${styles.selectOpenArrow} ${
-                !isCoral && isColchao && styles.selectBlue
-              }`}
-            >
-              <Image src={DropdownArrow} width={26} height={13} />
-            </span>
-          </button>
-          {info && <span className={styles.info}>{info}</span>}
-          {isOpen && (
-            <div
-              className={`${styles.selectDropdown} ${
-                !isCoral && isColchao && styles.selectBlue
-              }`}
-            >
-              {values?.map((value) => (
-                <button
-                  key={value}
-                  onClick={() => handleSelection(name, value)}
-                  className={styles.selectDropdownOption}
-                >
-                  {renderIcon(value)}
-                  {renderFormattedName(value)}
-                </button>
-              ))}
-            </div>
-          )}
-        </fieldset>
-      ))}
+            <Image src={DropdownArrow} width={26} height={13} />
+          </span>
+        </button>
+        {info && <span className={styles.info}>{info}</span>}
+        {isOpen && (
+          <div
+            className={`${styles.selectDropdown} ${
+              !isCoral && isColchao && styles.selectBlue
+            }`}
+          >
+            {variants?.map(({id, selectedOptions}) => (
+              <button
+                key={id}
+                onClick={() => handleSelection(selectedOptions)}
+                className={styles.selectDropdownOption}
+              >
+                {renderIcon(selectedOptions[0]?.value)}
+                <p>{renderFormattedName(selectedOptions[0]?.value)}</p>
+              </button>
+            ))}
+          </div>
+        )}
+      </fieldset>
     </div>
   );
 }

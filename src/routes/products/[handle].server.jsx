@@ -23,6 +23,16 @@ const idCoralHybrid = `gid://shopify/Product/6587140604098`;
 export default function Product({country = {isoCode: 'US'}}) {
   const {handle} = useRouteParams();
 
+  const useProductQueryById = (id) =>
+    useShopQuery({
+      query: QUERY_PRODUCT_BY_ID,
+      variables: {
+        id,
+        country: country.isoCode,
+      },
+      preload: true,
+    });
+
   const baseProduct = useShopQuery({
     query: QUERY,
     variables: {
@@ -32,86 +42,17 @@ export default function Product({country = {isoCode: 'US'}}) {
     preload: true,
   });
 
-  const travesseiroWashable = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idTravesseiroWashable,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const travesseiroWashableCustom = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idTravesseiroWashableCustom,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const duvetFilling = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idDuvetFilling,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const grayDuvetCover = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idGrayDuvetCover,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const whiteDuvetCover = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idWhiteDuvetCover,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const grayLencol = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idGrayLencol,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const whiteLencol = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idWhiteLencol,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const base = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idBase,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
-
-  const coralHybrid = useShopQuery({
-    query: QUERY_PRODUCT_BY_ID,
-    variables: {
-      id: idCoralHybrid,
-      country: country.isoCode,
-    },
-    preload: true,
-  });
+  const travesseiroWashable = useProductQueryById(idTravesseiroWashable);
+  const travesseiroWashableCustom = useProductQueryById(
+    idTravesseiroWashableCustom,
+  );
+  const duvetFilling = useProductQueryById(idDuvetFilling);
+  const grayDuvetCover = useProductQueryById(idGrayDuvetCover);
+  const whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
+  const grayLencol = useProductQueryById(idGrayLencol);
+  const whiteLencol = useProductQueryById(idWhiteLencol);
+  const base = useProductQueryById(idBase);
+  const coralHybrid = useProductQueryById(idCoralHybrid);
 
   if (!baseProduct) {
     return <NotFound />;
