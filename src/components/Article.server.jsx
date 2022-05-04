@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import {useShopQuery, CacheDays, Link} from '@shopify/hydrogen';
+import {useShopQuery, CacheDays} from '@shopify/hydrogen';
 
 export default function Article({params, pathname}) {
   const articleHandle = params.handle;
@@ -25,7 +25,6 @@ export default function Article({params, pathname}) {
       <article
         dangerouslySetInnerHTML={{__html: article.contentHtml}}
       ></article>
-      <Link to="/blogs">Back</Link>
     </>
   );
 }

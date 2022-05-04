@@ -20,10 +20,11 @@ export default function ArticlesIndex() {
   });
 
   const articles = flattenConnection(data.blog.articles);
+  const title = data.blog.title;
 
   return (
     <>
-      <h1>Articles</h1>
+      <h1>{title}</h1>
       {articles.map((article) => (
         <Link
           to={`/blogs/${encodeURIComponent(
@@ -42,7 +43,11 @@ const ARTICLES_QUERY = gql`
   query blogQuery($handle: String) {
     blog(handle: $handle) {
       id
-      articles(first: 5) {
+      title
+      seo {
+        description
+      }
+      articles(first: 6) {
         edges {
           node {
             title
@@ -50,6 +55,12 @@ const ARTICLES_QUERY = gql`
             blog {
               handle
             }
+            image {
+              url
+              width
+              height
+            }
+            excerpt
           }
         }
       }
