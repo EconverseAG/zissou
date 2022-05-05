@@ -12,7 +12,9 @@ import ShelfBlue from '../../components/ShelfBlue/ShelfBlue.client';
 const idCoral = `gid://shopify/Product/6581615460546`;
 const idBlue = `gid://shopify/Product/6581615362242`;
 
-export default function PhaseOut({country = {isoCode: 'US'}}) {
+export default function PhaseOut({country = {isoCode: 'US'}, response}) {
+  response.cache(CacheDays());
+
   const coral = useShopQuery({
     query: QUERY_PRODUCT_BY_ID,
     variables: {

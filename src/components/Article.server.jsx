@@ -1,9 +1,11 @@
 import gql from 'graphql-tag';
 import {useShopQuery, CacheDays} from '@shopify/hydrogen';
 
-export default function Article({params, pathname}) {
+export default function Article({params, pathname, response}) {
   const articleHandle = params.handle;
   const blogHandle = pathname.split('/')[2];
+
+  response.cache(CacheDays());
 
   const {
     data: {blog},

@@ -15,8 +15,11 @@ import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
 import Klabin from '../components/Klabin/Klabin.client';
 import FamiliaZissou from '../components/FamiliaZissou/FamiliaZissou.client';
 import ZissouLoading from '../components/ZissouLoading';
+import {CacheDays} from '@shopify/hydrogen';
 
-export default function Index() {
+export default function Index({response}) {
+  response.cache(CacheDays());
+
   return (
     <Layout>
       <Suspense fallback={<ZissouLoading />}>
