@@ -1,5 +1,5 @@
 import {Suspense, lazy} from 'react';
-import {useShopQuery, Seo, useRouteParams} from '@shopify/hydrogen';
+import {useShopQuery, Seo, useRouteParams, CacheDays} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
 import NotFound from '../../components/NotFound.server';
@@ -20,8 +20,9 @@ const idWhiteLencol = `gid://shopify/Product/2135741923401`;
 const idBase = `gid://shopify/Product/7145404399810`;
 const idCoralHybrid = `gid://shopify/Product/6587140604098`;
 
-export default function Product({country = {isoCode: 'US'}}) {
+export default function Product({country = {isoCode: 'US'}, response}) {
   const {handle} = useRouteParams();
+  response.cache(CacheDays());
 
   const useProductQueryById = (id) =>
     useShopQuery({
@@ -31,6 +32,7 @@ export default function Product({country = {isoCode: 'US'}}) {
         country: country.isoCode,
       },
       preload: true,
+      cache: CacheDays(),
     });
 
   const baseProduct = useShopQuery({
@@ -40,6 +42,7 @@ export default function Product({country = {isoCode: 'US'}}) {
       handle,
     },
     preload: true,
+    cache: CacheDays(),
   });
 
   const travesseiroWashable = useProductQueryById(idTravesseiroWashable);

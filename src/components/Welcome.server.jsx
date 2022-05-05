@@ -1,4 +1,9 @@
-import {useShopQuery, flattenConnection, Link} from '@shopify/hydrogen';
+import {
+  useShopQuery,
+  flattenConnection,
+  Link,
+  CacheDays,
+} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 import {Suspense} from 'react';
 
@@ -86,7 +91,11 @@ function StorefrontInfo() {
 }
 
 function TemplateLinks() {
-  const {data} = useShopQuery({query: QUERY, preload: true});
+  const {data} = useShopQuery({
+    query: QUERY,
+    preload: true,
+    cache: CacheDays(),
+  });
   const products = data && flattenConnection(data.products);
   const collections = data && flattenConnection(data.collections);
 

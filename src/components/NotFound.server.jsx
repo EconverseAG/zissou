@@ -1,4 +1,4 @@
-import {useShopQuery, flattenConnection} from '@shopify/hydrogen';
+import {useShopQuery, flattenConnection, CacheDays} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
 import Layout from './Layout.server';
@@ -40,6 +40,7 @@ export default function NotFound({country = {isoCode: 'US'}, response}) {
     variables: {
       country: country.isoCode,
     },
+    cache: CacheDays(),
   });
   const products = data ? flattenConnection(data.products) : [];
 

@@ -1,4 +1,4 @@
-import {useShopQuery} from '@shopify/hydrogen';
+import {CacheDays, useShopQuery} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
 import Layout from '../../components/Layout.server';
@@ -29,6 +29,7 @@ export default function PhaseOut({country = {isoCode: 'US'}}) {
       country: country.isoCode,
     },
     preload: true,
+    cache: CacheDays(),
   });
 
   return (
