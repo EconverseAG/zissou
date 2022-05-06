@@ -5,4 +5,4 @@ spec:
     dockerfile_path: Dockerfile
     git:
       branch: master
-      repo_clone_url: git@bitbucket.org:econverse-ag/zissou-hydrogen.git
+      repo_clone_url: git@github.com:pedropiramo/zissou-hydrogen.git
