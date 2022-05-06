@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 import {useShopQuery, CacheDays} from '@shopify/hydrogen';
+import Layout from './Layout.server';
 
 export default function Article({params, pathname, response}) {
   const articleHandle = params.handle;
@@ -20,14 +21,15 @@ export default function Article({params, pathname, response}) {
   });
 
   const article = blog.articles.edges[0].node;
+  console.log('>>> article', article);
 
   return (
-    <>
+    <Layout>
       <h1>{article.title}</h1>
       <article
         dangerouslySetInnerHTML={{__html: article.contentHtml}}
       ></article>
-    </>
+    </Layout>
   );
 }
 
