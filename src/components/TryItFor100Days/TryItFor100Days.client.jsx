@@ -24,9 +24,7 @@ export default function TryItFor100Days() {
             entrega expressa e <br /> frete grátis para todo o Brasil!
           </p>
         </span>
-        <Link reloadDocument to="/pages/100dias">
-          Saiba mais
-        </Link>
+        <Link to="/pages/100dias">Saiba mais</Link>
       </div>
       <div className={styles.TryItRight}>
         <Image src={Gif100Dias} width="483" height="429" />

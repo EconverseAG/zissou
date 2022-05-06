@@ -110,7 +110,6 @@ function TemplateLinks() {
       <ul>
         <li className="mb-4">
           <Link
-            reloadDocument
             to={`/collections/${firstCollection}`}
             className="text-md font-medium text-blue-700 hover:underline"
           >
@@ -119,7 +118,6 @@ function TemplateLinks() {
         </li>
         <li className="mb-4">
           <Link
-            reloadDocument
             to={`/products/${firstProduct}`}
             className="text-md font-medium text-blue-700 hover:underline"
           >
@@ -128,7 +126,6 @@ function TemplateLinks() {
         </li>
         <li>
           <Link
-            reloadDocument
             to="/error-page"
             className="text-md font-medium text-blue-700 hover:underline"
           >

@@ -52,6 +52,7 @@ export default function Header({collections, storeName}) {
 
   return (
     <Suspense fallback={<ZissouLoading />}>
+      <styles.StyleTag />
       <header
         className={styles.container}
         style={{
@@ -74,12 +75,12 @@ export default function Header({collections, storeName}) {
               isOpen={isMobileNavOpen}
               setIsOpen={setIsMobileNavOpen}
             />
-            <Link reloadDocument className={styles.logo} to="/">
+            <Link className={styles.logo} to="/">
               <Image src={LogoZissou} height="60" width="34" />
             </Link>
             <Navigation collections={collections} storeName={storeName} />
             <div className={styles.buyOptions}>
-              <Link reloadDocument to="/casa-zissou" className={styles.stores}>
+              <Link to="/casa-zissou" className={styles.stores}>
                 Lojas
               </Link>
               <Link to="https://api.whatsapp.com/send?phone=5511932858213">

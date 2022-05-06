@@ -43,7 +43,7 @@ export default function CinematographyBanner() {
           bannerFiltered.map((banner) => {
             return (
               <>
-                <Link reloadDocument key={banner.link} to={banner.link}>
+                <Link key={banner.link} to={banner.link}>
                   <video
                     className={styles.video}
                     src={banner.banner}
@@ -53,11 +53,7 @@ export default function CinematographyBanner() {
                   />
                 </Link>
 
-                <Link
-                  reloadDocument
-                  to={banner.link}
-                  className={styles.buttonCTA}
-                >
+                <Link to={banner.link} className={styles.buttonCTA}>
                   {banner.CTA}
                 </Link>
               </>
