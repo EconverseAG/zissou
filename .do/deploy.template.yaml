@@ -1,8 +1,0 @@
-spec:
-  name: zissou-hydrogen
-  services:
-  - name: zissou-hydrogen
-    dockerfile_path: Dockerfile
-    git:
-      branch: master
-      repo_clone_url: git@github.com:pedropiramo/zissou-hydrogen.git
