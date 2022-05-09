@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {Suspense, lazy} from 'react';
 import {useShopQuery, Seo, useRouteParams, CacheDays} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
@@ -31,7 +32,6 @@ export default function Product({country = {isoCode: 'US'}, response}) {
         id,
         country: country.isoCode,
       },
-      preload: true,
       cache: CacheDays(),
     });
 
@@ -41,21 +41,41 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       country: country.isoCode,
       handle,
     },
-    preload: true,
     cache: CacheDays(),
   });
 
-  const travesseiroWashable = useProductQueryById(idTravesseiroWashable);
-  const travesseiroWashableCustom = useProductQueryById(
-    idTravesseiroWashableCustom,
-  );
-  const duvetFilling = useProductQueryById(idDuvetFilling);
-  const grayDuvetCover = useProductQueryById(idGrayDuvetCover);
-  const whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
-  const grayLencol = useProductQueryById(idGrayLencol);
-  const whiteLencol = useProductQueryById(idWhiteLencol);
-  const base = useProductQueryById(idBase);
-  const coralHybrid = useProductQueryById(idCoralHybrid);
+  let travesseiroWashable,
+    travesseiroWashableCustom,
+    duvetFilling,
+    grayDuvetCover,
+    whiteDuvetCover,
+    grayLencol,
+    whiteLencol,
+    coralHybrid,
+    base;
+
+  switch (handle) {
+    case 'travesseiro-zissou':
+      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
+      travesseiroWashableCustom = useProductQueryById(
+        idTravesseiroWashableCustom,
+      );
+      break;
+    case 'colchao-zissou-coral-original':
+      coralHybrid = useProductQueryById(idCoralHybrid);
+      break;
+    case 'duvet-zissou':
+      duvetFilling = useProductQueryById(idDuvetFilling);
+      grayDuvetCover = useProductQueryById(idGrayDuvetCover);
+      whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
+      break;
+    case 'lencol-zissou':
+      grayLencol = useProductQueryById(idGrayLencol);
+      whiteLencol = useProductQueryById(idWhiteLencol);
+      break;
+    case 'base-zissou':
+      base = useProductQueryById(idBase);
+  }
 
   if (!baseProduct) {
     return <NotFound />;
@@ -66,16 +86,16 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       <Seo type="product" data={baseProduct.data.product} />
       <Suspense fallback={<ZissouLoading />}>
         <ProductDetails
-          travesseiroWashable={travesseiroWashable.data.product}
-          travesseiroWashableCustom={travesseiroWashableCustom.data.product}
-          duvetFilling={duvetFilling.data.product}
-          grayDuvetCover={grayDuvetCover.data.product}
-          whiteDuvetCover={whiteDuvetCover.data.product}
-          grayLencol={grayLencol.data.product}
-          whiteLencol={whiteLencol.data.product}
-          base={base.data.product}
-          coralHybrid={coralHybrid.data.product}
-          product={baseProduct.data.product}
+          travesseiroWashable={travesseiroWashable?.data.product}
+          travesseiroWashableCustom={travesseiroWashableCustom?.data.product}
+          duvetFilling={duvetFilling?.data.product}
+          grayDuvetCover={grayDuvetCover?.data.product}
+          whiteDuvetCover={whiteDuvetCover?.data.product}
+          grayLencol={grayLencol?.data.product}
+          whiteLencol={whiteLencol?.data.product}
+          base={base?.data.product}
+          coralHybrid={coralHybrid?.data.product}
+          product={baseProduct?.data.product}
         />
       </Suspense>
     </Layout>
@@ -96,9 +116,6 @@ const QUERY_PRODUCT_BY_ID = gql`
           amount
         }
       }
-      description
-      descriptionHtml
-      handle
       id
       media(first: 6) {
         edges {
@@ -111,29 +128,6 @@ const QUERY_PRODUCT_BY_ID = gql`
                 altText
                 width
                 height
-              }
-            }
-            ... on Video {
-              mediaContentType
-              id
-              previewImage {
-                url
-              }
-              sources {
-                mimeType
-                url
-              }
-            }
-            ... on Model3d {
-              mediaContentType
-              id
-              alt
-              mediaContentType
-              previewImage {
-                url
-              }
-              sources {
-                url
               }
             }
           }
@@ -177,12 +171,8 @@ const QUERY_PRODUCT_BY_ID = gql`
           amount
         }
       }
-      seo {
-        description
-        title
-      }
       title
-      variants(first: 250) {
+      variants(first: 20) {
         edges {
           node {
             availableForSale
@@ -236,21 +226,9 @@ const QUERY_PRODUCT_BY_ID = gql`
             }
             sku
             title
-            unitPrice {
-              amount
-              currencyCode
-            }
-            unitPriceMeasurement {
-              measuredType
-              quantityUnit
-              quantityValue
-              referenceUnit
-              referenceValue
-            }
           }
         }
       }
-      vendor
     }
   }
 `;
@@ -269,9 +247,6 @@ const QUERY = gql`
           amount
         }
       }
-      description
-      descriptionHtml
-      handle
       id
       media(first: 6) {
         edges {
@@ -284,29 +259,6 @@ const QUERY = gql`
                 altText
                 width
                 height
-              }
-            }
-            ... on Video {
-              mediaContentType
-              id
-              previewImage {
-                url
-              }
-              sources {
-                mimeType
-                url
-              }
-            }
-            ... on Model3d {
-              mediaContentType
-              id
-              alt
-              mediaContentType
-              previewImage {
-                url
-              }
-              sources {
-                url
               }
             }
           }
@@ -350,12 +302,8 @@ const QUERY = gql`
           amount
         }
       }
-      seo {
-        description
-        title
-      }
       title
-      variants(first: 250) {
+      variants(first: 20) {
         edges {
           node {
             availableForSale
@@ -409,21 +357,9 @@ const QUERY = gql`
             }
             sku
             title
-            unitPrice {
-              amount
-              currencyCode
-            }
-            unitPriceMeasurement {
-              measuredType
-              quantityUnit
-              quantityValue
-              referenceUnit
-              referenceValue
-            }
           }
         }
       }
-      vendor
     }
   }
 `;

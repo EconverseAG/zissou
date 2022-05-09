@@ -14,7 +14,7 @@ import IconPayment from '../../assets/shopifyPayments.png';
 /**
  * A server component that specifies the content of the footer on the website
  */
-export default function Footer(/*{collection, product}*/) {
+export default function Footer() {
   return (
     <>
       <styles.StyleTag />
