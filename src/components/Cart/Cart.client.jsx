@@ -27,7 +27,7 @@ export default function Cart() {
   const {totalQuantity} = useCart();
 
   return (
-    <div>
+    <>
       <Dialog open={isCartOpen} onClose={closeCart}>
         <Dialog.Overlay className={styles.cartOverlay} />
         <div className={styles.cartContainer}>
@@ -43,7 +43,7 @@ export default function Cart() {
           )}
         </div>
       </Dialog>
-    </div>
+    </>
   );
 }
 

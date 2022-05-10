@@ -6,6 +6,7 @@ import Travesseiro from './Product/Travesseiro.client';
 import Lencol from './Product/Lencol.client';
 import Duvet from './Product/Duvet.client';
 import {ZissouProductProvider} from '../hooks/useZissouProduct';
+import {useRouteParams} from '@shopify/hydrogen/client';
 
 export default function ProductDetails({
   product,
@@ -19,7 +20,7 @@ export default function ProductDetails({
   base,
   coralHybrid,
 }) {
-  const {title} = product;
+  const {handle} = useRouteParams();
 
   const [isColchao, setIsColchao] = useState(false);
   const [isBase, setIsBase] = useState(false);
@@ -28,18 +29,24 @@ export default function ProductDetails({
   const [isDuvet, setIsDuvet] = useState(false);
 
   useEffect(() => {
-    if (title.includes('Colchão')) {
-      setIsColchao(true);
-    } else if (title.includes('Base')) {
-      setIsBase(true);
-    } else if (title.includes('Travesseiro')) {
-      setIsTravesseiro(true);
-    } else if (title.includes('Lençol')) {
-      setIsLencol(true);
-    } else if (title.includes('Duvet')) {
-      setIsDuvet(true);
+    switch (handle) {
+      case 'colchao-zissou-coral-original' || 'colchao-zissou-blue':
+        setIsColchao(true);
+        break;
+      case 'duvet-zissou':
+        setIsDuvet(true);
+        break;
+      case 'jogo-de-lencol-zissou':
+        setIsLencol(true);
+        break;
+      case 'base-zissou':
+        setIsBase(true);
+        break;
+      case 'travesseiro-zissou':
+        setIsTravesseiro(true);
+        break;
     }
-  }, [title]);
+  }, [handle]);
 
   return (
     <>

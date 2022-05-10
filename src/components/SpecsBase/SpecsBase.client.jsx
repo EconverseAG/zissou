@@ -24,7 +24,7 @@ export default function SpecsBase() {
   return (
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
-      data-currentContent={currentContent}
+      data-currentcontent={currentContent}
     >
       <div className={styles.nav}>
         <span

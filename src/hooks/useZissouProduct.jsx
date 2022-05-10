@@ -112,7 +112,8 @@ function ZissouProductProvider({
       }}
     >
       <ProductProvider data={product}>
-        <BuyTogetherProvider>{children}</BuyTogetherProvider>
+        {/* <BuyTogetherProvider>{children}</BuyTogetherProvider> */}
+        {children}
       </ProductProvider>
     </ZissouProductContext.Provider>
   );

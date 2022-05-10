@@ -45,6 +45,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeBase}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -87,6 +88,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeTwoWashableTravesseiros}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -117,6 +119,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeLencol}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${

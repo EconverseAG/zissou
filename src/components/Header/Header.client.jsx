@@ -52,14 +52,13 @@ export default function Header({collections, storeName}) {
 
   return (
     <Suspense fallback={<ZissouLoading />}>
-      <styles.StyleTag />
       <header
         className={styles.container}
         style={{
           background: isScrolled
             ? '#415264'
             : 'linear-gradient(180deg,rgba(0,0,0,.65) 0,rgba(0,0,0,0) 90%)',
-          paddingBottom: isScrolled ? '0' : '',
+          paddingBottom: isScrolled ? '0' : 'unset',
         }}
       >
         <div
