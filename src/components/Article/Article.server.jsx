@@ -1,6 +1,10 @@
 import gql from 'graphql-tag';
-import {useShopQuery, CacheDays} from '@shopify/hydrogen';
-import Layout from './Layout.server';
+import {useShopQuery, CacheDays, Image} from '@shopify/hydrogen';
+import Layout from '../Layout.server';
+
+import Privacy from '../../assets/privacy_policy.png';
+
+import * as styles from './Article.module.scss';
 
 export default function Article({params, pathname, response}) {
   const articleHandle = params.handle;
@@ -21,14 +25,19 @@ export default function Article({params, pathname, response}) {
   });
 
   const article = blog.articles.edges[0].node;
-  console.log('>>> article', article);
 
   return (
     <Layout>
-      <h1>{article.title}</h1>
-      <article
-        dangerouslySetInnerHTML={{__html: article.contentHtml}}
-      ></article>
+      <styles.StyleTag />
+      <div className={styles.PrivacyContentImage}>
+        <Image src={Privacy} width={1920} height={200} />
+      </div>
+      <div className={styles.ArticleContainer}>
+        <h1 className={styles.ArticleTitle}>{article.title}</h1>
+        <article
+          dangerouslySetInnerHTML={{__html: article.contentHtml}}
+        ></article>
+      </div>
     </Layout>
   );
 }

@@ -1,0 +1,42 @@
+.PrivacyContentImage {
+  max-height: 200px;
+
+  img {
+    object-fit: cover;
+    height: 200px;
+  }
+}
+
+.ArticleContainer {
+  max-width: 1200px;
+  margin: 80px auto 80px;
+
+  .ArticleTitle {
+    color: var(--coral-color-500);
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    font-family: 'ZonaPro';
+    letter-spacing: 1px;
+  }
+
+  article {
+    h2 {
+      text-align: unset !important;
+    }
+
+    a, span, strong {
+      font-family: 'ZonaPro';
+      font-size: 16px;
+      line-height: 21px;
+      color:#6e6d6d;
+      letter-spacing: 1px;
+    }
+
+    strong {
+      font-family: 'ZonaProBold';
+    }
+  }
+}
