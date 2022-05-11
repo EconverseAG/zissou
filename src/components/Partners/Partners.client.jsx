@@ -1,10 +1,10 @@
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
 
-import Fasano from '../../assets/logo_Fasano.png';
-import FastShop from '../../assets/logo_Fast.png';
-import Breton from '../../assets/logo_Breton.png';
-import Ornare from '../../assets/logo_Ornare.png';
+import Fasano from '../../assets/logo_Fasano.webp';
+import FastShop from '../../assets/logo_Fast.webp';
+import Breton from '../../assets/logo_Breton.webp';
+import Ornare from '../../assets/logo_Ornare.webp';
 
 import useMobile from '../../hooks/useMobile';
 

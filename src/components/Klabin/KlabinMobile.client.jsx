@@ -62,6 +62,7 @@ export default function KlabinMobile() {
               src={leftBrandActive ? KlabinActive : KlabinInactive}
               width="53"
               height="38"
+              loading={'lazy'}
             />
           </button>
           <button
@@ -76,6 +77,7 @@ export default function KlabinMobile() {
               src={!leftBrandActive ? ZissouActive : ZissouInactive}
               width="77"
               height="20"
+              loading={'lazy'}
             />
           </button>
         </div>
@@ -88,6 +90,7 @@ export default function KlabinMobile() {
               width="297"
               height="481"
               style={{height: 481}}
+              loading={'lazy'}
             />
           )}
           <div

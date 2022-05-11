@@ -5,19 +5,19 @@ import Slider from 'react-slick/lib/slider';
 
 import * as styles from './banners.module.scss';
 
-import Banner1 from '../../../assets/slick_lojas_1.png';
-import Banner2 from '../../../assets/slick_lojas_2.png';
-import Banner3 from '../../../assets/slick_lojas_3.png';
-import Banner4 from '../../../assets/slick_lojas_4.png';
-import Banner5 from '../../../assets/slick_lojas_5.png';
-import Banner6 from '../../../assets/slick_lojas_6.png';
+import Banner1 from '../../../assets/slick_lojas_1.webp';
+import Banner2 from '../../../assets/slick_lojas_2.webp';
+import Banner3 from '../../../assets/slick_lojas_3.webp';
+import Banner4 from '../../../assets/slick_lojas_4.webp';
+import Banner5 from '../../../assets/slick_lojas_5.webp';
+import Banner6 from '../../../assets/slick_lojas_6.webp';
 
-import MobileBanner1 from '../../../assets/slick_lojas_mobile_1.png';
-import MobileBanner2 from '../../../assets/slick_lojas_mobile_2.png';
-import MobileBanner3 from '../../../assets/slick_lojas_mobile_3.png';
-import MobileBanner4 from '../../../assets/slick_lojas_mobile_4.png';
-import MobileBanner5 from '../../../assets/slick_lojas_mobile_5.png';
-import MobileBanner6 from '../../../assets/slick_lojas_mobile_6.png';
+import MobileBanner1 from '../../../assets/slick_lojas_mobile_1.webp';
+import MobileBanner2 from '../../../assets/slick_lojas_mobile_2.webp';
+import MobileBanner3 from '../../../assets/slick_lojas_mobile_3.webp';
+import MobileBanner4 from '../../../assets/slick_lojas_mobile_4.webp';
+import MobileBanner5 from '../../../assets/slick_lojas_mobile_5.webp';
+import MobileBanner6 from '../../../assets/slick_lojas_mobile_6.webp';
 
 export default function Banners() {
   const {isMobile} = useMobile();

@@ -1,7 +1,7 @@
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './DoubtsProductPage.module.scss';
 
-import WhatsApp from '../../../assets/icone-menu-whatsapp-white.png';
+import WhatsApp from '../../../assets/icone-menu-whatsapp-white.webp';
 import useMobile from '../../../hooks/useMobile';
 
 export default function DoubtsProductPage({color}) {

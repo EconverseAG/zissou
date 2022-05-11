@@ -3,13 +3,13 @@ import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './footer.module.scss';
 
 import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.webp';
-import IconInstagram from '../../assets/icone-menu-instagram-white.png';
-import IconFacebook from '../../assets/icone-menu-facebook-white.png';
-import IconYoutube from '../../assets/icone-menu-youtube-white.png';
-import IconTwitter from '../../assets/icone-menu-twitter-white.png';
-import IconZissou from '../../assets/logo-zissou-white.png';
-import IconSecure from '../../assets/shopifySecure.png';
-import IconPayment from '../../assets/shopifyPayments.png';
+import IconInstagram from '../../assets/icone-menu-instagram-white.webp';
+import IconFacebook from '../../assets/icone-menu-facebook-white.webp';
+import IconYoutube from '../../assets/icone-menu-youtube-white.webp';
+import IconTwitter from '../../assets/icone-menu-twitter-white.webp';
+import IconZissou from '../../assets/logo-zissou-white.webp';
+import IconSecure from '../../assets/shopifySecure.webp';
+import IconPayment from '../../assets/shopifyPayments.webp';
 
 /**
  * A server component that specifies the content of the footer on the website

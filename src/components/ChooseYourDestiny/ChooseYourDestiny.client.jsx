@@ -1,12 +1,12 @@
-import Banner_1 from '../../assets/slick_colchao.png';
-import Banner_2 from '../../assets/slick_base.png';
-import Banner_3 from '../../assets/slick_travesseiro.png';
-import Banner_4 from '../../assets/slick_lencol.png';
+import Banner_1 from '../../assets/slick_colchao.webp';
+import Banner_2 from '../../assets/slick_base.webp';
+import Banner_3 from '../../assets/slick_travesseiro.webp';
+import Banner_4 from '../../assets/slick_lencol.webp';
 
-import MobileBanner_1 from '../../assets/mobileBanner_1.png';
-import MobileBanner_2 from '../../assets/mobileBanner_2.png';
-import MobileBanner_3 from '../../assets/mobileBanner_3.png';
-import MobileBanner_4 from '../../assets/mobileBanner_4.png';
+import MobileBanner_1 from '../../assets/mobileBanner_1.webp';
+import MobileBanner_2 from '../../assets/mobileBanner_2.webp';
+import MobileBanner_3 from '../../assets/mobileBanner_3.webp';
+import MobileBanner_4 from '../../assets/mobileBanner_4.webp';
 
 import Slick from '../Slick/Slick.client';
 

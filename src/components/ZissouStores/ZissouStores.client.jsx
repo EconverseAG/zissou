@@ -1,16 +1,16 @@
-import Banner_1 from '../../assets/slick_lojas_1.png';
-import Banner_2 from '../../assets/slick_lojas_2.png';
-import Banner_3 from '../../assets/slick_lojas_3.png';
-import Banner_4 from '../../assets/slick_lojas_4.png';
-import Banner_5 from '../../assets/slick_lojas_5.png';
-import Banner_6 from '../../assets/slick_lojas_6.png';
+import Banner_1 from '../../assets/slick_lojas_1.webp';
+import Banner_2 from '../../assets/slick_lojas_2.webp';
+import Banner_3 from '../../assets/slick_lojas_3.webp';
+import Banner_4 from '../../assets/slick_lojas_4.webp';
+import Banner_5 from '../../assets/slick_lojas_5.webp';
+import Banner_6 from '../../assets/slick_lojas_6.webp';
 
-import MobileBanner_1 from '../../assets/slick_lojas_mobile_1.png';
-import MobileBanner_2 from '../../assets/slick_lojas_mobile_2.png';
-import MobileBanner_3 from '../../assets/slick_lojas_mobile_3.png';
-import MobileBanner_4 from '../../assets/slick_lojas_mobile_4.png';
-import MobileBanner_5 from '../../assets/slick_lojas_mobile_5.png';
-import MobileBanner_6 from '../../assets/slick_lojas_mobile_6.png';
+import MobileBanner_1 from '../../assets/slick_lojas_mobile_1.webp';
+import MobileBanner_2 from '../../assets/slick_lojas_mobile_2.webp';
+import MobileBanner_3 from '../../assets/slick_lojas_mobile_3.webp';
+import MobileBanner_4 from '../../assets/slick_lojas_mobile_4.webp';
+import MobileBanner_5 from '../../assets/slick_lojas_mobile_5.webp';
+import MobileBanner_6 from '../../assets/slick_lojas_mobile_6.webp';
 
 import Slick from '../Slick/Slick.client';
 
