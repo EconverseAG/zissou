@@ -73,7 +73,7 @@ function ZissouProductOptions({
 
       return (
         <div className={styles.selectIcon}>
-          <Image src={icon} width={width} height={height} />
+          <Image src={icon} width={width} height={height} loading={'lazy'} />
         </div>
       );
     },
@@ -133,7 +133,12 @@ function ZissouProductOptions({
               !isCoral && isColchao && styles.selectBlue
             }`}
           >
-            <Image src={DropdownArrow} width={26} height={13} />
+            <Image
+              src={DropdownArrow}
+              width={26}
+              height={13}
+              loading={'lazy'}
+            />
           </span>
         </button>
         {info && <span className={styles.info}>{info}</span>}

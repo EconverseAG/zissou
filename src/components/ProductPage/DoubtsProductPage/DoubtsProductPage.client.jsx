@@ -29,6 +29,7 @@ export default function DoubtsProductPage({color}) {
             src={WhatsApp}
             width={isMobile ? 20 : 30}
             height={isMobile ? 20 : 30}
+            loading={'lazy'}
           />
         </div>
         <strong className={styles.DoubtsProductPageCTA}>

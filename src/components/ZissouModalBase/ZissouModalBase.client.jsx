@@ -63,6 +63,7 @@ export default function ZissouModalBase({setModalOpen}) {
             src={BaseModal}
             width={isMobile ? 284 : 486}
             height={isMobile ? 147 : 300}
+            loading={'lazy'}
           />
           <strong className={styles.ZissouModalBaseImageTitle}>
             Pensada para potencializar ao máximo a experiência de sono dos

@@ -73,6 +73,7 @@ function DuvetInside() {
           src={insideImageSource}
           width={isMobile ? 396 : 973}
           height={isMobile ? 348 : 853}
+          loading={'lazy'}
         />
         <button
           data-info="duvet"

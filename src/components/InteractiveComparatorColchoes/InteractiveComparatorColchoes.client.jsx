@@ -63,6 +63,7 @@ export default function InteractiveComparatorColchoes() {
             width={21}
             height={65}
             draggable={false}
+            loading={'lazy'}
           />
         </button>
       </div>

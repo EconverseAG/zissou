@@ -27,7 +27,7 @@ export default function TryItFor100Days() {
         <Link to="/pages/100dias">Saiba mais</Link>
       </div>
       <div className={styles.TryItRight}>
-        <Image src={Gif100Dias} width="483" height="429" />
+        <Image src={Gif100Dias} width="483" height="429" loading={'lazy'} />
       </div>
     </div>
   );

@@ -26,7 +26,14 @@ export default function BaseTechnical() {
 
   return (
     <div className={`flex ${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      {!isMobile && <Image src={BackgroundImage} width="763" height="540" />}
+      {!isMobile && (
+        <Image
+          src={BackgroundImage}
+          width="763"
+          height="540"
+          loading={'lazy'}
+        />
+      )}
       <div className={`flex flex-col ${styles.content}`}>
         <h2>Informações técnicas</h2>
         <Accordion

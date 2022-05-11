@@ -127,6 +127,7 @@ export default function SpecsCoralSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
               </strong>
               <span
@@ -149,6 +150,7 @@ export default function SpecsCoralSlick() {
             width={isMobile ? 390 : 1980}
             height={700}
             className={styles.SpecsColchaoSlickSecondSliderBackgroundImage}
+            loading={'lazy'}
           />
         </div>
         <div
@@ -171,6 +173,7 @@ export default function SpecsCoralSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
               </strong>
               {isMobile ? null : (
@@ -235,6 +238,7 @@ export default function SpecsCoralSlick() {
             width={isMobile ? 390 : 1980}
             height={700}
             className={styles.SpecsColchaoSlickSecondSliderBackgroundImage}
+            loading={'lazy'}
           />
         </div>
         <div
@@ -258,6 +262,7 @@ export default function SpecsCoralSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
               </strong>
               {isMobile ? (
@@ -296,6 +301,7 @@ export default function SpecsCoralSlick() {
                 src={MulherDeitada}
                 width={isMobile ? 325 : 803}
                 height={isMobile ? 153 : 378}
+                loading={'lazy'}
               />
             </div>
           </div>
@@ -324,12 +330,14 @@ export default function SpecsCoralSlick() {
                 src={isMobile ? SistemaDeSuporte1Mobile : SistemaDeSuporte1}
                 width={isMobile ? '213' : '368'}
                 height={isMobile ? '181' : '305'}
+                loading={'lazy'}
               />
               <Image
                 src={SetaPDP}
                 width="137"
                 height="82"
                 className={styles.seta}
+                loading={'lazy'}
               />
             </div>
             <div
@@ -371,7 +379,7 @@ export default function SpecsCoralSlick() {
             >
               {isMobile ? (
                 <>
-                  <Image src={Legget} width={81} height={63} />
+                  <Image src={Legget} width={81} height={63} loading={'lazy'} />
                   <strong
                     className={
                       styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalBolder
@@ -442,12 +450,14 @@ export default function SpecsCoralSlick() {
                 src={isMobile ? SistemaDeSuporte2Mobile : SistemaDeSuporte2}
                 width={isMobile ? '213' : '368'}
                 height={isMobile ? '181' : '333'}
+                loading={'lazy'}
               />
               <Image
                 src={SetaPDP}
                 width="137"
                 height="82"
                 className={styles.seta}
+                loading={'lazy'}
               />
             </div>
           </div>
@@ -461,6 +471,7 @@ export default function SpecsCoralSlick() {
                 src={ToquePDP}
                 width={isMobile ? 73 : 137}
                 height={isMobile ? 36 : 67}
+                loading={'lazy'}
               />
               <span>Toque suave e macio</span>
             </div>
@@ -469,6 +480,7 @@ export default function SpecsCoralSlick() {
                 src={AquecimentoPDP}
                 width={isMobile ? 48 : 91}
                 height={isMobile ? 43 : 81}
+                loading={'lazy'}
               />
               <span>Previne o aquecimento do corpo</span>
             </div>
@@ -477,6 +489,7 @@ export default function SpecsCoralSlick() {
                 src={BouncePDP}
                 width={isMobile ? 43 : 80}
                 height={isMobile ? 49 : 92}
+                loading={'lazy'}
               />
               <span>
                 Elasticidade moderada que dá aquela ajudinha ao se virar na cama
@@ -488,6 +501,7 @@ export default function SpecsCoralSlick() {
                 src={SetasPDP}
                 width={isMobile ? 48 : 92}
                 height={isMobile ? 40 : 74}
+                loading={'lazy'}
               />
               <span>Alívio dos pontos de pressão</span>
             </div>
@@ -496,6 +510,7 @@ export default function SpecsCoralSlick() {
                 src={SuportePDP}
                 width={isMobile ? 91 : 171}
                 height={isMobile ? 41 : 77}
+                loading={'lazy'}
               />
               <span>Suporte estável e uniforme</span>
             </div>
@@ -504,6 +519,7 @@ export default function SpecsCoralSlick() {
                 src={IsolamentoPDP}
                 width={isMobile ? 119 : 223}
                 height={isMobile ? 35 : 65}
+                loading={'lazy'}
               />
               <span>Isolamento de ondas de movimento</span>
             </div>
@@ -512,6 +528,7 @@ export default function SpecsCoralSlick() {
                 src={AdaptacaoPDP}
                 width={isMobile ? 51 : 96}
                 height={isMobile ? 45 : 85}
+                loading={'lazy'}
               />
               <span>
                 <strong>OPCIONAL:</strong> Adaptação às curvas do corpo na opção
@@ -607,7 +624,12 @@ export default function SpecsCoralSlick() {
               styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
             }
           >
-            <Image src={ColchoesCoral} width={496} height={523} />
+            <Image
+              src={ColchoesCoral}
+              width={496}
+              height={523}
+              loading={'lazy'}
+            />
           </div>
         </div>
       </Slider>

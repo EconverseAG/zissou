@@ -35,7 +35,7 @@ export default function CinematographyBanner() {
   return (
     <div className={styles.videoContainer}>
       <div className={styles.logoHome}>
-        <Image src={Logo} width="265" height="70" />
+        <Image src={Logo} width="265" height="70" loading={'lazy'} />
       </div>
 
       <div className={styles.videoContent}>
@@ -60,7 +60,12 @@ export default function CinematographyBanner() {
             );
           })
         ) : (
-          <Image src={BannerDefault} width="1980" height="890" />
+          <Image
+            src={BannerDefault}
+            width="1980"
+            height="890"
+            loading={'lazy'}
+          />
         )}
       </div>
     </div>

@@ -2,7 +2,7 @@ import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './footer.module.scss';
 
-import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.png';
+import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.webp';
 import IconInstagram from '../../assets/icone-menu-instagram-white.png';
 import IconFacebook from '../../assets/icone-menu-facebook-white.png';
 import IconYoutube from '../../assets/icone-menu-youtube-white.png';

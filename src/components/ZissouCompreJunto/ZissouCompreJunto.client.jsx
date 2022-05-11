@@ -57,6 +57,7 @@ export default function ZissouCompreJunto(props) {
             src={BaseCompreJunto}
             width={isMobile ? 84 : 148}
             height={isMobile ? 35 : 63}
+            loading={'lazy'}
           />
           <button
             className={styles.SeeMore}
@@ -100,6 +101,7 @@ export default function ZissouCompreJunto(props) {
             src={TravesseiroCompreJunto}
             width={isMobile ? 90 : 144}
             height={isMobile ? 47 : 75}
+            loading={'lazy'}
           />
         </div>
         <div className={styles.OptionInfo}>
@@ -131,6 +133,7 @@ export default function ZissouCompreJunto(props) {
             src={LencolCompreJunto}
             width={isMobile ? 80 : 142}
             height={isMobile ? 37 : 65}
+            loading={'lazy'}
           />
         </div>
         <div className={styles.OptionInfo}>

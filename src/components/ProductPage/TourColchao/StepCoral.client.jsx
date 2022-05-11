@@ -66,6 +66,7 @@ function StepCoralContent({content, setModal}) {
         src={modalContent.imageSrc}
         width={isMobile ? 375 : 1980}
         height={isMobile ? 300 : 1080}
+        loading={'lazy'}
       />
     </div>
   );

@@ -32,6 +32,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '285' : '376'}
               height={isMobile ? '310' : '410'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
         </div>
@@ -42,6 +43,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -50,6 +52,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -58,6 +61,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -66,6 +70,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -74,6 +79,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -82,6 +88,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -90,6 +97,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
           <Link to="/">
@@ -98,6 +106,7 @@ export default function Instagram({title, background}) {
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
+              loading={'lazy'}
             />
           </Link>
         </div>

@@ -30,11 +30,13 @@ export default function Partners({color}) {
             src={Fasano}
             width={isMobile ? '77' : '131'}
             height={isMobile ? '23' : '40'}
+            loading={'lazy'}
           />
           <Image
             src={FastShop}
             width={isMobile ? '54' : '85'}
             height={isMobile ? '25' : '40'}
+            loading={'lazy'}
           />
           <Image
             src={Breton}
@@ -45,6 +47,7 @@ export default function Partners({color}) {
             src={Ornare}
             width={isMobile ? '88' : '131'}
             height={isMobile ? '44' : '80'}
+            loading={'lazy'}
           />
         </div>
       </div>

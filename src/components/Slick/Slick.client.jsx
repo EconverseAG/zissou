@@ -54,6 +54,7 @@ export default function Slick(props) {
                   src={!isMobile ? banner.banner : banner.mobileImage}
                   width={!isMobile ? '1400' : '100%'}
                   height={!isMobile ? '650' : '100%'}
+                  loading={'lazy'}
                 />
                 <Link to={banner.link} className={styles.buttonCTA}>
                   {banner.CTA}
