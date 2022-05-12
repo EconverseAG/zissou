@@ -85,7 +85,12 @@ export default function Footer() {
             <ul>
               <li>
                 <Link to="https://www.facebook.com/zissoubr/">
-                  <Image src={IconFacebook} width="18" height="18" />
+                  <Image
+                    src={IconFacebook}
+                    width="18"
+                    height="18"
+                    style={{maxHeight: '18px'}}
+                  />
                 </Link>
                 <Link to="https://www.instagram.com/zissoubr/">
                   <Image src={IconInstagram} width="20" height="21" />

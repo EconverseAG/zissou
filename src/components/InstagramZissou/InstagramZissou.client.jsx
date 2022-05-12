@@ -1,14 +1,14 @@
 import {Image, Link} from '@shopify/hydrogen/client';
 
-import Post1 from '../../assets/post-1.png';
-import Post2 from '../../assets/post-2.png';
-import Post3 from '../../assets/post-3.png';
-import Post4 from '../../assets/post-4.png';
-import Post5 from '../../assets/post-5.png';
-import Post6 from '../../assets/post-6.png';
-import Post7 from '../../assets/post-7.png';
-import Post8 from '../../assets/post-8.png';
-import Post9 from '../../assets/post-9.png';
+import Post1 from '../../assets/post-1.webp';
+import Post2 from '../../assets/post-2.webp';
+import Post3 from '../../assets/post-3.webp';
+import Post4 from '../../assets/post-4.webp';
+import Post5 from '../../assets/post-5.webp';
+import Post6 from '../../assets/post-6.webp';
+import Post7 from '../../assets/post-7.webp';
+import Post8 from '../../assets/post-8.webp';
+import Post9 from '../../assets/post-9.webp';
 
 import * as styles from './InstagramZissou.module.scss';
 

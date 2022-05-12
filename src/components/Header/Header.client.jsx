@@ -79,7 +79,7 @@ export default function Header({collections, storeName}) {
             </Link>
             <Navigation collections={collections} storeName={storeName} />
             <div className={styles.buyOptions}>
-              <Link to="/casa-zissou" className={styles.stores}>
+              <Link to="/pages/casa-zissou" className={styles.stores}>
                 Lojas
               </Link>
               <Link to="https://api.whatsapp.com/send?phone=5511932858213">

@@ -30,7 +30,10 @@ export default function ProductDetails({
 
   useEffect(() => {
     switch (handle) {
-      case 'colchao-zissou-coral-original' || 'colchao-zissou-blue':
+      case 'colchao-zissou-coral-original':
+        setIsColchao(true);
+        break;
+      case 'colchao-zissou-blue':
         setIsColchao(true);
         break;
       case 'duvet-zissou':
