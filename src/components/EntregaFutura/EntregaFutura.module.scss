@@ -1,0 +1,125 @@
+.EntregaFuturaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  max-width: 474px;
+  width: 100%;
+  position: relative;
+
+  .Close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .OpenModal {
+    font-family: 'ZonaProBlack';
+    text-decoration: underline;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    line-height: 23px;
+    text-align: center;
+    color: #717071;
+    text-transform: uppercase;
+  }
+
+  .EntregaModal {
+    background: #ccc1db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 33px;
+    width: 100%;
+
+    &Title {
+      font-family: 'ZonaProBlack';
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      line-height: 18px;
+      text-align: center;
+      color: #415264;
+      margin-bottom: 14px;
+    }
+
+    &Dates {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ThirtyDays {
+        margin-right: 47px;
+      }
+
+      .SixtyDays {
+        margin-left: 47px;
+      }
+
+      .ThirtyDays,
+      .SixtyDays {
+        .DaysTitle {
+          display: block;
+          text-transform: uppercase;
+          font-family: 'ZonaProBold';
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          line-height: 16px;
+          text-align: center;
+          color: #6d6c6c;
+          margin-bottom: 8.5px;
+
+          .Bolder {
+            font-family: 'ZonaProBlack';
+          }
+        }
+
+        .ButtonCTA {
+          width: 160px;
+          height: 52px;
+          border-radius: 26px;
+          background: #d4a8bf;
+          font-family: 'ZonaProBlack';
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          line-height: 16px;
+          text-align: center;
+          color: #fff;
+          text-transform: uppercase;
+
+          &:hover {
+            background: #bb73a9;
+          }
+        }
+      }
+
+      .Line {
+        width: 0px;
+        height: 94px;
+        background: transparent;
+        border: 1px solid #707070;
+      }
+    }
+
+    .LowerDeadline {
+      width: 256px;
+      height: 36px;
+      border-radius: 18px;
+      background: #cadee8;
+      font-family: 'ZonaProBlack';
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      line-height: 18px;
+      text-align: center;
+      color: #415264;
+      text-transform: uppercase;
+      margin-top: 17px;
+
+      &:hover {
+        background: #9ebece;
+      }
+    }
+  }
+}
