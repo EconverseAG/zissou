@@ -11,7 +11,6 @@ const ProductDetails = lazy(() =>
   import('../../components/ProductDetails.client'),
 );
 
-const idDuvetFilling = `gid://shopify/Product/4522066083913`;
 const idTravesseiroWashable = `gid://shopify/Product/4512182992969`;
 const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`;
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`;
@@ -79,22 +78,27 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       coral10Hybrid = useProductQueryById(idCoral10Hybrid);
       coral5 = useProductQueryById(idCoral5);
       coral10 = useProductQueryById(idCoral10);
+      base = useProductQueryById(idBase);
+      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
+      whiteLencol = useProductQueryById(idWhiteLencol);
       break;
     case 'colchao-zissou-blue':
       blue5 = useProductQueryById(idBlue5);
       blue10 = useProductQueryById(idBlue10);
+      base = useProductQueryById(idBase);
+      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
+      whiteLencol = useProductQueryById(idWhiteLencol);
       break;
     case 'duvet-zissou':
-      duvetFilling = useProductQueryById(idDuvetFilling);
       grayDuvetCover = useProductQueryById(idGrayDuvetCover);
       whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
       break;
-    case 'lencol-zissou':
+    case 'jogo-de-lencol-zissou':
       grayLencol = useProductQueryById(idGrayLencol);
       whiteLencol = useProductQueryById(idWhiteLencol);
+      grayDuvetCover = useProductQueryById(idGrayDuvetCover);
+      whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
       break;
-    case 'base-zissou':
-      base = useProductQueryById(idBase);
   }
 
   if (!baseProduct) {
