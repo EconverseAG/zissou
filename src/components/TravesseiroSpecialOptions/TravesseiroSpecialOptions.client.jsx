@@ -12,7 +12,7 @@ import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
 
 function TravesseiroSpecialOptions({className, ...rest}) {
   const {washable, customBag, setCustomBag, setWashable} = useZissouProduct();
-  const {options, setSelectedOption} = useProduct();
+  const {options, selectedOptions, setSelectedOption} = useProduct();
 
   const {isMobile} = useMobile();
 
@@ -37,8 +37,12 @@ function TravesseiroSpecialOptions({className, ...rest}) {
   );
 
   useEffect(() => {
+    const optionToSelect = options[0].values[customBag ? 1 : 0];
+
+    if (optionToSelect === selectedOptions.Tipo) return;
+
     setSelectedOption(options[0].name, options[0].values[customBag ? 1 : 0]);
-  }, [washable, customBag, setSelectedOption, options]);
+  }, [washable, customBag, setSelectedOption, options, selectedOptions]);
 
   return (
     <div
