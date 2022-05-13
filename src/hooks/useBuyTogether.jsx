@@ -65,7 +65,6 @@ function BuyTogetherProvider({children}) {
 
   useEffect(() => {
     const newBuyTogetherItems = [];
-    console.log('>>> Fdsf');
 
     if (isDuvet || isLencol) {
       if (includeGrayDuvetCover) {
@@ -76,8 +75,8 @@ function BuyTogetherProvider({children}) {
         newBuyTogetherItems.push(whiteDuvetCover);
       }
     } else {
-      setIncludeGrayDuvetCover(false);
-      setIncludeWhiteDuvetCover(false);
+      if (includeGrayDuvetCover) setIncludeGrayDuvetCover(false);
+      if (includeWhiteDuvetCover) setIncludeWhiteDuvetCover(false);
 
       if (isColchao) {
         if (includeBase) {
@@ -93,9 +92,10 @@ function BuyTogetherProvider({children}) {
           newBuyTogetherItems.push(travesseiroWashable);
         }
       } else {
-        setIncludeBase(false);
-        setIncludeTwoWashableTravesseiros(false);
-        setIncludeLencol(false);
+        if (includeBase) setIncludeBase(false);
+        if (includeTwoWashableTravesseiros)
+          setIncludeTwoWashableTravesseiros(false);
+        if (includeLencol) setIncludeLencol(false);
       }
     }
 
