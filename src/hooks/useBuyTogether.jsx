@@ -65,6 +65,8 @@ function BuyTogetherProvider({children}) {
 
   useEffect(() => {
     const newBuyTogetherItems = [];
+    console.log('>>> Fdsf');
+
     if (isDuvet || isLencol) {
       if (includeGrayDuvetCover) {
         newBuyTogetherItems.push(grayDuvetCover);
@@ -97,6 +99,8 @@ function BuyTogetherProvider({children}) {
       }
     }
 
+    if (newBuyTogetherItems.length === buyTogetherItems.length) return;
+
     setBuyTogetherItems(
       newBuyTogetherItems.map((item) => ({
         ...item,
@@ -119,6 +123,7 @@ function BuyTogetherProvider({children}) {
     includeBase,
     includeTwoWashableTravesseiros,
     includeLencol,
+    buyTogetherItems,
   ]);
 
   return (
