@@ -4,16 +4,18 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from '../Klabin/Klabin.module.scss';
 
-import KlabinActive from '../../assets/KlabinActiveTab.png';
-import KlabinInactive from '../../assets/KlabinInactiveTab.png';
-import KlabinFundo from '../../assets/klabinFundoMobile.png';
-import ZissouFundo from '../../assets/zissouFundoMobile.png';
+import KlabinActive from '../../assets/KlabinActiveTab.webp';
+import KlabinInactive from '../../assets/KlabinInactiveTab.webp';
+import KlabinFundo from '../../assets/klabinFundoMobile.webp';
+import ZissouFundo from '../../assets/zissouFundoMobile.webp';
 
-import ZissouActive from '../../assets/ZissouActiveTab.png';
-import ZissouInactive from '../../assets/ZissouInactiveTab.png';
+import ZissouActive from '../../assets/ZissouActiveTab.webp';
+import ZissouInactive from '../../assets/ZissouInactiveTab.webp';
 
 import modalData from '../Klabin/ModalKlabinData';
 import PopupContent from '../Klabin/Modal.client';
+
+import VideoUboxing from '../../assets/video_unbox.mp4';
 
 export default function KlabinMobile() {
   const [leftBrandActive, setLeftBrandTab] = useState(true);
@@ -33,15 +35,16 @@ export default function KlabinMobile() {
         <p className={styles.KlabinOtherColorTitle}>#AQUITEMKLABIN</p>
       </strong>
       <div className={styles.KlabinVideo}>
-        <iframe
-          width="333"
-          height="192"
-          src="https://www.youtube.com/embed/L3HpWrsnDSM"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <video
+          className={styles.video}
+          src={VideoUboxing}
+          controls
+          autoPlay
+          loop
+          muted
+          width={333}
+          height={192}
+        />
       </div>
       <span className={styles.KlabinSubtitle}>
         Todos os produtos Zissou chegam na sua casa com embalagens de papelão
@@ -62,6 +65,7 @@ export default function KlabinMobile() {
               src={leftBrandActive ? KlabinActive : KlabinInactive}
               width="53"
               height="38"
+              loading={'lazy'}
             />
           </button>
           <button
@@ -76,6 +80,7 @@ export default function KlabinMobile() {
               src={!leftBrandActive ? ZissouActive : ZissouInactive}
               width="77"
               height="20"
+              loading={'lazy'}
             />
           </button>
         </div>
@@ -88,6 +93,7 @@ export default function KlabinMobile() {
               width="297"
               height="481"
               style={{height: 481}}
+              loading={'lazy'}
             />
           )}
           <div

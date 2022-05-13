@@ -55,7 +55,7 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                   ) : (
                     ''
                   )}
-                  <Link reloadDocument className={styles.logoMenu} to="/">
+                  <Link className={styles.logoMenu} to="/">
                     <Image src={LogoZissou} height="30" width="90" />
                   </Link>
                 </div>
@@ -63,7 +63,7 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                   {/* {collections.map((collection) => (
                   <li className="border-b border-gray-200" key={collection.id}>
                     <Link
-                      reloadDocument
+                      
                       className="group py-5 text-gray-700 flex items-center justify-between"
                       to={`/collections/${collection.handle}`}
                       onClick={() => setIsOpen(false)}
@@ -75,9 +75,7 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                 ))} */}
                   <li>
                     <div className={styles.titleWithArrow}>
-                      <Link reloadDocument to="/pages/colchoes-zissou">
-                        Colchões
-                      </Link>
+                      <Link to="/pages/colchoes-zissou">Colchões</Link>
                       <button
                         onClick={() =>
                           setOpenMenuColchoes(
@@ -99,21 +97,17 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                       }}
                     >
                       <li className={styles.coral}>
-                        <Link
-                          reloadDocument
-                          to="/products/colchao-zissou-coral-original"
-                        >
+                        <Link to="/products/colchao-zissou-coral-original">
                           <Image src={ColchaoCoral} width="205" height="27" />
                         </Link>
                       </li>
                       <li className={styles.blue}>
-                        <Link reloadDocument to="/products/colchao-zissou-blue">
+                        <Link to="/products/colchao-zissou-blue">
                           <Image src={ColchaoBlue} width="205" height="27" />
                         </Link>
                       </li>
                       <li>
                         <Link
-                          reloadDocument
                           to="/pages/colchoes-zissou"
                           className={styles.descubra}
                         >
@@ -122,7 +116,6 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                       </li>
                       <li>
                         <Link
-                          reloadDocument
                           to="/pages/comparativo-colchoes"
                           className={styles.compare}
                         >
@@ -132,18 +125,14 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                     </ul>
                   </li>
                   <li className={styles.novo}>
-                    <Link reloadDocument to="/products/base-zissou">
-                      Base
-                    </Link>
+                    <Link to="/products/base-zissou">Base</Link>
                   </li>
                   <li>
-                    <Link reloadDocument to="/products/travesseiro-zissou">
-                      Travesseiro
-                    </Link>
+                    <Link to="/products/travesseiro-zissou">Travesseiro</Link>
                   </li>
                   <li>
                     <div className={styles.titleWithArrow}>
-                      <Link reloadDocument to="/pages/lencol-e-duvet-zissou">
+                      <Link to="/pages/lencol-e-duvet-zissou">
                         Lençol & Duvet
                       </Link>
                       <button
@@ -166,7 +155,6 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                     >
                       <li>
                         <Link
-                          reloadDocument
                           to="/products/jogo-de-lencol-zissou"
                           style={{textDecoration: 'underline'}}
                         >
@@ -175,7 +163,6 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                       </li>
                       <li>
                         <Link
-                          reloadDocument
                           to="/products/duvet-zissoue"
                           style={{textDecoration: 'underline'}}
                         >
@@ -184,7 +171,6 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                       </li>
                       <li>
                         <Link
-                          reloadDocument
                           to="/pages/lencol-e-duvet-zissou"
                           className={styles.descubra}
                         >
@@ -194,46 +180,37 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                     </ul>
                   </li>
                   {/* <li>
-                    <Link reloadDocument to="/products/toca-zissou">Toca</Link>
+                    <Link  to="/products/toca-zissou">Toca</Link>
                   </li> */}
                   <li>
-                    <Link reloadDocument to="/pages/bundles">
-                      Combos
-                    </Link>
+                    <Link to="/pages/bundles">Combos</Link>
                   </li>
                 </ul>
               </div>
               <div className={styles.menuMobileContentBottom}>
                 <div className={styles.menuMobileItem}>
-                  <Link
-                    reloadDocument
-                    to="https://api.whatsapp.com/send?phone=5511932858213"
-                  >
+                  <Link to="https://api.whatsapp.com/send?phone=5511932858213">
                     <Image src={WhatsAppMenu} width="19" height="19" />
                     (11) 93285-8213
                   </Link>
-                  <Link reloadDocument to="/casa-zissou">
+                  <Link to="/casa-zissou">
                     <Image src={MenuLocator} width="11" height="14" />
                     Lojas
                   </Link>
                 </div>
                 <div className={styles.menuMobileItem}>
-                  <Link reloadDocument to="/blogs/midia">
-                    Zissou na mídia
-                  </Link>
-                  <Link reloadDocument to="/quem-somos">
-                    Quem somos
-                  </Link>
+                  <Link to="/blogs/midia">Zissou na mídia</Link>
+                  <Link to="/quem-somos">Quem somos</Link>
                 </div>
                 <div className={styles.menuMobileItem}>
                   <div>
                     <Link to="mailto:falecom@zissou.com.br">
                       <Image src={IconMessage} width="23" height="16" />
                     </Link>
-                    <Link reloadDocument to="/pages/atendimento">
+                    <Link to="/pages/atendimento">
                       <Image src={IconHelp} width="22" height="24" />
                     </Link>
-                    <Link reloadDocument to="/account/login">
+                    <Link to="/account/login">
                       <Image src={IconAccount} width="16" height="20" />
                     </Link>
                   </div>
@@ -250,7 +227,7 @@ export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
                   </div>
                 </div>
                 <div className={styles.menuMobileItem}>
-                  <Link reloadDocument to="/blogs/redefinaseusono">
+                  <Link to="/blogs/redefinaseusono">
                     SAIBA MAIS SOBRE O MOVIMENTO DO SONO
                   </Link>
                 </div>

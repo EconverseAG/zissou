@@ -17,6 +17,7 @@ import ProductSectionRight from '../ProductSection/ProductSectionRight';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './CoralProduct.module.scss';
+import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
 
 function CoralProduct() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -60,6 +61,7 @@ function CoralProduct() {
           />
         )}
         <ZissouAddToCart className={styles.AddToCart} />
+        <EntregaFutura />
         <ZissouColchaoIcons />
         {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}
       </ProductSectionRight>

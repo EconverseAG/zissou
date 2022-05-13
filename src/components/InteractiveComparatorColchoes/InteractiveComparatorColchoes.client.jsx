@@ -63,14 +63,13 @@ export default function InteractiveComparatorColchoes() {
             width={21}
             height={65}
             draggable={false}
+            loading={'lazy'}
           />
         </button>
       </div>
       <div className={styles.content}>
         <h2>Já decidiu seu colchão?</h2>
-        <Link reloadDocument to="/pages/comparativo-colchoes">
-          Coral ou blue
-        </Link>
+        <Link to="/pages/comparativo-colchoes">Coral ou blue</Link>
       </div>
     </div>
   );

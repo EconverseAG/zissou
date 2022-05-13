@@ -59,6 +59,7 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               id="travesseiro-washable"
               name="travesseiro-special-options"
               checked={washable}
+              readOnly
             />
             <span className={styles.selectionOptionControlCheckbox}></span>
             <label
@@ -103,6 +104,7 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               id="travesseiro-customization"
               name="travesseiro-special-options"
               checked={customBag}
+              readOnly
             />
             <span className={styles.selectionOptionControlCheckbox}></span>
             <label

@@ -32,7 +32,12 @@ function DuvetTechnical() {
           <h2>Informações técnicas</h2>
           {isMobile && (
             <div className={styles.backgroundImageWrapper}>
-              <Image src={DuvetTechnicalBackground} width={741} height={501} />
+              <Image
+                src={DuvetTechnicalBackground}
+                width={741}
+                height={501}
+                loading={'lazy'}
+              />
             </div>
           )}
           <div className={styles.accordionWrapper}>
@@ -158,7 +163,12 @@ function DuvetTechnical() {
 
         {!isMobile && (
           <div className={styles.backgroundImageWrapper}>
-            <Image src={DuvetTechnicalBackground} width={539} height={588} />
+            <Image
+              src={DuvetTechnicalBackground}
+              width={539}
+              height={588}
+              loading={'lazy'}
+            />
           </div>
         )}
       </div>

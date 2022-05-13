@@ -39,6 +39,7 @@ export default function TravesseiroWashableOption() {
             src={isMobile ? TravesseiroWashableMobile : TravesseiroWashable}
             width={isMobile ? 428 : 1610}
             height={isMobile ? 288 : 762}
+            loading={'lazy'}
           />
         </div>
 

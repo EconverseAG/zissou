@@ -15,7 +15,7 @@ import ZissouLoading from './ZissouLoading';
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
  */
-export default function Layout({children, hero}) {
+export default function Layout({children}) {
   const {data} = useShopQuery({
     query: QUERY,
     variables: {
@@ -25,7 +25,6 @@ export default function Layout({children, hero}) {
     preload: '*',
   });
   const collections = data ? flattenConnection(data.collections) : null;
-  const products = data ? flattenConnection(data.products) : null;
   const storeName = data ? data.shop.name : '';
 
   return (
@@ -36,12 +35,9 @@ export default function Layout({children, hero}) {
           <Cart />
         </Suspense>
         <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
-          {hero}
-          <div>
-            <Suspense fallback={<ZissouLoading />}>{children}</Suspense>
-          </div>
+          <Suspense fallback={<ZissouLoading />}>{children}</Suspense>
         </main>
-        <Footer collection={collections[0]} product={products[0]} />
+        <Footer />
       </div>
     </LocalizationProvider>
   );

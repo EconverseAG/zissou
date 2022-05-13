@@ -2,8 +2,10 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './Klabin.module.scss';
 
-import KlabinFundo from '../../assets/klabin_fundo.png';
+import KlabinFundo from '../../assets/klabin_fundo.webp';
 import modalData from './ModalKlabinData';
+
+import VideoUboxing from '../../assets/video_unbox.mp4';
 
 import PopupContent from './Modal.client';
 
@@ -15,15 +17,16 @@ export default function KlabinDesktop() {
         <p className={styles.KlabinOtherColorTitle}>#AQUITEMKLABIN</p>
       </strong>
       <div className={styles.KlabinVideo}>
-        <iframe
-          width="756"
-          height="435"
-          src="https://www.youtube.com/embed/L3HpWrsnDSM"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <video
+          className={styles.video}
+          src={VideoUboxing}
+          controls
+          autoPlay
+          loop
+          muted
+          width={756}
+          height={435}
+        />
       </div>
       <span className={styles.KlabinSubtitle}>
         Todos os produtos Zissou chegam na sua casa com embalagens de papelão{' '}

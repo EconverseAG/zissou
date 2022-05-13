@@ -1,11 +1,11 @@
 import {Image} from '@shopify/hydrogen';
 import * as styles from './ZissouNaMidia.module.scss';
 
-import Forbes from '../../assets/logo_Forbes.png';
-import StartSe from '../../assets/logo_StartSe.png';
-import Gol from '../../assets/logo_Gol.png';
-import Gq from '../../assets/logo_GQ.png';
-import ValorEconomico from '../../assets/logo_valor_economico.png';
+import Forbes from '../../assets/logo_Forbes.webp';
+import StartSe from '../../assets/logo_StartSe.webp';
+import Gol from '../../assets/logo_Gol.webp';
+import Gq from '../../assets/logo_GQ.webp';
+import ValorEconomico from '../../assets/logo_valor_economico.webp';
 
 import useMobile from '../../hooks/useMobile';
 import Slider from 'react-slick/lib/slider';
@@ -52,6 +52,7 @@ export default function ZissouNaMidia() {
               src={Forbes}
               width={isMobile ? '150' : '230'}
               height={isMobile ? '93' : '173'}
+              loading={'lazy'}
             />
           </div>
         </div>
@@ -75,6 +76,7 @@ export default function ZissouNaMidia() {
               src={StartSe}
               width={isMobile ? '200' : '256'}
               height={isMobile ? '117' : '173'}
+              loading={'lazy'}
             />
           </div>
         </div>
@@ -97,6 +99,7 @@ export default function ZissouNaMidia() {
               src={Gq}
               width={isMobile ? '180' : '230'}
               height={isMobile ? '123' : '173'}
+              loading={'lazy'}
             />
           </div>
         </div>
@@ -121,6 +124,7 @@ export default function ZissouNaMidia() {
               src={ValorEconomico}
               width={isMobile ? '150' : '200'}
               height={isMobile ? '123' : '173'}
+              loading={'lazy'}
             />
           </div>
         </div>
@@ -146,6 +150,7 @@ export default function ZissouNaMidia() {
               src={Gol}
               width={isMobile ? '140' : '180'}
               height={isMobile ? '133' : '173'}
+              loading={'lazy'}
             />
           </div>
         </div>

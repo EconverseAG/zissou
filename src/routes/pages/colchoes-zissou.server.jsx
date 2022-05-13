@@ -15,11 +15,12 @@ import FormulaMagica from '../../components/ComparativoColchoes/FormulaMagica/Fo
 import Legget from '../../components/ComparativoColchoes/Legget/Legget.client';
 import SuporteIdeal from '../../components/ComparativoColchoes/SuporteIdeal/SuporteIdeal.client';
 import Faq from '../../components/ComparativoColchoes/Faq/Faq.client';
+import ZissouLoading from '../../components/ZissouLoading';
 
 export default function ComparativoColchoes() {
   return (
     <Layout>
-      <Suspense fallback={<BoxFallback />}>
+      <Suspense fallback={<ZissouLoading />}>
         <CinematographBanner />
         <SleepAndLiveComparativo />
         <FormulaDoConforto />
@@ -36,8 +37,4 @@ export default function ComparativoColchoes() {
       </Suspense>
     </Layout>
   );
-}
-
-function BoxFallback() {
-  return <div className="bg-white p-12 shadow-xl rounded-xl mb-10 h-40"></div>;
 }

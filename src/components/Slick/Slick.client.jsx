@@ -38,7 +38,7 @@ export default function Slick(props) {
         <Slider {...settings}>
           {props.banners.map((banner) => {
             return (
-              <>
+              <div key={banner.titleCaption}>
                 {banner.titleCaption && banner.subtitleCaption && (
                   <div className={styles.caption}>
                     <strong className={styles.titleCaption}>
@@ -54,15 +54,12 @@ export default function Slick(props) {
                   src={!isMobile ? banner.banner : banner.mobileImage}
                   width={!isMobile ? '1400' : '100%'}
                   height={!isMobile ? '650' : '100%'}
+                  loading={'lazy'}
                 />
-                <Link
-                  reloadDocument
-                  to={banner.link}
-                  className={styles.buttonCTA}
-                >
+                <Link to={banner.link} className={styles.buttonCTA}>
                   {banner.CTA}
                 </Link>
-              </>
+              </div>
             );
           })}
         </Slider>

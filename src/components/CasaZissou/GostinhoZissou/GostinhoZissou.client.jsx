@@ -2,12 +2,12 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './GostinhoZissou.module.scss';
 
-import LogoBreton from '../../../assets/logo_Breton.png';
-import LogoOrnare from '../../../assets/logo_Ornare.png';
-import LogoRiachuelo from '../../../assets/logo-Riachuelo.png';
-import LogoTrama from '../../../assets/logo-Trama.png';
-import LogoWentz from '../../../assets/logo-Wentz.png';
-import LogoWooding from '../../../assets/logo-Wooding.png';
+import LogoBreton from '../../../assets/logo_Breton.webp';
+import LogoOrnare from '../../../assets/logo_Ornare.webp';
+import LogoRiachuelo from '../../../assets/logo-Riachuelo.webp';
+import LogoTrama from '../../../assets/logo-Trama.webp';
+import LogoWentz from '../../../assets/logo-Wentz.webp';
+import LogoWooding from '../../../assets/logo-Wooding.webp';
 import useMobile from '../../../hooks/useMobile';
 
 export default function GostinhoZissou() {

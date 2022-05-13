@@ -23,6 +23,12 @@ function ZissouProductProvider({
   isLencol,
   isTravesseiro,
   isColchao,
+  coral5Hybrid,
+  coral10Hybrid,
+  coral5,
+  coral10,
+  blue5,
+  blue10,
 }) {
   const [isCoral, setIsCoral] = useState(false);
   const [washable, setWashable] = useState(false);
@@ -109,10 +115,17 @@ function ZissouProductProvider({
         base,
         travesseiroWashable,
         coralHybrid,
+        coral5Hybrid,
+        coral10Hybrid,
+        coral5,
+        coral10,
+        blue5,
+        blue10,
       }}
     >
       <ProductProvider data={product}>
         <BuyTogetherProvider>{children}</BuyTogetherProvider>
+        {/* {children} */}
       </ProductProvider>
     </ZissouProductContext.Provider>
   );

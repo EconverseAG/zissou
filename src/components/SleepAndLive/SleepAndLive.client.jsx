@@ -2,8 +2,8 @@ import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLive.module.scss';
 
-import ColchaoCoral from '../../assets/colchao_coral.png';
-import ColchaoBlue from '../../assets/colchao_blue.png';
+import ColchaoCoral from '../../assets/colchao_coral.webp';
+import ColchaoBlue from '../../assets/colchao_blue.webp';
 
 export default function SleepAndLive() {
   return (
@@ -16,10 +16,15 @@ export default function SleepAndLive() {
           </p>
           <strong>Coral</strong>
           <span>A evolução do sono</span>
-          <Link reloadDocument to="/products/colchao-zissou-coral-original">
-            <Image src={ColchaoCoral} width="334" height="119" />
+          <Link to="/products/colchao-zissou-coral-original">
+            <Image
+              src={ColchaoCoral}
+              width="334"
+              height="119"
+              loading={'lazy'}
+            />
           </Link>
-          <Link reloadDocument to="/products/colchao-zissou-coral-original">
+          <Link to="/products/colchao-zissou-coral-original">
             Colchão Zissou Coral
           </Link>
         </div>
@@ -29,12 +34,15 @@ export default function SleepAndLive() {
           </p>
           <strong>Blue</strong>
           <span>Liberte seus sonhos</span>
-          <Link reloadDocument to="/products/colchao-zissou-blue">
-            <Image src={ColchaoBlue} width="334" height="119" />
+          <Link to="/products/colchao-zissou-blue">
+            <Image
+              src={ColchaoBlue}
+              width="334"
+              height="119"
+              loading={'lazy'}
+            />
           </Link>
-          <Link reloadDocument to="/products/colchao-zissou-blue">
-            Colchão Zissou Blue
-          </Link>
+          <Link to="/products/colchao-zissou-blue">Colchão Zissou Blue</Link>
         </div>
       </div>
     </div>

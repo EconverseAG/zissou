@@ -75,6 +75,7 @@ function ZissouProductImages({title, thumbs, className}) {
           width={image.width}
           height={image.height}
           alt={image.altText}
+          loading={'lazy'}
         />
       </div>
     ));

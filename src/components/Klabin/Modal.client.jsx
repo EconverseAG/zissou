@@ -40,6 +40,7 @@ export default function PopupContent({content}) {
               src={content.imageSrc}
               width={content.widthImg}
               height={content.heightImg}
+              loading={'lazy'}
             />
             <strong
               className={styles.modalTopTitle}

@@ -1,7 +1,7 @@
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './DoubtsProductPage.module.scss';
 
-import WhatsApp from '../../../assets/icone-menu-whatsapp-white.png';
+import WhatsApp from '../../../assets/icone-menu-whatsapp-white.webp';
 import useMobile from '../../../hooks/useMobile';
 
 export default function DoubtsProductPage({color}) {
@@ -29,6 +29,7 @@ export default function DoubtsProductPage({color}) {
             src={WhatsApp}
             width={isMobile ? 20 : 30}
             height={isMobile ? 20 : 30}
+            loading={'lazy'}
           />
         </div>
         <strong className={styles.DoubtsProductPageCTA}>

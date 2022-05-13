@@ -34,6 +34,7 @@ function LencolHowToDescribe() {
             src={Illustration1}
             width={isMobile ? 684 : 458}
             height={isMobile ? 375 : 458}
+            loading={'lazy'}
           />
           {!isMobile && (
             <span>

@@ -1,10 +1,10 @@
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
 
-import Fasano from '../../assets/logo_Fasano.png';
-import FastShop from '../../assets/logo_Fast.png';
-import Breton from '../../assets/logo_Breton.png';
-import Ornare from '../../assets/logo_Ornare.png';
+import Fasano from '../../assets/logo_Fasano.webp';
+import FastShop from '../../assets/logo_Fast.webp';
+import Breton from '../../assets/logo_Breton.webp';
+import Ornare from '../../assets/logo_Ornare.webp';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -21,9 +21,7 @@ export default function Partners({color}) {
         <p>
           Experimente nossos produtos <br /> de Norte a Sul do Brasil
         </p>
-        <Link reloadDocument to="/pages/casa-zissou">
-          Quero Visitar
-        </Link>
+        <Link to="/pages/casa-zissou">Quero Visitar</Link>
       </div>
       <div className={styles.PartnersRight}>
         <span style={{color: color ? '#fff' : ''}}>Marcas Parceiras</span>
@@ -32,11 +30,13 @@ export default function Partners({color}) {
             src={Fasano}
             width={isMobile ? '77' : '131'}
             height={isMobile ? '23' : '40'}
+            loading={'lazy'}
           />
           <Image
             src={FastShop}
             width={isMobile ? '54' : '85'}
             height={isMobile ? '25' : '40'}
+            loading={'lazy'}
           />
           <Image
             src={Breton}
@@ -47,6 +47,7 @@ export default function Partners({color}) {
             src={Ornare}
             width={isMobile ? '88' : '131'}
             height={isMobile ? '44' : '80'}
+            loading={'lazy'}
           />
         </div>
       </div>

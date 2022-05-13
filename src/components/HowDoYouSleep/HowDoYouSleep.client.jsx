@@ -1,9 +1,7 @@
-import {Image} from '@shopify/hydrogen';
-
 import * as styles from './HowDoYouSleep.module.scss';
 
-import HowDoYouSleepGif from '../../assets/travesseiro-how-do-you-sleep.gif';
-import HowDoYouSleepGifMobile from '../../assets/travesseiro-how-do-you-sleep-mob.gif';
+import HowDoYouSleepGif from '../../assets/travesseiro-how-do-you-sleep.webm';
+import HowDoYouSleepGifMobile from '../../assets/travesseiro-how-do-you-sleep-mob.webm';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -20,10 +18,12 @@ export default function HowDoYouSleep() {
         Como você <strong>dorme?</strong>
       </h2>
       <span>Perfeito para seja-lá-como-você-quiser-usar</span>
-      <Image
+      <video
         src={isMobile ? HowDoYouSleepGifMobile : HowDoYouSleepGif}
-        width={1200}
-        height={488}
+        autoPlay
+        loop
+        muted
+        style={{mixBlendMode: 'multiply'}}
       />
     </div>
   );

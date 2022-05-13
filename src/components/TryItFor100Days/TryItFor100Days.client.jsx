@@ -1,8 +1,8 @@
-import {Image, Link} from '@shopify/hydrogen/client';
+import {Link} from '@shopify/hydrogen/client';
 
 import * as styles from './tryit.module.scss';
 
-import Gif100Dias from '../../assets/gif_100dias.gif';
+import Gif100Dias from '../../assets/gif_100dias.webm';
 
 export default function TryItFor100Days() {
   return (
@@ -24,12 +24,10 @@ export default function TryItFor100Days() {
             entrega expressa e <br /> frete grátis para todo o Brasil!
           </p>
         </span>
-        <Link reloadDocument to="/pages/100dias">
-          Saiba mais
-        </Link>
+        <Link to="/pages/100dias">Saiba mais</Link>
       </div>
       <div className={styles.TryItRight}>
-        <Image src={Gif100Dias} width="483" height="429" />
+        <video src={Gif100Dias} autoPlay loop muted />
       </div>
     </div>
   );

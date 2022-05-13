@@ -25,6 +25,7 @@ export default function ZissouColchaoIcons() {
           src={title.includes('Coral') ? IconeGarantiaCoral : IconeGarantiaBlue}
           width={isMobile ? 40 : 62}
           height={isMobile ? 28 : 43}
+          loading={'lazy'}
         />
         <strong
           className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
@@ -37,6 +38,7 @@ export default function ZissouColchaoIcons() {
           src={title.includes('Coral') ? IconeEntregaCoral : IconeEntregaBlue}
           width={isMobile ? 30 : 54}
           height={isMobile ? 33 : 59}
+          loading={'lazy'}
         />
         {title.includes('Coral') ? (
           <strong
@@ -57,6 +59,7 @@ export default function ZissouColchaoIcons() {
           src={title.includes('Coral') ? IconeFreteCoral : IconeFreteBlue}
           width={isMobile ? 38 : 58}
           height={isMobile ? 26 : 40}
+          loading={'lazy'}
         />
         <strong
           className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
@@ -69,6 +72,7 @@ export default function ZissouColchaoIcons() {
           src={title.includes('Coral') ? Icone100DiasCoral : Icone100DiasBlue}
           width={isMobile ? 27 : 42}
           height={isMobile ? 24 : 37}
+          loading={'lazy'}
         />
         <strong
           className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}

@@ -2,19 +2,19 @@ import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './footer.module.scss';
 
-import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.png';
-import IconInstagram from '../../assets/icone-menu-instagram-white.png';
-import IconFacebook from '../../assets/icone-menu-facebook-white.png';
-import IconYoutube from '../../assets/icone-menu-youtube-white.png';
-import IconTwitter from '../../assets/icone-menu-twitter-white.png';
-import IconZissou from '../../assets/logo-zissou-white.png';
-import IconSecure from '../../assets/shopifySecure.png';
-import IconPayment from '../../assets/shopifyPayments.png';
+import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.webp';
+import IconInstagram from '../../assets/icone-menu-instagram-white.webp';
+import IconFacebook from '../../assets/icone-menu-facebook-white.webp';
+import IconYoutube from '../../assets/icone-menu-youtube-white.webp';
+import IconTwitter from '../../assets/icone-menu-twitter-white.webp';
+import IconZissou from '../../assets/logo-zissou-white.webp';
+import IconSecure from '../../assets/shopifySecure.webp';
+import IconPayment from '../../assets/shopifyPayments.webp';
 
 /**
  * A server component that specifies the content of the footer on the website
  */
-export default function Footer(/*{collection, product}*/) {
+export default function Footer() {
   return (
     <>
       <styles.StyleTag />
@@ -24,34 +24,28 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Produtos</strong>
             <ul>
               <li>
-                <Link reloadDocument to="/pages/colchoes-zissou">
-                  Colchões
-                </Link>
+                <Link to="/pages/colchoes-zissou">Colchões</Link>
               </li>
               <li>
-                <Link reloadDocument to="/products/travesseiro-zissou">
+                <Link to="/products/travesseiro-zissou">
                   Travesseiro Zissou
                 </Link>
               </li>
               <li>
-                <Link reloadDocument to="/pages/lencol-e-duvet-zissou">
+                <Link to="/pages/lencol-e-duvet-zissou">
                   Lençol & Duvet Zissou
                 </Link>
               </li>
               {/* <li>
-                <Link reloadDocument to="/products/toca-zissou">
+                <Link  to="/products/toca-zissou">
                   Toca Zissou
                 </Link>
               </li> */}
               <li>
-                <Link reloadDocument to="/products/base-zissou">
-                  Base Zissou
-                </Link>
+                <Link to="/products/base-zissou">Base Zissou</Link>
               </li>
               <li>
-                <Link reloadDocument to="/pages/bundles">
-                  Combos
-                </Link>
+                <Link to="/pages/bundles">Combos</Link>
               </li>
             </ul>
           </div>
@@ -59,10 +53,7 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Atendimento</strong>
             <ul>
               <li>
-                <Link
-                  reloadDocument
-                  to="https://api.whatsapp.com/send?phone=5511932858213"
-                >
+                <Link to="https://api.whatsapp.com/send?phone=5511932858213">
                   <Image src={WhatsAppMenu} width="19" height="19" />
                   (11) 93285-8213
                 </Link>
@@ -76,24 +67,16 @@ export default function Footer(/*{collection, product}*/) {
             <strong>Zissou</strong>
             <ul>
               <li>
-                <Link reloadDocument to="/pages/casa-zissou">
-                  Lojas
-                </Link>
+                <Link to="/pages/casa-zissou">Lojas</Link>
               </li>
               <li>
-                <Link reloadDocument to="/blogs/midia">
-                  Zissou na mídia
-                </Link>
+                <Link to="/blogs/midia">Zissou na mídia</Link>
               </li>
               <li>
-                <Link reloadDocument to="/blogs/redefinaseusono">
-                  Blog
-                </Link>
+                <Link to="/blogs/redefinaseusono">Blog</Link>
               </li>
               <li>
-                <Link reloadDocument to="/policies/privacy-policy">
-                  Aviso de privacidade
-                </Link>
+                <Link to="/policies/privacy-policy">Aviso de privacidade</Link>
               </li>
             </ul>
           </div>
@@ -102,7 +85,12 @@ export default function Footer(/*{collection, product}*/) {
             <ul>
               <li>
                 <Link to="https://www.facebook.com/zissoubr/">
-                  <Image src={IconFacebook} width="18" height="18" />
+                  <Image
+                    src={IconFacebook}
+                    width="18"
+                    height="18"
+                    style={{maxHeight: '18px'}}
+                  />
                 </Link>
                 <Link to="https://www.instagram.com/zissoubr/">
                   <Image src={IconInstagram} width="20" height="21" />
@@ -115,7 +103,7 @@ export default function Footer(/*{collection, product}*/) {
                 </Link>
               </li>
               <li>
-                <Link reloadDocument to="/">
+                <Link to="/">
                   <Image src={IconZissou} width="130" height="35" />
                 </Link>
               </li>

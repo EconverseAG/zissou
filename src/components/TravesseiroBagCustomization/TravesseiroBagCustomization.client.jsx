@@ -29,6 +29,7 @@ function TravesseiroBagCustomization() {
         width={isMobile ? 430 : 2158}
         height={isMobile ? 394 : 1281}
         className={styles.background}
+        loading={'lazy'}
       />
     </div>
   );

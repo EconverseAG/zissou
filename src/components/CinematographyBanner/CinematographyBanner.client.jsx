@@ -2,11 +2,11 @@ import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './cinematographyBanner.module.scss';
 
-import Logo from '../../assets/logo-zissou-white.png';
+import Logo from '../../assets/logo-zissou-white.webp';
 
-import Video_1 from '../../assets/video_1.mp4';
-import Video_2 from '../../assets/video_2.mp4';
-import BannerDefault from '../../assets/banner_default.png';
+import Video_1 from '../../assets/video_1.webm';
+import Video_2 from '../../assets/video_2.webm';
+import BannerDefault from '../../assets/banner_default.webp';
 
 export default function CinematographyBanner() {
   const banners = [
@@ -35,7 +35,7 @@ export default function CinematographyBanner() {
   return (
     <div className={styles.videoContainer}>
       <div className={styles.logoHome}>
-        <Image src={Logo} width="265" height="70" />
+        <Image src={Logo} width="265" height="70" loading={'lazy'} />
       </div>
 
       <div className={styles.videoContent}>
@@ -43,7 +43,7 @@ export default function CinematographyBanner() {
           bannerFiltered.map((banner) => {
             return (
               <>
-                <Link reloadDocument key={banner.link} to={banner.link}>
+                <Link key={banner.link} to={banner.link}>
                   <video
                     className={styles.video}
                     src={banner.banner}
@@ -53,18 +53,19 @@ export default function CinematographyBanner() {
                   />
                 </Link>
 
-                <Link
-                  reloadDocument
-                  to={banner.link}
-                  className={styles.buttonCTA}
-                >
+                <Link to={banner.link} className={styles.buttonCTA}>
                   {banner.CTA}
                 </Link>
               </>
             );
           })
         ) : (
-          <Image src={BannerDefault} width="1980" height="890" />
+          <Image
+            src={BannerDefault}
+            width="1980"
+            height="890"
+            loading={'lazy'}
+          />
         )}
       </div>
     </div>

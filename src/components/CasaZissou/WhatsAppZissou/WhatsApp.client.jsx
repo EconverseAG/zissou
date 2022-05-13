@@ -1,6 +1,6 @@
 import * as styles from './WhatsApp.module.scss';
 
-import LogoWhatsApp from '../../../assets/icone-menu-whatsapp-white.png';
+import LogoWhatsApp from '../../../assets/icone-menu-whatsapp-white.webp';
 import {Image, Link} from '@shopify/hydrogen/client';
 import useMobile from '../../../hooks/useMobile';
 

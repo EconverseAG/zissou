@@ -4,8 +4,8 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './Hospitalidade.module.scss';
 
-import LogoFasano from '../../../assets/logo-fasano.png';
-import LogoCataratas from '../../../assets/logo-Cataratas.png';
+import LogoFasano from '../../../assets/logo-fasano.webp';
+import LogoCataratas from '../../../assets/logo-Cataratas.webp';
 
 import HotelGrande from '../../../assets/hotel-grande.png';
 import HotelGrande2 from '../../../assets/hotel-grande2.png';

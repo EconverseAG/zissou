@@ -8,53 +8,31 @@ import ColchaoBlue from '../../assets/menuItem__Blue.png';
 /**
  * A client component that defines the navigation for a web storefront
  */
-// Colocar de volta nos parâmetros depois {/*collections*/}
 export default function Navigation() {
   return (
     <>
       <nav className={styles.navigation}>
         <ul>
-          {/* {collections.map((collection) => (
-            <li key={collection.id}>
-              <Link
-                reloadDocument
-                to={`/collections/${collection.handle}`}
-                className="block p-4 hover:opacity-80"
-              >
-                {collection.title}
-              </Link>
-            </li>
-          ))} */}
           <li>
-            <Link reloadDocument to="/pages/colchoes-zissou">
-              Colchões
-            </Link>
+            <Link to="/pages/colchoes-zissou">Colchões</Link>
             <ul className={styles.subMenu}>
               <li className={styles.coral}>
-                <Link
-                  reloadDocument
-                  to="/products/colchao-zissou-coral-original"
-                >
+                <Link to="/products/colchao-zissou-coral-original">
                   <Image src={ColchaoCoral} width="205" height="27" />
                 </Link>
               </li>
               <li className={styles.blue}>
-                <Link reloadDocument to="/products/colchao-zissou-blue">
+                <Link to="/products/colchao-zissou-blue">
                   <Image src={ColchaoBlue} width="205" height="27" />
                 </Link>
               </li>
               <li>
-                <Link
-                  reloadDocument
-                  to="/pages/colchoes-zissou"
-                  className={styles.descubra}
-                >
+                <Link to="/pages/colchoes-zissou" className={styles.descubra}>
                   Descubra os colchões
                 </Link>
               </li>
               <li>
                 <Link
-                  reloadDocument
                   to="/pages/comparativo-colchoes"
                   className={styles.compare}
                 >
@@ -64,23 +42,16 @@ export default function Navigation() {
             </ul>
           </li>
           <li className={styles.novo}>
-            <Link reloadDocument to="/products/base-zissou">
-              Base
-            </Link>
+            <Link to="/products/base-zissou">Base</Link>
           </li>
           <li>
-            <Link reloadDocument to="/products/travesseiro-zissou">
-              Travesseiro
-            </Link>
+            <Link to="/products/travesseiro-zissou">Travesseiro</Link>
           </li>
           <li>
-            <Link reloadDocument to="/pages/lencol-e-duvet-zissou">
-              Lençol & Duvet
-            </Link>
+            <Link to="/pages/lencol-e-duvet-zissou">Lençol & Duvet</Link>
             <ul className={styles.subMenu}>
               <li>
                 <Link
-                  reloadDocument
                   to="/products/jogo-de-lencol-zissou"
                   style={{textDecoration: 'underline'}}
                 >
@@ -89,7 +60,6 @@ export default function Navigation() {
               </li>
               <li>
                 <Link
-                  reloadDocument
                   to="/products/duvet-zissou"
                   style={{textDecoration: 'underline'}}
                 >
@@ -98,7 +68,6 @@ export default function Navigation() {
               </li>
               <li>
                 <Link
-                  reloadDocument
                   to="/pages/lencol-e-duvet-zissou"
                   className={styles.descubra}
                 >
@@ -108,12 +77,10 @@ export default function Navigation() {
             </ul>
           </li>
           {/* <li>
-            <Link reloadDocument to="/products/toca-zissou">Toca</Link>
+            <Link  to="/products/toca-zissou">Toca</Link>
           </li> */}
           <li>
-            <Link reloadDocument to="/pages/bundles">
-              Combos
-            </Link>
+            <Link to="/pages/bundles">Combos</Link>
           </li>
         </ul>
       </nav>

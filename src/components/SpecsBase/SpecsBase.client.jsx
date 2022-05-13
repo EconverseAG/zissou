@@ -24,7 +24,7 @@ export default function SpecsBase() {
   return (
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
-      data-currentContent={currentContent}
+      data-currentcontent={currentContent}
     >
       <div className={styles.nav}>
         <span
@@ -85,6 +85,7 @@ export default function SpecsBase() {
                   width={636}
                   height={156}
                   className={styles.imageSelosBase}
+                  loading={'lazy'}
                 />
               </div>
               <div className={styles.contentItemColsRight}>
@@ -93,6 +94,7 @@ export default function SpecsBase() {
                   width={611}
                   height={732}
                   className={styles.imageComparacaoBase}
+                  loading={'lazy'}
                 />
               </div>
             </div>
@@ -121,6 +123,7 @@ export default function SpecsBase() {
                 width={1735}
                 height={1294}
                 className={styles.secondContentBackground}
+                loading={'lazy'}
               />
             </>
           )) ||
@@ -147,6 +150,7 @@ export default function SpecsBase() {
                 width={1581}
                 height={488}
                 className={styles.thirdContentBackground}
+                loading={'lazy'}
               />
             </>
           )) ||
@@ -168,12 +172,14 @@ export default function SpecsBase() {
                 width={207}
                 height={219}
                 className={styles.imageSeloMontagemGratis}
+                loading={'lazy'}
               />
               <Image
                 src={GifMontagem}
                 width={1037}
                 height={635}
                 className={styles.gifMontagem}
+                loading={'lazy'}
               />
             </div>
           ))}

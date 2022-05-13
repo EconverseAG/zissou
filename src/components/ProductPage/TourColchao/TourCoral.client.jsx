@@ -31,6 +31,7 @@ export default function TourCoral() {
             src={TourCoralPDP}
             width={isMobile ? 302 : 546}
             height={isMobile ? 234 : 422}
+            loading={'lazy'}
           />
         </div>
         <Image
@@ -38,6 +39,7 @@ export default function TourCoral() {
           width={isMobile ? 59 : 115}
           height={isMobile ? 46 : 89}
           className={styles.Legget}
+          loading={'lazy'}
         />
       </div>
     </div>

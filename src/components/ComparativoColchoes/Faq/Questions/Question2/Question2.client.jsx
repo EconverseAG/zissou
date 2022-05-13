@@ -90,7 +90,7 @@ export default function Question2() {
             , sinônimo de aconchego e refrescância
           </span>
         </div>
-        <Link reloadDocument to="/pages/comparativo-colchoes">
+        <Link to="/pages/comparativo-colchoes">
           <strong className={styles.FaqAccordionAnswerLink}>
             Comparar os colchões &gt;&gt;&gt;
           </strong>

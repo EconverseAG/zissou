@@ -41,6 +41,7 @@ function TravesseiroTechnical() {
                 src={TravesseiroTechnicalBackground}
                 width={324}
                 height={353}
+                loading={'lazy'}
               />
             </div>
           )}
@@ -69,7 +70,12 @@ function TravesseiroTechnical() {
               <AccordionDetails className={styles.accordionDetails}>
                 <div className={styles.flexItem}>
                   <div className={styles.flexItemImage}>
-                    <Image src={TravesseiroImage} width={286} height={97} />
+                    <Image
+                      src={TravesseiroImage}
+                      width={286}
+                      height={97}
+                      loading={'lazy'}
+                    />
                   </div>
                   <div className={styles.flexItemInfo}>
                     <h4>O travesseiro</h4>
@@ -98,7 +104,12 @@ function TravesseiroTechnical() {
                 </div>
                 <div className={styles.flexItem}>
                   <div className={styles.flexItemImage}>
-                    <Image src={CamadasPlushImage} width={296} height={269} />
+                    <Image
+                      src={CamadasPlushImage}
+                      width={296}
+                      height={269}
+                      loading={'lazy'}
+                    />
                   </div>
                   <div className={styles.flexItemInfo}>
                     <h4>Camadas Plush</h4>
@@ -111,6 +122,7 @@ function TravesseiroTechnical() {
                       src={CamadasNasNuvensImage}
                       width={267}
                       height={131}
+                      loading={'lazy'}
                     />
                   </div>
                   <div className={styles.flexItemInfo}>
@@ -144,7 +156,12 @@ function TravesseiroTechnical() {
               <AccordionDetails className={styles.accordionDetails}>
                 <div className={styles.flexItem}>
                   <div className={styles.flexItemImage}>
-                    <Image src={ComposicaoCapa} width={312} height={216} />
+                    <Image
+                      src={ComposicaoCapa}
+                      width={312}
+                      height={216}
+                      loading={'lazy'}
+                    />
                   </div>
                   <div className={styles.flexItemInfo}>
                     <h4>A capa</h4>
@@ -166,6 +183,7 @@ function TravesseiroTechnical() {
                       src={ComposicaoEnchimento}
                       width={306}
                       height={212}
+                      loading={'lazy'}
                     />
                   </div>
                   <div className={styles.flexItemInfo}>
@@ -177,7 +195,12 @@ function TravesseiroTechnical() {
                 </div>
                 <div className={styles.flexItem}>
                   <div className={styles.flexItemImage}>
-                    <Image src={CamadasPlushImage} width={303} height={275} />
+                    <Image
+                      src={CamadasPlushImage}
+                      width={303}
+                      height={275}
+                      loading={'lazy'}
+                    />
                   </div>
                   <div className={styles.flexItemInfo}>
                     <h4>Camadas plush</h4>
@@ -199,6 +222,7 @@ function TravesseiroTechnical() {
                       src={CamadasNasNuvensImage}
                       width={267}
                       height={131}
+                      loading={'lazy'}
                     />
                   </div>
                   <div className={styles.flexItemInfo}>
@@ -262,6 +286,7 @@ function TravesseiroTechnical() {
               src={TravesseiroTechnicalBackground}
               width={539}
               height={588}
+              loading={'lazy'}
             />
           </div>
         )}

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {Image, useProduct} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 
@@ -45,6 +47,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeBase}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -56,13 +59,15 @@ export default function ZissouCompreJunto(props) {
             src={BaseCompreJunto}
             width={isMobile ? 84 : 148}
             height={isMobile ? 35 : 63}
+            loading={'lazy'}
           />
-          <button
+          <a
             className={styles.SeeMore}
             onClick={() => props.setModalOpen(!props.modalOpen)}
+            role="button"
           >
             saiba mais
-          </button>
+          </a>
         </div>
         <div className={styles.OptionInfo}>
           <span className={styles.OptionInfoTitle}>
@@ -87,6 +92,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeTwoWashableTravesseiros}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -98,6 +104,7 @@ export default function ZissouCompreJunto(props) {
             src={TravesseiroCompreJunto}
             width={isMobile ? 90 : 144}
             height={isMobile ? 47 : 75}
+            loading={'lazy'}
           />
         </div>
         <div className={styles.OptionInfo}>
@@ -117,6 +124,7 @@ export default function ZissouCompreJunto(props) {
           id="base-zissou-compre-junto"
           name="base-zissou-compre-junto"
           checked={includeLencol}
+          readOnly
         />
         <span
           className={`${styles.OptionSelect}  ${
@@ -128,6 +136,7 @@ export default function ZissouCompreJunto(props) {
             src={LencolCompreJunto}
             width={isMobile ? 80 : 142}
             height={isMobile ? 37 : 65}
+            loading={'lazy'}
           />
         </div>
         <div className={styles.OptionInfo}>

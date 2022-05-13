@@ -6,6 +6,8 @@ import DefaultSeo from './components/DefaultSeo.server';
 import NotFound from './components/NotFound.server';
 import ZissouLoading from './components/ZissouLoading';
 import CartProvider from './components/Cart/CartProvider.client';
+import Product from './routes/products/[handle].server';
+import Home from './routes/index.server';
 
 function App({routes}) {
   return (
@@ -14,10 +16,10 @@ function App({routes}) {
         <CartProvider>
           <DefaultSeo />
           <Router>
-            <Suspense fallback={<ZissouLoading />}>
-              <FileRoutes routes={routes} />
-              <Route path="*" page={<NotFound />} />
-            </Suspense>
+            <FileRoutes routes={routes} />
+            <Route path="/" page={<Home />} />
+            <Route path="/products/:handle" page={<Product />} />
+            <Route path="*" page={<NotFound />} />
           </Router>
         </CartProvider>
       </ShopifyProvider>

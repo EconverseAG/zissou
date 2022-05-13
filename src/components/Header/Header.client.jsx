@@ -58,7 +58,7 @@ export default function Header({collections, storeName}) {
           background: isScrolled
             ? '#415264'
             : 'linear-gradient(180deg,rgba(0,0,0,.65) 0,rgba(0,0,0,0) 90%)',
-          paddingBottom: isScrolled ? '0' : '',
+          paddingBottom: isScrolled ? '0' : 'unset',
         }}
       >
         <div
@@ -74,12 +74,12 @@ export default function Header({collections, storeName}) {
               isOpen={isMobileNavOpen}
               setIsOpen={setIsMobileNavOpen}
             />
-            <Link reloadDocument className={styles.logo} to="/">
+            <Link className={styles.logo} to="/">
               <Image src={LogoZissou} height="60" width="34" />
             </Link>
             <Navigation collections={collections} storeName={storeName} />
             <div className={styles.buyOptions}>
-              <Link reloadDocument to="/casa-zissou" className={styles.stores}>
+              <Link to="/pages/casa-zissou" className={styles.stores}>
                 Lojas
               </Link>
               <Link to="https://api.whatsapp.com/send?phone=5511932858213">

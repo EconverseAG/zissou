@@ -1,3 +1,3 @@
-import Article from '../../../components/Article.server';
+import Article from '../../../components/Article/Article.server';
 
 export default Article;

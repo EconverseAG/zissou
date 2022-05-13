@@ -121,6 +121,7 @@ export default function SpecsBlueSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
               </strong>
               <p
@@ -151,6 +152,7 @@ export default function SpecsBlueSlick() {
             width={isMobile ? 390 : 1980}
             height={700}
             className={styles.SpecsColchaoSlickSecondSliderBackgroundImage}
+            loading={'lazy'}
           />
         </div>
         <div
@@ -173,6 +175,7 @@ export default function SpecsBlueSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
                 {isMobile ? null : (
                   <Image
@@ -180,6 +183,7 @@ export default function SpecsBlueSlick() {
                     width={220}
                     height={53}
                     style={{marginTop: '-25px'}}
+                    loading={'lazy'}
                   />
                 )}
               </strong>
@@ -230,7 +234,7 @@ export default function SpecsBlueSlick() {
             </div>
             {isMobile ? (
               <div className={styles.brands} style={{top: '60%'}}>
-                <Image src={Brands} width={340} height={53} />
+                <Image src={Brands} width={340} height={53} loading={'lazy'} />
               </div>
             ) : null}
           </div>
@@ -239,6 +243,7 @@ export default function SpecsBlueSlick() {
             width={isMobile ? 390 : 1980}
             height={700}
             className={styles.SpecsColchaoSlickSecondSliderBackgroundImage}
+            loading={'lazy'}
           />
         </div>
         <div
@@ -261,6 +266,7 @@ export default function SpecsBlueSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleFlag
                   }
+                  loading={'lazy'}
                 />
               </strong>
               {isMobile ? (
@@ -301,6 +307,7 @@ export default function SpecsBlueSlick() {
                 src={MulherDeitada}
                 width={isMobile ? 325 : 803}
                 height={isMobile ? 153 : 378}
+                loading={'lazy'}
               />
             </div>
           </div>
@@ -357,6 +364,7 @@ export default function SpecsBlueSlick() {
                 src={SuporteBlue}
                 width={isMobile ? 327 : 739}
                 height={isMobile ? 150 : 342}
+                loading={'lazy'}
               />
             </div>
           </div>
@@ -370,6 +378,7 @@ export default function SpecsBlueSlick() {
                 src={ConfortoPDP}
                 width={isMobile ? 70 : 125}
                 height={isMobile ? 33 : 60}
+                loading={'lazy'}
               />
               <span>Conforto excepcional</span>
             </div>
@@ -378,6 +387,7 @@ export default function SpecsBlueSlick() {
                 src={SuperficiePDP}
                 width={isMobile ? 62 : 110}
                 height={isMobile ? 71 : 126}
+                loading={'lazy'}
               />
               <span>Superfície que refresca</span>
             </div>
@@ -386,6 +396,7 @@ export default function SpecsBlueSlick() {
                 src={BouncePDP}
                 width={isMobile ? 43 : 80}
                 height={isMobile ? 49 : 92}
+                loading={'lazy'}
               />
               {isMobile ? (
                 <span>
@@ -403,6 +414,7 @@ export default function SpecsBlueSlick() {
                 src={SensacaoPDP}
                 width={isMobile ? 62 : 110}
                 height={isMobile ? 43 : 77}
+                loading={'lazy'}
               />
               {isMobile ? (
                 <span>Aconchego extraordinário</span>
@@ -415,6 +427,7 @@ export default function SpecsBlueSlick() {
                 src={IsolamentoPDP}
                 width={isMobile ? 120 : 223}
                 height={isMobile ? 35 : 65}
+                loading={'lazy'}
               />
               <span>Isolamento de ondas de movimento</span>
             </div>
@@ -423,6 +436,7 @@ export default function SpecsBlueSlick() {
                 src={SetasPDP}
                 width={isMobile ? 48 : 92}
                 height={isMobile ? 40 : 74}
+                loading={'lazy'}
               />
               <span>Alívio dos pontos de pressão</span>
             </div>
@@ -431,6 +445,7 @@ export default function SpecsBlueSlick() {
                 src={ControlePDP}
                 width={isMobile ? 73 : 129}
                 height={isMobile ? 61 : 108}
+                loading={'lazy'}
               />
               {isMobile ? (
                 <span>
@@ -448,6 +463,7 @@ export default function SpecsBlueSlick() {
                 src={SuportePDP}
                 width={isMobile ? 51 : 96}
                 height={isMobile ? 45 : 85}
+                loading={'lazy'}
               />
               {isMobile ? (
                 <span>
@@ -472,25 +488,45 @@ export default function SpecsBlueSlick() {
           >
             <div className={styles.Icons}>
               <div className={styles.Icon}>
-                <Image src={IconeGarantia} width={62} height={43} />
+                <Image
+                  src={IconeGarantia}
+                  width={62}
+                  height={43}
+                  loading={'lazy'}
+                />
                 <strong className={styles.IconTitle}>
                   10 anos de <br /> garantia
                 </strong>
               </div>
               <div className={styles.Icon}>
-                <Image src={IconeEntregaPrime} width={59} height={39} />
+                <Image
+                  src={IconeEntregaPrime}
+                  width={59}
+                  height={39}
+                  loading={'lazy'}
+                />
                 <strong className={styles.IconTitle}>
                   entrega <br /> prime
                 </strong>
               </div>
               <div className={styles.Icon}>
-                <Image src={IconeFrete} width={58} height={41} />
+                <Image
+                  src={IconeFrete}
+                  width={58}
+                  height={41}
+                  loading={'lazy'}
+                />
                 <strong className={styles.IconTitle}>
                   frete <br /> grátis
                 </strong>
               </div>
               <div className={styles.Icon}>
-                <Image src={Icone100Dias} width={42} height={37} />
+                <Image
+                  src={Icone100Dias}
+                  width={42}
+                  height={37}
+                  loading={'lazy'}
+                />
                 <strong className={styles.IconTitle}>
                   100 dias <br /> de teste
                 </strong>
@@ -521,7 +557,6 @@ export default function SpecsBlueSlick() {
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre os termos de garantia,{' '}
                   <Link
-                    reloadDocument
                     to="/blogs/faq/como-funciona-a-garantia-de-um-colchao"
                     className={styles.BeneficiosItemSubtitleLink}
                   >
@@ -536,7 +571,6 @@ export default function SpecsBlueSlick() {
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre informações técnicas dos colchões,{' '}
                   <Link
-                    reloadDocument
                     to="/pages/comparativo-colchoes"
                     className={styles.BeneficiosItemSubtitleLink}
                   >
@@ -551,7 +585,12 @@ export default function SpecsBlueSlick() {
               styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
             }
           >
-            <Image src={ColchoesBlue} width={496} height={523} />
+            <Image
+              src={ColchoesBlue}
+              width={496}
+              height={523}
+              loading={'lazy'}
+            />
           </div>
         </div>
       </Slider>
