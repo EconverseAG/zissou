@@ -42,8 +42,8 @@ export default function CinematographyBanner() {
         {bannerFiltered.length ? (
           bannerFiltered.map((banner) => {
             return (
-              <>
-                <Link key={banner.link} to={banner.link}>
+              <div key={banner.link}>
+                <Link to={banner.link}>
                   <video
                     className={styles.video}
                     src={banner.banner}
@@ -56,7 +56,7 @@ export default function CinematographyBanner() {
                 <Link to={banner.link} className={styles.buttonCTA}>
                   {banner.CTA}
                 </Link>
-              </>
+              </div>
             );
           })
         ) : (

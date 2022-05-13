@@ -89,7 +89,7 @@ function StepCoralContent({content, setModal}) {
         setModal(null);
       });
     };
-  }, []);
+  }, [setModal]);
 
   const CloseModal = () => {
     setModal(null);

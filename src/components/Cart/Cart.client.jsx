@@ -82,12 +82,10 @@ function LineInCart() {
           />
           <ul className={styles.cartItemTopRightSpecs}>
             {merchandise.selectedOptions.map(({value}) => (
-              <>
+              <div key={value}>
                 <IconSize />
-                <li key={value} className={styles.cartItemTopRightSpecsList}>
-                  {value}
-                </li>
-              </>
+                <li className={styles.cartItemTopRightSpecsList}>{value}</li>
+              </div>
             ))}
           </ul>
         </div>

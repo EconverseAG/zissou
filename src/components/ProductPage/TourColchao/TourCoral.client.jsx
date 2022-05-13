@@ -22,8 +22,8 @@ export default function TourCoral() {
         <div>
           {modalData.map((modal) => (
             <StepCoralContent
+              key={modal.title}
               content={modal}
-              key={modal.name}
               setModal={setModal}
             />
           ))}
