@@ -21,8 +21,8 @@ export default function Index({response}) {
   response.cache(CacheDays());
 
   return (
-    <Layout>
-      <Suspense fallback={<ZissouLoading />}>
+    <Suspense fallback={<ZissouLoading />}>
+      <Layout>
         <CinematographyBanner />
         <SleepAndLive />
         <ChooseYourDestiny />
@@ -36,7 +36,7 @@ export default function Index({response}) {
         <CoralOrBlue />
         <Klabin />
         <FamiliaZissou />
-      </Suspense>
-    </Layout>
+      </Layout>
+    </Suspense>
   );
 }

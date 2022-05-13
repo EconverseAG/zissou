@@ -38,7 +38,7 @@ export default function Slick(props) {
         <Slider {...settings}>
           {props.banners.map((banner) => {
             return (
-              <div key={banner.titleCaption}>
+              <div key={banner.titleCaption || banner.CTA}>
                 {banner.titleCaption && banner.subtitleCaption && (
                   <div className={styles.caption}>
                     <strong className={styles.titleCaption}>

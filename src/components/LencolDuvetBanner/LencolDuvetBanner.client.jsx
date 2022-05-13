@@ -1,5 +1,5 @@
 import useMobile from '../../hooks/useMobile';
-import {Image} from '@shopify/hydrogen';
+import {Image} from '@shopify/hydrogen/client';
 
 import * as styles from './LencolDuvetBanner.module.scss';
 

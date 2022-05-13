@@ -7,7 +7,7 @@ import {
 import gql from 'graphql-tag';
 
 import Header from './Header/Header.client';
-import Footer from './Footer/Footer.server';
+import Footer from './Footer/Footer.client';
 import Cart from '../components/Cart/Cart.client';
 import {Suspense} from 'react';
 import ZissouLoading from './ZissouLoading';
@@ -30,10 +30,8 @@ export default function Layout({children}) {
   return (
     <LocalizationProvider preload="*">
       <div>
-        <Suspense fallback={<ZissouLoading />}>
-          <Header collections={collections} storeName={storeName} />
-          <Cart />
-        </Suspense>
+        <Header collections={collections} storeName={storeName} />
+        <Cart />
         <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
           <Suspense fallback={<ZissouLoading />}>{children}</Suspense>
         </main>

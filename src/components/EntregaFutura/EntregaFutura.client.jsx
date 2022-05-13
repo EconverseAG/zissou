@@ -95,6 +95,7 @@ export default function EntregaFutura() {
               <ZissouAddToCart
                 text="Compre com 5% de desconto"
                 className={styles.ButtonCTA}
+                EntregaFutura5OFF={true}
               />
             </div>
             <div className={styles.Line} />
@@ -109,6 +110,7 @@ export default function EntregaFutura() {
               <ZissouAddToCart
                 text="Compre com 10% de desconto"
                 className={styles.ButtonCTA}
+                EntregaFutura10OFF={true}
               />
             </div>
           </div>
