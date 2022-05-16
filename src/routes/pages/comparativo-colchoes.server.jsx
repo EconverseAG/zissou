@@ -1,10 +1,12 @@
-import ComparativoColchoesPage from '../../components/ComparativoColchoes/ComparativoColchoesPage.client';
+import ComparativoColchoesPage from '../../components/ComparativoColchoes';
 import Layout from '../../components/Layout.server';
 
 function ComparativoColchoes() {
-  <Layout>
-    <ComparativoColchoesPage />
-  </Layout>;
+  return (
+    <Layout>
+      <ComparativoColchoesPage />
+    </Layout>
+  );
 }
 
 export default ComparativoColchoes;
