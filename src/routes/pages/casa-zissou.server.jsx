@@ -10,7 +10,7 @@ import Hospitalidade from '../../components/CasaZissou/Hospitalidade/Hospitalida
 import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
 import SelectLojas from '../../components/CasaZissou/SelectLojas/SelectLojas.client';
 
-export default function ComparativoColchoes() {
+export default function CasaZissou() {
   return (
     <Layout>
       <Suspense fallback={<BoxFallback />}>
