@@ -25,8 +25,9 @@ export default function ZissouCompreJunto(props) {
 
   const {selectedVariant, title} = useProduct();
 
-  const nameSelected = selectedVariant.title.split(' (')[0];
-  const sizeSelected = selectedVariant.title.split(' (')[1].split(')')[0];
+  const nameSelected =
+    selectedVariant.title.split(' (')[0] || selectedVariant.title;
+  const sizeSelected = '';
 
   return (
     <div className={styles.ZissouCompreJuntoContainer}>

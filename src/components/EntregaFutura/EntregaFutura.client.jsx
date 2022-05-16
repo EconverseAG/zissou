@@ -1,12 +1,15 @@
 import {useState} from 'react';
+import useMobile from '../../hooks/useMobile';
 import ZissouAddToCart from '../ZissouAddToCart';
 
 import * as styles from './EntregaFutura.module.scss';
 
 export default function EntregaFutura() {
+  const {isMobile} = useMobile();
   const [isOpen, setIsOpen] = useState(false);
+  const [inputDate, setInputDate] = useState('');
+  const [step, setStep] = useState(1);
   const date = new Date();
-  const datePlusTenDays = new Date(date.getTime() + 10 * 24 * 60 * 60 * 1000);
 
   const get1Months = (day) => {
     const date = new Date(day);
@@ -31,6 +34,28 @@ export default function EntregaFutura() {
         .toUpperCase()
         .substr(0, 3)
     );
+  };
+
+  const handleDate = (e) => {
+    setInputDate(e.target.value);
+  };
+
+  const dateToCompare = new Date(inputDate);
+
+  const compare1Months = (date) => {
+    const dateToCompare = new Date(date);
+    const newDate = new Date(
+      dateToCompare.setMonth(dateToCompare.getMonth() + 1),
+    );
+    return newDate;
+  };
+
+  const compare2Months = (date) => {
+    const dateToCompare = new Date(date);
+    const newDate = new Date(
+      dateToCompare.setMonth(dateToCompare.getMonth() + 2),
+    );
+    return newDate;
   };
 
   return (
@@ -80,40 +105,117 @@ export default function EntregaFutura() {
             </svg>
           </button>
           <strong className={styles.EntregaModalTitle}>
-            SE NÃO TIVER PRESSA PARA RECEBER SEU COLCHÃO <br /> ZISSOU,
-            APROVEITE DESCONTOS ADICIONAIS
+            SE NÃO TIVER PRESSA PARA RECEBER SEU COLCHÃO {!isMobile && <br />}
+            ZISSOU, APROVEITE DESCONTOS ADICIONAIS:
           </strong>
-          <div className={styles.EntregaModalDates}>
-            <div className={styles.ThirtyDays}>
-              <span className={styles.DaysTitle}>
-                Entregas entre
-                <br />
-                <strong className={styles.Bolder}>
-                  {get1Months(date)} E {get1Months(datePlusTenDays)}
-                </strong>
+          {step == 1 ? (
+            <>
+              <span className={styles.EntregaModalSubtitle}>
+                Relaxe! Nosso time de atendimento entrará em contato após sua
+                compra para combinar direitinho a data de entrega ;)
               </span>
-              <ZissouAddToCart
-                text="Compre com 5% de desconto"
-                className={styles.ButtonCTA}
-                EntregaFutura5OFF={true}
-              />
-            </div>
-            <div className={styles.Line} />
-            <div className={styles.SixtyDays}>
-              <span className={styles.DaysTitle}>
-                Entregas entre
-                <br />
-                <strong className={styles.Bolder}>
-                  {get2Months(date)} E {get2Months(datePlusTenDays)}
-                </strong>
+              <div className={styles.EntregaModalDates}>
+                <div className={styles.ThirtyDays}>
+                  <span className={styles.DaysTitle}>
+                    Entrega próxima de{' '}
+                    <strong className={styles.Bolder}>
+                      {get1Months(date)}
+                    </strong>
+                  </span>
+                  <ZissouAddToCart
+                    text="Compre com 5% de desconto"
+                    className={styles.ButtonCTA}
+                    EntregaFutura5OFF={true}
+                  />
+                </div>
+                <div className={styles.Line} />
+                <div className={styles.SixtyDays}>
+                  <span className={styles.DaysTitle}>
+                    Entrega próxima de{' '}
+                    <strong className={styles.Bolder}>
+                      {get2Months(date)}
+                    </strong>
+                  </span>
+                  <ZissouAddToCart
+                    text="Compre com 10% de desconto"
+                    className={styles.ButtonCTA}
+                    EntregaFutura10OFF={true}
+                  />
+                </div>
+              </div>
+              <div className={styles.SimulateOffer}>
+                <span className={styles.SimulateOfferTitle}>
+                  Já tem uma data em mente? Conta pra gente para oferecermos{' '}
+                  {!isMobile && <br />}a melhor oferta para você:
+                </span>
+                <div className={styles.SimulateOfferDates}>
+                  <input
+                    type={'date'}
+                    placeholder={date.toLocaleDateString()}
+                    value={inputDate}
+                    onChange={handleDate}
+                    className={styles.SimulateOfferInput}
+                  />
+                  <button
+                    className={styles.SimulateOfferButton}
+                    onClick={() => setStep('2')}
+                  >
+                    Simular Oferta
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className={styles.ChosenDate}>
+                <span className={styles.ChosenDateText}>
+                  {inputDate.split('-')[2] +
+                    '/' +
+                    inputDate.split('-')[1] +
+                    '/' +
+                    inputDate.split('-')[0]}
+                </span>
+              </div>
+              <span className={styles.DiscountText}>
+                Para a entrega na data selecionada, {!isMobile && <br />} você
+                pode comprar o seu Colchão Zissou com:
               </span>
+              {dateToCompare < compare1Months(date) ? (
+                <strong
+                  className={styles.DiscountValue}
+                  style={{fontSize: '20px'}}
+                >
+                  PRONTA-ENTREGA E FRETE GRÁTIS :)
+                </strong>
+              ) : dateToCompare > compare1Months(date) &&
+                dateToCompare < compare2Months(date) ? (
+                <strong className={styles.DiscountValue}>5% OFF</strong>
+              ) : (
+                <strong className={styles.DiscountValue}>10% OFF</strong>
+              )}
               <ZissouAddToCart
-                text="Compre com 10% de desconto"
-                className={styles.ButtonCTA}
-                EntregaFutura10OFF={true}
+                className={styles.addToCartSimulate}
+                Date={
+                  inputDate.split('-')[2] +
+                  '/' +
+                  inputDate.split('-')[1] +
+                  '/' +
+                  inputDate.split('-')[0]
+                }
               />
-            </div>
-          </div>
+              <span className={styles.TeamSuport}>
+                Lembrando que nosso time entrará em contato{' '}
+                {!isMobile && <br />} logo após sua compra para combinar tudo
+                direitinho ;)
+              </span>
+              <button
+                className={styles.LowerDeadline}
+                onClick={() => setStep('1')}
+              >
+                Voltar e simular novamente
+              </button>
+            </>
+          )}
           <button
             className={styles.LowerDeadline}
             onClick={() => setIsOpen(!isOpen)}

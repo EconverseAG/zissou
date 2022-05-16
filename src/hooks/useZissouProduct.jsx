@@ -68,8 +68,8 @@ function ZissouProductProvider({
       }
     }
 
-    setIsCoral(currentProduct.title.includes('Coral'));
-    setProduct(currentProduct);
+    setIsCoral(baseProduct.title.includes('Coral'));
+    setProduct(currentProduct || baseProduct);
   }, [
     washable,
     customBag,

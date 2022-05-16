@@ -4,9 +4,14 @@
   align-items: center;
   justify-content: center;
   margin: 50px 0;
-  max-width: 474px;
+  max-width: 500px;
   width: 100%;
   position: relative;
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 90%;
+    margin: 30px 0;
+  }
 
   .Close {
     position: absolute;
@@ -23,6 +28,11 @@
     text-align: center;
     color: #717071;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   .EntregaModal {
@@ -37,12 +47,33 @@
 
     &Title {
       font-family: 'ZonaProBlack';
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      line-height: 18px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      line-height: 16px;
       text-align: center;
       color: #415264;
-      margin-bottom: 14px;
+      margin-bottom: 17px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &Subtitle {
+      font-family: 'ZonaProSemiBold';
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      line-height: 16px;
+      text-align: center;
+      color: #415264;
+      margin-bottom: 27px;
+      display: block;
+      max-width: 70%;
+
+      @media only screen and (max-width: 1023px) {
+        max-width: 80%;
+      }
     }
 
     &Dates {
@@ -50,29 +81,57 @@
       align-items: center;
       justify-content: center;
 
+      @media only screen and (max-width: 1023px) {
+        flex-direction: column;
+      }
+
       .ThirtyDays {
         margin-right: 47px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
 
       .SixtyDays {
         margin-left: 47px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-left: 0;
+          margin-top: 20px;
+        }
       }
 
       .ThirtyDays,
       .SixtyDays {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
         .DaysTitle {
           display: block;
           text-transform: uppercase;
           font-family: 'ZonaProBold';
           font-size: 11px;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.04em;
           line-height: 16px;
           text-align: center;
           color: #6d6c6c;
-          margin-bottom: 8.5px;
+          margin-bottom: 14.5px;
+
+          @media only screen and (max-width: 1023px) {
+            white-space: nowrap;
+          }
 
           .Bolder {
             font-family: 'ZonaProBlack';
+            display: block;
+
+            @media only screen and (max-width: 1023px) {
+              display: inline-block;
+            }
           }
         }
 
@@ -83,7 +142,7 @@
           background: #d4a8bf;
           font-family: 'ZonaProBlack';
           font-size: 11px;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.08em;
           line-height: 16px;
           text-align: center;
           color: #fff;
@@ -97,29 +156,177 @@
 
       .Line {
         width: 0px;
-        height: 94px;
+        height: 100%;
         background: transparent;
-        border: 1px solid #707070;
+        border: 1px solid #a085b2;
+
+        @media only screen and (max-width: 1023px) {
+          width: 248.12px;
+          height: 0px;
+          background: transparent;
+          border: 1px solid #a085b2;
+        }
       }
     }
 
-    .LowerDeadline {
-      width: 256px;
-      height: 36px;
-      border-radius: 18px;
-      background: #cadee8;
-      font-family: 'ZonaProBlack';
+    .SimulateOffer {
+      &Title {
+        font-family: 'ZonaProSemiBold';
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        line-height: 16px;
+        text-align: center;
+        color: #415264;
+        margin-bottom: 19px;
+        margin-top: 27px;
+        display: block;
+
+        @media only screen and (max-width: 1023px) {
+          width: 61%;
+          margin: 27px auto 14.5px;
+        }
+      }
+
+      .SimulateOfferDates {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1023px) {
+          flex-direction: column;
+        }
+
+        .SimulateOfferInput {
+          width: 160px;
+          height: 31px;
+          border-radius: 6px;
+          background: #fff;
+          font-family: 'ZonaProBold';
+          font-size: 12px;
+          letter-spacing: 0.04em;
+          line-height: 16px;
+          text-align: center;
+          color: #6d6c6c;
+          margin-right: 17px;
+
+          @media only screen and (max-width: 1023px) {
+            height: 44px;
+            margin-right: 0;
+            margin-bottom: 15.8px;
+            font-size: 13px; 
+          }
+        }
+
+        .SimulateOfferButton {
+          width: 207px;
+          height: 31.24px;
+          border-radius: 15.62px;
+          background: #cadee8;
+          font-family: 'ZonaProBlack';
+          font-size: 11px;
+          letter-spacing: 0.08em;
+          line-height: 16px;
+          text-align: center;
+          color: #415264;
+          text-transform: uppercase;
+
+          &:hover {
+            background: #779abf;
+          }
+        }
+      }
+    }
+
+    .ChosenDate {
+      width: 122px;
+      height: 32px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12.4px;
+
+      &Text {
+        font-family: 'ZonaProBlack';
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        line-height: 16px;
+        text-align: center;
+        color: #6d6c6c;
+      }
+    }
+
+    .DiscountText {
+      font-family: 'ZonaProSemiBold';
       font-size: 12px;
+      letter-spacing: 0.04em;
+      line-height: 16px;
+      text-align: center;
+      color: #415264;
+      margin-bottom: 10.5px;
+
+      @media only screen and (max-width: 1023px) {
+        width: 91%;
+      }
+    }
+
+    .DiscountValue {
+      font-family: 'ZonaProBlack';
+      font-size: 27px;
+      letter-spacing: 0.04em;
+      line-height: 16px;
+      text-align: center;
+      color: #f48580;
+      margin-bottom: 14.1px;
+
+      @media only screen and (max-width: 1023px) {
+        line-height: 22px;
+        font-size: 30px;
+      }
+    }
+
+    .addToCartSimulate {
+      width: 274px;
+      height: 46px;
+      border-radius: 23px;
+      background: #d4a8bf;
+      font-family: 'ZonaProBlack';
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 17.6px;
+
+      &:hover {
+        background: #bb73a9;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        height: 44px;
+        border-radius: 22px;
+      }
+    }
+
+    .TeamSuport {
+      font-family: 'ZonaProSemiBold';
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      line-height: 16px;
+      text-align: center;
+      color: #415264;
+    }
+
+    .LowerDeadline {
+      font-family: 'ZonaProBlack';
+      text-decoration: underline;
+      text-transform: uppercase;
+      font-size: 13px;
       letter-spacing: 0.12em;
       line-height: 18px;
       text-align: center;
-      color: #415264;
-      text-transform: uppercase;
-      margin-top: 17px;
-
-      &:hover {
-        background: #9ebece;
-      }
+      color: #6d6c6c;
+      margin-top: 24.4px;
     }
   }
 }

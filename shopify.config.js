@@ -1,5 +1,5 @@
 export default {
-  storeDomain: 'zissou.myshopify.com',
-  storefrontToken: 'bcc7ee1f7523fb44f93be010e0bb5120',
-  storefrontApiVersion: '2022-01',
+  storeDomain: 'testezissou.myshopify.com',
+  storefrontToken: '7f201c625e0280f7547514fbcfd230fb',
+  storefrontApiVersion: '2022-04',
 };

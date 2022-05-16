@@ -6,7 +6,8 @@
   max-width: 529px;
   height: 72px;
   color: #fff;
-  background: #f08590;
+  background: #d4a8bf;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   text-transform: uppercase;
   font-size: 27px;
   line-height: 36px;
@@ -14,6 +15,10 @@
   font-family: ZonaProBold;
   border-radius: 77px;
   transition: 0.25s;
+
+  &:hover {
+    background: #bb73a9;
+  }
 
   &:disabled {
     opacity: 0.75;
