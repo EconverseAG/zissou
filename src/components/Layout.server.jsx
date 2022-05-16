@@ -9,8 +9,6 @@ import gql from 'graphql-tag';
 import Header from './Header/Header.client';
 import Footer from './Footer/Footer.client';
 import Cart from '../components/Cart/Cart.client';
-import {Suspense} from 'react';
-import ZissouLoading from './ZissouLoading';
 
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
@@ -33,7 +31,7 @@ export default function Layout({children}) {
         <Header collections={collections} storeName={storeName} />
         <Cart />
         <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
-          <Suspense fallback={<ZissouLoading />}>{children}</Suspense>
+          {children}
         </main>
         <Footer />
       </div>

@@ -13,7 +13,7 @@ function LoadingProvider({children}) {
   }, []);
 
   return (
-    <LoadingContext.Provider>
+    <LoadingContext.Provider value={''}>
       {isLoading && <ZissouLoading />}
       {children}
     </LoadingContext.Provider>

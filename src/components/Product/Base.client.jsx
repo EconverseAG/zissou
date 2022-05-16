@@ -7,19 +7,22 @@ import ZissouStores from '../ZissouStores/ZissouStores.client';
 import Partners from '../Partners/Partners.client';
 import BaseTechnical from '../BaseTechnical/BaseTechnical.client';
 import BaseProduct from '../BaseProduct';
+import {LoadingProvider} from '../../hooks/useLoading';
 
 export default function Base() {
   return (
-    <div className="flex flex-col">
-      <BaseBanner />
-      <BaseProduct />
-      <PotencializeSleep />
-      <SpecsBase />
-      <InteractiveComparatorColchoes />
-      <BaseTechnical />
-      <TryItFor100Days />
-      <ZissouStores />
-      <Partners color="#779ABF" />
-    </div>
+    <LoadingProvider>
+      <div className="flex flex-col">
+        <BaseBanner />
+        <BaseProduct />
+        <PotencializeSleep />
+        <SpecsBase />
+        <InteractiveComparatorColchoes />
+        <BaseTechnical />
+        <TryItFor100Days />
+        <ZissouStores />
+        <Partners color="#779ABF" />
+      </div>
+    </LoadingProvider>
   );
 }

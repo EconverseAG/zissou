@@ -162,12 +162,12 @@ function ZissouAddToCart({
     buyTogetherItems,
     linesAdd,
     customBagText,
-    coral5.variants.edges,
-    coral10.variants.edges,
-    coral5Hybrid.variants.edges,
-    coral10Hybrid.variants.edges,
-    blue5.variants.edges,
-    blue10.variants.edges,
+    coral5,
+    coral10,
+    coral5Hybrid,
+    coral10Hybrid,
+    blue5,
+    blue10,
   ]);
 
   return (

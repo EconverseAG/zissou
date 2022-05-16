@@ -1,3 +1,4 @@
+import {LoadingProvider} from '../../hooks/useLoading';
 import DuvetBanner from '../DuvetBanner';
 import DuvetHowToDescribe from '../DuvetHowToDescribe';
 import DuvetInside from '../DuvetInside';
@@ -10,16 +11,18 @@ import ZissouStores from '../ZissouStores/ZissouStores.client';
 
 export default function Duvet() {
   return (
-    <div className="flex flex-col">
-      <DuvetBanner />
-      <DuvetProduct />
-      <DuvetHowToDescribe />
-      <DuvetInside />
-      <TheSecret productName="Duvet Zissou" />
-      <DuvetTechnical />
-      <TryItFor100Days />
-      <ZissouStores />
-      <Partners color="#779ABF" />
-    </div>
+    <LoadingProvider>
+      <div className="flex flex-col">
+        <DuvetBanner />
+        <DuvetProduct />
+        <DuvetHowToDescribe />
+        <DuvetInside />
+        <TheSecret productName="Duvet Zissou" />
+        <DuvetTechnical />
+        <TryItFor100Days />
+        <ZissouStores />
+        <Partners color="#779ABF" />
+      </div>
+    </LoadingProvider>
   );
 }

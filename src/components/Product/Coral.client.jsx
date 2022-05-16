@@ -12,10 +12,11 @@ import InstagramZissou from '../InstagramZissou/InstagramZissou.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
 import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
+import {LoadingProvider} from '../../hooks/useLoading';
 
 export default function Coral() {
   return (
-    <>
+    <LoadingProvider>
       <BannerProductPage src={BannerCoralPDP} />
       <CoralProduct />
       <CinematographyBanner />
@@ -31,6 +32,6 @@ export default function Coral() {
       <Partners color={'#F48580'} />
       <Reviews />
       <CoralOrBlue />
-    </>
+    </LoadingProvider>
   );
 }
