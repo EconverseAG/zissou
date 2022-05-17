@@ -7,9 +7,16 @@ import TextureBlue from '../../../assets/textura-blue.png';
 import TextureCoral from '../../../assets/textura-coral.png';
 import TextureCoralHybrid from '../../../assets/textura-coral-hibrido.png';
 
-import IconFrescor from '../../../assets/icon-frescor.png';
+import TextureBlueMobile from '../../../assets/textura-blue-mobile.png';
+import TextureCoralMobile from '../../../assets/textura-coral-mobile.png';
+import TextureCoralHybridMobile from '../../../assets/textura-coral-hibrido-mobile.png';
+
+import IconFrescor from '../../../assets/icon-frescor.svg';
+import useMobile from '../../../hooks/useMobile';
 
 function SensationTable({...rest}) {
+  const {isMobile} = useMobile();
+
   return (
     <Table heading="Toque e sensação térmica" {...rest}>
       <TableRow heading="Toque">
@@ -19,26 +26,58 @@ function SensationTable({...rest}) {
       </TableRow>
       <TableRow heading="Textura do tecido">
         <td>
-          <Image src={TextureCoral} width={267} height={172} />
+          <Image
+            src={isMobile ? TextureCoralMobile : TextureCoral}
+            width={isMobile ? 123 : 267}
+            height={isMobile ? 79 : 172}
+          />
         </td>
         <td>
-          <Image src={TextureCoralHybrid} width={267} height={172} />
+          <Image
+            src={isMobile ? TextureCoralHybridMobile : TextureCoralHybrid}
+            width={isMobile ? 123 : 267}
+            height={isMobile ? 79 : 172}
+          />
         </td>
         <td>
-          <Image src={TextureBlue} width={267} height={172} />
+          <Image
+            src={isMobile ? TextureBlueMobile : TextureBlue}
+            width={isMobile ? 123 : 267}
+            height={isMobile ? 79 : 172}
+          />
         </td>
       </TableRow>
       <TableRow heading="Frescor">
         <td>
-          <Image src={IconFrescor} width={69} height={69} />
+          <Image
+            src={IconFrescor}
+            width={isMobile ? 44 : 69}
+            height={isMobile ? 44 : 69}
+          />
         </td>
         <td>
-          <Image src={IconFrescor} width={69} height={69} />
+          <Image
+            src={IconFrescor}
+            width={isMobile ? 44 : 69}
+            height={isMobile ? 44 : 69}
+          />
         </td>
         <td>
-          <Image src={IconFrescor} width={69} height={69} />
-          <Image src={IconFrescor} width={69} height={69} />
-          <Image src={IconFrescor} width={69} height={69} />
+          <Image
+            src={IconFrescor}
+            width={isMobile ? 44 : 69}
+            height={isMobile ? 44 : 69}
+          />
+          <Image
+            src={IconFrescor}
+            width={isMobile ? 44 : 69}
+            height={isMobile ? 44 : 69}
+          />
+          <Image
+            src={IconFrescor}
+            width={isMobile ? 44 : 69}
+            height={isMobile ? 44 : 69}
+          />
         </td>
       </TableRow>
       <TableRow heading="Características do tecido">
