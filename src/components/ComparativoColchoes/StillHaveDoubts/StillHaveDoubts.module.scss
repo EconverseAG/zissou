@@ -40,4 +40,34 @@
       letter-spacing: 1.2px;
     }
   }
+
+  &.mobile {
+    height: 206px;
+    margin-block: 54px;
+    flex-direction: column;
+
+    p {
+      font-size: 13px;
+      line-height: 16px;
+      max-width: 162px;
+    }
+
+    a {
+      gap: 12px;
+      width: 217px;
+      padding: 8px 28px;
+
+      .whatsapp {
+        width: 49px;
+        height: 49px;
+        background: #CADEE8;
+      }
+
+      span {
+        font-size: 11px;
+        text-align: left;
+        line-height: 15px;
+      }
+    }
+  }
 }

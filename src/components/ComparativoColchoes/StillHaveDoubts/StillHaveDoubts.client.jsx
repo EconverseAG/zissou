@@ -1,12 +1,18 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 
+import useMobile from '../../../hooks/useMobile';
+
 import * as styles from './StillHaveDoubts.module.scss';
 
 import IconWhatsApp from '../../../assets/whatsapp-white.svg';
 
 function StillHaveDoubts() {
+  const {isMobile} = useMobile();
+
   return (
-    <div className={styles.stillHaveDoubts}>
+    <div
+      className={`${styles.stillHaveDoubts} ${isMobile ? styles.mobile : ''}`}
+    >
       <p>
         Confesso que ainda tenho dúvidas... <br /> Pode me ajudar?
       </p>
@@ -15,9 +21,13 @@ function StillHaveDoubts() {
         target="_blank"
       >
         <div className={styles.whatsapp}>
-          <Image src={IconWhatsApp} width={31} height={31} />
+          <Image
+            src={IconWhatsApp}
+            width={isMobile ? 26 : 31}
+            height={isMobile ? 26 : 31}
+          />
         </div>
-        <span>Estamos aqui para isso</span>
+        <span>Estamos aqui para isso!</span>
       </Link>
     </div>
   );
