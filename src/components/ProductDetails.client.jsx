@@ -19,12 +19,6 @@ export default function ProductDetails({
   whiteLencol,
   base,
   coralHybrid,
-  coral5Hybrid,
-  coral10Hybrid,
-  coral5,
-  coral10,
-  blue5,
-  blue10,
 }) {
   const {handle} = useRouteParams();
 
@@ -70,12 +64,6 @@ export default function ProductDetails({
         whiteLencol={whiteLencol}
         base={base}
         coralHybrid={coralHybrid}
-        coral5Hybrid={coral5Hybrid}
-        coral10Hybrid={coral10Hybrid}
-        coral5={coral5}
-        coral10={coral10}
-        blue5={blue5}
-        blue10={blue10}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}

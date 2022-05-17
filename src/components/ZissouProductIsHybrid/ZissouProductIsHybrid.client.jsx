@@ -1,4 +1,4 @@
-import {Image} from '@shopify/hydrogen';
+import {Image} from '@shopify/hydrogen/client';
 
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
