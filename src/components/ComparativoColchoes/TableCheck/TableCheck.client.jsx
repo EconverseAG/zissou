@@ -2,9 +2,9 @@ import {Image} from '@shopify/hydrogen';
 
 import useMobile from '../../../hooks/useMobile';
 
-import Check from '../../../assets/check-icon.png';
-import CheckBlue from '../../../assets/check-blue.png';
-import Uncheck from '../../../assets/uncheck.png';
+import Check from '../../../assets/check-icon.svg';
+import CheckBlue from '../../../assets/check-blue.svg';
+import Uncheck from '../../../assets/uncheck.svg';
 
 function TableCheck({checked, colorBlue}) {
   const {isMobile} = useMobile();
