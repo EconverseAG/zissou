@@ -1,0 +1,52 @@
+.productTable {
+  table {
+    tbody {
+      tr:first-child {
+        border: none;
+
+        td {
+          flex-direction: column;
+          gap: 18px;
+          text-transform: uppercase;
+
+          p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #F48580;
+            font-family: ZonaProBlack;
+            font-size: 30px;
+            font-weight: 700;
+
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: ZonaProLight;
+              font-size: 13px;
+              width: 120px;
+              height: 33px;
+              letter-spacing: 1.2px;
+              color: #fff;
+              background-image: linear-gradient(to right, #F48580, #fff);
+              border-radius: 33px;
+            }
+          }
+
+          &.blue {
+            p {
+              color: #415264;
+            }
+          }
+        }
+      }
+
+      .firmnessScale {
+        td {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
