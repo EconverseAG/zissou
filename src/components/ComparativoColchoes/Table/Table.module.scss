@@ -79,7 +79,11 @@
 
     &.rowGap {
       tbody {
-        gap: 15px;
+        gap: 0;
+
+        tr + * {
+          margin-top: 15px;
+        }
       }
     }
 

@@ -1,9 +1,28 @@
-function TableRow({heading, children, ...rest}) {
+import useMobile from '../../../hooks/useMobile';
+import * as styles from './TableRow.module.scss';
+
+function TableRow({heading, children, className, ...rest}) {
+  const {isMobile} = useMobile();
+
   return (
-    <tr {...rest}>
-      <th style={{visibility: heading ? 'visible' : 'hidden'}}>{heading}</th>
-      {children}
-    </tr>
+    <>
+      {isMobile && heading && (
+        <div className={styles.headingMobile}>
+          <span>{heading}</span>
+        </div>
+      )}
+      <tr
+        className={`${styles.tableRow} ${className || ''} ${
+          isMobile ? styles.mobile : ''
+        }`}
+        {...rest}
+      >
+        {!isMobile && (
+          <th className={heading ? '' : styles.headingUnused}>{heading}</th>
+        )}
+        {children}
+      </tr>
+    </>
   );
 }
 

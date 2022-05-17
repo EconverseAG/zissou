@@ -1,0 +1,27 @@
+.tableRow {
+  th {
+    &.headingUnused {
+      visibility: hidden;
+    }
+  }
+
+  &.mobile {
+    th {
+      &.headingUnused {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.headingMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #183242;
+  background: #D8D6D6;
+  padding: 14px 32px 15px;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
