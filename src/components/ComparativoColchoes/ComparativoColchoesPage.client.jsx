@@ -1,4 +1,5 @@
 import {LoadingProvider} from '../../hooks/useLoading';
+import SecurityTable from './SecurityTable';
 import SensationTable from './SensationTable';
 import SupportSystemTable from './SupportSystemTable';
 
@@ -7,6 +8,7 @@ function ComparativoColchoesPage() {
     <LoadingProvider>
       <SensationTable />
       <SupportSystemTable />
+      <SecurityTable />
     </LoadingProvider>
   );
 }
