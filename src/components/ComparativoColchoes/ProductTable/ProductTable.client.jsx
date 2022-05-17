@@ -1,4 +1,4 @@
-import {Image} from '@shopify/hydrogen';
+import {Image, Money} from '@shopify/hydrogen/client';
 
 import Table from '../Table';
 
@@ -10,7 +10,7 @@ import Firme from '../../../assets/firme.svg';
 import MedioMacio from '../../../assets/medio-macio.svg';
 import MedioFirme from '../../../assets/medio-firme.svg';
 
-function ProductTable({className, ...rest}) {
+function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
   return (
     <Table
       rowGap
@@ -36,9 +36,15 @@ function ProductTable({className, ...rest}) {
       </tr>
       <tr>
         <th>A partir de</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <Money data={coral.priceRange.minVariantPrice} />
+        </td>
+        <td>
+          <Money data={coralHybrid.priceRange.minVariantPrice} />
+        </td>
+        <td>
+          <Money data={blue.priceRange.minVariantPrice} />
+        </td>
       </tr>
       <tr>
         <th>Altura</th>

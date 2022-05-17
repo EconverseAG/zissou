@@ -8,10 +8,15 @@ import SensationTable from './SensationTable';
 import StillHaveDoubts from './StillHaveDoubts/StillHaveDoubts.client';
 import SupportSystemTable from './SupportSystemTable';
 
-function ComparativoColchoesPage() {
+function ComparativoColchoesPage({coral, coralHybrid, blue}) {
   return (
     <LoadingProvider>
-      <ProductTable marginTop={121} />
+      <ProductTable
+        marginTop={121}
+        coral={coral}
+        coralHybrid={coralHybrid}
+        blue={blue}
+      />
       <SensationTable marginTop={79} />
       <ComfortLayerTable marginTop={30} />
       <CozinessTable marginTop={50} />
