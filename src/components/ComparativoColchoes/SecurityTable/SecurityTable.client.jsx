@@ -5,7 +5,10 @@ function SecurityTable() {
   return (
     <Table heading="Segurança e manuseio">
       <tr>
-        <th>Alças laterais para manuseio</th>
+        <th>
+          Alças laterais
+          <br /> para manuseio
+        </th>
         <td>
           <TableCheck checked />
         </td>
@@ -17,7 +20,10 @@ function SecurityTable() {
         </td>
       </tr>
       <tr>
-        <th>Tecido antiderrapante</th>
+        <th>
+          Tecido
+          <br /> antiderrapante
+        </th>
         <td>
           <TableCheck checked />
         </td>
@@ -29,13 +35,16 @@ function SecurityTable() {
         </td>
       </tr>
       <tr>
-        <th>Descritivo dos materiais</th>
+        <th>
+          Descritivo
+          <br /> dos materiais
+        </th>
         <td>
           Tecido com trama fechada para maior durabilidade e proteção contra o
           atrito
         </td>
         <td>
-          Tecidoc om trama fechada para maior durabilidade e proteção contra o
+          Tecido com trama fechada para maior durabilidade e proteção contra o
           atrito
         </td>
         <td>
