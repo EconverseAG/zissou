@@ -2,6 +2,7 @@ import {Image, Money} from '@shopify/hydrogen/client';
 
 import Table from '../Table';
 import TableRow from '../TableRow';
+import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './ProductTable.module.scss';
 
@@ -12,10 +13,14 @@ import MedioMacio from '../../../assets/medio-macio.svg';
 import MedioFirme from '../../../assets/medio-firme.svg';
 
 function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
+  const {isMobile} = useMobile();
+
   return (
     <Table
       rowGap
-      className={`${styles.productTable} ${className || ''}`}
+      className={`${styles.productTable} ${className || ''} ${
+        isMobile ? styles.mobile : ''
+      }`}
       {...rest}
     >
       <TableRow>

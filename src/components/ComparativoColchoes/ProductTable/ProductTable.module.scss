@@ -49,4 +49,25 @@
       }
     }
   }
+
+  &.mobile {
+    table {
+      tbody {
+        tr:first-child {
+          td {
+            p {
+              font-size: 20px;
+              gap: 7px;
+
+              span {
+                font-size: 7px;
+                width: 65px;
+                height: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
