@@ -4,6 +4,7 @@ import ComfortLayerTable from './ComfortLayerTable';
 import CozinessTable from './CozinessTable';
 import SecurityTable from './SecurityTable';
 import SensationTable from './SensationTable';
+import StillHaveDoubts from './StillHaveDoubts/StillHaveDoubts.client';
 import SupportSystemTable from './SupportSystemTable';
 
 function ComparativoColchoesPage() {
@@ -15,6 +16,7 @@ function ComparativoColchoesPage() {
       <SupportSystemTable marginTop={149} />
       <SecurityTable marginTop={103} />
       <BenefitsTable marginTop={116} />
+      <StillHaveDoubts />
     </LoadingProvider>
   );
 }
