@@ -1,6 +1,7 @@
 import {Image} from '@shopify/hydrogen';
 
 import Table from '../Table';
+import TableRow from '../TableRow';
 
 import TextureBlue from '../../../assets/textura-blue.png';
 import TextureCoral from '../../../assets/textura-coral.png';
@@ -11,17 +12,12 @@ import IconFrescor from '../../../assets/icon-frescor.png';
 function SensationTable({...rest}) {
   return (
     <Table heading="Toque e sensação térmica" {...rest}>
-      <tr>
-        <th>Toque</th>
+      <TableRow heading="Toque">
         <td>Suave e macio</td>
         <td>Suave e macio</td>
         <td>Plush e acetinado</td>
-      </tr>
-      <tr>
-        <th>
-          Textura
-          <br /> do tecido
-        </th>
+      </TableRow>
+      <TableRow heading="Textura do tecido">
         <td>
           <Image src={TextureCoral} width={267} height={172} />
         </td>
@@ -31,9 +27,8 @@ function SensationTable({...rest}) {
         <td>
           <Image src={TextureBlue} width={267} height={172} />
         </td>
-      </tr>
-      <tr>
-        <th>Frescor</th>
+      </TableRow>
+      <TableRow heading="Frescor">
         <td>
           <Image src={IconFrescor} width={69} height={69} />
         </td>
@@ -45,12 +40,8 @@ function SensationTable({...rest}) {
           <Image src={IconFrescor} width={69} height={69} />
           <Image src={IconFrescor} width={69} height={69} />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Características
-          <br /> do tecido
-        </th>
+      </TableRow>
+      <TableRow heading="Características do tecido">
         <td>
           <div>
             <h3>Soft & Chill</h3>
@@ -95,7 +86,7 @@ function SensationTable({...rest}) {
             </p>
           </div>
         </td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }

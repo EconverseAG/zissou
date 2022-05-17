@@ -2,6 +2,7 @@ import {Image} from '@shopify/hydrogen';
 
 import Table from '../Table';
 import TableCheck from '../TableCheck';
+import TableRow from '../TableRow';
 
 import IconDispersaoUmidade from '../../../assets/icon-dispersao-umidade.svg';
 import IconAir from '../../../assets/icon-umidade.png';
@@ -15,10 +16,7 @@ import BounceExtra from '../../../assets/bounce-extra.svg';
 function ComfortLayerTable({...rest}) {
   return (
     <Table heading="Camada de conforto" {...rest}>
-      <tr>
-        <th>
-          Resiliência e<br /> suporte progressivo
-        </th>
+      <TableRow heading="Resiliência e suporte progressivo">
         <td>
           <TableCheck checked />
         </td>
@@ -28,12 +26,8 @@ function ComfortLayerTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Propriedades
-          <br /> intimicrobianas e<br /> resistência a ácaros
-        </th>
+      </TableRow>
+      <TableRow heading="Propriedades intimicrobianas e resistência a ácaros">
         <td>
           <TableCheck checked />
         </td>
@@ -43,12 +37,8 @@ function ComfortLayerTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Dispersão
-          <br /> de umidade
-        </th>
+      </TableRow>
+      <TableRow heading="Dispersão de umidade">
         <td style={{gap: '9px'}}>
           <Image src={IconDispersaoUmidade} width={62} height={62} />
           <Image src={IconDispersaoUmidade} width={62} height={62} />
@@ -62,13 +52,8 @@ function ComfortLayerTable({...rest}) {
           <Image src={IconDispersaoUmidade} width={62} height={62} />
           <Image src={IconDispersaoUmidade} width={62} height={62} />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Distribuição
-          <br /> equilibrada de
-          <br /> peso do corpo
-        </th>
+      </TableRow>
+      <TableRow heading="Distribuição equilibrada de peso do corpo">
         <td>
           <TableCheck checked />
         </td>
@@ -78,12 +63,8 @@ function ComfortLayerTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Bounce <br /> (Facilita movimentação
-          <br /> na cama)
-        </th>
+      </TableRow>
+      <TableRow heading="Bounce (Facilita movimentação na cama)">
         <td className={styles.bounceCell}>
           <Image src={BounceModerado} width={145} height={71} />
           <p>Moderado</p>
@@ -96,12 +77,8 @@ function ComfortLayerTable({...rest}) {
           <Image src={BounceExtra} width={145} height={99} />
           <p>Extra</p>
         </td>
-      </tr>
-      <tr>
-        <th>
-          Circulação de ar na
-          <br /> camada de conforto
-        </th>
+      </TableRow>
+      <TableRow heading="Circulação de ar na camada de conforto">
         <td style={{gap: '8px'}}>
           <Image src={IconAir} width={63} height={63} />
           <Image src={IconAir} width={63} height={63} />
@@ -115,9 +92,8 @@ function ComfortLayerTable({...rest}) {
           <Image src={IconAir} width={63} height={63} />
           <Image src={IconAir} width={63} height={63} />
         </td>
-      </tr>
-      <tr>
-        <th>Certificações</th>
+      </TableRow>
+      <TableRow heading="Certificações">
         <td>
           <Image src={Certifications} width={314} height={89} />
         </td>
@@ -127,12 +103,8 @@ function ComfortLayerTable({...rest}) {
         <td>
           <Image src={Certifications} width={314} height={89} />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Descritivo
-          <br /> de materiais
-        </th>
+      </TableRow>
+      <TableRow heading="Descritivo de materiais">
         <td>
           <div>
             <h3>Látex Classic</h3>
@@ -176,7 +148,7 @@ function ComfortLayerTable({...rest}) {
             </p>
           </div>
         </td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }

@@ -1,14 +1,11 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
+import TableRow from '../TableRow';
 
 function SecurityTable({...rest}) {
   return (
     <Table heading="Segurança e manuseio" {...rest}>
-      <tr>
-        <th>
-          Alças laterais
-          <br /> para manuseio
-        </th>
+      <TableRow heading="Alças laterais para manuseio">
         <td>
           <TableCheck checked />
         </td>
@@ -18,12 +15,8 @@ function SecurityTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Tecido
-          <br /> antiderrapante
-        </th>
+      </TableRow>
+      <TableRow heading="Tecido antiderrapante">
         <td>
           <TableCheck checked />
         </td>
@@ -33,12 +26,8 @@ function SecurityTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Descritivo
-          <br /> dos materiais
-        </th>
+      </TableRow>
+      <TableRow heading="descritivo dos materiais">
         <td>
           Tecido com trama fechada para maior durabilidade e proteção contra o
           atrito
@@ -51,7 +40,7 @@ function SecurityTable({...rest}) {
           Tecido com trama fechada para maior durabilidade e proteção contra o
           atrito
         </td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }

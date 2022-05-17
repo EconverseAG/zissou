@@ -1,13 +1,11 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
+import TableRow from '../TableRow';
 
 function CozinessTable({...rest}) {
   return (
     <Table heading="Camada de aconchego" {...rest}>
-      <tr>
-        <th>
-          Adaptabilidade à<br /> curvatura do corpo
-        </th>
+      <TableRow heading="Adaptabilidade à curvatura do corpo">
         <td>
           <TableCheck checked />
         </td>
@@ -17,12 +15,8 @@ function CozinessTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Absorção de
-          <br /> ondas de movimento
-        </th>
+      </TableRow>
+      <TableRow heading="Absorção de ondas de movimento">
         <td>
           <TableCheck checked />
         </td>
@@ -32,12 +26,8 @@ function CozinessTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Alívio de pontos
-          <br /> de pressão
-        </th>
+      </TableRow>
+      <TableRow heading="Alívio de pontos de pressão">
         <td>
           <TableCheck checked />
         </td>
@@ -47,9 +37,8 @@ function CozinessTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>Gel de cooling</th>
+      </TableRow>
+      <TableRow heading="Gel de cooling">
         <td>
           <TableCheck checked />
         </td>
@@ -59,9 +48,8 @@ function CozinessTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>Descritivo de materiais</th>
+      </TableRow>
+      <TableRow heading="Descritivo de materiais">
         <td>
           <div>
             <h3>Visco Cool</h3>
@@ -95,7 +83,7 @@ function CozinessTable({...rest}) {
             </p>
           </div>
         </td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }

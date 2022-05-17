@@ -1,11 +1,11 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
+import TableRow from '../TableRow';
 
 function BenefitsTable({...rest}) {
   return (
     <Table heading="Benefícios" {...rest}>
-      <tr>
-        <th>100 dias</th>
+      <TableRow heading="100 dias">
         <td>
           <TableCheck checked />
         </td>
@@ -15,12 +15,8 @@ function BenefitsTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Garantia
-          <br /> de 10 anos
-        </th>
+      </TableRow>
+      <TableRow heading="Garantia de 10 anos">
         <td>
           <TableCheck checked />
         </td>
@@ -30,9 +26,8 @@ function BenefitsTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>Frete grátis</th>
+      </TableRow>
+      <TableRow heading="Frete grátis">
         <td>
           <TableCheck checked />
         </td>
@@ -42,16 +37,12 @@ function BenefitsTable({...rest}) {
         <td>
           <TableCheck checked colorBlue />
         </td>
-      </tr>
-      <tr>
-        <th>
-          Entreag agendada
-          <br /> com unboxing
-        </th>
+      </TableRow>
+      <TableRow heading="Entrega agendada com unboxing">
         <td>Opcional</td>
         <td>Opcional</td>
         <td>Gratuita</td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }

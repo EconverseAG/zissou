@@ -1,6 +1,7 @@
 import {Image, Money} from '@shopify/hydrogen/client';
 
 import Table from '../Table';
+import TableRow from '../TableRow';
 
 import * as styles from './ProductTable.module.scss';
 
@@ -17,8 +18,7 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
       className={`${styles.productTable} ${className || ''}`}
       {...rest}
     >
-      <tr>
-        <th style={{visibility: 'hidden'}}></th>
+      <TableRow>
         <td>
           <p>Coral</p>
           <Image src={PhotoCoral} width={258} height={92} alt="Coral" />
@@ -33,9 +33,8 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
           <p>Blue</p>
           <Image src={PhotoBlue} width={258} height={92} alt="Blue" />
         </td>
-      </tr>
-      <tr>
-        <th>A partir de</th>
+      </TableRow>
+      <TableRow heading="A partir de">
         <td>
           <Money data={coral.priceRange.minVariantPrice} />
         </td>
@@ -45,18 +44,13 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
         <td>
           <Money data={blue.priceRange.minVariantPrice} />
         </td>
-      </tr>
-      <tr>
-        <th>Altura</th>
+      </TableRow>
+      <TableRow heading="Altura">
         <td>25cm</td>
         <td>30cm</td>
         <td>32cm</td>
-      </tr>
-      <tr className={styles.firmnessScale}>
-        <th>
-          Escala
-          <br /> de firmeza
-        </th>
+      </TableRow>
+      <TableRow heading="Escala de firmeza" className={styles.firmnessScale}>
         <td>
           <Image src={Firme} width={259} height={45} />
           <span>Firme</span>
@@ -69,7 +63,7 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
           <Image src={MedioFirme} width={259} height={45} />
           <span>Médio firme</span>
         </td>
-      </tr>
+      </TableRow>
     </Table>
   );
 }
