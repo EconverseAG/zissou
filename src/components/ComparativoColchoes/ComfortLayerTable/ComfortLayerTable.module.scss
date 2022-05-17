@@ -1,0 +1,7 @@
+table tr td {
+  &.bounceCell {
+    flex-direction: column;
+    gap: 17px;
+    justify-content: flex-end;
+  }
+}

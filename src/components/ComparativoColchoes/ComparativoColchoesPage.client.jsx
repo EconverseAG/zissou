@@ -1,5 +1,6 @@
 import {LoadingProvider} from '../../hooks/useLoading';
 import BenefitsTable from './BenefitsTable';
+import ComfortLayerTable from './ComfortLayerTable';
 import CozinessTable from './CozinessTable';
 import SecurityTable from './SecurityTable';
 import SensationTable from './SensationTable';
@@ -9,6 +10,7 @@ function ComparativoColchoesPage() {
   return (
     <LoadingProvider>
       <SensationTable />
+      <ComfortLayerTable />
       <CozinessTable />
       <SupportSystemTable />
       <SecurityTable />
