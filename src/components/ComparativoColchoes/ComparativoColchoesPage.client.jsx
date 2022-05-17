@@ -9,12 +9,12 @@ import SupportSystemTable from './SupportSystemTable';
 function ComparativoColchoesPage() {
   return (
     <LoadingProvider>
-      <SensationTable />
-      <ComfortLayerTable />
-      <CozinessTable />
-      <SupportSystemTable />
-      <SecurityTable />
-      <BenefitsTable />
+      <SensationTable marginTop={79} />
+      <ComfortLayerTable marginTop={30} />
+      <CozinessTable marginTop={50} />
+      <SupportSystemTable marginTop={149} />
+      <SecurityTable marginTop={103} />
+      <BenefitsTable marginTop={116} />
     </LoadingProvider>
   );
 }
