@@ -1,9 +1,11 @@
 import * as styles from './Table.module.scss';
 
-function Table({heading, children, className, marginTop, ...rest}) {
+function Table({heading, children, className, marginTop, rowGap, ...rest}) {
   return (
     <div
-      className={`${styles.tableContainer} ${className || ''}`}
+      className={`${styles.tableContainer} ${rowGap ? styles.rowGap : ''} ${
+        className || ''
+      }`}
       style={marginTop && {marginTop: `${marginTop}px`}}
       {...rest}
     >

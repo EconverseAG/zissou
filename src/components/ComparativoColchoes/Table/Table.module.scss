@@ -24,9 +24,14 @@
 
   table {
     width: 100%;
-    border: 1px solid #F0F0F0;
+    border: 2px solid #F0F0F0;
     font-size: 18px;
     color: #6D6C6C;
+    
+    tbody {
+      display: flex;
+      flex-direction: column;
+    }
     
     tr {
       display: grid;
@@ -51,9 +56,19 @@
         &:nth-child(odd) {
           background: rgba(240, 240, 240, .4);
         }
-  
-        & + td {
-          border-left: 1px solid #F0F0F0;
+      }
+    }
+  }
+
+  &.rowGap {
+    table {
+      border: none;
+
+      tbody {
+        gap: 23px;
+
+        tr {
+          border: 2px solid #f0f0f0;
         }
       }
     }
