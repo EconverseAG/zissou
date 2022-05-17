@@ -1,9 +1,9 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
 
-function SecurityTable() {
+function SecurityTable({...rest}) {
   return (
-    <Table heading="Segurança e manuseio">
+    <Table heading="Segurança e manuseio" {...rest}>
       <tr>
         <th>
           Alças laterais

@@ -5,9 +5,9 @@ import TableCheck from '../TableCheck';
 
 import IconUmidade from '../../../assets/icon-umidade.png';
 
-function SupportSystemTable() {
+function SupportSystemTable({...rest}) {
   return (
-    <Table heading="Sistema de suporte">
+    <Table heading="Sistema de suporte" {...rest}>
       <tr>
         <th>
           Principal matéria

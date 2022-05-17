@@ -1,9 +1,9 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
 
-function CozinessTable() {
+function CozinessTable({...rest}) {
   return (
-    <Table heading="Camada de aconchego">
+    <Table heading="Camada de aconchego" {...rest}>
       <tr>
         <th>
           Adaptabilidade à<br /> curvatura do corpo

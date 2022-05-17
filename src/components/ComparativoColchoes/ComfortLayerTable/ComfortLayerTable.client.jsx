@@ -12,9 +12,9 @@ import * as styles from './ComfortLayerTable.module.scss';
 import BounceModerado from '../../../assets/bounce-moderado.svg';
 import BounceExtra from '../../../assets/bounce-extra.svg';
 
-function ComfortLayerTable() {
+function ComfortLayerTable({...rest}) {
   return (
-    <Table heading="Camada de conforto">
+    <Table heading="Camada de conforto" {...rest}>
       <tr>
         <th>
           Resiliência e<br /> suporte progressivo

@@ -8,9 +8,9 @@ import TextureCoralHybrid from '../../../assets/textura-coral-hibrido.png';
 
 import IconFrescor from '../../../assets/icon-frescor.png';
 
-function SensationTable() {
+function SensationTable({...rest}) {
   return (
-    <Table heading="Toque e sensação térmica">
+    <Table heading="Toque e sensação térmica" {...rest}>
       <tr>
         <th>Toque</th>
         <td>Suave e macio</td>

@@ -1,9 +1,9 @@
 import Table from '../Table';
 import TableCheck from '../TableCheck';
 
-function BenefitsTable() {
+function BenefitsTable({...rest}) {
   return (
-    <Table heading="Benefícios">
+    <Table heading="Benefícios" {...rest}>
       <tr>
         <th>100 dias</th>
         <td>
