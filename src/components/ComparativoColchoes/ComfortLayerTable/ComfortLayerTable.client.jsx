@@ -3,6 +3,7 @@ import {Image} from '@shopify/hydrogen';
 import Table from '../Table';
 import TableCheck from '../TableCheck';
 import TableRow from '../TableRow';
+import useMobile from '../../../hooks/useMobile';
 
 import IconDispersaoUmidade from '../../../assets/icon-dispersao-umidade.svg';
 import IconAir from '../../../assets/icon-umidade.png';
@@ -14,6 +15,8 @@ import BounceModerado from '../../../assets/bounce-moderado.svg';
 import BounceExtra from '../../../assets/bounce-extra.svg';
 
 function ComfortLayerTable({...rest}) {
+  const {isMobile} = useMobile();
+
   return (
     <Table heading="Camada de conforto" {...rest}>
       <TableRow heading="Resiliência e suporte progressivo">
@@ -39,18 +42,46 @@ function ComfortLayerTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Dispersão de umidade">
-        <td style={{gap: '9px'}}>
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
         </td>
-        <td style={{gap: '9px'}}>
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
         </td>
-        <td style={{gap: '9px'}}>
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
-          <Image src={IconDispersaoUmidade} width={62} height={62} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
         </td>
       </TableRow>
       <TableRow heading="Distribuição equilibrada de peso do corpo">
@@ -66,31 +97,71 @@ function ComfortLayerTable({...rest}) {
       </TableRow>
       <TableRow heading="Bounce (Facilita movimentação na cama)">
         <td className={styles.bounceCell}>
-          <Image src={BounceModerado} width={145} height={71} />
+          <Image
+            src={BounceModerado}
+            width={isMobile ? 83 : 145}
+            height={isMobile ? 41 : 71}
+          />
           <p>Moderado</p>
         </td>
         <td className={styles.bounceCell}>
-          <Image src={BounceModerado} width={145} height={71} />
+          <Image
+            src={BounceModerado}
+            width={isMobile ? 83 : 145}
+            height={isMobile ? 41 : 71}
+          />
           <p>Moderado</p>
         </td>
         <td className={styles.bounceCell}>
-          <Image src={BounceExtra} width={145} height={99} />
+          <Image
+            src={BounceExtra}
+            width={isMobile ? 83 : 145}
+            height={isMobile ? 57 : 99}
+          />
           <p>Extra</p>
         </td>
       </TableRow>
       <TableRow heading="Circulação de ar na camada de conforto">
-        <td style={{gap: '8px'}}>
-          <Image src={IconAir} width={63} height={63} />
-          <Image src={IconAir} width={63} height={63} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
-        <td style={{gap: '8px'}}>
-          <Image src={IconAir} width={63} height={63} />
-          <Image src={IconAir} width={63} height={63} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
-        <td style={{gap: '8px'}}>
-          <Image src={IconAir} width={63} height={63} />
-          <Image src={IconAir} width={63} height={63} />
-          <Image src={IconAir} width={63} height={63} />
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
       </TableRow>
       <TableRow heading="Certificações">
