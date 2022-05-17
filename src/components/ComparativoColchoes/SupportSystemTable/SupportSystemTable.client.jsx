@@ -3,10 +3,13 @@ import {Image} from '@shopify/hydrogen';
 import Table from '../Table';
 import TableCheck from '../TableCheck';
 import TableRow from '../TableRow';
+import useMobile from '../../../hooks/useMobile';
 
 import IconUmidade from '../../../assets/icon-umidade.png';
 
 function SupportSystemTable({...rest}) {
+  const {isMobile} = useMobile();
+
   return (
     <Table heading="Sistema de suporte" {...rest}>
       <TableRow heading="Principal matéria prima para suporte">
@@ -49,17 +52,45 @@ function SupportSystemTable({...rest}) {
       </TableRow>
       <TableRow heading="Circulação interna de ar">
         <td>
-          <Image src={IconUmidade} width={63} height={63} />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
-        <td style={{gap: '7px'}}>
-          <Image src={IconUmidade} width={63} height={63} />
-          <Image src={IconUmidade} width={63} height={63} />
-          <Image src={IconUmidade} width={63} height={63} />
+        <td style={{gap: '4px'}}>
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
-        <td style={{gap: '7px'}}>
-          <Image src={IconUmidade} width={63} height={63} />
-          <Image src={IconUmidade} width={63} height={63} />
-          <Image src={IconUmidade} width={63} height={63} />
+        <td style={{gap: '4px'}}>
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
         </td>
       </TableRow>
       <TableRow heading="Peso suportado (por pessoa)">
