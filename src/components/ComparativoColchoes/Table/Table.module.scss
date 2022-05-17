@@ -73,4 +73,39 @@
       }
     }
   }
+
+  &.mobile {
+    margin-inline: 19px;
+
+    &.rowGap {
+      tbody {
+        gap: 15px;
+      }
+    }
+
+    h2 {
+      font-size: 14px;
+      height: 62px;
+    }
+
+    table {
+      display: block;
+      font-size: 10px;
+
+      tbody {
+        tr {
+          overflow: scroll;
+  
+          td {
+            min-width: 168px;
+          }
+  
+          td, th {
+            padding: 16px;
+          }
+        }
+      }
+
+    }
+  }
 }
