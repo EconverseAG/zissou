@@ -9,6 +9,7 @@
   
   h1, h2 {
     text-align: center;
+    text-transform: uppercase;
 
     strong {
       color: #F08590;
@@ -21,11 +22,11 @@
     line-height: 50px;
     text-align: center;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     margin-bottom: 86px;
   }
 
   h2 {
+    font-family: ZonaProBold;
     font-size: 37px;
     line-height: 49px;
     margin-bottom: 64px;
