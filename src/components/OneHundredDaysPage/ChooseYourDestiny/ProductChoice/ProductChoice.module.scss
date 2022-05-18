@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  
+  strong {
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-family: ZonaProBold;
+    color: #245066;
+  }
+  
+  &.mobile {
+    gap: 26px;
+    
+    strong {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}

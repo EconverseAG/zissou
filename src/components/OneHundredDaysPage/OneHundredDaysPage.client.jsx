@@ -7,6 +7,7 @@ import * as styles from './OneHundredDaysPage.module.scss';
 
 import ColchaoTimeline from '../../assets/colchao-timeline.png';
 import ColchaoTimelineMobile from '../../assets/colchao-timeline-mobile.png';
+import ChooseYourDestiny from './ChooseYourDestiny';
 
 function OneHundredDaysPage() {
   const {isMobile} = useMobile();
@@ -39,6 +40,8 @@ function OneHundredDaysPage() {
           width={isMobile ? 437 : 1618}
           height={isMobile ? 754 : 972}
         />
+
+        <ChooseYourDestiny />
       </div>
     </LoadingProvider>
   );
