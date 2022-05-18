@@ -8,12 +8,14 @@ import SecurityTable from './SecurityTable';
 import SensationTable from './SensationTable';
 import StillHaveDoubts from './StillHaveDoubts/StillHaveDoubts.client';
 import SupportSystemTable from './SupportSystemTable';
+import TableFixedHeader from './TableFixedHeader';
 
 function ComparativoColchoesPage({coral, coralHybrid, blue}) {
   const {isMobile} = useMobile();
 
   return (
     <LoadingProvider>
+      <TableFixedHeader />
       <ProductTable
         marginTop={121}
         coral={coral}

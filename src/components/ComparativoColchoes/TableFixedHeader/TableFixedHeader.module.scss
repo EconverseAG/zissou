@@ -1,0 +1,56 @@
+.container {
+  position: fixed;
+  width: 100%;
+  margin-inline: 0;
+  padding-inline: 41px;
+  top: 65px;
+  background: #fff;
+  transform: translateY(-200%);
+  transition: 0.3s;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #F48580;
+    font-family: ZonaProBlack;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: ZonaProLight;
+      font-size: 13px;
+      width: 120px;
+      height: 33px;
+      letter-spacing: 1.2px;
+      color: #fff;
+      background-image: linear-gradient(to right, #F48580, #fff);
+      border-radius: 33px;
+    }
+  }
+
+  &.mobile {
+    margin-inline: 0;
+    padding-inline: 19px;
+    top: 63px;
+
+    p {
+      font-size: 20px;
+      gap: 7px;
+
+      span {
+        font-size: 7px;
+        width: 65px;
+        height: 21px;
+      }
+    }
+  }
+}
