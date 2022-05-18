@@ -14,6 +14,8 @@ function ZissouAddToCart({
   EntregaFutura5OFF,
   EntregaFutura10OFF,
   Date,
+  is5OFF,
+  is10OFF,
   ...rest
 }) {
   const {selectedVariant} = useProduct();
@@ -60,7 +62,11 @@ function ZissouAddToCart({
     } else if (Date) {
       lines[0].attributes = [
         {
-          key: 'Date',
+          key: is5OFF
+            ? 'DateCustom5OFF'
+            : is10OFF
+            ? 'DateCustom10OFF'
+            : 'DateCustom',
           value: Date,
         },
       ];
@@ -84,6 +90,8 @@ function ZissouAddToCart({
     buyTogetherItems,
     linesAdd,
     customBagText,
+    is5OFF,
+    is10OFF,
   ]);
 
   return (
