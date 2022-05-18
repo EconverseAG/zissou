@@ -1,14 +1,19 @@
 import {Image} from '@shopify/hydrogen';
+
+import useMobile from '../../hooks/useMobile';
 import {LoadingProvider} from '../../hooks/useLoading';
 
 import * as styles from './OneHundredDaysPage.module.scss';
 
 import ColchaoTimeline from '../../assets/colchao-timeline.png';
+import ColchaoTimelineMobile from '../../assets/colchao-timeline-mobile.png';
 
 function OneHundredDaysPage() {
+  const {isMobile} = useMobile();
+
   return (
     <LoadingProvider>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${isMobile ? styles.mobile : ''}`}>
         <h1>
           Você acredita em <strong>amor</strong> a primeira vista?
         </h1>
@@ -30,9 +35,9 @@ function OneHundredDaysPage() {
         </p>
         <Image
           className={styles.timeline}
-          src={ColchaoTimeline}
-          width={1618}
-          height={972}
+          src={isMobile ? ColchaoTimelineMobile : ColchaoTimeline}
+          width={isMobile ? 437 : 1618}
+          height={isMobile ? 754 : 972}
         />
       </div>
     </LoadingProvider>

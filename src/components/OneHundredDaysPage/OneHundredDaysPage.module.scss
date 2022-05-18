@@ -8,6 +8,8 @@
   padding-block: 150px 179px;
   
   h1, h2 {
+    text-align: center;
+
     strong {
       color: #F08590;
     }
@@ -34,19 +36,46 @@
     font-size: 25px;
     line-height: 40px;
     text-align: center;
+    margin-inline: 42px;
 
     strong, span {
       font-family: ZonaProBold;
     }
 
     span {
-      font-size: 20px;
-      line-height: 30px;
       color: #F08590;
     }
   }
 
   .timeline {
-    margin-top: 86px;
+    margin-block: 86px 206px;
+  }
+
+  &.mobile {
+    padding-block: 100px;
+
+    h1, h2 {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      max-width: 272px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      margin-bottom: 48px;
+    }
+
+    > p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .timeline {
+      margin: 0;
+    }
   }
 }
