@@ -202,6 +202,11 @@ export default function EntregaFutura() {
                   '/' +
                   inputDate.split('-')[0]
                 }
+                is5OFF={
+                  dateToCompare > compare1Months(date) &&
+                  dateToCompare < compare2Months(date)
+                }
+                is10OFF={dateToCompare > compare2Months(date)}
               />
               <span className={styles.TeamSuport}>
                 Lembrando que nosso time entrará em contato{' '}
