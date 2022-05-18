@@ -1,0 +1,16 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+}
+
+.subtext {
+  margin-block: 71px 171px;
+  font-size: 25px;
+  line-height: 40px;
+
+  &.mobile {
+    margin-block: 71px 82px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

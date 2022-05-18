@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 24px;
+  gap: 12px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+
+  p {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  img {
+    width: auto;
+    max-height: 100%;
+  }
+
+  &.mobile {
+    width: 247px;
+    height: 129px;
+    padding-block: 34px;
+
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
