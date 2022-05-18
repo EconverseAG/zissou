@@ -43,7 +43,7 @@ function WhatCanYouDo() {
 
   return (
     <>
-      <h2>
+      <h2 style={{maxWidth: isMobile ? '320px' : 'initial'}}>
         O que mais você pode fazer em <strong>100 dias?</strong>
       </h2>
 

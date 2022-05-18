@@ -6,11 +6,14 @@ import ColchoesImage from '../../../assets/colchoes-100-dias-page.png';
 import BaseImage from '../../../assets/base-100-dias-page.png';
 import TravesseiroImage from '../../../assets/travesseiro-100-dias-page.png';
 import LencolDuvetImage from '../../../assets/lencol-e-duvet-100-dias-page.png';
+import useMobile from '../../../hooks/useMobile';
 
 function ChooseYourDestiny() {
+  const {isMobile} = useMobile();
+
   return (
     <>
-      <h2>
+      <h2 style={{maxWidth: isMobile ? '291px' : 'initial'}}>
         Escolha seu destino com{' '}
         <strong>100 dias de testes sem compromisso</strong>
       </h2>
