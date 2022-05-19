@@ -3,7 +3,7 @@
   padding-block: 124px;
   background: #F5F6F5;
   font-family: ZonaPro;
-  min-height: 1191px;
+  min-height: 1100px;
   justify-content: space-between;
 
   &Top, &Bottom {
@@ -31,12 +31,12 @@
 
   &Image {
     position: relative;
-    height: 100%;
+    max-width: 1610px;
+    width: 75%;
 
     img {
       margin-top: 56px;
       width: 100%;
-      max-width: 1610px;
       mix-blend-mode: multiply;
     }
   }
@@ -53,36 +53,48 @@
     letter-spacing: 0.05em;
 
     &Left {
-      top: 120px;
-      left: 240px;
+      top: 65px;
+      left: 178px;
     }
 
     &Right {
-      top: 70px;
-      right: 151px;
+      top: 57px;
+      right: 95px;
     }
 
     @media (max-width: 1500px) {
       &Left {
-        top: 80px;
-        left: 150px;
+        top: 30px;
+        left: 135px;
       }
 
       &Right {
-        top: 40px;
-        right: 120px;
+        top: 30px;
+        right: 70px;
       }
     }
 
     @media (max-width: 1400px) {
       &Left {
-        top: 50px;
-        left: 130px;
+        top: 10px;
+        left: 120px;
       }
 
       &Right {
+        top: 5px;
+        right: 60px;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      &Left {
         top: 0px;
-        right: 100px;
+        left: 100px;
+      }
+
+      &Right {
+        top: -15px;
+        right: 60px;
       }
     }
     
@@ -90,7 +102,7 @@
       content: '';
       position: absolute;
       width: 1px;
-      height: 234px;
+      height: 130px;
       background: #245066;
       font-weight: inherit;
       margin-top: 32px;
@@ -119,6 +131,10 @@
       &.reminderText {
         margin-top: 40px;
       }
+    }
+
+    .wrapperImage {
+      width: 100%;
     }
 
     .tip {
