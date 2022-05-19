@@ -15,10 +15,10 @@ const idTravesseiroWashable = `gid://shopify/Product/4512182992969`;
 const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`;
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`;
 const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`;
-const idGrayLencol = `gid://shopify/Product/7631109292281`; // 7195869249730
-const idWhiteLencol = `gid://shopify/Product/7539221987577`; //2135741923401
-const idBase = `gid://shopify/Product/7539222249721`; // 7145404399810
-const idCoralHybrid = `gid://shopify/Product/7631028551929`; // 6587140604098
+const idGrayLencol = `gid://shopify/Product/7195869249730`; // 7195869249730
+const idWhiteLencol = `gid://shopify/Product/2135741923401`; //2135741923401
+const idBase = `gid://shopify/Product/7145404399810`; // 7145404399810
+const idCoralHybrid = `gid://shopify/Product/6587140604098`; // 6587140604098
 
 export default function Product({country = {isoCode: 'US'}, response}) {
   const {handle} = useRouteParams();
