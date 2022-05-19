@@ -20,12 +20,8 @@ function TravesseiroProduct() {
       <ProductSectionLeft>
         <ZissouProductImages
           className={styles.Images}
-          title="A conectada. O tranquilão. A preguiçosa.
-  O resmungão. Cada um tem o seu jeito de dormir.
-  Com o Travesseiro Zissou, você define o conforto
-  perfeito com a união de camadas que se adaptam
-  às curvas do seu corpo dentro da capa que
-  mantém o frescor com toque suave e macio."
+          title="Defina o conforto perfeito com a união de camadas
+          que se adaptam às curvas do seu corpo."
         />
       </ProductSectionLeft>
       <ProductSectionRight>
