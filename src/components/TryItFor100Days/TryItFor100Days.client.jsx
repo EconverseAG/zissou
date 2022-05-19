@@ -27,7 +27,9 @@ export default function TryItFor100Days() {
         <Link to="/pages/100dias">Saiba mais</Link>
       </div>
       <div className={styles.TryItRight}>
-        <video src={Gif100Dias} autoPlay loop muted />
+        <Link to="/pages/100dias">
+          <video src={Gif100Dias} autoPlay loop muted />
+        </Link>
       </div>
     </div>
   );

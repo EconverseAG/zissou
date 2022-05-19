@@ -13,7 +13,7 @@ export default function Navigation() {
     <>
       <nav className={styles.navigation}>
         <ul>
-          <li>
+          <li className={styles.novo}>
             <Link to="/pages/colchoes-zissou">Colchões</Link>
             <ul className={styles.subMenu}>
               <li className={styles.coral}>
@@ -41,7 +41,7 @@ export default function Navigation() {
               </li>
             </ul>
           </li>
-          <li className={styles.novo}>
+          <li>
             <Link to="/products/base-zissou">Base</Link>
           </li>
           <li>
@@ -51,20 +51,10 @@ export default function Navigation() {
             <Link to="/pages/lencol-e-duvet-zissou">Lençol & Duvet</Link>
             <ul className={styles.subMenu}>
               <li>
-                <Link
-                  to="/products/jogo-de-lencol-zissou"
-                  style={{textDecoration: 'underline'}}
-                >
-                  Lençol
-                </Link>
+                <Link to="/products/jogo-de-lencol-zissou">Lençol</Link>
               </li>
               <li>
-                <Link
-                  to="/products/duvet-zissou"
-                  style={{textDecoration: 'underline'}}
-                >
-                  Duvet
-                </Link>
+                <Link to="/products/duvet-zissou">Duvet</Link>
               </li>
               <li>
                 <Link
