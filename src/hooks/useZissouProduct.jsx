@@ -3,6 +3,7 @@ import {createContext, useContext, useEffect, useState} from 'react';
 import {ProductProvider} from '@shopify/hydrogen/client';
 
 import {BuyTogetherProvider} from './useBuyTogether';
+import {ProductOptionsProvider} from './useProductOptions';
 
 const ZissouProductContext = createContext();
 const useZissouProduct = () => useContext(ZissouProductContext);
@@ -114,7 +115,9 @@ function ZissouProductProvider({
       }}
     >
       <ProductProvider data={product}>
-        <BuyTogetherProvider>{children}</BuyTogetherProvider>
+        <ProductOptionsProvider>
+          <BuyTogetherProvider>{children}</BuyTogetherProvider>
+        </ProductOptionsProvider>
       </ProductProvider>
     </ZissouProductContext.Provider>
   );
