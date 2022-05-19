@@ -33,11 +33,9 @@ function ProductOptionsProvider({children}) {
 
     if (!searchTerm) return;
 
-    const newOption = newProduct.options[0].values.find((option) =>
-      option.toLowerCase().includes(searchTerm),
-    );
-
-    return newOption;
+    return newProduct.options[0].values
+      .sort((a, b) => (a.length > b.length ? 1 : a.length < b.length ? -1 : 0))
+      .find((option) => option.toLowerCase().includes(searchTerm));
   }, []);
 
   useEffect(() => {
