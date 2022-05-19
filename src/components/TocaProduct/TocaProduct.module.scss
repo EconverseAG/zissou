@@ -1,0 +1,45 @@
+.wrapper {
+  .Images {
+    h2 {
+      max-width: 408px;
+      font-weight: 400;
+    }
+  }
+
+  .contentDisclaimer {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .Price {
+    margin-top: 60px;
+  }
+
+  .SpecialOptions {
+    margin-top: 20px;
+  }
+
+  .AddToCart {
+    margin-top: 46px;
+  }
+
+  &.mobile {
+    .Price {
+      margin-top: 38px;
+    }
+
+    .contentDisclaimer {
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: #707070;
+      margin-top: 85px;
+    }
+
+    .AddToCart {
+      margin-top: 24px;
+    }
+  }
+}

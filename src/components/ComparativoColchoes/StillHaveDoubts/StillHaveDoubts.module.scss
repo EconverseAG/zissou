@@ -5,7 +5,7 @@
   text-align: center;
   height: 196px;
   text-transform: uppercase;
-  margin-block: 88px;
+  margin-block: 88px 0;
   background: #CADEE8;
 
   p {
@@ -43,7 +43,7 @@
 
   &.mobile {
     height: 206px;
-    margin-block: 54px;
+    margin-block: 54px 0;
     flex-direction: column;
 
     p {

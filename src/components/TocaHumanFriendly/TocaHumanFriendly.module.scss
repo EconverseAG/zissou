@@ -1,0 +1,131 @@
+.TocaHumanFriendlyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f5;
+  padding: 119px 0 104px;
+
+  @media only screen and (max-width: 1023px) {
+    padding: 62px 0 47px;
+    flex-direction: column;
+  }
+
+  .Left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 729px;
+    margin-right: 62px;
+
+    @media only screen and (max-width: 1023px) {
+      margin-right: 0;
+      width: 90%;
+      margin-bottom: 50px;
+    }
+
+    .Title {
+      font-family: 'ZonaProBlack';
+      font-size: 37.31px;
+      line-height: 50px;
+      text-transform: uppercase;
+      color: #245066;
+      margin-bottom: 67px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 23px;
+      }
+
+      .OtherColor {
+        color: var(--coral-color-500);
+      }
+    }
+
+    .Subtitle {
+      font-family: 'ZonaProBold';
+      font-size: 20px;
+      line-height: 40px;
+      color: #245066;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #707070;
+        text-align: center;
+      }
+    }
+
+    .Text {
+      font-family: 'ZonaPro';
+      font-size: 20px;
+      line-height: 40px;
+      color: #707070;
+      margin-bottom: 16px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  .Right {
+    max-width: 652px;
+    width: 100%;
+
+    @media only screen and (max-width: 1023px) {
+      width: 80%;
+    }
+
+    :global(.slick-slider.slick-initialized) {
+      width: 100%;
+
+      :global(.slick-arrow) {
+        z-index: 1;
+
+        &:global(.slick-prev) {
+          left: 15px;
+
+          @media only screen and (max-width: 1023px) {
+            left: -25px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            background: url("data:image/svg+xml,%3Csvg width='12' height='35' viewBox='0 0 12 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2_1954)'%3E%3Cpath d='M11.0064 34.9999C11.1869 34.9999 11.3694 34.9496 11.5337 34.844C11.9994 34.5443 12.1403 33.9136 11.8485 33.4351L2.13162 17.5001L11.8485 1.56473C12.1403 1.08663 11.999 0.455554 11.5337 0.155812C11.0683 -0.14393 10.454 0.00115989 10.1622 0.479251L0.151989 16.8956C0.052846 17.0582 0.000238419 17.2461 0.000238419 17.4382V17.5612C0.000238419 17.7533 0.052846 17.9412 0.151989 18.1038L10.1622 34.5202C10.3512 34.8299 10.675 34.9999 11.0064 34.9999Z' fill='%23F08590'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2_1954'%3E%3Crect width='12' height='35' fill='white' transform='matrix(-1 0 0 1 12 0)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+            width: 12px;
+            height: 35px;
+          }
+        }
+
+        &:global(.slick-next) {
+          right: -30px;
+
+          &::before {
+            content: '';
+            display: block;
+            background: url("data:image/svg+xml,%3Csvg width='12' height='35' viewBox='0 0 12 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2_1951)'%3E%3Cpath d='M0.993625 34.9999C0.813143 34.9999 0.630638 34.9496 0.466343 34.844C0.000571418 34.5443 -0.140253 33.9136 0.151512 33.4351L9.86838 17.5001L0.151512 1.56473C-0.140253 1.08663 0.000976095 0.455554 0.466343 0.155812C0.93171 -0.14393 1.54599 0.00115989 1.83776 0.479251L11.848 16.8956C11.9472 17.0582 11.9998 17.2461 11.9998 17.4382V17.5612C11.9998 17.7533 11.9472 17.9412 11.848 18.1038L1.83776 34.5202C1.64878 34.8299 1.32505 34.9999 0.993625 34.9999Z' fill='%23F08590'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2_1951'%3E%3Crect width='12' height='35' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+            width: 12px;
+            height: 35px;
+          }
+        }
+      }
+
+      :global(.slick-list) {
+        max-width: 544px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1023px) {
+          max-width: 335px;
+        }
+      }
+    }
+  }
+}

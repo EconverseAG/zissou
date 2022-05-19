@@ -4,9 +4,9 @@ import gql from 'graphql-tag';
 import ComparativoColchoesPage from '../../components/ComparativoColchoes';
 import Layout from '../../components/Layout.server';
 
-const idCoral = `gid://shopify/Product/7539221233913`;
-const idCoralHybrid = `gid://shopify/Product/7631028551929`;
-const idBlue = `gid://shopify/Product/7539220807929`;
+const idCoral = `gid://shopify/Product/6581615460546`;
+const idCoralHybrid = `gid://shopify/Product/6587140604098`;
+const idBlue = `gid://shopify/Product/6581615362242`;
 
 export default function ComparativoColchoes({
   country = {isoCode: 'US'},
