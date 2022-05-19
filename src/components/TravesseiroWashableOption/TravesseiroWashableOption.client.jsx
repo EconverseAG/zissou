@@ -20,7 +20,8 @@ export default function TravesseiroWashableOption() {
         <h2>Opção lavável</h2>
         <span className={styles.firstText}>
           Adicionando essa opção, a higienização do Travesseiro Zissou fica mais
-          fácil. A capa agora pode ser lavada pelos seguintes diferenciais:
+          fácil.
+          <br /> A capa agora pode ser lavada pelos seguintes diferenciais:
         </span>
       </div>
       <div className={styles.wrapperBottom}>
