@@ -1,0 +1,241 @@
+.wrapper {
+  align-items: center;
+  min-height: 900px;
+  color: #245066;
+  background: #f5f6f5;
+
+  &.mobile {
+    min-height: 342px;
+    padding: 57px 0 43px;
+
+    .content {
+      padding-inline: 16px;
+      margin-right: 0;
+
+      h2 {
+        margin-bottom: 34px;
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      .accordion {
+        margin: 0;
+
+        &Summary {
+          height: 61px;
+          min-height: unset;
+
+          * {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+
+        &Details {
+          font-size: 11px;
+          line-height: 24px;
+          padding-bottom: 28px;
+
+          h4 {
+            font-size: 12px;
+          }
+
+          &Grid {
+            font-size: 11px;
+            line-height: 18px;
+            gap: 20px;
+
+            h4 {
+              font-size: 12px;
+              white-space: nowrap;
+            }
+
+            p {
+              font-family: 'ZonaProBold';
+            }
+
+            @media (max-width: 400px) {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    max-width: 910px;
+    align-items: center;
+    padding-left: 50px;
+    margin-left: auto;
+
+    h2 {
+      font-family: ZonaProSemiBold;
+      font-size: 37px;
+      line-height: 48px;
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+    }
+
+    .accordion {
+      font-family: ZonaPro;
+      width: 100%;
+      background: none;
+      box-shadow: none;
+      color: #245066;
+      border-top: 1px solid #c6c6c6;
+      border-bottom: none;
+
+      &:last-of-type {
+        border-bottom: 1px solid #c6c6c6;
+      }
+
+      &Summary {
+        padding-inline: 0;
+        height: 91px;
+
+        * {
+          font-size: 18px;
+          line-height: 23px;
+          letter-spacing: 0.09em;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+
+      &Details {
+        padding-inline: 0;
+        font-size: 20px;
+        letter-spacing: 0.09em;
+        font-weight: 400;
+        line-height: 29px;
+        padding-bottom: 97px;
+
+        h4 {
+          font-family: ZonaProBold;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #F08590;
+        }
+
+        p {
+          strong {
+            font-family: ZonaProBlack;
+            font-weight: 900;
+          }
+        }
+
+        &Grid {
+          display: grid;
+          grid-template-columns: 3fr 2fr;
+          font-size: 18px;
+          line-height: 23px;
+          gap: 40px;
+          align-items: center;
+
+          h4 {
+            line-height: 24px;
+          }
+
+          p {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .accordionDetailsFlexItems {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .FlexItem {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &+.FlexItem {
+            margin-top: 50px;
+          }
+
+          &Image {
+            max-width: 398px;
+            max-height: 194px;
+
+            @media only screen and (max-width: 1023px) {
+              max-width: 140px;
+              max-height: 100px;
+            }
+
+            img {
+              mix-blend-mode: multiply;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &Texts {
+            margin-left: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @media only screen and (max-width: 1023px) {
+              margin-left: 0;
+            }
+
+            >strong {
+              font-family: 'ZonaProBold';
+              font-size: 18.31px;
+              line-height: 24px;
+              letter-spacing: 0.09em;
+              color: #F08590;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+
+            >span {
+              font-family: 'ZonaPro';
+              font-size: 18.31px;
+              line-height: 24px;
+              letter-spacing: 0.09em;
+              color: #415264;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 11px;
+                line-height: 13.87px;                
+              }
+            }
+
+            >p {
+              font-family: 'ZonaPro';
+              font-size: 14px;
+              line-height: 17.65px;
+              letter-spacing: 0.09em;
+              color: #6E6D6D;
+
+              @media only screen and (max-width: 1023px) {
+                font-size: 11px;
+                line-height: 14.52px;                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Background {
+    margin-left: auto;
+
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+}

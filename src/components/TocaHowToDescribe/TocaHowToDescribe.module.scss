@@ -1,0 +1,67 @@
+.TocaHowToDescribeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 136px 0 122px;
+  background-color: #f5f6f5;
+
+  @media only screen and (max-width: 1023px) {
+    padding: 62px 0 48px;
+  }
+
+  &Title {
+    font-family: 'ZonaProSemiBold';
+    font-size: 37.31px;
+    line-height: 48px;
+    color: #245066;
+    text-transform: uppercase;
+    margin-bottom: 68px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 23px;
+    }
+
+    .OtherColor {
+      color: var(--coral-color-500);
+    }
+  }
+
+  .Bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 1023px) {
+      flex-direction: column-reverse;
+    }
+
+    &Video {
+      margin-right: 69px;
+
+      @media only screen and (max-width: 1023px) {
+        margin-right: 0;
+        margin-top: 41px;
+        width: 90%;
+      }
+    }
+
+    &Text {
+      font-family: 'ZonaPro';
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.05em;
+      color: #245066;
+      max-width: 579px;
+
+      @media only screen and (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 15px;
+        max-width: 90%;
+        text-align: center;
+      }
+    }
+  }
+}

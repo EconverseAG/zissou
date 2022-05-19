@@ -23,6 +23,7 @@ function ZissouProductProvider({
   isLencol,
   isTravesseiro,
   isColchao,
+  isToca,
 }) {
   const [isCoral, setIsCoral] = useState(false);
   const [washable, setWashable] = useState(false);
@@ -86,6 +87,7 @@ function ZissouProductProvider({
   return (
     <ZissouProductContext.Provider
       value={{
+        isToca,
         isDuvet,
         isLencol,
         isColchao,

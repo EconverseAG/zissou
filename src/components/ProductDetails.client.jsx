@@ -7,6 +7,7 @@ import Lencol from './Product/Lencol.client';
 import Duvet from './Product/Duvet.client';
 import {ZissouProductProvider} from '../hooks/useZissouProduct';
 import {useRouteParams} from '@shopify/hydrogen/client';
+import Toca from './Product/Toca.client';
 
 export default function ProductDetails({
   product,
@@ -27,6 +28,7 @@ export default function ProductDetails({
   const [isTravesseiro, setIsTravesseiro] = useState(false);
   const [isLencol, setIsLencol] = useState(false);
   const [isDuvet, setIsDuvet] = useState(false);
+  const [isToca, setIsToca] = useState(false);
 
   useEffect(() => {
     switch (handle) {
@@ -47,6 +49,9 @@ export default function ProductDetails({
         break;
       case 'travesseiro-zissou':
         setIsTravesseiro(true);
+        break;
+      case 'toca-zissou':
+        setIsToca(true);
         break;
     }
   }, [handle]);
@@ -69,6 +74,7 @@ export default function ProductDetails({
         isDuvet={isDuvet}
         isLencol={isLencol}
         isTravesseiro={isTravesseiro}
+        isToca={isToca}
       >
         {isColchao ? (
           <Colchao />
@@ -80,6 +86,8 @@ export default function ProductDetails({
           <Lencol />
         ) : isDuvet ? (
           <Duvet />
+        ) : isToca ? (
+          <Toca />
         ) : null}
       </ZissouProductProvider>
     </>

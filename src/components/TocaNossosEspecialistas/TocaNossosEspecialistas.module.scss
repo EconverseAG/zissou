@@ -1,0 +1,75 @@
+.TocaNossosEspecialistasContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #CADEE8;
+  padding: 136px 30px 124px;
+
+  @media only screen and (max-width: 1023px) {
+    padding: 62px 0 50px;
+  }
+
+  >strong {
+    font-family: 'ZonaProBlack';
+    font-size: 37.31px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #245066;
+    margin-bottom: 58px;
+
+    @media only screen and (max-width: 1023px) {
+      font-family: 'ZonaProSemiBold';
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 24px;
+    }
+  }
+
+  :global(.slick-slider.slick-initialized) {
+    width: 100%;
+
+    :global(.slick-list) {
+      :global(.slick-track) {
+        :global(.slick-slide) {
+          >div {
+            height: 428px;
+            width: 323px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    :global(.slick-arrow) {
+      z-index: 1;
+      
+      &:global(.slick-prev) {
+        left: 15px;
+        
+        &::before {
+          content: '';
+          display: block;
+          background: url("data:image/svg+xml,%3Csvg width='13' height='35' viewBox='0 0 13 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_36_351)'%3E%3Cpath d='M11.2481 0C11.4325 0 11.619 0.0503035 11.7869 0.155899C12.263 0.455642 12.4069 1.08631 12.1087 1.56481L2.17823 17.4998L12.1087 33.4352C12.4069 33.9133 12.2625 34.5444 11.7869 34.8441C11.3113 35.1438 10.6836 34.9988 10.3854 34.5207L0.155086 18.1039C0.0537631 17.9413 0 17.7534 0 17.5613V17.4383C0 17.2462 0.0537631 17.0583 0.155086 16.8957L10.3854 0.479754C10.5785 0.170034 10.9094 0 11.2481 0Z' fill='%23245066'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_36_351'%3E%3Crect width='12.2638' height='35' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+          width: 12.26px;
+          height: 35px;
+        }
+      }
+
+      &:global(.slick-next) {
+        right: 15px;
+
+        &::before {
+          content: '';
+          display: block;
+          background: url("data:image/svg+xml,%3Csvg width='13' height='35' viewBox='0 0 13 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_36_354)'%3E%3Cpath d='M1.0156 0C0.831154 0 0.644637 0.0503035 0.476731 0.155899C0.000720439 0.455642 -0.143199 1.08631 0.154979 1.56481L10.0854 17.4998L0.154979 33.4352C-0.143199 33.9133 0.00113401 34.5444 0.476731 34.8441C0.952327 35.1438 1.58012 34.9988 1.87829 34.5207L12.1086 18.1039C12.2099 17.9413 12.2637 17.7534 12.2637 17.5613V17.4383C12.2637 17.2462 12.2099 17.0583 12.1086 16.8957L1.87829 0.479754C1.68516 0.170034 1.35431 0 1.0156 0Z' fill='%23245066'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_36_354'%3E%3Crect width='12.2638' height='35' fill='white' transform='matrix(-1 0 0 1 12.2637 0)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+          width: 12.26px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
