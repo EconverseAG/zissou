@@ -141,11 +141,13 @@
       color: #707070;
       font-weight: 800;
       line-height: 26px;
+      text-transform: uppercase;
       cursor: pointer;
       transition: 0.25s;
       
       &.activeNav {
         color: #245066;
+        font-family: ZonaProBlack;
         cursor: default;
       }
     }
