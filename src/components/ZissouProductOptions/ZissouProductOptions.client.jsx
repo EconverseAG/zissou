@@ -100,7 +100,7 @@ function ZissouProductOptions({
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
         className || ''
-      }`}
+      } ${!isColchao ? styles.lilac : ''}`}
       {...rest}
     >
       {title && (

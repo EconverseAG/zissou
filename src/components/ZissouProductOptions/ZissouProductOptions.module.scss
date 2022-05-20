@@ -6,6 +6,19 @@
     text-transform: uppercase;
   }
 
+  &.lilac {
+    .select {
+      color: #d4a8bf
+    }
+    .selectOpen, .selectDropdown {
+      border-color: #d4a8bf;
+    }
+
+    .selectOpenArrow {
+      background: #d4a8bf;
+    }
+  }
+
   .title {
     display: flex;
     align-items: center;
