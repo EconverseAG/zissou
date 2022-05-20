@@ -22,7 +22,7 @@ import IconYoutube from '../../assets/icone-menu-youtube.png';
 /**
  * A client component that defines the navigation for a mobile storefront
  */
-export default function MobileNavigation({/*collections*/ isOpen, setIsOpen}) {
+export default function MobileNavigation({isOpen, setIsOpen}) {
   const OpenFocusTrap = isOpen ? FocusTrap : Fragment;
 
   const [openMenuColchoes, setOpenMenuColchoes] = useState(false);

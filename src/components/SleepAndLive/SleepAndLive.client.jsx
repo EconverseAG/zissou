@@ -19,8 +19,8 @@ export default function SleepAndLive() {
           <Link to="/products/colchao-zissou-coral-original">
             <Image
               src={ColchaoCoral}
-              width="334"
-              height="119"
+              width="228"
+              height="82"
               loading={'lazy'}
             />
           </Link>
@@ -35,12 +35,7 @@ export default function SleepAndLive() {
           <strong>Blue</strong>
           <span>Liberte seus sonhos</span>
           <Link to="/products/colchao-zissou-blue">
-            <Image
-              src={ColchaoBlue}
-              width="334"
-              height="119"
-              loading={'lazy'}
-            />
+            <Image src={ColchaoBlue} width="228" height="82" loading={'lazy'} />
           </Link>
           <Link to="/products/colchao-zissou-blue">Colchão Zissou Blue</Link>
         </div>

@@ -12,7 +12,7 @@
     font-family: "ZonaProBold";
     font-size: 36px;
     line-height: 42px;
-    letter-spacing: 5px;
+    letter-spacing: 0.12em;
     margin-top: 67px;
     text-transform: uppercase;
 
@@ -60,13 +60,19 @@
         padding: 2px 30px;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: 0.04em;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
         @media only screen and (max-width: 1023px) {
-          padding: 2px 20px;
-          font-size: 11px;
-          top: -23px;
+          font-size: 12px;
+          line-height: 13px;
+          top: -10px;
           right: 15px;
+          width: 95px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
 

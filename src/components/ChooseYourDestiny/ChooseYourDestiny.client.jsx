@@ -1,12 +1,14 @@
-import Banner_1 from '../../assets/slick_colchao.webp';
-import Banner_2 from '../../assets/slick_base.webp';
-import Banner_3 from '../../assets/slick_travesseiro.webp';
-import Banner_4 from '../../assets/slick_lencol.webp';
+import Banner_1 from '../../assets/slick_colchao.png';
+import Banner_2 from '../../assets/slick_base.png';
+import Banner_3 from '../../assets/slick_travesseiro.png';
+import Banner_4 from '../../assets/slick_lencol.png';
+import Banner_5 from '../../assets/slick_toca.png';
 
-import MobileBanner_1 from '../../assets/mobileBanner_1.webp';
-import MobileBanner_2 from '../../assets/mobileBanner_2.webp';
-import MobileBanner_3 from '../../assets/mobileBanner_3.webp';
-import MobileBanner_4 from '../../assets/mobileBanner_4.webp';
+import MobileBanner_1 from '../../assets/mobileBanner_1.png';
+import MobileBanner_2 from '../../assets/mobileBanner_2.png';
+import MobileBanner_3 from '../../assets/mobileBanner_3.png';
+import MobileBanner_4 from '../../assets/mobileBanner_4.png';
+import MobileBanner_5 from '../../assets/mobileBanner_5.png';
 
 import Slick from '../Slick/Slick.client';
 
@@ -15,25 +17,31 @@ export default function ChooseYourDestiny() {
     {
       banner: Banner_1,
       mobileImage: MobileBanner_1,
-      link: 'https://www.zissou.com.br/pages/colchoes-zissou',
+      link: '/pages/colchoes-zissou',
       CTA: 'COLCHÕES',
     },
     {
       banner: Banner_2,
       mobileImage: MobileBanner_2,
-      link: 'https://www.zissou.com.br/products/base-zissou',
+      link: '/products/base-zissou',
       CTA: 'BASE',
     },
     {
       banner: Banner_3,
       mobileImage: MobileBanner_3,
-      link: 'https://www.zissou.com.br/products/travesseiro-zissou',
+      link: '/products/travesseiro-zissou',
       CTA: 'TRAVESSEIRO',
     },
     {
       banner: Banner_4,
       mobileImage: MobileBanner_4,
-      link: 'https://www.zissou.com.br/pages/lencol-e-duvet-zissou',
+      link: '/pages/lencol-e-duvet-zissou',
+      CTA: 'LENÇOL & DUVET',
+    },
+    {
+      banner: Banner_5,
+      mobileImage: MobileBanner_5,
+      link: '/pages/toca-zissou',
       CTA: 'LENÇOL & DUVET',
     },
   ];
