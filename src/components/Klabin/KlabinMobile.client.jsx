@@ -6,8 +6,9 @@ import * as styles from '../Klabin/Klabin.module.scss';
 
 import KlabinActive from '../../assets/KlabinActiveTab.webp';
 import KlabinInactive from '../../assets/KlabinInactiveTab.webp';
-import KlabinFundo from '../../assets/klabinFundoMobile.webp';
-import ZissouFundo from '../../assets/zissouFundoMobile.webp';
+
+import KlabinFundo from '../../assets/klabinFundoMobile.png';
+import ZissouFundo from '../../assets/zissouFundoMobile.png';
 
 import ZissouActive from '../../assets/ZissouActiveTab.webp';
 import ZissouInactive from '../../assets/ZissouInactiveTab.webp';

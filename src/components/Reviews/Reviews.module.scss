@@ -1,13 +1,13 @@
 .ReviewsContainer {
   .ReviewsTitle {
     font-family: "ZonaProSemiBold";
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 36px;
     color: var(--blue-color-1000);
     text-transform: uppercase;
     text-align: center;
     display: block;
-    margin: 104px 0 40px;
+    margin: 104px 0 20px;
     letter-spacing: 5px;
 
     @media only screen and (max-width: 1023px) {
@@ -65,7 +65,7 @@
     }
 
     &Desc {
-      font-family: "ZonaProSemiBold";
+      font-family: "ZonaPro";
       font-size: 17px;
       line-height: 21px;
       color: var(--gray-color-600);
@@ -99,6 +99,11 @@
     @media only screen and (max-width: 1023px) {
       width: 100%;
       margin: 0 auto 20px;
+    }
+
+    :global(.slick-track) {
+      display: flex;
+      align-items: center;
     }
 
     :global(.slick-slide) {

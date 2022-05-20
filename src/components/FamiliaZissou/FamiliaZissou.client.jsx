@@ -1,7 +1,7 @@
 import {Image} from '@shopify/hydrogen';
 import * as styles from './FamiliaZissou.module.scss';
 
-import FamiliaZissouFundo from '../../assets/familiaZissouFUndo.webp';
+import FamiliaZissouFundo from '../../assets/familiaZissouFUndo.png';
 import FamiliaZissouFundoMobile from '../../assets/familiaZissouFundoMobile.webp';
 
 import PopupContent from './FamiliaModal.client';
@@ -13,7 +13,7 @@ export default function FamiliaZissou() {
   const {isMobile} = useMobile();
   return (
     <div className={styles.FamiliaZissouContainer}>
-      <strong className={styles.FamiliaZissouTitle}>A FAMILIA ZISSOU</strong>
+      <strong className={styles.FamiliaZissouTitle}>A FAMÍLIA ZISSOU</strong>
       <span className={styles.FamiliaZissouSubtitle}>
         Todos os produtos com entrega expressa e frete grátis direto para a sua
         casa

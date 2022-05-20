@@ -38,7 +38,7 @@ export default function FormulaDoConforto() {
                   <strong
                     className={styles.FormulaDoConfortoTopContentListBold}
                   >
-                    • Acefom HR:
+                    • Látex Infused:
                   </strong>{' '}
                   material exclusivo do Spark, tem alta resiliência e ótimas
                   características ergonômicas

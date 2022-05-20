@@ -25,6 +25,7 @@ export default function ZissouNaMidia() {
         breakpoint: 767,
         settings: {
           arrows: false,
+          dots: true,
         },
       },
     ],
@@ -134,12 +135,9 @@ export default function ZissouNaMidia() {
               <SvgFirstMark />
             </div>
             <span>
-              Colabora para o sucesso da Zissou a solução criada pelos sócios
-              para acabar com aquele momento constrangedor na hora de comprar um
-              colchão que acontece na maioria das lojas. Quem quer experimentar
-              o produto pode ir até uma das lojas testar a peça em um quarto
-              privado e aconchegante, com iluminação e trilha sonora escolhidas
-              pelo visitante.
+              Quem quer experimentar o produto pode ir até uma das lojas testar
+              a peça em um quarto privado e aconchegante, com iluminação e
+              trilha sonora escolhidas pelo visitante.
             </span>
             <div className={styles.lastMarks}>
               <SvgLastMark />

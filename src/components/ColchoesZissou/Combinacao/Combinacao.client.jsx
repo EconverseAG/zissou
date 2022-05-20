@@ -21,7 +21,7 @@ export default function Combinacao() {
         A combinação entre a resiliência do látex e o aconchego do viscoelástico
         resultam no{' '}
         <strong className={styles.CombinacaoBolder}>
-          quilíbrio perfeito de sensações para uma noite de sono singular
+          equilíbrio perfeito de sensações para uma noite de sono singular
         </strong>{' '}
         e aqueles 5 minutinhos de bônus merecidos
       </span>

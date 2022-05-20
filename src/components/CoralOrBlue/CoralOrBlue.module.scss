@@ -1,9 +1,15 @@
 .CoralOrBlueContainer {
-  background: linear-gradient(135deg, rgba(152, 115, 172, 1) 0%, rgba(244, 133, 128, 1) 50%, rgba(65, 82, 100, 1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  >video {
+    max-height: 689px;
+    object-fit: cover;
+    width: 100%;
+  }
 
   .CoralOrBlueTitle {
     display: block;
@@ -15,6 +21,10 @@
     padding-top: 102px;
     text-align: center;
     letter-spacing: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media only screen and (max-width: 1023px) {
       font-size: 20px;
@@ -25,6 +35,10 @@
   }
 
   .CoralOrBlueLink {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--purple-color-300);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
     display: flex;
@@ -38,7 +52,7 @@
     color: var(--white-color);
     border-radius: 200px;
     text-transform: uppercase;
-    margin-bottom: 107px;
+    margin-bottom: 90px;
 
     @media only screen and (max-width: 1023px) {
       margin-bottom: 40px;
