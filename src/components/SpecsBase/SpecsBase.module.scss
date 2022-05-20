@@ -131,9 +131,8 @@
     width: 100%;
     max-width: 1440px;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 148px;
-    padding-bottom: 72px;
+    justify-content: space-around;
+    padding-block: 50px;
     border-bottom: 1px solid #707070;
     
     span {
@@ -173,13 +172,11 @@
       z-index: 1;
       width: 100%;
       max-width: 1440px;
-      min-height: 878px;
-      padding: 100px 16px 137px;
+      min-height: 768px;
+      padding: 42px 16px;
       margin-inline: auto;
   
       &[data-tab="0"] {
-        height: 981px;
-
         p {
           line-height: 29px;
         }
@@ -237,7 +234,7 @@
       &Cols {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 100%;
       }
     }
