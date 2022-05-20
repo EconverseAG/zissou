@@ -3,6 +3,7 @@ import useMobile from '../../hooks/useMobile';
 import * as styles from './DuvetHowToDescribe.module.scss';
 
 import Video from '../../assets/duvet-how-to-describe.mp4';
+import VideoMobile from '../../assets/duvet-how-to-describe-mobile.mp4';
 
 function DuvetHowToDescribe() {
   const {isMobile} = useMobile();
@@ -14,7 +15,7 @@ function DuvetHowToDescribe() {
       </h2>
       <div className={styles.videoContainer}>
         <video
-          src={Video}
+          src={isMobile ? VideoMobile : Video}
           autoPlay
           loop
           muted
