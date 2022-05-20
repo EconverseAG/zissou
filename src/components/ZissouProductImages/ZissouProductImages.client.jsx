@@ -11,6 +11,7 @@ import ArrowPrev from '../../assets/prev-arrow.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
 import BaseBanner from '../../assets/base-banner.gif';
 import LencolBanner from '../../assets/lencol-banner-background.png';
+import DuvetBanner from '../../assets/duvet-banner-background.png';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -22,7 +23,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro, isBase, isLencol} = useZissouProduct();
+  const {isTravesseiro, isBase, isLencol, isDuvet} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -119,6 +120,11 @@ function ZissouProductImages({title, thumbs, className}) {
           {isMobile && isLencol && (
             <div className={styles.imageContainer}>
               <Image src={LencolBanner} width={1920} height={995} />
+            </div>
+          )}
+          {isMobile && isDuvet && (
+            <div className={styles.imageContainer}>
+              <Image src={DuvetBanner} width={1920} height={995} />
             </div>
           )}
           <div className={styles.imageContainer}>
