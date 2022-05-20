@@ -10,6 +10,7 @@ import ArrowNext from '../../assets/next-arrow.svg';
 import ArrowPrev from '../../assets/prev-arrow.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
 import BaseBanner from '../../assets/base-banner.gif';
+import LencolBanner from '../../assets/lencol-banner-background.png';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -21,7 +22,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro, isBase} = useZissouProduct();
+  const {isTravesseiro, isBase, isLencol} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -113,6 +114,11 @@ function ZissouProductImages({title, thumbs, className}) {
           {isMobile && isTravesseiro && (
             <div className={styles.imageContainer}>
               <Image src={TravesseiroBanner} width={1908} height={1480} />
+            </div>
+          )}
+          {isMobile && isLencol && (
+            <div className={styles.imageContainer}>
+              <Image src={LencolBanner} width={1920} height={995} />
             </div>
           )}
           <div className={styles.imageContainer}>
