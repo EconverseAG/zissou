@@ -2,10 +2,13 @@ import {Image, useProduct} from '@shopify/hydrogen/client';
 import {useCallback, useMemo, useState} from 'react';
 import Slider from 'react-slick';
 
+import useZissouProduct from '../../hooks/useZissouProduct';
+
 import * as styles from './ZissouProductImages.module.scss';
 
 import ArrowNext from '../../assets/next-arrow.svg';
 import ArrowPrev from '../../assets/prev-arrow.svg';
+import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -17,6 +20,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
+  const {isTravesseiro} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -100,6 +104,11 @@ function ZissouProductImages({title, thumbs, className}) {
           className={styles.slider}
           {...sliderSettings}
         >
+          {isMobile && isTravesseiro && (
+            <div className={styles.imageContainer}>
+              <Image src={TravesseiroBanner} width={1908} height={1480} />
+            </div>
+          )}
           <div className={styles.imageContainer}>
             <Image
               src={featuredMedia.url}

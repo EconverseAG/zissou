@@ -93,6 +93,7 @@ function ZissouProductProvider({
         isLencol,
         isColchao,
         isCoral,
+        isTravesseiro,
         washable,
         customBag,
         setWashable,
