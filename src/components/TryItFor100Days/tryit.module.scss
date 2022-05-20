@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 105px;
-  padding-bottom: 94px;
+  padding: 0px 85px 0px;
   background: var(--gray-color-150);
+  height: 627px;
 
   @media only screen and (max-width: 1024px) {
     padding: 105px 30px 94px;
+    height: auto;
   }
 
   @media only screen and (max-width: 1023px) {
@@ -99,6 +100,12 @@
   }
 
   .TryItRight {
+    padding-bottom: 70px;
+
+    @media only screen and (max-width: 1023px) {
+      padding-bottom: 0;
+    }
+    
     img, video {
       mix-blend-mode: multiply;
     }

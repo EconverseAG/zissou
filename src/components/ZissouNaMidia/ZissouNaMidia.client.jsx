@@ -41,7 +41,7 @@ export default function ZissouNaMidia() {
             <span>
               Os hotéis mais novos da grife Fasano (Angra dos Reis, Belo
               Horizonte e Salvador) aderiram aos colchões da marca, assim como o
-              Belmond Cataratas do Iguaçu
+              Belmond Cataratas do Iguaçu.
             </span>
             <div className={styles.lastMarks}>
               <SvgLastMark />
