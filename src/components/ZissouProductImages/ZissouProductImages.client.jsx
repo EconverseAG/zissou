@@ -9,6 +9,7 @@ import * as styles from './ZissouProductImages.module.scss';
 import ArrowNext from '../../assets/next-arrow.svg';
 import ArrowPrev from '../../assets/prev-arrow.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
+import BaseBanner from '../../assets/base-banner.gif';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -20,7 +21,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro} = useZissouProduct();
+  const {isTravesseiro, isBase} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -104,6 +105,11 @@ function ZissouProductImages({title, thumbs, className}) {
           className={styles.slider}
           {...sliderSettings}
         >
+          {isMobile && isBase && (
+            <div className={styles.imageContainer}>
+              <Image src={BaseBanner} width={1920} height={1080} />
+            </div>
+          )}
           {isMobile && isTravesseiro && (
             <div className={styles.imageContainer}>
               <Image src={TravesseiroBanner} width={1908} height={1480} />

@@ -25,6 +25,7 @@ function ZissouProductProvider({
   isTravesseiro,
   isColchao,
   isToca,
+  isBase,
 }) {
   const [isCoral, setIsCoral] = useState(false);
   const [washable, setWashable] = useState(false);
@@ -93,6 +94,7 @@ function ZissouProductProvider({
       isColchao,
       isCoral,
       isTravesseiro,
+      isBase,
       washable,
       customBag,
       setWashable,
@@ -122,6 +124,7 @@ function ZissouProductProvider({
       grayDuvetCover,
       grayLencol,
       includeDuvetFilling,
+      isBase,
       isColchao,
       isCoral,
       isDuvet,
