@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background: #CBC1DA;
-  padding-top: 149px;
-  min-height: 942px;
+  padding-top: 100px;
 
   &.mobile {
     padding-top: 50px;
@@ -32,5 +31,9 @@
       font-weight: inherit;
       color: #fff;
     }
+  }
+
+  img {
+    max-width: 768px;
   }
 }
