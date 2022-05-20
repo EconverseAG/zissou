@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from 'react';
+import {createContext, useContext, useEffect, useMemo, useState} from 'react';
 
 import {ProductProvider} from '@shopify/hydrogen/client';
 
@@ -85,36 +85,59 @@ function ZissouProductProvider({
     coralIsHybrid,
   ]);
 
+  const value = useMemo(
+    () => ({
+      isToca,
+      isDuvet,
+      isLencol,
+      isColchao,
+      isCoral,
+      isTravesseiro,
+      washable,
+      customBag,
+      setWashable,
+      setCustomBag,
+      customBagText,
+      setCustomBagText,
+      includeDuvetFilling,
+      setIncludeDuvetFilling,
+      selectedColor,
+      setSelectedColor,
+      coralIsHybrid,
+      setCoralIsHybrid,
+      grayDuvetCover,
+      whiteDuvetCover,
+      grayLencol,
+      whiteLencol,
+      base,
+      travesseiroWashable,
+      coralHybrid,
+    }),
+    [
+      base,
+      coralHybrid,
+      coralIsHybrid,
+      customBag,
+      customBagText,
+      grayDuvetCover,
+      grayLencol,
+      includeDuvetFilling,
+      isColchao,
+      isCoral,
+      isDuvet,
+      isLencol,
+      isToca,
+      isTravesseiro,
+      selectedColor,
+      travesseiroWashable,
+      washable,
+      whiteDuvetCover,
+      whiteLencol,
+    ],
+  );
+
   return (
-    <ZissouProductContext.Provider
-      value={{
-        isToca,
-        isDuvet,
-        isLencol,
-        isColchao,
-        isCoral,
-        isTravesseiro,
-        washable,
-        customBag,
-        setWashable,
-        setCustomBag,
-        customBagText,
-        setCustomBagText,
-        includeDuvetFilling,
-        setIncludeDuvetFilling,
-        selectedColor,
-        setSelectedColor,
-        coralIsHybrid,
-        setCoralIsHybrid,
-        grayDuvetCover,
-        whiteDuvetCover,
-        grayLencol,
-        whiteLencol,
-        base,
-        travesseiroWashable,
-        coralHybrid,
-      }}
-    >
+    <ZissouProductContext.Provider value={value}>
       <ProductProvider data={product}>
         <ProductOptionsProvider>
           <BuyTogetherProvider>{children}</BuyTogetherProvider>
