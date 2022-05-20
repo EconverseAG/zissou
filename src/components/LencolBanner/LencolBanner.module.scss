@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   background-image: url('../../assets/lencol-banner-background.png');
+  background-position: center;
+  background-size: cover;
 
   &.mobile {
     background-image: none;
@@ -39,8 +41,8 @@
     h1, span {
       font-family: ZonaProBold;
       text-transform: uppercase;
-      font-size: 37px;
-      line-height: 51px;
+      font-size: 30px;
+      line-height: 40px;
       text-align: center;
       color: #f08590;
     }
