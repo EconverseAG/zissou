@@ -20,7 +20,11 @@
     position: relative;
     display: block;
     width: 100%;
-    max-width: 597px;
+    max-width: 768px;
+
+    @media (max-width: 1500px) {
+      max-width: 500px;
+    }
 
     .arrow {
       position: absolute;
@@ -29,17 +33,22 @@
       z-index: 1;
 
       &Prev {
-        left: 18px;
+        left: -24px;
       }
 
       &Next {
-        right: 18px;
+        right: -24px;
       }
     }
 
     .slider {
       display: block;
       width: 100%;
+
+      :global(.slick-track) {
+        display: flex;
+        align-items: center;
+      }
       
       img {
         max-width: 100%;
@@ -75,11 +84,21 @@
       margin-bottom: 0;
     }
 
-    &Slider {
+    .wrapperSlider {
       max-width: 100%;
+
+      .arrow {
+        &Prev {
+          left: 18px;
+        }
+
+        &Next {
+          right: 18px;
+        }
+      }
     }
 
-    &Nav {
+    .wrapperNav {
       margin-top: 32px;
     }
   }

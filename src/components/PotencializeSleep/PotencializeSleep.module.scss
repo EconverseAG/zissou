@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background: #CBC1DA;
-  padding-top: 149px;
-  min-height: 942px;
+  padding-top: 100px;
 
   &.mobile {
     padding-top: 50px;
@@ -13,8 +12,12 @@
 
     h2 {
       max-width: 282px;
-      font-size: 16px;
-      line-height: 21px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 
@@ -22,7 +25,7 @@
     color: #707070;
     max-width: 967px;
     font-family: ZonaProSemiBold;
-    font-size: 38px;
+    font-size: 36px;
     line-height: 48px;
     text-align: center;
     font-weight: 600;
@@ -32,5 +35,9 @@
       font-weight: inherit;
       color: #fff;
     }
+  }
+
+  img {
+    max-width: 768px;
   }
 }

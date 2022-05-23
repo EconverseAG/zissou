@@ -1,21 +1,29 @@
 .wrapper {
   align-items: center;
-  min-height: 900px;
+  gap: 0 50px;
   color: #245066;
   background: #CADEE8;
-  padding-block: 200px 150px;
+  padding-block: 150px;
+
+  > img {
+    width: 30%;
+  }
   
   &.mobile {
     min-height: 342px;
     padding-block: 57px 43px;
+
+    > img { 
+      width: 100%;
+    }
 
     .content {
       padding-inline: 16px;
 
       h2 {
         margin-bottom: 34px;
-        font-size: 16px;
-        line-height: 21px;
+        font-size: 21px;
+        line-height: 28px;
       }
 
       .accordion {
@@ -62,11 +70,12 @@
   .content {
     width: 100%;
     max-width: 910px;
+    margin: 0 auto;
     align-items: center;
 
     h2 {
       font-family: ZonaProSemiBold;
-      font-size: 37px;
+      font-size: 36px;
       line-height: 48px;
       text-align: center;
       font-weight: 600;

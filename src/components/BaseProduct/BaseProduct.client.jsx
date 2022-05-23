@@ -19,7 +19,7 @@ function BaseProduct() {
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
     >
       <ProductSectionLeft>
-        <ZissouProductImages title="Estilosa, resistente e perfeita" thumbs />
+        <ZissouProductImages title="Estilosa, resistente e perfeita" />
       </ProductSectionLeft>
       <ProductSectionRight>
         <ZissouProductOptions

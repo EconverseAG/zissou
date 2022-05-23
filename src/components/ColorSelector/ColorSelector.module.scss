@@ -63,4 +63,31 @@
       }
     }
   }
+
+  &.mobile {
+    padding-inline: 20px;
+
+    > span {
+      margin-bottom: 10px;
+    }
+
+    .colorSelectorList {
+      gap: 18px;
+      justify-content: space-between;
+
+      &Item {
+        border-radius: 6px;
+
+        span {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        &Color {
+          height: 28px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
 }

@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-image: url('../../assets/base-banner.gif');
+  background-size: cover;
 
   &.mobile {
     background-image: none;
@@ -37,7 +38,7 @@
     height: 100%;
 
     h1, span {
-      font-family: ZonaProBlack;
+      font-family: ZonaProBold;
       text-transform: uppercase;
       font-size: 37px;
       line-height: 51px;

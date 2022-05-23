@@ -9,6 +9,9 @@ import * as styles from './ZissouProductImages.module.scss';
 import ArrowNext from '../../assets/next-arrow.svg';
 import ArrowPrev from '../../assets/prev-arrow.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
+import BaseBanner from '../../assets/base-banner.gif';
+import LencolBanner from '../../assets/lencol-banner-background.png';
+import DuvetBanner from '../../assets/duvet-banner-background.png';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -20,7 +23,7 @@ function ZissouProductImages({title, thumbs, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro} = useZissouProduct();
+  const {isTravesseiro, isBase, isLencol, isDuvet} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -53,6 +56,7 @@ function ZissouProductImages({title, thumbs, className}) {
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: navRef,
+      variableHeight: false,
     }),
     [navRef],
   );
@@ -104,9 +108,24 @@ function ZissouProductImages({title, thumbs, className}) {
           className={styles.slider}
           {...sliderSettings}
         >
+          {isMobile && isBase && (
+            <div className={styles.imageContainer}>
+              <Image src={BaseBanner} width={1920} height={1080} />
+            </div>
+          )}
           {isMobile && isTravesseiro && (
             <div className={styles.imageContainer}>
               <Image src={TravesseiroBanner} width={1908} height={1480} />
+            </div>
+          )}
+          {isMobile && isLencol && (
+            <div className={styles.imageContainer}>
+              <Image src={LencolBanner} width={1920} height={995} />
+            </div>
+          )}
+          {isMobile && isDuvet && (
+            <div className={styles.imageContainer}>
+              <Image src={DuvetBanner} width={1920} height={995} />
             </div>
           )}
           <div className={styles.imageContainer}>
