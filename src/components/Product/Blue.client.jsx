@@ -13,16 +13,19 @@ import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlic
 import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
+import useMobile from '../../hooks/useMobile';
 
 export default function Blue() {
+  const {isMobile} = useMobile();
+
   return (
     <LoadingProvider>
-      <BannerProductPage src={BannerBluePDP} />
+      {!isMobile && <BannerProductPage src={BannerBluePDP} />}
       <CoralProduct />
       <CinematographyBanner />
       <TourColchao />
       <SpecsColchaoSlick />
-      <DoubtsProductPage color={'#CADEE8'} />
+      <DoubtsProductPage color={'#CADEE8'} hover={'#7D90A5'} />
       <InstagramZissou
         title={'TENHO O BLUE E NÃO TROCO POR NADA :)'}
         background={

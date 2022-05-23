@@ -408,7 +408,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 40px;
 
         @media only screen and (max-width: 1023px) {
           margin-right: 0;
@@ -450,7 +449,7 @@
           background: var(--white-color);
           border-radius: 10px;
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          padding: 30px;
+          padding: 25px;
 
           @media only screen and (max-width: 1023px) {
             background: transparent;

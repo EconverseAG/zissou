@@ -113,7 +113,7 @@ export default function SpecsBlueSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleBlue}`}
               >
-                Tecido Blue {isMobile ? <br /> : null} com Ultra Cooling{' '}
+                TECIDO PLUSH & COOL{' '}
                 <Image
                   src={BandeiraEUA}
                   width={isMobile ? 20 : 30}
@@ -140,10 +140,10 @@ export default function SpecsBlueSlick() {
                 em sua capa. O tecido matelassado cria superfície acolchoada,
                 que proporciona mais maciez.
                 <br />
-                <br />A tecnologia americana Ultra Cooling potencializa a
-                condutividade térmica, criando o micro-clima ideal para o sono
-                de qualidade, criando sensação extraordinária de frescor ao
-                dormir e maciez única.
+                <br />O tecido Plush & Cool potencializa a condutividade
+                térmica, criando o micro-clima ideal para o sono de qualidade,
+                criando sensação extraordinária de frescor ao dormir e maciez
+                única.
               </span>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function SpecsBlueSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleBlue}`}
               >
-                Látex Pulse{' '}
+                LATEX PULSE{' '}
                 <Image
                   src={BandeiraBelgica}
                   width={isMobile ? 20 : 30}
@@ -258,7 +258,7 @@ export default function SpecsBlueSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleBlue}`}
               >
-                Viscoelástico com <br /> gel de cooling
+                VISCO COOL
                 <Image
                   src={BandeiraBrasil}
                   width={isMobile ? 20 : 30}
@@ -330,23 +330,30 @@ export default function SpecsBlueSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalBolder
                 }
               >
-                Sistema de suporte Leggett & Platt com molas setorizadas
-                ergonomicamente
+                SISTEMA DE SUPORTE HÍBRIDO ZONED SPRING SYSTEM
               </strong>
               <span
                 className={
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
                 }
               >
-                - Maior adaptabilidade às curvas do corpo e mais sustentação na
-                altura do quadril, para melhor alinhamento da coluna
+                - Camada transição de espuma de poliuretano de alta densidade
+                uniformiza a distribuição de peso.
                 <br />
                 <br />
-                - Base de espuma de poliuretano de alta densidade para maior
-                suporte e isolamento de movimentos
+                - Sistema do suporte híbrido com molas ensacadas individualmente
+                com 15cm de altura, que proporcionam maior maleabilidade ao
+                colchão, aumentando a adaptabilidade às curvaturas do corpo.
                 <br />
-                <br />- Melhor circulação de ar internamente, potencializando a
-                refrescância
+                <br />- Molas Zoned Spring System com tecnologia de zonamento
+                ergonômico para melhor alinhamento da coluna.
+                <br />
+                <br />
+                - Sustentação adicional com maior fluxo de ar
+                <br />
+                <br />- Reforço nas bordas em todas as laterais do colchão com
+                molas mais firmes para garantir a uniformidade do suporte em
+                todas a superfície
               </span>
             </div>
           </div>
@@ -552,7 +559,7 @@ export default function SpecsBlueSlick() {
               </div>
               <div className={styles.BeneficiosItem}>
                 <strong className={styles.BeneficiosItemTitle}>
-                  GARANTIA DE 5 ANOS
+                  GARANTIA DE 10 ANOS
                 </strong>
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre os termos de garantia,{' '}

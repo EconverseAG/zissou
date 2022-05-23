@@ -40,11 +40,13 @@ function StepBlueContent({content, setModal}) {
             id="modalTitle"
             dangerouslySetInnerHTML={{__html: modalContent.modal.title}}
           />
-          <Image
-            src={modalContent.modal.imageTitle}
-            width={modalContent.modal.width}
-            height={modalContent.modal.height}
-          />
+          {modalContent.modal.imageTitle && (
+            <Image
+              src={modalContent.modal.imageTitle}
+              width={modalContent.modal.width}
+              height={modalContent.modal.height}
+            />
+          )}
           <button onClick={CloseModal} className={styles.closeButton}>
             <CloseButton />
           </button>
@@ -88,7 +90,7 @@ function StepBlueContent({content, setModal}) {
         setModal(null);
       });
     };
-  }, []);
+  }, [setModal]);
 
   const CloseModal = () => {
     setModal(null);

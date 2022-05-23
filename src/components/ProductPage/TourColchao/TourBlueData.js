@@ -47,19 +47,16 @@ export default [
         - Certificações LGA, Öko-Tex Standard 100 e Eurolatex Eco-Standard
         <br />
         <br />
-        - Possui estrutura celular homogênea, o que o torna verdadeiramente único como camada de conforto e promove uma excelente capacidade de conservação de suas propriedades 
+        - Estrutura celular homogênea, resiliência, suporte progressivo
         <br />
         <br />
         - Maior elasticidade, que aumenta a sensação de impulso na superfície, facilitando a movimentação na cama durante o sono
         <br />
         <br />
-        -Propriedades de ventilaçã potencializadas, que garantem um microclima perfeitamente equilibrado e controle de umidade otimizado
+        - Propriedades de ventilação potencializadas, que garantem um microclima equilibrado e controle de umidade
         <br />
         <br />
-        - Proporciona resiliência, suporte progressivo e a durabilidade do colchão
-        <br />
-        <br />
-        - Possui propriedades antimicrobianas e resistência a ácaros
+        - Propriedades antimicrobianas e resistência a ácaros
       `,
       buttonText: 'Continuar →',
     },
@@ -91,7 +88,7 @@ export default [
     },
   },
   {
-    title: 'Opção de <br /> SISTEMA de <br /> Suporte HÍBRIDO',
+    title: 'SISTEMA de <br /> Suporte HÍBRIDO',
     imageSrc: OpcaoSistemaDeSuporteFundo,
     modal: {
       title: 'SISTEMA DE SUPORTE HÍBRIDO',
@@ -99,19 +96,19 @@ export default [
         <strong>Altura da camada:</strong> 17,5cm
         <br />
         <br />
-        Poliuretano e molas ensacadas individualmente
-        <br />
-        <br />
         - Camada transição de espuma de poliuretano de alta densidade uniformiza a distribuição de peso
         <br />
         <br />
-        - Sistema de molas Leggett & Platt com zonas ergonômicas para melhor alinhamento da coluna
+        - Sistema do suporte híbrido com molas ensacadas individualmente com 15cm de altura, que proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
         <br />
         <br />
-        - Molas ensacadas individualmente, com 15cm de altura, proporcionam maior adaptabilidade à curvatura do corpo
+        - Molas Zoned Spring System com tecnologia de zonamento ergonômico para melhor alinhamento da coluna
         <br />
         <br />
         - Sustentação adicional com maior fluxo de ar
+        <br />
+        <br />
+        - Reforço nas bordas em todas as laterais do colchão com molas mais firmes para garantir a uniformidade do suporte em todas a superfície
       `,
       buttonText: 'VOLTAR para O TOUR →',
     },

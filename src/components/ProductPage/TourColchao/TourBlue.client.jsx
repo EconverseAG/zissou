@@ -4,7 +4,6 @@ import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
 import TourBluePDP from '../../../assets/tour_blue_pdp.png';
-import Legget from '../../../assets/selo-legget.png';
 
 import * as styles from './TourColchao.module.scss';
 
@@ -17,7 +16,13 @@ export default function TourBlue() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.TourBlue}>
+    <div
+      className={styles.TourBlue}
+      style={{
+        height: isMobile && !modal && 'auto',
+        padding: isMobile && !modal && '33px 0',
+      }}
+    >
       <strong className={styles.TourBlueTitle}>TOUR DO BLUE</strong>
       <div className={styles.TourBlueContent}>
         {modal ? modal : null}
@@ -32,13 +37,6 @@ export default function TourBlue() {
             loading={'lazy'}
           />
         </div>
-        <Image
-          src={Legget}
-          width={isMobile ? 59 : 115}
-          height={isMobile ? 46 : 89}
-          className={styles.Legget}
-          loading={'lazy'}
-        />
       </div>
     </div>
   );
