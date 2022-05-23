@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -11,7 +11,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import * as styles from '../../Faq.module.scss';
 import {Link} from '@shopify/hydrogen/client';
 
-export default function Question4() {
+export default function Question4({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -22,6 +22,10 @@ export default function Question4() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion
@@ -61,7 +65,7 @@ export default function Question4() {
             atenção especial na hora de escolher o colchão. É importante avaliar
             a sensação do toque e a capacidade de proporcionar frescor. Todos os
             colchões Zissou utilizam materiais selecionados de origem americana
-            de altíssima qualidade
+            de altíssima qualidade.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
@@ -83,18 +87,18 @@ export default function Question4() {
             Os colchões com suporte exclusivo de espuma de poliuretano de alta
             resiliência proporcionam sensação de maior firmeza e distribuição de
             peso uniforme por toda a área do colchão. Ela reforça o isolamento
-            de movimentos quando a cama é compartilhada
+            de movimentos quando a cama é compartilhada.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
-            Os modelos com o sistema de suporte híbrido Leggett & Platt oferecem
-            maior adaptabilidade do colchão às curvas do corpo devido às molas
-            ensacadas individualmente, que se movimentam com independência,
-            proporcionam sensação de maior maciez. As molas também melhoram a
-            circulação interna de ar no colchão. A setorização ergonômica
-            oferece suporte extra na região do quadril e lombar para melhorar o
-            alinhamento da coluna
+            Os modelos híbridos com Spring System oferecem maior adaptabilidade
+            do colchão às curvas do corpo devido às molas ensacadas
+            individualmente, que se movimentam com independência, proporcionam
+            sensação de maior maciez. As molas também melhoram a circulação
+            interna de ar no colchão. A setorização ergonômica oferece suporte
+            extra na região do quadril e lombar para melhorar o alinhamento da
+            coluna.
           </span>
         </div>
         <Link to="/pages/comparativo-colchoes">

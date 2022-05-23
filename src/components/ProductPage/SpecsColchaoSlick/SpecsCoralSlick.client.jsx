@@ -26,8 +26,6 @@ import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_m
 
 import SetaPDP from '../../../assets/seta_pdp.png';
 
-import Legget from '../../../assets/selo-legget.png';
-
 import ToquePDP from '../../../assets/toque_pdp_coral.png';
 import AquecimentoPDP from '../../../assets/aquecimento_pdp_coral.png';
 import BouncePDP from '../../../assets/bounce_pdp_coral.png';
@@ -119,7 +117,7 @@ export default function SpecsCoralSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                TECIDO CORAL PREMIUM {isMobile ? <br /> : null} COM COOLING{' '}
+                TECIDO SOFT & CHILL{' '}
                 <Image
                   src={BandeiraEUA}
                   width={isMobile ? 20 : 30}
@@ -165,7 +163,7 @@ export default function SpecsCoralSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                Látex hipoalergênico {isMobile ? <br /> : null} de origem belga{' '}
+                LATEX CLASSIC{' '}
                 <Image
                   src={BandeiraBelgica}
                   width={isMobile ? 20 : 30}
@@ -253,8 +251,7 @@ export default function SpecsCoralSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                Viscoelástico de <br /> memória responsiva <br /> com gel de
-                cooling
+                VISCO COOL
                 <Image
                   src={BandeiraBrasil}
                   width={isMobile ? 20 : 30}
@@ -345,6 +342,9 @@ export default function SpecsCoralSlick() {
                 styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal
               }
             >
+              <strong className={styles.Title}>
+                ESTABILIDADE E {!isMobile && <br />} SUPORTE UNIFORME
+              </strong>
               {isMobile ? (
                 <span
                   className={
@@ -360,9 +360,11 @@ export default function SpecsCoralSlick() {
                     styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
                   }
                 >
-                  Base de espuma de poliuretano de alta densidade e
-                  durabilidade. Oferece suporte uniforme ao corpo e às camadas
-                  de conforto, além de reforçar o isolamento de movimentos
+                  - Base de espuma de poliuretano de alta densidade e
+                  durabilidade.
+                  <br />
+                  <br />- Oferece suporte uniforme ao corpo e às camadas de
+                  conforto, além de reforçar o isolamento de movimentos
                 </span>
               )}
             </div>
@@ -377,30 +379,11 @@ export default function SpecsCoralSlick() {
                 styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal
               }
             >
-              {isMobile ? (
-                <>
-                  <Image src={Legget} width={81} height={63} loading={'lazy'} />
-                  <strong
-                    className={
-                      styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalBolder
-                    }
-                  >
-                    Adicionando o sistema de suporte Leggett & Platt Inside:
-                  </strong>
-                  <br />
-                </>
-              ) : (
-                <>
-                  <span
-                    className={
-                      styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
-                    }
-                  >
-                    Adicionando o sistema de suporte Leggett & Platt Inside:
-                  </span>
-                  <br />
-                </>
-              )}
+              <strong className={styles.Title}>
+                BOUNCE COM
+                {!isMobile && <br />}
+                ADAPTAÇÃO AO CORPO
+              </strong>
               {isMobile ? (
                 <span
                   className={
@@ -417,13 +400,18 @@ export default function SpecsCoralSlick() {
                     styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
                   }
                 >
-                  - Camada de transição para suporte adequado e protege as
-                  camadas de conforto
+                  - Substituição do suporte de espuma de alta resiliência por
+                  suporte híbrido Spring System Plus com molas ensacadas
+                  individualmente
                   <br />
                   <br />
-                  - Molas Laggett&Platt ensacadas individualmente, garantindo
-                  sustentação plena em toda a área do colchão, aumentando da
-                  adaptabilidade às curvas do corpo e a circulação interna de ar
+                  - Inclui camada de transição de poliuretano com alta
+                  densidade, que garante o nível de suporte adequado e protege
+                  as camadas superiores do atrito com as molas
+                  <br />
+                  <br />
+                  - Bounce com maior adaptabilidade do colchão às curvas do
+                  corpo e circulação de ar interna
                   <br />
                   <br />- Reforço nas bordas, com molas mais firmes em todo o
                   perímetro
@@ -442,9 +430,8 @@ export default function SpecsCoralSlick() {
               >
                 OPÇÃO DE SISTEMA
                 <br />
-                DE SUPORTE
+                DE SUPORTE HÍBRIDO
                 <br />
-                LEGGETT & PLATT
               </span>
               <Image
                 src={isMobile ? SistemaDeSuporte2Mobile : SistemaDeSuporte2}
@@ -531,8 +518,8 @@ export default function SpecsCoralSlick() {
                 loading={'lazy'}
               />
               <span>
-                <strong>OPCIONAL:</strong> Adaptação às curvas do corpo na opção
-                com adicional de sistema de molas Leggett & Platt
+                <strong>OPCIONAL:</strong> Bounce com adaptação às curvas do
+                corpo na opção adicional de sistema híbrido Spring System Plus
               </span>
             </div>
           </div>
@@ -591,7 +578,7 @@ export default function SpecsCoralSlick() {
               </div>
               <div className={styles.BeneficiosItem}>
                 <strong className={styles.BeneficiosItemTitle}>
-                  GARANTIA DE 5 ANOS
+                  GARANTIA DE 10 ANOS
                 </strong>
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre os termos de garantia,{' '}

@@ -38,6 +38,12 @@
       }
     }
 
+    &Image {
+      .video {
+        mix-blend-mode: multiply;
+      }
+    }
+
     &Content {
       max-width: 450px;
       margin-left: 84px;
@@ -49,7 +55,7 @@
       &Image {
         @media only screen and (max-width: 1023px) {
           margin-left: auto;
-          transform: scaleX(-1);
+          mix-blend-mode: multiply;
         }
       }
 
@@ -126,6 +132,12 @@
       }
     }
 
+    &Image {
+      .video {
+        mix-blend-mode: multiply;
+      }
+    }
+
     &Content {
       max-width: 450px;
       margin-left: 84px;
@@ -137,7 +149,7 @@
       &Image {
         @media only screen and (max-width: 1023px) {
           margin-left: auto;
-          transform: scaleX(-1);
+          mix-blend-mode: multiply;
         }
       }
 

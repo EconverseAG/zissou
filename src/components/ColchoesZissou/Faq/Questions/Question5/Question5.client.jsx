@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -10,7 +10,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
 
-export default function Question5() {
+export default function Question5({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -21,6 +21,10 @@ export default function Question5() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion

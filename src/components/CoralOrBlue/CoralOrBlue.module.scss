@@ -20,7 +20,7 @@
     text-transform: uppercase;
     padding-top: 102px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 0.12em;
     position: absolute;
     top: 0;
     left: 50%;
@@ -30,7 +30,7 @@
       font-size: 20px;
       line-height: 25px;
       padding-top: 47px;
-      letter-spacing: 3px;
+      white-space: nowrap;
     }
   }
 

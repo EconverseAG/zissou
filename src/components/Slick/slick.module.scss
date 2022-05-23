@@ -126,65 +126,45 @@
     :global(.slick-slide) {
       display: block;
 
-      .caption {
+      .bannerTitle {
         position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, .6);
-        border-radius: 0 0 30px 0;
-        height: 165px;
-        width: 454px;
-        z-index: 1;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 120px;
-        padding-right: 20px;
-
-        @media only screen and (max-width: 1200px) {
-          width: 340px;
-          padding-left: 50px;
-        }
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        font-family: 'ZonaProBold';
+        font-size: 36px;
+        letter-spacing: 0.12em;
+        line-height: 42px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        white-space: nowrap;
 
         @media only screen and (max-width: 1023px) {
-          width: 207px;
-          height: 73px;
-          padding-left: 30px;
-          padding-right: 5px;
-          font-size: 9px;
-          line-height: 13px;
-        }
-        
-        .titleCaption {
-          font-family: "ZonaProBlack";
           font-size: 20px;
-          line-height: 28px;
-          letter-spacing: 2px;
-          color: #6D6C6C;
-          
-          @media only screen and (max-width: 1023px) {
-            font-size: 9px;
-            line-height: 13px;
-          }
-        }
-        
-        .subtitleCaption {
-          font-size: 20px;
-          line-height: 28px;
-          letter-spacing: 2px;
-          color: #6D6C6C;
-          font-family: "ZonaProSemiBold";
-          
-          @media only screen and (max-width: 1023px) {
-            font-size: 9px;
-            line-height: 13px;
-            width: 90%;
-          }
+          line-height: 25px;
         }
       }
 
+      .bannerSubtitle {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        font-family: 'ZonaProSemiBold';
+        font-size: 20px;
+        letter-spacing: 0.04em;
+        line-height: 28px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 14px;
+          line-height: 19px;
+          width: 78%;
+        }
+      }
 
       img {
         width: 100%;

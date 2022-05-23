@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import {Image, useProduct} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 
@@ -11,7 +9,7 @@ import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
 
-export default function ZissouCompreJunto(props) {
+export default function ZissouCompreJunto() {
   const {isMobile} = useMobile();
 
   const {
@@ -62,13 +60,6 @@ export default function ZissouCompreJunto(props) {
             height={isMobile ? 35 : 63}
             loading={'lazy'}
           />
-          <a
-            className={styles.SeeMore}
-            onClick={() => props.setModalOpen(!props.modalOpen)}
-            role="button"
-          >
-            saiba mais
-          </a>
         </div>
         <div className={styles.OptionInfo}>
           <span className={styles.OptionInfoTitle}>

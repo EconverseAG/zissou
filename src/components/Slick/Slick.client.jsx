@@ -40,14 +40,14 @@ export default function Slick(props) {
             return (
               <div key={banner.titleCaption || banner.CTA}>
                 {banner.titleCaption && banner.subtitleCaption && (
-                  <div className={styles.caption}>
-                    <strong className={styles.titleCaption}>
+                  <>
+                    <strong className={styles.bannerTitle}>
                       {banner.titleCaption}
                     </strong>
-                    <span className={styles.subtitleCaption}>
+                    <span className={styles.bannerSubtitle}>
                       {banner.subtitleCaption}
                     </span>
-                  </div>
+                  </>
                 )}
                 <Image
                   key={banner.link}

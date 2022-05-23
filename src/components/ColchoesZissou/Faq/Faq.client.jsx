@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 import {Image} from '@shopify/hydrogen';
 import * as styles from './Faq.module.scss';
 
@@ -11,6 +13,8 @@ import Question5 from './Questions/Question5/Question5.client';
 import Question6 from './Questions/Question6/Question6.client';
 
 export default function Faq() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={styles.FaqContainer}>
       <strong className={styles.FaqTitle}>
@@ -18,14 +22,14 @@ export default function Faq() {
       </strong>
       <div className={styles.FaqContent}>
         <div className={styles.FaqList}>
-          <Question1 />
-          <Question2 />
-          <Question3 />
-          <Question4 />
-          <Question5 />
-          <Question6 />
+          <Question1 setIsOpen={setIsOpen} />
+          <Question2 setIsOpen={setIsOpen} />
+          <Question3 setIsOpen={setIsOpen} />
+          <Question4 setIsOpen={setIsOpen} />
+          <Question5 setIsOpen={setIsOpen} />
+          <Question6 setIsOpen={setIsOpen} />
         </div>
-        <div className={styles.FaqImage}>
+        <div className={styles.FaqImage} style={{display: isOpen && 'none'}}>
           <Image src={Colchao} width="362" height="350" />
         </div>
       </div>

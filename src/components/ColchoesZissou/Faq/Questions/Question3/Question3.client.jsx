@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -10,7 +10,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
 
-export default function Question3() {
+export default function Question3({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -21,6 +21,10 @@ export default function Question3() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion
@@ -52,16 +56,16 @@ export default function Question3() {
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
             A Zissou oferece as duas opções de suporte para o seu colchão:
-            espuma de poliuretano de alta densidade ou com sistema híbrido
-            Leggett & Platt Inside, que combina espuma de poliuretano e molas
-            Caliber ensacadas individualmente
+            espuma de poliuretano de alta densidade ou Spring System, que
+            consiste em um sistema híbrido de espuma de poliuretano e molas
+            ensacadas individualmente.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
-            No modelo Blue, a tecnologia das molas Leggett & Platt possui
+            No modelo Blue, a tecnologia das molas Zoned Spring System possui
             setorização ergonômica, que oferece suporte extra na região do
-            quadril e lombar
+            quadril e lombar.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
@@ -71,7 +75,7 @@ export default function Question3() {
           >
             Você pode escolher qualquer um dos suportes, sem medo de errar, pois
             o importante é que todas as matérias primas são de altíssima
-            qualidade
+            qualidade.
           </strong>
         </div>
       </AccordionDetails>

@@ -69,8 +69,6 @@ export default function ZissouStores() {
     },
   ];
 
-  let title = 'Lojas Zissou';
-
   return (
     <div className="ZissouStoresContainer">
       <Slick
@@ -80,7 +78,6 @@ export default function ZissouStores() {
         autoplaySpeed={4000}
         arrows
         banners={banners}
-        title={title}
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -15,7 +15,7 @@ import * as styles from '../../Faq.module.scss';
 import Eua from '../../../../../assets/bandeira_eua.png';
 import Belgica from '../../../../../assets/bandeira_belgica.png';
 
-export default function Question1() {
+export default function Question1({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -26,6 +26,10 @@ export default function Question1() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion
@@ -69,15 +73,14 @@ export default function Question1() {
         </div>
         <span className={styles.FaqAccordionAnswerText}>
           Materiais rigorosamente selecionados entre os melhores fornecedores do
-          mundo, importados de países como Bélgica e EUA, com destaque para as
-          molas da mais conceituada fabricante de componentes, a Leggett & Platt
+          mundo, importados de países como Bélgica e EUA.
         </span>
         <strong className={styles.FaqAccordionAnswerTitle}>
           Benefícios Zissou
         </strong>
         <span className={styles.FaqAccordionAnswerText}>
           100 dias de teste, com possibilidade de devolução sem custo e sem
-          letras miúdas, 10 anos de garantia e frete grátis
+          letras miúdas, 10 anos de garantia e frete grátis.
         </span>
       </AccordionDetails>
     </Accordion>

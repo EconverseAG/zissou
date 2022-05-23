@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -15,7 +15,7 @@ import * as styles from '../../Faq.module.scss';
 import ColchaoCoral from '../../../../../assets/colchao-coral-faq.png';
 import ColchaoBlue from '../../../../../assets/colchao-blue-faq.png';
 
-export default function Question2() {
+export default function Question2({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -26,6 +26,10 @@ export default function Question2() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion
@@ -71,23 +75,23 @@ export default function Question2() {
               CORAL
             </strong>{' '}
             é perfeito para quem busca suporte e conforto na medida certa,
-            unindo conforto térmico e resiliência
+            unindo conforto térmico e resiliência.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <Image
             src={ColchaoBlue}
-            width={isMobile ? '135' : '296'}
-            height={isMobile ? '48' : '106'}
-            style={{marginRight: '39px'}}
+            width={isMobile ? '135' : '333'}
+            height={isMobile ? '48' : '117'}
+            style={{marginRight: '20px', marginLeft: !isMobile && '-20px'}}
           />
           <span className={styles.FaqAccordionAnswerText}>
             Se você busca o que há de mais avançado no mundo em termos de
             tecnologia do sono, confira o{' '}
             <strong className={styles.FaqAccordionAnswerTextBolder}>
-              Blue
+              BLUE
             </strong>
-            , sinônimo de aconchego e refrescância
+            , sinônimo de aconchego e refrescância.
           </span>
         </div>
         <Link to="/pages/comparativo-colchoes">

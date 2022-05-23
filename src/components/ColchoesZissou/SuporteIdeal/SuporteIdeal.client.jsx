@@ -3,8 +3,11 @@ import * as styles from './SuporteIdeal.module.scss';
 
 import Espuma from '../../../assets/espuma.png';
 import Mola from '../../../assets/mola.png';
+import useMobile from '../../../hooks/useMobile';
 
 export default function SuporteIdeal() {
+  const {isMobile} = useMobile();
+
   return (
     <div className={styles.SuporteIdealContainer}>
       <div className={styles.SuporteIdealTop}>
@@ -43,8 +46,9 @@ export default function SuporteIdeal() {
           </strong>
           <Image src={Espuma} width="493" height="329" />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
-            Espuma de poliuretano de alta <br /> densidade para distribuição
-            <br /> uniforme de peso
+            Espuma de poliuretano de alta {!isMobile && <br />} densidade para
+            distribuição
+            {!isMobile && <br />} uniforme de peso
           </span>
         </div>
         <div
@@ -58,8 +62,8 @@ export default function SuporteIdeal() {
           </strong>
           <Image src={Mola} width="490" height="327" />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
-            Sistema híbrido com molas <br /> para maior adaptabilidade aos{' '}
-            <br /> movimentos
+            Sistema híbrido com molas {!isMobile && <br />} para maior
+            adaptabilidade aos {!isMobile && <br />} movimentos
           </span>
         </div>
       </div>

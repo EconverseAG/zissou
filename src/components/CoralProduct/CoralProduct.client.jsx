@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import ZissouProductImages from '../ZissouProductImages';
@@ -9,7 +8,6 @@ import ZissouProductTitle from '../ZissouProductTitle/ZissouProductTitle.client'
 import ZissouColchaoIcons from '../ZissouColchaoIcons/ZissouColchaoIcons.client';
 import ZissouCompreJunto from '../ZissouCompreJunto/ZissouCompreJunto.client';
 import ZissouProductIsHybrid from '../ZissouProductIsHybrid/ZissouProductIsHybrid.client';
-import ZissouModalBase from '../ZissouModalBase/ZissouModalBase.client';
 import ProductSection from '../ProductSection';
 import ProductSectionLeft from '../ProductSection/ProductSectionLeft';
 import ProductSectionRight from '../ProductSection/ProductSectionRight';
@@ -20,8 +18,6 @@ import * as styles from './CoralProduct.module.scss';
 import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
 
 function CoralProduct() {
-  const [modalOpen, setModalOpen] = useState(false);
-
   const {isCoral} = useZissouProduct();
   const {isMobile} = useMobile();
 
@@ -31,12 +27,7 @@ function CoralProduct() {
     >
       <ProductSectionLeft>
         <ZissouProductImages />
-        {!isMobile && (
-          <ZissouCompreJunto
-            setModalOpen={setModalOpen}
-            modalOpen={modalOpen}
-          />
-        )}
+        {!isMobile && <ZissouCompreJunto />}
       </ProductSectionLeft>
       <ProductSectionRight>
         <ZissouProductOptions
@@ -54,16 +45,10 @@ function CoralProduct() {
           color={isCoral ? '#F48580' : '#415264'}
         />
         <ZissouProductPrice className={styles.Price} />
-        {isMobile && (
-          <ZissouCompreJunto
-            setModalOpen={setModalOpen}
-            modalOpen={modalOpen}
-          />
-        )}
+        {isMobile && <ZissouCompreJunto />}
         <ZissouAddToCart className={styles.AddToCart} />
         <EntregaFutura />
         <ZissouColchaoIcons />
-        {modalOpen && <ZissouModalBase setModalOpen={setModalOpen} />}
       </ProductSectionRight>
     </ProductSection>
   );

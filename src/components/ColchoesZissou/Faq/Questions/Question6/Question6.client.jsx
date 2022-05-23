@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
 
@@ -10,7 +10,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
 
-export default function Question6() {
+export default function Question6({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);
 
   const {isMobile} = useMobile();
@@ -21,6 +21,10 @@ export default function Question6() {
     },
     [],
   );
+
+  useEffect(() => {
+    setIsOpen(expanded);
+  }, [expanded, setIsOpen]);
 
   return (
     <Accordion
@@ -58,21 +62,21 @@ export default function Question6() {
             <em>Bed in a box</em> é uma tecnologia que permite que os colchões
             Zissou sejam comprimidos à vácuo e enrolados para que possam caber
             em uma caixa super compacta, garantindo assim maior comodidade para
-            chegar à sua casa
+            chegar à sua casa.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
             Os colchões Zissou são produzidos, comprimidos e embalados no Brasil
-            na fábrica da Leggett & Platt, com tecnologia americana e matérias
-            primas importadas, de altíssima qualidade.
+            com tecnologia americana e matérias primas importadas, de altíssima
+            qualidade.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
             Ao receber seu colchão, tudo o que você precisa fazer é retirá-lo da
             embalagem, colocá-lo na horizontal e deixá-lo expandir. Em até 3
-            horas ele estará pronto para você deitar e rolar
+            horas ele estará pronto para você deitar e rolar.
           </span>
         </div>
       </AccordionDetails>

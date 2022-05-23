@@ -14,7 +14,7 @@ export default [
     title: 'Capa',
     imageSrc: CapaFundo,
     modal: {
-      title: 'Tecido CORAL premium <br> COM COOLING',
+      title: 'TECIDO SOFT &amp; CHILL',
       imageTitle: BandeiraEUA,
       width: 30,
       height: 30,
@@ -42,7 +42,7 @@ export default [
     title: 'Camada <br /> de conforto',
     imageSrc: CamadaDeConfortoFundo,
     modal: {
-      title: 'latéx hipoalergÊNICo',
+      title: 'LATEX CLASSIC',
       imageTitle: BandeiraBelgica,
       width: 30,
       height: 30,
@@ -69,7 +69,7 @@ export default [
     title: 'Camada de <br /> aconhego',
     imageSrc: CamadaDeAconchegoFundo,
     modal: {
-      title: 'VISCOELÁSTICO DE MEMÓRIA RESPONSIVA',
+      title: 'VISCO COOL',
       width: 30,
       height: 30,
       imageTitle: BandeiraBrasil,
@@ -95,7 +95,7 @@ export default [
     title: 'SISTEMA DE <br /> SUPORTE',
     imageSrc: SistemaDeSuporteFundo,
     modal: {
-      title: 'SISTEMA DE SUPORTE ORIGINAL',
+      title: 'SISTEMA DE SUPORTE',
       width: 30,
       height: 30,
       imageTitle: BandeiraEUA,
@@ -121,7 +121,7 @@ export default [
     title: 'Opção de <br /> SISTEMA de <br /> Suporte HÍBRIDO',
     imageSrc: OpcaoSistemaDeSuporteFundo,
     modal: {
-      title: 'SISTEMA DE SUPORTE HÍBRIDO LEGGETT & PLATT',
+      title: 'SISTEMA DE SUPORTE HÍBRIDO',
       width: 115,
       height: 90,
       imageTitle: Legget,
@@ -134,13 +134,7 @@ export default [
         - Camada transição de espuma de poliuretano de alta densidade uniformiza a distribuição de peso
         <br />
         <br />
-        - Sistema de molas Leggett & Platt com zonas ergonômicas
-        <br />
-        <br />
-        - Molas ensacadas individualmente, com 15cm de altura, proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
-        <br />
-        <br />
-        - O zoneamento ergonômico proporciona melhor alinhamento da coluna
+        - Substituição do suporte de espuma de alta resiliência por suporte híbrido Spring System Plus com molas ensacadas individualmente com 15cm de altura, que proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
         <br />
         <br />
         - Sustentação adicional com maior fluxo de ar

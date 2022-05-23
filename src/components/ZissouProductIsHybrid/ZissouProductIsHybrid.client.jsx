@@ -1,11 +1,9 @@
-import {Image} from '@shopify/hydrogen/client';
-
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductIsHybrid.module.scss';
 
-import HybridColchao from '../../assets/hybrid-colchao.png';
+import HybridColchao from '../../assets/hybrid-colchao.webm';
 
 export default function ZissouProductIsHybrid() {
   const {coralIsHybrid, setCoralIsHybrid} = useZissouProduct();
@@ -53,17 +51,17 @@ export default function ZissouProductIsHybrid() {
             <span className={styles.LeftText}>
               Substituição do suporte de espuma de alta resiliência por{' '}
               <strong className={styles.Bolder}>
-                sistema L&P híbrido com espuma de alta qualidade e molas Caliber
-                ensacadas individualmente
+                suporte híbrido Spring System Plus com molas ensacadas
+                individualmente
               </strong>
             </span>
             <br />
             <span className={styles.LeftText}>
-              ✓ 5cm a mais de altura, com total de 25cm
+              ✓ 4cm a mais de altura, com total de 29cm
             </span>
             <br />
             <span className={styles.LeftText}>
-              ✓ Maior adaptabilidade às curvas do corpo
+              ✓ Bounce com maior adaptabilidade às curvas do corpo
             </span>
             <br />
             <span className={styles.LeftText}>
@@ -71,8 +69,12 @@ export default function ZissouProductIsHybrid() {
             </span>
           </div>
           <div className={styles.selectedHybridRight}>
-            <Image
+            <video
+              className={styles.video}
               src={HybridColchao}
+              autoPlay
+              loop
+              muted
               width={isMobile ? 170 : 106}
               height={isMobile ? 264 : 177}
             />

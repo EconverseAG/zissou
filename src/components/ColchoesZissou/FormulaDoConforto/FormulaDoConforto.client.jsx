@@ -1,10 +1,9 @@
 import useMobile from '../../../hooks/useMobile';
 
-import {Image} from '@shopify/hydrogen';
 import * as styles from './FormulaDoConforto.module.scss';
 
-import LatexSpark from '../../../assets/latex spark.png';
-import ViscoElastico from '../../../assets/visco-elastico.png';
+import VideoLatex from '../../../assets/video_latex.webm';
+import VideoVisco from '../../../assets/video_visco.webm';
 
 export default function FormulaDoConforto() {
   const {isMobile} = useMobile();
@@ -23,11 +22,14 @@ export default function FormulaDoConforto() {
               </strong>
             </div>
             <div className={styles.FormulaDoConfortoTopContent}>
-              <Image
-                src={LatexSpark}
+              <video
+                className={styles.FormulaDoConfortoTopContentImage}
+                src={VideoLatex}
+                autoPlay
+                loop
+                muted
                 width="339"
                 height="141"
-                className={styles.FormulaDoConfortoTopContentImage}
               />
               <span className={styles.FormulaDoConfortoTopContentSubtitle}>
                 Selecionamos as variações de látex mais sofisticadas do mundo,
@@ -66,7 +68,15 @@ export default function FormulaDoConforto() {
         ) : (
           <>
             <div className={styles.FormulaDoConfortoTopImage}>
-              <Image src={LatexSpark} width="942" height="392" />
+              <video
+                className={styles.video}
+                src={VideoLatex}
+                autoPlay
+                loop
+                muted
+                width="942"
+                height="392"
+              />
             </div>
             <div className={styles.FormulaDoConfortoTopContent}>
               <strong className={styles.FormulaDoConfortoTopContentTitle}>
@@ -117,11 +127,14 @@ export default function FormulaDoConforto() {
               </strong>
             </div>
             <div className={styles.FormulaDoConfortoBottomContent}>
-              <Image
-                src={ViscoElastico}
+              <video
+                className={styles.FormulaDoConfortoTopContentImage}
+                src={VideoVisco}
+                autoPlay
+                loop
+                muted
                 width="339"
                 height="141"
-                className={styles.FormulaDoConfortoBottomContentImage}
               />
               <span className={styles.FormulaDoConfortoBottomContentText}>
                 O viscoelástico de memória responsiva proporciona aconchego e
@@ -134,7 +147,15 @@ export default function FormulaDoConforto() {
         ) : (
           <>
             <div className={styles.FormulaDoConfortoBottomImage}>
-              <Image src={ViscoElastico} width="942" height="392" />
+              <video
+                className={styles.video}
+                src={VideoVisco}
+                autoPlay
+                loop
+                muted
+                width="942"
+                height="392"
+              />
             </div>
             <div className={styles.FormulaDoConfortoBottomContent}>
               <strong className={styles.FormulaDoConfortoBottomContentTitle}>
