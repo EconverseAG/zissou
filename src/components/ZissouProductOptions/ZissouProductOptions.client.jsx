@@ -1,4 +1,4 @@
-import {useCallback, useState} from 'react';
+import {useCallback, useRef, useState} from 'react';
 import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import useMobile from '../../hooks/useMobile';
@@ -14,6 +14,7 @@ import KingBrIcon from '../../assets/king-br.png';
 import QueenIcon from '../../assets/queen.png';
 
 import * as styles from './ZissouProductOptions.module.scss';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 function ZissouProductOptions({
   title,
@@ -27,6 +28,10 @@ function ZissouProductOptions({
 
   const {isCoral, isColchao} = useZissouProduct();
   const {variants, setSelectedOption, selectedVariant} = useProduct();
+
+  const containerRef = useRef(null);
+
+  useOutsideClick(containerRef, () => setIsOpen(false));
 
   const {isMobile} = useMobile();
 
@@ -101,6 +106,7 @@ function ZissouProductOptions({
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
         className || ''
       } ${!isColchao ? styles.lilac : ''}`}
+      ref={containerRef}
       {...rest}
     >
       {title && (
