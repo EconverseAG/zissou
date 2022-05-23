@@ -8,14 +8,23 @@
 
   &.lilac {
     .select {
-      color: #d4a8bf
+      color: #d4a8bf;
     }
+
     .selectOpen, .selectDropdown {
       border-color: #d4a8bf;
     }
 
+    .selectOpen:hover {
+      background: #d4a8bf40;
+    }
+    
     .selectOpenArrow {
       background: #d4a8bf;
+    }
+
+    .selectDropdownOption:hover {
+      background: #F1E9ED
     }
   }
 
@@ -88,9 +97,18 @@
       justify-content: space-between;
       overflow: hidden;
       text-transform: uppercase;
+      transition: 0.2s;
+
+      &:hover {
+        background: #F4858040;
+      }
 
       &.selectBlue {
         border: 2px solid var(--blue-color-500);
+
+        &:hover {
+          background: #41526440;
+        }
       }
 
       p {
@@ -128,9 +146,14 @@
       background: #FFFFFF;
       border: 2px solid var(--coral-color-500);
       z-index: 1;
+      overflow: hidden;
       
       &.selectBlue {
         border: 2px solid var(--blue-color-500);
+
+        .selectDropdownOption:hover {
+          background: #41526440
+        }
       }
       
       &Option {
@@ -139,6 +162,11 @@
         text-transform: uppercase;
         height: 64px;
         width: 100%;
+        transition: 0.2s;
+
+        &:hover {
+          background: #F4858040;
+        }
 
         p {
           margin-left: 28px;
