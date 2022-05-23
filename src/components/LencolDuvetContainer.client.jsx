@@ -12,7 +12,7 @@ export default function LencolDuvetContainer() {
     <LoadingProvider>
       <LencolDuvetBanner />
       <LencolOrDuvet />
-      <TheSecret productName={'Lençol e o Duvet'} />
+      <TheSecret productName={'Lençol e o Duvet'} open />
       <TecidoBambu />
       <TryItFor100Days />
       <ZissouStores />
