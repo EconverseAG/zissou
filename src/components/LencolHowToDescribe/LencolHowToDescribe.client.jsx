@@ -3,10 +3,11 @@ import {Image} from '@shopify/hydrogen';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './LencolHowToDescribe.module.scss';
-
-import Illustration1 from '../../assets/lencol-how-to-describe-1.png';
+import useQuote from '../../hooks/useQuote';
 
 function LencolHowToDescribe() {
+  const {phrase, author, quoteImage} = useQuote();
+
   const {isMobile} = useMobile();
 
   return (
@@ -25,17 +26,19 @@ function LencolHowToDescribe() {
             testá-lo em primeira mão. Confira as reações
           </p>
           <div className={styles.quote}>
-            <p>É como dormir nas nuvens</p>
-            <span>Hércules H. (São Paulo)</span>
+            <p>{phrase}</p>
+            <span>{author}</span>
           </div>
         </div>
         <div className={styles.contentImages}>
-          <Image
-            src={Illustration1}
-            width={isMobile ? 684 : 458}
-            height={isMobile ? 375 : 458}
-            loading={'lazy'}
-          />
+          {quoteImage && (
+            <Image
+              src={quoteImage}
+              width={isMobile ? 985 : 660}
+              height={isMobile ? 375 : 340}
+              loading={'lazy'}
+            />
+          )}
           {!isMobile && (
             <span>
               Ou Seja, <strong>UAU!</strong>
