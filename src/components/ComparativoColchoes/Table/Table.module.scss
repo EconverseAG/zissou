@@ -6,7 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: ZonaProBold;
     font-size: 27px;
+    letter-spacing: 0.05em;
     height: 90px;
     color: #fff;
     text-align: center;
@@ -19,6 +21,7 @@
   }
 
   h3 {
+    font-family: ZonaProBlack;
     text-transform: uppercase;
   }
 
