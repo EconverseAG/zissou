@@ -29,11 +29,11 @@
       z-index: 1;
 
       &Prev {
-        left: 18px;
+        left: -24px;
       }
 
       &Next {
-        right: 18px;
+        right: -24px;
       }
     }
 
@@ -75,11 +75,21 @@
       margin-bottom: 0;
     }
 
-    &Slider {
+    .wrapperSlider {
       max-width: 100%;
+
+      .arrow {
+        &Prev {
+          left: 18px;
+        }
+
+        &Next {
+          right: 18px;
+        }
+      }
     }
 
-    &Nav {
+    .wrapperNav {
       margin-top: 32px;
     }
   }
