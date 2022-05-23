@@ -56,6 +56,7 @@ function ZissouProductImages({title, thumbs, className}) {
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: navRef,
+      variableHeight: false,
     }),
     [navRef],
   );
