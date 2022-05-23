@@ -4,7 +4,7 @@ import * as styles from './tryit.module.scss';
 
 import Gif100Dias from '../../assets/gif_100dias.webm';
 
-export default function TryItFor100Days() {
+export default function TryItFor100Days({video}) {
   return (
     <div className={styles.TryItContainer}>
       <div className={styles.TryItLeft}>
@@ -28,7 +28,14 @@ export default function TryItFor100Days() {
       </div>
       <div className={styles.TryItRight}>
         <Link to="/pages/100dias">
-          <video src={Gif100Dias} autoPlay loop muted />
+          <video
+            src={video ? video : Gif100Dias}
+            autoPlay
+            loop
+            muted
+            width={574}
+            height={510}
+          />
         </Link>
       </div>
     </div>

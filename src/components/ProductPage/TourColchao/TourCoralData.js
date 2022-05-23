@@ -7,7 +7,6 @@ import OpcaoSistemaDeSuporteFundo from '../../../assets/opcao_sistema_de_suporte
 import BandeiraEUA from '../../../assets/eua_pdp.png';
 import BandeiraBelgica from '../../../assets/belgica_pdp.png';
 import BandeiraBrasil from '../../../assets/brasil_pdp.png';
-import Legget from '../../../assets/selo-legget.png';
 
 export default [
   {
@@ -124,7 +123,6 @@ export default [
       title: 'SISTEMA DE SUPORTE HÍBRIDO',
       width: 115,
       height: 90,
-      imageTitle: Legget,
       text: `
         <strong>Altura da camada:</strong> 17,5cm
         <br />
