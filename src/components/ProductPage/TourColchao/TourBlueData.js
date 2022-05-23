@@ -6,14 +6,13 @@ import OpcaoSistemaDeSuporteFundo from '../../../assets/opcao_sistema_de_suporte
 import BandeiraEUA from '../../../assets/eua_pdp.png';
 import BandeiraBelgica from '../../../assets/belgica_pdp.png';
 import BandeiraBrasil from '../../../assets/brasil_pdp.png';
-import Legget from '../../../assets/selo-legget.png';
 
 export default [
   {
     title: 'Capa',
     imageSrc: CapaFundo,
     modal: {
-      title: 'Tecido CORAL premium <br> COM COOLING',
+      title: 'TECIDO PLUSH &amp; COOL',
       imageTitle: BandeiraEUA,
       width: 30,
       height: 30,
@@ -37,7 +36,7 @@ export default [
     title: 'Camada <br /> de conforto',
     imageSrc: CamadaDeConfortoFundo,
     modal: {
-      title: 'Látex Pulse',
+      title: 'LATEX PULSE',
       imageTitle: BandeiraBelgica,
       width: 30,
       height: 30,
@@ -69,7 +68,7 @@ export default [
     title: 'Camada de <br /> aconhego',
     imageSrc: CamadaDeAconchegoFundo,
     modal: {
-      title: 'VISCOELÁSTICO DE MEMÓRIA RESPONSIVA',
+      title: 'VISCO COOL',
       width: 30,
       height: 30,
       imageTitle: BandeiraBrasil,
@@ -95,10 +94,7 @@ export default [
     title: 'Opção de <br /> SISTEMA de <br /> Suporte HÍBRIDO',
     imageSrc: OpcaoSistemaDeSuporteFundo,
     modal: {
-      title: 'SISTEMA DE SUPORTE HÍBRIDO LEGGETT & PLATT',
-      width: 115,
-      height: 90,
-      imageTitle: Legget,
+      title: 'SISTEMA DE SUPORTE HÍBRIDO',
       text: `
         <strong>Altura da camada:</strong> 17,5cm
         <br />
