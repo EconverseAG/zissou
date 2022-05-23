@@ -35,6 +35,7 @@ function CoralProduct() {
           title={
             isMobile ? 'SELECIONE O TAMANHO' : 'QUAL O TAMANHO DO MEU COLCHÃO?'
           }
+          icons
           uppercaseTitle
         />
         {isCoral && <ZissouProductIsHybrid />}
