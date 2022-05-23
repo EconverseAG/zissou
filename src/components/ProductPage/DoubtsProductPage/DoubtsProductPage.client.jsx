@@ -1,10 +1,12 @@
+import {useState} from 'react';
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './DoubtsProductPage.module.scss';
 
 import WhatsApp from '../../../assets/icone-menu-whatsapp-white.webp';
 import useMobile from '../../../hooks/useMobile';
 
-export default function DoubtsProductPage({color}) {
+export default function DoubtsProductPage({color, hover}) {
+  const [isMouseOver, setIsMouseOver] = useState(false);
   const {isMobile} = useMobile();
 
   return (
@@ -20,9 +22,11 @@ export default function DoubtsProductPage({color}) {
         to="https://api.whatsapp.com/send?phone=5511932858213"
         target="_blank"
         className={styles.DoubtsProductPageRight}
+        onMouseEnter={() => setIsMouseOver((prev) => !prev)}
+        onMouseLeave={() => setIsMouseOver((prev) => !prev)}
       >
         <div
-          style={{background: color ? color : ''}}
+          style={{background: isMouseOver ? hover : color ? color : ''}}
           className={styles.DoubtsProductPageButton}
         >
           <Image

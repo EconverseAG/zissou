@@ -117,7 +117,7 @@ export default [
     },
   },
   {
-    title: 'Opção de <br /> SISTEMA de <br /> Suporte HÍBRIDO',
+    title: 'SISTEMA de <br /> Suporte HÍBRIDO',
     imageSrc: OpcaoSistemaDeSuporteFundo,
     modal: {
       title: 'SISTEMA DE SUPORTE HÍBRIDO',
