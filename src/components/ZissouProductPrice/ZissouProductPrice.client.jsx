@@ -2,13 +2,11 @@ import {ProductPrice, useMoney, useProduct} from '@shopify/hydrogen/client';
 import {useMemo} from 'react';
 
 import useMobile from '../../hooks/useMobile';
-import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductPrice.module.scss';
 
 function ZissouProductPrice({...rest}) {
   const {selectedVariant} = useProduct();
-  const {isColchao} = useZissouProduct();
   const {isMobile} = useMobile();
 
   const rawInstallmentPrice = useMemo(() => {
@@ -25,7 +23,7 @@ function ZissouProductPrice({...rest}) {
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
         rest.className || ''
-      } ${isColchao ? styles.blueContent : styles.grayContent}`}
+      } ${styles.grayContent}`}
     >
       {selectedVariant?.compareAtPriceV2 &&
         selectedVariant?.compareAtPriceV2?.amount !==
