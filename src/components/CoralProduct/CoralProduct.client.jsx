@@ -26,7 +26,7 @@ function CoralProduct() {
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
     >
       <ProductSectionLeft>
-        <ZissouProductImages />
+        <ZissouProductImages shadow arrowsInside />
         {!isMobile && <ZissouCompreJunto />}
       </ProductSectionLeft>
       <ProductSectionRight>

@@ -18,7 +18,7 @@ const MODEL_3D_TYPE = 'MODEL_3D';
 const VIDEO_TYPE = 'VIDEO';
 const EXTERNAL_VIDEO_TYPE = 'EXTERNAL_VIDEO';
 
-function ZissouProductImages({title, thumbs, className}) {
+function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
   const [sliderRef, setSliderRef] = useState(null);
   const [navRef, setNavRef] = useState(null);
 
@@ -96,7 +96,11 @@ function ZissouProductImages({title, thumbs, className}) {
       } ${className}`}
     >
       {!isMobile && title && <h2 className={styles.title}>{title}</h2>}
-      <div className={styles.wrapperSlider}>
+      <div
+        className={`${styles.wrapperSlider} ${
+          arrowsInside ? styles.arrowsInside : ''
+        } ${shadow ? styles.shadow : ''}`}
+      >
         <button
           className={`${styles.arrow} ${styles.arrowPrev}`}
           onClick={sliderRef?.slickPrev}
