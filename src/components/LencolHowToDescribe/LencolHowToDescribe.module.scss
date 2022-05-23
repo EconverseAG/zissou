@@ -45,7 +45,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 102px;
+        width: 100%;
+        
+        &Container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 400px; 
+        }
 
         &::before, &::after {
           position: absolute;
@@ -56,7 +63,7 @@
 
         &::before {
           content: '“';
-          top: 60%;
+          top: 42px;
           left: 0;
         }
 
@@ -121,7 +128,9 @@
         }
 
         .quote {
-          margin-top: 59px;
+          &Container {
+            height: 250px;
+          }
 
           &::after, &::before {
             font-size: 84px;

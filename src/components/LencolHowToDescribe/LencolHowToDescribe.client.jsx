@@ -25,9 +25,11 @@ function LencolHowToDescribe() {
             Criamos um dream team de pessoas de diferentes universos para
             testá-lo em primeira mão. Confira as reações
           </p>
-          <div className={styles.quote}>
-            <p>{phrase}</p>
-            <span>{author}</span>
+          <div className={styles.quoteContainer}>
+            <div className={styles.quote}>
+              <p>{phrase}</p>
+              <span>{author}</span>
+            </div>
           </div>
         </div>
         <div className={styles.contentImages}>
