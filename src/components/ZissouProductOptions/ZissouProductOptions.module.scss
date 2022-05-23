@@ -28,6 +28,10 @@
     }
   }
 
+  strong {
+    font-family: ZonaProBlack;
+  }
+
   .title {
     display: flex;
     align-items: center;
@@ -119,7 +123,7 @@
         margin-left: 26px;
 
         strong {
-          font-family: ZonaProBold;
+          font-family: ZonaProBlack;
         }
       }
       
