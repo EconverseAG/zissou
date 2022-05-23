@@ -40,6 +40,11 @@
     .slider {
       display: block;
       width: 100%;
+
+      :global(.slick-track) {
+        display: flex;
+        align-items: center;
+      }
       
       img {
         max-width: 100%;
