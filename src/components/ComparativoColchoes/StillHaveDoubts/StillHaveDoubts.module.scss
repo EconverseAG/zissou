@@ -7,9 +7,10 @@
   text-transform: uppercase;
   margin-block: 88px 0;
   background: #CADEE8;
-
+  
   p {
     color: #6D6C6C;
+    font-family: ZonaProBold;
     font-size: 25px;
     line-height: 31px;
   }
@@ -22,6 +23,7 @@
     border-radius: 53px;
     padding: 25px 36px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: ZonaProBlack;
     
     .whatsapp {
       display: flex;
