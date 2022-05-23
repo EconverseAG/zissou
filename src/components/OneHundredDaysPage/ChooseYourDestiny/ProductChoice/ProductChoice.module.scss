@@ -4,10 +4,15 @@
   align-items: center;
   gap: 36px;
   flex-wrap: wrap;
+
+  img {
+    aspect-ratio: 368/348;
+    max-width: 280px;
+  }
   
   strong {
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 20px;
+    line-height: 30px;
     text-transform: uppercase;
     font-family: ZonaProBold;
     color: #245066;
@@ -15,10 +20,5 @@
   
   &.mobile {
     gap: 26px;
-    
-    strong {
-      font-size: 22px;
-      line-height: 30px;
-    }
   }
 }

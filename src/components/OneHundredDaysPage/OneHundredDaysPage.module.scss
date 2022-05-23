@@ -19,24 +19,24 @@
 
   h1 {
     font-family: ZonaProBlack;
-    font-size: 37px;
+    font-size: 36px;
     line-height: 50px;
     text-align: center;
     letter-spacing: 0.05em;
-    margin-bottom: 86px;
+    margin-bottom: 56px;
   }
 
   h2 {
     font-family: ZonaProBold;
-    font-size: 37px;
+    font-size: 36px;
     line-height: 49px;
     margin-bottom: 64px;
   }
   
   > p {
     max-width: 1098px;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 30px;
     text-align: center;
     margin-inline: 42px;
 
@@ -50,7 +50,8 @@
   }
 
   .timeline {
-    margin-block: 86px 206px;
+    width: 85%;
+    margin-block: 64px 138px;
   }
 
   &.mobile {
@@ -78,6 +79,7 @@
 
     .timeline {
       margin: 0;
+      width: 100%;
     }
   }
 }
