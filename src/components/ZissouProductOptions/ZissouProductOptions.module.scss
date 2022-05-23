@@ -31,6 +31,14 @@
     color: #707070;
     font-weight: 600;
     font-family: 'ZonaProBlack';
+
+    @media only screen and (max-width: 1023px) {
+      margin-bottom: 9px;
+      margin-top: 36px;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 0.12em;
+    }
   }
   
   .select {
@@ -140,8 +148,6 @@
   }
 
   &.mobile {
-    padding-inline: 20px;
-
     .select {
       .info {
         margin-top: 12px;

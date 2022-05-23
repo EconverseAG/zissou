@@ -20,11 +20,7 @@
     position: relative;
     display: block;
     width: 100%;
-    max-width: 768px;
-
-    @media (max-width: 1500px) {
-      max-width: 500px;
-    }
+    max-width: 570px;
 
     .arrow {
       position: absolute;
@@ -56,6 +52,10 @@
     &.shadow {
       .slider {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        @media only screen and (max-width: 1023px) {
+          box-shadow: none;
+        }
       }
     }
 

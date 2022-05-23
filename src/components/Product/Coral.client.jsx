@@ -1,3 +1,4 @@
+import useMobile from '../../hooks/useMobile';
 import BannerCoralPDP from '../../assets/pdp-coral.png';
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
@@ -14,20 +15,24 @@ import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
+import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
+
 export default function Coral() {
+  const {isMobile} = useMobile();
+
   return (
     <LoadingProvider>
-      <BannerProductPage src={BannerCoralPDP} />
+      {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <CoralProduct />
       <CinematographyBanner />
       <TourColchao />
       <SpecsColchaoSlick />
-      <DoubtsProductPage color={'#D4A8BF'} />
+      <DoubtsProductPage />
       <InstagramZissou
         title={'VEM DE CORAL QUE NÃO TEM ERRO :)'}
         background={'180deg, rgba(244,133,128,1) 0%, rgba(255,204,199,1) 100%'}
       />
-      <TryItFor100Days />
+      <TryItFor100Days video={Gif100DiasCoral} />
       <ZissouStores />
       <Partners color={'#F48580'} />
       <Reviews />

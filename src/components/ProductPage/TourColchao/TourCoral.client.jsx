@@ -2,7 +2,6 @@ import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
 import TourCoralPDP from '../../../assets/tour_coral_pdp.png';
-import Legget from '../../../assets/selo-legget.png';
 
 import * as styles from './TourColchao.module.scss';
 
@@ -15,7 +14,13 @@ export default function TourCoral() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.TourCoral}>
+    <div
+      className={styles.TourCoral}
+      style={{
+        height: isMobile && !modal && 'auto',
+        padding: isMobile && !modal && '33px 0',
+      }}
+    >
       <strong className={styles.TourCoralTitle}>TOUR DO CORAL</strong>
       <div className={styles.TourCoralContent}>
         {modal ? modal : null}
@@ -34,13 +39,6 @@ export default function TourCoral() {
             loading={'lazy'}
           />
         </div>
-        <Image
-          src={Legget}
-          width={isMobile ? 59 : 115}
-          height={isMobile ? 46 : 89}
-          className={styles.Legget}
-          loading={'lazy'}
-        />
       </div>
     </div>
   );

@@ -216,12 +216,8 @@ export default function SpecsCoralSlick() {
                   - Alta resistência a pressão, evitando deformação com o passar
                   do tempo
                   <br />
-                  <br />
-                  - Propriedades hipoalergênicas, antimicrobianas e resistência
-                  a ácaros
-                  <br />
-                  <br />- Matéria-prima natural, de fonte renovável, proveniente
-                  de seringueiras, árvores típicas do Brasil
+                  <br />- Propriedades hipoalergênicas, antimicrobianas e
+                  resistência a ácaros
                 </span>
               )}
             </div>
@@ -540,7 +536,7 @@ export default function SpecsCoralSlick() {
                 </strong>
               </div>
               <div className={styles.Icon}>
-                <Image src={IconeEntrega} width={53} height={59} />
+                <Image src={IconeEntrega} width={45} height={49} />
                 <strong className={styles.IconTitle}>
                   entrega <br /> expressa
                 </strong>
@@ -554,7 +550,7 @@ export default function SpecsCoralSlick() {
               <div className={styles.Icon}>
                 <Image src={Icone100Dias} width={41} height={36} />
                 <strong className={styles.IconTitle}>
-                  100 dias <br /> de teste
+                  100 dias {!isMobile && <br />} de teste
                 </strong>
               </div>
             </div>
