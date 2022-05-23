@@ -1,13 +1,21 @@
 .wrapper {
   align-items: center;
-  min-height: 900px;
+  gap: 0 50px;
   color: #245066;
   background: #CADEE8;
-  padding-block: 200px 150px;
+  padding-block: 150px;
+
+  > img {
+    width: 30%;
+  }
   
   &.mobile {
     min-height: 342px;
     padding-block: 57px 43px;
+
+    > img { 
+      width: 100%;
+    }
 
     .content {
       padding-inline: 16px;
@@ -62,6 +70,7 @@
   .content {
     width: 100%;
     max-width: 910px;
+    margin: 0 auto;
     align-items: center;
 
     h2 {
