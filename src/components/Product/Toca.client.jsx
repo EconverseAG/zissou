@@ -1,5 +1,6 @@
 import {LoadingProvider} from '../../hooks/useLoading';
 import Partners from '../Partners/Partners.client';
+import ProductFixedBar from '../ProductFixedBar';
 import TocaBanner from '../TocaBanner/TocaBanner.client';
 import TocaHowToDescribe from '../TocaHowToDescribe/TocaHowToDescribe.client';
 import TocaHumanFriendly from '../TocaHumanFriendly/TocaHumanFriendly.client';
@@ -13,6 +14,7 @@ import ZissouStores from '../ZissouStores/ZissouStores.client';
 export default function Toca() {
   return (
     <LoadingProvider>
+      <ProductFixedBar title="Toca Zissou" />
       <div className="flex flex-col">
         <TocaBanner />
         <TocaProduct />

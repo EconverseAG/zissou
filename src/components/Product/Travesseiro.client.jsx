@@ -9,10 +9,12 @@ import TravesseiroBagCustomization from '../TravesseiroBagCustomization';
 import TravesseiroBanner from '../TravesseiroBanner/TravesseiroBanner.client';
 import TravesseiroProduct from '../TravesseiroProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
+import ProductFixedBar from '../ProductFixedBar';
 
 export default function Travesseiro() {
   return (
     <LoadingProvider>
+      <ProductFixedBar title="Travesseiro Zissou" />
       <div className="flex flex-col">
         <TravesseiroBanner />
         <TravesseiroProduct />
