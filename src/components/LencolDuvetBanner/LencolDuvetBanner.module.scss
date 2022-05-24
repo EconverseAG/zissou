@@ -7,7 +7,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-family: 'ZonaProSemiBold';
-    font-size: 37px;
+    font-size: 24px;
     line-height: 48px;
     color: var(--blue-color-800);
     text-transform: uppercase;
@@ -15,6 +15,7 @@
     @media only screen and (max-width: 1023px) {
       font-size: 16px;
       line-height: 21px;
+      top: 28%;
     }
 
     .OtherColor {

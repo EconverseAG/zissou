@@ -1,9 +1,9 @@
 .LencolOrDuvetContainer {
   background: #f5f6f5;
-  height: 900px;
+  height: 700px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   @media only screen and (max-width: 1023px) {
     height: 560px;
@@ -11,8 +11,6 @@
   }
 
   .LencolOrDuvetLeft {
-    margin-right: 176px;
-
     @media only screen and (max-width: 1023px) {
       margin: 0;
     }

@@ -6,8 +6,8 @@ import * as styles from './TheSecret.module.scss';
 
 import Panda from '../../assets/panda.mp4';
 
-function TheSecret({productName}) {
-  const [showSecret, setShowSecret] = useState(false);
+function TheSecret({productName, open}) {
+  const [showSecret, setShowSecret] = useState(open);
 
   const {isMobile} = useMobile();
 

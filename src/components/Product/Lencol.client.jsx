@@ -7,10 +7,12 @@ import Partners from '../Partners/Partners.client';
 import TheSecret from '../TheSecret';
 import LencolBanner from '../LencolBanner';
 import {LoadingProvider} from '../../hooks/useLoading';
+import ProductFixedBar from '../ProductFixedBar';
 
 function Lencol() {
   return (
     <LoadingProvider>
+      <ProductFixedBar title="Lençol Zissou" />
       <div className="flex flex-col">
         <LencolBanner />
         <LencolProduct />
