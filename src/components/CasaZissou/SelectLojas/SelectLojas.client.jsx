@@ -8,7 +8,6 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import * as styles from './SelectLojas.module.scss';
 
@@ -63,7 +62,7 @@ export default function SelectLojas() {
             value={loja}
             label="SELECIONE O ESPAÇO"
             onChange={handleChange}
-            IconComponent={ExpandMoreIcon}
+            IconComponent={null}
             className={styles.SelectLojasSelect}
           >
             {stores.map((store) => (

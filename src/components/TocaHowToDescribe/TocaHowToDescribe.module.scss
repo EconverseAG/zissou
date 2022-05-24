@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 136px 0 122px;
+  padding: 70px 20px 80px;
   background-color: #f5f6f5;
 
   @media only screen and (max-width: 1023px) {
@@ -12,11 +12,11 @@
 
   &Title {
     font-family: 'ZonaProSemiBold';
-    font-size: 37.31px;
-    line-height: 48px;
+    font-size: 35px;
+    line-height: 46px;
     color: #245066;
     text-transform: uppercase;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
 
     @media only screen and (max-width: 1023px) {
       font-size: 16px;
@@ -50,11 +50,11 @@
 
     &Text {
       font-family: 'ZonaPro';
-      font-size: 20px;
-      line-height: 23px;
+      font-size: 16px;
+      line-height: 19px;
       letter-spacing: 0.05em;
       color: #245066;
-      max-width: 579px;
+      max-width: 490px;
 
       @media only screen and (max-width: 1023px) {
         font-size: 12px;

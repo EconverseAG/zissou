@@ -43,10 +43,10 @@ export default function TocaHumanFriendly() {
       </div>
       <div className={styles.Right}>
         <Slider {...settings}>
-          <Image src={HumanFriendly1} width={544} height={677} />
-          <Image src={HumanFriendly2} width={544} height={677} />
-          <Image src={HumanFriendly3} width={544} height={677} />
-          <Image src={HumanFriendly4} width={544} height={677} />
+          <Image src={HumanFriendly1} width={450} height={498} />
+          <Image src={HumanFriendly2} width={450} height={498} />
+          <Image src={HumanFriendly3} width={450} height={498} />
+          <Image src={HumanFriendly4} width={450} height={498} />
         </Slider>
       </div>
     </div>

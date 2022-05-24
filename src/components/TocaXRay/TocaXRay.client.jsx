@@ -20,15 +20,15 @@ export default function TocaXRay() {
         <div>
           <Image
             src={CapaFechada}
-            width={isMobile ? 425 : 869}
-            height={isMobile ? 233 : 479}
+            width={isMobile ? 425 : 550}
+            height={isMobile ? 233 : 303}
           />
         </div>
         <div>
           <Image
             src={Protecao}
-            width={isMobile ? 425 : 869}
-            height={isMobile ? 233 : 479}
+            width={isMobile ? 425 : 550}
+            height={isMobile ? 233 : 303}
           />
           <span className={styles.Flag}>PROTEÇÃO</span>
           <span className={styles.Text}>
@@ -39,8 +39,8 @@ export default function TocaXRay() {
         <div>
           <Image
             src={Conforto}
-            width={isMobile ? 425 : 869}
-            height={isMobile ? 233 : 479}
+            width={isMobile ? 425 : 550}
+            height={isMobile ? 233 : 303}
           />
           <span className={styles.Flag}>CONFORTO</span>
           <span className={styles.Text}>
@@ -52,8 +52,8 @@ export default function TocaXRay() {
         <div>
           <Image
             src={Abraco}
-            width={isMobile ? 425 : 869}
-            height={isMobile ? 233 : 479}
+            width={isMobile ? 425 : 550}
+            height={isMobile ? 233 : 303}
           />
           <span className={styles.Flag}>ABRACO</span>
           <span className={styles.Text}>

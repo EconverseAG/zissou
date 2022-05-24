@@ -4,11 +4,11 @@ import * as styles from './experienciaZissou.module.scss';
 import ExperienciaZissouDesktop from './ExperienciaZissouDesktop';
 import ExperienciaZissouMobile from './ExperienciaZissouMobile.client';
 
-export default function ExperienciaZissou() {
+export default function ExperienciaZissou({refScroll}) {
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.ExperienciaZissouContainer}>
+    <div className={styles.ExperienciaZissouContainer} ref={refScroll}>
       <strong className={styles.ExperienciaZissouTitle}>
         Onde você quer viver <br /> a{' '}
         <span className={styles.ExperienciaZissouTitleOtherColor}>

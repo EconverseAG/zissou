@@ -3,11 +3,12 @@ import gql from 'graphql-tag';
 
 import Layout from '../../components/Layout.server';
 
-import CombosBanner from '../../components/CombosBanner/CombosBanner.client';
-import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
-import DoubtsProductPage from '../../components/ProductPage/DoubtsProductPage/DoubtsProductPage.client';
-import ShelfCoral from '../../components/ShelfCoral/ShelfCoral.client';
-import ShelfBlue from '../../components/ShelfBlue/ShelfBlue.client';
+// import CombosBanner from '../../components/CombosBanner/CombosBanner.client';
+// import CoralOrBlue from '../../components/CoralOrBlue/CoralOrBlue.client';
+// import DoubtsProductPage from '../../components/ProductPage/DoubtsProductPage/DoubtsProductPage.client';
+// import ShelfCoral from '../../components/ShelfCoral/ShelfCoral.client';
+// import ShelfBlue from '../../components/ShelfBlue/ShelfBlue.client';
+import Combos from '../../components/Combos.client';
 
 const idCoral = `gid://shopify/Product/6581615460546`;
 const idBlue = `gid://shopify/Product/6581615362242`;
@@ -36,11 +37,7 @@ export default function PhaseOut({country = {isoCode: 'US'}, response}) {
 
   return (
     <Layout>
-      <CombosBanner />
-      <ShelfCoral content={coral.data.product} />
-      <ShelfBlue content={blue.data.product} />
-      <DoubtsProductPage />
-      <CoralOrBlue />
+      <Combos coral={coral} blue={blue} />
     </Layout>
   );
 }

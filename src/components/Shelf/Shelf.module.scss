@@ -11,6 +11,7 @@
 
   .ShelfTop {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
 
     .ShelfImage {
       position: relative;
@@ -64,6 +65,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      position: absolute;
+      bottom: 0;
 
       @media only screen and (max-width: 1023px) {
         height: 50px;
@@ -110,6 +113,15 @@
     align-items: center;
     justify-content: center;
     margin-top: 27px;
+
+    .ShelfOldPrice {
+      font-family: 'ZonaProBold';
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      line-height: 30px;
+      text-align: center;
+      color: #6d6c6c;
+    }
 
     .ShelfPrice {
       font-family: 'ZonaProBold';

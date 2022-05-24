@@ -12,9 +12,37 @@ import ColchaoTour from '../../assets/tour_coral_pdp.png';
 
 import Shelf from '../Shelf/Shelf.client';
 
+import CoralShelf1 from '../../assets/coral-shelf-1.png';
+import CoralShelf2 from '../../assets/coral-shelf-2.png';
+import CoralShelf3 from '../../assets/coral-shelf-3.png';
+import CoralShelf4 from '../../assets/coral-shelf-4.png';
+import CoralShelf5 from '../../assets/coral-shelf-5.png';
+import CoralShelf6 from '../../assets/coral-shelf-6.png';
+
 export default function ShelfCoral({content}) {
   const {isMobile} = useMobile();
   let variants = content.variants.edges;
+
+  const images = [
+    {
+      src: CoralShelf1,
+    },
+    {
+      src: CoralShelf2,
+    },
+    {
+      src: CoralShelf3,
+    },
+    {
+      src: CoralShelf4,
+    },
+    {
+      src: CoralShelf5,
+    },
+    {
+      src: CoralShelf6,
+    },
+  ];
 
   return (
     <div className={styles.ShelfCoralContainer}>
@@ -43,17 +71,19 @@ export default function ShelfCoral({content}) {
         </div>
       </div>
       <div className={styles.ShelfCoralMiddle}>
-        {variants.map((variant) => {
-          return (
-            <ProductProvider
-              key={variant.node.id}
-              data={content}
-              initialVariantId={variant.node.id}
-            >
-              <Shelf product={content} variant={variant} color={'#F48580'} />
-            </ProductProvider>
-          );
-        })}
+        <ProductProvider data={content} initialVariantId={variants[0].node.id}>
+          {variants.map((variant, index) => {
+            return (
+              <Shelf
+                key={variant.node.id}
+                product={content}
+                variant={variant}
+                color={'#F48580'}
+                imageSrc={images[index].src}
+              />
+            );
+          })}
+        </ProductProvider>
       </div>
       <div className={styles.ShelfCoralBottom}>
         <div className={styles.ShelfCoralLeft}>

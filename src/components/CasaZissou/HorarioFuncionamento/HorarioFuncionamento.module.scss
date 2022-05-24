@@ -7,13 +7,13 @@
   width: 100%;
 
   @media only screen and (max-width: 1023px) {
-    height: 70px;
+    height: 69.8px;
   }
 
   svg {
     @media only screen and (max-width: 1023px) {
-      width: 31px;
-      height: 31px;
+      width: 31.77px;
+      height: 31.77px;
     }
   }
 
@@ -24,12 +24,13 @@
     color: var(--gray-color-500);
     margin-left: 37px;
     text-align: center;
+    letter-spacing: 0.08em;
 
     @media only screen and (max-width: 1023px) {
       font-family: 'ZonaProBold';
-      font-size: 9px;
+      font-size: 11px;
       line-height: 12px;
-      margin-left: 17px;
+      margin-left: 10.4px;
     }
   }
 }

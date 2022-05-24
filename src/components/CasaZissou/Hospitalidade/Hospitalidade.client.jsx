@@ -25,8 +25,7 @@ export default function Hospitalidade() {
       <strong className={styles.HospitalidadeTitle}>Hospitalidade</strong>
       <span className={styles.HospitalidadeSubtitle}>
         Se você quer dar uma folga para sua cama, aproveite para dormir & viver
-        em <br /> um Zissou nos hotéis mais exclusivos e acomodações únicas pelo
-        Brasil
+        em um Zissou nos hotéis mais exclusivos e acomodações únicas pelo Brasil
       </span>
       <div className={styles.HospitalidadeContent}>
         <div className={styles.HospitalidadeLeft}>
@@ -113,7 +112,10 @@ export default function Hospitalidade() {
       </div>
       <div className={styles.HospitalidadeContent}>
         <div className={styles.HospitalidadeLeft}>
-          <div className={styles.HospitalidadeLogo}>
+          <div
+            className={styles.HospitalidadeLogo}
+            style={{paddingBottom: '17.8px'}}
+          >
             <strong className={styles.HospitalidadeLogoTitle}>
               TURISMO DE EXPERIÊNCIA
             </strong>

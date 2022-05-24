@@ -12,9 +12,33 @@ import ColchaoTour from '../../assets/tour_blue_pdp.png';
 
 import Shelf from '../Shelf/Shelf.client';
 
+import BlueShelf1 from '../../assets/blue-shelf-1.png';
+import BlueShelf2 from '../../assets/blue-shelf-2.png';
+import BlueShelf3 from '../../assets/blue-shelf-3.png';
+import BlueShelf4 from '../../assets/blue-shelf-4.png';
+import BlueShelf5 from '../../assets/blue-shelf-5.png';
+
 export default function ShelfBlue({content}) {
   const {isMobile} = useMobile();
   let variants = content.variants.edges;
+
+  const images = [
+    {
+      src: BlueShelf1,
+    },
+    {
+      src: BlueShelf2,
+    },
+    {
+      src: BlueShelf3,
+    },
+    {
+      src: BlueShelf4,
+    },
+    {
+      src: BlueShelf5,
+    },
+  ];
 
   return (
     <div className={styles.ShelfBlueContainer}>
@@ -42,14 +66,19 @@ export default function ShelfBlue({content}) {
         </div>
       </div>
       <div className={styles.ShelfBlueMiddle}>
-        {variants.map((variant) => {
+        {variants.map((variant, index) => {
           return (
             <ProductProvider
               key={variant.node.id}
               data={content}
               initialVariantId={variant.node.id}
             >
-              <Shelf product={content} variant={variant} color={'#415264'} />
+              <Shelf
+                product={content}
+                variant={variant}
+                color={'#415264'}
+                imageSrc={images[index].src}
+              />
             </ProductProvider>
           );
         })}

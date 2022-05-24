@@ -192,7 +192,7 @@ export default function TocaTechnical() {
       </div>
       {!isMobile && (
         <div className={styles.Background}>
-          <Image src={BackgroundImage} width="617" height="448" />
+          <Image src={BackgroundImage} width="500" height="448" />
         </div>
       )}
     </div>

@@ -5,12 +5,12 @@ import Slider from 'react-slick/lib/slider';
 
 import * as styles from './banners.module.scss';
 
-import Banner1 from '../../../assets/slick_lojas_1.webp';
-import Banner2 from '../../../assets/slick_lojas_2.webp';
-import Banner3 from '../../../assets/slick_lojas_3.webp';
-import Banner4 from '../../../assets/slick_lojas_4.webp';
-import Banner5 from '../../../assets/slick_lojas_5.webp';
-import Banner6 from '../../../assets/slick_lojas_6.webp';
+import Banner1 from '../../../assets/slick-lojas-1.png';
+import Banner2 from '../../../assets/slick-lojas-2.png';
+import Banner3 from '../../../assets/slick-lojas-3.png';
+import Banner4 from '../../../assets/slick-lojas-4.png';
+import Banner5 from '../../../assets/slick-lojas-5.png';
+import Banner6 from '../../../assets/slick-lojas-6.png';
 
 import MobileBanner1 from '../../../assets/slick_lojas_mobile_1.webp';
 import MobileBanner2 from '../../../assets/slick_lojas_mobile_2.webp';
@@ -19,7 +19,9 @@ import MobileBanner4 from '../../../assets/slick_lojas_mobile_4.webp';
 import MobileBanner5 from '../../../assets/slick_lojas_mobile_5.webp';
 import MobileBanner6 from '../../../assets/slick_lojas_mobile_6.webp';
 
-export default function Banners() {
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 68);
+
+export default function Banners({refScroll}) {
   const {isMobile} = useMobile();
 
   const settings = {
@@ -32,6 +34,8 @@ export default function Banners() {
     arrows: false,
   };
 
+  const executeScroll = () => scrollToRef(refScroll);
+
   return (
     <div className={styles.bannersContainer}>
       <div className={styles.bannersText}>
@@ -42,49 +46,49 @@ export default function Banners() {
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner1 : MobileBanner1}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner2 : MobileBanner2}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner3 : MobileBanner3}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner4 : MobileBanner4}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner5 : MobileBanner5}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
         <div className={styles.banner}>
           <Image
             src={!isMobile ? Banner6 : MobileBanner6}
-            width={!isMobile ? '1400' : '100%'}
+            width={!isMobile ? '1980' : '100%'}
             height={!isMobile ? '650' : '100%'}
           />
         </div>
       </Slider>
-      <div className={styles.arrowDown}>
+      <button className={styles.arrowDown} onClick={executeScroll}>
         <ArrowDown />
-      </div>
+      </button>
     </div>
   );
 }

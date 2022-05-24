@@ -2,13 +2,18 @@ import {AddToCartButton, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './Shelf.module.scss';
 
-export default function Shelf({variant, color}) {
+export default function Shelf({variant, color, imageSrc}) {
   const {title, availableForSale, image, priceV2} = variant.node;
+
+  const oldPrice = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(priceV2.amount);
 
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-  }).format(priceV2.amount);
+  }).format(priceV2.amount * 0.95);
 
   return (
     <div className={styles.ShelfContainer}>
@@ -24,7 +29,7 @@ export default function Shelf({variant, color}) {
               </div>
             </div>
           )}
-          <Image src={image.url} width={339} height={263} />
+          <Image src={imageSrc || image.url} width={339} height={263} />
         </div>
         <div className={styles.ShelfInfo}>
           <strong className={styles.ShelfTitle}>{title.split(' (')[0]}</strong>
@@ -34,6 +39,7 @@ export default function Shelf({variant, color}) {
         </div>
       </div>
       <div className={styles.ShelfBottom}>
+        <span className={styles.ShelfOldPrice}>De {oldPrice}</span>
         <span className={styles.ShelfPrice}>Por {formattedPrice}</span>
         <AddToCartButton
           className={styles.ShelfBuyButton}

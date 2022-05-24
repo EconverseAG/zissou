@@ -20,8 +20,8 @@ export default function TocaHowToDescribe() {
             loop
             muted
             playsInline
-            width={isMobile ? 375 : 784}
-            height={isMobile ? 340 : 526}
+            width={isMobile ? 375 : 654}
+            height={isMobile ? 340 : 438}
           />
         </div>
         <span className={styles.BottomText}>
