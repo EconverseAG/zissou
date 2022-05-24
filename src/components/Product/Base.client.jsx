@@ -8,10 +8,12 @@ import Partners from '../Partners/Partners.client';
 import BaseTechnical from '../BaseTechnical/BaseTechnical.client';
 import BaseProduct from '../BaseProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
+import ProductFixedBar from '../ProductFixedBar';
 
 export default function Base() {
   return (
     <LoadingProvider>
+      <ProductFixedBar title="Base Zissou" />
       <div className="flex flex-col">
         <BaseBanner />
         <BaseProduct />
