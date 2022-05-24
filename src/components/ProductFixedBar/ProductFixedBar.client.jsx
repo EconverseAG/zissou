@@ -1,10 +1,14 @@
 import {useState, useEffect} from 'react';
+
+import useMobile from '../../hooks/useMobile';
 import ZissouAddToCart from '../ZissouAddToCart';
 
 import * as styles from './ProductFixedBar.module.scss';
 
 function ProductFixedBar({title}) {
   const [show, setShow] = useState(false);
+
+  const {isMobile} = useMobile();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -19,11 +23,17 @@ function ProductFixedBar({title}) {
   }, []);
 
   return (
-    <div className={`${styles.container} ${show ? styles.show : ''}`}>
-      <div className={styles.infos}>
-        <h2>{title}</h2>
-        <span>Experimente por 100 dias. Um ano de garantia.</span>
-      </div>
+    <div
+      className={`${styles.container} ${isMobile ? styles.mobile : ''} ${
+        show ? styles.show : ''
+      }`}
+    >
+      {!isMobile && (
+        <div className={styles.infos}>
+          <h2>{title}</h2>
+          <span>Experimente por 100 dias. Um ano de garantia.</span>
+        </div>
+      )}
       <ZissouAddToCart />
     </div>
   );

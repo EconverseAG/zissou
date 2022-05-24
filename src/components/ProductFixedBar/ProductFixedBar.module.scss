@@ -42,4 +42,24 @@
     font-size: 18px;
     line-height: 21px;
   }
+
+  &.mobile {
+    justify-content: center;
+    height: 35px;
+    padding: 0;
+    top: unset;
+    bottom: 0;
+    transform: translateY(100%);
+
+    &.show {
+      transform: translateY(0);
+    }
+
+    button {
+      width: 237px;
+      height: 25px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
 }
