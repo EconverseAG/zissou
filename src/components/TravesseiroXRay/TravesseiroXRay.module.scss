@@ -6,6 +6,10 @@
   font-family: ZonaPro;
   background: #CADEE8;
   padding-block: 148px 163px;
+
+  img {
+    width: 65%;
+  }
   
   h2 {
     font-size: 36px;
@@ -25,7 +29,7 @@
   }
 
   span {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 19px;
     letter-spacing: 0.05em;
     color: #707070;
@@ -102,10 +106,11 @@
     }
 
     &Skeleton {
+      width: 80%;
       position: absolute;
       z-index: 1;
       user-select: none;
-      top: -161px;
+      top: -100px;
       max-width: unset;
       opacity: 1;
       transition: 0.25s;
@@ -113,29 +118,30 @@
 
     &Capa {
       span {
-        max-width: 530px;
+        max-width: 350px;
       }
     }
 
     &Plush1AndNuvens {
       transition-delay: 0.25s;
-      margin-top: 174px;
+      margin-top: 82px;
 
       img + img {
-        margin-top: 133px;
+        margin-top: 109px;
       }
 
       span {
-        max-width: 493px;
+        max-width: 370px;
+        margin-top: 27px;
       }
     }
 
     &Plush2 {
       transition-delay: 0.5s;
-      margin-top: 285px;
+      margin-top: 130px;
 
       span {
-        max-width: 529px;
+        max-width: 330px;
         margin-top: 50px;
       }
     }
