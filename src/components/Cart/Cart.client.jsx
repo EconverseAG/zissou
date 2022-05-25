@@ -22,7 +22,7 @@ import TruckIcon from '../../assets/TruckIcon.png';
 
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
-import {CheckoutButton} from "hydrogen-checkout-button";
+import {CheckoutButton} from "@cartpanda/hydrogen-checkout-button";
 import shopifyConfig from '../../../shopify.config';
 
 export default function Cart() {
