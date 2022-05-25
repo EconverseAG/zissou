@@ -3,10 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 66.4px 0 91px;
+  padding: 120px 0 91px;
+  background: linear-gradient(360deg, #cadee8 0%, #ccdfe9 0%, #fff 22.17%, #fff 100%, #fff 100%);
 
   @media only screen and (max-width: 1023px) {
-    margin: 34px 0 40px;
+    padding: 120px 0 40px;
+    background: linear-gradient(360deg, #cadee8 0%, #ccdfe9 34.48%, #fff 80.3%, #fff 100%, #fff 100%);
   }
 
   .SleepAndLiveContainerTitle {
@@ -41,7 +43,6 @@
     .SleepAndLiveColchao {
       max-width: 572px;
       width: 50%;
-      height: 730px;
       background: var(--gray-color-100);
       position: relative;
       display: flex;
@@ -60,7 +61,7 @@
       }
 
       &.SleepAndLiveCoral {
-        margin-right: 20px;
+        margin-right: 21px;
 
         @media only screen and (max-width: 1023px) {
           margin-right: 0;
@@ -128,7 +129,7 @@
         font-family: "ZonaProBlack";
         margin-bottom: 10px;
         text-transform: uppercase;
-        margin-top: 54px;
+        margin-top: 41.4px;
         letter-spacing: 3px;
 
         @media only screen and (max-width: 1023px) {
@@ -162,7 +163,7 @@
         line-height: 19px;
         text-align: left;
         color: var(--gray-color-600);
-        width: 75%;
+        width: 80%;
 
         >strong {
           font-family: 'ZonaProBlack';
@@ -172,7 +173,7 @@
           font-size: 9px;
           line-height: 12px;
           letter-spacing: 1px;
-          width: 85%;
+          width: 90%;
         }
       }
 
@@ -180,7 +181,7 @@
         font-family: 'ZonaProBlack';
         font-size: 19px;
         line-height: 19px;
-        margin-top: auto;
+        margin-top: 28px;
         margin-bottom: 30px;
         text-align: left;
         width: 75%;

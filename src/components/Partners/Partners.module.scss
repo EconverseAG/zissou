@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background: var(--blue-color-300);
-  padding: 40px 0;
+  padding: 40px 30px;
 
   @media only screen and (max-width: 1024px) {
     padding: 40px 30px;
@@ -14,133 +15,210 @@
     padding: 40px 0;
   }
 
-  .PartnersLeft {
+  .PartnersContent {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin-right: 100px;
-
-    @media only screen and (max-width: 1024px) {
-      margin-right: 50px;
-    }
 
     @media only screen and (max-width: 1023px) {
-      align-items: center;
-      max-width: 100%;
-      margin-right: 0;
+      flex-direction: column;
     }
 
-    > strong {
-      font-size: 36px;
-      line-height: 42px;
-      color: var(--blue-color-1000);
-      font-family: "ZonaProBold";
-      letter-spacing: 3px;
-      margin-bottom: 23px;
-
-      @media only screen and (max-width: 1023px) {
-        font-size: 20px;
-        line-height: 25px;
-        letter-spacing: 1px;
-        margin-bottom: 16px;
-      }
-    }
-    
-    > p {
-      font-size: 21px;
-      line-height: 28px;
-      color: var(--white-color);
-      font-family: "ZonaProSemiBold";
-
-      @media only screen and (max-width: 1023px) {
-        font-size: 14px;
-        line-height: 19px;
-        text-align: center;
-      }
-    }
-
-    > a {
+    .PartnersLeft {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 80%;
-      height: 60px;
-      background: var(--purple-color-300);
-      border-radius: 30px;
-      font-size: 21px;
-      line-height: 25px;
-      color: var(--white-color);
-      font-family: "ZonaProBlack";
-      text-transform: uppercase;
-      margin-top: 30px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      flex-direction: column;
+      margin-right: 100px;
 
-      &:hover {
-        background: var(--purple-color-500);
+      @media only screen and (max-width: 1024px) {
+        margin-right: 50px;
       }
 
       @media only screen and (max-width: 1023px) {
-        width: 80%;
-        font-size: 14px;
-        line-height: 21px;
-        height: 44px;
-        margin-top: 19px;
+        align-items: center;
+        max-width: 100%;
+        margin-right: 0;
+      }
+
+      &Title {
+        font-family: ZonaProBold;
+        font-size: 24px;
+        letter-spacing: 0.12em;
+        line-height: 42px;
+        text-align: center;
+        color: #183242;
+        margin-bottom: 7.5px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 16px;
+          width: 70%;
+        }
+      }
+
+      &Subtitle {
+        font-family: ZonaProSemiBold;
+        font-size: 21px;
+        letter-spacing: 0.08em;
+        line-height: 28px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 22.4px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 14px;
+          line-height: 19px;
+          text-align: center;
+          letter-spacing: 0.04em;
+        }
+      }
+
+      .brands {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 37px;
+        background: var(--white-color);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 29.3px 34.1px 29.3px 35.6px;
+
+        @media only screen and (max-width: 1023px) {
+          padding: 19.3px 22.5px 19.3px 23.5px;
+          border-radius: 20px;
+        }
+
+        img {
+          &+img {
+            margin-left: 30px;
+
+            @media only screen and (max-width: 1023px) {
+              margin-left: 20.1px;
+            }
+          }
+
+          &:first-child {
+            border-right: 2px solid #707070;
+            padding-right: 29.5px;
+
+            @media only screen and (max-width: 1023px) {
+              padding-right: 19.4px;
+            }
+          }
+        }
+      }
+    }
+
+    .PartnersRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @media only screen and (max-width: 1023px) {
+        margin-top: 27.8px;
+      }
+
+      &Title {
+        font-family: ZonaProBold;
+        font-size: 24px;
+        letter-spacing: 0.12em;
+        line-height: 42px;
+        text-align: center;
+        color: #183242;
+        margin-bottom: 7.5px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 16px;
+          width: 70%;
+        }
+      }
+
+      &Subtitle {
+        font-family: ZonaProSemiBold;
+        font-size: 21px;
+        letter-spacing: 0.08em;
+        line-height: 28px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 22.4px;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 14px;
+          line-height: 19px;
+          text-align: center;
+          letter-spacing: 0.04em;
+        }
+      }
+
+      .brands {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 37px;
+        background: var(--white-color);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 16px 12px 16px 20px;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 16px 52px 16px 50px;
+        }
+
+        @media only screen and (max-width: 1023px) {
+          padding: 10px 12px;
+          border-radius: 20px;
+        }
+
+        img {
+          &+img {
+            margin-left: 20px;
+          }
+
+          &:last-child {
+            margin-left: 0;
+          }
+
+          &:nth-child(3) {
+            margin-left: 10px;
+          }
+        }
       }
     }
   }
 
-  .PartnersRight {
+  .CTA {
+    margin-top: 43.6px;
+    max-width: 301.13px;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background: #d4a8bf;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    font-family: ZonaProBlack;
+    font-size: 21px;
+    letter-spacing: 0.14em;
+    line-height: 25px;
+    color: #fff;
+
+    &:hover {
+      background: #bb73a9;
+    }
 
     @media only screen and (max-width: 1023px) {
-      margin-top: 24px;
-    }
-
-    > span {
-      font-family: "ZonaProBold";
-      font-size: 22px;
-      line-height: 34px;
-      margin-bottom: 14px;
-      color: var(--blue-color-1000);
-      text-transform: uppercase;
-
-      @media only screen and (max-width: 1023px) {
-        font-size: 20px;
-        line-height: 25px;
-        margin-bottom: 20px;
-      }
-    }
-
-    > div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 37px;
-      background: var(--white-color);
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-      padding: 16px 43px;
-
-      @media only screen and (max-width: 1023px) {
-        padding: 10px 12px;
-      }
-
-      img {
-        & + img {
-          margin-left: 20px;
-        }
-
-        &:last-child {
-          margin-left: 0;
-        }
-
-        &:nth-child(3) {
-          margin-left: 10px;
-        }
-      }
+      margin-top: 30.9px;
+      max-width: 190.95px;
+      height: 44px;
+      border-radius: 22px;
+      font-family: ZonaProBlack;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      line-height: 21px;
     }
   }
 }

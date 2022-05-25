@@ -54,7 +54,7 @@ export default function SleepAndLiveComparativo() {
             <Image
               src={changeUrlCoral}
               width={isMobile ? '304' : '572'}
-              height={isMobile ? '154' : '302'}
+              height={isMobile ? '154' : '304'}
             />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>CORAL</strong>
@@ -62,13 +62,16 @@ export default function SleepAndLiveComparativo() {
             A EVOLUÇÃO DO SONO
           </span>
           <p className={styles.SleepAndLiveText}>
-            Coral consolida materiais premium para atingir{' '}
-            <strong>um mix perfeito de suporte, conforto e aconchego</strong>
+            Coral consolida materiais premium para atingir um{' '}
+            <strong>
+              mix perfeito de suporte, conforto e aconchego com tecido
+              refrescante Soft & Chill
+            </strong>
           </p>
           <br />
           <p className={styles.SleepAndLiveText}>
-            <strong>Opção de suporte híbrido com molas Leggett & Platt</strong>{' '}
-            de 15cm de altura
+            <strong>Opção de suporte híbrido Spring System Plus</strong> com
+            molas de 15cm de altura
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 3.610</span>
           <Link
@@ -95,7 +98,7 @@ export default function SleepAndLiveComparativo() {
             <Image
               src={changeUrlBlue}
               width={isMobile ? '304' : '572'}
-              height={isMobile ? '154' : '302'}
+              height={isMobile ? '154' : '304'}
             />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>Blue</strong>
@@ -108,12 +111,13 @@ export default function SleepAndLiveComparativo() {
               uma das tecnologias mais avançadas em sono com matérias primas
               altamente sofisticadas
             </strong>
-            , incluindo látex Pulse e Ultra Cooling no tecido
+            , incluindo Latex Pulse e resfriamento na superfície com tecido
+            Plush & Cool
           </p>
           <br />
           <p className={styles.SleepAndLiveText}>
-            <strong>Opção de suporte híbrido com molas Leggett & Platt</strong>{' '}
-            de 15cm de altura
+            <strong>Sistema de suporte híbrido Zoned Spring System</strong> com
+            molas de 15cm de altura e zoneamento ergonômico
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 8.930</span>
           <Link
