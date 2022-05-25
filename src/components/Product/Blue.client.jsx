@@ -14,12 +14,14 @@ import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 import useMobile from '../../hooks/useMobile';
+import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
 export default function Blue() {
   const {isMobile} = useMobile();
 
   return (
     <LoadingProvider>
+      <ProductFixedBarColchao title="BLUE" subtitle={'LIBERTE SEUS SONHOS'} />
       {!isMobile && <BannerProductPage src={BannerBluePDP} />}
       <CoralProduct />
       <CinematographyBanner />

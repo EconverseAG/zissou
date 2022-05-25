@@ -16,12 +16,14 @@ import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
 import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
+import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
 export default function Coral() {
   const {isMobile} = useMobile();
 
   return (
     <LoadingProvider>
+      <ProductFixedBarColchao title="CORAL" subtitle={'A EVOLUÇÃO DO SONO'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <CoralProduct />
       <CinematographyBanner />
