@@ -1,7 +1,7 @@
 import {Image} from '@shopify/hydrogen';
 import * as styles from './FamiliaZissou.module.scss';
 
-import FamiliaZissouFundo from '../../assets/familiaZissouFUndo.png';
+import FamiliaZissouFundo from '../../assets/familiaZissouFundo.png';
 import FamiliaZissouFundoMobile from '../../assets/familiaZissouFundoMobile.webp';
 
 import PopupContent from './FamiliaModal.client';

@@ -194,7 +194,7 @@ const QUERY_PRODUCT_BY_ID = gql`
               width
               height
             }
-            metafields(first: 10) {
+            metafields(first: 20) {
               edges {
                 node {
                   id
