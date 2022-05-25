@@ -60,22 +60,11 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                   </Link>
                 </div>
                 <ul>
-                  {/* {collections.map((collection) => (
-                  <li className="border-b border-gray-200" key={collection.id}>
-                    <Link
-                      
-                      className="group py-5 text-gray-700 flex items-center justify-between"
-                      to={`/collections/${collection.handle}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {collection.title}
-                      <ArrowRightIcon className="hidden group-hover:block" />
-                    </Link>
-                  </li>
-                ))} */}
                   <li>
                     <div className={styles.titleWithArrow}>
-                      <Link to="/pages/colchoes-zissou">Colchões</Link>
+                      <Link to="/pages/colchoes-zissou" className={styles.novo}>
+                        Colchões
+                      </Link>
                       <button
                         onClick={() =>
                           setOpenMenuColchoes(
@@ -124,7 +113,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       </li>
                     </ul>
                   </li>
-                  <li className={styles.novo}>
+                  <li>
                     <Link to="/products/base-zissou">Base</Link>
                   </li>
                   <li>
