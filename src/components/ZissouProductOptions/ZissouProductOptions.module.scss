@@ -205,8 +205,31 @@
           }
 
           strong {
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 12px;
+            line-height: 14px;
+          }
+
+          span {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
+
+      &Dropdown {
+        &Option {
+          p {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            
+            strong {
+              font-size: 13px;
+            }
+  
+            span {
+              font-size: 12px;
+            }
           }
         }
       }

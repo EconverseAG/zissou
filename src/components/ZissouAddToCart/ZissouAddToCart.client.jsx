@@ -1,4 +1,4 @@
-import {useCallback, useMemo} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
@@ -24,10 +24,24 @@ function ZissouAddToCart({
   const {linesAdd} = useCart();
   const {isMobile} = useMobile();
 
+  const [hasRestockDate, setHasRestockDate] = useState(false);
+
   const isOutOfStock = useMemo(
     () => !selectedVariant.availableForSale,
     [selectedVariant],
   );
+
+  useEffect(() => {
+    let restockDate = selectedVariant.metafields.edges.filter((item) => {
+      return item.node.key === 'data_de_restoque';
+    });
+
+    if (restockDate.length > 0) {
+      setHasRestockDate(true);
+    } else {
+      setHasRestockDate(false);
+    }
+  }, [selectedVariant]);
 
   const addToCart = useCallback(() => {
     let lines = [
@@ -35,6 +49,19 @@ function ZissouAddToCart({
         merchandiseId: selectedVariant?.id,
       },
     ];
+
+    let restockDate = selectedVariant.metafields.edges.filter((item) => {
+      return item.node.key === 'data_de_restoque';
+    });
+
+    if (restockDate.length > 0) {
+      lines[0].attributes = [
+        {
+          key: 'Encomenda',
+          value: restockDate[0].node.value,
+        },
+      ];
+    }
 
     if (customBag) {
       lines[0].attributes = [
@@ -79,10 +106,9 @@ function ZissouAddToCart({
         merchandiseId: item.selectedVariant.id,
       });
     });
-
     linesAdd(lines);
   }, [
-    selectedVariant?.id,
+    selectedVariant,
     customBag,
     EntregaFutura5OFF,
     EntregaFutura10OFF,
@@ -99,11 +125,15 @@ function ZissouAddToCart({
       className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
         className || ''
       }`}
-      disabled={isOutOfStock}
       onClickCapture={addToCart}
+      disabled={isOutOfStock}
       {...rest}
     >
-      {isOutOfStock ? 'Indisponível' : text}
+      {isOutOfStock
+        ? 'Indisponível'
+        : hasRestockDate
+        ? 'Encomendar agora'
+        : text}
     </AddToCartButton>
   );
 }

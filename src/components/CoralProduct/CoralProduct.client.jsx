@@ -1,3 +1,5 @@
+import {useEffect, useState} from 'react';
+import {useProduct} from '@shopify/hydrogen/client';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import ZissouProductImages from '../ZissouProductImages';
@@ -16,10 +18,21 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './CoralProduct.module.scss';
 import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
+import RestockDate from '../RestockDate/RestockDate.client';
 
 function CoralProduct() {
   const {isCoral} = useZissouProduct();
   const {isMobile} = useMobile();
+  const [showRestockDate, setShowRestockDate] = useState(false);
+
+  const {selectedVariant} = useProduct();
+
+  useEffect(() => {
+    let restockDate = selectedVariant.metafields.edges.filter((item) => {
+      return item.node.key === 'data_de_restoque';
+    });
+    setShowRestockDate(restockDate.length > 0);
+  }, [selectedVariant]);
 
   return (
     <ProductSection
@@ -47,6 +60,7 @@ function CoralProduct() {
         />
         <ZissouProductPrice className={styles.Price} />
         {isMobile && <ZissouCompreJunto />}
+        {showRestockDate && <RestockDate />}
         <ZissouAddToCart className={styles.AddToCart} />
         <EntregaFutura />
         <ZissouColchaoIcons />
