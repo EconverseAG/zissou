@@ -108,6 +108,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
 
     .cartShelfTitle {
       font-size: 11px;
@@ -212,14 +213,16 @@
   }
 
   .cartItems {
-    padding: 0 28px;
     flex-grow: 1;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 
     .cartItem {
       display: flex;
       flex-direction: column;
       padding: 28px 0;
+      margin: 0 28px;
       border-bottom: 1px solid var(--gray-color-350);
 
       &:last-child {

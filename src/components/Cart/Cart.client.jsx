@@ -37,7 +37,6 @@ export default function Cart() {
             <>
               <CartHeader />
               <CartItems />
-              <CartShelf />
               <CartFooter />
             </>
           )}
@@ -65,6 +64,7 @@ function CartItems() {
       <CartLines>
         <LineInCart />
       </CartLines>
+      <CartShelf />
     </div>
   );
 }
