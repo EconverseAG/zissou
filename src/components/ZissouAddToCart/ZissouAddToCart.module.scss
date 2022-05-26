@@ -3,18 +3,16 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 529px;
-  height: 72px;
+  height: 66px;
   color: #fff;
   background: #d4a8bf;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   text-transform: uppercase;
-  font-size: 27px;
+  font-size: 22px;
   line-height: 36px;
-  font-weight: 700;
   font-family: 'ZonaProBlack';
-  border-radius: 77px;
+  border-radius: 33px;
   transition: 0.25s;
+  letter-spacing: 0.12em;
 
   &:hover {
     background: #bb73a9;
@@ -22,15 +20,13 @@
 
   &:disabled {
     opacity: 0.75;
-
-    &:hover {
-      background: #d4a8bf;
-    }
   }
 
   &.mobile {
-    height: 43px;
-    font-size: 12px;
-    line-height: 16px;
+    height: 40.2px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   }
 }
