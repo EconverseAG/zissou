@@ -19,6 +19,8 @@ import {useCartUI} from './CartUIProvider.client';
 
 import CartEmpyGif from '../../assets/CartEmptyIcon.gif';
 
+import TruckIcon from '../../assets/TruckIcon.png';
+
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
 
@@ -70,7 +72,39 @@ function CartItems() {
 }
 
 function LineInCart() {
-  const {merchandise} = useCartLine();
+  const {merchandise, attributes} = useCartLine();
+  const [dateEncomenda, setDateEncomenda] = useState('');
+  const [customizacao, setCustomizacao] = useState('');
+  const date = new Date();
+  const plus1Month = new Date(date.setMonth(date.getMonth() + 1));
+  const plus2Months = new Date(date.setMonth(date.getMonth() + 2));
+
+  useEffect(() => {
+    if (attributes.length) {
+      const attributeDateFiltered = attributes.filter((attribute) => {
+        return (
+          attribute.key === 'Encomenda' ||
+          attribute.key === 'EntregaFutura10OFF' ||
+          attribute.key === 'EntregaFutura5OFF' ||
+          attribute.key === 'DateCustom5OFF' ||
+          attribute.key === 'DateCustom10OFF' ||
+          attribute.key === 'DateCustom'
+        );
+      });
+
+      if (attributeDateFiltered.length > 0) {
+        setDateEncomenda(attributeDateFiltered[0].value);
+      }
+
+      const attributeCustomFiltered = attributes.filter((attribute) => {
+        return attribute.key === 'Customização';
+      });
+
+      if (attributeCustomFiltered.length > 0) {
+        setCustomizacao(attributeCustomFiltered[0].value);
+      }
+    }
+  }, [attributes]);
 
   return (
     <div className={styles.cartItem}>
@@ -82,17 +116,119 @@ function LineInCart() {
           />
           <ul className={styles.cartItemTopRightSpecs}>
             {merchandise.selectedOptions.map(({value}) => (
-              <div key={value}>
+              <div key={value} className={styles.Props}>
                 <IconSize />
                 <li className={styles.cartItemTopRightSpecsList}>{value}</li>
               </div>
             ))}
+            {dateEncomenda && dateEncomenda.includes('-') ? (
+              <div className={styles.Props}>
+                <Image src={TruckIcon} width="16" height="11" />
+                <li className={styles.cartItemTopRightSpecsList}>
+                  entrega próxima de{' '}
+                  {dateEncomenda.split('-')[2] +
+                    '/' +
+                    dateEncomenda.split('-')[1] +
+                    '/' +
+                    dateEncomenda.split('-')[0]}
+                </li>
+              </div>
+            ) : dateEncomenda.includes('EntregaFutura5OFF') ? (
+              <>
+                <div className={styles.Props}>
+                  <Image src={TruckIcon} width="16" height="11" />
+                  <li className={styles.cartItemTopRightSpecsList}>
+                    entrega próxima de{' '}
+                    {date.getUTCDate() +
+                      '/' +
+                      (plus1Month.getUTCMonth() + 1) +
+                      '/' +
+                      date.getFullYear()}
+                  </li>
+                </div>
+                <div className={styles.Props}>
+                  <Label />
+                  <li
+                    className={styles.cartItemTopRightSpecsList}
+                    style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
+                  >
+                    5% OFF
+                  </li>
+                </div>
+              </>
+            ) : dateEncomenda.includes('EntregaFutura10OFF') ? (
+              <>
+                <div className={styles.Props}>
+                  <Image src={TruckIcon} width="16" height="11" />
+                  <li className={styles.cartItemTopRightSpecsList}>
+                    entrega próxima de{' '}
+                    {date.getUTCDate() +
+                      '/' +
+                      plus2Months.getUTCMonth() +
+                      '/' +
+                      date.getFullYear()}
+                  </li>
+                </div>
+                <div className={styles.Props}>
+                  <Label />
+                  <li
+                    className={styles.cartItemTopRightSpecsList}
+                    style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
+                  >
+                    10% OFF
+                  </li>
+                </div>
+              </>
+            ) : dateEncomenda.length ? (
+              <div className={styles.Props}>
+                <Image src={TruckIcon} width="16" height="11" />
+                <li className={styles.cartItemTopRightSpecsList}>
+                  entrega próxima de {dateEncomenda}
+                </li>
+              </div>
+            ) : customizacao ? (
+              <div className={styles.Props}>
+                <li
+                  className={styles.cartItemTopRightSpecsList}
+                  style={{margin: 0, fontFamily: 'ZonaProBlack'}}
+                >
+                  Personalizado: {customizacao}
+                </li>
+              </div>
+            ) : null}
           </ul>
         </div>
+        <CartLineQuantityAdjustButton adjust="remove" className={styles.Remove}>
+          X
+        </CartLineQuantityAdjustButton>
       </div>
       <div className={styles.cartItemBottom}>
         <CartItemQuantity />
-        <CartLinePrice className={styles.cartItemBottomPrice} />
+        {dateEncomenda.includes('EntregaFutura5OFF') ? (
+          <div className={styles.PriceCartLine}>
+            <CartLinePrice className={styles.OldPrice} />
+            <span className={styles.cartItemBottomPrice}>
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(merchandise.priceV2.amount * 0.95)}
+            </span>
+          </div>
+        ) : dateEncomenda.includes('EntregaFutura10OFF') ? (
+          <div className={styles.PriceCartLine}>
+            <CartLinePrice className={styles.OldPrice} />
+            <span className={styles.cartItemBottomPrice}>
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(merchandise.priceV2.amount * 0.9)}
+            </span>
+          </div>
+        ) : (
+          <div className={styles.PriceCartLine}>
+            <CartLinePrice className={styles.cartItemBottomPrice} />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -203,14 +339,9 @@ function CartShelf() {
 
 function CartFooter() {
   const {discountCodes, estimatedCost} = useCart();
-  const [discount, setDiscount] = useState(0);
 
   let subtotal = +estimatedCost.subtotalAmount.amount;
   let total = +estimatedCost.totalAmount.amount;
-
-  useEffect(() => {
-    setDiscount(subtotal - total * 0.95);
-  }, [total, subtotal]);
 
   return (
     <footer className={styles.cartFooter}>
@@ -229,38 +360,30 @@ function CartFooter() {
               <Label />
               SEU DESCONTO:
             </span>
-            <span className={styles.cartDiscountPrice}>
-              {new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(discount)}
-            </span>
+            <span className={styles.cartDiscountPrice}></span>
           </div>
         ) : null}
         <div className={styles.cartTotal}>
           <span className={styles.cartTotalTitle}>TOTAL</span>
-          <div>
+          <div className={styles.cartTotalPrices}>
             <div className={styles.cartTotalPrice}>
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(total * 0.95)}
+              }).format(total)}
             </div>
-            <p className={styles.cartTotalDiscount}>
-              COM 5% DE DESCONTO À VISTA
-            </p>
+            <span className={styles.cartTotalDiscount}>
+              EM ATÉ 10X SEM JUROS
+            </span>
             <span className={styles.cartTotalInstallments}>
               OU{' '}
-              {new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(total)}{' '}
-              EM ATÉ 10X DE{' '}
-              {new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(total / 10)}{' '}
-              SEM JUROS
+              <strong>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
+                }).format(total * 0.95)}{' '}
+              </strong>
+              À VISTA
             </span>
           </div>
         </div>
