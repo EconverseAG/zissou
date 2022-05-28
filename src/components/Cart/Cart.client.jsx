@@ -339,7 +339,8 @@ function CartShelf() {
 }
 
 function CartFooter() {
-  const {discountCodes, estimatedCost} = useCart();
+  const cart = useCart()
+  const {discountCodes, estimatedCost} = cart;
 
   let subtotal = +estimatedCost.subtotalAmount.amount;
   let total = +estimatedCost.totalAmount.amount;
@@ -389,7 +390,7 @@ function CartFooter() {
           </div>
         </div>
       </div>
-      <CheckoutButton className={styles.cartCheckout} items={lines} config={shopifyConfig}>
+      <CheckoutButton className={styles.cartCheckout} cart={cart} config={shopifyConfig}>
         FINALIZAR COMPRA (CartPanda)
       </CheckoutButton>
     </footer>
