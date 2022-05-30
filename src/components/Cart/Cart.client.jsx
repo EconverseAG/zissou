@@ -1,16 +1,14 @@
 import {useEffect, useState} from 'react';
 
 import {
-  useCart,
-  CartCheckoutButton,
-  Image,
-  CartLines,
   CartLineImage,
-  CartLineProductTitle,
-  CartLineQuantityAdjustButton,
   CartLinePrice,
+  CartLineProductTitle,
   CartLineQuantity,
-  CartEstimatedCost,
+  CartLineQuantityAdjustButton,
+  CartLines,
+  Image,
+  useCart,
   useCartLine,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
@@ -23,10 +21,44 @@ import TruckIcon from '../../assets/TruckIcon.png';
 
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
+import {CheckoutButton} from '@cartpanda/hydrogen-checkout-button';
+import shopifyConfig from '../../../shopify.config';
 
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
-  const {totalQuantity} = useCart();
+  const {totalQuantity, lines} = useCart();
+
+  const [totalLine, setTotalLine] = useState();
+
+  useEffect(() => {
+    let totalMinicartPrices = lines.map((product) => {
+      let discounts = [
+        'EntregaFutura10OFF',
+        'EntregaFutura5OFF',
+        'DateCustom5OFF',
+        'DateCustom10OFF',
+      ];
+
+      let hasDiscount = product.attributes.find((attr) =>
+        discounts.includes(attr.key),
+      );
+
+      let price = +product.merchandise.priceV2.amount;
+
+      if (!hasDiscount) return price;
+
+      let discount =
+        discounts
+          .find((discount) => hasDiscount.key === discount)
+          .replace(/\D/g, '') / 100;
+
+      let totalPrice = price - price * discount;
+
+      return totalPrice;
+    });
+
+    setTotalLine(totalMinicartPrices.reduce((a, b) => a + b, 0));
+  }, [lines]);
 
   return (
     <>
@@ -39,7 +71,7 @@ export default function Cart() {
             <>
               <CartHeader />
               <CartItems />
-              <CartFooter />
+              <CartFooter totalLine={totalLine} />
             </>
           )}
         </div>
@@ -72,8 +104,9 @@ function CartItems() {
 }
 
 function LineInCart() {
-  const {merchandise, attributes} = useCartLine();
+  const {merchandise, attributes, quantity} = useCartLine();
   const [dateEncomenda, setDateEncomenda] = useState('');
+  const [dateEncomendaKey, setDateEncomendaKey] = useState('');
   const [customizacao, setCustomizacao] = useState('');
   const date = new Date();
   const plus1Month = new Date(date.setMonth(date.getMonth() + 1));
@@ -94,6 +127,7 @@ function LineInCart() {
 
       if (attributeDateFiltered.length > 0) {
         setDateEncomenda(attributeDateFiltered[0].value);
+        setDateEncomendaKey(attributeDateFiltered[0].key);
       }
 
       const attributeCustomFiltered = attributes.filter((attribute) => {
@@ -133,17 +167,24 @@ function LineInCart() {
                     dateEncomenda.split('-')[0]}
                 </li>
               </div>
-            ) : dateEncomenda.includes('EntregaFutura5OFF') ? (
+            ) : dateEncomendaKey.includes('EntregaFutura5OFF') ||
+              dateEncomendaKey.includes('EntregaFutura10OFF') ? (
               <>
                 <div className={styles.Props}>
                   <Image src={TruckIcon} width="16" height="11" />
                   <li className={styles.cartItemTopRightSpecsList}>
                     entrega próxima de{' '}
-                    {date.getUTCDate() +
-                      '/' +
-                      (plus1Month.getUTCMonth() + 1) +
-                      '/' +
-                      date.getFullYear()}
+                    {dateEncomendaKey.includes('EntregaFutura5OFF')
+                      ? date.getUTCDate() +
+                        '/' +
+                        (plus1Month.getUTCMonth() + 1) +
+                        '/' +
+                        date.getFullYear()
+                      : date.getUTCDate() +
+                        '/' +
+                        plus2Months.getUTCMonth() +
+                        '/' +
+                        date.getFullYear()}
                   </li>
                 </div>
                 <div className={styles.Props}>
@@ -152,21 +193,16 @@ function LineInCart() {
                     className={styles.cartItemTopRightSpecsList}
                     style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                   >
-                    5% OFF
+                    {dateEncomendaKey.replace(/(\D)+/g, '')}% OFF
                   </li>
                 </div>
               </>
-            ) : dateEncomenda.includes('EntregaFutura10OFF') ? (
+            ) : dateEncomendaKey.length ? (
               <>
                 <div className={styles.Props}>
                   <Image src={TruckIcon} width="16" height="11" />
                   <li className={styles.cartItemTopRightSpecsList}>
-                    entrega próxima de{' '}
-                    {date.getUTCDate() +
-                      '/' +
-                      plus2Months.getUTCMonth() +
-                      '/' +
-                      date.getFullYear()}
+                    entrega próxima de {dateEncomenda}
                   </li>
                 </div>
                 <div className={styles.Props}>
@@ -175,17 +211,10 @@ function LineInCart() {
                     className={styles.cartItemTopRightSpecsList}
                     style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                   >
-                    10% OFF
+                    {dateEncomendaKey.replace(/(\D)+/g, '')}% OFF
                   </li>
                 </div>
               </>
-            ) : dateEncomenda.length ? (
-              <div className={styles.Props}>
-                <Image src={TruckIcon} width="16" height="11" />
-                <li className={styles.cartItemTopRightSpecsList}>
-                  entrega próxima de {dateEncomenda}
-                </li>
-              </div>
             ) : customizacao ? (
               <div className={styles.Props}>
                 <li
@@ -193,6 +222,23 @@ function LineInCart() {
                   style={{margin: 0, fontFamily: 'ZonaProBlack'}}
                 >
                   Personalizado: {customizacao}
+                </li>
+              </div>
+            ) : quantity >= 2 ? (
+              <div className={styles.Props}>
+                <Label />
+                <li
+                  className={styles.cartItemTopRightSpecsList}
+                  style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
+                >
+                  {merchandise.priceV2.amount > 0 &&
+                  merchandise.priceV2.amount < 10000
+                    ? '5'
+                    : merchandise.priceV2.amount > 10000 &&
+                      merchandise.priceV2.amount < 20000
+                    ? '10'
+                    : '15'}
+                  % OFF
                 </li>
               </div>
             ) : null}
@@ -204,24 +250,30 @@ function LineInCart() {
       </div>
       <div className={styles.cartItemBottom}>
         <CartItemQuantity />
-        {dateEncomenda.includes('EntregaFutura5OFF') ? (
+        {dateEncomenda.includes('EntregaFutura5OFF') ||
+        dateEncomendaKey.includes('DateCustom5OFF') ? (
           <div className={styles.PriceCartLine}>
             <CartLinePrice className={styles.OldPrice} />
             <span className={styles.cartItemBottomPrice}>
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(merchandise.priceV2.amount * 0.95)}
+              }).format(
+                merchandise.priceV2.amount - merchandise.priceV2.amount * 0.05,
+              )}
             </span>
           </div>
-        ) : dateEncomenda.includes('EntregaFutura10OFF') ? (
+        ) : dateEncomenda.includes('EntregaFutura10OFF') ||
+          dateEncomendaKey.includes('DateCustom10OFF') ? (
           <div className={styles.PriceCartLine}>
             <CartLinePrice className={styles.OldPrice} />
             <span className={styles.cartItemBottomPrice}>
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(merchandise.priceV2.amount * 0.9)}
+              }).format(
+                merchandise.priceV2.amount - merchandise.priceV2.amount * 0.1,
+              )}
             </span>
           </div>
         ) : (
@@ -337,30 +389,41 @@ function CartShelf() {
   );
 }
 
-function CartFooter() {
-  const {discountCodes, estimatedCost} = useCart();
+function CartFooter({totalLine}) {
+  const cart = useCart();
+  const {estimatedCost} = cart;
 
-  let subtotal = +estimatedCost.subtotalAmount.amount;
-  let total = +estimatedCost.totalAmount.amount;
+  let totalCart = +estimatedCost.totalAmount.amount;
 
   return (
     <footer className={styles.cartFooter}>
       <div>
         <div className={styles.cartSubtotal}>
           <span className={styles.cartSubtotalTitle}>SUBTOTAL</span>
-          <CartEstimatedCost
-            amountType="subtotal"
+          <strong
             className={styles.cartSubtotalPrice}
-            style={{textDecoration: total > subtotal ? 'line-through' : 'none'}}
-          />
+            style={{
+              textDecoration: totalCart > totalLine ? 'line-through' : 'none',
+            }}
+          >
+            {new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(totalCart)}
+          </strong>
         </div>
-        {discountCodes ? (
+        {totalCart > totalLine ? (
           <div className={styles.cartDiscount}>
             <span className={styles.cartDiscountTitle}>
               <Label />
               SEU DESCONTO:
             </span>
-            <span className={styles.cartDiscountPrice}></span>
+            <span className={styles.cartDiscountPrice}>
+              {new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(totalCart - totalLine)}
+            </span>
           </div>
         ) : null}
         <div className={styles.cartTotal}>
@@ -370,7 +433,7 @@ function CartFooter() {
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(total)}
+              }).format(totalLine)}
             </div>
             <span className={styles.cartTotalDiscount}>
               EM ATÉ 10X SEM JUROS
@@ -381,16 +444,20 @@ function CartFooter() {
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL',
-                }).format(total * 0.95)}{' '}
+                }).format(totalLine * 0.95)}{' '}
               </strong>
               À VISTA
             </span>
           </div>
         </div>
       </div>
-      <CartCheckoutButton className={styles.cartCheckout}>
-        FINALIZAR COMPRA
-      </CartCheckoutButton>
+      <CheckoutButton
+        className={styles.cartCheckout}
+        cart={cart}
+        config={shopifyConfig}
+      >
+        FINALIZAR COMPRA (CartPanda)
+      </CheckoutButton>
     </footer>
   );
 }
