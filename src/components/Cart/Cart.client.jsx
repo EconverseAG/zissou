@@ -1,15 +1,16 @@
 import {useEffect, useState} from 'react';
 
 import {
-  CartEstimatedCost,
-  CartLineImage,
-  CartLinePrice,
-  CartLineProductTitle,
-  CartLineQuantity,
-  CartLineQuantityAdjustButton,
-  CartLines,
-  Image,
   useCart,
+  CartCheckoutButton,
+  Image,
+  CartLines,
+  CartLineImage,
+  CartLineProductTitle,
+  CartLineQuantityAdjustButton,
+  CartLinePrice,
+  CartLineQuantity,
+  CartEstimatedCost,
   useCartLine,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
@@ -22,8 +23,6 @@ import TruckIcon from '../../assets/TruckIcon.png';
 
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
-import {CheckoutButton} from "@cartpanda/hydrogen-checkout-button";
-import shopifyConfig from '../../../shopify.config';
 
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
@@ -339,8 +338,7 @@ function CartShelf() {
 }
 
 function CartFooter() {
-  const cart = useCart()
-  const {discountCodes, estimatedCost} = cart;
+  const {discountCodes, estimatedCost} = useCart();
 
   let subtotal = +estimatedCost.subtotalAmount.amount;
   let total = +estimatedCost.totalAmount.amount;
@@ -390,9 +388,9 @@ function CartFooter() {
           </div>
         </div>
       </div>
-      <CheckoutButton className={styles.cartCheckout} cart={cart} config={shopifyConfig}>
-        FINALIZAR COMPRA (CartPanda)
-      </CheckoutButton>
+      <CartCheckoutButton className={styles.cartCheckout}>
+        FINALIZAR COMPRA
+      </CartCheckoutButton>
     </footer>
   );
 }
