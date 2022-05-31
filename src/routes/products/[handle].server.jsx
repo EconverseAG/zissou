@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import {Suspense, lazy} from 'react';
 import {useShopQuery, Seo, useRouteParams, CacheDays} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
@@ -53,42 +52,29 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     coralHybrid,
     base;
 
-  switch (handle) {
-    case 'travesseiro-zissou':
-      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
-      travesseiroWashableCustom = useProductQueryById(
-        idTravesseiroWashableCustom,
-      );
-      break;
-    case 'colchao-zissou-coral-original':
-      coralHybrid = useProductQueryById(idCoralHybrid);
-      base = useProductQueryById(idBase);
-      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
-      whiteLencol = useProductQueryById(idWhiteLencol);
-      break;
-    case 'colchao-zissou-blue':
-      base = useProductQueryById(idBase);
-      travesseiroWashable = useProductQueryById(idTravesseiroWashable);
-      whiteLencol = useProductQueryById(idWhiteLencol);
-      break;
-    case 'duvet-zissou':
-      grayDuvetCover = useProductQueryById(idGrayDuvetCover);
-      whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
-      break;
-    case 'jogo-de-lencol-zissou':
-      grayLencol = useProductQueryById(idGrayLencol);
-      whiteLencol = useProductQueryById(idWhiteLencol);
-      grayDuvetCover = useProductQueryById(idGrayDuvetCover);
-      whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
-      break;
-  }
+  travesseiroWashable = useProductQueryById(idTravesseiroWashable);
+  travesseiroWashableCustom = useProductQueryById(idTravesseiroWashableCustom);
+  coralHybrid = useProductQueryById(idCoralHybrid);
+  base = useProductQueryById(idBase);
+  whiteLencol = useProductQueryById(idWhiteLencol);
+  grayDuvetCover = useProductQueryById(idGrayDuvetCover);
+  whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
+  grayLencol = useProductQueryById(idGrayLencol);
+  whiteLencol = useProductQueryById(idWhiteLencol);
 
   if (!baseProduct) {
     return <NotFound />;
   }
 
   return (
-    <Layout>
+    <Layout
+      travesseiroWashable={travesseiroWashable?.data.product}
+      grayDuvetCover={grayDuvetCover?.data.product}
+      whiteDuvetCover={whiteDuvetCover?.data.product}
+      grayLencol={grayLencol?.data.product}
+      whiteLencol={whiteLencol?.data.product}
+      base={base?.data.product}
+    >
       <Seo type="product" data={baseProduct.data.product} />
       <Suspense fallback={<ZissouLoading />}>
         <ProductDetails

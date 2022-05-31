@@ -10,6 +10,7 @@ import {
   Image,
   useCart,
   useCartLine,
+  AddToCartButton,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
@@ -23,41 +24,30 @@ import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
 import {CheckoutButton} from '@cartpanda/hydrogen-checkout-button';
 import shopifyConfig from '../../../shopify.config';
+import TotalMinicartPrices from '../../helpers/handleMinicartPrice';
 
-export default function Cart() {
+import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
+import LencolBranco from '../../assets/lencol_zissou.png';
+import LencolCinza from '../../assets/lencol_cinza.png';
+import DuvetBranco from '../../assets/duvet_branco.png';
+import DuvetCinza from '../../assets/duvet_cinza.png';
+import BaseZissou from '../../assets/base_zissou.png';
+
+export default function Cart({
+  base,
+  whiteLencol,
+  grayLencol,
+  whiteDuvetCover,
+  grayDuvetCover,
+  travesseiroWashable,
+}) {
   const {isCartOpen, closeCart} = useCartUI();
   const {totalQuantity, lines} = useCart();
 
   const [totalLine, setTotalLine] = useState();
 
   useEffect(() => {
-    let totalMinicartPrices = lines.map((product) => {
-      let discounts = [
-        'EntregaFutura10OFF',
-        'EntregaFutura5OFF',
-        'DateCustom5OFF',
-        'DateCustom10OFF',
-      ];
-
-      let hasDiscount = product.attributes.find((attr) =>
-        discounts.includes(attr.key),
-      );
-
-      let price = +product.merchandise.priceV2.amount;
-
-      if (!hasDiscount) return price;
-
-      let discount =
-        discounts
-          .find((discount) => hasDiscount.key === discount)
-          .replace(/\D/g, '') / 100;
-
-      let totalPrice = price - price * discount;
-
-      return totalPrice;
-    });
-
-    setTotalLine(totalMinicartPrices.reduce((a, b) => a + b, 0));
+    setTotalLine(TotalMinicartPrices(lines));
   }, [lines]);
 
   return (
@@ -70,7 +60,15 @@ export default function Cart() {
           ) : (
             <>
               <CartHeader />
-              <CartItems />
+              <CartItems
+                totalLine={totalLine}
+                base={base}
+                whiteLencol={whiteLencol}
+                grayLencol={grayLencol}
+                whiteDuvetCover={whiteDuvetCover}
+                grayDuvetCover={grayDuvetCover}
+                travesseiroWashable={travesseiroWashable}
+              />
               <CartFooter totalLine={totalLine} />
             </>
           )}
@@ -92,13 +90,27 @@ function CartHeader() {
   );
 }
 
-function CartItems() {
+function CartItems({
+  base,
+  whiteLencol,
+  grayLencol,
+  whiteDuvetCover,
+  grayDuvetCover,
+  travesseiroWashable,
+}) {
   return (
     <div className={styles.cartItems}>
       <CartLines>
         <LineInCart />
       </CartLines>
-      <CartShelf />
+      <CartShelf
+        base={base}
+        whiteLencol={whiteLencol}
+        grayLencol={grayLencol}
+        whiteDuvetCover={whiteDuvetCover}
+        grayDuvetCover={grayDuvetCover}
+        travesseiroWashable={travesseiroWashable}
+      />
     </div>
   );
 }
@@ -111,6 +123,9 @@ function LineInCart() {
   const date = new Date();
   const plus1Month = new Date(date.setMonth(date.getMonth() + 1));
   const plus2Months = new Date(date.setMonth(date.getMonth() + 2));
+
+  const cart = useCartLine();
+  const productPriceInfo = TotalMinicartPrices([cart]);
 
   useEffect(() => {
     if (attributes.length) {
@@ -250,37 +265,21 @@ function LineInCart() {
       </div>
       <div className={styles.cartItemBottom}>
         <CartItemQuantity />
-        {dateEncomenda.includes('EntregaFutura5OFF') ||
-        dateEncomendaKey.includes('DateCustom5OFF') ? (
-          <div className={styles.PriceCartLine}>
-            <CartLinePrice className={styles.OldPrice} />
-            <span className={styles.cartItemBottomPrice}>
-              {new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(
-                merchandise.priceV2.amount - merchandise.priceV2.amount * 0.05,
-              )}
-            </span>
-          </div>
-        ) : dateEncomenda.includes('EntregaFutura10OFF') ||
-          dateEncomendaKey.includes('DateCustom10OFF') ? (
-          <div className={styles.PriceCartLine}>
-            <CartLinePrice className={styles.OldPrice} />
-            <span className={styles.cartItemBottomPrice}>
-              {new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(
-                merchandise.priceV2.amount - merchandise.priceV2.amount * 0.1,
-              )}
-            </span>
-          </div>
-        ) : (
-          <div className={styles.PriceCartLine}>
+        <div className={styles.PriceCartLine}>
+          {productPriceInfo[0].hasDiscount || dateEncomendaKey ? (
+            <>
+              <CartLinePrice className={styles.OldPrice} />
+              <span className={styles.cartItemBottomPrice}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
+                }).format(productPriceInfo[0].price)}
+              </span>
+            </>
+          ) : (
             <CartLinePrice className={styles.cartItemBottomPrice} />
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
@@ -309,7 +308,14 @@ function CartItemQuantity() {
   );
 }
 
-function CartShelf() {
+function CartShelf({
+  base,
+  whiteLencol,
+  grayLencol,
+  whiteDuvetCover,
+  grayDuvetCover,
+  travesseiroWashable,
+}) {
   const settings = {
     dots: false,
     infinite: false,
@@ -317,6 +323,55 @@ function CartShelf() {
     slidesToScroll: 1,
     arrows: true,
   };
+
+  const [showBase, setShowBase] = useState(false);
+  const {lines} = useCart();
+
+  const [baseFiltered, setBaseFiltered] = useState();
+  const [whiteLencolFiltered, setWhiteLencolFiltered] = useState();
+  const [grayLencolFiltered, setGrayLencolFiltered] = useState();
+  const [whiteDuvetCoverFiltered, setWhiteDuvetCoverFiltered] = useState();
+  const [grayDuvetCoverFiltered, setGrayDuvetCoverFiltered] = useState();
+  const [travesseiroWashableFiltered, setTravesseiroWashableFiltered] =
+    useState();
+
+  useEffect(() => {
+    lines.map((item) => {
+      let itemOption = item.merchandise.selectedOptions[0].value;
+
+      if (itemOption.includes('Solteiro Especial')) {
+        setBaseFiltered(
+          base.variants.edges.filter((item) => {
+            return item.node.title.includes(itemOption.split(' (')[0]);
+          })[1],
+        );
+
+        setWhiteLencolFiltered(
+          whiteLencol.variants.edges.filter((item) => {
+            return item.node.title.includes(itemOption.split(' (')[0]);
+          })[1],
+        );
+      } else {
+        setBaseFiltered(
+          base.variants.edges.filter((item) => {
+            return item.node.title.includes(itemOption.split(' (')[0]);
+          })[0],
+        );
+
+        setWhiteLencolFiltered(
+          whiteLencol.variants.edges.filter((item) => {
+            return item.node.title.includes(itemOption.split(' (')[0]);
+          })[0],
+        );
+      }
+
+      if (item.merchandise.product.title.includes('Colchão')) {
+        setShowBase(true);
+      }
+    });
+  }, [base, lines, whiteLencol]);
+
+  console.log('>>> whiteLencolFiltered', whiteLencolFiltered);
 
   return (
     <div className={styles.cartShelfContainer}>
@@ -329,58 +384,48 @@ function CartShelf() {
       </span>
       <div className={styles.cartShelfSlider}>
         <Slider {...settings}>
+          {showBase && (
+            <div className={styles.slideItem}>
+              <span>Base</span>
+              <Image src={BaseZissou} width="45" height="30" />
+              <AddToCartButton variantId={baseFiltered.node.id}>
+                Adicionar
+              </AddToCartButton>
+            </div>
+          )}
           <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
+            <span>Travesseiro Lavável</span>
+            <Image src={TravesseiroLavavel} width="45" height="30" />
+            <AddToCartButton variantId="Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjgwMTQ5OTc5OTgwMQ==">
+              Adicionar
+            </AddToCartButton>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Travesseiro</span>
+            <Image src={TravesseiroLavavel} width="45" height="30" />
             <button>Adicionar</button>
           </div>
           <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
+            <span>Lençol Branco</span>
+            <Image src={LencolBranco} width="45" height="30" />
+            <AddToCartButton variantId={whiteLencolFiltered?.node.id}>
+              Adicionar
+            </AddToCartButton>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Lençol Cinza</span>
+            <Image src={LencolCinza} width="45" height="30" />
             <button>Adicionar</button>
           </div>
           <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
+            <span>Duvet Branco</span>
+            <Image src={DuvetBranco} width="45" height="30" />
             <button>Adicionar</button>
           </div>
           <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
-            <button>Adicionar</button>
-          </div>
-          <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
-            <button>Adicionar</button>
-          </div>
-          <div className={styles.slideItem}>
-            <span>Lençol Zissou</span>
-            <Image
-              src="https://cdn.shopify.com/s/files/1/1526/6199/products/FOTO1-HD_copy.jpg?v=1569801700"
-              width="45"
-              height="30"
-            />
+            <span>Duvet Cinza</span>
+            <Image src={DuvetCinza} width="45" height="30" />
+            {/* <ZissouAddToCart text={'Adicionar'} /> */}
             <button>Adicionar</button>
           </div>
         </Slider>
@@ -393,7 +438,11 @@ function CartFooter({totalLine}) {
   const cart = useCart();
   const {estimatedCost} = cart;
 
-  let totalCart = +estimatedCost.totalAmount.amount;
+  const totalCart = +estimatedCost.totalAmount.amount;
+
+  let TOTAL_LINE = Array.isArray(totalLine) ? totalLine : [totalLine];
+
+  const totalLinePrice = TOTAL_LINE.reduce((a, b) => a + b.price, 0);
 
   return (
     <footer className={styles.cartFooter}>
@@ -403,7 +452,8 @@ function CartFooter({totalLine}) {
           <strong
             className={styles.cartSubtotalPrice}
             style={{
-              textDecoration: totalCart > totalLine ? 'line-through' : 'none',
+              textDecoration:
+                totalCart > totalLinePrice ? 'line-through' : 'none',
             }}
           >
             {new Intl.NumberFormat('pt-BR', {
@@ -412,7 +462,7 @@ function CartFooter({totalLine}) {
             }).format(totalCart)}
           </strong>
         </div>
-        {totalCart > totalLine ? (
+        {totalCart > totalLinePrice ? (
           <div className={styles.cartDiscount}>
             <span className={styles.cartDiscountTitle}>
               <Label />
@@ -422,7 +472,7 @@ function CartFooter({totalLine}) {
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(totalCart - totalLine)}
+              }).format(totalCart - totalLinePrice)}
             </span>
           </div>
         ) : null}
@@ -433,7 +483,7 @@ function CartFooter({totalLine}) {
               {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
-              }).format(totalLine)}
+              }).format(totalLinePrice)}
             </div>
             <span className={styles.cartTotalDiscount}>
               EM ATÉ 10X SEM JUROS
@@ -444,7 +494,7 @@ function CartFooter({totalLine}) {
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL',
-                }).format(totalLine * 0.95)}{' '}
+                }).format(totalLinePrice * 0.95)}{' '}
               </strong>
               À VISTA
             </span>
