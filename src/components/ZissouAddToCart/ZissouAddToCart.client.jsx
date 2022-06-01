@@ -66,7 +66,7 @@ function ZissouAddToCart({
     if (customBag) {
       lines[0].attributes = [
         {
-          key: 'Customização',
+          key: 'Personalização',
           value: customBagText,
         },
       ];

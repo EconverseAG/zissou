@@ -146,7 +146,7 @@ function LineInCart() {
       }
 
       const attributeCustomFiltered = attributes.filter((attribute) => {
-        return attribute.key === 'Customização';
+        return attribute.key === 'Personalização';
       });
 
       if (attributeCustomFiltered.length > 0) {
@@ -323,7 +323,6 @@ function CartShelf({
     slidesToScroll: 1,
     arrows: true,
   };
-
   const [showBase, setShowBase] = useState(false);
   const {lines} = useCart();
 
@@ -338,40 +337,99 @@ function CartShelf({
   useEffect(() => {
     lines.map((item) => {
       let itemOption = item.merchandise.selectedOptions[0].value;
-
-      if (itemOption.includes('Solteiro Especial')) {
+      if (itemOption.includes('King') && !itemOption.includes('King BR')) {
         setBaseFiltered(
           base.variants.edges.filter((item) => {
-            return item.node.title.includes(itemOption.split(' (')[0]);
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
           })[1],
         );
 
         setWhiteLencolFiltered(
           whiteLencol.variants.edges.filter((item) => {
-            return item.node.title.includes(itemOption.split(' (')[0]);
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
+          })[1],
+        );
+
+        setGrayLencolFiltered(
+          grayLencol.variants.edges.filter((item) => {
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
           })[1],
         );
       } else {
         setBaseFiltered(
           base.variants.edges.filter((item) => {
-            return item.node.title.includes(itemOption.split(' (')[0]);
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
           })[0],
         );
 
         setWhiteLencolFiltered(
           whiteLencol.variants.edges.filter((item) => {
-            return item.node.title.includes(itemOption.split(' (')[0]);
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
+          })[0],
+        );
+
+        setGrayLencolFiltered(
+          grayLencol.variants.edges.filter((item) => {
+            return item.node.title
+              .toLowerCase()
+              .includes(itemOption.split(' (')[0].toLowerCase());
           })[0],
         );
       }
+
+      setWhiteDuvetCoverFiltered(
+        whiteDuvetCover.variants.edges.filter((item) => {
+          return item.node.title
+            .toLowerCase()
+            .includes(itemOption.split(' (')[0].toLowerCase());
+        })[0],
+      );
+
+      setGrayDuvetCoverFiltered(
+        grayDuvetCover.variants.edges.filter((item) => {
+          return item.node.title
+            .toLowerCase()
+            .includes(itemOption.split(' (')[0].toLowerCase());
+        })[0],
+      );
+
+      setTravesseiroWashableFiltered(
+        travesseiroWashable.variants.edges.filter((item) => {
+          return item.node.title
+            .toLowerCase()
+            .includes(itemOption.split(' (')[0].toLowerCase());
+        })[0],
+      );
 
       if (item.merchandise.product.title.includes('Colchão')) {
         setShowBase(true);
       }
     });
-  }, [base, lines, whiteLencol]);
+  }, [
+    base,
+    grayDuvetCover,
+    grayLencol,
+    lines,
+    travesseiroWashable,
+    whiteDuvetCover,
+    whiteLencol,
+  ]);
 
-  console.log('>>> whiteLencolFiltered', whiteLencolFiltered);
+  // função que recebe o ref do click e remove o item do slider
+  const removeItem = (e) => {
+    const item = e.currentTarget.parentNode.parentNode.parentNode;
+    item.remove();
+  };
 
   return (
     <div className={styles.cartShelfContainer}>
@@ -387,46 +445,80 @@ function CartShelf({
           {showBase && (
             <div className={styles.slideItem}>
               <span>Base</span>
-              <Image src={BaseZissou} width="45" height="30" />
-              <AddToCartButton variantId={baseFiltered.node.id}>
+              <Image src={BaseZissou} width="60" height="40" />
+              <AddToCartButton
+                variantId={baseFiltered?.node.id}
+                onClickCapture={removeItem}
+              >
                 Adicionar
               </AddToCartButton>
             </div>
           )}
           <div className={styles.slideItem}>
             <span>Travesseiro Lavável</span>
-            <Image src={TravesseiroLavavel} width="45" height="30" />
-            <AddToCartButton variantId="Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjgwMTQ5OTc5OTgwMQ==">
+            <Image src={TravesseiroLavavel} width="75" height="24" />
+            <AddToCartButton
+              variantId={
+                travesseiroWashableFiltered?.node.id ||
+                travesseiroWashable.variants.edges[0].node.id
+              }
+              onClickCapture={removeItem}
+            >
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Travesseiro</span>
-            <Image src={TravesseiroLavavel} width="45" height="30" />
-            <button>Adicionar</button>
+            <Image src={TravesseiroLavavel} width="75" height="24" />
+            <AddToCartButton
+              variantId={
+                travesseiroWashableFiltered?.node.id ||
+                travesseiroWashable.variants.edges[0].node.id
+              }
+              onClickCapture={removeItem}
+            >
+              Adicionar
+            </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Lençol Branco</span>
-            <Image src={LencolBranco} width="45" height="30" />
-            <AddToCartButton variantId={whiteLencolFiltered?.node.id}>
+            <Image src={LencolBranco} width="60" height="45" />
+            <AddToCartButton
+              variantId={whiteLencolFiltered?.node.id}
+              onClickCapture={removeItem}
+            >
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Lençol Cinza</span>
             <Image src={LencolCinza} width="45" height="30" />
-            <button>Adicionar</button>
+            <AddToCartButton
+              variantId={grayLencolFiltered?.node.id}
+              onClickCapture={removeItem}
+            >
+              Adicionar
+            </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Branco</span>
-            <Image src={DuvetBranco} width="45" height="30" />
-            <button>Adicionar</button>
+            <Image src={DuvetBranco} width="79" height="33" />
+            <AddToCartButton
+              variantId={whiteDuvetCoverFiltered?.node.id}
+              onClickCapture={removeItem}
+            >
+              Adicionar
+            </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Cinza</span>
-            <Image src={DuvetCinza} width="45" height="30" />
-            {/* <ZissouAddToCart text={'Adicionar'} /> */}
-            <button>Adicionar</button>
+            <Image src={DuvetCinza} width="79" height="33" />
+            <AddToCartButton
+              variantId={grayDuvetCoverFiltered?.node.id}
+              onClickCapture={removeItem}
+            >
+              Adicionar
+            </AddToCartButton>
           </div>
         </Slider>
       </div>
