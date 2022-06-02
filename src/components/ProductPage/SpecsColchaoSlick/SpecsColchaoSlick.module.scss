@@ -114,6 +114,12 @@
           flex-direction: column;
           padding-top: 0px;
         }
+
+        .SpecsColchaoSlickSecondSliderBackgroundSuporteRight {
+          @media only screen and (max-width: 1440px) {
+            margin-left: auto;
+          }
+        }
       }
     }
 
@@ -518,8 +524,8 @@
 
         .seta {
           position: absolute;
-          left: 85%;
-          bottom: -30px;
+          left: 82%;
+          bottom: 10px;
 
           @media only screen and (max-width: 1200px) {
             left: 70%;
@@ -641,7 +647,7 @@
         .seta {
           position: absolute;
           right: 80%;
-          bottom: 0px;
+          bottom: -30px;
           transform: scaleX(-1);
 
           @media only screen and (max-width: 1200px) {

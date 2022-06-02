@@ -52,7 +52,7 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
     () => ({
       dots: false,
       arrows: false,
-      infinite: false,
+      infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: navRef,

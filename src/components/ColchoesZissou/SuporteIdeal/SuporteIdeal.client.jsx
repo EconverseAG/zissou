@@ -3,6 +3,8 @@ import * as styles from './SuporteIdeal.module.scss';
 
 import Espuma from '../../../assets/espuma.png';
 import Mola from '../../../assets/mola.png';
+import EspumaMobile from '../../../assets/espuma_mobile.png';
+import MolaMobile from '../../../assets/mola_mobile.png';
 import useMobile from '../../../hooks/useMobile';
 
 export default function SuporteIdeal() {
@@ -44,7 +46,15 @@ export default function SuporteIdeal() {
           >
             ESTABILIDADE E <br /> SUPORTE UNIFORME
           </strong>
-          <Image src={Espuma} width="493" height="329" />
+          <Image
+            src={isMobile ? EspumaMobile : Espuma}
+            width={isMobile ? 170 : 493}
+            height={isMobile ? 115 : 329}
+            style={{
+              marginTop: isMobile ? 'auto' : '',
+              marginRight: isMobile ? 'auto' : '',
+            }}
+          />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
             Espuma de poliuretano de alta {!isMobile && <br />} densidade para
             distribuição
@@ -60,7 +70,12 @@ export default function SuporteIdeal() {
           <strong className={styles.SuporteIdealBottomContentTitle}>
             BOUNCE COM <br /> ADAPTAÇÃO AO CORPO
           </strong>
-          <Image src={Mola} width="490" height="327" />
+          <Image
+            src={isMobile ? MolaMobile : Mola}
+            width={isMobile ? 154 : 490}
+            height={isMobile ? 169 : 327}
+            style={{marginLeft: isMobile ? 'auto' : ''}}
+          />
           <span className={styles.SuporteIdealBottomContentSubtitle}>
             Sistema híbrido com molas {!isMobile && <br />} para maior
             adaptabilidade aos {!isMobile && <br />} movimentos

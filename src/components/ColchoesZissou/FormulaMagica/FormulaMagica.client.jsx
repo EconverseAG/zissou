@@ -2,6 +2,8 @@ import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './FormulaMagica.module.scss';
 
+import VideoBastidores from '../../../assets/video_bastidores.mp4';
+
 export default function FormulaMagica() {
   const {isMobile} = useMobile();
 
@@ -17,27 +19,16 @@ export default function FormulaMagica() {
         as melhores tecnologias do mercado
       </span>
       <div className={styles.FormulaMagicaImage}>
-        {isMobile ? (
-          <iframe
-            width="299"
-            height="169"
-            src="https://www.youtube.com/embed/hMInNaBSUig"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        ) : (
-          <iframe
-            width="734"
-            height="415"
-            src="https://www.youtube.com/embed/hMInNaBSUig"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        )}
+        <video
+          className={styles.video}
+          src={VideoBastidores}
+          controls
+          autoPlay
+          loop
+          muted
+          width={isMobile ? 299 : 734}
+          height={isMobile ? 169 : 415}
+        />
       </div>
     </div>
   );

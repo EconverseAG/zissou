@@ -8,7 +8,7 @@ export default function BannerProductPage({src}) {
   return (
     <div className={styles.BannerProductPageContainer}>
       <strong className={styles.BannerProductPageTitle}>
-        {title.split(' +')[0] || title}
+        {title.split(' +')[0].split('Original')[0] || title}
       </strong>
       <Image
         src={src}

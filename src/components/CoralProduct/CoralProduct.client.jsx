@@ -45,9 +45,7 @@ function CoralProduct() {
       <ProductSectionRight>
         <ZissouProductOptions
           className={styles.Options}
-          title={
-            isMobile ? 'SELECIONE O TAMANHO' : 'QUAL O TAMANHO DO MEU COLCHÃO?'
-          }
+          title={'QUAL O TAMANHO DO MEU COLCHÃO?'}
           icons
           uppercaseTitle
         />

@@ -13,6 +13,12 @@ import KingIcon from '../../assets/king.png';
 import KingBrIcon from '../../assets/king-br.png';
 import QueenIcon from '../../assets/queen.png';
 
+import SolteiroIconBlue from '../../assets/solteiro-blue.png';
+import CasalIconBlue from '../../assets/casal-blue.png';
+import KingIconBlue from '../../assets/king-blue.png';
+import KingBrIconBlue from '../../assets/king-br-blue.png';
+import QueenIconBlue from '../../assets/queen-blue.png';
+
 import * as styles from './ZissouProductOptions.module.scss';
 import useOutsideClick from '../../hooks/useOutsideClick';
 
@@ -52,24 +58,24 @@ function ZissouProductOptions({
       let height = 40;
 
       if (option.includes('Solteiro')) {
-        icon = SolteiroIcon;
+        icon = isColchao && !isCoral ? SolteiroIconBlue : SolteiroIcon;
         width = 17;
       } else if (option.includes('Solteiro Especial')) {
-        icon = SolteiroEspecialIcon;
+        icon = isColchao && !isCoral ? SolteiroIconBlue : SolteiroEspecialIcon;
         width = 17;
       } else if (option.includes('Casal')) {
-        icon = CasalIcon;
+        icon = isColchao && !isCoral ? CasalIconBlue : CasalIcon;
         width = 35;
       } else if (option.includes('King')) {
-        icon = KingIcon;
+        icon = isColchao && !isCoral ? KingIconBlue : KingIcon;
         width = 39;
         height = 46;
       } else if (option.includes('King Br')) {
-        icon = KingBrIcon;
+        icon = isColchao && !isCoral ? KingBrIconBlue : KingBrIcon;
         width = 39;
         height = 46;
       } else if (option.includes('Queen')) {
-        icon = QueenIcon;
+        icon = isColchao && !isCoral ? QueenIconBlue : QueenIcon;
         width = 37;
         height = 46;
       }
@@ -82,7 +88,7 @@ function ZissouProductOptions({
         </div>
       );
     },
-    [icons],
+    [icons, isColchao, isCoral],
   );
 
   const renderFormattedName = useCallback((name) => {

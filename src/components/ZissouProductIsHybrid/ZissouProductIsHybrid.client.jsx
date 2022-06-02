@@ -20,6 +20,7 @@ export default function ZissouProductIsHybrid() {
         style={{
           borderRadius: coralIsHybrid ? '33px 33px 0px 0px' : '33px',
           height: isMobile && coralIsHybrid ? '70px' : null,
+          opacity: coralIsHybrid ? 1 : 0.5,
         }}
       >
         <div className={styles.container}>
