@@ -4,7 +4,7 @@ import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';
-import BolaRoxa from '../../../assets/bola-roxa.png';
+import EmBreve from '../../../assets/em-breve.png';
 
 export default function ExperienciaZissouDesktop() {
   return (
@@ -55,7 +55,7 @@ export default function ExperienciaZissouDesktop() {
             </Link>
           </div>
           <div className={styles.ExperienciaZissouLeftStore}>
-            <Image src={BolaRoxa} width="230" height="230" />
+            <Image src={EmBreve} width="230" height="230" />
             <span className={styles.ExperienciaZissouRightStoreTitle}>
               Zissou <br /> Gabriel
             </span>
@@ -63,7 +63,7 @@ export default function ExperienciaZissouDesktop() {
               Al. Gabriel Monteiro da Silva, 1325 <br /> Jardim Paulistano - SP{' '}
               <br /> Cep 01442-001
             </p>
-            <Link
+            {/* <Link
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
@@ -74,7 +74,7 @@ export default function ExperienciaZissouDesktop() {
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ export default function ExperienciaZissouDesktop() {
         <span className={styles.ExperienciaZissouRightTitle}>Campinas</span>
         <div className={styles.ExperienciaZissouRightStores}>
           <div className={styles.ExperienciaZissouRightStore}>
-            <Image src={BolaRoxa} width="230" height="230" />
+            <Image src={EmBreve} width="230" height="230" />
             <span className={styles.ExperienciaZissouRightStoreTitle}>
               Zissou <br /> Cambuí
             </span>
@@ -90,7 +90,7 @@ export default function ExperienciaZissouDesktop() {
               Rua Dr Sampaio Ferraz, 549 <br /> Cambuí, Campinas - SP <br /> Cep
               13024-431
             </p>
-            <Link
+            {/* <Link
               to="/"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
@@ -101,7 +101,7 @@ export default function ExperienciaZissouDesktop() {
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@
           width: 80%;
           margin-bottom: 28px;
 
-          > img {
+          >img {
             &:last-child {
               margin-left: 27px;
             }
@@ -132,8 +132,61 @@
 
       @media only screen and (max-width: 1023px) {
         justify-content: flex-start;
-        width: 100%;
+        width: 100vw;
         overflow: scroll;
+      }
+
+      .legendaContainer {
+        position: relative;
+
+        .legenda {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 0px 0px 33px 33px;
+          background: #779abf;
+          font-family: ZonaProBold;
+          font-weight: normal;
+          font-size: 12px;
+          letter-spacing: 0.08em;
+          line-height: 16px;
+          text-align: center;
+          color: #fff;
+          opacity: 0.9;
+          padding: 16.5px 0 12.5px;
+          text-transform: uppercase;
+
+          @media only screen and (max-width: 1023px) {
+            border-radius: 0 0 24px 24px;
+          }
+        }
+
+        >img {
+          @media only screen and (max-width: 1023px) {
+            max-width: unset;
+          }
+        }
+      }
+
+      .HospitalidadeFotosEmGrade {
+        display: flex;
+
+        .FlexItem {
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+          margin: 0 17px;
+
+          @media only screen and (max-width: 1023px) {
+            gap: 12px;
+            margin: 0 12px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
       }
 
       .HospitalidadeFotosPequenas {

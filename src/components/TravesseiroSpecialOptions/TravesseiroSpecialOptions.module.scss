@@ -4,8 +4,8 @@
   width: 100%;
   max-width: 529px;
   font-family: ZonaPro;
-  
-  > span {
+
+  >span {
     display: block;
     color: #707070;
     font-size: 18px;
@@ -15,7 +15,7 @@
     font-weight: 600;
     text-transform: uppercase;
   }
-  
+
   .selection {
     width: 100%;
     color: #d4a8bf;
@@ -24,15 +24,15 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 17px;
-    
+
     &Option {
       display: flex;
       flex-direction: column;
-      
-      & + .selectionOption {
+
+      &+.selectionOption {
         border-top: 1px solid #d4a8bf;
       }
-      
+
       &Control {
         cursor: pointer;
         display: flex;
@@ -40,7 +40,7 @@
         padding: 16px 20px;
         text-transform: uppercase;
         transition: 0.3s;
-        
+
         &:hover {
           background: #d4a8bf40
         }
@@ -62,7 +62,7 @@
 
         }
 
-        input:checked + .selectionOptionControlCheckbox {
+        input:checked+.selectionOptionControlCheckbox {
           background: #d4a8bf;
 
           &::before {
@@ -87,6 +87,11 @@
           margin-left: 12px;
           cursor: pointer;
 
+          @media only screen and (max-width: 1023px) {
+            font-size: 12px;
+            line-height: 16px;
+          }
+
           strong {
             color: #245066;
           }
@@ -101,21 +106,20 @@
         text-align: center;
         color: #707070;
 
-        > img {
+        >img {
           margin-bottom: 20px;
         }
 
-        p, small {
-          max-width: 280px;  
+        p,
+        small {
+          max-width: 280px;
         }
       }
     }
   }
-  
+
   &.mobile {
-    width: 90%;
-    
-    > span {
+    >span {
       color: #245066;
       font-size: 11px;
       line-height: 14px;

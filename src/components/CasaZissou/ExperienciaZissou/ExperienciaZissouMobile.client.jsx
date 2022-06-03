@@ -6,7 +6,8 @@ import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';
-import BolaRoxa from '../../../assets/bola-roxa.png';
+// import BolaRoxa from '../../../assets/bola-roxa.png';
+import EmBreve from '../../../assets/em-breve.png';
 
 export default function ExperienciaZissouMobile() {
   const [leftCityActive, setLeftCityTab] = useState(true);
@@ -61,7 +62,7 @@ export default function ExperienciaZissouMobile() {
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to=""
+                  to="https://calendly.com/zissou-normandia/visita-agendada"
                 >
                   Agende aqui
                 </Link>
@@ -86,14 +87,14 @@ export default function ExperienciaZissouMobile() {
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to=""
+                  to="https://calendly.com/zissou-normandia/visita-agendada"
                 >
                   Agende aqui
                 </Link>
               </div>
             </div>
             <div className={styles.ExperienciaZissouStore}>
-              <Image src={BolaRoxa} width="96" height="96" />
+              <Image src={EmBreve} width="96" height="96" />
               <div className={styles.ExperienciaZissouStoreInfo}>
                 <span className={styles.ExperienciaZissouRightStoreTitle}>
                   Zissou <br /> Gabriel
@@ -104,7 +105,7 @@ export default function ExperienciaZissouMobile() {
                 </p>
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
-                <Link
+                {/* <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to=""
                 >
@@ -112,16 +113,16 @@ export default function ExperienciaZissouMobile() {
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to=""
+                  to="https://calendly.com/zissou-normandia/visita-agendada"
                 >
                   Agende aqui
-                </Link>
+                </Link> */}
               </div>
             </div>
           </>
         ) : (
           <div className={styles.ExperienciaZissouStore}>
-            <Image src={BolaRoxa} width="96" height="96" />
+            <Image src={EmBreve} width="96" height="96" />
             <div className={styles.ExperienciaZissouStoreInfo}>
               <span className={styles.ExperienciaZissouRightStoreTitle}>
                 Zissou <br /> Cambuí
@@ -132,7 +133,7 @@ export default function ExperienciaZissouMobile() {
               </p>
             </div>
             <div className={styles.ExperienciaZissouStoreLinks}>
-              <Link
+              {/* <Link
                 className={styles.ExperienciaZissouRightStoreHowToArrive}
                 to=""
               >
@@ -140,10 +141,10 @@ export default function ExperienciaZissouMobile() {
               </Link>
               <Link
                 className={styles.ExperienciaZissouRightStoreScheduleHere}
-                to=""
+                to="https://calendly.com/zissou-normandia/visita-agendada"
               >
                 Agende aqui
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}

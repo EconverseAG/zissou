@@ -39,7 +39,9 @@ export default function Shelf({variant, color, imageSrc}) {
         </div>
       </div>
       <div className={styles.ShelfBottom}>
-        <span className={styles.ShelfOldPrice}>De {oldPrice}</span>
+        <span className={styles.ShelfOldPrice}>
+          De <p>{oldPrice}</p>
+        </span>
         <span className={styles.ShelfPrice}>Por {formattedPrice}</span>
         <AddToCartButton
           className={styles.ShelfBuyButton}

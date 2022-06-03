@@ -121,6 +121,11 @@
       line-height: 30px;
       text-align: center;
       color: #6d6c6c;
+
+      p {
+        display: inline;
+        text-decoration: line-through;
+      }
     }
 
     .ShelfPrice {

@@ -292,7 +292,7 @@ export default function SpecsCoralSlick() {
             <div className={styles.SpecsColchaoSlickSecondSliderImage}>
               <Image
                 src={MulherDeitada}
-                width={isMobile ? 325 : 803}
+                width={isMobile ? 325 : 900}
                 height={isMobile ? 153 : 378}
                 loading={'lazy'}
               />

@@ -14,8 +14,8 @@ export default function LencolOrDuvet() {
       <div className={styles.LencolOrDuvetLeft}>
         <Image
           src={Lencol}
-          width={isMobile ? 260 : 539}
-          height={isMobile ? 193 : 400}
+          width={isMobile ? 260 : 400}
+          height={isMobile ? 193 : 297}
         />
         <Link to="/products/jogo-de-lencol-zissou" className={styles.LinkCTA}>
           Lençol Zissou
@@ -24,8 +24,8 @@ export default function LencolOrDuvet() {
       <div className={styles.LencolOrDuvetRight}>
         <Image
           src={Duvet}
-          width={isMobile ? 260 : 539}
-          height={isMobile ? 193 : 400}
+          width={isMobile ? 260 : 400}
+          height={isMobile ? 193 : 297}
         />
         <Link to="/products/duvet-zissou" className={styles.LinkCTA}>
           Duvet Zissou

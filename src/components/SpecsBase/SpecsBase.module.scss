@@ -36,7 +36,7 @@
         position: absolute;
         max-width: unset;
         width: 800px;
-        top: 100px;
+        top: -200px;
         right: unset;
         bottom: unset;
       }
@@ -63,7 +63,7 @@
           }
         }
         &[data-tab="1"] {
-          height: 500px;
+          height: 300px;
 
           p {
             position: relative;
@@ -174,7 +174,7 @@
       z-index: 1;
       width: 100%;
       max-width: 1440px;
-      min-height: 768px;
+      min-height: 668px;
       padding: 42px 16px;
       margin-inline: auto;
   
@@ -193,7 +193,7 @@
       &[data-tab="2"] {
         p {
           position: absolute;
-          bottom: 190px
+          bottom: 80px
         }
       }
       &[data-tab="3"] {

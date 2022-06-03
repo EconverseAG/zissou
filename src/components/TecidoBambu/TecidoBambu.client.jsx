@@ -21,8 +21,8 @@ export default function TecidoBambu() {
       <div className={styles.TecidoBambuRight}>
         <Image
           src={isMobile ? TecidoBambuImageMobile : TecidoBambuImage}
-          width={isMobile ? 392 : 1051}
-          height={isMobile ? 159 : 323}
+          width={isMobile ? 392 : 800}
+          height={isMobile ? 159 : 246}
         />
       </div>
     </div>

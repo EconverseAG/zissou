@@ -91,8 +91,8 @@ export default function SpecsBase() {
               <div className={styles.contentItemColsRight}>
                 <Image
                   src={ComparacaoBase}
-                  width={611}
-                  height={732}
+                  width={500}
+                  height={600}
                   className={styles.imageComparacaoBase}
                   loading={'lazy'}
                 />
@@ -120,8 +120,8 @@ export default function SpecsBase() {
               </div>
               <Image
                 src={SecondContentBackground}
-                width={1735}
-                height={1294}
+                width={1200}
+                height={1333}
                 className={styles.secondContentBackground}
                 loading={'lazy'}
               />
@@ -176,8 +176,8 @@ export default function SpecsBase() {
               />
               <Image
                 src={GifMontagem}
-                width={1037}
-                height={635}
+                width={850}
+                height={521}
                 className={styles.gifMontagem}
                 loading={'lazy'}
               />

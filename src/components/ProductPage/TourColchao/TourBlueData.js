@@ -1,7 +1,7 @@
 import CapaFundo from '../../../assets/capablue.png';
 import CamadaDeConfortoFundo from '../../../assets/camada_de_conforto_blue.png';
-import CamadaDeAconchegoFundo from '../../../assets/camada_de_aconhego.png';
-import OpcaoSistemaDeSuporteFundo from '../../../assets/opcao_sistema_de_suporte_fundo.png';
+import CamadaDeAconchegoFundo from '../../../assets/camada_de_aconchego_fundo.png';
+import OpcaoSistemaDeSuporteFundo from '../../../assets/sistema_de_suporte_blue.png';
 
 import BandeiraEUA from '../../../assets/eua_pdp.png';
 import BandeiraBelgica from '../../../assets/belgica_pdp.png';

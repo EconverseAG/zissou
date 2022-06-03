@@ -17,8 +17,8 @@ function WhatsAppBanner({className}) {
     >
       <Image
         src={Banner}
-        width={isMobile ? 284 : 500}
-        height={isMobile ? 101 : 155}
+        width={isMobile ? 284 : 400}
+        height={isMobile ? 101 : 141}
         loading={'lazy'}
       />
     </Link>
