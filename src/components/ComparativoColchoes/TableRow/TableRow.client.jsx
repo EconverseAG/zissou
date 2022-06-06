@@ -3,7 +3,7 @@ import useMobile from '../../../hooks/useMobile';
 import useTableGroup from '../../../hooks/useTableGroup';
 import * as styles from './TableRow.module.scss';
 
-function TableRow({heading, children, className, ...rest}) {
+function TableRow({heading, children, className, scrollbar, ...rest}) {
   const {isMobile} = useMobile();
   const {horizontalScroll, setHorizontalScroll} = useTableGroup();
 
@@ -32,7 +32,7 @@ function TableRow({heading, children, className, ...rest}) {
       <tr
         className={`${styles.tableRow} ${className || ''} ${
           isMobile ? styles.mobile : ''
-        }`}
+        } ${scrollbar ? styles.scroll : ''}`}
         onScroll={handleScroll}
         ref={rowRef}
         {...rest}

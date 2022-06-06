@@ -26,6 +26,7 @@
   }
 
   table {
+    display: block;
     width: 100%;
     border: 2px solid #F0F0F0;
     font-size: 18px;
@@ -40,6 +41,7 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       text-align: center;
+      overflow: auto;
 
       th {
         text-transform: uppercase;
@@ -58,6 +60,7 @@
         align-items: center;
         justify-content: center;
         padding: 32px;
+        min-width: 339px;
 
         &:nth-child(odd) {
           background: rgba(240, 240, 240, .4);
