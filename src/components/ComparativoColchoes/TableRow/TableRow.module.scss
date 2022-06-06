@@ -1,4 +1,32 @@
 .tableRow {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+    height: 6px;
+  }
+  
+  &.scroll {
+    -ms-overflow-style: initial;
+    scrollbar-width: initial;
+    
+    &::-webkit-scrollbar {
+      display: initial;
+      height: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(24, 50, 66);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+  }
+
   th {
     &.headingUnused {
       visibility: hidden;

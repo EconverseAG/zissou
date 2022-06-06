@@ -12,8 +12,28 @@
     transform: translateY(0);
   }
 
-  table tbody tr td {
-    padding-inline: 0;
+  table tbody tr {
+    -ms-overflow-style: initial;
+    scrollbar-width: initial;
+    
+    &::-webkit-scrollbar {
+      display: initial;
+      height: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(24, 50, 66);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+
+    td {
+      padding-inline: 0;
+    }
   }
 
   p {

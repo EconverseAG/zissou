@@ -30,7 +30,7 @@ function ProductTable({
       }`}
       {...rest}
     >
-      <TableRow>
+      <TableRow scrollbar>
         <td>
           <Image src={LogoSpark} width={113} height={37} alt="Spark" />
           <Image src={PhotoSpark} width={258} height={92} alt="Spark" />
