@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 136px 109px;
+  padding-block: 60px;
   font-family: ZonaPro;
   background: #F5F6F5;
 
@@ -28,8 +28,8 @@
     gap: 50px;
 
     p, span {
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 25px;
       letter-spacing: 0.05em;
       text-align: center;
       color: #707070;
@@ -51,7 +51,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 400px; 
+          height: 350px; 
         }
 
         &::before, &::after {
@@ -79,13 +79,13 @@
         }
 
         p {
-          font-size: 37px;
-          line-height: 47px;
+          font-size: 30px;
+          line-height: 40px;
           padding-inline: 86px;
         }
 
         span {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 32px;
           letter-spacing: 0.05em;
         }

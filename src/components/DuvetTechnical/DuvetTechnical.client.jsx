@@ -30,16 +30,6 @@ function DuvetTechnical() {
       <div className={styles.wrapperCenter}>
         <div className={styles.content}>
           <h2>Informações técnicas</h2>
-          {isMobile && (
-            <div className={styles.backgroundImageWrapper}>
-              <Image
-                src={DuvetTechnicalBackground}
-                width={741}
-                height={501}
-                loading={'lazy'}
-              />
-            </div>
-          )}
           <div className={styles.accordionWrapper}>
             <Accordion
               className={styles.accordion}
@@ -98,7 +88,11 @@ function DuvetTechnical() {
               <AccordionDetails
                 className={`${styles.accordionDetails} ${styles.grayBlue}`}
               >
-                <Image src={DuvetComposicao1} width={500} height={245} />
+                <Image
+                  src={DuvetComposicao1}
+                  width={isMobile ? 300 : 350}
+                  height={isMobile ? 147 : 172}
+                />
                 <p>
                   O tecido do Duvet Zissou é feito de polpa de bambu com um
                   toque muito macio semelhante à seda. Sua produção é feita de
@@ -108,7 +102,11 @@ function DuvetTechnical() {
                   através de amarrações internas evitando seu deslocamento e
                   garantindo todo o conforto para suas noites de sono.
                 </p>
-                <Image src={DuvetComposicao2} width={500} height={294} />
+                <Image
+                  src={DuvetComposicao2}
+                  width={isMobile ? 280 : 350}
+                  height={isMobile ? 165 : 206}
+                />
                 <p>
                   Já o Enchimento, a camada interna do Duvet, potencializa a
                   experiência complementando o aconchego ideal com um tecido
@@ -165,8 +163,8 @@ function DuvetTechnical() {
           <div className={styles.backgroundImageWrapper}>
             <Image
               src={DuvetTechnicalBackground}
-              width={539}
-              height={588}
+              width={550}
+              height={372}
               loading={'lazy'}
             />
           </div>

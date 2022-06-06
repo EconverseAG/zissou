@@ -3,11 +3,7 @@
   gap: 0 50px;
   color: #245066;
   background: #CADEE8;
-  padding-block: 150px;
-
-  > img {
-    width: 30%;
-  }
+  padding-block: 100px;
   
   &.mobile {
     min-height: 342px;
@@ -69,7 +65,7 @@
 
   .content {
     width: 100%;
-    max-width: 910px;
+    max-width: 950px;
     margin: 0 auto;
     align-items: center;
 
@@ -111,11 +107,11 @@
 
       &Details {
         padding-inline: 0;
-        font-size: 20px;
+        font-size: 16px;
         letter-spacing: 0.09em;
         font-weight: 400;
-        line-height: 29px;
-        padding-bottom: 100px;
+        line-height: 25px;
+        padding-bottom: 70px;
 
         h4 {
           font-family: ZonaProBold;
@@ -134,10 +130,10 @@
         &Grid {
           display: grid;
           grid-template-columns: 3fr 2fr;
-          font-size: 18px;
-          line-height: 23px;
+          font-size: 16px;
+          line-height: 21px;
           gap: 40px;
-          margin-bottom: 73px;
+          margin-bottom: 20px;
 
           h4 {
             line-height: 24px;
