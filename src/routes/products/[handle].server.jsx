@@ -18,6 +18,7 @@ const idGrayLencol = `gid://shopify/Product/7195869249730`; //7195869249730
 const idWhiteLencol = `gid://shopify/Product/2135741923401`; //2135741923401
 const idBase = `gid://shopify/Product/7145404399810`; //7145404399810
 const idCoralHybrid = `gid://shopify/Product/6587140604098`; //6587140604098
+const idSparkHybrid = `gid://shopify/Product/7406293352642`; //7406293352642
 
 export default function Product({country = {isoCode: 'US'}, response}) {
   const {handle} = useRouteParams();
@@ -50,11 +51,13 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     grayLencol,
     whiteLencol,
     coralHybrid,
+    sparkHybrid,
     base;
 
   travesseiroWashable = useProductQueryById(idTravesseiroWashable);
   travesseiroWashableCustom = useProductQueryById(idTravesseiroWashableCustom);
   coralHybrid = useProductQueryById(idCoralHybrid);
+  sparkHybrid = useProductQueryById(idSparkHybrid);
   base = useProductQueryById(idBase);
   whiteLencol = useProductQueryById(idWhiteLencol);
   grayDuvetCover = useProductQueryById(idGrayDuvetCover);
@@ -87,6 +90,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
           whiteLencol={whiteLencol?.data.product}
           base={base?.data.product}
           coralHybrid={coralHybrid?.data.product}
+          sparkHybrid={sparkHybrid?.data.product}
           product={baseProduct?.data.product}
         />
       </Suspense>

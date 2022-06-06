@@ -20,6 +20,7 @@ export default function ProductDetails({
   whiteLencol,
   base,
   coralHybrid,
+  sparkHybrid,
 }) {
   const {handle} = useRouteParams();
 
@@ -36,6 +37,9 @@ export default function ProductDetails({
         setIsColchao(true);
         break;
       case 'colchao-zissou-blue':
+        setIsColchao(true);
+        break;
+      case 'colchao-zissou-coral-hibrido-2':
         setIsColchao(true);
         break;
       case 'duvet-zissou':
@@ -69,6 +73,7 @@ export default function ProductDetails({
         whiteLencol={whiteLencol}
         base={base}
         coralHybrid={coralHybrid}
+        sparkHybrid={sparkHybrid}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}

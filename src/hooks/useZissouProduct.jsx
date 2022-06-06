@@ -15,6 +15,7 @@ function ZissouProductProvider({
   travesseiroWashableCustom,
   duvetFilling,
   coralHybrid,
+  sparkHybrid,
   grayLencol,
   whiteLencol,
   base,
@@ -35,6 +36,8 @@ function ZissouProductProvider({
   const [coralIsHybrid, setCoralIsHybrid] = useState(false);
   const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
+
+  const isSpark = useMemo(() => product?.title.includes('Spark'), [product]);
 
   useEffect(() => {
     let currentProduct = baseProduct;
@@ -61,7 +64,7 @@ function ZissouProductProvider({
       }
     } else if (isColchao) {
       if (coralIsHybrid) {
-        currentProduct = coralHybrid;
+        currentProduct = isSpark ? sparkHybrid : coralHybrid;
       }
     }
 
@@ -84,6 +87,8 @@ function ZissouProductProvider({
     selectedColor,
     coralHybrid,
     coralIsHybrid,
+    isSpark,
+    sparkHybrid,
   ]);
 
   const value = useMemo(
