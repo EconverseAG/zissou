@@ -26,7 +26,7 @@ function LencolTechnical() {
 
   return (
     <div className={`flex ${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
-      {!isMobile && <Image src={BackgroundImage} width="740" height="469" />}
+      {!isMobile && <Image src={BackgroundImage} width="500" height="323" />}
       <div className={`flex flex-col ${styles.content}`}>
         <h2>Informações técnicas</h2>
         <Accordion
