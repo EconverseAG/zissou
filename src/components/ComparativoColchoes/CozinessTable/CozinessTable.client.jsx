@@ -96,7 +96,7 @@ function CozinessTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Visco Cool</h3>
+            <h3>Visco Fresh</h3>
             <br />
             <p>
               • Absorve e redistribui o peso
@@ -107,7 +107,7 @@ function CozinessTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Visco Cool</h3>
+            <h3>Visco Fresh</h3>
             <br />
             <p>
               • Absorve e redistribui o peso
@@ -118,7 +118,7 @@ function CozinessTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Visco Cool</h3>
+            <h3>Visco Fresh</h3>
             <br />
             <p>
               • Absorve e redistribui o peso
