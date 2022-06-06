@@ -3,16 +3,19 @@ import {Image} from '@shopify/hydrogen';
 import Table from '../Table';
 import TableRow from '../TableRow';
 
+import TextureSpark from '../../../assets/textura-spark.png';
 import TextureBlue from '../../../assets/textura-blue.png';
 import TextureCoral from '../../../assets/textura-coral.png';
 import TextureCoralHybrid from '../../../assets/textura-coral-hibrido.png';
 
+import TextureSparkMobile from '../../../assets/textura-spark-mobile.png';
 import TextureBlueMobile from '../../../assets/textura-blue-mobile.png';
 import TextureCoralMobile from '../../../assets/textura-coral-mobile.png';
 import TextureCoralHybridMobile from '../../../assets/textura-coral-hibrido-mobile.png';
 
 import IconFrescor from '../../../assets/icon-frescor.svg';
 import useMobile from '../../../hooks/useMobile';
+import TableCheck from '../TableCheck';
 
 function SensationTable({...rest}) {
   const {isMobile} = useMobile();
@@ -20,11 +23,27 @@ function SensationTable({...rest}) {
   return (
     <Table heading="Toque e sensação térmica" {...rest}>
       <TableRow heading="Toque">
+        <td>Aveludado</td>
+        <td>Aveludado</td>
         <td>Suave e macio</td>
         <td>Suave e macio</td>
         <td>Plush e acetinado</td>
       </TableRow>
       <TableRow heading="Textura do tecido">
+        <td>
+          <Image
+            src={isMobile ? TextureSparkMobile : TextureSpark}
+            width={isMobile ? 123 : 267}
+            height={isMobile ? 79 : 172}
+          />
+        </td>
+        <td>
+          <Image
+            src={isMobile ? TextureSparkMobile : TextureSpark}
+            width={isMobile ? 123 : 267}
+            height={isMobile ? 79 : 172}
+          />
+        </td>
         <td>
           <Image
             src={isMobile ? TextureCoralMobile : TextureCoral}
@@ -48,6 +67,12 @@ function SensationTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Frescor">
+        <td>
+          <TableCheck />
+        </td>
+        <td>
+          <TableCheck />
+        </td>
         <td>
           <Image
             src={IconFrescor}
@@ -81,6 +106,32 @@ function SensationTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Características do tecido">
+        <td>
+          <div>
+            <h3>Velvet & Balanced</h3>
+            <br />
+            <p>
+              • Tecido de origem americana
+              <br />
+              • Combina fibras de alta gramatura com toque de elastano
+              <br />• Construção de trama especial, que proporciona toque
+              aveludado com leve elasticidade
+            </p>
+          </div>
+        </td>
+        <td>
+          <div>
+            <h3>Velvet & Balanced</h3>
+            <br />
+            <p>
+              • Tecido de origem americana
+              <br />
+              • Combina fibras de alta gramatura com toque de elastano
+              <br />• Construção de trama especial, que proporciona toque
+              aveludado com leve elasticidade
+            </p>
+          </div>
+        </td>
         <td>
           <div>
             <h3>Soft & Chill</h3>
