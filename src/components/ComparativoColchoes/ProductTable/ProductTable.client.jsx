@@ -32,12 +32,22 @@ function ProductTable({
     >
       <TableRow scrollbar>
         <td>
-          <Image src={LogoSpark} width={113} height={37} alt="Spark" />
+          <Image
+            src={LogoSpark}
+            width={isMobile ? 63 : 113}
+            height={isMobile ? 20 : 37}
+            alt="Spark"
+          />
           <Image src={PhotoSpark} width={258} height={92} alt="Spark" />
         </td>
         <td>
           <p>
-            <Image src={LogoSpark} width={113} height={37} alt="Spark" />{' '}
+            <Image
+              src={LogoSpark}
+              width={isMobile ? 63 : 113}
+              height={isMobile ? 20 : 37}
+              alt="Spark"
+            />{' '}
             <span className={styles.spark}>Híbrido</span>
           </p>
           <Image src={PhotoSpark} width={258} height={92} alt="Spark Híbrido" />
