@@ -7,6 +7,12 @@ function BenefitsTable({...rest}) {
     <Table heading="Benefícios" {...rest}>
       <TableRow heading="100 dias">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -17,6 +23,12 @@ function BenefitsTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Garantia de 10 anos">
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
         <td>
           <TableCheck checked />
         </td>
@@ -29,6 +41,12 @@ function BenefitsTable({...rest}) {
       </TableRow>
       <TableRow heading="Frete grátis">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -39,6 +57,8 @@ function BenefitsTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Entrega agendada com unboxing">
+        <td>Opcional</td>
+        <td>Opcional</td>
         <td>Opcional</td>
         <td>Opcional</td>
         <td>Gratuita</td>
