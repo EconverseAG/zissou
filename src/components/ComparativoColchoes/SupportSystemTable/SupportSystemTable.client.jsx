@@ -13,6 +13,11 @@ function SupportSystemTable({...rest}) {
   return (
     <Table heading="Sistema de suporte" {...rest}>
       <TableRow heading="Principal matéria prima para suporte">
+        <td>12cm de poliuretano de alta densidade e durabilidade</td>
+        <td>
+          12cm de molas Legget & Platt ensacadas individualmente, com reforço na
+          sustentação das bordas
+        </td>
         <td>16cm de poliuretano de alta densidade e durabilidade</td>
         <td>
           15cm molas Leggett & Platt ensacadas individualmente, com reforço na
@@ -24,6 +29,12 @@ function SupportSystemTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Camada de transição">
+        <td>
+          <TableCheck />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
         <td>
           <TableCheck />
         </td>
@@ -42,15 +53,47 @@ function SupportSystemTable({...rest}) {
           <TableCheck />
         </td>
         <td>
+          <TableCheck />
+        </td>
+        <td>
+          <TableCheck />
+        </td>
+        <td>
           <TableCheck checked colorBlue />
         </td>
       </TableRow>
       <TableRow heading="Sensação deo suporte">
         <td>estável e uniforme</td>
         <td>bounce com adaptação ao corpo</td>
+        <td>estável e uniforme</td>
+        <td>bounce com adaptação ao corpo</td>
         <td>bounce com ergonomia extra e adaptação ao corpo</td>
       </TableRow>
       <TableRow heading="Circulação interna de ar">
+        <td>
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+        </td>
+        <td style={{gap: '4px'}}>
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+          <Image
+            src={IconUmidade}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+        </td>
         <td>
           <Image
             src={IconUmidade}
@@ -96,9 +139,31 @@ function SupportSystemTable({...rest}) {
       <TableRow heading="Peso suportado (por pessoa)">
         <td>150kg</td>
         <td>170kg</td>
+        <td>150kg</td>
+        <td>170kg</td>
         <td>170kg</td>
       </TableRow>
       <TableRow heading="Descritivo de materiais">
+        <td>
+          <div>
+            <p>
+              • Base de espuma de poliuretano de alta densidade e durabilidade
+              <br /> • Suporte uniforme ao corpo e às camadas de conforto
+              <br /> • Reforço do isolamento de movimento
+            </p>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p>
+              • Sistema de suporte Legget & Platt
+              <br /> • Combina espuma e molas com 12cm de altura
+              <br /> • A espuma macia tem alta densidade e durabilidade
+              <br /> • Molas ensacadas individualmente proporcionam maior
+              adaptabilidade do colchão às curvas do corpo
+            </p>
+          </div>
+        </td>
         <td>
           <div>
             <h3>Spring System Plus</h3>
