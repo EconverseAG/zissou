@@ -28,6 +28,7 @@ function ZissouProductProvider({
   isToca,
   isBase,
 }) {
+  const [isSpark, setIsSpark] = useState(false);
   const [isCoral, setIsCoral] = useState(false);
   const [washable, setWashable] = useState(false);
   const [customBag, setCustomBag] = useState(false);
@@ -36,8 +37,6 @@ function ZissouProductProvider({
   const [coralIsHybrid, setCoralIsHybrid] = useState(false);
   const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
-
-  const isSpark = useMemo(() => product?.title.includes('Spark'), [product]);
 
   useEffect(() => {
     let currentProduct = baseProduct;
@@ -69,6 +68,7 @@ function ZissouProductProvider({
     }
 
     setIsCoral(baseProduct.title.includes('Coral'));
+    setIsSpark(baseProduct.title.includes('Spark'));
     setProduct(currentProduct || baseProduct);
   }, [
     washable,
@@ -98,6 +98,7 @@ function ZissouProductProvider({
       isLencol,
       isColchao,
       isCoral,
+      isSpark,
       isTravesseiro,
       isBase,
       washable,
@@ -134,6 +135,7 @@ function ZissouProductProvider({
       isCoral,
       isDuvet,
       isLencol,
+      isSpark,
       isToca,
       isTravesseiro,
       selectedColor,
