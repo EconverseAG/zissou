@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background: var(--gray-color-100);
+  padding: 0 40px;
 
   >span {
     display: block;
@@ -26,190 +27,159 @@
   .SleepAndLiveContent {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
     margin-bottom: 93px;
 
     @media only screen and (max-width: 1023px) {
       flex-direction: column;
       width: 100%;
-      margin-bottom: 80px;
+      margin-bottom: 52px;
     }
 
-    >div {
+    .Prod {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       width: 440px;
+      height: 305px;
       background: var(--white-color);
       position: relative;
 
       @media only screen and (max-width: 1023px) {
         width: 80%;
+        margin-right: 0;
+        margin-bottom: 50px;
+        height: auto;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
-      >p {
+      .ProdTitle {
+        font-size: 30px;
+        line-height: 30px;
+        font-family: "ZonaProBlack";
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        margin-top: 54px;
+        letter-spacing: 3px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-top: 20px;
+          font-size: 22px;
+          margin-bottom: 3px;
+          line-height: 22px;
+          letter-spacing: 2px;
+        }
+      }
+
+      .ProdSubtitle {
+        font-size: 17px;
+        line-height: 28px;
+        font-family: "ZonaProBold";
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 1023px) {
+          font-size: 10px;
+          line-height: 18px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .ProdLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 78px;
+        width: 100%;
+        color: var(--white-color);
+        text-decoration: underline;
+        font-family: "ZonaProBlack";
+        font-size: 18px;
+        line-height: 29px;
+        text-transform: uppercase;
+        margin-top: auto;
+        letter-spacing: 1px;
+
+        @media only screen and (max-width: 1023px) {
+          height: 45px;
+          margin-top: 0;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+
+      &.Spark {
+        .ProdTitle {
+          color: #9873ac;
+        }
+
+        .ProdSubtitle {
+          color: #9873ac;
+        }
+
+        .ProdLink {
+          background: #9873ac;
+        }
+      }
+
+      &.Coral {
+        .ProdTitle {
+          color: #f48580;
+        }
+
+        .ProdSubtitle {
+          color: #f48580;
+        }
+
+        .ProdLink {
+          background: #f48580;
+        }
+      }
+
+      &.Blue {
+        .ProdTitle {
+          color: #415264;
+        }
+
+        .ProdSubtitle {
+          color: #415264;
+        }
+
+        .ProdLink {
+          background: #415264;
+        }
+      }
+
+      .Flag {
         position: absolute;
         top: -14px;
-        right: 20px;
+        right: 13px;
         background: var(--purple-color-300);
         color: var(--white-color);
         font-family: "ZonaProBlack";
         font-size: 17px;
         line-height: 20px;
-        padding: 2px 30px;
+        padding: 0 30px;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.04em;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media only screen and (max-width: 1023px) {
           font-size: 12px;
           line-height: 13px;
-          top: -10px;
-          right: 15px;
           width: 95px;
           height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-
-      &:first-child {
-        margin-right: 85px;
-
-        >strong {
-          color: var(--coral-color-500);
-          font-size: 30px;
-          line-height: 30px;
-          font-family: "ZonaProBlack";
-          margin-bottom: 10px;
-          text-transform: uppercase;
-          margin-top: 54px;
-          letter-spacing: 3px;
-
-          @media only screen and (max-width: 1023px) {
-            margin-top: 20px;
-            font-size: 22px;
-            margin-bottom: 3px;
-            line-height: 22px;
-            letter-spacing: 2px;
-          }
-        }
-
-        >span {
-          color: var(--coral-color-500);
-          font-size: 17px;
-          line-height: 28px;
-          font-family: "ZonaProBold";
-          letter-spacing: 2px;
-          text-transform: uppercase;
-
-          @media only screen and (max-width: 1023px) {
-            font-size: 10px;
-            line-height: 18px;
-            letter-spacing: 1px;
-          }
-        }
-
-        >a {
-          &:last-child {
-            background: var(--coral-color-500);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 78px;
-            width: 100%;
-            color: var(--white-color);
-            text-decoration: underline;
-            font-family: "ZonaProBlack";
-            font-size: 18px;
-            line-height: 29px;
-            text-transform: uppercase;
-            margin-top: 20px;
-            letter-spacing: 1px;
-
-            &:hover {
-              background: var(--coral-color-300);
-            }
-
-            @media only screen and (max-width: 1023px) {
-              height: 44px;
-              margin-top: 0;
-              font-size: 14px;
-            }
-          }
-        }
-
-        @media only screen and (max-width: 1023px) {
-          margin-right: 0;
-          margin-bottom: 50px;
-        }
-      }
-
-      &:last-child {
-        >strong {
-          color: var(--blue-color-500);
-          font-size: 30px;
-          line-height: 30px;
-          font-family: "ZonaProBlack";
-          margin-bottom: 10px;
-          text-transform: uppercase;
-          margin-top: 54px;
-          letter-spacing: 3px;
-
-          @media only screen and (max-width: 1023px) {
-            margin-top: 20px;
-            font-size: 22px;
-            margin-bottom: 3px;
-            line-height: 22px;
-            letter-spacing: 2px;
-          }
-        }
-
-        >span {
-          color: var(--blue-color-500);
-          font-size: 17px;
-          line-height: 28px;
-          font-family: "ZonaProBold";
-          letter-spacing: 2px;
-          text-transform: uppercase;
-
-          @media only screen and (max-width: 1023px) {
-            font-size: 10px;
-            line-height: 18px;
-            letter-spacing: 1px;
-          }
-        }
-
-        >a {
-          &:last-child {
-            background: var(--blue-color-500);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 78px;
-            width: 100%;
-            color: var(--white-color);
-            text-decoration: underline;
-            font-family: "ZonaProBlack";
-            font-size: 18px;
-            line-height: 29px;
-            text-transform: uppercase;
-            margin-top: 20px;
-            letter-spacing: 1px;
-
-            &:hover {
-              background: var(--blue-color-450);
-            }
-
-            @media only screen and (max-width: 1023px) {
-              height: 44px;
-              margin-top: 0;
-              font-size: 14px;
-            }
-          }
+          padding: 0;
         }
       }
     }
