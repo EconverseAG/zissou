@@ -1,8 +1,11 @@
 import {useState, useEffect} from 'react';
+import {Image} from '@shopify/hydrogen/client';
 
 import useMobile from '../../../hooks/useMobile';
 import Table from '../Table';
 import TableRow from '../TableRow';
+
+import LogoSpark from '../../../assets/spark-logo.png';
 
 import * as styles from './TableFixedHeader.module.scss';
 
@@ -36,6 +39,15 @@ function TableFixedHeader() {
       }`}
     >
       <TableRow>
+        <td>
+          <Image src={LogoSpark} width={113} height={37} alt="Spark" />
+        </td>
+        <td>
+          <p>
+            <Image src={LogoSpark} width={113} height={37} alt="Spark" />{' '}
+            <span className={styles.spark}>Híbrido</span>
+          </p>
+        </td>
         <td>
           <p>Coral</p>
         </td>

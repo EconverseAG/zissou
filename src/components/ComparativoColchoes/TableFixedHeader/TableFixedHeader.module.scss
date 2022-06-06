@@ -37,6 +37,10 @@
       color: #fff;
       background-image: linear-gradient(to right, #F48580, #fff);
       border-radius: 33px;
+      
+      &.spark {
+        background-image: linear-gradient(to right, #9873AC, #fff);
+      }
     }
   }
 
