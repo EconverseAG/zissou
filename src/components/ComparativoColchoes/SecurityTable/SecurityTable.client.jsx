@@ -7,6 +7,12 @@ function SecurityTable({...rest}) {
     <Table heading="Segurança e manuseio" {...rest}>
       <TableRow heading="Alças laterais para manuseio">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -18,6 +24,12 @@ function SecurityTable({...rest}) {
       </TableRow>
       <TableRow heading="Tecido antiderrapante">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -28,6 +40,14 @@ function SecurityTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="descritivo dos materiais">
+        <td>
+          Tecido com trama fechada para maior durabilidade e proteção contra o
+          atrito
+        </td>
+        <td>
+          Tecido com trama fechada para maior durabilidade e proteção contra o
+          atrito
+        </td>
         <td>
           Tecido com trama fechada para maior durabilidade e proteção contra o
           atrito
