@@ -11,6 +11,7 @@ import Certifications from '../../../assets/colchao-certificacoes.png';
 
 import * as styles from './ComfortLayerTable.module.scss';
 
+import BounceLeve from '../../../assets/bounce-leve.svg';
 import BounceModerado from '../../../assets/bounce-moderado.svg';
 import BounceExtra from '../../../assets/bounce-extra.svg';
 
@@ -20,6 +21,12 @@ function ComfortLayerTable({...rest}) {
   return (
     <Table heading="Camada de conforto" {...rest}>
       <TableRow heading="Resiliência e suporte progressivo">
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
         <td>
           <TableCheck checked />
         </td>
@@ -32,6 +39,12 @@ function ComfortLayerTable({...rest}) {
       </TableRow>
       <TableRow heading="Propriedades intimicrobianas e resistência a ácaros">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -42,6 +55,20 @@ function ComfortLayerTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Dispersão de umidade">
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+        </td>
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconDispersaoUmidade}
+            width={isMobile ? 36 : 62}
+            height={isMobile ? 36 : 62}
+          />
+        </td>
         <td style={{gap: '5px'}}>
           <Image
             src={IconDispersaoUmidade}
@@ -86,6 +113,12 @@ function ComfortLayerTable({...rest}) {
       </TableRow>
       <TableRow heading="Distribuição equilibrada de peso do corpo">
         <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
+          <TableCheck checked colorSpark />
+        </td>
+        <td>
           <TableCheck checked />
         </td>
         <td>
@@ -98,9 +131,25 @@ function ComfortLayerTable({...rest}) {
       <TableRow heading="Bounce (Facilita movimentação na cama)">
         <td className={styles.bounceCell}>
           <Image
-            src={BounceModerado}
+            src={BounceLeve}
             width={isMobile ? 83 : 145}
-            height={isMobile ? 41 : 71}
+            height={isMobile ? 41 : 56}
+          />
+          <p>Leve</p>
+        </td>
+        <td className={styles.bounceCell}>
+          <Image
+            src={BounceLeve}
+            width={isMobile ? 84 : 145}
+            height={isMobile ? 33 : 56}
+          />
+          <p>Leve</p>
+        </td>
+        <td className={styles.bounceCell}>
+          <Image
+            src={BounceModerado}
+            width={isMobile ? 84 : 145}
+            height={isMobile ? 33 : 71}
           />
           <p>Moderado</p>
         </td>
@@ -122,6 +171,20 @@ function ComfortLayerTable({...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Circulação de ar na camada de conforto">
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+        </td>
+        <td style={{gap: '5px'}}>
+          <Image
+            src={IconAir}
+            width={isMobile ? 36 : 63}
+            height={isMobile ? 36 : 63}
+          />
+        </td>
         <td style={{gap: '5px'}}>
           <Image
             src={IconAir}
@@ -174,8 +237,42 @@ function ComfortLayerTable({...rest}) {
         <td>
           <Image src={Certifications} width={314} height={89} />
         </td>
+        <td>
+          <Image src={Certifications} width={314} height={89} />
+        </td>
+        <td>
+          <Image src={Certifications} width={314} height={89} />
+        </td>
       </TableRow>
       <TableRow heading="Descritivo de materiais">
+        <td>
+          <div>
+            <h3>Aceform HR com látex</h3>
+            <br />
+            <p>
+              • Espuma de alta resiliência com látex na composição, de origem
+              belga
+              <br /> • Material exclusivo dos colchões Zissou
+              <br /> • Excelente durabilidade
+              <br /> • Microclima saudável na cama
+              <br /> • Ótimas características ergonômicas
+            </p>
+          </div>
+        </td>
+        <td>
+          <div>
+            <h3>Aceform HR com látex</h3>
+            <br />
+            <p>
+              • Espuma de alta resiliência com látex na composição, de origem
+              belga
+              <br /> • Material exclusivo dos colchões Zissou
+              <br /> • Excelente durabilidade
+              <br /> • Microclima saudável na cama
+              <br /> • Ótimas características ergonômicas
+            </p>
+          </div>
+        </td>
         <td>
           <div>
             <h3>Látex Classic</h3>
