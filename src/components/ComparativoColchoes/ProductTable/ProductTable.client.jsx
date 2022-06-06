@@ -6,10 +6,20 @@ import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './ProductTable.module.scss';
 
+import LogoSpark from '../../../assets/spark-logo.png';
+import PhotoSpark from '../../../assets/foto_spark.png';
 import PhotoCoral from '../../../assets/foto_coral.png';
 import PhotoBlue from '../../../assets/foto_blue.png';
 
-function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
+function ProductTable({
+  coral,
+  coralHybrid,
+  blue,
+  spark,
+  sparkHybrid,
+  className,
+  ...rest
+}) {
   const {isMobile} = useMobile();
 
   return (
@@ -21,6 +31,17 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
       {...rest}
     >
       <TableRow>
+        <td>
+          <Image src={LogoSpark} width={113} height={37} alt="Spark" />
+          <Image src={PhotoSpark} width={258} height={92} alt="Spark" />
+        </td>
+        <td>
+          <p>
+            <Image src={LogoSpark} width={113} height={37} alt="Spark" />{' '}
+            <span className={styles.spark}>Híbrido</span>
+          </p>
+          <Image src={PhotoSpark} width={258} height={92} alt="Spark Híbrido" />
+        </td>
         <td>
           <p>Coral</p>
           <Image src={PhotoCoral} width={258} height={92} alt="Coral" />
@@ -37,6 +58,12 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
         </td>
       </TableRow>
       <TableRow heading="A partir de">
+        <td>{spark && <Money data={spark.priceRange.minVariantPrice} />}</td>
+        <td>
+          {sparkHybrid && (
+            <Money data={sparkHybrid.priceRange.minVariantPrice} />
+          )}
+        </td>
         <td>
           <Money data={coral.priceRange.minVariantPrice} />
         </td>
@@ -48,6 +75,8 @@ function ProductTable({coral, coralHybrid, blue, className, ...rest}) {
         </td>
       </TableRow>
       <TableRow heading="Altura">
+        <td>20cm</td>
+        <td>25cm</td>
         <td>25cm</td>
         <td>30cm</td>
         <td>32cm</td>

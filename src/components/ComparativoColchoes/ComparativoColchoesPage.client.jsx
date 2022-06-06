@@ -11,7 +11,13 @@ import StillHaveDoubts from './StillHaveDoubts/StillHaveDoubts.client';
 import SupportSystemTable from './SupportSystemTable';
 import TableFixedHeader from './TableFixedHeader';
 
-function ComparativoColchoesPage({coral, coralHybrid, blue}) {
+function ComparativoColchoesPage({
+  coral,
+  coralHybrid,
+  blue,
+  spark,
+  sparkHybrid,
+}) {
   const {isMobile} = useMobile();
 
   return (
@@ -23,6 +29,8 @@ function ComparativoColchoesPage({coral, coralHybrid, blue}) {
           coral={coral}
           coralHybrid={coralHybrid}
           blue={blue}
+          spark={spark}
+          sparkHybrid={sparkHybrid}
         />
         <SensationTable marginTop={isMobile ? 53 : 79} />
         <ComfortLayerTable marginTop={isMobile ? 23 : 30} />
