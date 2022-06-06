@@ -166,8 +166,6 @@ function SupportSystemTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Spring System Plus</h3>
-            <br />
             <p>
               • Base de espuma de poliuretano de alta densidade e durabilidade
               <br />
@@ -178,8 +176,6 @@ function SupportSystemTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Spring System Plus</h3>
-            <br />
             <p>
               • Sistema de suporte Leggett & Platt
               <br />
@@ -193,8 +189,6 @@ function SupportSystemTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Zoned Spring System</h3>
-            <br />
             <p>
               • Sistema de suporte Leggett Inside com espuma e molas com 15cm de
               altura
