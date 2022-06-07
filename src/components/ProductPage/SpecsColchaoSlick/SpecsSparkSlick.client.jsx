@@ -11,8 +11,8 @@ import BandeiraBelgica from '../../../assets/belgica_pdp.png';
 import BandeiraBrasil from '../../../assets/brasil_pdp.png';
 import Brands from '../../../assets/brands_pdp.png';
 
-import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-coral.png';
-import CamadaDeConforto from '../../../assets/camada-de-conforto-coral.png';
+import ToqueESensacaoTermica from '../../../assets/toque_pdp_spark.png';
+import CamadaDeConforto from '../../../assets/camada-de-conforto-spark.png';
 
 import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
@@ -26,20 +26,19 @@ import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_m
 
 import SetaPDP from '../../../assets/seta_pdp.png';
 
-import ToquePDP from '../../../assets/toque_pdp_coral.png';
-import AquecimentoPDP from '../../../assets/aquecimento_pdp_coral.png';
-import BouncePDP from '../../../assets/bounce_pdp_coral.png';
-import SetasPDP from '../../../assets/setas_pdp_coral.png';
-import SuportePDP from '../../../assets/suporte_pdp_coral.png';
-import IsolamentoPDP from '../../../assets/isolamento_pdp_coral.png';
-import AdaptacaoPDP from '../../../assets/adaptacao_pdp_coral.png';
+import ToquePDP from '../../../assets/toque-spark.svg';
+import BouncePDP from '../../../assets/bounce-spark.svg';
+import SetasPDP from '../../../assets/setas-spark.svg';
+import SuportePDP from '../../../assets/suporte-spark.svg';
+import IsolamentoPDP from '../../../assets/isolamento-spark.svg';
+import AdaptacaoPDP from '../../../assets/adaptacao-spark.svg';
 
 import ColchoesCoral from '../../../assets/colchoes_coral.png';
 
-import IconeGarantia from '../../../assets/icone_garantia.png';
-import IconeEntrega from '../../../assets/icone_entrega.png';
-import IconeFrete from '../../../assets/icone_frete.png';
-import Icone100Dias from '../../../assets/icone_100_dias.png';
+import IconeGarantia from '../../../assets/icone_garantia_spark.svg';
+import IconeEntrega from '../../../assets/icone_entrega_spark.svg';
+import IconeFrete from '../../../assets/icone_frete_spark.svg';
+import Icone100Dias from '../../../assets/icone_100_dias_spark.svg';
 
 export default function SpecsSparkSlick() {
   const [nav1, setNav1] = useState();
@@ -48,7 +47,7 @@ export default function SpecsSparkSlick() {
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.SpecsColchaoSlickContainer}>
+    <div className={`${styles.SpecsColchaoSlickContainer} ${styles.spark}`}>
       <Slider
         asNavFor={nav1}
         ref={(slider2) => setNav2(slider2)}
@@ -445,15 +444,6 @@ export default function SpecsSparkSlick() {
                 loading={'lazy'}
               />
               <span>Toque suave e macio</span>
-            </div>
-            <div className={styles.GridItem}>
-              <Image
-                src={AquecimentoPDP}
-                width={isMobile ? 48 : 91}
-                height={isMobile ? 43 : 81}
-                loading={'lazy'}
-              />
-              <span>Previne o aquecimento do corpo</span>
             </div>
             <div className={styles.GridItem}>
               <Image

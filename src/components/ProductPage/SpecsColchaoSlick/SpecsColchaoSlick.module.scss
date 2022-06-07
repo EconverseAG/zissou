@@ -828,4 +828,10 @@
       }
     }
   }
+
+  &.spark {
+    strong, strong.Title, .Icons strong.IconTitle {
+      color: #9873AC;
+    }
+  }
 }
