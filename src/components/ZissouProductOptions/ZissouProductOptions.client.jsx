@@ -32,7 +32,7 @@ function ZissouProductOptions({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const {isCoral, isColchao} = useZissouProduct();
+  const {isCoral, isColchao, isSpark} = useZissouProduct();
   const {variants, setSelectedOption, selectedVariant} = useProduct();
 
   const containerRef = useRef(null);
@@ -111,7 +111,7 @@ function ZissouProductOptions({
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
         className || ''
-      } ${!isColchao ? styles.lilac : ''}`}
+      } ${!isColchao ? styles.lilac : isSpark ? styles.spark : ''}`}
       ref={containerRef}
       {...rest}
     >
@@ -126,13 +126,17 @@ function ZissouProductOptions({
       )}
       <fieldset
         className={`${styles.select} ${
-          !isCoral && isColchao && styles.selectBlue
+          !isCoral && isColchao && isSpark
+            ? styles.selectSpark
+            : styles.selectBlue
         }`}
         key={name}
       >
         <button
           className={`${styles.selectOpen} ${
-            !isCoral && isColchao && styles.selectBlue
+            !isCoral && isColchao && isSpark
+              ? styles.selectSpark
+              : styles.selectBlue
           }`}
           onClick={() => setIsOpen(true)}
         >
@@ -142,7 +146,9 @@ function ZissouProductOptions({
           </p>
           <span
             className={`${styles.selectOpenArrow} ${
-              !isCoral && isColchao && styles.selectBlue
+              !isCoral && isColchao && isSpark
+                ? styles.selectSpark
+                : styles.selectBlue
             }`}
           >
             <Image
@@ -157,7 +163,9 @@ function ZissouProductOptions({
         {isOpen && (
           <div
             className={`${styles.selectDropdown} ${
-              !isCoral && isColchao && styles.selectBlue
+              !isCoral && isColchao && isSpark
+                ? styles.selectSpark
+                : styles.selectBlue
             }`}
           >
             {variants?.map(({id, selectedOptions}) => (

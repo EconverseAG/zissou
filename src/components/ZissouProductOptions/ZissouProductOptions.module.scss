@@ -63,6 +63,10 @@
       color: var(--blue-color-500);
     }
 
+    &.selectSpark {
+      color: #9873AC;
+    }
+
     .selectIcon {
       display: flex;
       align-items: center;
@@ -115,6 +119,14 @@
         }
       }
 
+      &.selectSpark {
+        border: 3px solid #9873AC;
+
+        &:hover {
+          background: #9873AC40;
+        }
+      }
+
       p {
         display: flex;
         width: 100%;
@@ -145,6 +157,10 @@
         &.selectBlue {
           background: var(--blue-color-500);
         }
+
+        &.selectSpark {
+          background: #9873AC;
+        }
       }
     }
     
@@ -163,6 +179,14 @@
 
         .selectDropdownOption:hover {
           background: #41526440
+        }
+      }
+
+      &.selectSpark {
+        border: 3px solid #9873AC;
+
+        .selectDropdownOption:hover {
+          background: #9873AC40;
         }
       }
       
