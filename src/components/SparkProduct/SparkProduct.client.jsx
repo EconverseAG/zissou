@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {useProduct} from '@shopify/hydrogen/client';
+import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import ZissouProductImages from '../ZissouProductImages';
 import ZissouProductPrice from '../ZissouProductPrice';
@@ -18,6 +18,9 @@ import useMobile from '../../hooks/useMobile';
 import * as styles from './SparkProduct.module.scss';
 import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
 import RestockDate from '../RestockDate/RestockDate.client';
+
+import BannerHolistix from '../../assets/holistix-offer.png';
+import BannerHolistixMobile from '../../assets/holistix-offer-mobile.png';
 
 function SparkProduct() {
   const {isMobile} = useMobile();
@@ -58,6 +61,14 @@ function SparkProduct() {
         <ZissouAddToCart className={styles.AddToCart} />
         <EntregaFutura />
         <ZissouColchaoIcons />
+        <Image
+          src={isMobile ? BannerHolistixMobile : BannerHolistix}
+          width={isMobile ? 303 : 473}
+          height={isMobile ? 202 : 200}
+          style={{
+            marginTop: isMobile ? '29px' : '35px',
+          }}
+        />
       </ProductSectionRight>
     </ProductSection>
   );
