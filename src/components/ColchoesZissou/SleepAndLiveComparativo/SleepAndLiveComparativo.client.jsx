@@ -7,13 +7,19 @@ import * as styles from './SleepAndLiveComparativo.module.scss';
 
 import ColchaoCoral from '../../../assets/ColchaoCoralComparativo.png';
 import ColchaoBlue from '../../../assets/ColchaoBlueComparativo.png';
+import ColchaoSpark from '../../../assets/ColchaoSparkComparativo.png';
 
 import ColchaoCoralHover from '../../../assets/ColchaoCoralHover.png';
 import ColchaoBlueHover from '../../../assets/ColchaoBlueHover.png';
+import ColchaoSparkHover from '../../../assets/ColchaoSparkHover.png';
+
+import LogoSpark from '../../../assets/spark-logo.png';
 
 export default function SleepAndLiveComparativo() {
   const [changeUrlCoral, setChangeUrlCoral] = useState(ColchaoCoral);
   const [changeUrlBlue, setChangeUrlBlue] = useState(ColchaoBlue);
+  const [changeUrlSpark, setChangeUrlSpark] = useState(ColchaoSpark);
+
   const {isMobile} = useMobile();
 
   function handleImageEnterCoral() {
@@ -32,17 +38,72 @@ export default function SleepAndLiveComparativo() {
     setChangeUrlBlue(ColchaoBlue);
   }
 
+  function handleImageLeaveSpark() {
+    setChangeUrlSpark(ColchaoSpark);
+  }
+
+  function handleImageEnterSpark() {
+    setChangeUrlSpark(ColchaoSparkHover);
+  }
+
   return (
     <div className={styles.SleepAndLiveContainer}>
       <span className={styles.SleepAndLiveContainerTitle}>Dormir & Viver</span>
       <div className={styles.SleepAndLiveContent}>
+        {!isMobile && (
+          <div
+            onMouseEnter={handleImageEnterSpark}
+            onMouseLeave={handleImageLeaveSpark}
+            className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
+          >
+            <p className={styles.SleepAndLiveFlag}>Novidade</p>
+            <Link
+              to="/products/colchao-zissou-coral-hibrido-2"
+              className={styles.SleepAndLiveCTAImage}
+            >
+              <Image
+                src={changeUrlSpark}
+                width={isMobile ? '304' : '572'}
+                height={isMobile ? '154' : '303'}
+              />
+            </Link>
+            <Image
+              src={LogoSpark}
+              width={114}
+              height={37}
+              className={styles.SleepAndLiveTitle}
+              style={{marginTop: '30px'}}
+            />
+            <span className={styles.SleepAndLiveSubtitle}>
+              ONDE TUDO COMEÇA
+            </span>
+            <p className={styles.SleepAndLiveText}>
+              Spark consolida materiais premium para atingir um{' '}
+              <strong>
+                mix perfeito de suporte, conforto e aconchego com tecido
+                refrescante Velvet & Balanced
+              </strong>
+            </p>
+            <br />
+            <p className={styles.SleepAndLiveText}>
+              <strong>Opção de suporte híbrido Spring System</strong> com molas
+              de 12cm de altura
+            </p>
+            <span className={styles.SleepAndLivePrice}>
+              A partir de R$ 3.190
+            </span>
+            <Link
+              to="/products/colchao-zissou-coral-hibrido-2"
+              className={styles.SleepAndLiveButtonCTA}
+            >
+              CONHEÇA O SPARK
+            </Link>
+          </div>
+        )}
         <div
           onMouseEnter={handleImageEnterCoral}
           onMouseLeave={handleImageLeaveCoral}
-          className={[
-            styles.SleepAndLiveColchao,
-            styles.SleepAndLiveCoral,
-          ].join(' ')}
+          className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveCoral}`}
         >
           <p className={styles.SleepAndLiveFlag}>
             Mais <br /> vendido
@@ -84,9 +145,7 @@ export default function SleepAndLiveComparativo() {
         <div
           onMouseEnter={handleImageEnterBlue}
           onMouseLeave={handleImageLeaveBlue}
-          className={[styles.SleepAndLiveColchao, styles.SleepAndLiveBlue].join(
-            ' ',
-          )}
+          className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveBlue}`}
         >
           <p className={styles.SleepAndLiveFlag}>
             Mais <br /> avançado
@@ -127,6 +186,56 @@ export default function SleepAndLiveComparativo() {
             MERGULHE NO BLUE
           </Link>
         </div>
+        {isMobile && (
+          <div
+            onMouseEnter={handleImageEnterSpark}
+            onMouseLeave={handleImageLeaveSpark}
+            className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
+          >
+            <p className={styles.SleepAndLiveFlag}>Novidade</p>
+            <Link
+              to="/products/colchao-zissou-coral-hibrido-2"
+              className={styles.SleepAndLiveCTAImage}
+            >
+              <Image
+                src={changeUrlSpark}
+                width={isMobile ? '304' : '572'}
+                height={isMobile ? '154' : '303'}
+              />
+            </Link>
+            <Image
+              src={LogoSpark}
+              width={79}
+              height={25}
+              className={styles.SleepAndLiveTitle}
+              style={{marginTop: '30px'}}
+            />
+            <span className={styles.SleepAndLiveSubtitle}>
+              ONDE TUDO COMEÇA
+            </span>
+            <p className={styles.SleepAndLiveText}>
+              Spark consolida materiais premium para atingir um{' '}
+              <strong>
+                mix perfeito de suporte, conforto e aconchego com tecido
+                refrescante Velvet & Balanced
+              </strong>
+            </p>
+            <br />
+            <p className={styles.SleepAndLiveText}>
+              <strong>Opção de suporte híbrido Spring System</strong> com molas
+              de 12cm de altura
+            </p>
+            <span className={styles.SleepAndLivePrice}>
+              A partir de R$ 3.190
+            </span>
+            <Link
+              to="/products/colchao-zissou-coral-hibrido-2"
+              className={styles.SleepAndLiveButtonCTA}
+            >
+              CONHEÇA O SPARK
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
