@@ -15,6 +15,7 @@ import {LoadingProvider} from '../../hooks/useLoading';
 import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.client';
+import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
 
 export default function Coral() {
   const {isMobile} = useMobile();
@@ -24,8 +25,9 @@ export default function Coral() {
       <ProductFixedBarColchao title="SPARK" subtitle={'ONDE TUDO COMEÇA'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <SparkProduct />
-      <TryItFor100Days video={Gif100DiasCoral} />
+      <TourSpark />
       <DoubtsProductPage />
+      <TryItFor100Days video={Gif100DiasCoral} />
       <SparkWhereAllStarts />
       <InstagramZissou
         title={'#MEUMOMENTOSPARK'}
