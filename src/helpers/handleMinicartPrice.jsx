@@ -1,7 +1,5 @@
-function applyDiscount(price, quantity = 1) {
+function applyDiscount(price, quantity = 1, totalCartPrice = 0, originalPrice) {
   if (quantity < 2) return {price, hasDiscount: false, discount: 0};
-
-  let fullPrice = price;
 
   const discountRule = [
     [0, 10000, 0.05],
@@ -9,16 +7,30 @@ function applyDiscount(price, quantity = 1) {
     [20000, 1000000, 0.15],
   ];
 
+  let fullPrice = price;
+
   discountRule.forEach(([min, max, discount]) => {
-    if (price >= min && price <= max) {
+    if (totalCartPrice >= min && totalCartPrice <= max) {
       price = price - price * discount;
     }
   });
 
-  return {price, hasDiscount: true, discount: (fullPrice - price) / fullPrice};
+  let discount;
+
+  if (originalPrice) {
+    discount = (originalPrice - price) / originalPrice;
+  } else {
+    discount = (fullPrice - price) / fullPrice;
+  }
+
+  return {price, hasDiscount: true, discount};
 }
 
-export default function TotalMinicartPrices(lines, totalQuantity) {
+export default function TotalMinicartPrices(
+  lines,
+  totalQuantity,
+  totalCartPrice,
+) {
   if (!lines.length) return {price: 0, hasDiscount: false};
 
   let totalMinicartPrices = lines.map(
@@ -36,7 +48,8 @@ export default function TotalMinicartPrices(lines, totalQuantity) {
 
       let price = +product.merchandise.priceV2.amount * product.quantity;
 
-      if (!hasDiscount) return applyDiscount(price, totalQuantity);
+      if (!hasDiscount)
+        return applyDiscount(price, totalQuantity, totalCartPrice);
 
       let discount =
         discounts
@@ -45,7 +58,7 @@ export default function TotalMinicartPrices(lines, totalQuantity) {
 
       let totalPrice = price - price * discount;
 
-      return applyDiscount(totalPrice, totalQuantity);
+      return applyDiscount(totalPrice, totalQuantity, totalCartPrice, price);
     },
     [lines],
   );

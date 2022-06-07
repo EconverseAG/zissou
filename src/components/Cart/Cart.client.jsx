@@ -11,6 +11,7 @@ import {
   useCart,
   useCartLine,
   AddToCartButton,
+  CartCheckoutButton,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
@@ -126,7 +127,14 @@ function LineInCart() {
 
   const cart = useCartLine();
   const totalCart = useCart();
-  const productPriceInfo = TotalMinicartPrices([cart], totalCart.totalQuantity);
+  const totalCartPrice = +totalCart.estimatedCost.totalAmount.amount;
+  const productPriceInfo = TotalMinicartPrices(
+    [cart],
+    totalCart.totalQuantity,
+    totalCartPrice,
+  );
+
+  console.log('productPriceInfo', productPriceInfo);
 
   useEffect(() => {
     if (attributes.length) {
@@ -171,6 +179,16 @@ function LineInCart() {
                 <li className={styles.cartItemTopRightSpecsList}>{value}</li>
               </div>
             ))}
+            {customizacao && (
+              <div className={styles.Props}>
+                <li
+                  className={styles.cartItemTopRightSpecsList}
+                  style={{margin: 0, fontFamily: 'ZonaProBlack'}}
+                >
+                  Personalizado: {customizacao}
+                </li>
+              </div>
+            )}
             {dateEncomenda && dateEncomenda.includes('-') ? (
               <div className={styles.Props}>
                 <Image src={TruckIcon} width="16" height="11" />
@@ -209,7 +227,10 @@ function LineInCart() {
                     className={styles.cartItemTopRightSpecsList}
                     style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                   >
-                    {dateEncomendaKey.replace(/(\D)+/g, '')}% OFF
+                    {productPriceInfo[0].discount > 0
+                      ? Math.ceil(productPriceInfo[0].discount * 100)
+                      : dateEncomendaKey.replace(/(\D)+/g, '')}
+                    % OFF
                   </li>
                 </div>
               </>
@@ -227,19 +248,12 @@ function LineInCart() {
                     className={styles.cartItemTopRightSpecsList}
                     style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                   >
-                    {dateEncomendaKey.replace(/(\D)+/g, '')}% OFF
+                    {productPriceInfo[0].discount > 0
+                      ? Math.ceil(productPriceInfo[0].discount * 100)
+                      : dateEncomendaKey.replace(/(\D)+/g, '')}
                   </li>
                 </div>
               </>
-            ) : customizacao ? (
-              <div className={styles.Props}>
-                <li
-                  className={styles.cartItemTopRightSpecsList}
-                  style={{margin: 0, fontFamily: 'ZonaProBlack'}}
-                >
-                  Personalizado: {customizacao}
-                </li>
-              </div>
             ) : totalCart.totalQuantity >= 2 ? (
               <div className={styles.Props}>
                 <Label />
@@ -247,7 +261,7 @@ function LineInCart() {
                   className={styles.cartItemTopRightSpecsList}
                   style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                 >
-                  {productPriceInfo[0].discount * 100}% OFF
+                  {Math.ceil(productPriceInfo[0].discount * 100)}% OFF
                 </li>
               </div>
             ) : null}
@@ -419,7 +433,6 @@ function CartShelf({
     whiteLencol,
   ]);
 
-  // função que recebe o ref do click e remove o item do slider
   const removeItem = (e) => {
     const item = e.currentTarget.parentNode.parentNode.parentNode;
     item.remove();
@@ -587,13 +600,16 @@ function CartFooter({totalLine}) {
           </div>
         </div>
       </div>
-      <CheckoutButton
+      {/* <CheckoutButton
         className={styles.cartCheckout}
         cart={cart}
         config={shopifyConfig}
       >
         FINALIZAR COMPRA (CartPanda)
-      </CheckoutButton>
+      </CheckoutButton> */}
+      <CartCheckoutButton className={styles.cartCheckout}>
+        FINALIZAR COMPRA (Econverse)
+      </CartCheckoutButton>
     </footer>
   );
 }
