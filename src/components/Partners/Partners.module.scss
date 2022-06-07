@@ -221,4 +221,12 @@
       line-height: 21px;
     }
   }
+
+  &.spark {
+    .PartnersContent {
+      .PartnersRightTitle, .PartnersLeftTitle {
+        color: #fff;
+      }
+    }
+  }
 }
