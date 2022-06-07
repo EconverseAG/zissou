@@ -37,6 +37,12 @@
   }
 
   &.mobile {
+    padding-top: 0;
+
+    .leftSection {
+      margin-top: 0;
+    }
+
     .Price {
       margin-top: 11px;
     }

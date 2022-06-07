@@ -39,7 +39,7 @@ function SparkProduct() {
     <ProductSection
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
     >
-      <ProductSectionLeft>
+      <ProductSectionLeft className={styles.leftSection}>
         <ZissouProductImages shadow arrowsInside />
         {!isMobile && <ZissouCompreJunto />}
       </ProductSectionLeft>
