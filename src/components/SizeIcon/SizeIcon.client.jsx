@@ -23,7 +23,7 @@ function SizeIcon({name}) {
   );
 
   const icon = useMemo(() => {
-    const nameToCompare = name.toLowerCase();
+    const nameToCompare = name?.toLowerCase();
 
     if (nameToCompare.includes('solteiro especial'))
       return <SvgSolteiroEspecial color={color} />;

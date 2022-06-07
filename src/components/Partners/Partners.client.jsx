@@ -11,12 +11,14 @@ import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 export default function Partners({color}) {
-  const {isSpark} = useZissouProduct();
+  const zissouContext = useZissouProduct();
   const {isMobile} = useMobile();
 
   return (
     <div
-      className={`${styles.PartnersContainer} ${isSpark ? styles.spark : ''}`}
+      className={`${styles.PartnersContainer} ${
+        zissouContext?.isSpark ? styles.spark : ''
+      }`}
       style={{background: color ? color : ''}}
     >
       <div className={styles.PartnersContent}>
