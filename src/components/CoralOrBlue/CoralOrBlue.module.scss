@@ -25,12 +25,12 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
 
     @media only screen and (max-width: 1023px) {
       font-size: 20px;
       line-height: 25px;
       padding-top: 47px;
-      white-space: nowrap;
     }
   }
 

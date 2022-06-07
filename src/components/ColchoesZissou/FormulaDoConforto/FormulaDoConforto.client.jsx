@@ -2,7 +2,7 @@ import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './FormulaDoConforto.module.scss';
 
-import VideoLatex from '../../../assets/video_latex.webm';
+import VideoLatex from '../../../assets/video_latex.mp4';
 import VideoVisco from '../../../assets/video_visco.webm';
 
 export default function FormulaDoConforto() {

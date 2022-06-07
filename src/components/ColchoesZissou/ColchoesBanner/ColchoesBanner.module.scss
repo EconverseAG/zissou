@@ -1,0 +1,11 @@
+.ColchoesBannerContainer {
+  .video {
+    height: 95vh;
+    width: 100vw;
+    object-fit: cover;
+
+    @media only screen and (max-width: 1023px) {
+      height: 460px;
+    }
+  }
+}
