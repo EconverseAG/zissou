@@ -9,7 +9,7 @@ import ZissouStores from '../ZissouStores/ZissouStores.client';
 import DoubtsProductPage from '../ProductPage/DoubtsProductPage/DoubtsProductPage.client';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import InstagramZissou from '../InstagramZissou/InstagramZissou.client';
-import CoralProduct from '../CoralProduct';
+import SparkProduct from '../SparkProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
 import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
@@ -22,7 +22,7 @@ export default function Coral() {
     <LoadingProvider>
       <ProductFixedBarColchao title="CORAL" subtitle={'A EVOLUÇÃO DO SONO'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
-      <CoralProduct />
+      <SparkProduct />
       <TryItFor100Days video={Gif100DiasCoral} />
       <DoubtsProductPage />
       <InstagramZissou
