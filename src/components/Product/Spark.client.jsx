@@ -20,7 +20,7 @@ export default function Coral() {
 
   return (
     <LoadingProvider>
-      <ProductFixedBarColchao title="CORAL" subtitle={'A EVOLUÇÃO DO SONO'} />
+      <ProductFixedBarColchao title="SPARK" subtitle={'ONDE TUDO COMEÇA'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <SparkProduct />
       <TryItFor100Days video={Gif100DiasCoral} />
