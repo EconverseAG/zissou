@@ -433,9 +433,9 @@ export default function SpecsSparkSlick() {
           </div>
         </div>
         <div
-          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground5}`}
+          className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground5} ${styles.sensationSpark}`}
         >
-          <div className={styles.SpecsColchaoSlickSecondSliderBackground5Grid}>
+          <div className={styles.sparkSensationsGrid}>
             <div className={styles.GridItem}>
               <Image
                 src={ToquePDP}
