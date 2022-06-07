@@ -1,5 +1,7 @@
 function applyDiscount(price, quantity = 1) {
-  if (quantity < 2) return {price, hasDiscount: false};
+  if (quantity < 2) return {price, hasDiscount: false, discount: 0};
+
+  let fullPrice = price;
 
   const discountRule = [
     [0, 10000, 0.05],
@@ -13,10 +15,10 @@ function applyDiscount(price, quantity = 1) {
     }
   });
 
-  return {price, hasDiscount: true};
+  return {price, hasDiscount: true, discount: (fullPrice - price) / fullPrice};
 }
 
-export default function TotalMinicartPrices(lines) {
+export default function TotalMinicartPrices(lines, totalQuantity) {
   if (!lines.length) return {price: 0, hasDiscount: false};
 
   let totalMinicartPrices = lines.map(
@@ -34,7 +36,7 @@ export default function TotalMinicartPrices(lines) {
 
       let price = +product.merchandise.priceV2.amount * product.quantity;
 
-      if (!hasDiscount) return applyDiscount(price, product.quantity);
+      if (!hasDiscount) return applyDiscount(price, totalQuantity);
 
       let discount =
         discounts
@@ -43,7 +45,7 @@ export default function TotalMinicartPrices(lines) {
 
       let totalPrice = price - price * discount;
 
-      return applyDiscount(totalPrice, product.quantity);
+      return applyDiscount(totalPrice, totalQuantity);
     },
     [lines],
   );

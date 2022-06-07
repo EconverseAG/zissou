@@ -40,6 +40,18 @@
         }
       }
     }
+    
+    &.SpecsColchaoSlickFirstSliderSpark {
+      :global(.slick-slide.slick-active.slick-current) {
+        .SpecsColchaoSlickFirstSliderTabs {
+          background: rgba(152, 115, 172, .7);
+
+          &Title {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
 
     :global(.slick-slide) {
       &+ :global(.slick-slide) {

@@ -47,8 +47,8 @@ export default function Cart({
   const [totalLine, setTotalLine] = useState();
 
   useEffect(() => {
-    setTotalLine(TotalMinicartPrices(lines));
-  }, [lines]);
+    setTotalLine(TotalMinicartPrices(lines, totalQuantity));
+  }, [lines, totalQuantity]);
 
   return (
     <>
@@ -116,7 +116,7 @@ function CartItems({
 }
 
 function LineInCart() {
-  const {merchandise, attributes, quantity} = useCartLine();
+  const {merchandise, attributes} = useCartLine();
   const [dateEncomenda, setDateEncomenda] = useState('');
   const [dateEncomendaKey, setDateEncomendaKey] = useState('');
   const [customizacao, setCustomizacao] = useState('');
@@ -125,7 +125,8 @@ function LineInCart() {
   const plus2Months = new Date(date.setMonth(date.getMonth() + 2));
 
   const cart = useCartLine();
-  const productPriceInfo = TotalMinicartPrices([cart]);
+  const totalCart = useCart();
+  const productPriceInfo = TotalMinicartPrices([cart], totalCart.totalQuantity);
 
   useEffect(() => {
     if (attributes.length) {
@@ -239,21 +240,14 @@ function LineInCart() {
                   Personalizado: {customizacao}
                 </li>
               </div>
-            ) : quantity >= 2 ? (
+            ) : totalCart.totalQuantity >= 2 ? (
               <div className={styles.Props}>
                 <Label />
                 <li
                   className={styles.cartItemTopRightSpecsList}
                   style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
                 >
-                  {merchandise.priceV2.amount > 0 &&
-                  merchandise.priceV2.amount < 10000
-                    ? '5'
-                    : merchandise.priceV2.amount > 10000 &&
-                      merchandise.priceV2.amount < 20000
-                    ? '10'
-                    : '15'}
-                  % OFF
+                  {productPriceInfo[0].discount * 100}% OFF
                 </li>
               </div>
             ) : null}
