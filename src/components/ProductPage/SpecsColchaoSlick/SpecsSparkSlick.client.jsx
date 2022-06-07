@@ -64,7 +64,7 @@ export default function SpecsSparkSlick() {
             },
           },
         ]}
-        className={`${styles.SpecsColchaoSlickFirstSlider} ${styles.SpecsColchaoSlickFirstSliderCoral}`}
+        className={`${styles.SpecsColchaoSlickFirstSlider} ${styles.SpecsColchaoSlickFirstSliderSpark}`}
       >
         <div className={styles.SpecsColchaoSlickFirstSliderTabs}>
           <span className={styles.SpecsColchaoSlickFirstSliderTabsTitle}>
@@ -103,7 +103,7 @@ export default function SpecsSparkSlick() {
         ref={(slider1) => setNav1(slider1)}
         dots={true}
         arrows={false}
-        className={`${styles.SpecsColchaoSlickSecondSlider} ${styles.SpecsColchaoSlickSecondSliderCoral}`}
+        className={`${styles.SpecsColchaoSlickSecondSlider} ${styles.SpecsColchaoSlickSecondSliderSpark}`}
       >
         <div
           className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground1}`}
@@ -133,13 +133,10 @@ export default function SpecsSparkSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
                 }
               >
-                Tecido premium altamente respirável e contendo polietileno para
-                prevenir o aquecimento do corpo, desenvolvido nos Estados Unidos
-                e com toque sutil e elástico na medida certa
-                <br />
-                <br />
-                Suas propriedades garantem a performance e durabilidade das
-                camadas de conforto, sem que seu corpo aqueça
+                Spark tem capa desenvolvida nos EUA, com a parte superior em
+                tecido microtexturizado, com toque aveludado. Combina fibras de
+                alta gramatura com trama especial e toque de elastano,
+                garantindo o ajuste perfeito ao colchão.
               </span>
             </div>
           </div>
@@ -163,7 +160,7 @@ export default function SpecsSparkSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                LATEX CLASSIC{' '}
+                LATEX INFUSED{' '}
                 <Image
                   src={BandeiraBelgica}
                   width={isMobile ? 20 : 30}
@@ -182,44 +179,35 @@ export default function SpecsSparkSlick() {
                   style={{marginTop: '-25px'}}
                 />
               )}
-              {isMobile ? (
-                <span
-                  className={
-                    styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
-                  }
-                >
-                  - Alta resiliência e suporte progressivo
-                  <br />
-                  <br />- Pequenas perfurações aumentam a ventilação
-                </span>
-              ) : (
-                <span
-                  className={
-                    styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
-                  }
-                >
-                  - Látex nobre e sofisticado, com elasticidade incomparável
-                  <br />
-                  <br />
-                  - Proporciona resiliência e suporte progressivo, com apoio
-                  corporal perfeito
-                  <br />
-                  <br />
-                  - Estrutura aerada estimula a circulação de ar, evitando
-                  aquecimento e acúmulo de umidade
-                  <br />
-                  <br />
-                  - Contém pequenas perfurações que aumentam a ventilação,
-                  proporcionando refrescância
-                  <br />
-                  <br />
-                  - Alta resistência a pressão, evitando deformação com o passar
-                  do tempo
-                  <br />
-                  <br />- Propriedades hipoalergênicas, antimicrobianas e
-                  resistência a ácaros
-                </span>
-              )}
+              <span
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
+                }
+              >
+                - Composta pela espuma HR Acefom com látex infused de origem
+                belga, exclusivo Zissou. Torna Spark ideal para quem prefere um
+                colchão que proporciona distribuição uniforme de peso, com total
+                conforto
+                <br />
+                <br />
+                - Proporciona resiliência e suporte progressivo, com apoio
+                corporal perfeito
+                <br />
+                <br />
+                - Estrutura aerada estimula a circulação de ar, evitando
+                aquecimento e acúmulo de umidade
+                <br />
+                <br />
+                - Contém pequenas perfurações que aumentam a ventilação,
+                proporcionando refrescância
+                <br />
+                <br />
+                - Alta resistência a pressão, evitando deformação com o passar
+                do tempo
+                <br />
+                <br />- Propriedades hipoalergênicas, antimicrobianas e
+                resistência a ácaros
+              </span>
             </div>
             {isMobile ? (
               <div className={styles.brands}>
