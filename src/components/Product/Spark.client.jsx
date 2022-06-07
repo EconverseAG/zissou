@@ -1,5 +1,5 @@
 import useMobile from '../../hooks/useMobile';
-import BannerCoralPDP from '../../assets/pdp-coral.png';
+import BannerSparkPDP from '../../assets/pdp-spark.png';
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';
@@ -23,7 +23,7 @@ export default function Coral() {
   return (
     <LoadingProvider>
       <ProductFixedBarColchao title="SPARK" subtitle={'ONDE TUDO COMEÇA'} />
-      {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
+      {!isMobile && <BannerProductPage src={BannerSparkPDP} />}
       <SparkProduct />
       <TourSpark />
       <DoubtsProductPage />

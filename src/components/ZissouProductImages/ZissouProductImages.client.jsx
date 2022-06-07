@@ -14,6 +14,7 @@ import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
 import BaseBanner from '../../assets/base-banner.gif';
 import LencolBanner from '../../assets/lencol-banner-background.png';
 import DuvetBanner from '../../assets/duvet-banner-background.png';
+import SparkBanner from '../../assets/pdp-spark-mobile.png';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -137,6 +138,16 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           {isMobile && isDuvet && (
             <div className={styles.imageContainer}>
               <Image src={DuvetBanner} width={1920} height={995} />
+            </div>
+          )}
+          {isMobile && isSpark && (
+            <div className={styles.imageContainer}>
+              <Image
+                src={SparkBanner}
+                width={375}
+                height={396}
+                style={{width: '100%'}}
+              />
             </div>
           )}
           <div className={styles.imageContainer}>
