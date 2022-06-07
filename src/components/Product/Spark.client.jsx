@@ -14,6 +14,7 @@ import {LoadingProvider} from '../../hooks/useLoading';
 
 import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
+import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.client';
 
 export default function Coral() {
   const {isMobile} = useMobile();
@@ -25,6 +26,7 @@ export default function Coral() {
       <SparkProduct />
       <TryItFor100Days video={Gif100DiasCoral} />
       <DoubtsProductPage />
+      <SparkWhereAllStarts />
       <InstagramZissou
         title={'#MEUMOMENTOSPARK'}
         background={'180deg, #779ABF 0%, #9F85B2 100%'}
