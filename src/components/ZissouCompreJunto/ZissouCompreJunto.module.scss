@@ -208,5 +208,37 @@
         }
       }
     }
+
+    &.OptionContainerSpark {
+      border-color: #D4BDE0;
+      background: #E0D6E5;
+
+      &.OptionContainerSelected {
+        border-color: #9873AC
+      }
+
+      .OptionSelect {
+        background: #fff;
+        border-color: #D4BDE0;
+
+        &.active {
+          border-color: #9873AC;
+
+          &::before {
+            background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='22.113' height='20.398' viewBox='0 0 22.113 20.398'%3E%3Cpath id='Caminho_93' data-name='Caminho 93' d='M88.984,1074.986l6.436,6.328,11.463-16.006' transform='translate(-86.863 -1063.216)' fill='none' stroke='%239873ac' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+          }
+        }
+      }
+
+      .OptionInfo {
+        .OptionInfoProductName {
+          color: #9873AC;
+        }
+
+        .OptionInfoMeasures {
+          color: #9873AC;
+        }
+      }
+    }
   }
 }

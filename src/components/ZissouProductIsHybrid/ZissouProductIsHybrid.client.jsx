@@ -6,12 +6,16 @@ import * as styles from './ZissouProductIsHybrid.module.scss';
 import HybridColchao from '../../assets/hybrid-colchao.webm';
 
 export default function ZissouProductIsHybrid() {
-  const {coralIsHybrid, setCoralIsHybrid} = useZissouProduct();
+  const {coralIsHybrid, setCoralIsHybrid, isSpark} = useZissouProduct();
 
   const {isMobile} = useMobile();
 
   return (
-    <div className={styles.ZissouProductIsHybridContainer}>
+    <div
+      className={`${styles.ZissouProductIsHybridContainer} ${
+        isSpark ? styles.spark : ''
+      }`}
+    >
       <strong className={styles.IsHybridTitle}>
         {isMobile ? 'Adicionar suporte extra' : 'Adicionar suporte híbrido'}
       </strong>

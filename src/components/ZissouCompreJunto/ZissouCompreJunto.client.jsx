@@ -8,6 +8,7 @@ import TravesseiroCompreJunto from '../../assets/travesseiro_compre_junto.png';
 import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
 
 import * as styles from './ZissouCompreJunto.module.scss';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 export default function ZissouCompreJunto() {
   const {isMobile} = useMobile();
@@ -22,6 +23,7 @@ export default function ZissouCompreJunto() {
   } = useBuyTogether();
 
   const {selectedVariant, title} = useProduct();
+  const {isSpark} = useZissouProduct();
 
   const nameSelected =
     selectedVariant.title.split(' (')[0] || selectedVariant.title;
@@ -37,7 +39,11 @@ export default function ZissouCompreJunto() {
       </span>
       <button
         className={`${styles.OptionContainer} ${
-          title.includes('Coral') ? styles.OptionContainerCoral : null
+          title.includes('Coral')
+            ? styles.OptionContainerCoral
+            : isSpark
+            ? styles.OptionContainerSpark
+            : ''
         } ${includeBase ? styles.OptionContainerSelected : null}`}
         onClick={() => setIncludeBase((state) => !state)}
       >
@@ -73,7 +79,11 @@ export default function ZissouCompreJunto() {
       </button>
       <button
         className={`${styles.OptionContainer} ${
-          title.includes('Coral') ? styles.OptionContainerCoral : null
+          title.includes('Coral')
+            ? styles.OptionContainerCoral
+            : isSpark
+            ? styles.OptionContainerSpark
+            : ''
         } ${
           includeTwoWashableTravesseiros ? styles.OptionContainerSelected : null
         }`}
@@ -107,7 +117,11 @@ export default function ZissouCompreJunto() {
       </button>
       <button
         className={`${styles.OptionContainer} ${
-          title.includes('Coral') ? styles.OptionContainerCoral : null
+          title.includes('Coral')
+            ? styles.OptionContainerCoral
+            : isSpark
+            ? styles.OptionContainerSpark
+            : ''
         } ${includeLencol ? styles.OptionContainerSelected : null}`}
         onClick={() => setIncludeLencol((prev) => !prev)}
       >
