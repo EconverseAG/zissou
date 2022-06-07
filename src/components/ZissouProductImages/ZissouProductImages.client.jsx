@@ -6,6 +6,8 @@ import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductImages.module.scss';
 
+import ArrowNextSpark from '../../assets/next-arrow-spark.svg';
+import ArrowPrevSpark from '../../assets/prev-arrow-spark.svg';
 import ArrowNext from '../../assets/next-arrow.svg';
 import ArrowPrev from '../../assets/prev-arrow.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
@@ -23,7 +25,8 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro, isBase, isLencol, isDuvet} = useZissouProduct();
+  const {isTravesseiro, isBase, isLencol, isDuvet, isSpark} =
+    useZissouProduct();
 
   const {isMobile} = useMobile();
 
@@ -105,7 +108,11 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           className={`${styles.arrow} ${styles.arrowPrev}`}
           onClick={sliderRef?.slickPrev}
         >
-          <Image src={ArrowPrev} width={12} height={35} />
+          <Image
+            src={isSpark ? ArrowPrevSpark : ArrowPrev}
+            width={12}
+            height={35}
+          />
         </button>
         <Slider
           ref={setSliderRef}
@@ -146,7 +153,11 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           className={`${styles.arrow} ${styles.arrowNext}`}
           onClick={sliderRef?.slickNext}
         >
-          <Image src={ArrowNext} width={12} height={35} />
+          <Image
+            src={isSpark ? ArrowNextSpark : ArrowNext}
+            width={12}
+            height={35}
+          />
         </button>
       </div>
       {isMobile && title && <h2 className={styles.title}>{title}</h2>}
