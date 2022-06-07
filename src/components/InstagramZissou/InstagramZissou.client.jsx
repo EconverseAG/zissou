@@ -14,16 +14,20 @@ import * as styles from './InstagramZissou.module.scss';
 
 import useMobile from '../../hooks/useMobile';
 
-export default function Instagram({title, background}) {
+export default function Instagram({title, subtitle, background}) {
   const {isMobile} = useMobile();
   return (
     <div
       className={styles.InstagramContainer}
       style={{background: background ? `linear-gradient(${background})` : ''}}
     >
-      <strong className={styles.InstagramTitle}>
+      <strong
+        className={styles.InstagramTitle}
+        style={{marginBottom: subtitle ? '0' : ''}}
+      >
         {title ? title : 'EU AMO E RECOMENDO ZISSOU!'}
       </strong>
+      {subtitle && <span className={styles.InstagramSubtitle}>{subtitle}</span>}
       <div className={styles.InstagramPosts}>
         <div className={styles.BigPost}>
           <Link to="/">
