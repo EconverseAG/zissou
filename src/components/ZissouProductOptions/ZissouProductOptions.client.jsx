@@ -6,21 +6,9 @@ import useZissouProduct from '../../hooks/useZissouProduct';
 
 import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
 
-import SolteiroIcon from '../../assets/solteiro.png';
-import SolteiroEspecialIcon from '../../assets/solteiro-especial.png';
-import CasalIcon from '../../assets/casal.png';
-import KingIcon from '../../assets/king.png';
-import KingBrIcon from '../../assets/king-br.png';
-import QueenIcon from '../../assets/queen.png';
-
-import SolteiroIconBlue from '../../assets/solteiro-blue.png';
-import CasalIconBlue from '../../assets/casal-blue.png';
-import KingIconBlue from '../../assets/king-blue.png';
-import KingBrIconBlue from '../../assets/king-br-blue.png';
-import QueenIconBlue from '../../assets/queen-blue.png';
-
 import * as styles from './ZissouProductOptions.module.scss';
 import useOutsideClick from '../../hooks/useOutsideClick';
+import SizeIcon from '../SizeIcon';
 
 function ZissouProductOptions({
   title,
@@ -47,48 +35,6 @@ function ZissouProductOptions({
       setIsOpen(false);
     },
     [setSelectedOption],
-  );
-
-  const renderIcon = useCallback(
-    (option) => {
-      if (!option || !icons) return;
-
-      let icon;
-      let width;
-      let height = 40;
-
-      if (option.includes('Solteiro')) {
-        icon = isColchao && !isCoral ? SolteiroIconBlue : SolteiroIcon;
-        width = 17;
-      } else if (option.includes('Solteiro Especial')) {
-        icon = isColchao && !isCoral ? SolteiroIconBlue : SolteiroEspecialIcon;
-        width = 17;
-      } else if (option.includes('Casal')) {
-        icon = isColchao && !isCoral ? CasalIconBlue : CasalIcon;
-        width = 35;
-      } else if (option.includes('King')) {
-        icon = isColchao && !isCoral ? KingIconBlue : KingIcon;
-        width = 39;
-        height = 46;
-      } else if (option.includes('King Br')) {
-        icon = isColchao && !isCoral ? KingBrIconBlue : KingBrIcon;
-        width = 39;
-        height = 46;
-      } else if (option.includes('Queen')) {
-        icon = isColchao && !isCoral ? QueenIconBlue : QueenIcon;
-        width = 37;
-        height = 46;
-      }
-
-      if (!icon) return;
-
-      return (
-        <div className={styles.selectIcon}>
-          <Image src={icon} width={width} height={height} loading={'lazy'} />
-        </div>
-      );
-    },
-    [icons, isColchao, isCoral],
   );
 
   const renderFormattedName = useCallback((name) => {
@@ -140,7 +86,11 @@ function ZissouProductOptions({
           }`}
           onClick={() => setIsOpen(true)}
         >
-          {renderIcon(selectedVariant?.selectedOptions[0].value)}
+          {icons && (
+            <div className={styles.selectIcon}>
+              <SizeIcon name={selectedVariant?.selectedOptions[0].value} />
+            </div>
+          )}
           <p>
             {renderFormattedName(selectedVariant?.selectedOptions[0].value)}
           </p>
@@ -174,7 +124,11 @@ function ZissouProductOptions({
                 onClick={() => handleSelection(selectedOptions)}
                 className={styles.selectDropdownOption}
               >
-                {renderIcon(selectedOptions[0]?.value)}
+                {icons && (
+                  <div className={styles.selectIcon}>
+                    <SizeIcon name={selectedOptions[0]?.value} />
+                  </div>
+                )}
                 <p>{renderFormattedName(selectedOptions[0]?.value)}</p>
               </button>
             ))}
