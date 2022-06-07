@@ -828,4 +828,43 @@
       }
     }
   }
+
+  &.spark {
+    font-family: ZonaPro;
+
+    strong, strong.Title, .Icons strong.IconTitle {
+      color: #9873AC;
+    }
+
+    .SpecsColchaoSlickSecondSliderBackground5 {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+      height: 700px;
+      background: #D1BEDE;
+
+      .sparkSensationsGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1020px;
+        gap: 70px 50px;
+  
+        .GridItem {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          color: #6D6C6C;
+  
+          strong {
+            font-family: ZonaProBlack;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
 }
