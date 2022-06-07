@@ -11,7 +11,7 @@
     line-height: 42px;
     margin: 105px 0 50px;
     color: var(--white-color);
-    letter-spacing: 5px;
+    letter-spacing: 0.12em;
 
     @media only screen and (max-width: 1023px) {
       margin: 53.8px 0 27px;
@@ -19,6 +19,25 @@
       line-height: 25px;
       text-align: center;
       width: 80%;
+    }
+  }
+
+  .InstagramSubtitle {
+    font-family: 'ZonaPro';
+    font-size: 21px;
+    letter-spacing: 0.08em;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    margin-top: 19.2px;
+    margin-bottom: 58px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      line-height: 19px;
+      margin-top: 15.4px;
+      margin-bottom: 50.4px;
     }
   }
 
