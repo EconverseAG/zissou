@@ -12,7 +12,7 @@ import InstagramZissou from '../InstagramZissou/InstagramZissou.client';
 import SparkProduct from '../SparkProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
+import Gif100DiasSpark from '../../assets/gif-100-dias-Spark.gif';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.client';
 import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
@@ -41,7 +41,7 @@ export default function Coral() {
       <TourSpark />
       <SpecsColchaoSlick />
       <DoubtsProductPage />
-      <TryItFor100Days video={Gif100DiasCoral} />
+      <TryItFor100Days image={Gif100DiasSpark} />
       <SparkWhereAllStarts />
       <InstagramZissou
         title={'#MEUMOMENTOSPARK'}
