@@ -183,10 +183,10 @@ export default function SpecsSparkSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
                 }
               >
-                - Composta pela espuma HR Acefom com látex infused de origem
-                belga, exclusivo Zissou. Torna Spark ideal para quem prefere um
-                colchão que proporciona distribuição uniforme de peso, com total
-                conforto
+                - Composta por espuma Acefom HR om Latex Infused de origem
+                belga, exclusiva da Zissou. Torna Spark ideal para quem prefere
+                um colchão que proporciona distribuição uniforme de peso, com
+                total conforto.
                 <br />
                 <br />
                 - Proporciona resiliência e suporte progressivo, com apoio
