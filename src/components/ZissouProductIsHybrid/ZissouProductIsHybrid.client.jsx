@@ -138,13 +138,14 @@ export default function ZissouProductIsHybrid() {
             <span className={styles.LeftText}>
               Substituição do suporte de espuma de alta resiliência por{' '}
               <strong className={styles.Bolder}>
-                suporte híbrido Spring System Plus com molas ensacadas
+                suporte híbrido com molas Leggett & Platt ensacadas
                 individualmente
               </strong>
             </span>
             <br />
             <span className={styles.LeftText}>
-              ✓ 4cm a mais de altura, com total de 29cm
+              ✓ {isSpark ? 5 : 4}cm a mais de altura, com total de{' '}
+              {isSpark ? 25 : 29}cm
             </span>
             <br />
             <span className={styles.LeftText}>
