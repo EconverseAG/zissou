@@ -4,6 +4,7 @@ import * as styles from './header.module.scss';
 
 import ColchaoCoral from '../../assets/menuItem__Coral.png';
 import ColchaoBlue from '../../assets/menuItem__Blue.png';
+import ColchaoSpark from '../../assets/menuItem__Spark.png';
 
 /**
  * A client component that defines the navigation for a web storefront
@@ -24,6 +25,11 @@ export default function Navigation() {
               <li className={styles.blue}>
                 <Link to="/products/colchao-zissou-blue">
                   <Image src={ColchaoBlue} width="205" height="27" />
+                </Link>
+              </li>
+              <li className={styles.spark}>
+                <Link to="/products/colchao-zissou-spark">
+                  <Image src={ColchaoSpark} width="205" height="27" />
                 </Link>
               </li>
               <li>

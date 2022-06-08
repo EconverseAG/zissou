@@ -167,6 +167,16 @@
                   }
                 }
 
+                &.spark {
+                  &:hover {
+                    &:after {
+                      width: 100%;
+                      opacity: 1;
+                      background: #9873AC;
+                    }
+                  }
+                }
+
                 >a {
                   font-family: 'ZonaPro';
                   font-size: 11px;

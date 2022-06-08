@@ -9,6 +9,7 @@ import * as styles from './header.module.scss';
 import LogoZissou from '../../assets/logo-zissou-antigo.svg';
 import ColchaoCoral from '../../assets/menuItem__Coral.png';
 import ColchaoBlue from '../../assets/menuItem__Blue.png';
+import ColchaoSpark from '../../assets/menuItem__Spark.png';
 import WhatsAppMenu from '../../assets/whatsapp-menu.png';
 import MenuLocator from '../../assets/menu-locator.png';
 
@@ -93,6 +94,11 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       <li className={styles.blue}>
                         <Link to="/products/colchao-zissou-blue">
                           <Image src={ColchaoBlue} width="205" height="27" />
+                        </Link>
+                      </li>
+                      <li className={styles.spark}>
+                        <Link to="/products/colchao-zissou-blue">
+                          <Image src={ColchaoSpark} width="205" height="27" />
                         </Link>
                       </li>
                       <li>
