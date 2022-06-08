@@ -48,11 +48,13 @@ export default function ArticlesIndex() {
             <h3 className={styles.ArticlePostTitle}>{article.title}</h3>
             <div className={styles.ArticlePostInfo}>
               <div className={styles.ArticlePostInfoImage}>
-                <Image
-                  src={article.image.url}
-                  width={article.image.width}
-                  height={article.image.height}
-                />
+                {article.image && (
+                  <Image
+                    src={article.image.url}
+                    width={article.image.width}
+                    height={article.image.height}
+                  />
+                )}
               </div>
               <div className={styles.ArticlePostInfoText}>
                 <span>{article.excerpt}</span>

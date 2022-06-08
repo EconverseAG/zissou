@@ -134,8 +134,6 @@ function LineInCart() {
     totalCartPrice,
   );
 
-  console.log('productPriceInfo', productPriceInfo);
-
   useEffect(() => {
     if (attributes.length) {
       const attributeDateFiltered = attributes.filter((attribute) => {

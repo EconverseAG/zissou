@@ -10,7 +10,6 @@ export default function ColchoesBanner() {
         autoPlay
         loop
         muted
-        controls
       />
     </div>
   );

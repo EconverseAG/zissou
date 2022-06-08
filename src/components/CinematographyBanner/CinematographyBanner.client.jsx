@@ -4,8 +4,8 @@ import * as styles from './cinematographyBanner.module.scss';
 
 import Logo from '../../assets/logo-zissou-white.webp';
 
-import Video_1 from '../../assets/video_1.webm';
-import Video_2 from '../../assets/video_2.webm';
+import Video_1 from '../../assets/video_1.mp4';
+import Video_2 from '../../assets/video_2.mp4';
 import BannerDefault from '../../assets/banner_default.webp';
 
 export default function CinematographyBanner() {

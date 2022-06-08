@@ -76,14 +76,14 @@ function ZissouAddToCart({
       lines[0].attributes = [
         {
           key: 'EntregaFutura5OFF',
-          value: 'EntregaFutura5OFF',
+          value: Date,
         },
       ];
     } else if (EntregaFutura10OFF) {
       lines[0].attributes = [
         {
           key: 'EntregaFutura10OFF',
-          value: 'EntregaFutura10OFF',
+          value: Date,
         },
       ];
     } else if (Date) {
