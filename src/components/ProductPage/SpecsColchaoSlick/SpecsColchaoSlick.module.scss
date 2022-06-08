@@ -849,6 +849,14 @@
         grid-template-columns: repeat(3, 1fr);
         max-width: 1020px;
         gap: 70px 50px;
+
+        @media only screen and (max-width: 1023px) {
+          padding-top: 80px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0;
+          padding-inline: 30px;
+          height: 100%;
+        }
   
         .GridItem {
           display: flex;
@@ -858,6 +866,7 @@
           line-height: 20px;
           text-align: center;
           color: #6D6C6C;
+          gap: 8px;
   
           strong {
             font-family: ZonaProBlack;
