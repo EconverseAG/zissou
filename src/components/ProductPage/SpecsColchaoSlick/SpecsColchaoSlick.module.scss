@@ -899,11 +899,6 @@
       }
     }
 
-    .SpecsColchaoSlickSecondSliderBackground4 {
-      @media only screen and (max-width: 1023px) {
-        height: auto;
-      }
-    }
     .sparkSuporte {
       display: flex;
       justify-content: space-between;
@@ -912,7 +907,6 @@
 
       @media only screen and (max-width: 1023px) {
         flex-direction: column;
-        height: auto;
       }
 
       .SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal {
@@ -920,7 +914,8 @@
         padding: 30px 20px 25px 30px;
 
         @media only screen and (max-width: 1023px) {
-          padding: 21px 0 72px;
+          padding: 21px 0 0;
+          height: 100%;
         }
       }
 
@@ -954,8 +949,10 @@
         justify-content: flex-start;
 
         @media only screen and (max-width: 1023px) {
-          padding-top: 150px;
-          padding-bottom: 30px;
+          padding-top: 125px;
+          padding-bottom: 20px;
+          height: auto;
+          flex: 0;
         }
 
         &ImageTitle {
@@ -969,11 +966,23 @@
         justify-content: flex-end;
 
         @media only screen and (max-width: 1023px) {
+          justify-content: flex-start;
+
           .Title {
             color: #fff;
           }
         }
       }
+    }
+  }
+}
+
+.SpecsColchaoSlickContainer .SpecsColchaoSlickFirstSlider.SpecsColchaoSlickFirstSliderSpark {
+  @media only screen and (max-width: 1023px) {
+    top: 43px;
+
+    .SpecsColchaoSlickFirstSliderTabs {
+      height: 62px;
     }
   }
 }
