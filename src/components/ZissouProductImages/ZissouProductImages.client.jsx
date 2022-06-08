@@ -149,6 +149,10 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
                 height={396}
                 style={{width: '100%'}}
               />
+              <span className={styles.bannerTitle}>
+                Colchão
+                <br /> Zissou Spark
+              </span>
             </div>
           )}
           <div className={styles.imageContainer}>

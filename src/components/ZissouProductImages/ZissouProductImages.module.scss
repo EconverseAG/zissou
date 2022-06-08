@@ -60,6 +60,23 @@
       }
     }
 
+    .imageContainer {
+      position: relative;
+
+      .bannerTitle {
+        position: absolute;
+        color: #fff; 
+        left: 50%;
+        transform: translateX(-50%);
+        top: 86px;
+        font-size: 20px;
+        font-family: ZonaProBlack;
+        text-transform: uppercase;
+        line-height: 25px;
+        text-align: center;
+      }
+    }
+
     .slider {
       display: block;
       width: 100%;
