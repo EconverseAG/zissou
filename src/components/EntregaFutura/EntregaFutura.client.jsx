@@ -1,6 +1,4 @@
 import {useState} from 'react';
-import plus1Month from '../../helpers/plus1Month';
-import plus2Months from '../../helpers/plus2Months';
 import useMobile from '../../hooks/useMobile';
 import ZissouAddToCart from '../ZissouAddToCart';
 
@@ -12,31 +10,6 @@ export default function EntregaFutura() {
   const [inputDate, setInputDate] = useState('');
   const [step, setStep] = useState(1);
   const date = new Date();
-
-  const get1Months = (day) => {
-    const date = new Date(day);
-    const newDate = new Date(date.setMonth(date.getMonth() + 1));
-    return (
-      newDate.getDate() +
-      '/' +
-      newDate
-        .toLocaleString('default', {month: 'long'})
-        .toUpperCase()
-        .substr(0, 3)
-    );
-  };
-  const get2Months = (day) => {
-    const date = new Date(day);
-    const newDate = new Date(date.setMonth(date.getMonth() + 2));
-    return (
-      newDate.getDate() +
-      '/' +
-      newDate
-        .toLocaleString('default', {month: 'long'})
-        .toUpperCase()
-        .substr(0, 3)
-    );
-  };
 
   const handleDate = (e) => {
     setInputDate(e.target.value);
@@ -112,41 +85,10 @@ export default function EntregaFutura() {
           </strong>
           {step == 1 ? (
             <>
-              <div className={styles.EntregaModalDates}>
-                <div className={styles.ThirtyDays}>
-                  <span className={styles.DaysTitle}>
-                    Entrega próxima de{' '}
-                    <strong className={styles.Bolder}>
-                      {get1Months(date)}
-                    </strong>
-                  </span>
-                  <ZissouAddToCart
-                    text="Compre com 5% de desconto"
-                    className={styles.ButtonCTA}
-                    EntregaFutura5OFF={true}
-                    Date={plus1Month(date)}
-                  />
-                </div>
-                <div className={styles.Line} />
-                <div className={styles.SixtyDays}>
-                  <span className={styles.DaysTitle}>
-                    Entrega próxima de{' '}
-                    <strong className={styles.Bolder}>
-                      {get2Months(date)}
-                    </strong>
-                  </span>
-                  <ZissouAddToCart
-                    text="Compre com 10% de desconto"
-                    className={styles.ButtonCTA}
-                    EntregaFutura10OFF={true}
-                    Date={plus2Months(date)}
-                  />
-                </div>
-              </div>
               <div className={styles.SimulateOffer}>
                 <span className={styles.SimulateOfferTitle}>
-                  Já tem uma data em mente? Conta pra gente para oferecermos{' '}
-                  {!isMobile && <br />}a melhor oferta para você:
+                  Insira a data ideal para receber o seu colchão e obtenha a
+                  melhor oferta
                 </span>
                 <div className={styles.SimulateOfferDates}>
                   <input
