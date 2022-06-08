@@ -10,6 +10,7 @@ const ProductDetails = lazy(() =>
   import('../../components/ProductDetails.client'),
 );
 
+const idTravesseiro = `gid://shopify/Product/1556341162057`; //1556341162057
 const idTravesseiroWashable = `gid://shopify/Product/4512182992969`; //4512182992969
 const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`; //4512186564681
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`; //7195872362690
@@ -45,7 +46,8 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     cache: CacheDays(),
   });
 
-  let travesseiroWashable,
+  let travesseiro,
+    travesseiroWashable,
     travesseiroWashableCustom,
     duvetFilling,
     grayDuvetCover,
@@ -58,6 +60,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     spark,
     base;
 
+  travesseiro = useProductQueryById(idTravesseiro);
   travesseiroWashable = useProductQueryById(idTravesseiroWashable);
   travesseiroWashableCustom = useProductQueryById(idTravesseiroWashableCustom);
   coralHybrid = useProductQueryById(idCoralHybrid);
@@ -87,6 +90,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       <Seo type="product" data={baseProduct.data.product} />
       <Suspense fallback={<ZissouLoading />}>
         <ProductDetails
+          travesseiro={travesseiro?.data.product}
           travesseiroWashable={travesseiroWashable?.data.product}
           travesseiroWashableCustom={travesseiroWashableCustom?.data.product}
           duvetFilling={duvetFilling?.data.product}

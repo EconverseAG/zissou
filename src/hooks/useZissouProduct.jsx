@@ -11,6 +11,7 @@ const useZissouProduct = () => useContext(ZissouProductContext);
 function ZissouProductProvider({
   children,
   baseProduct,
+  travesseiro,
   travesseiroWashable,
   travesseiroWashableCustom,
   duvetFilling,
@@ -123,6 +124,7 @@ function ZissouProductProvider({
       grayLencol,
       whiteLencol,
       base,
+      travesseiro,
       travesseiroWashable,
       coralHybrid,
     }),
@@ -147,6 +149,7 @@ function ZissouProductProvider({
       selectedColor,
       spark,
       sparkHybrid,
+      travesseiro,
       travesseiroWashable,
       washable,
       whiteDuvetCover,

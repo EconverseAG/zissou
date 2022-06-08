@@ -1,5 +1,10 @@
-import {useEffect, useCallback} from 'react';
-import {Image, useProduct} from '@shopify/hydrogen/client';
+import {useState, useEffect, useCallback} from 'react';
+import {
+  Image,
+  useProduct,
+  useMoney,
+  flattenConnection,
+} from '@shopify/hydrogen/client';
 
 import BagCustomization from '../BagCustomization';
 
@@ -11,10 +16,31 @@ import * as styles from './TravesseiroSpecialOptions.module.scss';
 import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
 
 function TravesseiroSpecialOptions({className, ...rest}) {
-  const {washable, customBag, setCustomBag, setWashable} = useZissouProduct();
+  const [washablePriceDifference, setWashablePriceDifference] = useState({
+    amount: 0,
+    currencyCode: 'BRL',
+  });
+  const [customizationPriceDifference, setCustomizationPriceDifference] =
+    useState({
+      amount: 0,
+      currencyCode: 'BRL',
+    });
+
+  const {
+    washable,
+    customBag,
+    setCustomBag,
+    setWashable,
+    travesseiroWashable,
+    travesseiro,
+  } = useZissouProduct();
   const {options, selectedOptions, setSelectedOption} = useProduct();
 
+  const product = useProduct();
   const {isMobile} = useMobile();
+
+  const washablePriceAddition = useMoney(washablePriceDifference);
+  const customizationPriceAddition = useMoney(customizationPriceDifference);
 
   const toggleWashable = useCallback(
     (e) => {
@@ -44,6 +70,39 @@ function TravesseiroSpecialOptions({className, ...rest}) {
     setSelectedOption(options[0].name, options[0].values[customBag ? 1 : 0]);
   }, [washable, customBag, setSelectedOption, options, selectedOptions]);
 
+  useEffect(() => {
+    if (
+      washablePriceDifference?.amount + customizationPriceDifference?.amount !==
+      0
+    )
+      return;
+
+    const washablePrice = flattenConnection(travesseiroWashable.variants)[0]
+      ?.priceV2?.amount;
+    const normalPrice = flattenConnection(travesseiro.variants)[0]?.priceV2
+      ?.amount;
+    const customPrice = flattenConnection(travesseiro.variants)[1]?.priceV2
+      ?.amount;
+
+    const washableDifference = {
+      ...product?.selectedVariant?.priceV2,
+      amount: Number(normalPrice) - Number(washablePrice),
+    };
+    const customDifference = {
+      ...product?.selectedVariant?.priceV2,
+      amount: Number(normalPrice) - Number(customPrice),
+    };
+
+    setWashablePriceDifference(washableDifference);
+    setCustomizationPriceDifference(customDifference);
+  }, [
+    customizationPriceDifference,
+    product,
+    travesseiro,
+    travesseiroWashable,
+    washablePriceDifference,
+  ]);
+
   return (
     <div
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''} ${
@@ -71,7 +130,11 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               htmlFor="travesseiro-washable"
             >
               <span>Opção lavável</span>
-              {washable && <strong>+ R$100,00</strong>}
+              {washable && (
+                <strong>
+                  + {washablePriceAddition?.localizedString?.replace('-', '')}
+                </strong>
+              )}
             </label>
           </button>
           {washable && (
@@ -116,7 +179,15 @@ function TravesseiroSpecialOptions({className, ...rest}) {
               htmlFor="travesseiro-customization"
             >
               <span>Customização na bag</span>
-              {customBag && <strong>+ R$50,00</strong>}
+              {customBag && (
+                <strong>
+                  +{' '}
+                  {customizationPriceAddition?.localizedString?.replace(
+                    '-',
+                    '',
+                  )}
+                </strong>
+              )}
             </label>
           </button>
           {customBag && (

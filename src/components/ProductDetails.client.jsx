@@ -11,6 +11,7 @@ import Toca from './Product/Toca.client';
 
 export default function ProductDetails({
   product,
+  travesseiro,
   travesseiroWashable,
   travesseiroWashableCustom,
   duvetFilling,
@@ -66,6 +67,7 @@ export default function ProductDetails({
     <>
       <ZissouProductProvider
         baseProduct={product}
+        travesseiro={travesseiro}
         travesseiroWashable={travesseiroWashable}
         travesseiroWashableCustom={travesseiroWashableCustom}
         duvetFilling={duvetFilling}
