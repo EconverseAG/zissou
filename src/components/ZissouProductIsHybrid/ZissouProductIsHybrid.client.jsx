@@ -12,14 +12,22 @@ import * as styles from './ZissouProductIsHybrid.module.scss';
 import HybridColchao from '../../assets/hybrid-colchao.webm';
 
 export default function ZissouProductIsHybrid() {
+  const [oldProduct, setOldProduct] = useState();
   const [priceDifference, setPriceDifference] = useState({
     amount: 0,
     currencyCode: 'BRL',
   });
 
   const product = useProduct();
-  const {coralIsHybrid, setCoralIsHybrid, isSpark, coralHybrid, sparkHybrid} =
-    useZissouProduct();
+  const {
+    coralIsHybrid,
+    setCoralIsHybrid,
+    isSpark,
+    coralHybrid,
+    sparkHybrid,
+    coral,
+    spark,
+  } = useZissouProduct();
 
   const {isMobile} = useMobile();
   const hybridPriceAddition = useMoney(priceDifference);
@@ -53,26 +61,32 @@ export default function ZissouProductIsHybrid() {
   );
 
   useEffect(() => {
-    if (priceDifference.amount !== 0) return;
+    if (product?.selectedVariant?.id === oldProduct?.selectedVariant?.id)
+      return;
 
     const hybridPrice = getProductEquivalentVariant(
       isSpark ? sparkHybrid : coralHybrid,
     )?.priceV2?.amount;
 
-    const productPrice = product?.selectedVariant?.priceV2.amount;
+    const normalPrice = getProductEquivalentVariant(isSpark ? spark : coral)
+      ?.priceV2?.amount;
 
     const difference = {
       ...product?.selectedVariant?.priceV2,
-      amount: Number(productPrice) - Number(hybridPrice),
+      amount: Number(normalPrice) - Number(hybridPrice),
     };
 
     setPriceDifference(difference);
+    setOldProduct(product);
   }, [
+    coral,
     coralHybrid,
     getProductEquivalentVariant,
     isSpark,
+    oldProduct,
     priceDifference.amount,
     product,
+    spark,
     sparkHybrid,
   ]);
 
