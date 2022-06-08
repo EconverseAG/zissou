@@ -19,8 +19,8 @@ import * as styles from './SparkProduct.module.scss';
 import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
 import RestockDate from '../RestockDate/RestockDate.client';
 
-import BannerHolistix from '../../assets/holistix-offer.png';
-import BannerHolistixMobile from '../../assets/holistix-offer-mobile.png';
+import BannerHolistix from '../../assets/holistix-offer.gif';
+import BannerHolistixMobile from '../../assets/holistix-offer-mobile.gif';
 
 function SparkProduct() {
   const {isMobile} = useMobile();
