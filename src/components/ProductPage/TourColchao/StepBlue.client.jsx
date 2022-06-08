@@ -27,7 +27,7 @@ function StepBlueContent({content, setModal}) {
     if (indexOnClick < modalData.length - 1) {
       setModal(<ModalContent modalContent={newContent} />);
     } else {
-      setModal(<ModalContent modalContent={modalData[0]} />);
+      CloseModal();
     }
   };
 
