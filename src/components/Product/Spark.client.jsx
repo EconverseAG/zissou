@@ -18,6 +18,9 @@ import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.clie
 import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
 
+import SparkCgi from '../../assets/spark-cgi.mp4';
+import SparkCgiMobile from '../../assets/spark-cgi-mobile.mp4';
+
 export default function Coral() {
   const {isMobile} = useMobile();
 
@@ -28,6 +31,13 @@ export default function Coral() {
         <BannerProductPage src={BannerSparkPDP} title="Colchão Zissou Spark" />
       )}
       <SparkProduct />
+      <video
+        style={{width: '100%'}}
+        src={isMobile ? SparkCgiMobile : SparkCgi}
+        autoPlay
+        loop
+        muted
+      />
       <TourSpark />
       <SpecsColchaoSlick />
       <DoubtsProductPage />
