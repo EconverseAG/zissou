@@ -24,7 +24,9 @@ export default function Coral() {
   return (
     <LoadingProvider>
       <ProductFixedBarColchao title="SPARK" subtitle={'ONDE TUDO COMEÇA'} />
-      {!isMobile && <BannerProductPage src={BannerSparkPDP} />}
+      {!isMobile && (
+        <BannerProductPage src={BannerSparkPDP} title="Colchão Zissou Spark" />
+      )}
       <SparkProduct />
       <TourSpark />
       <SpecsColchaoSlick />
