@@ -275,7 +275,7 @@ function ComfortLayerTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Látex Classic</h3>
+            <h3>Latex Classic</h3>
             <br />
             <p>
               • Látex nobre e sofisticado
@@ -288,7 +288,7 @@ function ComfortLayerTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Látex Classic</h3>
+            <h3>Latex Classic</h3>
             <br />
             <p>
               • Látex nobre e sofisticado
@@ -301,7 +301,7 @@ function ComfortLayerTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Látex Pulse</h3>
+            <h3>Latex Pulse</h3>
             <br />
             <p>
               • Verdadeiramente único como camada de conforto
