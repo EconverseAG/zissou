@@ -836,6 +836,10 @@
       color: #9873AC;
     }
 
+    .SpecsColchaoSlickSecondSliderBackgroundSuporteRightImageTitle, .SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImageTitle {
+      top: -20% !important;
+    }
+
     .SpecsColchaoSlickSecondSliderBackground2 {
       .SpecsColchaoSlickSecondSliderBackgroundInfo {
         padding-bottom: 6px;
@@ -976,7 +980,7 @@
 
       .SpecsColchaoSlickSecondSliderBackgroundSuporteRight, .SpecsColchaoSlickSecondSliderBackgroundSuporteLeft {
         &Image {
-          width: 46%;
+          width: 40%;
         }
       }
     }
