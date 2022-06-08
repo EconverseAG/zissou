@@ -6,7 +6,7 @@ import NotFound from './components/NotFound.server';
 import CartProvider from './components/Cart/CartProvider.client';
 import Product from './routes/products/[handle].server';
 import Home from './routes/index.server';
-import Tags from './components/Tags.client';
+import Tags from './components/Tags/Tags.client';
 
 function App(props) {
   return (
