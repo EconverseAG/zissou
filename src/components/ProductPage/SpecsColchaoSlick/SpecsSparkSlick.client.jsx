@@ -33,7 +33,7 @@ import SuportePDP from '../../../assets/suporte-spark.svg';
 import IsolamentoPDP from '../../../assets/isolamento-spark.svg';
 import AdaptacaoPDP from '../../../assets/adaptacao-spark.svg';
 
-import ColchoesCoral from '../../../assets/colchoes_coral.png';
+import CaixaSpark from '../../../assets/caixa-beneficios-spark.png';
 
 import IconeGarantia from '../../../assets/icone_garantia_spark.svg';
 import IconeEntrega from '../../../assets/icone_entrega_spark.svg';
@@ -551,12 +551,7 @@ export default function SpecsSparkSlick() {
               styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
             }
           >
-            <Image
-              src={ColchoesCoral}
-              width={496}
-              height={523}
-              loading={'lazy'}
-            />
+            <Image src={CaixaSpark} width={496} height={523} loading={'lazy'} />
           </div>
         </div>
       </Slider>
