@@ -14,8 +14,8 @@ import Brands from '../../../assets/brands_pdp.png';
 import ToqueESensacaoTermica from '../../../assets/toque_pdp_spark.png';
 import CamadaDeConforto from '../../../assets/camada-de-conforto-spark.png';
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
-import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
+import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-spark-mobile.png';
+import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-spark-mobile.png';
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
 
