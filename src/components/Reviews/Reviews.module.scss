@@ -56,11 +56,13 @@
       line-height: 21px;
       color: var(--gray-color-600);
       margin-bottom: 17px;
+      white-space: nowrap;
 
       @media only screen and (max-width: 1023px) {
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 15px;
+        white-space: normal;
       }
     }
 

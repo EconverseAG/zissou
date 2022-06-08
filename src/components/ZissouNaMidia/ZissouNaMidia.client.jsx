@@ -135,9 +135,9 @@ export default function ZissouNaMidia() {
               <SvgFirstMark />
             </div>
             <span>
-              Quem quer experimentar o produto pode ir até uma das lojas testar
-              a peça em um quarto privado e aconchegante, com iluminação e
-              trilha sonora escolhidas pelo visitante.
+              Quem quer experimentar o produto pode ir até a Casa Zissou, em São
+              Paulo, e testar a peça em um quarto privado e aconchegante, com
+              iluminação e trilha sonora escolhidas pelo visitante.
             </span>
             <div className={styles.lastMarks}>
               <SvgLastMark />
