@@ -97,7 +97,7 @@ export default function ZissouProductIsHybrid() {
       }`}
     >
       <strong className={styles.IsHybridTitle}>
-        {isMobile ? 'Adicionar suporte extra' : 'Adicionar suporte híbrido'}
+        ADICIONAR SUPORTE HÍBRIDO (ESPUMA + MOLAS)
       </strong>
       <div
         className={styles.toggleWrapper}
