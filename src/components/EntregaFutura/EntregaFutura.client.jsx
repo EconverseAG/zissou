@@ -112,10 +112,6 @@ export default function EntregaFutura() {
           </strong>
           {step == 1 ? (
             <>
-              <span className={styles.EntregaModalSubtitle}>
-                Relaxe! Nosso time de atendimento entrará em contato após sua
-                compra para combinar direitinho a data de entrega ;)
-              </span>
               <div className={styles.EntregaModalDates}>
                 <div className={styles.ThirtyDays}>
                   <span className={styles.DaysTitle}>
