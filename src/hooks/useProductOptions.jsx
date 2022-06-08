@@ -19,7 +19,7 @@ function ProductOptionsProvider({children}) {
     const referenceOption =
       referenceProduct.selectedOptions[
         referenceProduct.options[0].name
-      ].toLowerCase();
+      ]?.toLowerCase();
 
     let searchTerm;
 
@@ -35,7 +35,7 @@ function ProductOptionsProvider({children}) {
 
     return newProduct.options[0].values
       .sort((a, b) => (a.length > b.length ? 1 : a.length < b.length ? -1 : 0))
-      .find((option) => option.toLowerCase().includes(searchTerm));
+      .find((option) => option?.toLowerCase()?.includes(searchTerm));
   }, []);
 
   useEffect(() => {
