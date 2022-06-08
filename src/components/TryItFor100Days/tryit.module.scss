@@ -20,7 +20,6 @@
   .TryItLeft {
     display: flex;
     flex-direction: column;
-    margin-right: 150px;
 
     strong {
       font-family: "ZonaProBold";
@@ -30,6 +29,7 @@
       text-transform: uppercase;
       letter-spacing: 5px;
       margin-bottom: 23px;
+      white-space: nowrap;
 
       >p {
         display: inline;

@@ -11,7 +11,6 @@ import {
   useCart,
   useCartLine,
   AddToCartButton,
-  CartCheckoutButton,
 } from '@shopify/hydrogen/client';
 import {Dialog} from '@headlessui/react';
 
@@ -598,16 +597,13 @@ function CartFooter({totalLine}) {
           </div>
         </div>
       </div>
-      {/* <CheckoutButton
+      <CheckoutButton
         className={styles.cartCheckout}
         cart={cart}
         config={shopifyConfig}
       >
         FINALIZAR COMPRA (CartPanda)
-      </CheckoutButton> */}
-      <CartCheckoutButton className={styles.cartCheckout}>
-        FINALIZAR COMPRA (Econverse)
-      </CartCheckoutButton>
+      </CheckoutButton>
     </footer>
   );
 }

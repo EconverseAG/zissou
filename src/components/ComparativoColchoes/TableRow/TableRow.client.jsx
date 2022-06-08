@@ -38,7 +38,9 @@ function TableRow({heading, children, className, scrollbar, ...rest}) {
         {...rest}
       >
         {!isMobile && (
-          <th className={heading ? '' : styles.headingUnused}>{heading}</th>
+          <th className={heading ? styles.FirstCol : styles.headingUnused}>
+            {heading}
+          </th>
         )}
         {children}
       </tr>

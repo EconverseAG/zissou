@@ -1,7 +1,7 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './OpenYourHeart.module.scss';
 
-import Gif from '../../assets/gif-abra-seu-coracao.webm';
+import Gif from '../../assets/gif-abra-seu-coracao.gif';
 import Whatsapp from '../../assets/icone-menu-whatsapp-white.webp';
 
 import useMobile from '../../hooks/useMobile';
@@ -24,7 +24,8 @@ export default function OpenYourHeart() {
           target="_blank"
         >
           <div className={styles.OpenLeft}>
-            <video src={Gif} autoPlay loop muted />
+            {/* <video src={Gif} autoPlay loop muted /> */}
+            <Image src={Gif} width={692} height={380} />
           </div>
         </Link>
         <Link
