@@ -1,5 +1,10 @@
 import gql from 'graphql-tag';
-import {useShopQuery, CacheDays, Image} from '@shopify/hydrogen';
+import {
+  useShopQuery,
+  CacheDays,
+  Image,
+  flattenConnection,
+} from '@shopify/hydrogen';
 import Layout from '../Layout.server';
 
 import Privacy from '../../assets/privacy_policy.png';
@@ -24,7 +29,7 @@ export default function Article({params, pathname, response}) {
     preload: true,
   });
 
-  const article = blog.articles.edges[0].node;
+  const article = flattenConnection(blog.articles);
 
   return (
     <Layout>
@@ -35,7 +40,7 @@ export default function Article({params, pathname, response}) {
       <div className={styles.ArticleContainer}>
         <h1 className={styles.ArticleTitle}>{article.title}</h1>
         <article
-          dangerouslySetInnerHTML={{__html: article.contentHtml}}
+          dangerouslySetInnerHTML={{__html: article[0].contentHtml}}
         ></article>
       </div>
     </Layout>

@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import plus1Month from '../../helpers/plus1Month';
+import plus2Months from '../../helpers/plus2Months';
 import useMobile from '../../hooks/useMobile';
 import ZissouAddToCart from '../ZissouAddToCart';
 
@@ -126,6 +128,7 @@ export default function EntregaFutura() {
                     text="Compre com 5% de desconto"
                     className={styles.ButtonCTA}
                     EntregaFutura5OFF={true}
+                    Date={plus1Month(date)}
                   />
                 </div>
                 <div className={styles.Line} />
@@ -140,6 +143,7 @@ export default function EntregaFutura() {
                     text="Compre com 10% de desconto"
                     className={styles.ButtonCTA}
                     EntregaFutura10OFF={true}
+                    Date={plus2Months(date)}
                   />
                 </div>
               </div>
