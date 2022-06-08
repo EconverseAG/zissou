@@ -6,14 +6,16 @@ import NotFound from './components/NotFound.server';
 import CartProvider from './components/Cart/CartProvider.client';
 import Product from './routes/products/[handle].server';
 import Home from './routes/index.server';
+import Tags from './components/Tags.client';
 
-function App({routes}) {
+function App(props) {
   return (
     <ShopifyProvider shopifyConfig={shopifyConfig}>
       <CartProvider>
+        <Tags pathname={props.pathname} />
         <DefaultSeo />
         <Router>
-          <FileRoutes routes={routes} />
+          <FileRoutes routes={props.routes} />
           <Route path="/" page={<Home />} />
           <Route path="/products/:handle" page={<Product />} />
           <Route path="*" page={<NotFound />} />
