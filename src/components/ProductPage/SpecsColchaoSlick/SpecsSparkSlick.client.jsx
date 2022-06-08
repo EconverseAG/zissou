@@ -207,12 +207,12 @@ export default function SpecsSparkSlick() {
                 <br />- Propriedades hipoalergênicas, antimicrobianas e
                 resistência a ácaros
               </span>
+              {isMobile ? (
+                <div className={styles.brands}>
+                  <Image src={Brands} width={340} height={53} />
+                </div>
+              ) : null}
             </div>
-            {isMobile ? (
-              <div className={styles.brands}>
-                <Image src={Brands} width={340} height={53} />
-              </div>
-            ) : null}
           </div>
           <Image
             src={isMobile ? CamadaDeConfortoMobile : CamadaDeConforto}
