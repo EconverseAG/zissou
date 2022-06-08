@@ -37,7 +37,7 @@ function ComfortLayerTable({...rest}) {
           <TableCheck checked colorBlue />
         </td>
       </TableRow>
-      <TableRow heading="Propriedades intimicrobianas e resistência a ácaros">
+      <TableRow heading="Propriedades antimicrobianas e resistência a ácaros">
         <td>
           <TableCheck checked colorSpark />
         </td>
