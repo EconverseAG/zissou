@@ -5,7 +5,7 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './ZissouProductPrice.module.scss';
 
-function ZissouProductPrice({...rest}) {
+function ZissouProductPrice({showListPrice, ...rest}) {
   const {selectedVariant} = useProduct();
   const {isMobile} = useMobile();
 
@@ -25,7 +25,8 @@ function ZissouProductPrice({...rest}) {
         rest.className || ''
       } ${styles.grayContent}`}
     >
-      {selectedVariant?.compareAtPriceV2 &&
+      {showListPrice &&
+        selectedVariant?.compareAtPriceV2 &&
         selectedVariant?.compareAtPriceV2?.amount !==
           selectedVariant?.priceV2?.amount && (
           <span className={styles.listPrice}>
