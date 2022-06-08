@@ -190,8 +190,8 @@ function SupportSystemTable({...rest}) {
         <td>
           <div>
             <p>
-              • Sistema de suporte Leggett Inside com espuma e molas com 15cm de
-              altura
+              • Sistema de suporte híbrido com espuma e molas Leggett & Platt
+              com 15cm de altura
               <br />
               • Molas com zoneamento ergonômico, que proporcionam melhor
               alinhamento da coluna
