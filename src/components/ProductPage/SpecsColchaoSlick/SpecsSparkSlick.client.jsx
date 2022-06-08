@@ -19,8 +19,8 @@ import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.pn
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
 
-import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_1.png';
-import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_2.png';
+import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_spark_1.png';
+import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_spark_2.png';
 import SistemaDeSuporte1Mobile from '../../../assets/colchao_sistema_suporte_1_mobile.png';
 import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_mobile.png';
 
@@ -289,55 +289,46 @@ export default function SpecsSparkSlick() {
         <div
           className={`${styles.SpecsColchaoSlickSecondSliderBackground} ${styles.SpecsColchaoSlickSecondSliderBackground4}`}
         >
-          <div
-            className={
-              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
-            }
-          >
+          <div className={styles.sparkSuporte}>
             <div
               className={
-                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImage
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
               }
             >
-              <span
+              <div
                 className={
-                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImageTitle
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImage
                 }
               >
-                sistema <br /> de suporte
-              </span>
-              <Image
-                src={isMobile ? SistemaDeSuporte1Mobile : SistemaDeSuporte1}
-                width={isMobile ? '213' : '368'}
-                height={isMobile ? '181' : '305'}
-                loading={'lazy'}
-              />
-              <Image
-                src={SetaPDP}
-                width="137"
-                height="82"
-                className={styles.seta}
-                loading={'lazy'}
-              />
-            </div>
-            <div
-              className={
-                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal
-              }
-            >
-              <strong className={styles.Title}>
-                ESTABILIDADE E {!isMobile && <br />} SUPORTE UNIFORME
-              </strong>
-              {isMobile ? (
                 <span
                   className={
-                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftImageTitle
                   }
                 >
-                  Base de espuma de poliuretano de alta densidade para maior
-                  suporte e isolamento de movimentos
+                  sistema <br /> de suporte
                 </span>
-              ) : (
+                <Image
+                  src={isMobile ? SistemaDeSuporte1Mobile : SistemaDeSuporte1}
+                  width={isMobile ? '213' : '368'}
+                  height={isMobile ? '181' : '305'}
+                  loading={'lazy'}
+                />
+                <Image
+                  src={SetaPDP}
+                  width="137"
+                  height="82"
+                  className={styles.seta}
+                  loading={'lazy'}
+                />
+              </div>
+              <div
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodal
+                }
+              >
+                <strong className={styles.Title}>
+                  ESTABILIDADE E {!isMobile && <br />} SUPORTE UNIFORME
+                </strong>
                 <span
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
@@ -349,35 +340,23 @@ export default function SpecsSparkSlick() {
                   <br />- Oferece suporte uniforme ao corpo e às camadas de
                   conforto, além de reforçar o isolamento de movimentos
                 </span>
-              )}
+              </div>
             </div>
-          </div>
-          <div
-            className={
-              styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRight
-            }
-          >
             <div
               className={
-                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal
+                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRight
               }
             >
-              <strong className={styles.Title}>
-                BOUNCE COM
-                {!isMobile && <br />}
-                ADAPTAÇÃO AO CORPO
-              </strong>
-              {isMobile ? (
-                <span
-                  className={
-                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
-                  }
-                >
-                  Base de sustentação composta por molas Leggett & Platt
-                  ensacadas individualmente Maior adaptabilidade do colchão às
-                  curvas do corpo e circulação de ar potencialiada
-                </span>
-              ) : (
+              <div
+                className={
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal
+                }
+              >
+                <strong className={styles.Title}>
+                  BOUNCE COM
+                  {!isMobile && <br />}
+                  ADAPTAÇÃO AO CORPO
+                </strong>
                 <span
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodalTitle
@@ -399,36 +378,36 @@ export default function SpecsSparkSlick() {
                   <br />- Reforço nas bordas, com molas mais firmes em todo o
                   perímetro
                 </span>
-              )}
-            </div>
-            <div
-              className={
-                styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
-              }
-            >
-              <span
+              </div>
+              <div
                 className={
-                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImageTitle
+                  styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
                 }
               >
-                OPÇÃO DE SISTEMA
-                <br />
-                DE SUPORTE HÍBRIDO
-                <br />
-              </span>
-              <Image
-                src={isMobile ? SistemaDeSuporte2Mobile : SistemaDeSuporte2}
-                width={isMobile ? '213' : '368'}
-                height={isMobile ? '181' : '333'}
-                loading={'lazy'}
-              />
-              <Image
-                src={SetaPDP}
-                width="137"
-                height="82"
-                className={styles.seta}
-                loading={'lazy'}
-              />
+                <span
+                  className={
+                    styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImageTitle
+                  }
+                >
+                  OPÇÃO DE SISTEMA
+                  <br />
+                  DE SUPORTE HÍBRIDO
+                  <br />
+                </span>
+                <Image
+                  src={isMobile ? SistemaDeSuporte2Mobile : SistemaDeSuporte2}
+                  width={isMobile ? '213' : '368'}
+                  height={isMobile ? '181' : '333'}
+                  loading={'lazy'}
+                />
+                <Image
+                  src={SetaPDP}
+                  width="137"
+                  height="82"
+                  className={styles.seta}
+                  loading={'lazy'}
+                />
+              </div>
             </div>
           </div>
         </div>

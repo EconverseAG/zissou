@@ -866,5 +866,82 @@
         }
       }
     }
+
+    .SpecsColchaoSlickSecondSliderBackground4 {
+      @media only screen and (max-width: 1023px) {
+        height: auto;
+      }
+    }
+    .sparkSuporte {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 700px;
+
+      @media only screen and (max-width: 1023px) {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .SpecsColchaoSlickSecondSliderBackgroundSuporteRightMinimodal {
+        width: 313px;
+        padding: 30px 20px 25px 30px;
+
+        @media only screen and (max-width: 1023px) {
+          padding: 21px 0 72px;
+        }
+      }
+
+      .SpecsColchaoSlickSecondSliderBackgroundSuporteLeft, .SpecsColchaoSlickSecondSliderBackgroundSuporteRight {
+        flex: 1;
+        height: 100%;
+        padding-top: 150px;
+
+        @media only screen and (max-width: 1023px) {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+        }
+
+        &ImageTitle {
+          font-size: 20px;
+          color: #9873AC;
+          display: block;
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 11px;
+            line-height: 15px;
+            text-align: left;
+            top: -46px;
+          }
+        }
+      }
+      
+      .SpecsColchaoSlickSecondSliderBackgroundSuporteLeft {
+        background: #F0F0F0;
+        justify-content: flex-start;
+
+        @media only screen and (max-width: 1023px) {
+          padding-top: 150px;
+          padding-bottom: 30px;
+        }
+
+        &ImageTitle {
+          text-align: right;
+          top: 0;
+        }
+      }
+
+      .SpecsColchaoSlickSecondSliderBackgroundSuporteRight {
+        background: #D1BEDE;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 1023px) {
+          .Title {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
