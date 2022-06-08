@@ -247,7 +247,7 @@ function ComfortLayerTable({...rest}) {
       <TableRow heading="Descritivo de materiais">
         <td>
           <div>
-            <h3>Aceform HR com látex</h3>
+            <h3>Latex Infused</h3>
             <br />
             <p>
               • Espuma de alta resiliência com látex na composição, de origem
@@ -261,7 +261,7 @@ function ComfortLayerTable({...rest}) {
         </td>
         <td>
           <div>
-            <h3>Aceform HR com látex</h3>
+            <h3>Latex Infused</h3>
             <br />
             <p>
               • Espuma de alta resiliência com látex na composição, de origem
