@@ -35,6 +35,32 @@ export default function ProductDetails({
   const [isToca, setIsToca] = useState(false);
 
   useEffect(() => {
+    let products = [];
+    product.variants.edges.map((variant, index) => {
+      products.push({
+        list_position: index,
+        product_title: product.title,
+        product_id: window.atob(product.id).split('Product/')[1],
+        variant_title: variant.node.title,
+        variant_id: window.atob(variant.node.id).split('Variant/')[1],
+        sku: variant.node.sku,
+        quantity: 1,
+        id: window.atob(variant.node.id).split('Variant/')[1],
+        price: variant.node.priceV2.amount,
+        vendor: 'Zissou',
+      });
+    });
+
+    window.dataLayer.push({
+      event: 'product_page_view',
+      data: {
+        items: products,
+        source: 'product_page',
+      },
+    });
+  });
+
+  useEffect(() => {
     switch (handle) {
       case 'colchao-zissou-coral-original':
         setIsColchao(true);
