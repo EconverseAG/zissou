@@ -41,7 +41,7 @@ export default function ChooseYourDestiny() {
     {
       banner: Banner_5,
       mobileImage: MobileBanner_5,
-      link: '/pages/toca-zissou',
+      link: '/products/toca-zissou',
       CTA: 'TOCA',
     },
   ];
