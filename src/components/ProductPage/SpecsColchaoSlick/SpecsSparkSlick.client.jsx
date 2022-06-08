@@ -17,7 +17,7 @@ import CamadaDeConforto from '../../../assets/camada-de-conforto-spark.png';
 import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-spark-mobile.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-spark-mobile.png';
 
-import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+import MulherDeitada from '../../../assets/mulher_deitada_pdp_spark.png';
 
 import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_spark_1.png';
 import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_spark_2.png';
