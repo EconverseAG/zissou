@@ -4,7 +4,10 @@
   align-items: center;
   justify-content: center;
   background: var(--gray-color-100);
-  padding: 0 40px;
+  
+  @media only screen and (max-width: 1200px) {
+    padding: 0 10px;
+  }
 
   >span {
     display: block;
@@ -42,7 +45,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      width: 440px;
+      width: 400px;
       height: 305px;
       background: var(--white-color);
       position: relative;
@@ -104,12 +107,17 @@
         text-transform: uppercase;
         margin-top: auto;
         letter-spacing: 1px;
+        transition: .4s;
 
         @media only screen and (max-width: 1023px) {
           height: 45px;
           margin-top: 0;
           font-size: 14px;
           line-height: 19px;
+        }
+
+        &:hover {
+          opacity: .8;
         }
       }
 

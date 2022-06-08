@@ -28,6 +28,14 @@
   }
 
   th {
+    &.FirstCol {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: #fff !important;
+      z-index: 1;
+    }
+
     &.headingUnused {
       visibility: hidden;
     }
