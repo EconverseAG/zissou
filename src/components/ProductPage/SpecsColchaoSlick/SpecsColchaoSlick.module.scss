@@ -973,6 +973,12 @@
           }
         }
       }
+
+      .SpecsColchaoSlickSecondSliderBackgroundSuporteRight, .SpecsColchaoSlickSecondSliderBackgroundSuporteLeft {
+        &Image {
+          width: 46%;
+        }
+      }
     }
   }
 }
