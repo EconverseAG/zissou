@@ -1,3 +1,9 @@
+import {useState, useEffect, useCallback} from 'react';
+import {
+  useProduct,
+  useMoney,
+  flattenConnection,
+} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
@@ -6,9 +12,83 @@ import * as styles from './ZissouProductIsHybrid.module.scss';
 import HybridColchao from '../../assets/hybrid-colchao.webm';
 
 export default function ZissouProductIsHybrid() {
-  const {coralIsHybrid, setCoralIsHybrid, isSpark} = useZissouProduct();
+  const [oldProduct, setOldProduct] = useState();
+  const [priceDifference, setPriceDifference] = useState({
+    amount: 0,
+    currencyCode: 'BRL',
+  });
+
+  const product = useProduct();
+  const {
+    coralIsHybrid,
+    setCoralIsHybrid,
+    isSpark,
+    coralHybrid,
+    sparkHybrid,
+    coral,
+    spark,
+  } = useZissouProduct();
 
   const {isMobile} = useMobile();
+  const hybridPriceAddition = useMoney(priceDifference);
+
+  const getProductEquivalentVariant = useCallback(
+    ({variants}) => {
+      variants = flattenConnection(variants);
+
+      const determineSearchTerm = () => {
+        const currentVariant = product?.selectedVariant?.title.toLowerCase();
+
+        if (!currentVariant) return '';
+
+        if (currentVariant.includes('solteiro espeical'))
+          return 'solteiro especial';
+        if (currentVariant.includes('solteiro')) return 'solteiro';
+        if (currentVariant.includes('casal')) return 'casal';
+        if (currentVariant.includes('king br')) return 'king br';
+        if (currentVariant.includes('king')) return 'king';
+        if (currentVariant.includes('queen')) return 'queen';
+      };
+
+      const searchTerm = determineSearchTerm();
+
+      return (
+        variants?.find(({title}) => title.toLowerCase().includes(searchTerm)) ||
+        variants[0]
+      );
+    },
+    [product],
+  );
+
+  useEffect(() => {
+    if (product?.selectedVariant?.id === oldProduct?.selectedVariant?.id)
+      return;
+
+    const hybridPrice = getProductEquivalentVariant(
+      isSpark ? sparkHybrid : coralHybrid,
+    )?.priceV2?.amount;
+
+    const normalPrice = getProductEquivalentVariant(isSpark ? spark : coral)
+      ?.priceV2?.amount;
+
+    const difference = {
+      ...product?.selectedVariant?.priceV2,
+      amount: Number(normalPrice) - Number(hybridPrice),
+    };
+
+    setPriceDifference(difference);
+    setOldProduct(product);
+  }, [
+    coral,
+    coralHybrid,
+    getProductEquivalentVariant,
+    isSpark,
+    oldProduct,
+    priceDifference.amount,
+    product,
+    spark,
+    sparkHybrid,
+  ]);
 
   return (
     <div
@@ -41,7 +121,9 @@ export default function ZissouProductIsHybrid() {
           Suporte Híbrido {isMobile && <br />} (espuma + molas)
           {coralIsHybrid && <br />}
           {coralIsHybrid ? (
-            <strong className={styles.Bigger}>+ R$ 1.100,00</strong>
+            <strong className={styles.Bigger}>
+              + {hybridPriceAddition?.localizedString.replace('-', '')}
+            </strong>
           ) : (
             ''
           )}

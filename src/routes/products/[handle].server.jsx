@@ -19,6 +19,8 @@ const idWhiteLencol = `gid://shopify/Product/2135741923401`; //2135741923401
 const idBase = `gid://shopify/Product/7145404399810`; //7145404399810
 const idCoralHybrid = `gid://shopify/Product/6587140604098`; //6587140604098
 const idSparkHybrid = `gid://shopify/Product/7406293352642`; //7406293352642
+const idCoral = `gid://shopify/Product/6581615460546`; //6581615460546
+const idSpark = `gid://shopify/Product/7406293352642`; //7406293352642
 
 export default function Product({country = {isoCode: 'US'}, response}) {
   const {handle} = useRouteParams();
@@ -52,12 +54,16 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     whiteLencol,
     coralHybrid,
     sparkHybrid,
+    coral,
+    spark,
     base;
 
   travesseiroWashable = useProductQueryById(idTravesseiroWashable);
   travesseiroWashableCustom = useProductQueryById(idTravesseiroWashableCustom);
   coralHybrid = useProductQueryById(idCoralHybrid);
   sparkHybrid = useProductQueryById(idSparkHybrid);
+  coral = useProductQueryById(idCoral);
+  spark = useProductQueryById(idSpark);
   base = useProductQueryById(idBase);
   whiteLencol = useProductQueryById(idWhiteLencol);
   grayDuvetCover = useProductQueryById(idGrayDuvetCover);
@@ -91,6 +97,8 @@ export default function Product({country = {isoCode: 'US'}, response}) {
           base={base?.data.product}
           coralHybrid={coralHybrid?.data.product}
           sparkHybrid={sparkHybrid?.data.product}
+          coral={coral?.data.product}
+          spark={spark?.data.product}
           product={baseProduct?.data.product}
         />
       </Suspense>

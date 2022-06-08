@@ -21,6 +21,8 @@ export default function ProductDetails({
   base,
   coralHybrid,
   sparkHybrid,
+  coral,
+  spark,
 }) {
   const {handle} = useRouteParams();
 
@@ -74,6 +76,8 @@ export default function ProductDetails({
         base={base}
         coralHybrid={coralHybrid}
         sparkHybrid={sparkHybrid}
+        coral={coral}
+        spark={spark}
         isColchao={isColchao}
         isBase={isBase}
         isDuvet={isDuvet}
