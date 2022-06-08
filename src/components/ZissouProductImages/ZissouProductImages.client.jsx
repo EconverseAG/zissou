@@ -15,6 +15,7 @@ import BaseBanner from '../../assets/base-banner.gif';
 import LencolBanner from '../../assets/lencol-banner-background.png';
 import DuvetBanner from '../../assets/duvet-banner-background.png';
 import SparkBanner from '../../assets/pdp-spark-mobile.png';
+import SparkCaixa from '../../assets/spark-caixa.png';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -159,6 +160,16 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
             />
           </div>
           {renderImages()}
+          {isSpark && (
+            <div className={styles.imageContainer}>
+              <Image
+                src={SparkCaixa}
+                width={1235}
+                height={775}
+                style={{width: '100%'}}
+              />
+            </div>
+          )}
         </Slider>
         <button
           className={`${styles.arrow} ${styles.arrowNext}`}
