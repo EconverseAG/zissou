@@ -12,7 +12,7 @@ export default function CoralOrBlue() {
     <div className={styles.CoralOrBlueContainer}>
       <strong className={styles.CoralOrBlueTitle}>SPARK, CORAL OU BLUE?</strong>
       <video src={isMobile ? GifFundoMobile : GifFundo} autoPlay loop muted />
-      <Link to="/pages/colchoes-zissou" className={styles.CoralOrBlueLink}>
+      <Link to="/pages/comparativo-colchoes" className={styles.CoralOrBlueLink}>
         Comparar os colchões
       </Link>
     </div>
