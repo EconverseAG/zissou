@@ -62,7 +62,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     base;
 
   switch (handle) {
-    case 'travesseiro-zissou':
+    case 'travesseiro-zissou-newurl':
       travesseiro = useProductQueryById(idTravesseiro);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       break;

@@ -87,17 +87,17 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       }}
                     >
                       <li className={styles.coral}>
-                        <Link to="/products/colchao-zissou-coral-original">
+                        <Link to="/products/colchao-zissou-coral-original-newurl">
                           <Image src={ColchaoCoral} width="205" height="27" />
                         </Link>
                       </li>
                       <li className={styles.blue}>
-                        <Link to="/products/colchao-zissou-blue">
+                        <Link to="/products/colchao-zissou-blue-newurl">
                           <Image src={ColchaoBlue} width="205" height="27" />
                         </Link>
                       </li>
                       <li className={styles.spark}>
-                        <Link to="/products/colchao-zissou-blue">
+                        <Link to="/products/colchao-zissou-spark">
                           <Image src={ColchaoSpark} width="205" height="27" />
                         </Link>
                       </li>
@@ -123,7 +123,9 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                     <Link to="/products/base-zissou">Base</Link>
                   </li>
                   <li>
-                    <Link to="/products/travesseiro-zissou">Travesseiro</Link>
+                    <Link to="/products/travesseiro-zissou-newurl">
+                      Travesseiro
+                    </Link>
                   </li>
                   <li>
                     <div className={styles.titleWithArrow}>

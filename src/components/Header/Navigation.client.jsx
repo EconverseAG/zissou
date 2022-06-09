@@ -18,12 +18,12 @@ export default function Navigation() {
             <Link to="/pages/colchoes-zissou">Colchões</Link>
             <ul className={styles.subMenu}>
               <li className={styles.coral}>
-                <Link to="/products/colchao-zissou-coral-original">
+                <Link to="/products/colchao-zissou-coral-original-newurl">
                   <Image src={ColchaoCoral} width="205" height="27" />
                 </Link>
               </li>
               <li className={styles.blue}>
-                <Link to="/products/colchao-zissou-blue">
+                <Link to="/products/colchao-zissou-blue-newurl">
                   <Image src={ColchaoBlue} width="205" height="27" />
                 </Link>
               </li>
@@ -51,7 +51,7 @@ export default function Navigation() {
             <Link to="/products/base-zissou">Base</Link>
           </li>
           <li>
-            <Link to="/products/travesseiro-zissou">Travesseiro</Link>
+            <Link to="/products/travesseiro-zissou-newurl">Travesseiro</Link>
           </li>
           <li>
             <Link to="/pages/lencol-e-duvet-zissou">Lençol & Duvet</Link>
