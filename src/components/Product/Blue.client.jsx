@@ -16,6 +16,9 @@ import {LoadingProvider} from '../../hooks/useLoading';
 import useMobile from '../../hooks/useMobile';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
+import BlueCgi from '../../assets/blue-cgi.mp4';
+import BlueCgiMobile from '../../assets/blue-cgi-mobile.mp4';
+
 export default function Blue() {
   const {isMobile} = useMobile();
 
@@ -24,6 +27,13 @@ export default function Blue() {
       <ProductFixedBarColchao title="BLUE" subtitle={'LIBERTE SEUS SONHOS'} />
       {!isMobile && <BannerProductPage src={BannerBluePDP} />}
       <CoralProduct />
+      <video
+        style={{width: '100%'}}
+        src={isMobile ? BlueCgiMobile : BlueCgi}
+        autoPlay
+        loop
+        muted
+      />
       <CinematographyBanner />
       <TourColchao />
       <SpecsColchaoSlick />
