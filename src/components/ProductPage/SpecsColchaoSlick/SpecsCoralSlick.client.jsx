@@ -397,8 +397,7 @@ export default function SpecsCoralSlick() {
                   }
                 >
                   - Substituição do suporte de espuma de alta resiliência por
-                  suporte híbrido Spring System Plus com molas ensacadas
-                  individualmente
+                  suporte híbrido com molas Leggett & Platt
                   <br />
                   <br />
                   - Inclui camada de transição de poliuretano com alta
@@ -407,7 +406,7 @@ export default function SpecsCoralSlick() {
                   <br />
                   <br />
                   - Bounce com maior adaptabilidade do colchão às curvas do
-                  corpo e circulação de ar interna
+                  corpo e circulação de as interna
                   <br />
                   <br />- Reforço nas bordas, com molas mais firmes em todo o
                   perímetro
