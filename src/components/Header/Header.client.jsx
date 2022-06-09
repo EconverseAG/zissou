@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Link} from '@shopify/hydrogen/client';
+import {Link, useRouteParams} from '@shopify/hydrogen/client';
 
 import CartToggle from '../Cart/CartToggle.client';
 import {useCartUI} from '../Cart/CartUIProvider.client';
@@ -26,12 +26,18 @@ export default function Header({collections, storeName}) {
 
   const {isMobile} = useMobile();
 
+  const {handle} = useRouteParams();
+
   useEffect(() => {
     const scrollbarWidth =
       window.innerWidth - document.documentElement.clientWidth;
 
     setScrollbarWidth(scrollbarWidth);
   }, [isCartOpen]);
+
+  useEffect(() => {
+    setIsMobileNavOpen(false);
+  }, [handle]);
 
   useEffect(() => {
     const handleScroll = () => {
