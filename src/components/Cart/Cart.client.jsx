@@ -107,6 +107,8 @@ function LineInCart() {
     totalCartPrice,
   );
 
+  console.log('cart>>>', cart);
+
   useEffect(() => {
     if (attributes.length) {
       const attributeDateFiltered = attributes.filter((attribute) => {
@@ -355,6 +357,18 @@ function CartShelf() {
       title: 'Lençol Cinza Casal',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
     },
+    {
+      title: 'Lençol Cinza Queen',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjA2NTM0Ng==',
+    },
+    {
+      title: 'Lençol Cinza King BR',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjA5ODExNA==',
+    },
+    {
+      title: 'Lençol Cinza King',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjEzMDg4Mg==',
+    }
   ];
 
   let productFiltered = product.filter((product) => {
