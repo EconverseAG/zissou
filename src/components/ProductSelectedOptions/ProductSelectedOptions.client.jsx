@@ -5,7 +5,7 @@ function ProductSelectedOptions({className, ...rest}) {
 
   return (
     <div className={className} {...rest}>
-      <span>{selectedVariant?.selectedOptions[0].value}</span>
+      <span>{selectedVariant?.selectedOptions[0].value.split(' (')[0]}</span>
     </div>
   );
 }
