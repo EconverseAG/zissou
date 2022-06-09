@@ -394,16 +394,8 @@ function CartShelf() {
   ];
 
   let productFiltered = products.filter((product) => {
-    return (
-      product.title.includes(
-        lines[0].merchandise.selectedOptions[0].value.split(' (')[0],
-      ) ||
-      product.title.includes(
-        lines[1]?.merchandise.selectedOptions[0].value.split(' (')[0],
-      ) ||
-      product.title.includes(
-        lines[2]?.merchandise.selectedOptions[0].value.split(' (')[0],
-      )
+    return product.title.includes(
+      lines[0].merchandise.selectedOptions[0].value.split(' (')[0],
     );
   });
 
@@ -424,28 +416,73 @@ function CartShelf() {
     let baseFiltered = productFiltered.filter((product) => {
       return product.title.includes('Base');
     });
-    setBase(baseFiltered[0]?.id);
+
+    if (baseFiltered.length > 0) {
+      setBase(baseFiltered[0]?.id);
+    } else {
+      setBase(
+        products.filter((product) => {
+          return product.title.includes('Base Solteiro');
+        })[0]?.id,
+      );
+    }
 
     let whiteLencolFiltered = productFiltered.filter((product) => {
       return product.title.includes('Lençol Branco');
     });
-    setWhiteLencol(whiteLencolFiltered[0]?.id);
+
+    if (whiteLencolFiltered.length > 0) {
+      setWhiteLencol(whiteLencolFiltered[0]?.id);
+    } else {
+      setWhiteLencol(
+        products.filter((product) => {
+          return product.title.includes('Lençol Branco Solteiro');
+        })[0]?.id,
+      );
+    }
 
     let grayLencolFiltered = productFiltered.filter((product) => {
       return product.title.includes('Lençol Cinza');
     });
-    setGrayLencol(grayLencolFiltered[0]?.id);
+
+    if (grayLencolFiltered.length > 0) {
+      setGrayLencol(grayLencolFiltered[0]?.id);
+    } else {
+      setGrayLencol(
+        products.filter((product) => {
+          return product.title.includes('Lençol Cinza Solteiro');
+        })[0]?.id,
+      );
+    }
 
     let whiteDuvetFiltered = productFiltered.filter((product) => {
       return product.title.includes('Duvet Branco');
     });
-    setWhiteDuvet(whiteDuvetFiltered[0]?.id);
+
+    if (whiteDuvetFiltered.length > 0) {
+      setWhiteDuvet(whiteDuvetFiltered[0]?.id);
+    } else {
+      setWhiteDuvet(
+        products.filter((product) => {
+          return product.title.includes('Duvet Branco Solteiro');
+        })[0]?.id,
+      );
+    }
 
     let grayDuvetFiltered = productFiltered.filter((product) => {
       return product.title.includes('Duvet Cinza');
     });
-    setGrayDuvet(grayDuvetFiltered[0]?.id);
-  }, [lines, productFiltered]);
+
+    if (grayDuvetFiltered.length > 0) {
+      setGrayDuvet(grayDuvetFiltered[0]?.id);
+    } else {
+      setGrayDuvet(
+        products.filter((product) => {
+          return product.title.includes('Duvet Cinza Solteiro');
+        })[0]?.id,
+      );
+    }
+  }, [lines, productFiltered, products]);
 
   return (
     <div className={styles.cartShelfContainer}>
@@ -473,6 +510,18 @@ function CartShelf() {
             <AddToCartButton
               variantId={
                 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc2MDQxMzIyOTEyOQ=='
+              }
+              onClickCapture={removeItem}
+            >
+              Adicionar
+            </AddToCartButton>
+          </div>
+          <div className={styles.slideItem}>
+            <span>Travesseiro</span>
+            <Image src={TravesseiroLavavel} width="75" height="24" />
+            <AddToCartButton
+              variantId={
+                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzY0NzcwMDM2MTI4OQ=='
               }
               onClickCapture={removeItem}
             >

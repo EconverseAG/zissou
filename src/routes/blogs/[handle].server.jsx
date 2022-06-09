@@ -57,7 +57,13 @@ export default function ArticlesIndex() {
                 )}
               </div>
               <div className={styles.ArticlePostInfoText}>
-                <span>{article.excerpt}</span>
+                {article.excerpt ? (
+                  <span>{article.excerpt}</span>
+                ) : (
+                  <span className={styles.TextWithoutExcerpt}>
+                    {article.content}
+                  </span>
+                )}
               </div>
             </div>
             <Link
@@ -83,7 +89,7 @@ const ARTICLES_QUERY = gql`
       seo {
         description
       }
-      articles(sortKey: PUBLISHED_AT, first: 10, reverse: true) {
+      articles(sortKey: PUBLISHED_AT, first: 250, reverse: true) {
         edges {
           node {
             title
@@ -97,6 +103,7 @@ const ARTICLES_QUERY = gql`
               height
             }
             excerpt
+            content
           }
         }
       }

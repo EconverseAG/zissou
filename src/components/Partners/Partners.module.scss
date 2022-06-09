@@ -231,4 +231,12 @@
       }
     }
   }
+
+  &.blue {
+    .PartnersContent {
+      .PartnersRightTitle, .PartnersLeftTitle {
+        color: rgb(202, 222, 232);
+      }
+    }
+  }
 }
