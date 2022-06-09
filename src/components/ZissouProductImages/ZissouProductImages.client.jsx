@@ -18,6 +18,7 @@ import LencolBanner from '../../assets/lencol-banner-background.png';
 import DuvetBanner from '../../assets/duvet-banner-background.png';
 import SparkBanner from '../../assets/pdp-spark-mobile.png';
 import SparkCaixa from '../../assets/spark-caixa.png';
+import CoralCaixa from '../../assets/caixas-coral.jpg';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -176,6 +177,11 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
                 height={775}
                 style={{width: '100%'}}
               />
+            </div>
+          )}
+          {isCoral && (
+            <div className={styles.imageContainer}>
+              <Image src={CoralCaixa} width={720} height={453} />
             </div>
           )}
         </Slider>
