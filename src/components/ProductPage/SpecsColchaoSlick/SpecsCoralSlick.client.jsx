@@ -586,20 +586,6 @@ export default function SpecsCoralSlick() {
                   </Link>
                 </span>
               </div>
-              <div className={styles.BeneficiosItem}>
-                <strong className={styles.BeneficiosItemTitle}>
-                  INFORMAÇÕES TÉCNICAS
-                </strong>
-                <span className={styles.BeneficiosItemSubtitle}>
-                  Para saber mais sobre informações técnicas dos colchões,{' '}
-                  <Link
-                    to="/pages/comparativo-colchoes"
-                    className={styles.BeneficiosItemSubtitleLink}
-                  >
-                    clique aqui
-                  </Link>
-                </span>
-              </div>
             </div>
           </div>
           <div
