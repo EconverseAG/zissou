@@ -29,6 +29,8 @@ export default function ArticlesIndex() {
   const articles = flattenConnection(data.blog.articles);
   const title = data.blog.title;
 
+  console.log('>>> articles', articles);
+
   return (
     <Layout>
       <styles.StyleTag />

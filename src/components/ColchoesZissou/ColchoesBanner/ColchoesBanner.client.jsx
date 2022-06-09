@@ -6,15 +6,32 @@ import useMobile from '../../../hooks/useMobile';
 export default function ColchoesBanner() {
   const {isMobile} = useMobile();
 
-  return (
+  return !isMobile ? (
     <div className={styles.ColchoesBannerContainer}>
       <video
         className={styles.video}
-        src={isMobile ? ColchoesBannerVideoMobile : ColchoesBannerVideo}
+        src={ColchoesBannerVideo}
         autoPlay
         loop
         muted
       />
     </div>
+  ) : (
+    <div
+      className={styles.ColchoesBannerContainer}
+      dangerouslySetInnerHTML={{
+        __html: `
+          <video
+            className="${styles.video}"
+            src="${ColchoesBannerVideoMobile}"
+            autoPlay
+            loop
+            muted
+            playsInline
+            width="100%"
+          />
+        `,
+      }}
+    />
   );
 }
