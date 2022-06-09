@@ -12,7 +12,7 @@ function SparkWhereAllStarts() {
     <div className={`${styles.container} ${isMobile ? styles.mobile : ''}`}>
       <h2>Onde tudo começa</h2>
       <p>
-        Conversas pelo telefone no escurinho, que vão madrugada a dentro e
+        Conversas pelo telefone no escurinho, que vão madrugada adentro e
         aumentam a vontade de estar perto
         <br />
         <br />

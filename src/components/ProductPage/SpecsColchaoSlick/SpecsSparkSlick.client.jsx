@@ -17,7 +17,7 @@ import CamadaDeConforto from '../../../assets/camada-de-conforto-spark.png';
 import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-spark-mobile.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-spark-mobile.png';
 
-import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+import MulherDeitada from '../../../assets/mulher_deitada_pdp_spark.png';
 
 import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_spark_1.png';
 import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_spark_2.png';
@@ -33,7 +33,7 @@ import SuportePDP from '../../../assets/suporte-spark.svg';
 import IsolamentoPDP from '../../../assets/isolamento-spark.svg';
 import AdaptacaoPDP from '../../../assets/adaptacao-spark.svg';
 
-import ColchoesCoral from '../../../assets/colchoes_coral.png';
+import CaixaSpark from '../../../assets/caixa-beneficios-spark.png';
 
 import IconeGarantia from '../../../assets/icone_garantia_spark.svg';
 import IconeEntrega from '../../../assets/icone_entrega_spark.svg';
@@ -472,7 +472,8 @@ export default function SpecsSparkSlick() {
               />
               <span>
                 <strong>OPCIONAL:</strong> Bounce com adaptação às curvas do
-                corpo na opção adicional de sistema híbrido Spring System Plus
+                corpo na opção com sistema de suporte híbrido com molas Leggett
+                & Platt
               </span>
             </div>
           </div>
@@ -543,20 +544,6 @@ export default function SpecsSparkSlick() {
                   </Link>
                 </span>
               </div>
-              <div className={styles.BeneficiosItem}>
-                <strong className={styles.BeneficiosItemTitle}>
-                  INFORMAÇÕES TÉCNICAS
-                </strong>
-                <span className={styles.BeneficiosItemSubtitle}>
-                  Para saber mais sobre informações técnicas dos colchões,{' '}
-                  <Link
-                    to="/pages/comparativo-colchoes"
-                    className={styles.BeneficiosItemSubtitleLink}
-                  >
-                    clique aqui
-                  </Link>
-                </span>
-              </div>
             </div>
           </div>
           <div
@@ -564,12 +551,7 @@ export default function SpecsSparkSlick() {
               styles.SpecsColchaoSlickSecondSliderBackgroundBeneficiosRight
             }
           >
-            <Image
-              src={ColchoesCoral}
-              width={496}
-              height={523}
-              loading={'lazy'}
-            />
+            <Image src={CaixaSpark} width={496} height={523} loading={'lazy'} />
           </div>
         </div>
       </Slider>

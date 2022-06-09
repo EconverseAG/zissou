@@ -8,7 +8,6 @@ import Partners from '../Partners/Partners.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
 import DoubtsProductPage from '../ProductPage/DoubtsProductPage/DoubtsProductPage.client';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
-import InstagramZissou from '../InstagramZissou/InstagramZissou.client';
 import SparkProduct from '../SparkProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
@@ -43,11 +42,6 @@ export default function Coral() {
       <DoubtsProductPage />
       <TryItFor100Days image={Gif100DiasSpark} />
       <SparkWhereAllStarts />
-      <InstagramZissou
-        title={'#MEUMOMENTOSPARK'}
-        subtitle={'Tudo começa com um Spark'}
-        background={'180deg, #779ABF 0%, #9F85B2 100%'}
-      />
       <ZissouStores />
       <Partners color={'#9873AC'} />
       <Reviews />
