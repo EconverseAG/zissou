@@ -83,7 +83,7 @@ const ARTICLES_QUERY = gql`
       seo {
         description
       }
-      articles(first: 10) {
+      articles(sortKey: PUBLISHED_AT, first: 10, reverse: true) {
         edges {
           node {
             title
