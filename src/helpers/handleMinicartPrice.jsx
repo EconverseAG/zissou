@@ -5,7 +5,10 @@ function applyDiscount(
   originalPrice,
   secondDiscount = false,
 ) {
-  if (quantity < 2) return {price, hasDiscount: false, discount: 0};
+  if (quantity < 2) {
+    price = price - price * secondDiscount;
+    return {price, hasDiscount: true, discount: secondDiscount};
+  }
 
   const discountRule = [
     [0, 10000, 0.05],
@@ -45,12 +48,7 @@ export default function TotalMinicartPrices(
 
   let totalMinicartPrices = lines.map(
     (product) => {
-      let discounts = [
-        'EntregaFutura10OFF',
-        'EntregaFutura5OFF',
-        'DateCustom5OFF',
-        'DateCustom10OFF',
-      ];
+      let discounts = ['DateCustom5OFF', 'DateCustom10OFF'];
 
       let hasDiscount = product.attributes.find((attr) =>
         discounts.includes(attr.key),

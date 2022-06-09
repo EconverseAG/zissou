@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useMemo, useState} from 'react';
-import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
+import {useProduct, useCart} from '@shopify/hydrogen/client';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
 import useZissouProduct from '../../hooks/useZissouProduct';
@@ -60,7 +60,12 @@ function ZissouAddToCart({
       lines[0].attributes = [
         {
           key: 'Encomenda',
-          value: restockDate[0].node.value,
+          value:
+            restockDate[0].node.value.split('-')[2] +
+            '/' +
+            restockDate[0].node.value.split('-')[1] +
+            '/' +
+            restockDate[0].node.value.split('-')[0],
         },
       ];
     }
