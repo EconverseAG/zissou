@@ -177,9 +177,9 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                   <li>
                     <Link to="/products/toca-zissou">Toca</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/pages/bundles">Combos</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className={styles.menuMobileContentBottom}>

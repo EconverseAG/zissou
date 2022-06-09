@@ -75,9 +75,9 @@ export default function Navigation() {
           <li>
             <Link to="/products/toca-zissou">Toca</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/pages/bundles">Combos</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>

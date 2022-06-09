@@ -24,6 +24,9 @@ function ZissouAddToCart({
   const {linesAdd} = useCart();
   const {isMobile} = useMobile();
 
+  const cart = useCart()
+
+
   const [hasRestockDate, setHasRestockDate] = useState(false);
 
   const isOutOfStock = useMemo(
@@ -43,7 +46,7 @@ function ZissouAddToCart({
     }
   }, [selectedVariant]);
 
-  const addToCart = useCallback(() => {
+  const addToCart = useCallback((e) => {
     let lines = [
       {
         merchandiseId: selectedVariant?.id,
@@ -106,7 +109,14 @@ function ZissouAddToCart({
         merchandiseId: item.selectedVariant.id,
       });
     });
-    linesAdd(lines);
+    
+    if (!cart.id) {
+      setTimeout(() => {
+        cart.cartCreate({ lines: lines })  
+      }, 1000);
+    } else {
+      cart.linesAdd(lines)
+    }
   }, [
     selectedVariant,
     customBag,
@@ -121,7 +131,7 @@ function ZissouAddToCart({
   ]);
 
   return (
-    <AddToCartButton
+    <button
       className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
         className || ''
       }`}
@@ -134,7 +144,7 @@ function ZissouAddToCart({
         : hasRestockDate
         ? 'Encomendar agora'
         : text}
-    </AddToCartButton>
+    </button>
   );
 }
 

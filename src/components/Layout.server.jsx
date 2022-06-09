@@ -1,3 +1,4 @@
+import {Suspense} from 'react';
 import {
   useShopQuery,
   flattenConnection,
@@ -9,6 +10,8 @@ import gql from 'graphql-tag';
 import Header from './Header/Header.client';
 import Footer from './Footer/Footer.client';
 import Cart from '../components/Cart/Cart.client';
+
+import ZissouLoading from './ZissouLoading';
 
 /**
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
@@ -28,12 +31,16 @@ export default function Layout({children}) {
   return (
     <LocalizationProvider preload="*">
       <div>
-        <Header collections={collections} storeName={storeName} />
-        <Cart />
+        <Suspense fallback={<ZissouLoading />}>
+          <Header collections={collections} storeName={storeName} />
+          <Cart />
+        </Suspense>
         <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
           {children}
         </main>
-        <Footer />
+        <Suspense fallback={<ZissouLoading />}>
+          <Footer />
+        </Suspense>
       </div>
     </LocalizationProvider>
   );

@@ -18,6 +18,13 @@ export default function Footer() {
   return (
     <footer className={styles.footerContainer} role="contentinfo">
       {/* <styles.StyleTag /> */}
+
+      <div className={styles.iconWhatsapp}>
+        <a href="https://api.whatsapp.com/send?phone=5511932858213" target="_blank">
+          <img src="https://cdn.shopify.com/s/files/1/1526/6199/files/whatsapp__widget--icon_1.png?v=1616198354" alt="Fale com a Zissou pelo Whatsapp" srcset="" />
+        </a>
+      </div>
+
       <div className={styles.footerContentTop}>
         <div>
           <strong>Produtos</strong>
@@ -41,9 +48,9 @@ export default function Footer() {
             <li>
               <Link to="/products/base-zissou">Base Zissou</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/pages/bundles">Combos</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
