@@ -36,12 +36,15 @@ import BaseZissou from '../../assets/base_zissou.png';
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
   const {totalQuantity, lines} = useCart();
+  const {estimatedCost} = useCart();
+
+  const totalCartPrice = +estimatedCost?.totalAmount?.amount;
 
   const [totalLine, setTotalLine] = useState();
 
   useEffect(() => {
-    setTotalLine(TotalMinicartPrices(lines, totalQuantity));
-  }, [lines, totalQuantity]);
+    setTotalLine(TotalMinicartPrices(lines, totalQuantity, totalCartPrice));
+  }, [lines, totalCartPrice, totalQuantity]);
 
   return (
     <>
@@ -104,7 +107,6 @@ function LineInCart() {
     totalCartPrice,
   );
 
-  console.log('>>> cart', cart);
   useEffect(() => {
     if (attributes.length) {
       const attributeDateFiltered = attributes.filter((attribute) => {
@@ -364,6 +366,10 @@ function CartShelf() {
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
     },
   ];
+
+  let productFiltered = product.filter((product) => {
+    return product.title.includes();
+  });
 
   const [showBase, setShowBase] = useState(false);
 
