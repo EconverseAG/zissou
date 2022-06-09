@@ -85,6 +85,15 @@
       &Text {
         max-width: 600px;
 
+        .TextWithoutExcerpt {
+          max-width: 900px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 10;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+        }
+
         >span {
           font-size: 14px;
           font-family: 'ZonaPro';
