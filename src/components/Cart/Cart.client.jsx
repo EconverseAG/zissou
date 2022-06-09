@@ -192,7 +192,7 @@ function LineInCart() {
                         date.getFullYear()}
                   </li>
                 </div>
-                <div className={styles.Props}>
+                {/* <div className={styles.Props}>
                   <Label />
                   <li
                     className={styles.cartItemTopRightSpecsList}
@@ -203,7 +203,7 @@ function LineInCart() {
                       : dateEncomendaKey.replace(/(\D)+/g, '')}
                     % OFF
                   </li>
-                </div>
+                </div> */}
               </>
             ) : dateEncomendaKey.length ? (
               <>
@@ -213,7 +213,7 @@ function LineInCart() {
                     entrega próxima de {dateEncomenda}
                   </li>
                 </div>
-                <div className={styles.Props}>
+                {/* <div className={styles.Props}>
                   <Label />
                   <li
                     className={styles.cartItemTopRightSpecsList}
@@ -223,18 +223,8 @@ function LineInCart() {
                       ? Math.ceil(productPriceInfo[0].discount * 100)
                       : dateEncomendaKey.replace(/(\D)+/g, '')}
                   </li>
-                </div>
+                </div> */}
               </>
-            ) : totalCart.totalQuantity >= 2 ? (
-              <div className={styles.Props}>
-                <Label />
-                <li
-                  className={styles.cartItemTopRightSpecsList}
-                  style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
-                >
-                  {Math.ceil(productPriceInfo[0].discount * 100)}% OFF
-                </li>
-              </div>
             ) : null}
           </ul>
         </div>
@@ -245,7 +235,7 @@ function LineInCart() {
       <div className={styles.cartItemBottom}>
         <CartItemQuantity />
         <div className={styles.PriceCartLine}>
-          {productPriceInfo[0].hasDiscount || dateEncomendaKey ? (
+          {/* {productPriceInfo[0].hasDiscount || dateEncomendaKey ? (
             <>
               <CartLinePrice className={styles.OldPrice} />
               <span className={styles.cartItemBottomPrice}>
@@ -256,8 +246,8 @@ function LineInCart() {
               </span>
             </>
           ) : (
+            )} */}
             <CartLinePrice className={styles.cartItemBottomPrice} />
-          )}
         </div>
       </div>
     </div>

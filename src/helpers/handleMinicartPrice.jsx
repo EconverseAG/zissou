@@ -1,4 +1,4 @@
-function applyDiscount(price, quantity = 1, totalCartPrice = 0, originalPrice) {
+function applyDiscount(price, quantity = 1, totalCartPrice = 0, originalPrice, secondDiscount = false) {
   if (quantity < 2) return {price, hasDiscount: false, discount: 0};
 
   const discountRule = [
@@ -11,7 +11,13 @@ function applyDiscount(price, quantity = 1, totalCartPrice = 0, originalPrice) {
 
   discountRule.forEach(([min, max, discount]) => {
     if (totalCartPrice >= min && totalCartPrice <= max) {
-      price = price - price * discount;
+
+      if(secondDiscount != false){
+        price = price - price * (discount + secondDiscount);
+      } else {
+        price = price - price * discount;
+      }
+
     }
   });
 
@@ -47,7 +53,6 @@ export default function TotalMinicartPrices(
       );
 
       let price = +product.merchandise.priceV2.amount * product.quantity;
-
       if (!hasDiscount)
         return applyDiscount(price, totalQuantity, totalCartPrice);
 
@@ -58,10 +63,14 @@ export default function TotalMinicartPrices(
 
       let totalPrice = price - price * discount;
 
-      return applyDiscount(totalPrice, totalQuantity, totalCartPrice, price);
+      console.log('pedrooooo2222222>>>>', discount)
+
+      return applyDiscount(price, totalQuantity, totalCartPrice, price, discount);
     },
     [lines],
   );
+
+  console.log('totalMinicartPrices>>>>', totalMinicartPrices)
 
   return totalMinicartPrices;
 }
