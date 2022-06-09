@@ -27,7 +27,6 @@ export default function ZissouCompreJunto() {
 
   const nameSelected =
     selectedVariant.title.split(' (')[0] || selectedVariant.title;
-  const sizeSelected = selectedVariant.title.split(' (')[1];
 
   return (
     <div className={styles.ZissouCompreJuntoContainer}>
@@ -74,7 +73,6 @@ export default function ZissouCompreJunto() {
           <strong className={styles.OptionInfoProductName}>
             {nameSelected}
           </strong>
-          <span className={styles.OptionInfoMeasures}>({sizeSelected}</span>
         </div>
       </button>
       <button
@@ -152,7 +150,6 @@ export default function ZissouCompreJunto() {
           <strong className={styles.OptionInfoProductName}>
             {nameSelected}
           </strong>
-          <span className={styles.OptionInfoMeasures}>({sizeSelected}</span>
         </div>
       </button>
     </div>

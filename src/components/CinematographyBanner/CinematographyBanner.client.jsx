@@ -4,8 +4,8 @@ import * as styles from './cinematographyBanner.module.scss';
 
 import Logo from '../../assets/logo-zissou-white.webp';
 
-import Blue from '../../assets/video_1.mp4';
-import Coral from '../../assets/video_2.mp4';
+// import Blue from '../../assets/video_1.mp4';
+// import Coral from '../../assets/video_2.mp4';
 import Spark from '../../assets/video_3.mp4';
 import BannerDefault from '../../assets/banner_default.webp';
 
@@ -14,24 +14,24 @@ export default function CinematographyBanner() {
     {
       banner: Spark,
       horaInicio: 0,
-      horaFim: 11,
-      link: '/pages/colchoes-zissou',
-      CTA: 'DESCUBRA OS COLCHÕES',
-    },
-    {
-      banner: Coral,
-      horaInicio: 12,
-      horaFim: 18,
-      link: '/pages/colchoes-zissou',
-      CTA: 'DESCUBRA OS COLCHÕES',
-    },
-    {
-      banner: Blue,
-      horaInicio: 19,
       horaFim: 23,
       link: '/pages/colchoes-zissou',
       CTA: 'DESCUBRA OS COLCHÕES',
     },
+    // {
+    //   banner: Coral,
+    //   horaInicio: 12,
+    //   horaFim: 18,
+    //   link: '/pages/colchoes-zissou',
+    //   CTA: 'DESCUBRA OS COLCHÕES',
+    // },
+    // {
+    //   banner: Blue,
+    //   horaInicio: 19,
+    //   horaFim: 23,
+    //   link: '/pages/colchoes-zissou',
+    //   CTA: 'DESCUBRA OS COLCHÕES',
+    // },
   ];
 
   let hrs = new Date().getHours();
