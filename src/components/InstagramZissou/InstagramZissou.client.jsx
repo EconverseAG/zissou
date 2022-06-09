@@ -37,7 +37,7 @@ import useZissouProduct from '../../hooks/useZissouProduct';
 
 export default function Instagram({title, subtitle, background}) {
   const {isMobile} = useMobile();
-  const {isBlue, isCoral} = useZissouProduct();
+  const zissouContext = useZissouProduct();
 
   return (
     <div
@@ -55,7 +55,13 @@ export default function Instagram({title, subtitle, background}) {
         <div className={styles.BigPost}>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral1 : isBlue ? PostBlue1 : Post1}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral1
+                  : zissouContext?.isBlue
+                  ? PostBlue1
+                  : Post1
+              }
               width={isMobile ? '285' : '376'}
               height={isMobile ? '310' : '410'}
               className={styles.Post}
@@ -66,7 +72,13 @@ export default function Instagram({title, subtitle, background}) {
         <div className={styles.SmallPost}>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral2 : isBlue ? PostBlue2 : Post2}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral2
+                  : zissouContext?.isBlue
+                  ? PostBlue2
+                  : Post2
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -75,7 +87,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral3 : isBlue ? PostBlue3 : Post3}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral3
+                  : zissouContext?.isBlue
+                  ? PostBlue3
+                  : Post3
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -84,7 +102,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral4 : isBlue ? PostBlue4 : Post4}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral4
+                  : zissouContext?.isBlue
+                  ? PostBlue4
+                  : Post4
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -93,7 +117,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral5 : isBlue ? PostBlue5 : Post5}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral5
+                  : zissouContext?.isBlue
+                  ? PostBlue5
+                  : Post5
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -102,7 +132,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral6 : isBlue ? PostBlue6 : Post6}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral6
+                  : zissouContext?.isBlue
+                  ? PostBlue6
+                  : Post6
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -111,7 +147,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral7 : isBlue ? PostBlue7 : Post7}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral7
+                  : zissouContext?.isBlue
+                  ? PostBlue7
+                  : Post7
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -120,7 +162,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral8 : isBlue ? PostBlue8 : Post8}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral8
+                  : zissouContext?.isBlue
+                  ? PostBlue8
+                  : Post8
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
@@ -129,7 +177,13 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
           <Link to="/">
             <Image
-              src={isCoral ? PostCoral9 : isBlue ? PostBlue9 : Post9}
+              src={
+                zissouContext?.isCoral
+                  ? PostCoral9
+                  : zissouContext?.isBlue
+                  ? PostBlue9
+                  : Post9
+              }
               width={isMobile ? '136' : '180'}
               height={isMobile ? '148' : '196'}
               className={styles.Post}
