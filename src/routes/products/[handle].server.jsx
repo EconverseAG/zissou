@@ -20,7 +20,7 @@ const idGrayLencol = `gid://shopify/Product/7195869249730`; //7195869249730
 const idWhiteLencol = `gid://shopify/Product/2135741923401`; //2135741923401
 const idBase = `gid://shopify/Product/7145404399810`; //7145404399810
 const idCoralHybrid = `gid://shopify/Product/6587140604098`; //6587140604098
-const idSparkHybrid = `gid://shopify/Product/7406293352642`; //7406293352642
+const idSparkHybrid = `gid://shopify/Product/7406293221570`; //7406293221570
 const idCoral = `gid://shopify/Product/6581615460546`; //6581615460546
 const idSpark = `gid://shopify/Product/7406293352642`; //7406293352642
 

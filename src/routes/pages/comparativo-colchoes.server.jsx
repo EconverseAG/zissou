@@ -8,7 +8,7 @@ const idCoral = `gid://shopify/Product/6581615460546`;
 const idCoralHybrid = `gid://shopify/Product/6587140604098`;
 const idBlue = `gid://shopify/Product/6581615362242`;
 const idSpark = `gid://shopify/Product/7406293352642`; //7406293352642
-const idSparkHybrid = `gid://shopify/Product/7406293221570`; //7406293352642
+const idSparkHybrid = `gid://shopify/Product/7406293221570`; //7406293221570
 
 export default function ComparativoColchoes({
   country = {isoCode: 'US'},
