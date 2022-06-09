@@ -101,7 +101,7 @@ export default [
         - Sistema do suporte híbrido com molas ensacadas individualmente com 15cm de altura, que proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
         <br />
         <br />
-        - Molas Zoned Spring System com tecnologia de zonamento ergonômico para melhor alinhamento da coluna
+        - Molas Leggett & Platt com tecnologia de zonamento ergonômico para melhor alinhamento da coluna
         <br />
         <br />
         - Sustentação adicional com maior fluxo de ar

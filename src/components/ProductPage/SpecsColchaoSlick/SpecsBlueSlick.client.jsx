@@ -334,30 +334,32 @@ export default function SpecsBlueSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalBolder
                 }
               >
-                SISTEMA DE SUPORTE HÍBRIDO ZONED SPRING SYSTEM
+                SISTEMA DE SUPORTE HÍBRIDO LEGGETT & PLATT
               </strong>
               <span
                 className={
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
                 }
               >
-                - Camada transição de espuma de poliuretano de alta densidade
-                uniformiza a distribuição de peso.
+                - Camada de transição de espuma de poliuretano de alta densidade
+                uniformiza a distribuição de peso
                 <br />
                 <br />
-                - Sistema do suporte híbrido com molas ensacadas individualmente
+                - Sistema de suporte híbrido com molas ensacadas individualmente
                 com 15cm de altura, que proporcionam maior maleabilidade ao
-                colchão, aumentando a adaptabilidade às curvaturas do corpo.
-                <br />
-                <br />- Molas Zoned Spring System com tecnologia de zonamento
-                ergonômico para melhor alinhamento da coluna.
+                colchão, aumentando a adaptabilidade às curvas do corpo
                 <br />
                 <br />
-                - Sustentação adicional com maior fluxo de ar
+                - Molas Legget & Platt com tecnologia de zoneamento ergonômico
+                para melhor alinhamento da coluna
                 <br />
-                <br />- Reforço nas bordas em todas as laterais do colchão com
-                molas mais firmes para garantir a uniformidade do suporte em
-                todas a superfície
+                <br />
+                Sustentação adicional, com maior fluxo de ar
+                <br />
+                <br />
+                Reforço das bordas em todas em todas as lateris do colchão com
+                molas mais firmes, para garantir a uniformidade do suporte em
+                toda a superfície
               </span>
             </div>
           </div>
