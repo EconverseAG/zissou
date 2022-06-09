@@ -8,6 +8,8 @@ import * as styles from './ZissouProductImages.module.scss';
 
 import ArrowNextSpark from '../../assets/next-arrow-spark.svg';
 import ArrowPrevSpark from '../../assets/prev-arrow-spark.svg';
+import ArrowNextBlue from '../../assets/next-arrow-blue.svg';
+import ArrowPrevBlue from '../../assets/prev-arrow-blue.svg';
 import ArrowNextCoral from '../../assets/next-arrow.svg';
 import ArrowPrevCoral from '../../assets/prev-arrow.svg';
 import ArrowNext from '../../assets/next-arrow-lilac.svg';
@@ -116,7 +118,13 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
         >
           <Image
             src={
-              isSpark ? ArrowPrevSpark : isCoral ? ArrowPrevCoral : ArrowPrev
+              isSpark
+                ? ArrowPrevSpark
+                : isCoral
+                ? ArrowPrevCoral
+                : isBlue
+                ? ArrowPrevBlue
+                : ArrowPrev
             }
             width={12}
             height={35}
@@ -197,7 +205,13 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
         >
           <Image
             src={
-              isSpark ? ArrowNextSpark : isCoral ? ArrowNextCoral : ArrowNext
+              isSpark
+                ? ArrowNextSpark
+                : isCoral
+                ? ArrowNextCoral
+                : isBlue
+                ? ArrowNextBlue
+                : ArrowNext
             }
             width={12}
             height={35}
