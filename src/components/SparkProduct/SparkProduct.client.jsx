@@ -16,7 +16,6 @@ import ProductSectionRight from '../ProductSection/ProductSectionRight';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './SparkProduct.module.scss';
-import EntregaFutura from '../EntregaFutura/EntregaFutura.client';
 import RestockDate from '../RestockDate/RestockDate.client';
 
 import BannerHolistix from '../../assets/holistix-offer.gif';
@@ -59,7 +58,6 @@ function SparkProduct() {
         {isMobile && <ZissouCompreJunto />}
         {showRestockDate && <RestockDate />}
         <ZissouAddToCart className={styles.AddToCart} />
-        {/* <EntregaFutura /> */}
         <ZissouColchaoIcons />
         <Image
           src={isMobile ? BannerHolistixMobile : BannerHolistix}
