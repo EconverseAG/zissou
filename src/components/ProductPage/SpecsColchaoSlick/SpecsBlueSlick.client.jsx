@@ -14,7 +14,7 @@ import Brands from '../../../assets/brands_pdp.png';
 import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-blue.png';
 import CamadaDeConforto from '../../../assets/camada_de_conforto_blue.png';
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
+import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile-blue.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
