@@ -10,6 +10,7 @@ function ProductSection({className, children, ...rest}) {
       className={`${styles.productSection} ${isMobile ? styles.mobile : ''} ${
         className || ''
       }`}
+      id="product-section"
       {...rest}
     >
       {children}

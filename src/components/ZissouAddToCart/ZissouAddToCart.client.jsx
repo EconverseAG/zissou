@@ -16,16 +16,15 @@ function ZissouAddToCart({
   Date,
   is5OFF,
   is10OFF,
+  scrollToProductSection,
   ...rest
 }) {
   const {selectedVariant} = useProduct();
   const {customBagText, customBag} = useZissouProduct();
   const {buyTogetherItems} = useBuyTogether();
-  const {linesAdd} = useCart();
   const {isMobile} = useMobile();
 
-  const cart = useCart()
-
+  const cart = useCart();
 
   const [hasRestockDate, setHasRestockDate] = useState(false);
 
@@ -46,7 +45,7 @@ function ZissouAddToCart({
     }
   }, [selectedVariant]);
 
-  const addToCart = useCallback((e) => {
+  const addToCart = useCallback(() => {
     let lines = [
       {
         merchandiseId: selectedVariant?.id,
@@ -109,33 +108,42 @@ function ZissouAddToCart({
         merchandiseId: item.selectedVariant.id,
       });
     });
-    
+
     if (!cart.id) {
       setTimeout(() => {
-        cart.cartCreate({ lines: lines })  
+        cart.cartCreate({lines});
       }, 1000);
     } else {
-      cart.linesAdd(lines)
+      cart.linesAdd(lines);
     }
   }, [
-    selectedVariant,
+    selectedVariant?.id,
+    selectedVariant.metafields.edges,
     customBag,
     EntregaFutura5OFF,
     EntregaFutura10OFF,
     Date,
     buyTogetherItems,
-    linesAdd,
+    cart,
     customBagText,
     is5OFF,
     is10OFF,
   ]);
+
+  const handleScrollToProductSection = useCallback(() => {
+    // scroll to id #product-section
+    const element = document.getElementById('product-section');
+    element.scrollIntoView({behavior: 'smooth'});
+  }, []);
 
   return (
     <button
       className={`${styles.addToCartButton} ${isMobile ? styles.mobile : ''} ${
         className || ''
       }`}
-      onClickCapture={addToCart}
+      onClickCapture={
+        scrollToProductSection ? handleScrollToProductSection : addToCart
+      }
       disabled={isOutOfStock}
       {...rest}
     >

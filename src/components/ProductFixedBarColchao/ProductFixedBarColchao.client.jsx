@@ -57,7 +57,7 @@ function ProductFixedBarColchao({title, subtitle}) {
           </div>
         </div>
       )}
-      <ZissouAddToCart text={'ESCOLHA SEU COLCHÃO'} />
+      <ZissouAddToCart scrollToProductSection text={'ESCOLHA SEU COLCHÃO'} />
     </div>
   );
 }
