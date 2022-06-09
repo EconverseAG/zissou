@@ -49,7 +49,6 @@ function LencolProduct() {
               ? 'Selecione o tamanho'
               : 'Selecione o tamanho do seu lençol:'
           }
-          info="Contém: 2 fronhas, lençol de cima e lençol de baixo"
           uppercaseTitle={isMobile}
         />
         <ColorSelector className={styles.ColorSelector} />

@@ -3,6 +3,7 @@ import {Image, useProduct} from '@shopify/hydrogen/client';
 
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
+import useProductContent from '../../hooks/useProductContent';
 
 import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
 
@@ -12,7 +13,6 @@ import SizeIcon from '../SizeIcon';
 
 function ZissouProductOptions({
   title,
-  info,
   icons,
   uppercaseTitle,
   className,
@@ -28,6 +28,8 @@ function ZissouProductOptions({
   useOutsideClick(containerRef, () => setIsOpen(false));
 
   const {isMobile} = useMobile();
+
+  const {contentMessage} = useProductContent();
 
   const handleSelection = useCallback(
     (selectedOptions) => {
@@ -115,7 +117,9 @@ function ZissouProductOptions({
             />
           </span>
         </button>
-        {info && <span className={styles.info}>{info}</span>}
+        {contentMessage && (
+          <span className={styles.info}>Contém: {contentMessage}</span>
+        )}
         {isOpen && (
           <div
             className={`${styles.selectDropdown} ${
