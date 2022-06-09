@@ -33,14 +33,7 @@ import DuvetBranco from '../../assets/duvet_branco.png';
 import DuvetCinza from '../../assets/duvet_cinza.png';
 import BaseZissou from '../../assets/base_zissou.png';
 
-export default function Cart({
-  base,
-  whiteLencol,
-  grayLencol,
-  whiteDuvetCover,
-  grayDuvetCover,
-  travesseiroWashable,
-}) {
+export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
   const {totalQuantity, lines} = useCart();
 
@@ -60,15 +53,7 @@ export default function Cart({
           ) : (
             <>
               <CartHeader />
-              <CartItems
-                totalLine={totalLine}
-                base={base}
-                whiteLencol={whiteLencol}
-                grayLencol={grayLencol}
-                whiteDuvetCover={whiteDuvetCover}
-                grayDuvetCover={grayDuvetCover}
-                travesseiroWashable={travesseiroWashable}
-              />
+              <CartItems />
               <CartFooter totalLine={totalLine} />
             </>
           )}
@@ -90,27 +75,13 @@ function CartHeader() {
   );
 }
 
-function CartItems({
-  base,
-  whiteLencol,
-  grayLencol,
-  whiteDuvetCover,
-  grayDuvetCover,
-  travesseiroWashable,
-}) {
+function CartItems() {
   return (
     <div className={styles.cartItems}>
       <CartLines>
         <LineInCart />
       </CartLines>
-      <CartShelf
-        base={base}
-        whiteLencol={whiteLencol}
-        grayLencol={grayLencol}
-        whiteDuvetCover={whiteDuvetCover}
-        grayDuvetCover={grayDuvetCover}
-        travesseiroWashable={travesseiroWashable}
-      />
+      {/* <CartShelf /> */}
     </div>
   );
 }
@@ -133,6 +104,7 @@ function LineInCart() {
     totalCartPrice,
   );
 
+  console.log('>>> cart', cart);
   useEffect(() => {
     if (attributes.length) {
       const attributeDateFiltered = attributes.filter((attribute) => {
@@ -313,14 +285,7 @@ function CartItemQuantity() {
   );
 }
 
-function CartShelf({
-  base,
-  whiteLencol,
-  grayLencol,
-  whiteDuvetCover,
-  grayDuvetCover,
-  travesseiroWashable,
-}) {
+function CartShelf() {
   const settings = {
     dots: false,
     infinite: false,
@@ -328,107 +293,79 @@ function CartShelf({
     slidesToScroll: 1,
     arrows: true,
   };
+
+  const products = [
+    {
+      title: 'Base Solteiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzA4NDg2Ng==',
+    },
+    {
+      title: 'Base Solteiro Especial',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzExNzYzNA==',
+    },
+    {
+      title: 'Base Casal',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzE1MDQwMg==',
+    },
+    {
+      title: 'Base Queen',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzE4MzE3MA==',
+    },
+    {
+      title: 'Base King BR',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzIxNTkzOA==',
+    },
+    {
+      title: 'Base King',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzI0ODcwNg==',
+    },
+    {
+      title: 'Travesseiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzY0NzcwMDM2MTI4OQ==',
+    },
+    {
+      title: 'Travesseiro Lavável',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc2MDQxMzIyOTEyOQ==',
+    },
+    {
+      title: 'Lençol Branco Solteiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE2MzU0NjE4NQ==',
+    },
+    {
+      title: 'Lençol Branco Solteiro Especial',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5NzcyMzIwOQ==',
+    },
+    {
+      title: 'Lençol Branco Casal',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc1NTk3Nw==',
+    },
+    {
+      title: 'Lençol Branco Queen',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc1NTk3Nw==',
+    },
+    {
+      title: 'Lençol Branco King BR',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5NzgyMTUxMw==',
+    },
+    {
+      title: 'Lençol Branco King',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzg1NDI4MQ==',
+    },
+    {
+      title: 'Lençol Cinza Solteiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+    },
+    {
+      title: 'Lençol Cinza Solteiro Especial',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+    },
+    {
+      title: 'Lençol Cinza Casal',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+    },
+  ];
+
   const [showBase, setShowBase] = useState(false);
-  const {lines} = useCart();
-
-  const [baseFiltered, setBaseFiltered] = useState();
-  const [whiteLencolFiltered, setWhiteLencolFiltered] = useState();
-  const [grayLencolFiltered, setGrayLencolFiltered] = useState();
-  const [whiteDuvetCoverFiltered, setWhiteDuvetCoverFiltered] = useState();
-  const [grayDuvetCoverFiltered, setGrayDuvetCoverFiltered] = useState();
-  const [travesseiroWashableFiltered, setTravesseiroWashableFiltered] =
-    useState();
-
-  useEffect(() => {
-    lines.map((item) => {
-      let itemOption = item.merchandise.selectedOptions[0].value;
-      if (itemOption.includes('King') && !itemOption.includes('King BR')) {
-        setBaseFiltered(
-          base.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[1],
-        );
-
-        setWhiteLencolFiltered(
-          whiteLencol.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[1],
-        );
-
-        setGrayLencolFiltered(
-          grayLencol.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[1],
-        );
-      } else {
-        setBaseFiltered(
-          base.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[0],
-        );
-
-        setWhiteLencolFiltered(
-          whiteLencol.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[0],
-        );
-
-        setGrayLencolFiltered(
-          grayLencol.variants.edges.filter((item) => {
-            return item.node.title
-              .toLowerCase()
-              .includes(itemOption.split(' (')[0].toLowerCase());
-          })[0],
-        );
-      }
-
-      setWhiteDuvetCoverFiltered(
-        whiteDuvetCover.variants.edges.filter((item) => {
-          return item.node.title
-            .toLowerCase()
-            .includes(itemOption.split(' (')[0].toLowerCase());
-        })[0],
-      );
-
-      setGrayDuvetCoverFiltered(
-        grayDuvetCover.variants.edges.filter((item) => {
-          return item.node.title
-            .toLowerCase()
-            .includes(itemOption.split(' (')[0].toLowerCase());
-        })[0],
-      );
-
-      setTravesseiroWashableFiltered(
-        travesseiroWashable.variants.edges.filter((item) => {
-          return item.node.title
-            .toLowerCase()
-            .includes(itemOption.split(' (')[0].toLowerCase());
-        })[0],
-      );
-
-      if (item.merchandise.product.title.includes('Colchão')) {
-        setShowBase(true);
-      }
-    });
-  }, [
-    base,
-    grayDuvetCover,
-    grayLencol,
-    lines,
-    travesseiroWashable,
-    whiteDuvetCover,
-    whiteLencol,
-  ]);
 
   const removeItem = (e) => {
     const item = e.currentTarget.parentNode.parentNode.parentNode;
