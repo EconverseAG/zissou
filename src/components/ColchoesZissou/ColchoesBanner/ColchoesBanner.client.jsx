@@ -2,7 +2,7 @@ import * as styles from './ColchoesBanner.module.scss';
 
 import ColchoesBannerVideo from '../../../assets/colchoes_banner.mp4';
 import ColchoesBannerVideoMobile from '../../../assets/colchoes_banner_mobile.mp4';
-import ColchoesBannerThumbMobile from '../../../assets/post-1.png';
+import ColchoesBannerThumbMobile from '../../../assets/colchoes_banner_thumb_mobile.jpeg';
 
 import useMobile from '../../../hooks/useMobile';
 
