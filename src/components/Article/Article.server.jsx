@@ -7,7 +7,7 @@ import {
 } from '@shopify/hydrogen';
 import Layout from '../Layout.server';
 
-import Privacy from '../../assets/privacy_policy.png';
+import Privacy from '../../assets/privacy.png';
 
 import * as styles from './Article.module.scss';
 
