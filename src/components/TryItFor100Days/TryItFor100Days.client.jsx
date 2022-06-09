@@ -28,9 +28,9 @@ export default function TryItFor100Days({image, video}) {
       </div>
       <div className={styles.TryItRight}>
         <Link to="/pages/100dias">
-          {video && (
+          {!image && (
             <video
-              src={video ? video : Gif100Dias}
+              src={video ?? Gif100Dias}
               autoPlay
               loop
               muted
@@ -38,7 +38,9 @@ export default function TryItFor100Days({image, video}) {
               height={510}
             />
           )}
-          {image && <Image src={image} width={574} height={510} />}
+          {image && (
+            <Image src={image ?? Gif100Dias} width={574} height={510} />
+          )}
         </Link>
       </div>
     </div>
