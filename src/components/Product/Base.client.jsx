@@ -1,6 +1,5 @@
 import BaseBanner from '../BaseBanner/BaseBanner.client';
 import SpecsBase from '../SpecsBase/SpecsBase.client';
-import InteractiveComparatorColchoes from '../InteractiveComparatorColchoes/InteractiveComparatorColchoes.client';
 import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import PotencializeSleep from '../PotencializeSleep/PotencializeSleep.client';
 import ZissouStores from '../ZissouStores/ZissouStores.client';
@@ -9,6 +8,7 @@ import BaseTechnical from '../BaseTechnical/BaseTechnical.client';
 import BaseProduct from '../BaseProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 import ProductFixedBar from '../ProductFixedBar';
+import BaseHaveYouDecidedYourColchao from '../BaseHaveYouDecidedYourColchao';
 
 export default function Base() {
   return (
@@ -19,7 +19,7 @@ export default function Base() {
         <BaseProduct />
         <PotencializeSleep />
         <SpecsBase />
-        <InteractiveComparatorColchoes />
+        <BaseHaveYouDecidedYourColchao />
         <BaseTechnical />
         <TryItFor100Days />
         <ZissouStores />

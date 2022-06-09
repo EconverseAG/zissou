@@ -1,0 +1,77 @@
+.wrapper {
+  position: relative;
+  aspect-ratio: 1440/689;
+  width: 100%;
+  background-image: url('../../assets/base-spark-coral-ou-blue.gif');
+  background-position: center;
+  background-size: cover;
+  min-height: 360px;
+  overflow: hidden;
+
+  &.mobile {
+    aspect-ratio: initial;
+    height: auto;
+    background-size: cover;
+    background-image: url('../../assets/base-spark-coral-ou-blue-mobile.gif');
+
+    .content {
+      height: 360px;
+      justify-content: space-between;
+      
+      h2 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 55px;
+      }
+
+      a {
+        width: 187px;
+        height: 43px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 46px;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h2 {
+      font-size: 36px;
+      font-family: ZonaProSemiBold;
+      color: #fff;
+      font-weight: 600;
+      line-height: 48px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 327px;
+      height: 72px;
+      color: #fff;
+      background: #ccc1db;
+      border-radius: 77px;
+      text-transform: uppercase;
+      font-size: 27px;
+      line-height: 36px;
+      font-weight: 700;
+      font-family: ZonaProBold;
+      transition: ease-in-out .2s;
+
+      &:hover {
+        background: #a49caf;
+      }
+    }
+  }
+}
