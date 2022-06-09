@@ -515,7 +515,8 @@ export default function SpecsCoralSlick() {
               />
               <span>
                 <strong>OPCIONAL:</strong> Bounce com adaptação às curvas do
-                corpo na opção adicional de sistema híbrido Spring System Plus
+                corpo na opção com sistema de suporte híbrido com molas Leggett
+                & Platt
               </span>
             </div>
           </div>
