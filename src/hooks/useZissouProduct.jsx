@@ -13,7 +13,6 @@ function ZissouProductProvider({
   baseProduct,
   travesseiro,
   travesseiroWashable,
-  travesseiroWashableCustom,
   duvetFilling,
   coralHybrid,
   sparkHybrid,
@@ -48,10 +47,6 @@ function ZissouProductProvider({
     if (isTravesseiro) {
       if (washable) {
         currentProduct = travesseiroWashable;
-
-        if (customBag) {
-          currentProduct = travesseiroWashableCustom;
-        }
       }
     } else if (isDuvet || isLencol) {
       if (isDuvet) {
@@ -80,7 +75,6 @@ function ZissouProductProvider({
     customBag,
     includeDuvetFilling,
     travesseiroWashable,
-    travesseiroWashableCustom,
     duvetFilling,
     baseProduct,
     isDuvet,

@@ -13,7 +13,6 @@ export default function ProductDetails({
   product,
   travesseiro,
   travesseiroWashable,
-  travesseiroWashableCustom,
   duvetFilling,
   grayDuvetCover,
   whiteDuvetCover,
@@ -105,7 +104,6 @@ export default function ProductDetails({
         baseProduct={product}
         travesseiro={travesseiro}
         travesseiroWashable={travesseiroWashable}
-        travesseiroWashableCustom={travesseiroWashableCustom}
         duvetFilling={duvetFilling}
         grayDuvetCover={grayDuvetCover}
         whiteDuvetCover={whiteDuvetCover}
