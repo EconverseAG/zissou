@@ -11,8 +11,6 @@ import * as styles from './ZissouAddToCart.module.scss';
 function ZissouAddToCart({
   text = 'Adicionar ao carrinho',
   className,
-  EntregaFutura5OFF,
-  EntregaFutura10OFF,
   Date,
   is5OFF,
   is10OFF,
@@ -46,7 +44,12 @@ function ZissouAddToCart({
       lines[0].attributes = [
         {
           key: 'Encomenda',
-          value: restockDate[0].node.value,
+          value:
+            restockDate[0].node.value.split('-')[2] +
+            '/' +
+            restockDate[0].node.value.split('-')[1] +
+            '/' +
+            restockDate[0].node.value.split('-')[0],
         },
       ];
     }
@@ -60,21 +63,7 @@ function ZissouAddToCart({
       ];
     }
 
-    if (EntregaFutura5OFF) {
-      lines[0].attributes = [
-        {
-          key: 'EntregaFutura5OFF',
-          value: Date,
-        },
-      ];
-    } else if (EntregaFutura10OFF) {
-      lines[0].attributes = [
-        {
-          key: 'EntregaFutura10OFF',
-          value: Date,
-        },
-      ];
-    } else if (Date) {
+    if (Date) {
       lines[0].attributes = [
         {
           key: is5OFF
@@ -106,8 +95,6 @@ function ZissouAddToCart({
     selectedVariant?.id,
     selectedVariant.metafields.edges,
     customBag,
-    EntregaFutura5OFF,
-    EntregaFutura10OFF,
     Date,
     buyTogetherItems,
     cart,

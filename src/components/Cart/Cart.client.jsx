@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect, useState} from 'react';
 
 import {
@@ -94,26 +95,12 @@ function LineInCart() {
   const [dateEncomenda, setDateEncomenda] = useState('');
   const [dateEncomendaKey, setDateEncomendaKey] = useState('');
   const [customizacao, setCustomizacao] = useState('');
-  const date = new Date();
-  const plus1Month = new Date(date.setMonth(date.getMonth() + 1));
-  const plus2Months = new Date(date.setMonth(date.getMonth() + 2));
-
-  // const cart = useCartLine();
-  // const totalCart = useCart();
-  // const totalCartPrice = +totalCart.estimatedCost.totalAmount.amount;
-  // const productPriceInfo = TotalMinicartPrices(
-  //   [cart],
-  //   totalCart.totalQuantity,
-  //   totalCartPrice,
-  // );
 
   useEffect(() => {
     if (attributes.length) {
       const attributeDateFiltered = attributes.filter((attribute) => {
         return (
           attribute.key === 'Encomenda' ||
-          attribute.key === 'EntregaFutura10OFF' ||
-          attribute.key === 'EntregaFutura5OFF' ||
           attribute.key === 'DateCustom5OFF' ||
           attribute.key === 'DateCustom10OFF' ||
           attribute.key === 'DateCustom'
@@ -160,52 +147,7 @@ function LineInCart() {
                 </li>
               </div>
             )}
-            {dateEncomenda && dateEncomenda.includes('-') ? (
-              <div className={styles.Props}>
-                <Image src={TruckIcon} width="16" height="11" />
-                <li className={styles.cartItemTopRightSpecsList}>
-                  entrega próxima de{' '}
-                  {dateEncomenda.split('-')[2] +
-                    '/' +
-                    dateEncomenda.split('-')[1] +
-                    '/' +
-                    dateEncomenda.split('-')[0]}
-                </li>
-              </div>
-            ) : dateEncomendaKey.includes('EntregaFutura5OFF') ||
-              dateEncomendaKey.includes('EntregaFutura10OFF') ? (
-              <>
-                <div className={styles.Props}>
-                  <Image src={TruckIcon} width="16" height="11" />
-                  <li className={styles.cartItemTopRightSpecsList}>
-                    entrega próxima de{' '}
-                    {dateEncomendaKey.includes('EntregaFutura5OFF')
-                      ? date.getUTCDate() +
-                        '/' +
-                        (plus1Month.getUTCMonth() + 1) +
-                        '/' +
-                        date.getFullYear()
-                      : date.getUTCDate() +
-                        '/' +
-                        plus2Months.getUTCMonth() +
-                        '/' +
-                        date.getFullYear()}
-                  </li>
-                </div>
-                {/* <div className={styles.Props}>
-                  <Label />
-                  <li
-                    className={styles.cartItemTopRightSpecsList}
-                    style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
-                  >
-                    {productPriceInfo[0].discount > 0
-                      ? Math.ceil(productPriceInfo[0].discount * 100)
-                      : dateEncomendaKey.replace(/(\D)+/g, '')}
-                    % OFF
-                  </li>
-                </div> */}
-              </>
-            ) : dateEncomendaKey.length ? (
+            {dateEncomendaKey.length ? (
               <>
                 <div className={styles.Props}>
                   <Image src={TruckIcon} width="16" height="11" />
@@ -213,17 +155,6 @@ function LineInCart() {
                     entrega próxima de {dateEncomenda}
                   </li>
                 </div>
-                {/* <div className={styles.Props}>
-                  <Label />
-                  <li
-                    className={styles.cartItemTopRightSpecsList}
-                    style={{color: '#F48580', fontFamily: 'ZonaProBold'}}
-                  >
-                    {productPriceInfo[0].discount > 0
-                      ? Math.ceil(productPriceInfo[0].discount * 100)
-                      : dateEncomendaKey.replace(/(\D)+/g, '')}
-                  </li>
-                </div> */}
               </>
             ) : null}
           </ul>
@@ -235,18 +166,6 @@ function LineInCart() {
       <div className={styles.cartItemBottom}>
         <CartItemQuantity />
         <div className={styles.PriceCartLine}>
-          {/* {productPriceInfo[0].hasDiscount || dateEncomendaKey ? (
-            <>
-              <CartLinePrice className={styles.OldPrice} />
-              <span className={styles.cartItemBottomPrice}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                }).format(productPriceInfo[0].price)}
-              </span>
-            </>
-          ) : (
-            )} */}
           <CartLinePrice className={styles.cartItemBottomPrice} />
         </div>
       </div>
@@ -637,7 +556,7 @@ function CartFooter({totalLine}) {
         cart={cart}
         config={shopifyConfig}
       >
-        FINALIZAR COMPRA (CartPanda)
+        FINALIZAR COMPRA
       </CheckoutButton>
     </footer>
   );

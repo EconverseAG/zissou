@@ -1,4 +1,5 @@
 import {LoadingProvider} from '../../hooks/useLoading';
+import useMobile from '../../hooks/useMobile';
 
 import CoralOrBlue from '../CoralOrBlue/CoralOrBlue.client';
 import OpenYourHeart from '../OpenYourHeart/OpenYourHeart.client';
@@ -14,10 +15,13 @@ import SleepAndLiveComparativo from './SleepAndLiveComparativo/SleepAndLiveCompa
 import SuporteIdeal from './SuporteIdeal/SuporteIdeal.client';
 
 export default function Colchoes() {
+  const {isMobile} = useMobile();
+
   return (
     <LoadingProvider>
-      <ColchoesBanner />
+      {!isMobile && <ColchoesBanner />}
       <SleepAndLiveComparativo />
+      {isMobile && <ColchoesBanner />}
       <FormulaDoConforto />
       <Combinacao />
       <SuporteIdeal />
