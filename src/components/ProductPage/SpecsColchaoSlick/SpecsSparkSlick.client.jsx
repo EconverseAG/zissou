@@ -234,7 +234,7 @@ export default function SpecsSparkSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                VISCO COOL
+                VISCO
                 <Image
                   src={BandeiraBrasil}
                   width={isMobile ? 20 : 30}
