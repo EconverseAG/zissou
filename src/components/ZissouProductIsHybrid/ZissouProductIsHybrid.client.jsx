@@ -144,8 +144,7 @@ export default function ZissouProductIsHybrid() {
             </span>
             <br />
             <span className={styles.LeftText}>
-              ✓ {isSpark ? 5 : 4}cm a mais de altura, com total de{' '}
-              {isSpark ? 25 : 29}cm
+              ✓ 5 cm a mais de altura, com total de {isSpark ? 25 : 30}cm
             </span>
             <br />
             <span className={styles.LeftText}>

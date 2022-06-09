@@ -50,16 +50,19 @@ export default [
         e polietileno com elastano
         <br />
         <br />
-        - Nobre e sofisticado, com certificações LGA, Öko-Tex Standard 100 e Eurolatex Eco-Standard
+        - Látex nobre e sofisticado, com elasticidade incomparável
         <br />
         <br />
-        - Proporciona resiliência, suporte progressivo e a durabilidade do colchão
+        - Proporciona resiliência e suporte progressivo, com apoio corporal perfeito
         <br />
         <br />
-        - Contém pequenas perfurações potencializando a circulação de ar no colchão e não permitindo que ele esquente
+        - Contém pequenas perfurações que aumentam a ventilação, proporcionando refrescância
         <br />
         <br />
-        - Possui propriedades antimicrobianas e resistência a ácaros
+        - Alta resistência a pressão, evitando deformação com o passar do tempo
+        <br />
+        <br />
+        - Propriedades hipoalergênicas, antimicrobianas e resistência a ácaros
       `,
       buttonText: 'Continuar →',
     },
@@ -68,7 +71,7 @@ export default [
     title: 'Camada de <br /> aconhego',
     imageSrc: CamadaDeAconchegoFundo,
     modal: {
-      title: 'VISCO COOL',
+      title: 'VISCO FRESH',
       width: 30,
       height: 30,
       imageTitle: BandeiraBrasil,
@@ -132,7 +135,7 @@ export default [
         - Camada transição de espuma de poliuretano de alta densidade uniformiza a distribuição de peso
         <br />
         <br />
-        - Substituição do suporte de espuma de alta resiliência por suporte híbrido Spring System Plus com molas ensacadas individualmente com 15cm de altura, que proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
+        - Substituição do suporte de espuma de alta resiliência por suporte híbrido com molas Leggett & Platt ensacadas individualmente com 15cm de altura, que proporcionam maior maleabilidade ao colchão, aumentando a adaptabilidade às curvaturas do corpo
         <br />
         <br />
         - Sustentação adicional com maior fluxo de ar

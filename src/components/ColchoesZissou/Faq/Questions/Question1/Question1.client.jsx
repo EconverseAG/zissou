@@ -58,6 +58,15 @@ export default function Question1({setIsOpen}) {
         </strong>
       </AccordionSummary>
       <AccordionDetails className={styles.FaqAccordionAnswer}>
+        <strong className={styles.FaqAccordionAnswerTitle}>
+          Equilíbrio ideal entre suporte e conforto
+        </strong>
+        <span className={styles.FaqAccordionAnswerText}>
+          Composições desenvolvidas para o equilíbrio ideal entre suporte e
+          conforto, dentro de uma faixa de sensação de firmeza médio-firme, com
+          leve variação entre os modelos, que atendem às diferentes preferências
+          e necessidades dos dorminhocos mais exigentes.
+        </span>
         <div className={styles.FaqAccordionAnswerTitle}>
           As melhores matérias-primas do mundo
           <Image
@@ -73,7 +82,9 @@ export default function Question1({setIsOpen}) {
         </div>
         <span className={styles.FaqAccordionAnswerText}>
           Materiais rigorosamente selecionados entre os melhores fornecedores do
-          mundo, importados de países como Bélgica e EUA.
+          mundo, importados de países como Bélgica e EUA, com destaque para as
+          molas da mais conceituada fabricante de componentes, a Leggett &
+          Platt.
         </span>
         <strong className={styles.FaqAccordionAnswerTitle}>
           Benefícios Zissou

@@ -2,7 +2,6 @@ import useMobile from '../../hooks/useMobile';
 import BannerCoralPDP from '../../assets/pdp-coral.png';
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
-import CinematographyBanner from '../CinematographyBanner/CinematographyBanner.client';
 import Reviews from '../Reviews/Reviews.client';
 import CoralOrBlue from '../CoralOrBlue/CoralOrBlue.client';
 import Partners from '../Partners/Partners.client';
@@ -18,6 +17,9 @@ import {LoadingProvider} from '../../hooks/useLoading';
 import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
+import CoralCGI from '../../assets/coral_cgi.mp4';
+import CoralCGIMobile from '../../assets/coral_cgi_mobile.mp4';
+
 export default function Coral() {
   const {isMobile} = useMobile();
 
@@ -26,7 +28,13 @@ export default function Coral() {
       <ProductFixedBarColchao title="CORAL" subtitle={'A EVOLUÇÃO DO SONO'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <CoralProduct />
-      <CinematographyBanner />
+      <video
+        style={{width: '100%'}}
+        src={isMobile ? CoralCGIMobile : CoralCGI}
+        autoPlay
+        loop
+        muted
+      />
       <TourColchao />
       <SpecsColchaoSlick />
       <DoubtsProductPage />

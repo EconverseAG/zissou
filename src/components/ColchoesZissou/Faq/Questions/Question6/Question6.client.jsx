@@ -67,9 +67,9 @@ export default function Question6({setIsOpen}) {
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
-            Os colchões Zissou são produzidos, comprimidos e embalados no Brasil
-            com tecnologia americana e matérias primas importadas, de altíssima
-            qualidade.
+            Os colchões Zissou são produzidos, comprimidos e embalados no
+            Brasil, com tecnologia americana e matérias primas importadas, de
+            altíssima qualidade.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>

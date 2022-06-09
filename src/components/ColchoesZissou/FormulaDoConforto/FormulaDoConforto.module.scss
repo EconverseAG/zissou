@@ -11,6 +11,7 @@
     line-height: 42px;
     letter-spacing: 3px;
     color: var(--blue-color-1000);
+    text-transform: uppercase;
 
     @media only screen and (max-width: 1023px) {
       font-size: 20px;
@@ -99,16 +100,13 @@
         line-height: 28px;
         letter-spacing: 0.08em;
         color: var(--gray-color-600);
+        font-family: 'ZonaPro';
 
         @media only screen and (max-width: 1023px) {
           font-size: 10px;
           line-height: 16px;
           width: 80%;
           margin: 0 auto;
-        }
-
-        &Bold {
-          font-family: 'ZonaProBlack';
         }
       }
     }

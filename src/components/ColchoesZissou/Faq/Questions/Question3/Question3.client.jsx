@@ -56,16 +56,14 @@ export default function Question3({setIsOpen}) {
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
             A Zissou oferece as duas opções de suporte para o seu colchão:
-            espuma de poliuretano de alta densidade ou Spring System, que
-            consiste em um sistema híbrido de espuma de poliuretano e molas
-            ensacadas individualmente.
+            espuma de poliuretano de alta densidade ou com sistema híbrido, que
+            combina espuma de poliuretano e molas ensacadas individualmente.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
-            No modelo Blue, a tecnologia das molas Zoned Spring System possui
-            setorização ergonômica, que oferece suporte extra na região do
-            quadril e lombar.
+            No modelo Blue, a tecnologia do sistema de molas possui setorização
+            ergonômica, que oferece suporte extra na região do quadril e lombar.
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>

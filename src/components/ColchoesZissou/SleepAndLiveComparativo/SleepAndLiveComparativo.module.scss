@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 120px 0 91px;
+  padding: 50px 0 60px;
   background: linear-gradient(360deg, #cadee8 0%, #ccdfe9 0%, #fff 22.17%, #fff 100%, #fff 100%);
 
   @media only screen and (max-width: 1023px) {
-    padding: 120px 0 40px;
+    padding: 40px 0 40px;
     background: linear-gradient(360deg, #cadee8 0%, #ccdfe9 34.48%, #fff 80.3%, #fff 100%, #fff 100%);
   }
 
@@ -34,7 +34,6 @@
     width: 100%;
 
     @media only screen and (max-width: 1350px) {
-      flex-wrap: wrap;
       gap: 50px;
       justify-content: center;
     }
@@ -44,17 +43,14 @@
     }
 
     .SleepAndLiveColchao {
-      max-width: 440px;
+      max-width: 350px;
       background: var(--gray-color-100);
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
-      @media only screen and (max-width: 1440px) {
-        max-height: 645px;
-      }
+      height: 530px;
 
       @media only screen and (max-width: 1023px) {
         max-width: 85%;
@@ -145,7 +141,7 @@
         font-family: "ZonaProBlack";
         margin-bottom: 10px;
         text-transform: uppercase;
-        margin-top: 41.4px;
+        margin-top: 20px;
         letter-spacing: 3px;
 
         @media only screen and (max-width: 1023px) {
@@ -231,6 +227,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: auto;
 
         @media only screen and (max-width: 1023px) {
           height: 54px;

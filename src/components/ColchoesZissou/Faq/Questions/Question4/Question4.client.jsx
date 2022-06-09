@@ -76,7 +76,7 @@ export default function Question4({setIsOpen}) {
             látex favorece a movimentação e evita a sensação de afundar na cama
             durante o sono. A adaptabilidade do viscoelástico suaviza pontos de
             pressão e isola ondas de movimento. Confira as diferentes
-            características materiais de conforto.
+            características materiais de conforto. .
           </span>
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
@@ -92,13 +92,13 @@ export default function Question4({setIsOpen}) {
         </div>
         <div className={styles.FaqAccordionAnswerContainer}>
           <span className={styles.FaqAccordionAnswerText}>
-            Os modelos híbridos com Spring System oferecem maior adaptabilidade
-            do colchão às curvas do corpo devido às molas ensacadas
-            individualmente, que se movimentam com independência, proporcionam
-            sensação de maior maciez. As molas também melhoram a circulação
-            interna de ar no colchão. A setorização ergonômica oferece suporte
-            extra na região do quadril e lombar para melhorar o alinhamento da
-            coluna.
+            Os modelos com o sistema de suporte híbrido Leggett & Platt oferecem
+            maior adaptabilidade do colchão às curvas do corpo devido às molas
+            ensacadas individualmente, que se movimentam com independência,
+            proporcionam sensação de maior maciez. As molas também melhoram a
+            circulação interna de ar no colchão. A setorização ergonômica
+            oferece suporte extra na região do quadril e lombar para melhorar o
+            alinhamento da coluna.
           </span>
         </div>
         <Link to="/pages/comparativo-colchoes">

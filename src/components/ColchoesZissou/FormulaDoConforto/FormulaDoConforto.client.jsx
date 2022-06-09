@@ -11,7 +11,7 @@ export default function FormulaDoConforto() {
   return (
     <div className={styles.FormulaDoConfortoContainer}>
       <strong className={styles.FormulaDoConfortoTitle}>
-        A FÓRMULA DO CONFORTO ZISSOU
+        ABSURDAMENTE CONFORTÁVEL
       </strong>
       <div className={styles.FormulaDoConfortoTop}>
         {isMobile ? (
@@ -37,30 +37,17 @@ export default function FormulaDoConforto() {
               </span>
               <ul className={styles.FormulaDoConfortoTopContentList}>
                 <li>
-                  <strong
-                    className={styles.FormulaDoConfortoTopContentListBold}
-                  >
-                    • Látex Infused:
-                  </strong>{' '}
-                  material exclusivo do Spark, tem alta resiliência e ótimas
-                  características ergonômicas
+                  • Látex Infused: material de alta resiliência exclusivo do
+                  Spark, tem ótimas características ergonômicas
                 </li>
                 <li>
-                  <strong
-                    className={styles.FormulaDoConfortoTopContentListBold}
-                  >
-                    • Latex Classic:
-                  </strong>{' '}
-                  alta resiliência com suporte
+                  • Latex Classic: com alta resiliência oferece suporte
+                  progressivo e maior frescor
                 </li>
                 <li>
-                  <strong
-                    className={styles.FormulaDoConfortoTopContentListBold}
-                  >
-                    • Latex Pulse:
-                  </strong>{' '}
-                  microclima equilibrado, controle de umidade e mais
-                  elasticidade para facilitar os movimentos durante o sono
+                  • Latex Pulse: cria microclima equilibrado, tem controle de
+                  umidade e mais elasticidade para facilitar os movimentos
+                  durante o sono
                 </li>
               </ul>
             </div>
@@ -74,8 +61,8 @@ export default function FormulaDoConforto() {
                 autoPlay
                 loop
                 muted
-                width="942"
-                height="392"
+                width="550"
+                height="310"
               />
             </div>
             <div className={styles.FormulaDoConfortoTopContent}>
@@ -88,9 +75,7 @@ export default function FormulaDoConforto() {
               </span>
               <ul className={styles.FormulaDoConfortoTopContentList}>
                 <li>
-                  <strong
-                    className={styles.FormulaDoConfortoTopContentListBold}
-                  >
+                  <strong className={styles.FormulaDoConfortoTopContentList}>
                     • Acefom HR:
                   </strong>{' '}
                   material exclusivo do Spark, tem alta resiliência e ótimas
@@ -139,8 +124,7 @@ export default function FormulaDoConforto() {
               <span className={styles.FormulaDoConfortoBottomContentText}>
                 O viscoelástico de memória responsiva proporciona aconchego e
                 aquela sensação gostosa de abraço, aliviando pontos de pressão,
-                mitigando a transmissão de ondas de movimento e reunindo
-                propriedades hipoalergênicas e antimicrobianas
+                mitigando a transmissão de ondas de movimento
               </span>
             </div>
           </>
@@ -153,8 +137,8 @@ export default function FormulaDoConforto() {
                 autoPlay
                 loop
                 muted
-                width="942"
-                height="392"
+                width="550"
+                height="310"
               />
             </div>
             <div className={styles.FormulaDoConfortoBottomContent}>
@@ -164,8 +148,7 @@ export default function FormulaDoConforto() {
               <span className={styles.FormulaDoConfortoBottomContentText}>
                 O viscoelástico de memória responsiva proporciona aconchego e
                 aquela sensação gostosa de abraço, aliviando pontos de pressão,
-                mitigando a transmissão de ondas de movimento e reunindo
-                propriedades hipoalergênicas e antimicrobianas
+                mitigando a transmissão de ondas de movimento
               </span>
             </div>
           </>

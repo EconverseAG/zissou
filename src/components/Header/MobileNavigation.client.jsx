@@ -158,7 +158,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       </li>
                       <li>
                         <Link
-                          to="/products/duvet-zissoue"
+                          to="/products/duvet-zissou"
                           style={{textDecoration: 'underline'}}
                         >
                           Duvet

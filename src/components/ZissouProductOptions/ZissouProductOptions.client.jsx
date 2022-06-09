@@ -72,16 +72,20 @@ function ZissouProductOptions({
       )}
       <fieldset
         className={`${styles.select} ${
-          !isCoral && isColchao && isSpark
+          isSpark
             ? styles.selectSpark
+            : isCoral
+            ? styles.selectCoral
             : styles.selectBlue
         }`}
         key={name}
       >
         <button
           className={`${styles.selectOpen} ${
-            !isCoral && isColchao && isSpark
+            isSpark
               ? styles.selectSpark
+              : isCoral
+              ? styles.selectCoral
               : styles.selectBlue
           }`}
           onClick={() => setIsOpen(true)}
@@ -96,8 +100,10 @@ function ZissouProductOptions({
           </p>
           <span
             className={`${styles.selectOpenArrow} ${
-              !isCoral && isColchao && isSpark
+              isSpark
                 ? styles.selectSpark
+                : isCoral
+                ? styles.selectCoral
                 : styles.selectBlue
             }`}
           >
@@ -113,8 +119,10 @@ function ZissouProductOptions({
         {isOpen && (
           <div
             className={`${styles.selectDropdown} ${
-              !isCoral && isColchao && isSpark
+              isSpark
                 ? styles.selectSpark
+                : isCoral
+                ? styles.selectCoral
                 : styles.selectBlue
             }`}
           >

@@ -56,15 +56,16 @@ export default function SleepAndLiveComparativo() {
             onMouseLeave={handleImageLeaveSpark}
             className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
           >
-            <p className={styles.SleepAndLiveFlag}>Novidade</p>
+            <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
             <Link
               to="/products/colchao-zissou-coral-hibrido-2"
               className={styles.SleepAndLiveCTAImage}
             >
               <Image
                 src={changeUrlSpark}
-                width={isMobile ? '304' : '572'}
-                height={isMobile ? '154' : '303'}
+                width={isMobile ? '304' : '350'}
+                height={isMobile ? '154' : '185'}
+                style={{height: isMobile ? '154px' : '185px'}}
               />
             </Link>
             <Image
@@ -72,21 +73,22 @@ export default function SleepAndLiveComparativo() {
               width={114}
               height={37}
               className={styles.SleepAndLiveTitle}
-              style={{marginTop: '30px'}}
             />
             <span className={styles.SleepAndLiveSubtitle}>
               ONDE TUDO COMEÇA
             </span>
             <p className={styles.SleepAndLiveText}>
-              Spark consolida materiais premium para atingir um{' '}
+              Spark combina{' '}
               <strong>
-                mix perfeito de suporte, conforto e aconchego com tecido
-                refrescante Velvet & Balanced
+                matérias-primas de alta qualidade para estimular a sensação de
+                bem-estar
               </strong>
             </p>
             <br />
             <p className={styles.SleepAndLiveText}>
-              <strong>Opção de suporte híbrido Spring System</strong> com molas
+              <strong>
+                Opção de suporte híbrido com com molas Leggett & Platt
+              </strong>{' '}
               de 12cm de altura
             </p>
             <span className={styles.SleepAndLivePrice}>
@@ -114,8 +116,9 @@ export default function SleepAndLiveComparativo() {
           >
             <Image
               src={changeUrlCoral}
-              width={isMobile ? '304' : '572'}
-              height={isMobile ? '154' : '304'}
+              width={isMobile ? '304' : '350'}
+              height={isMobile ? '154' : '185'}
+              style={{height: isMobile ? '154px' : '185px'}}
             />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>CORAL</strong>
@@ -134,7 +137,7 @@ export default function SleepAndLiveComparativo() {
             <strong>Opção de suporte híbrido Spring System Plus</strong> com
             molas de 15cm de altura
           </p>
-          <span className={styles.SleepAndLivePrice}>A partir de R$ 3.610</span>
+          <span className={styles.SleepAndLivePrice}>A partir de R$ 4.190</span>
           <Link
             to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveButtonCTA}
@@ -156,8 +159,9 @@ export default function SleepAndLiveComparativo() {
           >
             <Image
               src={changeUrlBlue}
-              width={isMobile ? '304' : '572'}
-              height={isMobile ? '154' : '304'}
+              width={isMobile ? '304' : '350'}
+              height={isMobile ? '154' : '185'}
+              style={{height: isMobile ? '154px' : '185px'}}
             />
           </Link>
           <strong className={styles.SleepAndLiveTitle}>Blue</strong>
@@ -170,15 +174,15 @@ export default function SleepAndLiveComparativo() {
               uma das tecnologias mais avançadas em sono com matérias primas
               altamente sofisticadas
             </strong>
-            , incluindo Latex Pulse e resfriamento na superfície com tecido
-            Plush & Cool
           </p>
           <br />
           <p className={styles.SleepAndLiveText}>
-            <strong>Sistema de suporte híbrido Zoned Spring System</strong> com
-            molas de 15cm de altura e zoneamento ergonômico
+            <strong>
+              Sistema de suporte híbrido com molas Leggett & Platt{' '}
+            </strong>{' '}
+            de 15cm de altura e zoneamento ergonômico
           </p>
-          <span className={styles.SleepAndLivePrice}>A partir de R$ 8.930</span>
+          <span className={styles.SleepAndLivePrice}>A partir de R$ 9.990</span>
           <Link
             to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveButtonCTA}
@@ -192,15 +196,16 @@ export default function SleepAndLiveComparativo() {
             onMouseLeave={handleImageLeaveSpark}
             className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
           >
-            <p className={styles.SleepAndLiveFlag}>Novidade</p>
+            <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
             <Link
               to="/products/colchao-zissou-coral-hibrido-2"
               className={styles.SleepAndLiveCTAImage}
             >
               <Image
                 src={changeUrlSpark}
-                width={isMobile ? '304' : '572'}
-                height={isMobile ? '154' : '303'}
+                width={isMobile ? '304' : '350'}
+                height={isMobile ? '154' : '185'}
+                style={{height: isMobile ? '154px' : '185px'}}
               />
             </Link>
             <Image
@@ -208,7 +213,6 @@ export default function SleepAndLiveComparativo() {
               width={79}
               height={25}
               className={styles.SleepAndLiveTitle}
-              style={{marginTop: '30px'}}
             />
             <span className={styles.SleepAndLiveSubtitle}>
               ONDE TUDO COMEÇA
