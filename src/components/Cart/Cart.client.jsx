@@ -84,7 +84,7 @@ function CartItems() {
       <CartLines>
         <LineInCart />
       </CartLines>
-      {/* <CartShelf /> */}
+      <CartShelf />
     </div>
   );
 }
@@ -98,16 +98,14 @@ function LineInCart() {
   const plus1Month = new Date(date.setMonth(date.getMonth() + 1));
   const plus2Months = new Date(date.setMonth(date.getMonth() + 2));
 
-  const cart = useCartLine();
-  const totalCart = useCart();
-  const totalCartPrice = +totalCart.estimatedCost.totalAmount.amount;
-  const productPriceInfo = TotalMinicartPrices(
-    [cart],
-    totalCart.totalQuantity,
-    totalCartPrice,
-  );
-
-  console.log('cart>>>', cart);
+  // const cart = useCartLine();
+  // const totalCart = useCart();
+  // const totalCartPrice = +totalCart.estimatedCost.totalAmount.amount;
+  // const productPriceInfo = TotalMinicartPrices(
+  //   [cart],
+  //   totalCart.totalQuantity,
+  //   totalCartPrice,
+  // );
 
   useEffect(() => {
     if (attributes.length) {
@@ -249,7 +247,7 @@ function LineInCart() {
             </>
           ) : (
             )} */}
-            <CartLinePrice className={styles.cartItemBottomPrice} />
+          <CartLinePrice className={styles.cartItemBottomPrice} />
         </div>
       </div>
     </div>
@@ -280,6 +278,12 @@ function CartItemQuantity() {
 }
 
 function CartShelf() {
+  const [base, setBase] = useState('');
+  const [whiteLencol, setWhiteLencol] = useState('');
+  const [grayLencol, setGrayLencol] = useState('');
+  const [whiteDuvet, setWhiteDuvet] = useState('');
+  const [grayDuvet, setGrayDuvet] = useState('');
+
   const settings = {
     dots: false,
     infinite: false,
@@ -287,6 +291,8 @@ function CartShelf() {
     slidesToScroll: 1,
     arrows: true,
   };
+
+  const {lines} = useCart();
 
   const products = [
     {
@@ -312,14 +318,6 @@ function CartShelf() {
     {
       title: 'Base King',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzI0ODcwNg==',
-    },
-    {
-      title: 'Travesseiro',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzY0NzcwMDM2MTI4OQ==',
-    },
-    {
-      title: 'Travesseiro Lavável',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc2MDQxMzIyOTEyOQ==',
     },
     {
       title: 'Lençol Branco Solteiro',
@@ -368,11 +366,45 @@ function CartShelf() {
     {
       title: 'Lençol Cinza King',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjEzMDg4Mg==',
-    }
+    },
+    {
+      title: 'Duvet Branco Solteiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDY5ODY5Nw==',
+    },
+    {
+      title: 'Duvet Branco Casal Queen',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDczMTQ2NQ==',
+    },
+    {
+      title: 'Duvet Branco King King BR',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDc2NDIzMw==',
+    },
+    {
+      title: 'Duvet Cinza Solteiro',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTUzNjQ1MA==',
+    },
+    {
+      title: 'Duvet Cinza Casal Queen',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTU2OTIxOA==',
+    },
+    {
+      title: 'Duvet Cinza King King BR',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTYwMTk4Ng==',
+    },
   ];
 
-  let productFiltered = product.filter((product) => {
-    return product.title.includes();
+  let productFiltered = products.filter((product) => {
+    return (
+      product.title.includes(
+        lines[0].merchandise.selectedOptions[0].value.split(' (')[0],
+      ) ||
+      product.title.includes(
+        lines[1]?.merchandise.selectedOptions[0].value.split(' (')[0],
+      ) ||
+      product.title.includes(
+        lines[2]?.merchandise.selectedOptions[0].value.split(' (')[0],
+      )
+    );
   });
 
   const [showBase, setShowBase] = useState(false);
@@ -381,6 +413,39 @@ function CartShelf() {
     const item = e.currentTarget.parentNode.parentNode.parentNode;
     item.remove();
   };
+
+  useEffect(() => {
+    lines.map((line) => {
+      if (line.merchandise.product.title.includes('Colchão')) {
+        setShowBase(true);
+      }
+    });
+
+    let baseFiltered = productFiltered.filter((product) => {
+      return product.title.includes('Base');
+    });
+    setBase(baseFiltered[0]?.id);
+
+    let whiteLencolFiltered = productFiltered.filter((product) => {
+      return product.title.includes('Lençol Branco');
+    });
+    setWhiteLencol(whiteLencolFiltered[0]?.id);
+
+    let grayLencolFiltered = productFiltered.filter((product) => {
+      return product.title.includes('Lençol Cinza');
+    });
+    setGrayLencol(grayLencolFiltered[0]?.id);
+
+    let whiteDuvetFiltered = productFiltered.filter((product) => {
+      return product.title.includes('Duvet Branco');
+    });
+    setWhiteDuvet(whiteDuvetFiltered[0]?.id);
+
+    let grayDuvetFiltered = productFiltered.filter((product) => {
+      return product.title.includes('Duvet Cinza');
+    });
+    setGrayDuvet(grayDuvetFiltered[0]?.id);
+  }, [lines, productFiltered]);
 
   return (
     <div className={styles.cartShelfContainer}>
@@ -397,10 +462,7 @@ function CartShelf() {
             <div className={styles.slideItem}>
               <span>Base</span>
               <Image src={BaseZissou} width="60" height="40" />
-              <AddToCartButton
-                variantId={baseFiltered?.node.id}
-                onClickCapture={removeItem}
-              >
+              <AddToCartButton variantId={base} onClickCapture={removeItem}>
                 Adicionar
               </AddToCartButton>
             </div>
@@ -410,21 +472,7 @@ function CartShelf() {
             <Image src={TravesseiroLavavel} width="75" height="24" />
             <AddToCartButton
               variantId={
-                travesseiroWashableFiltered?.node.id ||
-                travesseiroWashable.variants.edges[0].node.id
-              }
-              onClickCapture={removeItem}
-            >
-              Adicionar
-            </AddToCartButton>
-          </div>
-          <div className={styles.slideItem}>
-            <span>Travesseiro</span>
-            <Image src={TravesseiroLavavel} width="75" height="24" />
-            <AddToCartButton
-              variantId={
-                travesseiroWashableFiltered?.node.id ||
-                travesseiroWashable.variants.edges[0].node.id
+                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc2MDQxMzIyOTEyOQ=='
               }
               onClickCapture={removeItem}
             >
@@ -435,7 +483,7 @@ function CartShelf() {
             <span>Lençol Branco</span>
             <Image src={LencolBranco} width="60" height="45" />
             <AddToCartButton
-              variantId={whiteLencolFiltered?.node.id}
+              variantId={whiteLencol}
               onClickCapture={removeItem}
             >
               Adicionar
@@ -444,30 +492,21 @@ function CartShelf() {
           <div className={styles.slideItem}>
             <span>Lençol Cinza</span>
             <Image src={LencolCinza} width="45" height="30" />
-            <AddToCartButton
-              variantId={grayLencolFiltered?.node.id}
-              onClickCapture={removeItem}
-            >
+            <AddToCartButton variantId={grayLencol} onClickCapture={removeItem}>
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Branco</span>
             <Image src={DuvetBranco} width="79" height="33" />
-            <AddToCartButton
-              variantId={whiteDuvetCoverFiltered?.node.id}
-              onClickCapture={removeItem}
-            >
+            <AddToCartButton variantId={whiteDuvet} onClickCapture={removeItem}>
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Cinza</span>
             <Image src={DuvetCinza} width="79" height="33" />
-            <AddToCartButton
-              variantId={grayDuvetCoverFiltered?.node.id}
-              onClickCapture={removeItem}
-            >
+            <AddToCartButton variantId={grayDuvet} onClickCapture={removeItem}>
               Adicionar
             </AddToCartButton>
           </div>

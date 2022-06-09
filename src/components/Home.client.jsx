@@ -14,13 +14,15 @@ import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
 import Klabin from '../components/Klabin/Klabin.client';
 import FamiliaZissou from '../components/FamiliaZissou/FamiliaZissou.client';
 
+import Gif100Dias from '../assets/gif_100dias.gif';
+
 export default function Home() {
   return (
     <LoadingProvider>
       <CinematographyBanner />
       <SleepAndLive />
       <ChooseYourDestiny />
-      <TryItFor100Days />
+      <TryItFor100Days image={Gif100Dias} />
       <ZissouStores />
       <Partners />
       <OpenYourHeart />
