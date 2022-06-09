@@ -1,10 +1,12 @@
 import {useProduct} from '@shopify/hydrogen/client';
 import {useEffect, useState} from 'react';
+import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './RestockDate.module.scss';
 
 export default function RestockDate() {
   const {selectedVariant} = useProduct();
+  const {isSpark} = useZissouProduct();
 
   const [hasRestockDate, setHasRestockDate] = useState(false);
   const [date, setDate] = useState(null);
@@ -22,15 +24,20 @@ export default function RestockDate() {
     }
   }, [hasRestockDate, selectedVariant]);
 
-  return hasRestockDate ? (
-    <strong className={styles.Encomenda}>
-      Receba a partir de{' '}
-      {date.getUTCDate() +
-        '/' +
-        date
-          .toLocaleString('default', {month: 'long'})
-          .toUpperCase()
-          .substr(0, 3)}
-    </strong>
-  ) : null;
+  return (
+    hasRestockDate && (
+      <div className={styles.Encomenda}>
+        {isSpark && <strong>Pré-venda exclusiva</strong>}
+        <strong>
+          Receba a partir de{' '}
+          {date.getUTCDate() +
+            '/' +
+            date
+              .toLocaleString('default', {month: 'long'})
+              .toUpperCase()
+              .substr(0, 3)}
+        </strong>
+      </div>
+    )
+  );
 }
