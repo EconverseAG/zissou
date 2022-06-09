@@ -319,6 +319,10 @@ export default function SpecsBlueSlick() {
             className={
               styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
             }
+            style={{
+              marginTop: '50px',
+              marginBottom: 0,
+            }}
           >
             <div
               className={
