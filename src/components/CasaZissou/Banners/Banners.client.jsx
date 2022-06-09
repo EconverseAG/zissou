@@ -40,7 +40,11 @@ export default function Banners({refScroll}) {
     <div className={styles.bannersContainer}>
       <div className={styles.bannersText}>
         <strong className={styles.bannersTitle}>Experiência Zissou</strong>
-        <span className={styles.bannersSubtitle}>Conheça nossas lojas</span>
+        <span className={styles.bannersSubtitle}>
+          Além do digital
+          <br />
+          Viva a experiência Zissou
+        </span>
       </div>
       <Slider {...settings}>
         <div className={styles.banner}>
