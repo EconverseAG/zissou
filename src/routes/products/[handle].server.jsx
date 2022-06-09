@@ -13,7 +13,6 @@ const ProductDetails = lazy(() =>
 
 const idTravesseiro = `gid://shopify/Product/7414166585538`; //1556341162057
 const idTravesseiroWashable = `gid://shopify/Product/7414166618306`; //4512182992969
-//const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`; //4512186564681
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`; //7195872362690
 const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`; // 7631663005945
 const idGrayLencol = `gid://shopify/Product/7195869249730`; //7195869249730
@@ -49,7 +48,6 @@ export default function Product({country = {isoCode: 'US'}, response}) {
 
   let travesseiro,
     travesseiroWashable,
-    travesseiroWashableCustom,
     duvetFilling,
     grayDuvetCover,
     whiteDuvetCover,
@@ -62,7 +60,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     base;
 
   switch (handle) {
-    case 'travesseiro-zissou':
+    case 'travesseiro-zissou-newurl':
       travesseiro = useProductQueryById(idTravesseiro);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       break;
@@ -108,7 +106,6 @@ export default function Product({country = {isoCode: 'US'}, response}) {
         <ProductDetails
           travesseiro={travesseiro?.data.product}
           travesseiroWashable={travesseiroWashable?.data.product}
-          travesseiroWashableCustom={travesseiroWashableCustom?.data.product}
           duvetFilling={duvetFilling?.data.product}
           grayDuvetCover={grayDuvetCover?.data.product}
           whiteDuvetCover={whiteDuvetCover?.data.product}
