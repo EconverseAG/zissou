@@ -74,21 +74,25 @@ function ZissouProductOptions({
       )}
       <fieldset
         className={`${styles.select} ${
-          isSpark
-            ? styles.selectSpark
-            : isCoral
-            ? styles.selectCoral
-            : styles.selectBlue
+          isColchao
+            ? isSpark
+              ? styles.selectSpark
+              : isCoral
+              ? styles.selectCoral
+              : styles.selectBlue
+            : ''
         }`}
         key={name}
       >
         <button
           className={`${styles.selectOpen} ${
-            isSpark
-              ? styles.selectSpark
-              : isCoral
-              ? styles.selectCoral
-              : styles.selectBlue
+            isColchao
+              ? isSpark
+                ? styles.selectSpark
+                : isCoral
+                ? styles.selectCoral
+                : styles.selectBlue
+              : ''
           }`}
           onClick={() => setIsOpen(true)}
         >
@@ -102,11 +106,13 @@ function ZissouProductOptions({
           </p>
           <span
             className={`${styles.selectOpenArrow} ${
-              isSpark
-                ? styles.selectSpark
-                : isCoral
-                ? styles.selectCoral
-                : styles.selectBlue
+              isColchao
+                ? isSpark
+                  ? styles.selectSpark
+                  : isCoral
+                  ? styles.selectCoral
+                  : styles.selectBlue
+                : ''
             }`}
           >
             <Image
@@ -123,11 +129,13 @@ function ZissouProductOptions({
         {isOpen && (
           <div
             className={`${styles.selectDropdown} ${
-              isSpark
-                ? styles.selectSpark
-                : isCoral
-                ? styles.selectCoral
-                : styles.selectBlue
+              isColchao
+                ? isSpark
+                  ? styles.selectSpark
+                  : isCoral
+                  ? styles.selectCoral
+                  : styles.selectBlue
+                : ''
             }`}
           >
             {variants?.map(({id, selectedOptions}) => (
