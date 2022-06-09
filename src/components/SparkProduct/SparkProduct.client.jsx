@@ -59,7 +59,7 @@ function SparkProduct() {
         {isMobile && <ZissouCompreJunto />}
         {showRestockDate && <RestockDate />}
         <ZissouAddToCart className={styles.AddToCart} />
-        <EntregaFutura />
+        {/* <EntregaFutura /> */}
         <ZissouColchaoIcons />
         <Image
           src={isMobile ? BannerHolistixMobile : BannerHolistix}

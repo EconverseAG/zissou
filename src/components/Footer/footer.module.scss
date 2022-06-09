@@ -1,6 +1,27 @@
 .footerContainer {
   position: relative;
 
+  .iconWhatsapp{
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    transition: all .35s ease-in-out;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+
+    a{
+      display: block;
+
+      img{
+        display: block;
+      }
+    }
+  }
+
   .footerContentTop {
     padding: 10px 20px 50px 20px;
     background: var(--blue-color-700);
