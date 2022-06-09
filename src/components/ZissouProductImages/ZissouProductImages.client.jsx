@@ -8,8 +8,10 @@ import * as styles from './ZissouProductImages.module.scss';
 
 import ArrowNextSpark from '../../assets/next-arrow-spark.svg';
 import ArrowPrevSpark from '../../assets/prev-arrow-spark.svg';
-import ArrowNext from '../../assets/next-arrow.svg';
-import ArrowPrev from '../../assets/prev-arrow.svg';
+import ArrowNextCoral from '../../assets/next-arrow.svg';
+import ArrowPrevCoral from '../../assets/prev-arrow.svg';
+import ArrowNext from '../../assets/next-arrow-lilac.svg';
+import ArrowPrev from '../../assets/prev-arrow-lilac.svg';
 import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
 import BaseBanner from '../../assets/base-banner.gif';
 import LencolBanner from '../../assets/lencol-banner-background.png';
@@ -27,7 +29,7 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro, isBase, isLencol, isDuvet, isSpark} =
+  const {isTravesseiro, isBase, isLencol, isDuvet, isSpark, isCoral} =
     useZissouProduct();
 
   const {isMobile} = useMobile();
@@ -111,7 +113,9 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           onClick={sliderRef?.slickPrev}
         >
           <Image
-            src={isSpark ? ArrowPrevSpark : ArrowPrev}
+            src={
+              isSpark ? ArrowPrevSpark : isCoral ? ArrowPrevCoral : ArrowPrev
+            }
             width={12}
             height={35}
           />
@@ -180,7 +184,9 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           onClick={sliderRef?.slickNext}
         >
           <Image
-            src={isSpark ? ArrowNextSpark : ArrowNext}
+            src={
+              isSpark ? ArrowNextSpark : isCoral ? ArrowNextCoral : ArrowNext
+            }
             width={12}
             height={35}
           />
