@@ -65,7 +65,7 @@ export default [
     title: 'Camada de <br /> aconhego',
     imageSrc: CamadaDeAconchegoFundo,
     modal: {
-      title: 'VISCO COOL',
+      title: 'VISCO FRESH',
       width: 30,
       height: 30,
       imageTitle: BandeiraBrasil,
