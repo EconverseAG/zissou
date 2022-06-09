@@ -87,12 +87,12 @@ export default function SleepAndLiveComparativo() {
             <br />
             <p className={styles.SleepAndLiveText}>
               <strong>
-                Opção de suporte híbrido com com molas Leggett & Platt
+                Opção de suporte híbrido com molas Leggett & Platt
               </strong>{' '}
               de 12cm de altura
             </p>
             <span className={styles.SleepAndLivePrice}>
-              A partir de R$ 3.190
+              A partir de R$ 2.990
             </span>
             <Link
               to="/products/colchao-zissou-spark"
@@ -134,10 +134,10 @@ export default function SleepAndLiveComparativo() {
           </p>
           <br />
           <p className={styles.SleepAndLiveText}>
-            <strong>Opção de suporte híbrido Spring System Plus</strong> com
-            molas de 15cm de altura
+            <strong>Opção de suporte híbrido com molas Leggett & Platt</strong>{' '}
+            de 15cm de altura
           </p>
-          <span className={styles.SleepAndLivePrice}>A partir de R$ 4.190</span>
+          <span className={styles.SleepAndLivePrice}>A partir de R$ 4.990</span>
           <Link
             to="/products/colchao-zissou-coral-original-newurl"
             className={styles.SleepAndLiveButtonCTA}
@@ -182,7 +182,9 @@ export default function SleepAndLiveComparativo() {
             </strong>{' '}
             de 15cm de altura e zoneamento ergonômico
           </p>
-          <span className={styles.SleepAndLivePrice}>A partir de R$ 9.990</span>
+          <span className={styles.SleepAndLivePrice}>
+            A partir de R$ 10.990
+          </span>
           <Link
             to="/products/colchao-zissou-blue-newurl"
             className={styles.SleepAndLiveButtonCTA}
@@ -226,11 +228,13 @@ export default function SleepAndLiveComparativo() {
             </p>
             <br />
             <p className={styles.SleepAndLiveText}>
-              <strong>Opção de suporte híbrido Spring System</strong> com molas
+              <strong>
+                Opção de suporte híbrido com molas Leggett & Platt
+              </strong>
               de 12cm de altura
             </p>
             <span className={styles.SleepAndLivePrice}>
-              A partir de R$ 3.190
+              A partir de R$ 2.990
             </span>
             <Link
               to="/products/colchao-zissou-spark"

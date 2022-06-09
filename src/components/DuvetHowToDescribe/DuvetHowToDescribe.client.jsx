@@ -14,15 +14,27 @@ function DuvetHowToDescribe() {
         Como descrever <strong>o Duvet Zissou</strong>
       </h2>
       <div className={styles.videoContainer}>
-        <video
-          src={isMobile ? VideoMobile : Video}
-          autoPlay
-          loop
-          muted
-          playsInline
-          width={isMobile ? 1100 : 366}
-          height={isMobile ? 619 : 364}
-        />
+        {!isMobile ? (
+          <video
+            src={Video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            width={366}
+            height={364}
+          />
+        ) : (
+          <video
+            src={VideoMobile}
+            controls
+            loop
+            muted
+            playsInline
+            width={1100}
+            height={619}
+          />
+        )}
       </div>
     </div>
   );

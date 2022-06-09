@@ -10,6 +10,8 @@ import {LoadingProvider} from '../../hooks/useLoading';
 import ProductFixedBar from '../ProductFixedBar';
 import BaseHaveYouDecidedYourColchao from '../BaseHaveYouDecidedYourColchao';
 
+import Gif100Dias from '../../assets/gif_100dias.gif';
+
 export default function Base() {
   return (
     <LoadingProvider>
@@ -21,7 +23,7 @@ export default function Base() {
         <SpecsBase />
         <BaseHaveYouDecidedYourColchao />
         <BaseTechnical />
-        <TryItFor100Days />
+        <TryItFor100Days image={Gif100Dias} />
         <ZissouStores />
         <Partners color="#779ABF" />
       </div>

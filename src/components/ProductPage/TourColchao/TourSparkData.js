@@ -33,7 +33,7 @@ export default [
     title: 'Camada <br /> de conforto',
     imageSrc: CamadaDeConfortoFundo,
     modal: {
-      title: 'LATEX INFUDED',
+      title: 'LATEX INFUSED',
       imageTitle: BandeiraBelgica,
       width: 30,
       height: 30,
@@ -41,7 +41,7 @@ export default [
         <strong>Altura da camada:</strong> 4cm
         <br />
         <br />
-        - Látex Acefom HR de alta resiliência, de origem belga, que é um material exclusivo dos colchões Spark
+        - Latex Infused de alta resiliência, de origem belga, que é um material exclusivo dos colchões Spark
         <br />
         <br />
         - Aumenta o conforto e a resiliência na superfície do colchão
@@ -92,7 +92,7 @@ export default [
         <strong>Material:</strong> Poliuretano
         <br />
         <br />
-        - Espuma de pooliuretano de alta densidade e durabilidade
+        - Espuma de poliuretano de alta densidade e durabilidade
         <br />
         <br />
         - Proporciona suporte uniforme em todas a superfície do colchão

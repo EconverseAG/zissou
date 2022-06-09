@@ -2,7 +2,7 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './FamiliaZissou.module.scss';
 
 import FamiliaZissouFundo from '../../assets/familiaZissouFundo.png';
-import FamiliaZissouFundoMobile from '../../assets/familiaZissouFundoMobile.webp';
+import FamiliaZissouFundoMobile from '../../assets/familiaZissouFundoMobile.jpeg';
 
 import PopupContent from './FamiliaModal.client';
 import modalData from './ModalFamiliaZissouData';
@@ -34,9 +34,10 @@ export default function FamiliaZissou() {
             loading={'lazy'}
           />
         )}
-        {modalData.map((modal) => (
-          <PopupContent content={modal} key={modal.name} />
-        ))}
+        {!isMobile &&
+          modalData.map((modal) => (
+            <PopupContent content={modal} key={modal.name} />
+          ))}
       </div>
     </div>
   );

@@ -21,13 +21,13 @@ export default function ExperienciaZissouDesktop() {
               Rua Dr Melo Alves, 383 <br /> Jardins - SP <br /> Cep 01417-010
             </p>
             <Link
-              to="/"
+              to="https://g.page/zissoubr?share"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
-              to="/"
+              to="https://calendly.com/casa-zissou/visita-agendada"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI
@@ -42,13 +42,13 @@ export default function ExperienciaZissouDesktop() {
               Rua Normandia, 25 <br /> Moema - SP <br /> Cep 04517-040
             </p>
             <Link
-              to="/"
+              to="https://goo.gl/maps/xGy6NdLi3iLZBMKy7"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
-              to="/"
+              to="https://calendly.com/zissou-normandia/visita-agendada"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI

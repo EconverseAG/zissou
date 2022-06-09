@@ -14,7 +14,7 @@ import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasCoral from '../../assets/gif_100_dias_coral.webm';
+import Gif100DiasCoral from '../../assets/gif_100_dias_coral.gif';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
 import CoralCGI from '../../assets/coral_cgi.mp4';
@@ -35,6 +35,17 @@ export default function Coral() {
         loop
         muted
       />
+      {!isMobile ? (
+        <video style={{width: '100%'}} src={CoralCGI} autoPlay loop muted />
+      ) : (
+        <video
+          style={{width: '100%'}}
+          src={CoralCGIMobile}
+          loop
+          muted
+          controls
+        />
+      )}
       <TourColchao />
       <SpecsColchaoSlick />
       <DoubtsProductPage />
@@ -42,7 +53,7 @@ export default function Coral() {
         title={'VEM DE CORAL QUE NÃO TEM ERRO :)'}
         background={'180deg, rgba(244,133,128,1) 0%, rgba(255,204,199,1) 100%'}
       />
-      <TryItFor100Days video={Gif100DiasCoral} />
+      <TryItFor100Days image={Gif100DiasCoral} />
       <ZissouStores />
       <Partners color={'#F48580'} />
       <Reviews />

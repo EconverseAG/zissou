@@ -30,13 +30,17 @@ export default function Coral() {
         <BannerProductPage src={BannerSparkPDP} title="Colchão Zissou Spark" />
       )}
       <SparkProduct />
-      <video
-        style={{width: '100%'}}
-        src={isMobile ? SparkCgiMobile : SparkCgi}
-        autoPlay
-        loop
-        muted
-      />
+      {!isMobile ? (
+        <video style={{width: '100%'}} src={SparkCgi} autoPlay loop muted />
+      ) : (
+        <video
+          style={{width: '100%'}}
+          src={SparkCgiMobile}
+          loop
+          muted
+          controls
+        />
+      )}
       <TourSpark />
       <SpecsColchaoSlick />
       <DoubtsProductPage />

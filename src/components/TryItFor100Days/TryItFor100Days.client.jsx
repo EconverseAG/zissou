@@ -2,9 +2,9 @@ import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './tryit.module.scss';
 
-import Gif100Dias from '../../assets/gif_100dias.webm';
+import Gif100Dias from '../../assets/gif_100dias.gif';
 
-export default function TryItFor100Days({image, video}) {
+export default function TryItFor100Days({image}) {
   return (
     <div className={styles.TryItContainer}>
       <div className={styles.TryItLeft}>
@@ -28,19 +28,7 @@ export default function TryItFor100Days({image, video}) {
       </div>
       <div className={styles.TryItRight}>
         <Link to="/pages/100dias">
-          {!image && (
-            <video
-              src={video ?? Gif100Dias}
-              autoPlay
-              loop
-              muted
-              width={574}
-              height={510}
-            />
-          )}
-          {image && (
-            <Image src={image ?? Gif100Dias} width={574} height={510} />
-          )}
+          <Image src={image ?? Gif100Dias} width={574} height={510} />
         </Link>
       </div>
     </div>

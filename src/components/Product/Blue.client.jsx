@@ -1,7 +1,6 @@
 import BannerBluePDP from '../../assets/pdp-blue.png';
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
-import CinematographyBanner from '../CinematographyBanner/CinematographyBanner.client';
 import Reviews from '../Reviews/Reviews.client';
 import CoralOrBlue from '../CoralOrBlue/CoralOrBlue.client';
 import Partners from '../Partners/Partners.client';
@@ -27,14 +26,17 @@ export default function Blue() {
       <ProductFixedBarColchao title="BLUE" subtitle={'LIBERTE SEUS SONHOS'} />
       {!isMobile && <BannerProductPage src={BannerBluePDP} />}
       <CoralProduct />
-      <video
-        style={{width: '100%'}}
-        src={isMobile ? BlueCgiMobile : BlueCgi}
-        autoPlay
-        loop
-        muted
-      />
-      <CinematographyBanner />
+      {!isMobile ? (
+        <video style={{width: '100%'}} src={BlueCgi} autoPlay loop muted />
+      ) : (
+        <video
+          style={{width: '100%'}}
+          src={BlueCgiMobile}
+          loop
+          muted
+          controls
+        />
+      )}
       <TourColchao />
       <SpecsColchaoSlick />
       <DoubtsProductPage color={'#CADEE8'} hover={'#7D90A5'} />

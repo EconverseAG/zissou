@@ -35,7 +35,7 @@ export default function Layout({children}) {
           <Header collections={collections} storeName={storeName} />
           <Cart />
         </Suspense>
-        <main role="main" id="mainContent" style={{overflowX: 'hidden'}}>
+        <main role="main" id="mainContent">
           {children}
         </main>
         <Suspense fallback={<ZissouLoading />}>

@@ -258,7 +258,7 @@ export default function SpecsBlueSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleBlue}`}
               >
-                VISCO COOL
+                VISCO FRESH
                 <Image
                   src={BandeiraBrasil}
                   width={isMobile ? 20 : 30}

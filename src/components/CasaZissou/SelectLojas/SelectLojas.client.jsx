@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import useMobile from '../../../hooks/useMobile';
 
-import {Image, Link} from '@shopify/hydrogen/client';
+import {Image} from '@shopify/hydrogen/client';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -79,12 +79,6 @@ export default function SelectLojas() {
               dangerouslySetInnerHTML={{__html: lojaFiltered[0].address}}
               className={styles.SelectedStoreAddress}
             />
-            <Link
-              to={lojaFiltered[0].link}
-              className={styles.SelectedStoreLink}
-            >
-              Como chegar
-            </Link>
           </div>
         ) : null}
       </div>

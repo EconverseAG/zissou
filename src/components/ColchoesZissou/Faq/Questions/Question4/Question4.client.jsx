@@ -50,7 +50,7 @@ export default function Question4({setIsOpen}) {
         id="panel2a-header"
       >
         <strong className={styles.FaqAccordionTitle}>
-          Como decidir entre CORAL E BLUE?
+          Como decidir entre SPARK, CORAL E BLUE?
         </strong>
       </AccordionSummary>
       <AccordionDetails

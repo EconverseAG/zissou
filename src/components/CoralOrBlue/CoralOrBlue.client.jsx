@@ -1,8 +1,8 @@
-import {Link} from '@shopify/hydrogen/client';
+import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './CoralOrBlue.module.scss';
 
-import GifFundoMobile from '../../assets/gif_fundo_mobile.webm';
-import GifFundo from '../../assets/gif_coral_ou_blue_fundo.webm';
+import GifFundoMobile from '../../assets/gif_fundo_mobile.gif';
+import GifFundo from '../../assets/gif_coral_ou_blue_fundo.gif';
 import useMobile from '../../hooks/useMobile';
 
 export default function CoralOrBlue() {
@@ -11,7 +11,11 @@ export default function CoralOrBlue() {
   return (
     <div className={styles.CoralOrBlueContainer}>
       <strong className={styles.CoralOrBlueTitle}>SPARK, CORAL OU BLUE?</strong>
-      <video src={isMobile ? GifFundoMobile : GifFundo} autoPlay loop muted />
+      <Image
+        src={isMobile ? GifFundoMobile : GifFundo}
+        width="100%"
+        height="100%"
+      />
       <Link to="/pages/comparativo-colchoes" className={styles.CoralOrBlueLink}>
         Comparar os colchões
       </Link>

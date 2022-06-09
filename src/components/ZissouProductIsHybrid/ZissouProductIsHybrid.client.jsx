@@ -3,13 +3,14 @@ import {
   useProduct,
   useMoney,
   flattenConnection,
+  Image,
 } from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductIsHybrid.module.scss';
 
-import HybridColchao from '../../assets/hybrid-colchao.webm';
+import HybridColchao from '../../assets/hybrid-colchao.gif';
 
 export default function ZissouProductIsHybrid() {
   const [oldProduct, setOldProduct] = useState();
@@ -156,12 +157,9 @@ export default function ZissouProductIsHybrid() {
             </span>
           </div>
           <div className={styles.selectedHybridRight}>
-            <video
+            <Image
               className={styles.video}
               src={HybridColchao}
-              autoPlay
-              loop
-              muted
               width={isMobile ? 170 : 106}
               height={isMobile ? 264 : 177}
             />

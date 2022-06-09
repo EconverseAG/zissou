@@ -14,11 +14,13 @@ import ArrowNextCoral from '../../assets/next-arrow.svg';
 import ArrowPrevCoral from '../../assets/prev-arrow.svg';
 import ArrowNext from '../../assets/next-arrow-lilac.svg';
 import ArrowPrev from '../../assets/prev-arrow-lilac.svg';
-import TravesseiroBanner from '../../assets/travesseiro-mobile.webp';
+import TravesseiroBanner from '../../assets/travesseiro_banner_mobile.jpg';
 import BaseBanner from '../../assets/base-banner.gif';
 import LencolBanner from '../../assets/lencol-banner-background.png';
 import DuvetBanner from '../../assets/duvet-banner-background.png';
 import SparkBanner from '../../assets/pdp-spark-mobile.png';
+import CoralBanner from '../../assets/pdp_coral_mobile.png';
+import BlueBanner from '../../assets/pdp_blue_mobile.png';
 import SparkCaixa from '../../assets/spark-caixa.png';
 import CoralCaixa from '../../assets/caixas-coral.jpg';
 import BlueCaixa from '../../assets/blue-caixa.jpg';
@@ -166,6 +168,34 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
               <span className={styles.bannerTitle}>
                 Colchão
                 <br /> Zissou Spark
+              </span>
+            </div>
+          )}
+          {isMobile && isCoral && (
+            <div className={styles.imageContainer}>
+              <Image
+                src={CoralBanner}
+                width={375}
+                height={396}
+                style={{width: '100%'}}
+              />
+              <span className={styles.bannerTitle}>
+                Colchão
+                <br /> Zissou Coral
+              </span>
+            </div>
+          )}
+          {isMobile && isBlue && (
+            <div className={styles.imageContainer}>
+              <Image
+                src={BlueBanner}
+                width={375}
+                height={396}
+                style={{width: '100%'}}
+              />
+              <span className={styles.bannerTitle}>
+                Colchão
+                <br /> Zissou Blue
               </span>
             </div>
           )}

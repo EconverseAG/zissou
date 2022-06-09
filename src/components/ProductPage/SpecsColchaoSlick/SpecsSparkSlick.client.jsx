@@ -183,10 +183,9 @@ export default function SpecsSparkSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundInfoText
                 }
               >
-                - Composta por espuma Acefom HR om Latex Infused de origem
-                belga, exclusiva da Zissou. Torna Spark ideal para quem prefere
-                um colchão que proporciona distribuição uniforme de peso, com
-                total conforto.
+                - Composta por Latex Infused de origem belga, exclusivo da
+                Zissou. Torna Spark ideal para quem prefere um colchão que
+                proporciona distribuição uniforme de peso, com total conforto.
                 <br />
                 <br />
                 - Proporciona resiliência e suporte progressivo, com apoio
@@ -363,8 +362,7 @@ export default function SpecsSparkSlick() {
                   }
                 >
                   - Substituição do suporte de espuma de alta resiliência por
-                  suporte híbrido Spring System Plus com molas ensacadas
-                  individualmente
+                  suporte híbrido com molas Legget & Platt
                   <br />
                   <br />
                   - Inclui camada de transição de poliuretano com alta
@@ -388,6 +386,7 @@ export default function SpecsSparkSlick() {
                   className={
                     styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImageTitle
                   }
+                  style={{left: '15%'}}
                 >
                   OPÇÃO DE SISTEMA
                   <br />

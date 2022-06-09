@@ -4,7 +4,8 @@ import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TheSecret.module.scss';
 
-import Panda from '../../assets/panda.mp4';
+import Panda from '../../assets/panda.gif';
+import {Image} from '@shopify/hydrogen/client';
 
 function TheSecret({productName, open}) {
   const [showSecret, setShowSecret] = useState(open);
@@ -26,13 +27,11 @@ function TheSecret({productName, open}) {
         <div className={styles.theSecretRevealed}>
           <h2>O segredo</h2>
           <div className={styles.theSecretRevealedContent}>
-            <video
+            <Image
               className={styles.video}
               src={Panda}
-              autoPlay
-              loop
-              muted
-              playsInline
+              width={isMobile ? 358 : 408}
+              height={isMobile ? 201 : 330}
             />
             <p>
               O {productName} foi desenvolvido com tecido de polpa de bambu, que

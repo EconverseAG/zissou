@@ -7,7 +7,8 @@
   align-items: center;
   background-image: url('../../assets/duvet-banner-background.png');
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
   &.mobile {
     background-image: none;
@@ -36,7 +37,6 @@
     flex-direction: column;
     align-items: center;
     padding-top: 141px;
-    padding-bottom: 758px;
     height: 100%;
 
     h1, span {
@@ -55,6 +55,6 @@
 
   .vejaMais {
     position: absolute;
-    bottom: 70px;
+    bottom: 90px;
   }
 }

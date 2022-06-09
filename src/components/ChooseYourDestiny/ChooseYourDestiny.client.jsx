@@ -29,7 +29,7 @@ export default function ChooseYourDestiny() {
     {
       banner: Banner_3,
       mobileImage: MobileBanner_3,
-      link: '/products/travesseiro-zissou',
+      link: '/products/travesseiro-zissou-newurl',
       CTA: 'TRAVESSEIRO',
     },
     {

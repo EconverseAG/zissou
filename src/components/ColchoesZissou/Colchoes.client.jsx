@@ -14,6 +14,8 @@ import FormulaMagica from './FormulaMagica/FormulaMagica.client';
 import SleepAndLiveComparativo from './SleepAndLiveComparativo/SleepAndLiveComparativo.client';
 import SuporteIdeal from './SuporteIdeal/SuporteIdeal.client';
 
+import Gif100Dias from '../../assets/gif_100dias.gif';
+
 export default function Colchoes() {
   const {isMobile} = useMobile();
 
@@ -29,7 +31,7 @@ export default function Colchoes() {
       <FormulaMagica />
       <OpenYourHeart />
       <CoralOrBlue />
-      <TryItFor100Days />
+      <TryItFor100Days image={Gif100Dias} />
       <ZissouStores />
       <Partners />
     </LoadingProvider>

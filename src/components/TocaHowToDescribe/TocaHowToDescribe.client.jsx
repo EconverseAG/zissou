@@ -1,8 +1,9 @@
 import useMobile from '../../hooks/useMobile';
 
-import VideoGif from '../../assets/toca-gif.webm';
+import VideoGif from '../../assets/toca_gif.gif';
 
 import * as styles from './TocaHowToDescribe.module.scss';
+import {Image} from '@shopify/hydrogen/client';
 
 export default function TocaHowToDescribe() {
   const {isMobile} = useMobile();
@@ -14,12 +15,8 @@ export default function TocaHowToDescribe() {
       </strong>
       <div className={styles.Bottom}>
         <div className={styles.BottomVideo}>
-          <video
+          <Image
             src={VideoGif}
-            autoPlay
-            loop
-            muted
-            playsInline
             width={isMobile ? 375 : 654}
             height={isMobile ? 340 : 438}
           />

@@ -30,7 +30,7 @@ function ChooseYourDestiny() {
         />
         <ProductChoice
           name="Travesseiro"
-          url="/products/travesseiro-zissou"
+          url="/products/travesseiro-zissou-newurl"
           image={TravesseiroImage}
         />
         <ProductChoice

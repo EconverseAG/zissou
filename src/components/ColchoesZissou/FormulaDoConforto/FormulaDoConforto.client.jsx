@@ -2,8 +2,9 @@ import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './FormulaDoConforto.module.scss';
 
-import VideoLatex from '../../../assets/video_latex.mp4';
-import VideoVisco from '../../../assets/video_visco.webm';
+import VideoLatex from '../../../assets/video_latex.gif';
+import VideoVisco from '../../../assets/video_visco.gif';
+import {Image} from '@shopify/hydrogen/client';
 
 export default function FormulaDoConforto() {
   const {isMobile} = useMobile();
@@ -22,12 +23,9 @@ export default function FormulaDoConforto() {
               </strong>
             </div>
             <div className={styles.FormulaDoConfortoTopContent}>
-              <video
+              <Image
                 className={styles.FormulaDoConfortoTopContentImage}
                 src={VideoLatex}
-                autoPlay
-                loop
-                muted
                 width="339"
                 height="141"
               />
@@ -55,12 +53,9 @@ export default function FormulaDoConforto() {
         ) : (
           <>
             <div className={styles.FormulaDoConfortoTopImage}>
-              <video
+              <Image
                 className={styles.video}
                 src={VideoLatex}
-                autoPlay
-                loop
-                muted
                 width="550"
                 height="310"
               />
@@ -76,7 +71,7 @@ export default function FormulaDoConforto() {
               <ul className={styles.FormulaDoConfortoTopContentList}>
                 <li>
                   <strong className={styles.FormulaDoConfortoTopContentList}>
-                    • Acefom HR:
+                    • Latex Infused:
                   </strong>{' '}
                   material exclusivo do Spark, tem alta resiliência e ótimas
                   características ergonômicas
@@ -112,12 +107,9 @@ export default function FormulaDoConforto() {
               </strong>
             </div>
             <div className={styles.FormulaDoConfortoBottomContent}>
-              <video
+              <Image
                 className={styles.FormulaDoConfortoTopContentImage}
                 src={VideoVisco}
-                autoPlay
-                loop
-                muted
                 width="339"
                 height="141"
               />
@@ -131,12 +123,9 @@ export default function FormulaDoConforto() {
         ) : (
           <>
             <div className={styles.FormulaDoConfortoBottomImage}>
-              <video
+              <Image
                 className={styles.video}
                 src={VideoVisco}
-                autoPlay
-                loop
-                muted
                 width="550"
                 height="310"
               />

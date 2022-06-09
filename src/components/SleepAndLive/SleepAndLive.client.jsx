@@ -17,7 +17,7 @@ export default function SleepAndLive() {
       <div className={styles.SleepAndLiveContent}>
         {!isMobile && (
           <div className={`${styles.Prod} ${styles.Spark}`}>
-            <p className={styles.Flag}>Novidade</p>
+            <p className={styles.Flag}>PRÉ - VENDA</p>
             <Image
               src={LogoSpark}
               width={114}

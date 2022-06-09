@@ -12,16 +12,16 @@ export default [
   {
     name: 'Travesseiro',
     title: 'Travesseiro',
-    link: 'https://www.zissou.com.br/products/travesseiro-zissou',
+    link: 'https://www.zissou.com.br/products/travesseiro-zissou-newurl',
   },
   {
     name: 'Duvet',
     title: 'Duvet',
-    link: 'https://www.zissou.com.br/pages/lencol-e-duvet-zissou',
+    link: 'http://www.zissou.com.br/products/duvet-zissou',
   },
   {
     name: 'Lencol',
     title: 'Lençol',
-    link: 'https://www.zissou.com.br/pages/lencol-e-duvet-zissou',
+    link: 'http://www.zissou.com.br/products/jogo-de-lencol-zissou',
   },
 ];

@@ -10,7 +10,7 @@ import {
 
 import Layout from '../../components/Layout.server';
 
-import Privacy from '../../assets/privacy_policy.png';
+import Privacy from '../../assets/privacy.png';
 
 import * as styles from './redefinaseusono.module.scss';
 

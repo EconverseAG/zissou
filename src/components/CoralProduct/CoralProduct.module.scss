@@ -37,8 +37,14 @@
   }
 
   &.mobile {
+    padding-top: 0;
+    
     .Price {
       margin-top: 11px;
+    }
+
+    .leftSection {
+      margin-top: 0;
     }
 
     .SelectedOptions {

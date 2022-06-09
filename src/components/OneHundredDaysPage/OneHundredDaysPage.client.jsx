@@ -17,7 +17,7 @@ function OneHundredDaysPage() {
     <LoadingProvider>
       <div className={`${styles.container} ${isMobile ? styles.mobile : ''}`}>
         <h1>
-          Você acredita em <strong>amor</strong> a primeira vista?
+          Você acredita em <strong>amor</strong> à primeira vista?
         </h1>
         <p>
           Nós também. Mas quando se trata do seu sono, siga o conselho dos
