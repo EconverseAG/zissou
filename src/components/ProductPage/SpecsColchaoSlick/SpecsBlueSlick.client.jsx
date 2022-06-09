@@ -14,12 +14,12 @@ import Brands from '../../../assets/brands_pdp.png';
 import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-blue.png';
 import CamadaDeConforto from '../../../assets/camada_de_conforto_blue.png';
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
+import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile-blue.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
 
-import SuporteBlue from '../../../assets/suporte_blue.png';
+import SuporteBlue from '../../../assets/molasblue.mp4';
 
 import ConfortoPDP from '../../../assets/conforto_pdp.png';
 import SuperficiePDP from '../../../assets/superficie_pdp.png';
@@ -319,6 +319,10 @@ export default function SpecsBlueSlick() {
             className={
               styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeft
             }
+            style={{
+              marginTop: '50px',
+              marginBottom: 0,
+            }}
           >
             <div
               className={
@@ -330,30 +334,32 @@ export default function SpecsBlueSlick() {
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalBolder
                 }
               >
-                SISTEMA DE SUPORTE HÍBRIDO ZONED SPRING SYSTEM
+                SISTEMA DE SUPORTE HÍBRIDO LEGGETT & PLATT
               </strong>
               <span
                 className={
                   styles.SpecsColchaoSlickSecondSliderBackgroundSuporteLeftMinimodalTitle
                 }
               >
-                - Camada transição de espuma de poliuretano de alta densidade
-                uniformiza a distribuição de peso.
+                - Camada de transição de espuma de poliuretano de alta densidade
+                uniformiza a distribuição de peso
                 <br />
                 <br />
-                - Sistema do suporte híbrido com molas ensacadas individualmente
+                - Sistema de suporte híbrido com molas ensacadas individualmente
                 com 15cm de altura, que proporcionam maior maleabilidade ao
-                colchão, aumentando a adaptabilidade às curvaturas do corpo.
-                <br />
-                <br />- Molas Zoned Spring System com tecnologia de zonamento
-                ergonômico para melhor alinhamento da coluna.
+                colchão, aumentando a adaptabilidade às curvas do corpo
                 <br />
                 <br />
-                - Sustentação adicional com maior fluxo de ar
+                - Molas Legget & Platt com tecnologia de zoneamento ergonômico
+                para melhor alinhamento da coluna
                 <br />
-                <br />- Reforço nas bordas em todas as laterais do colchão com
-                molas mais firmes para garantir a uniformidade do suporte em
-                todas a superfície
+                <br />
+                Sustentação adicional, com maior fluxo de ar
+                <br />
+                <br />
+                Reforço das bordas em todas em todas as lateris do colchão com
+                molas mais firmes, para garantir a uniformidade do suporte em
+                toda a superfície
               </span>
             </div>
           </div>
@@ -367,11 +373,12 @@ export default function SpecsBlueSlick() {
                 styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
               }
             >
-              <Image
+              <video
                 src={SuporteBlue}
-                width={isMobile ? 327 : 739}
-                height={isMobile ? 150 : 342}
-                loading={'lazy'}
+                width={isMobile ? 270 : 670}
+                autoPlay
+                loop
+                muted
               />
             </div>
           </div>
@@ -565,20 +572,6 @@ export default function SpecsBlueSlick() {
                   Para saber mais sobre os termos de garantia,{' '}
                   <Link
                     to="/blogs/faq/como-funciona-a-garantia-de-um-colchao"
-                    className={styles.BeneficiosItemSubtitleLink}
-                  >
-                    clique aqui
-                  </Link>
-                </span>
-              </div>
-              <div className={styles.BeneficiosItem}>
-                <strong className={styles.BeneficiosItemTitle}>
-                  INFORMAÇÕES TÉCNICAS
-                </strong>
-                <span className={styles.BeneficiosItemSubtitle}>
-                  Para saber mais sobre informações técnicas dos colchões,{' '}
-                  <Link
-                    to="/pages/comparativo-colchoes"
                     className={styles.BeneficiosItemSubtitleLink}
                   >
                     clique aqui
