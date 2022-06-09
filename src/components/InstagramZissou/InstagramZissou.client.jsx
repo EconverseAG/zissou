@@ -53,7 +53,7 @@ export default function Instagram({title, subtitle, background}) {
       {subtitle && <span className={styles.InstagramSubtitle}>{subtitle}</span>}
       <div className={styles.InstagramPosts}>
         <div className={styles.BigPost}>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -70,7 +70,7 @@ export default function Instagram({title, subtitle, background}) {
           </Link>
         </div>
         <div className={styles.SmallPost}>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -85,7 +85,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -100,7 +100,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -115,7 +115,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -130,7 +130,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -145,7 +145,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -160,7 +160,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
@@ -175,7 +175,7 @@ export default function Instagram({title, subtitle, background}) {
               loading={'lazy'}
             />
           </Link>
-          <Link to="/">
+          <Link to="https://www.instagram.com/zissoubr/" target="_blank">
             <Image
               src={
                 zissouContext?.isCoral
