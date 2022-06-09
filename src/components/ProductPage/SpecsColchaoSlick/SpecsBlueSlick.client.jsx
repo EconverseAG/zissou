@@ -19,7 +19,7 @@ import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.pn
 
 import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
 
-import SuporteBlue from '../../../assets/suporte_blue.png';
+import SuporteBlue from '../../../assets/molasblue.mp4';
 
 import ConfortoPDP from '../../../assets/conforto_pdp.png';
 import SuperficiePDP from '../../../assets/superficie_pdp.png';
@@ -371,11 +371,12 @@ export default function SpecsBlueSlick() {
                 styles.SpecsColchaoSlickSecondSliderBackgroundSuporteRightImage
               }
             >
-              <Image
+              <video
                 src={SuporteBlue}
-                width={isMobile ? 327 : 739}
-                height={isMobile ? 150 : 342}
-                loading={'lazy'}
+                width={isMobile ? 270 : 670}
+                autoPlay
+                loop
+                muted
               />
             </div>
           </div>
