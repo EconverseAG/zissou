@@ -17,7 +17,11 @@ export default function Partners({color}) {
   return (
     <div
       className={`${styles.PartnersContainer} ${
-        zissouContext?.isSpark ? styles.spark : ''
+        zissouContext?.isSpark
+          ? styles.spark
+          : zissouContext?.isBlue
+          ? styles.blue
+          : ''
       }`}
       style={{background: color ? color : ''}}
     >
