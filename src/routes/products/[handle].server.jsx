@@ -11,17 +11,17 @@ const ProductDetails = lazy(() =>
   import('../../components/ProductDetails.client'),
 );
 
-const idTravesseiro = `gid://shopify/Product/1556341162057`; //1556341162057
-const idTravesseiroWashable = `gid://shopify/Product/4512182992969`; //4512182992969
-const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`; //4512186564681
+const idTravesseiro = `gid://shopify/Product/7414166585538`; //1556341162057
+const idTravesseiroWashable = `gid://shopify/Product/7414166618306`; //4512182992969
+//const idTravesseiroWashableCustom = `gid://shopify/Product/4512186564681`; //4512186564681
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`; //7195872362690
 const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`; // 7631663005945
 const idGrayLencol = `gid://shopify/Product/7195869249730`; //7195869249730
 const idWhiteLencol = `gid://shopify/Product/2135741923401`; //2135741923401
 const idBase = `gid://shopify/Product/7145404399810`; //7145404399810
-const idCoralHybrid = `gid://shopify/Product/6587140604098`; //6587140604098
+const idCoralHybrid = `gid://shopify/Product/7406293024962`; //6587140604098
 const idSparkHybrid = `gid://shopify/Product/7406293221570`; //7406293221570
-const idCoral = `gid://shopify/Product/6581615460546`; //6581615460546
+const idCoral = `gid://shopify/Product/7406293123266`; //6581615460546
 const idSpark = `gid://shopify/Product/7406293352642`; //7406293352642
 
 export default function Product({country = {isoCode: 'US'}, response}) {
@@ -65,23 +65,20 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     case 'travesseiro-zissou':
       travesseiro = useProductQueryById(idTravesseiro);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
-      travesseiroWashableCustom = useProductQueryById(
-        idTravesseiroWashableCustom,
-      );
       break;
-    case 'colchao-zissou-coral-original':
+    case 'colchao-zissou-coral-original-newurl':
       coral = useProductQueryById(idCoral);
       coralHybrid = useProductQueryById(idCoralHybrid);
       base = useProductQueryById(idBase);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       whiteLencol = useProductQueryById(idWhiteLencol);
       break;
-    case 'colchao-zissou-blue':
+    case 'colchao-zissou-blue-newurl':
       base = useProductQueryById(idBase);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       whiteLencol = useProductQueryById(idWhiteLencol);
       break;
-    case 'colchao-zissou-coral-hibrido-2':
+    case 'colchao-zissou-spark':
       sparkHybrid = useProductQueryById(idSparkHybrid);
       base = useProductQueryById(idBase);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);

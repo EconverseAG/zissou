@@ -72,13 +72,13 @@ export default function ProductDetails({
   useEffect(() => {
     resetStates();
     switch (handle) {
-      case 'colchao-zissou-coral-original':
+      case 'colchao-zissou-coral-original-newurl':
         setIsColchao(true);
         break;
-      case 'colchao-zissou-blue':
+      case 'colchao-zissou-blue-newurl':
         setIsColchao(true);
         break;
-      case 'colchao-zissou-coral-hibrido-2':
+      case 'colchao-zissou-spark':
         setIsColchao(true);
         break;
       case 'duvet-zissou':
@@ -90,7 +90,7 @@ export default function ProductDetails({
       case 'base-zissou':
         setIsBase(true);
         break;
-      case 'travesseiro-zissou':
+      case 'travesseiro-zissou-newurl':
         setIsTravesseiro(true);
         break;
       case 'toca-zissou':
