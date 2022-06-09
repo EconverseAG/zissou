@@ -2,7 +2,7 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './PrivacyContent.module.scss';
 
-import Privacy from '../../assets/privacy_policy.png';
+import Privacy from '../../assets/privacy.png';
 
 export default function PrivacyContent() {
   return (
