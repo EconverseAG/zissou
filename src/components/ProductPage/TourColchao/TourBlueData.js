@@ -17,14 +17,13 @@ export default [
       width: 30,
       height: 30,
       text: `
-        <strong>Material:</strong> Fios de polietileno com alta condutividade térmica adicionando
-        1cm de conforto ao colchão
+        <strong>Material:</strong> Fios de polietileno com alta condutividade térmica adicionando 1cm de conforto ao colchão
         <br />
         <br />
         - Extrai o calor do corpo criando um micro-clima ideal de conforto para uma noite de sono perfeita
         <br />
         <br />
-        - Alta gramatura com matelassê, adicionando conforto e maciez extras na superfície e firmeza nas bordas
+        - Alta gramatura com matelassê, adicionando conforto e maciez extras na superfície
         <br />
         <br />
         - Resistência e durabilidade com preservação das propriedades do tecido
