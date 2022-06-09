@@ -17,11 +17,17 @@ import IconPayment from '../../assets/shopifyPayments.webp';
 export default function Footer() {
   return (
     <footer className={styles.footerContainer} role="contentinfo">
-      {/* <styles.StyleTag /> */}
-
       <div className={styles.iconWhatsapp}>
-        <a href="https://api.whatsapp.com/send?phone=5511932858213" target="_blank">
-          <img src="https://cdn.shopify.com/s/files/1/1526/6199/files/whatsapp__widget--icon_1.png?v=1616198354" alt="Fale com a Zissou pelo Whatsapp" srcset="" />
+        <a
+          href="https://api.whatsapp.com/send?phone=5511932858213"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/1526/6199/files/whatsapp__widget--icon_1.png?v=1616198354"
+            alt="Fale com a Zissou pelo Whatsapp"
+            srcSet=""
+          />
         </a>
       </div>
 
@@ -33,18 +39,18 @@ export default function Footer() {
               <Link to="/pages/colchoes-zissou">Colchões</Link>
             </li>
             <li>
-              <Link to="/products/travesseiro-zissou">Travesseiro Zissou</Link>
+              <Link to="/products/travesseiro-zissou-newurl">
+                Travesseiro Zissou
+              </Link>
             </li>
             <li>
               <Link to="/pages/lencol-e-duvet-zissou">
                 Lençol & Duvet Zissou
               </Link>
             </li>
-            {/* <li>
-                <Link  to="/products/toca-zissou">
-                  Toca Zissou
-                </Link>
-              </li> */}
+            <li>
+              <Link to="/products/toca-zissou">Toca Zissou</Link>
+            </li>
             <li>
               <Link to="/products/base-zissou">Base Zissou</Link>
             </li>

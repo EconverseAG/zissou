@@ -58,7 +58,7 @@ export default function SleepAndLiveComparativo() {
           >
             <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
             <Link
-              to="/products/colchao-zissou-coral-hibrido-2"
+              to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveCTAImage}
             >
               <Image
@@ -95,7 +95,7 @@ export default function SleepAndLiveComparativo() {
               A partir de R$ 3.190
             </span>
             <Link
-              to="/products/colchao-zissou-coral-hibrido-2"
+              to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveButtonCTA}
             >
               CONHEÇA O SPARK
@@ -111,7 +111,7 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> vendido
           </p>
           <Link
-            to="/products/colchao-zissou-coral-original"
+            to="/products/colchao-zissou-coral-original-newurl"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -139,7 +139,7 @@ export default function SleepAndLiveComparativo() {
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 4.190</span>
           <Link
-            to="/products/colchao-zissou-coral-original"
+            to="/products/colchao-zissou-coral-original-newurl"
             className={styles.SleepAndLiveButtonCTA}
           >
             EXPLORE O CORAL
@@ -154,7 +154,7 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> avançado
           </p>
           <Link
-            to="/products/colchao-zissou-blue"
+            to="/products/colchao-zissou-blue-newurl"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -184,7 +184,7 @@ export default function SleepAndLiveComparativo() {
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 9.990</span>
           <Link
-            to="/products/colchao-zissou-blue"
+            to="/products/colchao-zissou-blue-newurl"
             className={styles.SleepAndLiveButtonCTA}
           >
             MERGULHE NO BLUE
@@ -198,7 +198,7 @@ export default function SleepAndLiveComparativo() {
           >
             <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
             <Link
-              to="/products/colchao-zissou-coral-hibrido-2"
+              to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveCTAImage}
             >
               <Image
@@ -233,7 +233,7 @@ export default function SleepAndLiveComparativo() {
               A partir de R$ 3.190
             </span>
             <Link
-              to="/products/colchao-zissou-coral-hibrido-2"
+              to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveButtonCTA}
             >
               CONHEÇA O SPARK
