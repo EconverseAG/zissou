@@ -23,13 +23,13 @@ function ProductOptionsProvider({children}) {
 
     let searchTerm;
 
-    if (referenceOption.includes('solteiro especial'))
+    if (referenceOption?.includes('solteiro especial'))
       searchTerm = 'solteiro especial';
-    else if (referenceOption.includes('solteiro')) searchTerm = 'solteiro';
-    else if (referenceOption.includes('casal')) searchTerm = 'casal';
-    else if (referenceOption.includes('queen')) searchTerm = 'queen';
-    else if (referenceOption.includes('king br')) searchTerm = 'king br';
-    else if (referenceOption.includes('king')) searchTerm = 'king';
+    else if (referenceOption?.includes('solteiro')) searchTerm = 'solteiro';
+    else if (referenceOption?.includes('casal')) searchTerm = 'casal';
+    else if (referenceOption?.includes('queen')) searchTerm = 'queen';
+    else if (referenceOption?.includes('king br')) searchTerm = 'king br';
+    else if (referenceOption?.includes('king')) searchTerm = 'king';
 
     if (!searchTerm) return;
 

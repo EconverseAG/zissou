@@ -34,6 +34,15 @@ export default function ProductDetails({
   const [isDuvet, setIsDuvet] = useState(false);
   const [isToca, setIsToca] = useState(false);
 
+  function resetStates() {
+    setIsColchao(false);
+    setIsBase(false);
+    setIsTravesseiro(false);
+    setIsLencol(false);
+    setIsDuvet(false);
+    setIsToca(false);
+  }
+
   useEffect(() => {
     let products = [];
     product.variants.edges.map((variant, index) => {
@@ -61,6 +70,7 @@ export default function ProductDetails({
   });
 
   useEffect(() => {
+    resetStates();
     switch (handle) {
       case 'colchao-zissou-coral-original':
         setIsColchao(true);
