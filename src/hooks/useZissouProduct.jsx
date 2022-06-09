@@ -33,6 +33,7 @@ function ZissouProductProvider({
 }) {
   const [isSpark, setIsSpark] = useState(false);
   const [isCoral, setIsCoral] = useState(false);
+  const [isBlue, setIsBlue] = useState(false);
   const [washable, setWashable] = useState(false);
   const [customBag, setCustomBag] = useState(false);
   const [customBagText, setCustomBagText] = useState('');
@@ -72,6 +73,7 @@ function ZissouProductProvider({
 
     setIsCoral(baseProduct.title.includes('Coral'));
     setIsSpark(baseProduct.title.includes('Spark'));
+    setIsBlue(baseProduct.title.includes('Blue'));
     setProduct(currentProduct || baseProduct);
   }, [
     washable,
@@ -102,6 +104,7 @@ function ZissouProductProvider({
       isColchao,
       isCoral,
       isSpark,
+      isBlue,
       isTravesseiro,
       isBase,
       washable,
@@ -139,6 +142,7 @@ function ZissouProductProvider({
       grayLencol,
       includeDuvetFilling,
       isBase,
+      isBlue,
       isColchao,
       isCoral,
       isDuvet,

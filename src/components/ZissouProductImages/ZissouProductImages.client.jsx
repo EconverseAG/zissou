@@ -19,6 +19,7 @@ import DuvetBanner from '../../assets/duvet-banner-background.png';
 import SparkBanner from '../../assets/pdp-spark-mobile.png';
 import SparkCaixa from '../../assets/spark-caixa.png';
 import CoralCaixa from '../../assets/caixas-coral.jpg';
+import BlueCaixa from '../../assets/blue-caixa.jpg';
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
@@ -30,7 +31,7 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
   const [navRef, setNavRef] = useState(null);
 
   const {media, selectedVariant} = useProduct();
-  const {isTravesseiro, isBase, isLencol, isDuvet, isSpark, isCoral} =
+  const {isTravesseiro, isBase, isLencol, isDuvet, isSpark, isCoral, isBlue} =
     useZissouProduct();
 
   const {isMobile} = useMobile();
@@ -182,6 +183,11 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
           {isCoral && (
             <div className={styles.imageContainer}>
               <Image src={CoralCaixa} width={720} height={453} />
+            </div>
+          )}
+          {isBlue && (
+            <div className={styles.imageContainer}>
+              <Image src={BlueCaixa} width={720} height={453} />
             </div>
           )}
         </Slider>
