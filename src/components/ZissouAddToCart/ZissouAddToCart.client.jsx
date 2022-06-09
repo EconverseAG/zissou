@@ -1,5 +1,5 @@
-import {useCallback, useEffect, useMemo, useState} from 'react';
-import {useProduct, useCart, AddToCartButton} from '@shopify/hydrogen/client';
+import {useCallback, useMemo} from 'react';
+import {useProduct, useCart} from '@shopify/hydrogen/client';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
 import useZissouProduct from '../../hooks/useZissouProduct';
@@ -26,24 +26,10 @@ function ZissouAddToCart({
 
   const cart = useCart();
 
-  const [hasRestockDate, setHasRestockDate] = useState(false);
-
   const isOutOfStock = useMemo(
     () => !selectedVariant.availableForSale,
     [selectedVariant],
   );
-
-  useEffect(() => {
-    let restockDate = selectedVariant.metafields.edges.filter((item) => {
-      return item.node.key === 'data_de_restoque';
-    });
-
-    if (restockDate.length > 0) {
-      setHasRestockDate(true);
-    } else {
-      setHasRestockDate(false);
-    }
-  }, [selectedVariant]);
 
   const addToCart = useCallback(() => {
     let lines = [
@@ -147,11 +133,7 @@ function ZissouAddToCart({
       disabled={isOutOfStock}
       {...rest}
     >
-      {isOutOfStock
-        ? 'Indisponível'
-        : hasRestockDate
-        ? 'Encomendar agora'
-        : text}
+      {isOutOfStock ? 'Indisponível' : text}
     </button>
   );
 }
