@@ -28,13 +28,6 @@ export default function Coral() {
       <ProductFixedBarColchao title="CORAL" subtitle={'A EVOLUÇÃO DO SONO'} />
       {!isMobile && <BannerProductPage src={BannerCoralPDP} />}
       <CoralProduct />
-      <video
-        style={{width: '100%'}}
-        src={isMobile ? CoralCGIMobile : CoralCGI}
-        autoPlay
-        loop
-        muted
-      />
       {!isMobile ? (
         <video style={{width: '100%'}} src={CoralCGI} autoPlay loop muted />
       ) : (
@@ -43,7 +36,9 @@ export default function Coral() {
           src={CoralCGIMobile}
           loop
           muted
+          // autoPlay
           controls
+          poster="https://cdn.shopify.com/s/files/1/1526/6199/files/banner-video-coral-produto.jpg"
         />
       )}
       <TourColchao />

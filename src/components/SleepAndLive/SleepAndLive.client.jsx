@@ -51,7 +51,7 @@ export default function SleepAndLive() {
           <strong className={styles.ProdTitle}>Coral</strong>
           <span className={styles.ProdSubtitle}>A evolução do sono</span>
           <Link
-            to="/products/colchao-zissou-coral-original-newurl"
+            to="/products/colchao-zissou-coral-original"
             className={styles.ProdImage}
           >
             <Image
@@ -62,7 +62,7 @@ export default function SleepAndLive() {
             />
           </Link>
           <Link
-            to="/products/colchao-zissou-coral-original-newurl"
+            to="/products/colchao-zissou-coral-original"
             className={styles.ProdLink}
           >
             Colchão Zissou Coral
@@ -75,13 +75,13 @@ export default function SleepAndLive() {
           <strong className={styles.ProdTitle}>Blue</strong>
           <span className={styles.ProdSubtitle}>Liberte seus sonhos</span>
           <Link
-            to="/products/colchao-zissou-blue-newurl"
+            to="/products/colchao-zissou-blue"
             className={styles.ProdImage}
           >
             <Image src={ColchaoBlue} width="228" height="82" loading={'lazy'} />
           </Link>
           <Link
-            to="/products/colchao-zissou-blue-newurl"
+            to="/products/colchao-zissou-blue"
             className={styles.ProdLink}
           >
             Colchão Zissou Blue

@@ -39,6 +39,7 @@ export default function Coral() {
           loop
           muted
           controls
+          poster="https://cdn.shopify.com/s/files/1/1526/6199/files/banner-video-spark-produto.jpg"
         />
       )}
       <TourSpark />

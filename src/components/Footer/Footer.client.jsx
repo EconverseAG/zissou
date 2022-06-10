@@ -39,7 +39,7 @@ export default function Footer() {
               <Link to="/pages/colchoes-zissou">Colchões</Link>
             </li>
             <li>
-              <Link to="/products/travesseiro-zissou-newurl">
+              <Link to="/products/travesseiro-zissou">
                 Travesseiro Zissou
               </Link>
             </li>

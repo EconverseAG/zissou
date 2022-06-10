@@ -60,18 +60,18 @@ export default function Product({country = {isoCode: 'US'}, response}) {
     base;
 
   switch (handle) {
-    case 'travesseiro-zissou-newurl':
+    case 'travesseiro-zissou':
       travesseiro = useProductQueryById(idTravesseiro);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       break;
-    case 'colchao-zissou-coral-original-newurl':
+    case 'colchao-zissou-coral-original':
       coral = useProductQueryById(idCoral);
       coralHybrid = useProductQueryById(idCoralHybrid);
       base = useProductQueryById(idBase);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       whiteLencol = useProductQueryById(idWhiteLencol);
       break;
-    case 'colchao-zissou-blue-newurl':
+    case 'colchao-zissou-blue':
       base = useProductQueryById(idBase);
       travesseiroWashable = useProductQueryById(idTravesseiroWashable);
       whiteLencol = useProductQueryById(idWhiteLencol);

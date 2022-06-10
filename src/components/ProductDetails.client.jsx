@@ -71,10 +71,10 @@ export default function ProductDetails({
   useEffect(() => {
     resetStates();
     switch (handle) {
-      case 'colchao-zissou-coral-original-newurl':
+      case 'colchao-zissou-coral-original':
         setIsColchao(true);
         break;
-      case 'colchao-zissou-blue-newurl':
+      case 'colchao-zissou-blue':
         setIsColchao(true);
         break;
       case 'colchao-zissou-spark':
@@ -89,7 +89,7 @@ export default function ProductDetails({
       case 'base-zissou':
         setIsBase(true);
         break;
-      case 'travesseiro-zissou-newurl':
+      case 'travesseiro-zissou':
         setIsTravesseiro(true);
         break;
       case 'toca-zissou':

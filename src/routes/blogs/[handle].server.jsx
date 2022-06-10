@@ -10,8 +10,6 @@ import {
 
 import Layout from '../../components/Layout.server';
 
-import Privacy from '../../assets/privacy.png';
-
 import * as styles from './redefinaseusono.module.scss';
 
 export default function ArticlesIndex() {
@@ -34,7 +32,11 @@ export default function ArticlesIndex() {
       <styles.StyleTag />
       <div className={styles.ArticlesContainer}>
         <div className={styles.PrivacyContentImage}>
-          <Image src={Privacy} width={1920} height={200} />
+          <Image
+            src="https://cdn.shopify.com/s/files/1/1526/6199/files/privacy.webp?v=1654833136"
+            width={1920}
+            height={200}
+          />
         </div>
         <h1 className={styles.ArticleTitle}>{title}</h1>
         {articles.map((article) => (

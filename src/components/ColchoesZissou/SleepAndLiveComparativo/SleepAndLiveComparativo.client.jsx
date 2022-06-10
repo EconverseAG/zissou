@@ -111,7 +111,7 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> vendido
           </p>
           <Link
-            to="/products/colchao-zissou-coral-original-newurl"
+            to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -139,7 +139,7 @@ export default function SleepAndLiveComparativo() {
           </p>
           <span className={styles.SleepAndLivePrice}>A partir de R$ 4.990</span>
           <Link
-            to="/products/colchao-zissou-coral-original-newurl"
+            to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveButtonCTA}
           >
             EXPLORE O CORAL
@@ -154,7 +154,7 @@ export default function SleepAndLiveComparativo() {
             Mais <br /> avançado
           </p>
           <Link
-            to="/products/colchao-zissou-blue-newurl"
+            to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveCTAImage}
           >
             <Image
@@ -186,7 +186,7 @@ export default function SleepAndLiveComparativo() {
             A partir de R$ 10.990
           </span>
           <Link
-            to="/products/colchao-zissou-blue-newurl"
+            to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveButtonCTA}
           >
             MERGULHE NO BLUE

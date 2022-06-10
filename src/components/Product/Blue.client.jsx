@@ -35,6 +35,7 @@ export default function Blue() {
           loop
           muted
           controls
+          poster="https://cdn.shopify.com/s/files/1/1526/6199/files/banner-video-blue-produto.jpg"
         />
       )}
       <TourColchao />

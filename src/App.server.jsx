@@ -1,4 +1,4 @@
-import {Suspense, lazy} from 'react';
+import {Suspense} from 'react';
 import renderHydrogen from '@shopify/hydrogen/entry-server';
 import {Router, Route, FileRoutes, ShopifyProvider} from '@shopify/hydrogen';
 import shopifyConfig from '../shopify.config';

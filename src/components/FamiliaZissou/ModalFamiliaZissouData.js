@@ -12,7 +12,7 @@ export default [
   {
     name: 'Travesseiro',
     title: 'Travesseiro',
-    link: 'https://www.zissou.com.br/products/travesseiro-zissou-newurl',
+    link: 'https://www.zissou.com.br/products/travesseiro-zissou',
   },
   {
     name: 'Duvet',

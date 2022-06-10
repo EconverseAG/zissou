@@ -536,7 +536,7 @@ export default function SpecsSparkSlick() {
                 <span className={styles.BeneficiosItemSubtitle}>
                   Para saber mais sobre os termos de garantia,{' '}
                   <Link
-                    to="https://www.zissou.com.br/blogs/faq/como-funciona-a-garantia-de-um-colchao"
+                    to="/blogs/redefinaseusono/como-funciona-a-garantia-de-um-colchao"
                     className={styles.BeneficiosItemSubtitleLink}
                   >
                     clique aqui
