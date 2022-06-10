@@ -312,11 +312,19 @@ function CartShelf() {
     },
   ];
 
-  let productFiltered = products.filter((product) => {
-    return product.title.includes(
-      lines[0].merchandise.selectedOptions[0].value.split(' (')[0],
-    );
-  });
+  let productFiltered = products
+    .sort((a, b) =>
+      a.title.length > b.title.length
+        ? 1
+        : a.title.length < b.title.length
+        ? -1
+        : 0,
+    )
+    .filter((product) => {
+      return product.title.includes(
+        lines[0].merchandise.selectedOptions[0].value.split(' (')[0],
+      );
+    });
 
   const [showBase, setShowBase] = useState(false);
 
