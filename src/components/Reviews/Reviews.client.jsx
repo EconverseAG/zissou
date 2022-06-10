@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef, useCallback} from 'react';
 
 import Slider from 'react-slick/lib/slider';
 import * as styles from './Reviews.module.scss';
@@ -15,15 +15,23 @@ export default function Reviews() {
 
   const [reviewData, setReviewData] = useState([]);
 
+  const shuffle = useCallback((array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }, []);
+
   useEffect(() => {
     fetch(
       `https://cdn.shopify.com/s/files/1/1526/6199/t/95/assets/ZissouStoreReviews.json`,
     )
       .then((res) => res.json())
       .then((res) => {
-        setReviewData(res.reviews);
+        setReviewData(shuffle(res.reviews.slice(0, 85)));
       });
-  }, []);
+  }, [shuffle]);
 
   const settings = {
     dots: false,
