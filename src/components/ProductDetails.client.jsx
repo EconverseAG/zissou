@@ -80,7 +80,7 @@ export default function ProductDetails({
       case 'colchao-zissou-spark':
         setIsColchao(true);
         break;
-      case 'duvet-zissou':
+      case 'duvet-enchimento-zissou':
         setIsDuvet(true);
         break;
       case 'jogo-de-lencol-zissou':

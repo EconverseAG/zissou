@@ -27,7 +27,7 @@ export default function LencolOrDuvet() {
           width={isMobile ? 260 : 400}
           height={isMobile ? 193 : 297}
         />
-        <Link to="/products/duvet-zissou" className={styles.LinkCTA}>
+        <Link to="/products/duvet-enchimento-zissou" className={styles.LinkCTA}>
           Duvet Zissou
         </Link>
       </div>

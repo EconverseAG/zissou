@@ -123,9 +123,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                     <Link to="/products/base-zissou">Base</Link>
                   </li>
                   <li>
-                    <Link to="/products/travesseiro-zissou">
-                      Travesseiro
-                    </Link>
+                    <Link to="/products/travesseiro-zissou">Travesseiro</Link>
                   </li>
                   <li>
                     <div className={styles.titleWithArrow}>
@@ -160,7 +158,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       </li>
                       <li>
                         <Link
-                          to="/products/duvet-zissou"
+                          to="/products/duvet-enchimento-zissou"
                           style={{textDecoration: 'underline'}}
                         >
                           Duvet

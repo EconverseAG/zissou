@@ -83,7 +83,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       whiteLencol = useProductQueryById(idWhiteLencol);
       spark = useProductQueryById(idSpark);
       break;
-    case 'duvet-zissou':
+    case 'duvet-enchimento-zissou':
       grayDuvetCover = useProductQueryById(idGrayDuvetCover);
       whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
       break;

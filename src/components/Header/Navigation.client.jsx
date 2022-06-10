@@ -60,7 +60,7 @@ export default function Navigation() {
                 <Link to="/products/jogo-de-lencol-zissou">Lençol</Link>
               </li>
               <li>
-                <Link to="/products/duvet-zissou">Duvet</Link>
+                <Link to="/products/duvet-enchimento-zissou">Duvet</Link>
               </li>
               <li>
                 <Link

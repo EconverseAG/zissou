@@ -17,7 +17,7 @@ export default [
   {
     name: 'Duvet',
     title: 'Duvet',
-    link: 'http://www.zissou.com.br/products/duvet-zissou',
+    link: 'http://www.zissou.com.br/products/duvet-enchimento-zissou',
   },
   {
     name: 'Lencol',
