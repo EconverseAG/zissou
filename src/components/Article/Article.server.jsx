@@ -40,7 +40,7 @@ export default function Article({params, pathname, response}) {
         />
       </div>
       <div className={styles.ArticleContainer}>
-        <h1 className={styles.ArticleTitle}>{article.title}</h1>
+        <h1 className={styles.ArticleTitle}>{article[0].title}</h1>
         <article
           dangerouslySetInnerHTML={{__html: article[0].contentHtml}}
         ></article>
