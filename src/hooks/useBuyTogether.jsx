@@ -24,10 +24,6 @@ function BuyTogetherProvider({children}) {
 
   const product = useProduct();
 
-  useEffect(() => {
-    console.log('>>> prdouct', product.selectedVariant.id);
-  }, [product]);
-
   const {
     isDuvet,
     isLencol,
