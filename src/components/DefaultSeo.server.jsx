@@ -16,13 +16,21 @@ export default function DefaultSeo() {
   });
 
   return (
-    <Seo
-      type="defaultSeo"
-      data={{
-        title: name,
-        description,
-      }}
-    />
+    <>
+      <Seo
+        type="defaultSeo"
+        data={{
+          title: name,
+          description,
+        }}
+      />
+      <Seo
+        type="homepage"
+        data={{
+          title: 'Home',
+        }}
+      />
+    </>
   );
 }
 
