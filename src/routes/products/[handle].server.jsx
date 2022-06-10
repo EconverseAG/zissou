@@ -13,6 +13,7 @@ const ProductDetails = lazy(() =>
 
 const idTravesseiro = `gid://shopify/Product/7414166585538`;
 const idTravesseiroWashable = `gid://shopify/Product/7414166618306`;
+const idGrayDuvet = `gid://shopify/Product/7195872231618`;
 const idGrayDuvetCover = `gid://shopify/Product/7195872362690`;
 const idWhiteDuvetCover = `gid://shopify/Product/4493894418505`;
 const idGrayLencol = `gid://shopify/Product/7195869249730`;
@@ -49,6 +50,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
   let travesseiro,
     travesseiroWashable,
     duvetFilling,
+    grayDuvet,
     grayDuvetCover,
     whiteDuvetCover,
     grayLencol,
@@ -84,6 +86,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       spark = useProductQueryById(idSpark);
       break;
     case 'duvet-enchimento-zissou':
+      grayDuvet = useProductQueryById(idGrayDuvet);
       grayDuvetCover = useProductQueryById(idGrayDuvetCover);
       whiteDuvetCover = useProductQueryById(idWhiteDuvetCover);
       break;
@@ -107,6 +110,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
           travesseiro={travesseiro?.data.product}
           travesseiroWashable={travesseiroWashable?.data.product}
           duvetFilling={duvetFilling?.data.product}
+          grayDuvet={grayDuvet?.data.product}
           grayDuvetCover={grayDuvetCover?.data.product}
           whiteDuvetCover={whiteDuvetCover?.data.product}
           grayLencol={grayLencol?.data.product}

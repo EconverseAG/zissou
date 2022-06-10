@@ -288,27 +288,27 @@ function CartShelf() {
     },
     {
       title: 'Duvet Branco Solteiro',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDY5ODY5Nw==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTQ0MjEyMQ==',
     },
     {
       title: 'Duvet Branco Casal Queen',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDczMTQ2NQ==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTQ3NDg4OQ==',
     },
     {
       title: 'Duvet Branco King King BR',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTYzNTMyNDc2NDIzMw==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTUwNzY1Nw==',
     },
     {
       title: 'Duvet Cinza Solteiro',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTUzNjQ1MA==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4ODk3OTM5NA==',
     },
     {
       title: 'Duvet Cinza Casal Queen',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTU2OTIxOA==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTAxMjE2Mg==',
     },
     {
       title: 'Duvet Cinza King King BR',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTYwMTk4Ng==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTA0NDkzMA==',
     },
   ];
 

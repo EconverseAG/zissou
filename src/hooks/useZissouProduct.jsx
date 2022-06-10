@@ -21,6 +21,7 @@ function ZissouProductProvider({
   grayLencol,
   whiteLencol,
   base,
+  grayDuvet,
   grayDuvetCover,
   whiteDuvetCover,
   isDuvet,
@@ -53,7 +54,7 @@ function ZissouProductProvider({
         if (includeDuvetFilling) {
           currentProduct = duvetFilling;
         } else if (selectedColor === 'gray') {
-          currentProduct = grayDuvetCover;
+          currentProduct = grayDuvet;
         }
       } else if (isLencol) {
         if (selectedColor === 'gray') {
@@ -88,6 +89,7 @@ function ZissouProductProvider({
     coralIsHybrid,
     isSpark,
     sparkHybrid,
+    grayDuvet,
   ]);
 
   const value = useMemo(
@@ -116,6 +118,7 @@ function ZissouProductProvider({
       coralIsHybrid,
       setCoralIsHybrid,
       sparkHybrid,
+      grayDuvet,
       grayDuvetCover,
       whiteDuvetCover,
       grayLencol,
@@ -132,6 +135,7 @@ function ZissouProductProvider({
       coralIsHybrid,
       customBag,
       customBagText,
+      grayDuvet,
       grayDuvetCover,
       grayLencol,
       includeDuvetFilling,
