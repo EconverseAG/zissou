@@ -22,12 +22,13 @@ export default function DefaultSeo() {
         data={{
           title: name,
           description,
+          titleTemplate: `${name} | %s`,
         }}
       />
       <Seo
         type="homepage"
         data={{
-          title: 'Home',
+          title: 'Dormir & Viver',
         }}
       />
     </>
