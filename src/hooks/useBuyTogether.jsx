@@ -56,7 +56,15 @@ function BuyTogetherProvider({children}) {
       const searchTerm = determineSearchTerm();
 
       return (
-        variants?.find(({title}) => title.toLowerCase().includes(searchTerm)) ||
+        variants
+          ?.sort((a, b) =>
+            a.title.length > b.title.length
+              ? 1
+              : a.title.length < b.title.length
+              ? -1
+              : 0,
+          )
+          .find(({title}) => title.toLowerCase().includes(searchTerm)) ||
         variants[0]
       );
     },
