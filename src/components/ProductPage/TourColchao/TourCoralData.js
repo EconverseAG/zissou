@@ -47,7 +47,6 @@ export default [
       height: 30,
       text: `
         <strong>Altura da camada:</strong> 4cm
-        de polietileno com elastano
         <br />
         <br />
         - Látex nobre e sofisticado, com elasticidade incomparável
