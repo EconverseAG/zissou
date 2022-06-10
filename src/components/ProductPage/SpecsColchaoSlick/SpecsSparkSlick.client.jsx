@@ -116,7 +116,7 @@ export default function SpecsSparkSlick() {
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleCoral}`}
               >
-                TECIDO SOFT & CHILL{' '}
+                TECIDO VELVET & BALANCED{' '}
                 <Image
                   src={BandeiraEUA}
                   width={isMobile ? 20 : 30}
