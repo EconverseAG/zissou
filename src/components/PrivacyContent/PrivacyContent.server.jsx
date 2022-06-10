@@ -2,13 +2,15 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './PrivacyContent.module.scss';
 
-import Privacy from '../../assets/privacy.png';
-
 export default function PrivacyContent() {
   return (
     <div className={styles.PrivacyContentContainer}>
       <div className={styles.PrivacyContentImage}>
-        <Image src={Privacy} width={1920} height={200} />
+        <Image
+          src={'https://cdn.shopify.com/s/files/1/1526/6199/files/privacy.webp'}
+          width={1920}
+          height={674}
+        />
       </div>
       <div className={styles.PrivacyContentText}>
         <h1>

@@ -35,7 +35,7 @@ export default function ArticlesIndex() {
           <Image
             src="https://cdn.shopify.com/s/files/1/1526/6199/files/privacy.webp?v=1654833136"
             width={1920}
-            height={200}
+            height={674}
           />
         </div>
         <h1 className={styles.ArticleTitle}>{title}</h1>

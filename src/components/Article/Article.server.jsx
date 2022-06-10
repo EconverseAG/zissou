@@ -7,8 +7,6 @@ import {
 } from '@shopify/hydrogen';
 import Layout from '../Layout.server';
 
-import Privacy from '../../assets/privacy.png';
-
 import * as styles from './Article.module.scss';
 
 export default function Article({params, pathname, response}) {
@@ -35,7 +33,11 @@ export default function Article({params, pathname, response}) {
     <Layout>
       <styles.StyleTag />
       <div className={styles.PrivacyContentImage}>
-        <Image src={Privacy} width={1920} height={200} />
+        <Image
+          src={'https://cdn.shopify.com/s/files/1/1526/6199/files/privacy.webp'}
+          width={1920}
+          height={674}
+        />
       </div>
       <div className={styles.ArticleContainer}>
         <h1 className={styles.ArticleTitle}>{article.title}</h1>
