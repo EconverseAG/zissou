@@ -428,7 +428,7 @@ function CartShelf() {
             <Image src={TravesseiroLavavel} width="75" height="24" />
             <AddToCartButton
               variantId={
-                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc2MDQxMzIyOTEyOQ=='
+                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjA3Njk2MzQwNjAxOA=='
               }
               onClickCapture={removeItem}
             >
@@ -440,7 +440,7 @@ function CartShelf() {
             <Image src={TravesseiroLavavel} width="75" height="24" />
             <AddToCartButton
               variantId={
-                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzY0NzcwMDM2MTI4OQ=='
+                'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjA3Njk2MzI3NDk0Ng=='
               }
               onClickCapture={removeItem}
             >
