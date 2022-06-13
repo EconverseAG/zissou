@@ -43,11 +43,13 @@ function ZissouProductProvider({
   const [product, setProduct] = useState(baseProduct);
 
   useEffect(() => {
-    setCustomBag(localStorage.getItem('customBag@Zissou'));
-    setCustomBagText(localStorage.getItem('customBagText@Zissou'));
-    setIncludeDuvetFilling(localStorage.getItem('includeDuvetFilling@Zissou'));
-    setCoralIsHybrid(localStorage.getItem('coralIsHybrid@Zissou'));
-    setSelectedColor(localStorage.getItem('selectedColor@Zissou'));
+    setCustomBag(localStorage.getItem('customBag@Zissou') === 'true');
+    setCustomBagText(localStorage.getItem('customBagText@Zissou') === 'true');
+    setIncludeDuvetFilling(
+      localStorage.getItem('includeDuvetFilling@Zissou') === 'true',
+    );
+    setCoralIsHybrid(localStorage.getItem('coralIsHybrid@Zissou') === 'true');
+    setSelectedColor(localStorage.getItem('selectedColor@Zissou') === 'true');
   }, []);
 
   useEffect(() => {
