@@ -99,7 +99,7 @@ export default function Product({country = {isoCode: 'US'}, response}) {
   }
 
   if (handle === 'colchao-zissou') {
-    response.redirect(`/colchao-zissou-coral-original`, 301);
+    response.redirect(`/pages/colchoes-zissou`, 301);
   }
 
   if (!baseProduct) {
