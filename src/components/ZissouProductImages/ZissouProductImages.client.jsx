@@ -30,7 +30,14 @@ const MODEL_3D_TYPE = 'MODEL_3D';
 const VIDEO_TYPE = 'VIDEO';
 const EXTERNAL_VIDEO_TYPE = 'EXTERNAL_VIDEO';
 
-function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
+function ZissouProductImages({
+  title,
+  thumbs,
+  navigation = 'arrows',
+  arrowsInside,
+  shadow,
+  className,
+}) {
   const [sliderRef, setSliderRef] = useState(null);
   const [navRef, setNavRef] = useState(null);
 
@@ -63,7 +70,7 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
 
   const sliderSettings = useMemo(
     () => ({
-      dots: false,
+      dots: navigation === 'dots',
       arrows: false,
       infinite: true,
       slidesToShow: 1,
@@ -71,7 +78,7 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
       asNavFor: navRef,
       variableHeight: false,
     }),
-    [navRef],
+    [navRef, navigation],
   );
 
   const navSettings = useMemo(
@@ -112,26 +119,36 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
       <div
         className={`${styles.wrapperSlider} ${
           arrowsInside ? styles.arrowsInside : ''
-        } ${shadow ? styles.shadow : ''}`}
+        } ${shadow ? styles.shadow : ''} ${
+          isCoral
+            ? styles.coral
+            : isBlue
+            ? styles.blue
+            : isSpark
+            ? styles.spark
+            : ''
+        }`}
       >
-        <button
-          className={`${styles.arrow} ${styles.arrowPrev}`}
-          onClick={sliderRef?.slickPrev}
-        >
-          <Image
-            src={
-              isSpark
-                ? ArrowPrevSpark
-                : isCoral
-                ? ArrowPrevCoral
-                : isBlue
-                ? ArrowPrevBlue
-                : ArrowPrev
-            }
-            width={12}
-            height={35}
-          />
-        </button>
+        {navigation === 'arrows' && (
+          <button
+            className={`${styles.arrow} ${styles.arrowPrev}`}
+            onClick={sliderRef?.slickPrev}
+          >
+            <Image
+              src={
+                isSpark
+                  ? ArrowPrevSpark
+                  : isCoral
+                  ? ArrowPrevCoral
+                  : isBlue
+                  ? ArrowPrevBlue
+                  : ArrowPrev
+              }
+              width={12}
+              height={35}
+            />
+          </button>
+        )}
         <Slider
           ref={setSliderRef}
           className={styles.slider}
@@ -229,24 +246,26 @@ function ZissouProductImages({title, thumbs, arrowsInside, shadow, className}) {
             </div>
           )}
         </Slider>
-        <button
-          className={`${styles.arrow} ${styles.arrowNext}`}
-          onClick={sliderRef?.slickNext}
-        >
-          <Image
-            src={
-              isSpark
-                ? ArrowNextSpark
-                : isCoral
-                ? ArrowNextCoral
-                : isBlue
-                ? ArrowNextBlue
-                : ArrowNext
-            }
-            width={12}
-            height={35}
-          />
-        </button>
+        {navigation === 'arrows' && (
+          <button
+            className={`${styles.arrow} ${styles.arrowNext}`}
+            onClick={sliderRef?.slickNext}
+          >
+            <Image
+              src={
+                isSpark
+                  ? ArrowNextSpark
+                  : isCoral
+                  ? ArrowNextCoral
+                  : isBlue
+                  ? ArrowNextBlue
+                  : ArrowNext
+              }
+              width={12}
+              height={35}
+            />
+          </button>
+        )}
       </div>
       {isMobile && title && <h2 className={styles.title}>{title}</h2>}
       {!isMobile && thumbs && (

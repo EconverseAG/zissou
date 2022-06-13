@@ -38,6 +38,7 @@ function LencolProduct() {
       <ProductSectionLeft>
         <ZissouProductImages
           className={styles.Images}
+          navigation={isMobile ? 'dots' : 'arrows'}
           title="Deite, role, estique, desenrole, abrace e se jogue para aproveitar ao máximo essa experiência :)"
         />
         {!isMobile && <WhatsAppBanner className={styles.WhatsApp} />}

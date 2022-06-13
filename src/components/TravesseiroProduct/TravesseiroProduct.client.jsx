@@ -35,6 +35,7 @@ function TravesseiroProduct() {
       <ProductSectionLeft>
         <ZissouProductImages
           className={styles.Images}
+          navigation={isMobile ? 'dots' : 'arrows'}
           title="Defina o conforto perfeito com a união de camadas
           que se adaptam às curvas do seu corpo."
         />

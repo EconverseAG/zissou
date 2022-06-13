@@ -91,6 +91,48 @@
         height: auto;
       }
     }
+
+    :global(.slick-dots .slick-active) button {
+      background: #d4a8bf;
+    }
+    &.spark :global(.slick-dots .slick-active) button {
+      background: #BB73A9;
+    }
+    &.blue :global(.slick-dots .slick-active) button {
+      background: var(--blue-color-500);
+    }
+    &.coral :global(.slick-dots .slick-active) button {
+      background: var(--coral-color-500);
+    }
+
+
+    :global(.slick-dots) {
+      bottom: 40px;
+
+      li {
+        aspect-ratio: 1/1;
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        padding: 0;
+
+        & + li {
+          margin-left: 14px;
+        }
+
+        button {
+          aspect-ratio: 1/1;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #D8D6D6;
+
+          &::before {
+            content: none;  
+          }
+        }
+      }
+    }
   }
 
   &Nav {

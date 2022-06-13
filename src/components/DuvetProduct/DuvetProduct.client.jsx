@@ -37,7 +37,10 @@ function DuvetProduct() {
       className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}
     >
       <ProductSectionLeft>
-        <ZissouProductImages title="Embale no aconchego para um sono mais gostoso" />
+        <ZissouProductImages
+          navigation={isMobile ? 'dots' : 'arrows'}
+          title="Embale no aconchego para um sono mais gostoso"
+        />
         {!isMobile && <WhatsAppBanner className={styles.WhatsApp} />}
       </ProductSectionLeft>
       <ProductSectionRight>
