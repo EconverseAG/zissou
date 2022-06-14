@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
-import {Link, Image} from '@shopify/hydrogen/client';
+import {Link, Image, Money} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLiveComparativo.module.scss';
 
@@ -15,7 +15,7 @@ import ColchaoSparkHover from '../../../assets/ColchaoSparkHover.png';
 
 import LogoSpark from '../../../assets/spark-logo.png';
 
-export default function SleepAndLiveComparativo() {
+export default function SleepAndLiveComparativo({coral, blue, spark}) {
   const [changeUrlCoral, setChangeUrlCoral] = useState(ColchaoCoral);
   const [changeUrlBlue, setChangeUrlBlue] = useState(ColchaoBlue);
   const [changeUrlSpark, setChangeUrlSpark] = useState(ColchaoSpark);
@@ -91,9 +91,11 @@ export default function SleepAndLiveComparativo() {
               </strong>{' '}
               de 12cm de altura
             </p>
-            <span className={styles.SleepAndLivePrice}>
-              A partir de R$ 2.990
-            </span>
+            {spark && (
+              <span className={styles.SleepAndLivePrice}>
+                A partir de <Money data={spark?.priceRange?.minVariantPrice} />
+              </span>
+            )}
             <Link
               to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveButtonCTA}
@@ -137,7 +139,11 @@ export default function SleepAndLiveComparativo() {
             <strong>Opção de suporte híbrido com molas Leggett & Platt</strong>{' '}
             de 15cm de altura
           </p>
-          <span className={styles.SleepAndLivePrice}>A partir de R$ 4.990</span>
+          {coral && (
+            <span className={styles.SleepAndLivePrice}>
+              A partir de <Money data={coral?.priceRange?.minVariantPrice} />
+            </span>
+          )}
           <Link
             to="/products/colchao-zissou-coral-original"
             className={styles.SleepAndLiveButtonCTA}
@@ -182,9 +188,11 @@ export default function SleepAndLiveComparativo() {
             </strong>{' '}
             de 15cm de altura e zoneamento ergonômico
           </p>
-          <span className={styles.SleepAndLivePrice}>
-            A partir de R$ 10.990
-          </span>
+          {blue && (
+            <span className={styles.SleepAndLivePrice}>
+              A partir de <Money data={blue?.priceRange?.minVariantPrice} />
+            </span>
+          )}
           <Link
             to="/products/colchao-zissou-blue"
             className={styles.SleepAndLiveButtonCTA}

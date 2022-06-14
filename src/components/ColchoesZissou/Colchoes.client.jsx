@@ -16,13 +16,13 @@ import SuporteIdeal from './SuporteIdeal/SuporteIdeal.client';
 
 import Gif100Dias from '../../assets/gif_100dias.gif';
 
-export default function Colchoes() {
+export default function Colchoes({coral, blue, spark}) {
   const {isMobile} = useMobile();
 
   return (
     <LoadingProvider>
       {!isMobile && <ColchoesBanner />}
-      <SleepAndLiveComparativo />
+      <SleepAndLiveComparativo coral={coral} blue={blue} spark={spark} />
       {isMobile && <ColchoesBanner />}
       <FormulaDoConforto />
       <Combinacao />

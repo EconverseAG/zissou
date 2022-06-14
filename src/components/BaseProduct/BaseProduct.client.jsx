@@ -36,6 +36,7 @@ function BaseProduct() {
       <ProductSectionLeft>
         <ZissouProductImages
           navigation={isMobile ? 'dots' : 'arrows'}
+          shadow
           title="Estilosa, resistente e perfeita"
         />
       </ProductSectionLeft>

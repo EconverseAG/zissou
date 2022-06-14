@@ -12,7 +12,7 @@ import BandeiraBrasil from '../../../assets/brasil_pdp.png';
 import Brands from '../../../assets/brands_pdp.png';
 
 import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-coral.png';
-import CamadaDeConforto from '../../../assets/camada-de-conforto-coral.png';
+import CamadaDeConforto from '../../../assets/camada-de-conforto-coral.gif';
 
 import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';

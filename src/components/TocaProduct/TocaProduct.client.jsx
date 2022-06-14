@@ -35,6 +35,7 @@ function TocaProduct() {
         <ZissouProductImages
           className={styles.Images}
           navigation={isMobile ? 'dots' : 'arrows'}
+          shadow
           title={
             !isMobile &&
             'O abraço, conforto e proteção que seu melhor amigo precisa na hora de pegar no soninho'

@@ -39,6 +39,7 @@ function DuvetProduct() {
       <ProductSectionLeft>
         <ZissouProductImages
           navigation={isMobile ? 'dots' : 'arrows'}
+          shadow
           title="Embale no aconchego para um sono mais gostoso"
         />
         {!isMobile && <WhatsAppBanner className={styles.WhatsApp} />}
