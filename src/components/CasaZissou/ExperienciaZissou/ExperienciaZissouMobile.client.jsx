@@ -56,13 +56,13 @@ export default function ExperienciaZissouMobile() {
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
-                  to=""
+                  to="https://g.page/zissoubr?share"
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to="https://calendly.com/zissou-normandia/visita-agendada"
+                  to="https://calendly.com/casa-zissou/visita-agendada"
                 >
                   Agende aqui
                 </Link>
@@ -81,7 +81,7 @@ export default function ExperienciaZissouMobile() {
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
-                  to=""
+                  to="https://goo.gl/maps/xGy6NdLi3iLZBMKy7"
                 >
                   Como chegar
                 </Link>
