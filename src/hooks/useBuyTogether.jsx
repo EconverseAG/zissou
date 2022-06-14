@@ -72,63 +72,9 @@ function BuyTogetherProvider({children}) {
   );
 
   useEffect(() => {
-    setIncludeGrayDuvetCover(
-      localStorage.getItem('includeGrayDuvetCover@Zissou') === 'true',
-    );
-    setIncludeWhiteDuvetCover(
-      localStorage.getItem('includeWhiteDuvetCover@Zissou') === 'true',
-    );
-    setIncludeBase(localStorage.getItem('includeBase@Zissou') === 'true');
-    setIncludeTwoWashableTravesseiros(
-      localStorage.getItem('includeTwoWashableTravesseiros@Zissou') === 'true',
-    );
-    setIncludeLencol(localStorage.getItem('includeLencol@Zissou') === 'true');
-  }, []);
-
-  useEffect(() => {
-    if (isDuvet || isLencol) {
-      localStorage.setItem(
-        'includeGrayDuvetCover@Zissou',
-        includeGrayDuvetCover,
-      );
-      localStorage.setItem(
-        'includeWhiteDuvetCover@Zissou',
-        includeWhiteDuvetCover,
-      );
-
-      return;
-    }
-
-    if (isColchao) {
-      localStorage.setItem('includeBase@Zissou', includeBase);
-      localStorage.setItem(
-        'includeTwoWashableTravesseiros@Zissou',
-        includeTwoWashableTravesseiros,
-      );
-      localStorage.setItem('includeLencol@Zissou', includeLencol);
-    }
-  }, [
-    includeBase,
-    includeGrayDuvetCover,
-    includeLencol,
-    includeTwoWashableTravesseiros,
-    includeWhiteDuvetCover,
-    isColchao,
-    isDuvet,
-    isLencol,
-  ]);
-
-  useEffect(() => {
     const newBuyTogetherItems = [];
 
     if (isDuvet || isLencol) {
-      setIncludeGrayDuvetCover(
-        localStorage.getItem('includeGrayDuvetCover@Zissou') === 'true',
-      );
-      setIncludeWhiteDuvetCover(
-        localStorage.getItem('includeWhiteDuvetCover@Zissou') === 'true',
-      );
-
       if (includeGrayDuvetCover) {
         newBuyTogetherItems.push(grayDuvetCover);
       }
@@ -141,21 +87,6 @@ function BuyTogetherProvider({children}) {
       if (includeWhiteDuvetCover) setIncludeWhiteDuvetCover(false);
 
       if (isColchao) {
-        setIncludeBase(localStorage.getItem('includeBase@Zissou') === 'true');
-        setIncludeLencol(
-          localStorage.getItem('includeLencol@Zissou') === 'true',
-        );
-        setIncludeTwoWashableTravesseiros(
-          localStorage.getItem('includeTwoWashableTravesseiros@Zissou') ===
-            'true',
-        );
-        localStorage.setItem('includeBase@Zissou', includeBase);
-        localStorage.setItem('includeLencol@Zissou', includeLencol);
-        localStorage.setItem(
-          'includeTwoWashableTravesseiros@Zissou',
-          includeTwoWashableTravesseiros,
-        );
-
         if (includeBase) {
           newBuyTogetherItems.push(base);
         }

@@ -43,32 +43,6 @@ function ZissouProductProvider({
   const [product, setProduct] = useState(baseProduct);
 
   useEffect(() => {
-    setCustomBag(localStorage.getItem('customBag@Zissou') === 'true');
-    setCustomBagText(localStorage.getItem('customBagText@Zissou') === 'true');
-    setIncludeDuvetFilling(
-      localStorage.getItem('includeDuvetFilling@Zissou') === 'true',
-    );
-    setCoralIsHybrid(localStorage.getItem('coralIsHybrid@Zissou') === 'true');
-    setSelectedColor(localStorage.getItem('selectedColor@Zissou') === 'true');
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('washable@Zissou', selectedColor);
-    localStorage.setItem('customBag@Zissou', customBag);
-    localStorage.setItem('customBagText@Zissou', customBagText);
-    localStorage.setItem('includeDuvetFilling@Zissou', includeDuvetFilling);
-    localStorage.setItem('coralIsHybrid@Zissou', coralIsHybrid);
-    localStorage.setItem('selectedColor@Zissou', selectedColor);
-  }, [
-    washable,
-    customBag,
-    customBagText,
-    includeDuvetFilling,
-    coralIsHybrid,
-    selectedColor,
-  ]);
-
-  useEffect(() => {
     let currentProduct = baseProduct;
 
     if (isTravesseiro) {
