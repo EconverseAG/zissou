@@ -39,7 +39,7 @@ function ExtraDuvetCoverSelector({className, ...rest}) {
         <Image src={GrayDuvet} width={177} height={74} />
         <div className={styles.extraCoverItemInfo}>
           <p>
-            Adicione uma capa extra de Duvet branca e ganhe
+            Adicione uma capa extra de Duvet cinza e ganhe
             <br /> <strong>5% Off no combo</strong>
           </p>
           <ProductSelectedOptions className={styles.extraCoverItemInfoOption} />
@@ -56,7 +56,7 @@ function ExtraDuvetCoverSelector({className, ...rest}) {
         <Image src={WhiteDuvet} width={177} height={74} />
         <div className={styles.extraCoverItemInfo}>
           <p>
-            Adicione uma capa extra de Duvet cinza e ganhe
+            Adicione uma capa extra de Duvet branca e ganhe
             <br /> <strong>5% Off no combo</strong>
           </p>
           <ProductSelectedOptions className={styles.extraCoverItemInfoOption} />
