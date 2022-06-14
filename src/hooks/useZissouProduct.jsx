@@ -41,6 +41,43 @@ function ZissouProductProvider({
   const [coralIsHybrid, setCoralIsHybrid] = useState(false);
   const [selectedColor, setSelectedColor] = useState('white');
   const [product, setProduct] = useState(baseProduct);
+  const [oldProduct, setOldProduct] = useState(baseProduct);
+
+  useEffect(() => {
+    if (oldProduct?.id === product?.id) return;
+
+    if (
+      (oldProduct.title.includes('Spark') && !isSpark) ||
+      (oldProduct.title.includes('Coral') && !isCoral) ||
+      (oldProduct.title.includes('Blue') && !isBlue)
+    ) {
+      setCoralIsHybrid(false);
+    }
+
+    if (!isTravesseiro) {
+      setWashable(false);
+      setCustomBag(false);
+      setCustomBagText('');
+    }
+
+    if (
+      (oldProduct.title.includes('Lençol') && !isLencol) ||
+      (oldProduct.title.includes('Duvet') && !isDuvet)
+    ) {
+      setIncludeDuvetFilling(false);
+      setSelectedColor('white');
+    }
+  }, [
+    isBlue,
+    isColchao,
+    isCoral,
+    isDuvet,
+    isLencol,
+    isSpark,
+    isTravesseiro,
+    oldProduct,
+    product,
+  ]);
 
   useEffect(() => {
     let currentProduct = baseProduct;
@@ -70,6 +107,7 @@ function ZissouProductProvider({
     setIsCoral(baseProduct.title.includes('Coral'));
     setIsSpark(baseProduct.title.includes('Spark'));
     setIsBlue(baseProduct.title.includes('Blue'));
+    setOldProduct(product);
     setProduct(currentProduct || baseProduct);
   }, [
     washable,
@@ -90,6 +128,7 @@ function ZissouProductProvider({
     isSpark,
     sparkHybrid,
     grayDuvet,
+    product,
   ]);
 
   const value = useMemo(
