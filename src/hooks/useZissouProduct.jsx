@@ -166,6 +166,7 @@ function ZissouProductProvider({
       travesseiro,
       travesseiroWashable,
       coralHybrid,
+      oldProduct,
     }),
     [
       base,
@@ -187,6 +188,7 @@ function ZissouProductProvider({
       isSpark,
       isToca,
       isTravesseiro,
+      oldProduct,
       selectedColor,
       spark,
       sparkHybrid,

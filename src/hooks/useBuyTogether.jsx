@@ -28,11 +28,15 @@ function BuyTogetherProvider({children}) {
     isDuvet,
     isLencol,
     isColchao,
+    isSpark,
+    isCoral,
+    isBlue,
     grayDuvetCover,
     whiteDuvetCover,
     whiteLencol,
     travesseiroWashable,
     base,
+    oldProduct,
   } = useZissouProduct();
 
   const getProductEquivalentVariant = useCallback(
@@ -70,6 +74,28 @@ function BuyTogetherProvider({children}) {
     },
     [product],
   );
+
+  useEffect(() => {
+    if (oldProduct?.id === product?.id) return;
+
+    if (
+      (oldProduct.title.includes('Spark') && !isSpark) ||
+      (oldProduct.title.includes('Coral') && !isCoral) ||
+      (oldProduct.title.includes('Blue') && !isBlue)
+    ) {
+      setIncludeBase(false);
+      setIncludeLencol(false);
+      setIncludeTwoWashableTravesseiros(false);
+    }
+
+    if (
+      (oldProduct.title.includes('Lençol') && !isLencol) ||
+      (oldProduct.title.includes('Duvet') && !isDuvet)
+    ) {
+      setIncludeGrayDuvetCover(false);
+      setIncludeWhiteDuvetCover(false);
+    }
+  }, [isBlue, isCoral, isDuvet, isLencol, isSpark, oldProduct, product]);
 
   useEffect(() => {
     const newBuyTogetherItems = [];
