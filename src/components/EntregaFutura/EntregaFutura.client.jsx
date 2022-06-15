@@ -42,7 +42,7 @@ export default function EntregaFutura() {
         >
           Não tem pressa para receber?
           <br />
-          Ganhe descontos adicionais
+          Ganhe descontos de até 10%
         </button>
       ) : (
         <div className={styles.EntregaModal}>
