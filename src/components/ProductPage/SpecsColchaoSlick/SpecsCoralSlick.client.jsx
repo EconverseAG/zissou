@@ -387,8 +387,11 @@ export default function SpecsCoralSlick() {
                   }
                 >
                   Base de sustentação composta por molas Leggett & Platt
-                  ensacadas individualmente Maior adaptabilidade do colchão às
-                  curvas do corpo e circulação de ar potencialiada
+                  ensacadas individualmente
+                  <br />
+                  <br />
+                  Maior adaptabilidade do colchão às curvas do corpo e
+                  circulação de ar potencialiada
                 </span>
               ) : (
                 <span
