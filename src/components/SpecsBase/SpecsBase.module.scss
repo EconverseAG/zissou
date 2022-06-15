@@ -132,7 +132,7 @@
     max-width: 1440px;
     align-items: center;
     justify-content: space-around;
-    padding-block: 50px;
+    padding-block: 32px;
     border-bottom: 1px solid #707070;
     
     span {
@@ -174,8 +174,8 @@
       z-index: 1;
       width: 100%;
       max-width: 1440px;
-      min-height: 668px;
-      padding: 42px 16px;
+      min-height: 636px;
+      padding: 16px;
       margin-inline: auto;
   
       &[data-tab="0"] {
@@ -219,6 +219,7 @@
       
       .imageSelosBase {
         margin-top: 51px;
+        max-width: 400px;
       }
   
       .imageSeloMontagemGratis {
