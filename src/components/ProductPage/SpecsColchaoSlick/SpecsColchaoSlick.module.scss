@@ -184,7 +184,7 @@
           flex-wrap: wrap;
           align-items: center;
           justify-content: center;
-          max-width: 1200px;
+          max-width: 1300px;
           gap: 50px 70px;
 
           @media only screen and (max-width: 1023px) {
@@ -425,6 +425,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-right: 32px;
 
         @media only screen and (max-width: 1023px) {
           margin-right: 0;
@@ -435,6 +436,7 @@
         &Image {
           position: relative;
           margin-right: 50px;
+          max-width: 300px;
 
           @media only screen and (max-width: 1023px) {
             margin-right: 0;
@@ -451,7 +453,7 @@
             transform: translateX(-50%);
             top: -15%;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               top: -20%;
             }
 
@@ -501,7 +503,7 @@
             text-transform: uppercase;
             margin-bottom: 16px;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               font-size: 12px;
               line-height: 18px;
             }
@@ -520,7 +522,7 @@
             color: var(--gray-color-500);
             display: block;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               font-size: 12px;
               line-height: 18px;
             }
@@ -538,7 +540,7 @@
           left: 82%;
           bottom: 10px;
 
-          @media only screen and (max-width: 1200px) {
+          @media only screen and (max-width: 1300px) {
             left: 70%;
             bottom: -40px;
           }
@@ -553,6 +555,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 32px;
 
         @media only screen and (max-width: 1023px) {
           flex-direction: row-reverse;
@@ -560,6 +563,7 @@
 
         &Image {
           position: relative;
+          max-width: 300px;
 
           &Title {
             font-family: 'ZonaProBlack';
@@ -572,7 +576,7 @@
             top: -15%;
             text-align: right;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               top: -25%;
             }
 
@@ -623,7 +627,7 @@
             display: block;
             text-transform: uppercase;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               font-size: 12px;
               line-height: 18px;
             }
@@ -642,7 +646,7 @@
             color: var(--gray-color-500);
             display: block;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1300px) {
               font-size: 12px;
               line-height: 18px;
             }
@@ -661,7 +665,7 @@
           bottom: 30px;
           transform: scaleX(-1);
 
-          @media only screen and (max-width: 1200px) {
+          @media only screen and (max-width: 1300px) {
             right: 70%;
             bottom: 0px;
           }

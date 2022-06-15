@@ -12,7 +12,7 @@ import BandeiraBrasil from '../../../assets/brasil_pdp.png';
 import Brands from '../../../assets/brands_pdp.png';
 
 import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-blue.png';
-import CamadaDeConforto from '../../../assets/camada_de_conforto_blue.png';
+import CamadaDeConforto from '../../../assets/camada-de-conforto-blue.gif';
 
 import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile-blue.png';
 import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
@@ -166,6 +166,7 @@ export default function SpecsBlueSlick() {
             >
               <strong
                 className={`${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitle} ${styles.SpecsColchaoSlickSecondSliderBackgroundInfoTitleBlue}`}
+                style={{position: 'relative'}}
               >
                 LATEX PULSE{' '}
                 <Image
@@ -182,7 +183,10 @@ export default function SpecsBlueSlick() {
                     src={Brands}
                     width={220}
                     height={53}
-                    style={{marginTop: '-25px'}}
+                    style={{
+                      right: '0',
+                      position: 'absolute',
+                    }}
                     loading={'lazy'}
                   />
                 )}

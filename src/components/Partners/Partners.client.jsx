@@ -1,4 +1,4 @@
-import {Image, Link} from '@shopify/hydrogen/client';
+import {Image} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
 
 import FastShop from '../../assets/logo_Fast.webp';
@@ -81,9 +81,9 @@ export default function Partners({color}) {
           </div>
         </div>
       </div>
-      <Link to="/pages/casa-zissou" className={styles.CTA}>
+      <a href="/pages/casa-zissou#fast-shop" className={styles.CTA}>
         SAIBA MAIS
-      </Link>
+      </a>
     </div>
   );
 }
