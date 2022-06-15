@@ -111,7 +111,7 @@
   }
 
   &.mobile {
-    padding-block: 55px 70px;
+    padding: 55px 20px 70px;
     min-height: 625px;
 
     h2 {
@@ -139,17 +139,19 @@
 
     .tip {
       max-width: 172px;
+      font-size: 11px;
 
       &Left, &Right {
-        top: 286px;
+        top: 272px;
+        padding-inline: 11px;
       }
 
       &Left {
-        left: 24px;
+        left: 0px;
       }
 
       &Right {
-        right: 6px;
+        right: 0px;
       }
 
       &::after {

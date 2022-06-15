@@ -264,17 +264,17 @@ function TravesseiroTechnical() {
               </AccordionSummary>
               <AccordionDetails className={styles.accordionDetails}>
                 <h4>100 dias de teste</h4>
-                <p>
+                <span>
                   Caso não esteja satisfeito com o produto, basta entrar em
                   contato com nosso atendimento através do Whatsapp{' '}
                   <strong>11 93285-8213</strong>
-                </p>
+                </span>
                 <br />
                 <h4>Frete grátis</h4>
-                <p>A entrega é por nossa conta para todo o Brasil</p>
+                <span>A entrega é por nossa conta para todo o Brasil</span>
                 <br />
                 <h4>1 ano de garantia</h4>
-                <p>Oferecemos 1 ano de garantia no Travesseiro Zissou</p>
+                <span>Oferecemos 1 ano de garantia no Travesseiro Zissou</span>
               </AccordionDetails>
             </Accordion>
           </div>
