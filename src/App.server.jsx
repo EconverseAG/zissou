@@ -12,9 +12,11 @@ import ZissouLoading from './components/ZissouLoading';
 
 function App(props) {
   if (props.pathname === '/products/colchoes-zissou') {
-    props.response.redirect(`/pages/colchoes-zissou`, 301);
+    return props.response.redirect(`/pages/colchoes-zissou`, 301);
+  }
 
-    return;
+  if (props.pathname.includes('colchao-zissou-spark-hibrido')) {
+    return props.response.redirect('/products/colchao-zissou-spark', 301);
   }
 
   return (
