@@ -11,6 +11,12 @@ import Tags from './components/Tags/Tags.client';
 import ZissouLoading from './components/ZissouLoading';
 
 function App(props) {
+  if (props.pathname === '/products/colchoes-zissou') {
+    props.response.redirect(`/pages/colchoes-zissou`, 301);
+
+    return;
+  }
+
   return (
     <Suspense fallback={<ZissouLoading />}>
       <ShopifyProvider shopifyConfig={shopifyConfig}>
