@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import useMobile from '../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen/client';
 
@@ -7,7 +8,13 @@ import BannerLencolDuvet from '../../assets/banner_lencol_duvet.png';
 import BannerLencolDuvetMobile from '../../assets/banner_lencol_duvet_mobile.png';
 
 export default function LencolDuvetBanner() {
-  const {isMobile} = useMobile();
+  const [isMobile, setTrueIsMobile] = useState(false);
+
+  const {isMobile: incorrectIsMobile} = useMobile();
+
+  useEffect(() => {
+    setTrueIsMobile(incorrectIsMobile);
+  }, [incorrectIsMobile]);
 
   return (
     <div className={styles.LencolDuvetBannerContainer}>

@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import useMobile from '../../hooks/useMobile';
 import {Image, Link} from '@shopify/hydrogen/client';
 import Slider from 'react-slick/lib/slider';
@@ -5,7 +6,13 @@ import Slider from 'react-slick/lib/slider';
 import * as styles from './slick.module.scss';
 
 export default function Slick(props) {
-  const {isMobile} = useMobile();
+  const [isMobile, setIsMobile] = useState(false);
+
+  const {isMobile: incorrectIsMobile} = useMobile();
+
+  useEffect(() => {
+    setIsMobile(incorrectIsMobile);
+  }, [incorrectIsMobile]);
 
   const settings = {
     dots: props.dots || false,

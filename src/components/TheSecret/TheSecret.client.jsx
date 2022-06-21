@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import useMobile from '../../hooks/useMobile';
 
@@ -8,9 +8,14 @@ import Panda from '../../assets/panda.gif';
 import {Image} from '@shopify/hydrogen/client';
 
 function TheSecret({productName, open}) {
+  const [isMobile, setIsMobile] = useState(false);
   const [showSecret, setShowSecret] = useState(open);
 
-  const {isMobile} = useMobile();
+  const {isMobile: incorrectIsMobile} = useMobile();
+
+  useEffect(() => {
+    setIsMobile(incorrectIsMobile);
+  }, [incorrectIsMobile]);
 
   return (
     <div className={`${styles.wrapper} ${isMobile ? styles.mobile : ''}`}>
