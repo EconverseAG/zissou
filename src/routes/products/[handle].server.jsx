@@ -98,10 +98,6 @@ export default function Product({country = {isoCode: 'US'}, response}) {
       break;
   }
 
-  if (handle === 'colchao-zissou') {
-    response.redirect(`/pages/colchoes-zissou`, 301);
-  }
-
   if (!baseProduct) {
     return <NotFound />;
   }
