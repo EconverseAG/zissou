@@ -29,6 +29,8 @@ export default function Article({params, pathname, response}) {
 
   const article = flattenConnection(blog.articles);
 
+  console.log(article);
+
   return (
     <Layout>
       <styles.StyleTag />
@@ -40,10 +42,12 @@ export default function Article({params, pathname, response}) {
         />
       </div>
       <div className={styles.ArticleContainer}>
-        <h1 className={styles.ArticleTitle}>{article[0].title}</h1>
-        <article
-          dangerouslySetInnerHTML={{__html: article[0].contentHtml}}
-        ></article>
+        <h1 className={styles.ArticleTitle}>{article[0]?.title}</h1>
+        {article[0]?.contentHtml && (
+          <article
+            dangerouslySetInnerHTML={{__html: article[0].contentHtml}}
+          ></article>
+        )}
       </div>
     </Layout>
   );
