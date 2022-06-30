@@ -27,9 +27,12 @@ function App(props) {
     });
   };
 
-  redirectOnIncludeMatch('/pages/colchoes-zissou', [
+  redirectOnExactMatch('/pages/colchoes-zissou', [
     '/products/colchoes-zissou',
     '/products/colchao-zissou',
+  ]);
+
+  redirectOnIncludeMatch('/pages/colchoes-zissou', [
     'colchao-solteiro-188x88-premium-e-na-zissou',
     'pages/o-melhor-colchao-viscoelastico-do-mercado',
     'pages/nao-sabe-qual-o-melhor-colchao-conheca-o-colchao-zissou',

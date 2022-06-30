@@ -17,7 +17,7 @@ export default function SleepAndLive() {
       <div className={styles.SleepAndLiveContent}>
         {!isMobile && (
           <div className={`${styles.Prod} ${styles.Spark}`}>
-            <p className={styles.Flag}>PRÉ - VENDA</p>
+            <p className={styles.Flag}>NOVIDADE</p>
             <Image
               src={LogoSpark}
               width={114}
@@ -74,22 +74,16 @@ export default function SleepAndLive() {
           </p>
           <strong className={styles.ProdTitle}>Blue</strong>
           <span className={styles.ProdSubtitle}>Liberte seus sonhos</span>
-          <Link
-            to="/products/colchao-zissou-blue"
-            className={styles.ProdImage}
-          >
+          <Link to="/products/colchao-zissou-blue" className={styles.ProdImage}>
             <Image src={ColchaoBlue} width="228" height="82" loading={'lazy'} />
           </Link>
-          <Link
-            to="/products/colchao-zissou-blue"
-            className={styles.ProdLink}
-          >
+          <Link to="/products/colchao-zissou-blue" className={styles.ProdLink}>
             Colchão Zissou Blue
           </Link>
         </div>
         {isMobile && (
           <div className={`${styles.Prod} ${styles.Spark}`}>
-            <p className={styles.Flag}>PRÉ - VENDA</p>
+            <p className={styles.Flag}>NOVIDADE</p>
             <Image
               src={LogoSpark}
               width={114}

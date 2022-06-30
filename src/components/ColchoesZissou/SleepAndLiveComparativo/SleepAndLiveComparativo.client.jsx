@@ -56,7 +56,7 @@ export default function SleepAndLiveComparativo({coral, blue, spark}) {
             onMouseLeave={handleImageLeaveSpark}
             className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
           >
-            <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
+            <p className={styles.SleepAndLiveFlag}>Novidade</p>
             <Link
               to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveCTAImage}
@@ -206,7 +206,7 @@ export default function SleepAndLiveComparativo({coral, blue, spark}) {
             onMouseLeave={handleImageLeaveSpark}
             className={`${styles.SleepAndLiveColchao} ${styles.SleepAndLiveSpark}`}
           >
-            <p className={styles.SleepAndLiveFlag}>Pré - venda</p>
+            <p className={styles.SleepAndLiveFlag}>Novidade</p>
             <Link
               to="/products/colchao-zissou-spark"
               className={styles.SleepAndLiveCTAImage}

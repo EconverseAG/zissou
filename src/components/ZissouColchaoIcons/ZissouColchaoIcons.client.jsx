@@ -2,11 +2,11 @@ import {Image, useProduct} from '@shopify/hydrogen/client';
 import useZissouProduct from '../../hooks/useZissouProduct';
 import useMobile from '../../hooks/useMobile';
 
-import IconeOfertaSpark from '../../assets/icone_oferta_spark.svg';
 import IconeGarantiaCoral from '../../assets/icone_garantia.png';
 import IconeGarantiaBlue from '../../assets/icone_garantia_blue.png';
 import IconeGarantiaSpark from '../../assets/icone_garantia_spark.svg';
 import IconeEntregaCoral from '../../assets/icone_entrega.png';
+import IconeEntregaSpark from '../../assets/icone_entrega_spark.svg';
 import IconeEntregaBlue from '../../assets/icone_entrega_prime.png';
 import IconeFreteCoral from '../../assets/icone_frete.png';
 import IconeFreteBlue from '../../assets/icone_frete_blue.png';
@@ -27,7 +27,7 @@ export default function ZissouColchaoIcons() {
       {isSpark && (
         <div className={styles.Icon}>
           <Image
-            src={IconeOfertaSpark}
+            src={IconeEntregaSpark}
             width={isMobile ? 33 : 47}
             height={isMobile ? 37 : 53}
             loading={'lazy'}
@@ -35,9 +35,7 @@ export default function ZissouColchaoIcons() {
           <strong
             className={`${styles.IconTitle} ${isCoral && styles.CoralColor}`}
           >
-            Oferta
-            <br /> exclusiva
-            <br /> de pré-venda
+            Entrega <br /> expressa
           </strong>
         </div>
       )}
