@@ -39,9 +39,8 @@
     
     tr {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       text-align: center;
-      overflow: auto;
       position: relative;
 
       th {
@@ -61,7 +60,6 @@
         align-items: center;
         justify-content: center;
         padding: 32px;
-        min-width: 339px;
 
         &:nth-child(odd) {
           background: rgba(240, 240, 240, .4);
@@ -108,14 +106,10 @@
 
       tbody {
         tr {
-          overflow: scroll;
+          grid-template-columns: repeat(2, 1fr);
 
           &::-webkit-scrollbar {
             display: none;
-          }
-  
-          td {
-            min-width: 168px;
           }
   
           td, th {

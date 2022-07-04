@@ -1,0 +1,139 @@
+.container {
+	width: 100%;
+	max-width: 265px;
+
+	.select {
+		position: relative;
+		border-radius: 33px;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		width: 100%;
+		height: 42px;
+		background: #fff;
+		border: 3px solid #F48580;
+
+		span {
+			margin-left: 36px;
+			font-size: 12px;
+			font-family: ZonaProBlack;
+			line-height: 20px;
+			color: #F48580;
+			text-transform: uppercase;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -1px;
+			background: url(../../../assets/select-comparativo-arrow.svg) no-repeat center;
+			background-color: #F48580;
+			border-radius: 0 33px 33px 0;
+			width: 43px;
+			height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.dropdown {
+			flex-direction: column;
+			position: absolute;
+			display: none;
+			top: -3px;
+			left: -3px;
+			width: calc(100% + 6px);
+			z-index: 1;
+			border-radius: 16px;
+			background: #fff;
+			border: 3px solid #F48580;
+
+			&.open {
+				display: flex;
+			}
+
+			button {
+				text-align: left;
+				height: 42px;
+				font-size: 12px;
+				line-height: 20px;
+				font-family: ZonaProBlack;
+				padding-left: 36px;
+				text-transform: uppercase;
+				color: #F48580;
+			}
+		}
+	}
+
+	&.spark {
+		.select {
+			border-color: #9873AC;
+
+			span {
+				color: #9873AC;
+			}
+
+			&::after {
+				background-color: #9873AC;
+			}
+
+			.dropdown {
+				border-color: #9873AC;
+
+				button {
+					color: #9873AC;
+				}
+			} 
+		}
+	}
+
+	&.blue {
+		.select {
+			border-color: #415264;
+
+			span {
+				color: #415264;
+			}
+
+			&::after {
+				background-color: #415264;
+			}
+
+			.dropdown {
+				border-color: #415264;
+
+				button {
+					color: #415264;
+				}
+			}
+		}
+	}
+
+	&.mobile {
+		.select {
+			height: 34px;
+			border-width: 2px;
+
+			span {
+				font-size: 7px;
+				margin-left: 24px;
+			}
+
+			&::after {
+				width: 35px;
+				height: 34px;
+				background-size: 14px;
+			}
+
+			.dropdown {
+				border-width: 2px;
+
+				button {
+					font-size: 7px;
+					height: 34px;
+					padding-left: 24px;
+				}
+			}
+		}
+	}
+}

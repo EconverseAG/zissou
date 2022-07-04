@@ -1,7 +1,7 @@
 .productTable {
   table {
     tbody {
-      tr:first-child {
+      tr.products {
         border: none;
 
         td {
@@ -45,6 +45,20 @@
         }
       }
 
+      @media (min-width: 1024px) {
+        tr.purpleTheme {
+          td, th {
+            &:nth-child(odd) {
+              background: #e0c5d3 !important;
+            }
+
+            &:nth-child(even) {
+              background: #d4a8bf;
+            }
+          }
+        }
+      }
+
       .firmnessScale {
         td {
           flex-direction: column;
@@ -57,7 +71,7 @@
   &.mobile {
     table {
       tbody {
-        tr:first-child {
+        tr.products {
           td {
             p {
               font-size: 20px;
@@ -72,6 +86,10 @@
           }
         }
       }
+    }
+
+    div.purpleTheme {
+      background: #D4A8BF;
     }
   }
 }

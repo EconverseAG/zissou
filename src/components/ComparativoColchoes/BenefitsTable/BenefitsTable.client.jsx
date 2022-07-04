@@ -1,67 +1,30 @@
+import useComparative from '../../../hooks/useComparative';
 import Table from '../Table';
-import TableCheck from '../TableCheck';
 import TableRow from '../TableRow';
 
 function BenefitsTable({...rest}) {
+  const {products} = useComparative();
   return (
     <Table heading="Benefícios" {...rest}>
       <TableRow heading="100 dias">
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked colorBlue />
-        </td>
+        {products.map(({productIndex, benefits}) => (
+          <td key={productIndex}>{benefits.oneHundredDays}</td>
+        ))}
       </TableRow>
       <TableRow heading="Garantia de 10 anos">
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked colorBlue />
-        </td>
+        {products.map(({productIndex, benefits}) => (
+          <td key={productIndex}>{benefits.tenYearsWarranty}</td>
+        ))}
       </TableRow>
       <TableRow heading="Frete grátis">
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked colorSpark />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked />
-        </td>
-        <td>
-          <TableCheck checked colorBlue />
-        </td>
+        {products.map(({productIndex, benefits}) => (
+          <td key={productIndex}>{benefits.freeShipping}</td>
+        ))}
       </TableRow>
       <TableRow heading="Entrega agendada com unboxing">
-        <td>Opcional</td>
-        <td>Opcional</td>
-        <td>Opcional</td>
-        <td>Opcional</td>
-        <td>Gratuita</td>
+        {products.map(({productIndex, benefits}) => (
+          <td key={productIndex}>{benefits.scheduledDelivery}</td>
+        ))}
       </TableRow>
     </Table>
   );

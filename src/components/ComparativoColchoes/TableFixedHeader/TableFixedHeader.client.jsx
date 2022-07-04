@@ -6,6 +6,7 @@ import Table from '../Table';
 import TableRow from '../TableRow';
 
 import LogoSpark from '../../../assets/spark-logo.png';
+import useComparative from '../../../hooks/useComparative';
 
 import * as styles from './TableFixedHeader.module.scss';
 
@@ -13,6 +14,7 @@ function TableFixedHeader() {
   const [isScrolled, setIsScrolled] = useState();
 
   const {isMobile} = useMobile();
+  const {products} = useComparative();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,36 +41,44 @@ function TableFixedHeader() {
       }`}
     >
       <TableRow>
-        <td>
-          <Image
-            src={LogoSpark}
-            width={isMobile ? 63 : 113}
-            height={isMobile ? 20 : 37}
-            alt="Spark"
-          />
-        </td>
-        <td>
-          <p>
-            <Image
-              src={LogoSpark}
-              width={isMobile ? 63 : 113}
-              height={isMobile ? 20 : 37}
-              alt="Spark"
-            />{' '}
-            <span className={styles.spark}>Híbrido</span>
-          </p>
-        </td>
-        <td>
-          <p>Coral</p>
-        </td>
-        <td>
-          <p>
-            Coral <span>Híbrido</span>
-          </p>
-        </td>
-        <td>
-          <p style={{color: '#415264'}}>Blue</p>
-        </td>
+        {products.map(({id, productIndex}) =>
+          id === 'spark' ? (
+            <td key={productIndex}>
+              <Image
+                src={LogoSpark}
+                width={isMobile ? 63 : 113}
+                height={isMobile ? 20 : 37}
+                alt="Spark"
+              />
+            </td>
+          ) : id === 'sparkHybrid' ? (
+            <td key={productIndex}>
+              <p>
+                <Image
+                  src={LogoSpark}
+                  width={isMobile ? 63 : 113}
+                  height={isMobile ? 20 : 37}
+                  alt="Spark"
+                />{' '}
+                <span className={styles.spark}>Híbrido</span>
+              </p>
+            </td>
+          ) : id === 'coral' ? (
+            <td key={productIndex}>
+              <p>Coral</p>
+            </td>
+          ) : id === 'coralHybrid' ? (
+            <td key={productIndex}>
+              <p>
+                Coral <span>Híbrido</span>
+              </p>
+            </td>
+          ) : id === 'blue' ? (
+            <td key={productIndex}>
+              <p style={{color: '#415264'}}>Blue</p>
+            </td>
+          ) : null,
+        )}
       </TableRow>
     </Table>
   );

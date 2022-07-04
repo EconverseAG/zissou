@@ -7,7 +7,7 @@
   background: #fff;
   transform: translateY(-200%);
   transition: 0.3s;
-  z-index: 2;
+  z-index: 3;
 
   &.active {
     transform: translateY(0);

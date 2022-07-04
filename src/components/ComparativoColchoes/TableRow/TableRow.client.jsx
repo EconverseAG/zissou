@@ -25,7 +25,7 @@ function TableRow({heading, children, className, scrollbar, ...rest}) {
   return (
     <>
       {isMobile && heading && (
-        <div className={styles.headingMobile}>
+        <div className={`${styles.headingMobile} ${className || ''}`}>
           <span>{heading}</span>
         </div>
       )}
