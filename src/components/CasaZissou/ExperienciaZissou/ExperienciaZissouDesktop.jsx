@@ -4,6 +4,7 @@ import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';
+import ZissouGabriel from '../../../assets/icon-loja-gabriel.png';
 import EmBreve from '../../../assets/em-breve.png';
 
 export default function ExperienciaZissouDesktop() {
@@ -55,7 +56,7 @@ export default function ExperienciaZissouDesktop() {
             </Link>
           </div>
           <div className={styles.ExperienciaZissouLeftStore}>
-            <Image src={EmBreve} width="230" height="230" />
+            <Image src={ZissouGabriel} width="230" height="230" />
             <span className={styles.ExperienciaZissouRightStoreTitle}>
               Zissou <br /> Gabriel
             </span>
@@ -63,18 +64,18 @@ export default function ExperienciaZissouDesktop() {
               Al. Gabriel Monteiro da Silva, 1325 <br /> Jardim Paulistano - SP{' '}
               <br /> Cep 01442-001
             </p>
-            {/* <Link
-              to="/"
+            <Link
+              to="https://g.page/r/Cenns6XMgBO1EAE"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
-              to="/"
+              to="https://calendly.com/zissougabriel/visita-agendada"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import {Image, Link} from '@shopify/hydrogen/client';
 
 import CasaZissou from '../../../assets/casa-zissou.png';
 import ZissouNormandia from '../../../assets/zissou-normandia.png';
+import ZissouGabriel from '../../../assets/icon-loja-gabriel.png';
 // import BolaRoxa from '../../../assets/bola-roxa.png';
 import EmBreve from '../../../assets/em-breve.png';
 
@@ -94,7 +95,7 @@ export default function ExperienciaZissouMobile() {
               </div>
             </div>
             <div className={styles.ExperienciaZissouStore}>
-              <Image src={EmBreve} width="96" height="96" />
+              <Image src={ZissouGabriel} width="96" height="96" />
               <div className={styles.ExperienciaZissouStoreInfo}>
                 <span className={styles.ExperienciaZissouRightStoreTitle}>
                   Zissou <br /> Gabriel
@@ -105,18 +106,18 @@ export default function ExperienciaZissouMobile() {
                 </p>
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
-                {/* <Link
+                <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
-                  to=""
+                  to="https://g.page/r/Cenns6XMgBO1EAE"
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to="https://calendly.com/zissou-normandia/visita-agendada"
+                  to="https://calendly.com/zissougabriel/visita-agendada"
                 >
                   Agende aqui
-                </Link> */}
+                </Link>
               </div>
             </div>
           </>
