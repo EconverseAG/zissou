@@ -2,8 +2,9 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './PotencializeSleep.module.scss';
 
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import gif from '../../assets/potencialize-sleep.gif';
+const gif = parseUrl('potencialize-sleep.gif');
 
 export default function PotencializeSleep() {
   const {isMobile} = useMobile();

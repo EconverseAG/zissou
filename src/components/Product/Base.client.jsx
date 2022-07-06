@@ -9,8 +9,9 @@ import BaseProduct from '../BaseProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 import ProductFixedBar from '../ProductFixedBar';
 import BaseHaveYouDecidedYourColchao from '../BaseHaveYouDecidedYourColchao';
+import parseUrl from '../../helpers/parseUrl';
 
-import Gif100Dias from '../../assets/gif_100dias.gif';
+const Gif100Dias = parseUrl('gif_100dias.gif');
 
 export default function Base() {
   return (
