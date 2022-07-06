@@ -3,39 +3,42 @@ import useMobile from '../../../hooks/useMobile';
 
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './SpecsColchaoSlick.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
 import Slider from 'react-slick';
 
-import BandeiraEUA from '../../../assets/eua_pdp.png';
-import BandeiraBelgica from '../../../assets/belgica_pdp.png';
-import BandeiraBrasil from '../../../assets/brasil_pdp.png';
-import Brands from '../../../assets/brands_pdp.png';
+const BandeiraEUA = parseUrl('eua_pdp.png');
+const BandeiraBelgica = parseUrl('belgica_pdp.png');
+const BandeiraBrasil = parseUrl('brasil_pdp.png');
+const Brands = parseUrl('brands_pdp.png');
 
-import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-blue.png';
+const ToqueESensacaoTermica = parseUrl('toque-e-sensacao-termica-blue.png');
 import CamadaDeConforto from '../../../assets/camada-de-conforto-blue.gif';
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile-blue.png';
-import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
+const ToqueESensacaoTermicaMobile = parseUrl(
+  'toque-e-sensacao-termica-mobile-blue.png',
+);
+const CamadaDeConfortoMobile = parseUrl('camada-de-conforto-mobile.png');
 
-import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+const MulherDeitada = parseUrl('mulher_deitada_pdp.png');
 
-import SuporteBlue from '../../../assets/molasblue.mp4';
+const SuporteBlue = parseUrl('molasblue.mp4');
 
-import ConfortoPDP from '../../../assets/conforto_pdp.png';
-import SuperficiePDP from '../../../assets/superficie_pdp.png';
-import BouncePDP from '../../../assets/bounce_pdp.png';
-import SensacaoPDP from '../../../assets/sensacao_pdp.png';
-import IsolamentoPDP from '../../../assets/isolamento_pdp.png';
-import SetasPDP from '../../../assets/setas_pdp.png';
-import ControlePDP from '../../../assets/controle_pdp.png';
-import SuportePDP from '../../../assets/suporte_pdp.png';
+const ConfortoPDP = parseUrl('conforto_pdp.png');
+const SuperficiePDP = parseUrl('superficie_pdp.png');
+const BouncePDP = parseUrl('bounce_pdp.png');
+const SensacaoPDP = parseUrl('sensacao_pdp.png');
+const IsolamentoPDP = parseUrl('isolamento_pdp.png');
+const SetasPDP = parseUrl('setas_pdp.png');
+const ControlePDP = parseUrl('controle_pdp.png');
+const SuportePDP = parseUrl('suporte_pdp.png');
 
-import IconeGarantia from '../../../assets/icone_garantia_blue.png';
-import IconeEntregaPrime from '../../../assets/icone_entrega_prime.png';
-import IconeFrete from '../../../assets/icone_frete_blue.png';
-import Icone100Dias from '../../../assets/icone_100_dias_blue.png';
+const IconeGarantia = parseUrl('icone_garantia_blue.png');
+const IconeEntregaPrime = parseUrl('icone_entrega_prime.png');
+const IconeFrete = parseUrl('icone_frete_blue.png');
+const Icone100Dias = parseUrl('icone_100_dias_blue.png');
 
-import ColchoesBlue from '../../../assets/colchoes_blue.png';
+const ColchoesBlue = parseUrl('colchoes_blue.png');
 
 export default function SpecsBlueSlick() {
   const [nav1, setNav1] = useState();

@@ -5,11 +5,12 @@ import CartToggle from '../Cart/CartToggle.client';
 import {useCartUI} from '../Cart/CartUIProvider.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
+import parseUrl from '../../helpers/parseUrl';
 
 import {Image} from '@shopify/hydrogen';
 
-import LogoZissou from '../../assets/logo-zissou.svg';
-import LogoWhatsApp from '../../assets/logo-whatsapp.svg';
+const LogoZissou = parseUrl('logo-zissou.svg');
+const LogoWhatsApp = parseUrl('logo-whatsapp.svg');
 
 import * as styles from './header.module.scss';
 import useMobile from '../../hooks/useMobile';

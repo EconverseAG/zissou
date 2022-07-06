@@ -8,14 +8,15 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from './TocaTechnical.module.scss';
 
-import BackgroundImage from '../../assets/toca-background.webp';
-
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import TocaTamanhos from '../../assets/toca-tamanhos.webp';
-import Protecao from '../../assets/protecao.webp';
-import Conforto from '../../assets/conforto.webp';
-import Abraco from '../../assets/abraco.webp';
+const BackgroundImage = parseUrl('toca-background.webp');
+
+const TocaTamanhos = parseUrl('toca-tamanhos.webp');
+const Protecao = parseUrl('protecao.webp');
+const Conforto = parseUrl('conforto.webp');
+const Abraco = parseUrl('abraco.webp');
 
 export default function TocaTechnical() {
   const [expanded, setExpanded] = useState(false);

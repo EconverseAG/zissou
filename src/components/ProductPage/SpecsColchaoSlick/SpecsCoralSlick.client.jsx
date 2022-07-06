@@ -3,43 +3,50 @@ import useMobile from '../../../hooks/useMobile';
 
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './SpecsColchaoSlick.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
 import Slider from 'react-slick';
 
-import BandeiraEUA from '../../../assets/eua_pdp.png';
-import BandeiraBelgica from '../../../assets/belgica_pdp.png';
-import BandeiraBrasil from '../../../assets/brasil_pdp.png';
-import Brands from '../../../assets/brands_pdp.png';
+const BandeiraEUA = parseUrl('eua_pdp.png');
+const BandeiraBelgica = parseUrl('belgica_pdp.png');
+const BandeiraBrasil = parseUrl('brasil_pdp.png');
+const Brands = parseUrl('brands_pdp.png');
 
-import ToqueESensacaoTermica from '../../../assets/toque-e-sensacao-termica-coral.png';
+const ToqueESensacaoTermica = parseUrl('toque-e-sensacao-termica-coral.png');
 import CamadaDeConforto from '../../../assets/camada-de-conforto-coral.gif';
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-mobile.png';
-import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-mobile.png';
+const ToqueESensacaoTermicaMobile = parseUrl(
+  'toque-e-sensacao-termica-mobile.png',
+);
+const CamadaDeConfortoMobile = parseUrl('camada-de-conforto-mobile.png');
 
-import MulherDeitada from '../../../assets/mulher_deitada_pdp.png';
+const MulherDeitada = parseUrl('mulher_deitada_pdp.png');
 
-import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_1.png';
-import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_2.png';
-import SistemaDeSuporte1Mobile from '../../../assets/colchao_sistema_suporte_1_mobile.png';
-import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_mobile.png';
+const SistemaDeSuporte1 = parseUrl('colchao_sistema_suporte_1.png');
+const SistemaDeSuporte2 = parseUrl('colchao_sistema_suporte_2.png');
+const SistemaDeSuporte1Mobile = parseUrl(
+  'colchao_sistema_suporte_1_mobile.png',
+);
+const SistemaDeSuporte2Mobile = parseUrl(
+  'colchao_sistema_suporte_2_mobile.png',
+);
 
-import SetaPDP from '../../../assets/seta_pdp.png';
+const SetaPDP = parseUrl('seta_pdp.png');
 
-import ToquePDP from '../../../assets/toque_pdp_coral.png';
-import AquecimentoPDP from '../../../assets/aquecimento_pdp_coral.png';
-import BouncePDP from '../../../assets/bounce_pdp_coral.png';
-import SetasPDP from '../../../assets/setas_pdp_coral.png';
-import SuportePDP from '../../../assets/suporte_pdp_coral.png';
-import IsolamentoPDP from '../../../assets/isolamento_pdp_coral.png';
-import AdaptacaoPDP from '../../../assets/adaptacao_pdp_coral.png';
+const ToquePDP = parseUrl('toque_pdp_coral.png');
+const AquecimentoPDP = parseUrl('aquecimento_pdp_coral.png');
+const BouncePDP = parseUrl('bounce_pdp_coral.png');
+const SetasPDP = parseUrl('setas_pdp_coral.png');
+const SuportePDP = parseUrl('suporte_pdp_coral.png');
+const IsolamentoPDP = parseUrl('isolamento_pdp_coral.png');
+const AdaptacaoPDP = parseUrl('adaptacao_pdp_coral.png');
 
-import ColchoesCoral from '../../../assets/colchoes_coral.png';
+const ColchoesCoral = parseUrl('colchoes_coral.png');
 
-import IconeGarantia from '../../../assets/icone_garantia.png';
-import IconeEntrega from '../../../assets/icone_entrega.png';
-import IconeFrete from '../../../assets/icone_frete.png';
-import Icone100Dias from '../../../assets/icone_100_dias.png';
+const IconeGarantia = parseUrl('icone_garantia.png');
+const IconeEntrega = parseUrl('icone_entrega.png');
+const IconeFrete = parseUrl('icone_frete.png');
+const Icone100Dias = parseUrl('icone_100_dias.png');
 
 export default function SpecsCoralSlick() {
   const [nav1, setNav1] = useState();

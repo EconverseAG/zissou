@@ -1,9 +1,10 @@
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
-import CapaFechada from '../../assets/capa-fechada.webp';
-import Protecao from '../../assets/protecao.webp';
-import Conforto from '../../assets/conforto.webp';
-import Abraco from '../../assets/abraco.webp';
+const CapaFechada = parseUrl('capa-fechada.webp');
+const Protecao = parseUrl('protecao.webp');
+const Conforto = parseUrl('conforto.webp');
+const Abraco = parseUrl('abraco.webp');
 
 import * as styles from './TocaXRay.module.scss';
 import useMobile from '../../hooks/useMobile';

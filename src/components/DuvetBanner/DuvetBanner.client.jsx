@@ -1,10 +1,11 @@
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './DuvetBanner.module.scss';
 
-import VejaMais from '../../assets/veja-mais.png';
+const VejaMais = parseUrl('veja-mais.png');
 
 function DuvetBanner() {
   const {isMobile} = useMobile();

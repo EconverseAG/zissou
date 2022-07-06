@@ -1,7 +1,7 @@
 import {Image} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
-
 import parseUrl from '../../helpers/parseUrl';
+
 const FastShop = parseUrl('logo_Fast.webp');
 const ZissouCinza = parseUrl('zissou-cinza.png');
 const Fasano = parseUrl('logo_Fasano.webp');

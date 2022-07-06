@@ -1,8 +1,9 @@
 import useMobile from '../../hooks/useMobile';
 import {Image, Link} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
-import Lencol from '../../assets/lencol_zissou.png';
-import Duvet from '../../assets/duvet_zissou.png';
+const Lencol = parseUrl('lencol_zissou.png');
+const Duvet = parseUrl('duvet_zissou.png');
 
 import * as styles from './LencolOrDuvet.module.scss';
 

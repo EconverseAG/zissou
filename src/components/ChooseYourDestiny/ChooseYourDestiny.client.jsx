@@ -1,14 +1,16 @@
-import Banner_1 from '../../assets/slick_colchao.png';
-import Banner_2 from '../../assets/slick_base.png';
-import Banner_3 from '../../assets/slick_travesseiro.png';
-import Banner_4 from '../../assets/slick_lencol.png';
-import Banner_5 from '../../assets/slick_toca.png';
+import parseUrl from '../../helpers/parseUrl';
 
-import MobileBanner_1 from '../../assets/mobileBanner_1.png';
-import MobileBanner_2 from '../../assets/mobileBanner_2.png';
-import MobileBanner_3 from '../../assets/mobileBanner_3.png';
-import MobileBanner_4 from '../../assets/mobileBanner_4.png';
-import MobileBanner_5 from '../../assets/mobileBanner_5.png';
+const Banner_1 = parseUrl('slick_colchao.png');
+const Banner_2 = parseUrl('slick_base.png');
+const Banner_3 = parseUrl('slick_travesseiro.png');
+const Banner_4 = parseUrl('slick_lencol.png');
+const Banner_5 = parseUrl('slick_toca.png');
+
+const MobileBanner_1 = parseUrl('mobileBanner_1.png');
+const MobileBanner_2 = parseUrl('mobileBanner_2.png');
+const MobileBanner_3 = parseUrl('mobileBanner_3.png');
+const MobileBanner_4 = parseUrl('mobileBanner_4.png');
+const MobileBanner_5 = parseUrl('mobileBanner_5.png');
 
 import Slick from '../Slick/Slick.client';
 
