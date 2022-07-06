@@ -1,7 +1,8 @@
 import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../../helpers/parseUrl';
 
-import TourSparkPDP from '../../../assets/tour-spark.png';
+const TourSparkPDP = parseUrl('tour-spark.png');
 
 import * as styles from './TourColchao.module.scss';
 
