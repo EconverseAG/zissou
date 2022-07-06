@@ -13,7 +13,7 @@ const BandeiraBrasil = parseUrl('brasil_pdp.png');
 const Brands = parseUrl('brands_pdp.png');
 
 const ToqueESensacaoTermica = parseUrl('toque-e-sensacao-termica-coral.png');
-import CamadaDeConforto from '../../../assets/camada-de-conforto-coral.gif';
+const CamadaDeConforto = parseUrl('camada-de-conforto-coral.gif');
 
 const ToqueESensacaoTermicaMobile = parseUrl(
   'toque-e-sensacao-termica-mobile.png',
