@@ -2,7 +2,7 @@ import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './OpenYourHeart.module.scss';
 import parseUrl from '../../helpers/parseUrl';
 
-const Gif = parseUrl('gif-abra-seu-coracao.gif');
+const Gif = parseUrl('GIF-ABRA-SEU-CORACAO.gif');
 const Whatsapp = parseUrl('icone-menu-whatsapp-white.webp');
 
 import useMobile from '../../hooks/useMobile';
