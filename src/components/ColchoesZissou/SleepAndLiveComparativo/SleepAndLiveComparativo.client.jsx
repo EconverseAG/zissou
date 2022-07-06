@@ -1,19 +1,20 @@
 import {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
+import parseUrl from '../../../helpers/parseUrl';
 
 import {Link, Image, Money} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLiveComparativo.module.scss';
 
-import ColchaoCoral from '../../../assets/ColchaoCoralComparativo.png';
-import ColchaoBlue from '../../../assets/ColchaoBlueComparativo.png';
-import ColchaoSpark from '../../../assets/ColchaoSparkComparativo.png';
+const ColchaoCoral = parseUrl('ColchaoCoralComparativo.png');
+const ColchaoBlue = parseUrl('ColchaoBlueComparativo.png');
+const ColchaoSpark = parseUrl('ColchaoSparkComparativo.png');
 
-import ColchaoCoralHover from '../../../assets/ColchaoCoralHover.png';
-import ColchaoBlueHover from '../../../assets/ColchaoBlueHover.png';
-import ColchaoSparkHover from '../../../assets/ColchaoSparkHover.png';
+const ColchaoCoralHover = parseUrl('ColchaoCoralHover.png');
+const ColchaoBlueHover = parseUrl('ColchaoBlueHover.png');
+const ColchaoSparkHover = parseUrl('ColchaoSparkHover.png');
 
-import LogoSpark from '../../../assets/spark-logo.png';
+const LogoSpark = parseUrl('spark-logo.png');
 
 export default function SleepAndLiveComparativo({coral, blue, spark}) {
   const [changeUrlCoral, setChangeUrlCoral] = useState(ColchaoCoral);
