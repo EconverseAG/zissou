@@ -1,13 +1,16 @@
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TravesseiroBagCustomization.module.scss';
 
-import CustomizationText from '../../assets/bag-customizavel-text.png';
-import CustomizationBackground from '../../assets/bag-customizavel-background.png';
-import CustomizationBackgroundMobile from '../../assets/bag-customizavel-background-mobile.png';
-import BagCustomization from '../../assets/bag-customization.gif';
+const CustomizationText = parseUrl('bag-customizavel-text.png');
+const CustomizationBackground = parseUrl('bag-customizavel-background.png');
+const CustomizationBackgroundMobile = parseUrl(
+  'bag-customizavel-background-mobile.png',
+);
+const BagCustomization = parseUrl('bag-customization.gif');
 
 function TravesseiroBagCustomization() {
   const {isMobile} = useMobile();

@@ -3,18 +3,21 @@ import {Image} from '@shopify/hydrogen';
 import {Accordion, AccordionDetails, AccordionSummary} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import parseUrl from '../../helpers/parseUrl';
 
 import useMobile from '../../hooks/useMobile';
 
-import TravesseiroTechnicalBackground from '../../assets/travesseiro-technical-background.png';
+const TravesseiroTechnicalBackground = parseUrl(
+  'travesseiro-technical-background.png',
+);
 
-import TravesseiroImage from '../../assets/travesseiro-medidas-1.png';
-import CapaImage from '../../assets/travesseiro-medidas-2.png';
-import CapaLavavelImage from '../../assets/travesseiro-medidas-3.png';
-import CamadasPlushImage from '../../assets/travesseiro-medidas-4.png';
-import CamadasNasNuvensImage from '../../assets/travesseiro-medidas-5.png';
-import ComposicaoEnchimento from '../../assets/travesseiro-composicao-enchimento.png';
-import ComposicaoCapa from '../../assets/travesseiro-composicao-capa.png';
+const TravesseiroImage = parseUrl('travesseiro-medidas-1.png');
+const CapaImage = parseUrl('travesseiro-medidas-2.png');
+const CapaLavavelImage = parseUrl('travesseiro-medidas-3.png');
+const CamadasPlushImage = parseUrl('travesseiro-medidas-4.png');
+const CamadasNasNuvensImage = parseUrl('travesseiro-medidas-5.png');
+const ComposicaoEnchimento = parseUrl('travesseiro-composicao-enchimento.png');
+const ComposicaoCapa = parseUrl('travesseiro-composicao-capa.png');
 
 import * as styles from './TravesseiroTechnical.module.scss';
 

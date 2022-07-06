@@ -1,6 +1,7 @@
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import VideoGif from '../../assets/toca_gif.gif';
+const VideoGif = parseUrl('toca_gif.gif');
 
 import * as styles from './TocaHowToDescribe.module.scss';
 import {Image} from '@shopify/hydrogen/client';

@@ -1,11 +1,13 @@
-import FlorestaImage from '../../assets/floresta-modal.png';
-import BiodiversidadeImage from '../../assets/biodiversidade-modal.png';
-import ProducaoImage from '../../assets/producao-modal.png';
-import RelacaoImage from '../../assets/relacaoSono-modal.png';
-import PesquisaImage from '../../assets/Pesquisa-modal.png';
-import ProdutosImage from '../../assets/Produtos-modal.png';
-import ShippingImage from '../../assets/Shipping-modal.png';
-import ImaginacaoImage from '../../assets/Imaginacao-modal.png';
+import parseUrl from '../../helpers/parseUrl';
+
+const FlorestaImage = parseUrl('floresta-modal.png');
+const BiodiversidadeImage = parseUrl('biodiversidade-modal.png');
+const ProducaoImage = parseUrl('producao-modal.png');
+const RelacaoImage = parseUrl('relacaoSono-modal.png');
+const PesquisaImage = parseUrl('Pesquisa-modal.png');
+const ProdutosImage = parseUrl('Produtos-modal.png');
+const ShippingImage = parseUrl('Shipping-modal.png');
+const ImaginacaoImage = parseUrl('Imaginacao-modal.png');
 
 export default [
   {

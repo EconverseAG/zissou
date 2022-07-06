@@ -1,5 +1,6 @@
 import useMobile from '../../hooks/useMobile';
-import BannerCoralPDP from '../../assets/pdp-coral.png';
+import parseUrl from '../../helpers/parseUrl';
+const BannerCoralPDP = parseUrl('pdp-coral.png');
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';

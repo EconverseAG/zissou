@@ -1,4 +1,6 @@
-import BannerBluePDP from '../../assets/pdp-blue.png';
+import parseUrl from '../../helpers/parseUrl';
+
+const BannerBluePDP = parseUrl('pdp-blue.png');
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';

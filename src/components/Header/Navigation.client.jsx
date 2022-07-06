@@ -1,10 +1,11 @@
 import {Link, Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './header.module.scss';
 
-import ColchaoCoral from '../../assets/menuItem__Coral.png';
-import ColchaoBlue from '../../assets/menuItem__Blue.png';
-import ColchaoSpark from '../../assets/menuItem__Spark.png';
+const ColchaoCoral = parseUrl('menuItem__Coral.png');
+const ColchaoBlue = parseUrl('menuItem__Blue.png');
+const ColchaoSpark = parseUrl('menuItem__Spark.png');
 
 /**
  * A client component that defines the navigation for a web storefront

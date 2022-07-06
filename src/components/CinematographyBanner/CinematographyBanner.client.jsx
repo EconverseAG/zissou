@@ -1,8 +1,9 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './cinematographyBanner.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import Logo from '../../assets/logo-zissou-white.webp';
+const Logo = parseUrl('logo-zissou-white.webp');
 
 // import Blue from '../../assets/video_1.mp4';
 // import Coral from '../../assets/video_2.mp4';

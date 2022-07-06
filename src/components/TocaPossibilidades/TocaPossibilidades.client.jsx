@@ -1,8 +1,9 @@
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
-import NaToca from '../../assets/na_toca.webp';
-import NaCama from '../../assets/na_cama.webp';
-import NoDuvet from '../../assets/no_duvet.webp';
+const NaToca = parseUrl('na_toca.webp');
+const NaCama = parseUrl('na_cama.webp');
+const NoDuvet = parseUrl('no_duvet.webp');
 
 import * as styles from './TocaPossibilidades.module.scss';
 import useMobile from '../../hooks/useMobile';

@@ -5,40 +5,47 @@ import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './SpecsColchaoSlick.module.scss';
 
 import Slider from 'react-slick';
+import parseUrl from '../../../helpers/parseUrl';
 
-import BandeiraEUA from '../../../assets/eua_pdp.png';
-import BandeiraBelgica from '../../../assets/belgica_pdp.png';
-import BandeiraBrasil from '../../../assets/brasil_pdp.png';
-import Brands from '../../../assets/brands_pdp.png';
+const BandeiraEUA = parseUrl('eua_pdp.png');
+const BandeiraBelgica = parseUrl('belgica_pdp.png');
+const BandeiraBrasil = parseUrl('brasil_pdp.png');
+const Brands = parseUrl('brands_pdp.png');
 
-import ToqueESensacaoTermica from '../../../assets/toque_pdp_spark.png';
-import CamadaDeConforto from '../../../assets/camada-de-conforto-spark.png';
+const ToqueESensacaoTermica = parseUrl('toque_pdp_spark.png');
+const CamadaDeConforto = parseUrl('camada-de-conforto-spark.png');
 
-import ToqueESensacaoTermicaMobile from '../../../assets/toque-e-sensacao-termica-spark-mobile.png';
-import CamadaDeConfortoMobile from '../../../assets/camada-de-conforto-spark-mobile.png';
+const ToqueESensacaoTermicaMobile = parseUrl(
+  'toque-e-sensacao-termica-spark-mobile.png',
+);
+const CamadaDeConfortoMobile = parseUrl('camada-de-conforto-spark-mobile.png');
 
-import MulherDeitada from '../../../assets/mulher_deitada_pdp_spark.png';
+const MulherDeitada = parseUrl('mulher_deitada_pdp_spark.png');
 
-import SistemaDeSuporte1 from '../../../assets/colchao_sistema_suporte_spark_1.png';
-import SistemaDeSuporte2 from '../../../assets/colchao_sistema_suporte_spark_2.png';
-import SistemaDeSuporte1Mobile from '../../../assets/colchao_sistema_suporte_1_mobile.png';
-import SistemaDeSuporte2Mobile from '../../../assets/colchao_sistema_suporte_2_mobile.png';
+const SistemaDeSuporte1 = parseUrl('colchao_sistema_suporte_spark_1.png');
+const SistemaDeSuporte2 = parseUrl('colchao_sistema_suporte_spark_2.png');
+const SistemaDeSuporte1Mobile = parseUrl(
+  'colchao_sistema_suporte_1_mobile.png',
+);
+const SistemaDeSuporte2Mobile = parseUrl(
+  'colchao_sistema_suporte_2_mobile.png',
+);
 
-import SetaPDP from '../../../assets/seta_pdp.png';
+const SetaPDP = parseUrl('seta_pdp.png');
 
-import ToquePDP from '../../../assets/toque-spark.svg';
-import BouncePDP from '../../../assets/bounce-spark.svg';
-import SetasPDP from '../../../assets/setas-spark.svg';
-import SuportePDP from '../../../assets/suporte-spark.svg';
-import IsolamentoPDP from '../../../assets/isolamento-spark.svg';
-import AdaptacaoPDP from '../../../assets/adaptacao-spark.svg';
+const ToquePDP = parseUrl('toque-spark.svg');
+const BouncePDP = parseUrl('bounce-spark.svg');
+const SetasPDP = parseUrl('setas-spark.svg');
+const SuportePDP = parseUrl('suporte-spark.svg');
+const IsolamentoPDP = parseUrl('isolamento-spark.svg');
+const AdaptacaoPDP = parseUrl('adaptacao-spark.svg');
 
-import CaixaSpark from '../../../assets/caixa-beneficios-spark.png';
+const CaixaSpark = parseUrl('caixa-beneficios-spark.png');
 
-import IconeGarantia from '../../../assets/icone_garantia_spark.svg';
-import IconeEntrega from '../../../assets/icone_entrega_spark.svg';
-import IconeFrete from '../../../assets/icone_frete_spark.svg';
-import Icone100Dias from '../../../assets/icone_100_dias_spark.svg';
+const IconeGarantia = parseUrl('icone_garantia_spark.svg');
+const IconeEntrega = parseUrl('icone_entrega_spark.svg');
+const IconeFrete = parseUrl('icone_frete_spark.svg');
+const Icone100Dias = parseUrl('icone_100_dias_spark.svg');
 
 export default function SpecsSparkSlick() {
   const [nav1, setNav1] = useState();

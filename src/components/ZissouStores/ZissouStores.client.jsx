@@ -1,14 +1,16 @@
-import Banner_1 from '../../assets/slick_lojas_1.webp';
-import Banner_2 from '../../assets/slick_lojas_2.webp';
-import Banner_4 from '../../assets/slick_lojas_4.webp';
-import Banner_5 from '../../assets/slick_lojas_5.webp';
-import Banner_6 from '../../assets/slick_lojas_6.webp';
+import parseUrl from '../../helpers/parseUrl';
 
-import MobileBanner_1 from '../../assets/slick_lojas_mobile_1.webp';
-import MobileBanner_2 from '../../assets/slick_lojas_mobile_2.webp';
-import MobileBanner_4 from '../../assets/slick_lojas_mobile_4.webp';
-import MobileBanner_5 from '../../assets/slick_lojas_mobile_5.webp';
-import MobileBanner_6 from '../../assets/slick_lojas_mobile_6.webp';
+const Banner_1 = parseUrl('slick_lojas_1.webp');
+const Banner_2 = parseUrl('slick_lojas_2.webp');
+const Banner_4 = parseUrl('slick_lojas_4.webp');
+const Banner_5 = parseUrl('slick_lojas_5.webp');
+const Banner_6 = parseUrl('slick_lojas_6.webp');
+
+const MobileBanner_1 = parseUrl('slick_lojas_mobile_1.webp');
+const MobileBanner_2 = parseUrl('slick_lojas_mobile_2.webp');
+const MobileBanner_4 = parseUrl('slick_lojas_mobile_4.webp');
+const MobileBanner_5 = parseUrl('slick_lojas_mobile_5.webp');
+const MobileBanner_6 = parseUrl('slick_lojas_mobile_6.webp');
 
 import Slick from '../Slick/Slick.client';
 
