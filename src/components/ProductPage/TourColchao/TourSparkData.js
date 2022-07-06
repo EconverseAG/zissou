@@ -1,12 +1,16 @@
-import CapaFundo from '../../../assets/capa_fundo_spark.png';
-import CamadaDeConfortoFundo from '../../../assets/camada_de_conforto_fundo_spark.png';
-import CamadaDeAconchegoFundo from '../../../assets/camada_de_aconchego_fundo_spark.png';
-import SistemaDeSuporteFundo from '../../../assets/sistema_de_suporte_fundo_spark.png';
-import SistemaDeSuporteHibridoFundo from '../../../assets/sistema_de_suporte_hibrido_fundo_spark.png';
+import parseUrl from '../../../helpers/parseUrl';
 
-import BandeiraEUA from '../../../assets/eua_pdp.png';
-import BandeiraBelgica from '../../../assets/belgica_pdp.png';
-import BandeiraBrasil from '../../../assets/brasil_pdp.png';
+const CapaFundo = parseUrl('capa_fundo_spark.png');
+const CamadaDeConfortoFundo = parseUrl('camada_de_conforto_fundo_spark.png');
+const CamadaDeAconchegoFundo = parseUrl('camada_de_aconchego_fundo_spark.png');
+const SistemaDeSuporteFundo = parseUrl('sistema_de_suporte_fundo_spark.png');
+const SistemaDeSuporteHibridoFundo = parseUrl(
+  'sistema_de_suporte_hibrido_fundo_spark.png',
+);
+
+const BandeiraEUA = parseUrl('eua_pdp.png');
+const BandeiraBelgica = parseUrl('belgica_pdp.png');
+const BandeiraBrasil = parseUrl('brasil_pdp.png');
 
 export default [
   {
