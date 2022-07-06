@@ -3,13 +3,14 @@ import {Image} from '@shopify/hydrogen/client';
 
 import useMobile from '../useMobile';
 import TableCheck from '../../components/ComparativoColchoes/TableCheck';
+import parseUrl from '../../helpers/parseUrl';
 
-import IconUmidade from '../../assets/icon-umidade.png';
+const IconUmidade = parseUrl('icon-umidade.png');
 
-import TextureSpark from '../../assets/textura-spark.png';
-import TextureBlue from '../../assets/textura-blue.png';
-import TextureCoral from '../../assets/textura-coral.png';
-import TextureCoralHybrid from '../../assets/textura-coral-hibrido.png';
+const TextureSpark = parseUrl('textura-spark.png');
+const TextureBlue = parseUrl('textura-blue.png');
+const TextureCoral = parseUrl('textura-coral.png');
+const TextureCoralHybrid = parseUrl('textura-coral-hibrido.png');
 
 import TextureSparkMobile from '../../assets/textura-spark-mobile.png';
 import TextureBlueMobile from '../../assets/textura-blue-mobile.png';
