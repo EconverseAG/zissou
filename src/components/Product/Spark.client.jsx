@@ -19,8 +19,10 @@ import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.clie
 import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
 
-import SparkCgi from '../../assets/spark-cgi.mp4';
-import SparkCgiMobile from '../../assets/spark-cgi-mobile.mp4';
+const SparkCgi =
+  'https://cdn.shopify.com/videos/c/o/v/b0b2f3f36dc445a9af653e7b35abdf82.mp4';
+const SparkCgiMobile =
+  'https://cdn.shopify.com/videos/c/o/v/ef7cb941960c413183064797d43f05ee.mp4';
 
 export default function Coral() {
   const {isMobile} = useMobile();

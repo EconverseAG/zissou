@@ -17,7 +17,8 @@ const ZissouInactive = parseUrl('ZissouInactiveTab.webp');
 import modalData from '../Klabin/ModalKlabinData';
 import PopupContent from '../Klabin/Modal.client';
 
-import VideoUboxing from '../../assets/video_unbox.mp4';
+const VideoUboxing =
+  'https://cdn.shopify.com/videos/c/o/v/7c4a727cec4c4c77af87c277552e56dc.mp4';
 
 export default function KlabinMobile() {
   const [leftBrandActive, setLeftBrandTab] = useState(true);

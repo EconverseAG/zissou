@@ -17,8 +17,10 @@ import {LoadingProvider} from '../../hooks/useLoading';
 import useMobile from '../../hooks/useMobile';
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
-import BlueCgi from '../../assets/blue-cgi.mp4';
-import BlueCgiMobile from '../../assets/blue-cgi-mobile.mp4';
+const BlueCgi =
+  'https://cdn.shopify.com/videos/c/o/v/7d09d487968d4149b0f3e42be36736c7.mp4';
+const BlueCgiMobile =
+  'https://cdn.shopify.com/videos/c/o/v/5911e1105bc742eeb5c58cf822b1d1d7.mp4';
 
 export default function Blue() {
   const {isMobile} = useMobile();
