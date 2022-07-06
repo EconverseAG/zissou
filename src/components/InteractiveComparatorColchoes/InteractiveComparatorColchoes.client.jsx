@@ -1,9 +1,10 @@
 import {useCallback, useEffect, useState} from 'react';
 import {Image} from '@shopify/hydrogen';
 import {Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './InteractiveComparatorColchoes.module.scss';
-import SliderController from '../../assets/slider-controller.svg';
+const SliderController = parseUrl('slider-controller.svg');
 import useMobile from '../../hooks/useMobile';
 
 export default function InteractiveComparatorColchoes() {

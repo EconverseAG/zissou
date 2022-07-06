@@ -4,19 +4,20 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from '../Klabin/Klabin.module.scss';
 
-import KlabinActive from '../../assets/KlabinActiveTab.webp';
-import KlabinInactive from '../../assets/KlabinInactiveTab.webp';
+const KlabinActive = parseUrl('KlabinActiveTab.webp');
+const KlabinInactive = parseUrl('KlabinInactiveTab.webp');
 
-import KlabinFundo from '../../assets/klabinFundoMobile.png';
-import ZissouFundo from '../../assets/zissouFundoMobile.png';
+const KlabinFundo = parseUrl('klabinFundoMobile.png');
+const ZissouFundo = parseUrl('zissouFundoMobile.png');
 
-import ZissouActive from '../../assets/ZissouActiveTab.webp';
-import ZissouInactive from '../../assets/ZissouInactiveTab.webp';
+const ZissouActive = parseUrl('ZissouActiveTab.webp');
+const ZissouInactive = parseUrl('ZissouInactiveTab.webp');
 
 import modalData from '../Klabin/ModalKlabinData';
 import PopupContent from '../Klabin/Modal.client';
 
 import VideoUboxing from '../../assets/video_unbox.mp4';
+import parseUrl from '../../helpers/parseUrl';
 
 export default function KlabinMobile() {
   const [leftBrandActive, setLeftBrandTab] = useState(true);
