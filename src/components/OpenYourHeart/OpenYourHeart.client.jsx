@@ -1,8 +1,9 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './OpenYourHeart.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
 import Gif from '../../assets/gif-abra-seu-coracao.gif';
-import Whatsapp from '../../assets/icone-menu-whatsapp-white.webp';
+const Whatsapp = parseUrl('icone-menu-whatsapp-white.webp');
 
 import useMobile from '../../hooks/useMobile';
 

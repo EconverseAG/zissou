@@ -1,9 +1,10 @@
 import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
+import parseUrl from '../../../helpers/parseUrl';
 import * as styles from './Combinacao.module.scss';
 
-import CombinacaoImage from '../../../assets/combinacao.png';
+const CombinacaoImage = parseUrl('combinacao.png');
 
 export default function Combinacao() {
   const {isMobile} = useMobile();
