@@ -10,6 +10,7 @@ import useMobile from '../../hooks/useMobile';
 export default function InteractiveComparatorColchoes() {
   const [sliderPercent, setSliderPercent] = useState(50);
   const [isHolding, setIsHolding] = useState(false);
+  const isWindowDefined = typeof window !== 'undefined';
 
   const {isMobile} = useMobile();
 
@@ -35,11 +36,13 @@ export default function InteractiveComparatorColchoes() {
   }, []);
 
   useEffect(() => {
+    if (!isWindowDefined) return;
+
     window?.addEventListener('mouseup', handleControllerRelease);
 
     return () =>
       window?.removeEventListener('mouseup', handleControllerRelease);
-  }, [handleControllerRelease]);
+  }, [handleControllerRelease, isWindowDefined]);
 
   return (
     <div
