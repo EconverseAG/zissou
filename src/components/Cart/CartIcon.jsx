@@ -1,6 +1,7 @@
 import {Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
-import Minicart from '../../assets/minicart.svg';
+const Minicart = parseUrl('minicart.svg');
 
 /**
  * A shared component that specifies the icon to represent a cart

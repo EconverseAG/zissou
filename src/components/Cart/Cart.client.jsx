@@ -26,7 +26,7 @@ import {CheckoutButton} from '@cartpanda/hydrogen-checkout-button';
 import shopifyConfig from '../../../shopify.config';
 import TotalMinicartPrices from '../../helpers/handleMinicartPrice';
 
-const TruckIcon = '../../assets/TruckIcon.png';
+const TruckIcon = parseUrl('TruckIcon.png');
 const TravesseiroLavavel = parseUrl('travesseiro-lavavel.png');
 const LencolBranco = parseUrl('lencol_zissou.png');
 const LencolCinza = parseUrl('lencol_cinza.png');
