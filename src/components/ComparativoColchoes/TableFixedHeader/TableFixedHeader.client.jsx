@@ -33,7 +33,7 @@ function TableFixedHeader() {
     window.addEventListener('scroll', handleScroll, {passive: true});
 
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <Table

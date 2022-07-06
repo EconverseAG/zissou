@@ -67,7 +67,7 @@ export default function ProductDetails({
         source: 'product_page',
       },
     });
-  });
+  }, [product]);
 
   useEffect(() => {
     resetStates();

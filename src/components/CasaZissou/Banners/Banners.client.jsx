@@ -20,9 +20,8 @@ const MobileBanner4 = parseUrl('slick_lojas_mobile_4.webp');
 const MobileBanner5 = parseUrl('slick_lojas_mobile_5.webp');
 const MobileBanner6 = parseUrl('slick_lojas_mobile_6.webp');
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 68);
-
 export default function Banners({refScroll}) {
+  const scrollToRef = (ref) => window?.scrollTo(0, ref.current.offsetTop - 68);
   const {isMobile} = useMobile();
 
   const settings = {
