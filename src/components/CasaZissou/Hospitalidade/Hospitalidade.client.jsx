@@ -3,22 +3,23 @@ import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from './Hospitalidade.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import LogoFasano from '../../../assets/logo-fasano.webp';
-import LogoCataratas from '../../../assets/logo-Cataratas.webp';
+const LogoFasano = parseUrl('logo-fasano.webp');
+const LogoCataratas = parseUrl('logo-Cataratas.webp');
 
-import HotelGrande from '../../../assets/hotel-grande.png';
-import HotelGrande2 from '../../../assets/hotel-grande2.png';
-import HotelGrande3 from '../../../assets/hotel-grande3.png';
-import CataratasGrande from '../../../assets/catarata-grande.png';
-import HotelPequeno1 from '../../../assets/hotel-pequeno1.png';
-import HotelPequeno2 from '../../../assets/hotel-pequeno2.png';
-import HotelPequeno3 from '../../../assets/hotel-pequeno3.png';
-import HotelPequeno4 from '../../../assets/hotel-pequeno4.png';
-import HotelPequeno5 from '../../../assets/hotel-pequeno5.png';
-import HotelPequeno6 from '../../../assets/hotel-pequeno6.png';
-import HotelPequeno7 from '../../../assets/hotel-pequeno7.png';
-import HotelPequeno8 from '../../../assets/hotel-pequeno8.png';
+const HotelGrande = parseUrl('hotel-grande.png');
+const HotelGrande2 = parseUrl('hotel-grande2.png');
+const HotelGrande3 = parseUrl('hotel-grande3.png');
+const CataratasGrande = parseUrl('catarata-grande.png');
+const HotelPequeno1 = parseUrl('hotel-pequeno1.png');
+const HotelPequeno2 = parseUrl('hotel-pequeno2.png');
+const HotelPequeno3 = parseUrl('hotel-pequeno3.png');
+const HotelPequeno4 = parseUrl('hotel-pequeno4.png');
+const HotelPequeno5 = parseUrl('hotel-pequeno5.png');
+const HotelPequeno6 = parseUrl('hotel-pequeno6.png');
+const HotelPequeno7 = parseUrl('hotel-pequeno7.png');
+const HotelPequeno8 = parseUrl('hotel-pequeno8.png');
 
 export default function Hospitalidade() {
   const {isMobile} = useMobile();

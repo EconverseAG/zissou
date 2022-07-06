@@ -1,11 +1,12 @@
 import * as styles from './experienciaZissou.module.scss';
 
 import {Image, Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../../helpers/parseUrl';
 
-import CasaZissou from '../../../assets/casa-zissou.png';
-import ZissouNormandia from '../../../assets/zissou-normandia.png';
+const CasaZissou = parseUrl('casa-zissou.png');
+const ZissouNormandia = parseUrl('zissou-normandia.png');
 import ZissouGabriel from '../../../assets/icon-loja-gabriel.png';
-import EmBreve from '../../../assets/em-breve.png';
+const EmBreve = parseUrl('em-breve.png');
 
 export default function ExperienciaZissouDesktop() {
   return (

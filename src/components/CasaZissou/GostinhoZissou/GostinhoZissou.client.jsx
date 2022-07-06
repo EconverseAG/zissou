@@ -1,13 +1,14 @@
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from './GostinhoZissou.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import LogoBreton from '../../../assets/logo_Breton.webp';
-import LogoOrnare from '../../../assets/logo_Ornare.webp';
-import LogoRiachuelo from '../../../assets/logo-Riachuelo.webp';
-import LogoTrama from '../../../assets/logo-Trama.webp';
-import LogoWentz from '../../../assets/logo-Wentz.webp';
-import LogoWooding from '../../../assets/logo-Wooding.webp';
+const LogoBreton = parseUrl('logo_Breton.webp');
+const LogoOrnare = parseUrl('logo_Ornare.webp');
+const LogoRiachuelo = parseUrl('logo-Riachuelo.webp');
+const LogoTrama = parseUrl('logo-Trama.webp');
+const LogoWentz = parseUrl('logo-Wentz.webp');
+const LogoWooding = parseUrl('logo-Wooding.webp');
 import useMobile from '../../../hooks/useMobile';
 
 export default function GostinhoZissou() {
