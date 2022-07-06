@@ -2,21 +2,22 @@ import useMobile from '../../hooks/useMobile';
 import {Image, ProductProvider} from '@shopify/hydrogen';
 
 import * as styles from './ShelfBlue.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import SeloBlue from '../../assets/selo_blue.png';
-import SeloBlueMobile from '../../assets/selo_blue_mobile.png';
-import Geracao2021 from '../../assets/geracao_2021.png';
-import Geracao2021Mobile from '../../assets/geracao_2021_mobile.png';
-import ColchaoBlue from '../../assets/foto_blue.png';
-import ColchaoTour from '../../assets/tour_blue_pdp.png';
+const SeloBlue = parseUrl('selo_blue.png');
+const SeloBlueMobile = parseUrl('selo_blue_mobile.png');
+const Geracao2021 = parseUrl('geracao_2021.png');
+const Geracao2021Mobile = parseUrl('geracao_2021_mobile.png');
+const ColchaoBlue = parseUrl('foto_blue.png');
+const ColchaoTour = parseUrl('tour_blue_pdp.png');
+
+const BlueShelf1 = parseUrl('blue-shelf-1.png');
+const BlueShelf2 = parseUrl('blue-shelf-2.png');
+const BlueShelf3 = parseUrl('blue-shelf-3.png');
+const BlueShelf4 = parseUrl('blue-shelf-4.png');
+const BlueShelf5 = parseUrl('blue-shelf-5.png');
 
 import Shelf from '../Shelf/Shelf.client';
-
-import BlueShelf1 from '../../assets/blue-shelf-1.png';
-import BlueShelf2 from '../../assets/blue-shelf-2.png';
-import BlueShelf3 from '../../assets/blue-shelf-3.png';
-import BlueShelf4 from '../../assets/blue-shelf-4.png';
-import BlueShelf5 from '../../assets/blue-shelf-5.png';
 
 export default function ShelfBlue({content}) {
   const {isMobile} = useMobile();
