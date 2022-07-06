@@ -5,15 +5,13 @@ import parseUrl from '../../helpers/parseUrl';
 
 const Logo = parseUrl('logo-zissou-white.webp');
 
-// import Blue from '../../assets/video_1.mp4';
-// import Coral from '../../assets/video_2.mp4';
-import Spark from '../../assets/video_3.mp4';
 const BannerDefault = parseUrl('banner_default.webp');
 
 export default function CinematographyBanner() {
   const banners = [
     {
-      banner: Spark,
+      banner:
+        'https://cdn.shopify.com/videos/c/o/v/e3c317eb670c4629bf441c759b4af974.mp4',
       horaInicio: 0,
       horaFim: 23,
       link: '/pages/colchoes-zissou',

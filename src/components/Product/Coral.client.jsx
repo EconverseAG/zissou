@@ -18,8 +18,10 @@ import {LoadingProvider} from '../../hooks/useLoading';
 const Gif100DiasCoral = parseUrl('gif_100_dias_coral.gif');
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
-import CoralCGI from '../../assets/coral_cgi.mp4';
-import CoralCGIMobile from '../../assets/coral_cgi_mobile.mp4';
+const CoralCGI =
+  'https://cdn.shopify.com/videos/c/o/v/5b44078f5d6141e5a27e07f8d856e794.mp4';
+const CoralCGIMobile =
+  'https://cdn.shopify.com/videos/c/o/v/5b44078f5d6141e5a27e07f8d856e794.mp4';
 
 export default function Coral() {
   const {isMobile} = useMobile();
