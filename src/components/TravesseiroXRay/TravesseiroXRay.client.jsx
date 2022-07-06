@@ -32,15 +32,15 @@ function TravesseiroXRay() {
 
   const handleScroll = useCallback(() => {
     setShowXRay(
-      window.pageYOffset >= xRay.current.offsetTop - 100 ||
-        window.pageYOffset >= xRay.current.offsetTop - 50,
+      window?.pageYOffset >= xRay.current.offsetTop - 100 ||
+        window?.pageYOffset >= xRay.current.offsetTop - 50,
     );
   }, [xRay]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window?.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window?.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   return (

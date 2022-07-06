@@ -20,15 +20,15 @@ function ProductFixedBarColchao({title, subtitle}) {
   const {isMobile} = useMobile();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 1028) {
+    window?.addEventListener('scroll', () => {
+      if (window?.scrollY > 1028) {
         setShow(true);
       } else {
         setShow(false);
       }
     });
 
-    return () => window.removeEventListener('scroll', () => {});
+    return () => window?.removeEventListener('scroll', () => {});
   }, []);
 
   return (

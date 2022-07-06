@@ -19,7 +19,7 @@ function TableFixedHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY = window?.scrollY;
 
       if (currentScrollY > 200) {
         setIsScrolled(true);
@@ -30,9 +30,9 @@ function TableFixedHeader() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, {passive: true});
+    window?.addEventListener('scroll', handleScroll, {passive: true});
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window?.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

@@ -31,7 +31,7 @@ export default function Header({collections, storeName}) {
 
   useEffect(() => {
     const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
+      window?.innerWidth - document.documentElement.clientWidth;
 
     setScrollbarWidth(scrollbarWidth);
   }, [isCartOpen]);
@@ -42,7 +42,7 @@ export default function Header({collections, storeName}) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY = window?.scrollY;
       setScroll(currentScrollY);
 
       if (currentScrollY > 45) {
@@ -54,9 +54,9 @@ export default function Header({collections, storeName}) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, {passive: true});
+    window?.addEventListener('scroll', handleScroll, {passive: true});
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window?.removeEventListener('scroll', handleScroll);
   }, [scroll]);
 
   return (
