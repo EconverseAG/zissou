@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from '../Klabin/Klabin.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
 const KlabinActive = parseUrl('KlabinActiveTab.webp');
 const KlabinInactive = parseUrl('KlabinInactiveTab.webp');
@@ -17,7 +18,6 @@ import modalData from '../Klabin/ModalKlabinData';
 import PopupContent from '../Klabin/Modal.client';
 
 import VideoUboxing from '../../assets/video_unbox.mp4';
-import parseUrl from '../../helpers/parseUrl';
 
 export default function KlabinMobile() {
   const [leftBrandActive, setLeftBrandTab] = useState(true);
