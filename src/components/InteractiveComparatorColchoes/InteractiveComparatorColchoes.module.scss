@@ -2,7 +2,7 @@
   position: relative;
   aspect-ratio: 16/9;
   width: 100%;
-  background-image: url('../../assets/blue-comparador.png');
+  background-image: url('https://cdn.shopify.com/s/files/1/1526/6199/files/blue-comparador.png');
   background-position: center;
   background-size: auto 100%;
   min-height: 360px;
@@ -13,7 +13,7 @@
 
     .content {
       height: 360px;
-      
+
       h2 {
         font-size: 20px;
         line-height: 30px;
@@ -35,12 +35,12 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: url('../../assets/coral-comparador.png');
+    background-image: url('https://cdn.shopify.com/s/files/1/1526/6199/files/coral-comparador.png');
     background-position: center;
     background-size: auto 100%;
     min-height: 360px;
   }
-  
+
   .slider {
     position: absolute;
     top: 0;
@@ -83,7 +83,7 @@
       text-transform: uppercase;
       margin-top: 167px;
     }
-    
+
     a {
       display: flex;
       align-items: center;
