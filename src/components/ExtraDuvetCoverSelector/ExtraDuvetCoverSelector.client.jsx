@@ -6,10 +6,11 @@ import useBuyTogether from '../../hooks/useBuyTogether';
 
 import useMobile from '../../hooks/useMobile';
 
+import parseUrl from '../../helpers/parseUrl';
 import * as styles from './ExtraDuvetCoverSelector.module.scss';
 
-import GrayDuvet from '../../assets/duvet-cinza.png';
-import WhiteDuvet from '../../assets/duvet-branca.png';
+const GrayDuvet = parseUrl('duvet-cinza.png');
+const WhiteDuvet = parseUrl('duvet-branca.png');
 
 function ExtraDuvetCoverSelector({className, ...rest}) {
   const {

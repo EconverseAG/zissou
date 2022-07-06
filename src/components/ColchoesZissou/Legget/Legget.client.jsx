@@ -2,8 +2,9 @@ import useMobile from '../../../hooks/useMobile';
 
 import {Image} from '@shopify/hydrogen';
 import * as styles from './Legget.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import SeloLegget from '../../../assets/selo-legget.png';
+const SeloLegget = parseUrl('selo-legget.png');
 
 export default function Legget() {
   const {isMobile} = useMobile();

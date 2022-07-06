@@ -1,7 +1,8 @@
 import * as styles from './HowDoYouSleep.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import HowDoYouSleepGif from '../../assets/travesseiro-how-do-you-sleep.gif';
-import HowDoYouSleepGifMobile from '../../assets/travesseiro-how-do-you-sleep-mob.gif';
+const HowDoYouSleepGif = parseUrl('travesseiro-how-do-you-sleep.gif');
+const HowDoYouSleepGifMobile = parseUrl('travesseiro-how-do-you-sleep-mob.gif');
 
 import useMobile from '../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen/client';

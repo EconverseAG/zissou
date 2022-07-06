@@ -8,7 +8,7 @@ const Logo = parseUrl('logo-zissou-white.webp');
 // import Blue from '../../assets/video_1.mp4';
 // import Coral from '../../assets/video_2.mp4';
 import Spark from '../../assets/video_3.mp4';
-import BannerDefault from '../../assets/banner_default.webp';
+const BannerDefault = parseUrl('banner_default.webp');
 
 export default function CinematographyBanner() {
   const banners = [

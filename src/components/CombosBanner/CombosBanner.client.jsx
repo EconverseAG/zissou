@@ -2,9 +2,10 @@ import useMobile from '../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from './CombosBanner.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import Banner from '../../assets/combos_banner.png';
-import BannerMobile from '../../assets/combos_banner_mobile.png';
+const Banner = parseUrl('combos_banner.png');
+const BannerMobile = parseUrl('combos_banner_mobile.png');
 
 export default function CombosBanner() {
   const {isMobile} = useMobile();
