@@ -2,7 +2,7 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './FamiliaZissou.module.scss';
 import parseUrl from '../../helpers/parseUrl';
 
-import FamiliaZissouFundo from '../../assets/familiaZissouFundo.png';
+const FamiliaZissouFundo = parseUrl('familiaZissouFundo.png');
 const FamiliaZissouFundoMobile = parseUrl('familiaZissouFundoMobile.jpg');
 
 import PopupContent from './FamiliaModal.client';
