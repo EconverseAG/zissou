@@ -4,20 +4,21 @@ import {Image} from '@shopify/hydrogen';
 import Slider from 'react-slick/lib/slider';
 
 import * as styles from './banners.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import Banner1 from '../../../assets/slick-lojas-1.png';
-import Banner2 from '../../../assets/slick-lojas-2.png';
-import Banner3 from '../../../assets/slick-lojas-3.png';
-import Banner4 from '../../../assets/slick-lojas-4.png';
-import Banner5 from '../../../assets/slick-lojas-5.png';
-import Banner6 from '../../../assets/slick-lojas-6.png';
+const Banner1 = parseUrl('slick-lojas-1.png');
+const Banner2 = parseUrl('slick-lojas-2.png');
+const Banner3 = parseUrl('slick-lojas-3.png');
+const Banner4 = parseUrl('slick-lojas-4.png');
+const Banner5 = parseUrl('slick-lojas-5.png');
+const Banner6 = parseUrl('slick-lojas-6.png');
 
-import MobileBanner1 from '../../../assets/slick_lojas_mobile_1.webp';
-import MobileBanner2 from '../../../assets/slick_lojas_mobile_2.webp';
-import MobileBanner3 from '../../../assets/slick_lojas_mobile_3.webp';
-import MobileBanner4 from '../../../assets/slick_lojas_mobile_4.webp';
-import MobileBanner5 from '../../../assets/slick_lojas_mobile_5.webp';
-import MobileBanner6 from '../../../assets/slick_lojas_mobile_6.webp';
+const MobileBanner1 = parseUrl('slick_lojas_mobile_1.webp');
+const MobileBanner2 = parseUrl('slick_lojas_mobile_2.webp');
+const MobileBanner3 = parseUrl('slick_lojas_mobile_3.webp');
+const MobileBanner4 = parseUrl('slick_lojas_mobile_4.webp');
+const MobileBanner5 = parseUrl('slick_lojas_mobile_5.webp');
+const MobileBanner6 = parseUrl('slick_lojas_mobile_6.webp');
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 68);
 
