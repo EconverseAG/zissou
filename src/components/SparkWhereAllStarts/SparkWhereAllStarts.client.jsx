@@ -1,6 +1,7 @@
 import {Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
-import SparkLogoWhite from '../../assets/spark-logo-white.svg';
+const SparkLogoWhite = parseUrl('spark-logo-white.svg');
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './SparkWhereAllStarts.module.scss';
