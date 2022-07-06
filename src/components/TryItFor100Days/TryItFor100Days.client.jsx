@@ -1,8 +1,9 @@
 import {Link, Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './tryit.module.scss';
 
-import Gif100Dias from '../../assets/gif_100dias.gif';
+const Gif100Dias = parseUrl('gif_100dias.gif');
 
 export default function TryItFor100Days({image}) {
   return (
