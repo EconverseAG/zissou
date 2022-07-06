@@ -5,7 +5,8 @@ import useMobile from '../../../hooks/useMobile';
 import Table from '../Table';
 import TableRow from '../TableRow';
 
-import LogoSpark from '../../../assets/spark-logo.png';
+import parseUrl from '../../../helpers/parseUrl';
+const LogoSpark = parseUrl('spark-logo.png');
 import useComparative from '../../../hooks/useComparative';
 
 import * as styles from './TableFixedHeader.module.scss';

@@ -5,13 +5,14 @@ import TableRow from '../TableRow';
 import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './ProductTable.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import LogoSpark from '../../../assets/spark-logo.png';
-import LogoCoral from '../../../assets/coral-logo.svg';
-import LogoBlue from '../../../assets/blue-logo.svg';
-import PhotoSpark from '../../../assets/foto_spark.png';
-import PhotoCoral from '../../../assets/foto_coral.png';
-import PhotoBlue from '../../../assets/foto_blue.png';
+const LogoSpark = parseUrl('spark-logo.png');
+const LogoCoral = parseUrl('coral-logo.svg');
+const LogoBlue = parseUrl('blue-logo.svg');
+const PhotoSpark = parseUrl('foto_spark.png');
+const PhotoCoral = parseUrl('foto_coral.png');
+const PhotoBlue = parseUrl('foto_blue.png');
 import useComparative from '../../../hooks/useComparative';
 import HybridToggle from '../HybridToggle';
 import ComparativeSelect from '../ComparativeSelect';
