@@ -2,7 +2,7 @@
   position: relative;
   aspect-ratio: 1440/689;
   width: 100%;
-  background-image: url('../../assets/base-spark-coral-ou-blue.gif');
+  background-image: url('https://cdn.shopify.com/s/files/1/1526/6199/files/base-spark-coral-ou-blue.gif');
   background-position: center;
   background-size: cover;
   min-height: 360px;
@@ -12,12 +12,12 @@
     aspect-ratio: initial;
     height: auto;
     background-size: cover;
-    background-image: url('../../assets/base-spark-coral-ou-blue-mobile.gif');
+    background-image: url('https://cdn.shopify.com/s/files/1/1526/6199/files/base-spark-coral-ou-blue-mobile.gif');
 
     .content {
       height: 360px;
       justify-content: space-between;
-      
+
       h2 {
         font-size: 20px;
         line-height: 30px;
@@ -52,7 +52,7 @@
       margin-bottom: 0;
       text-transform: uppercase;
     }
-    
+
     a {
       display: flex;
       align-items: center;
