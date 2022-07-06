@@ -17,9 +17,8 @@ import {Dialog} from '@headlessui/react';
 
 import {useCartUI} from './CartUIProvider.client';
 
-import CartEmpyGif from '../../assets/CartEmptyIcon.gif';
-
-import TruckIcon from '../../assets/TruckIcon.png';
+import parseUrl from '../../helpers/parseUrl';
+const CartEmpyGif = parseUrl('CartEmptyIcon.gif');
 
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
@@ -27,12 +26,13 @@ import {CheckoutButton} from '@cartpanda/hydrogen-checkout-button';
 import shopifyConfig from '../../../shopify.config';
 import TotalMinicartPrices from '../../helpers/handleMinicartPrice';
 
-import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
-import LencolBranco from '../../assets/lencol_zissou.png';
-import LencolCinza from '../../assets/lencol_cinza.png';
-import DuvetBranco from '../../assets/duvet_branco.png';
-import DuvetCinza from '../../assets/duvet_cinza.png';
-import BaseZissou from '../../assets/base_zissou.png';
+const TruckIcon = '../../assets/TruckIcon.png';
+const TravesseiroLavavel = parseUrl('travesseiro-lavavel.png');
+const LencolBranco = parseUrl('lencol_zissou.png');
+const LencolCinza = parseUrl('lencol_cinza.png');
+const DuvetBranco = parseUrl('duvet_branco.png');
+const DuvetCinza = parseUrl('duvet_cinza.png');
+const BaseZissou = parseUrl('base_zissou.png');
 
 export default function Cart() {
   const {isCartOpen, closeCart} = useCartUI();
