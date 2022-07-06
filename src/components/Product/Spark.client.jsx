@@ -13,7 +13,7 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import SparkProduct from '../SparkProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasSpark from '../../assets/gif-100-dias-Spark.gif';
+const Gif100DiasSpark = parseUrl('gif-100-dias-Spark.gif');
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.client';
 import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
