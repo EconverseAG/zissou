@@ -1,6 +1,7 @@
 import {Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
-import LoadingAnimation from '../../assets/loading.gif';
+const LoadingAnimation = parseUrl('loading.gif');
 
 function ZissouLoading() {
   return (

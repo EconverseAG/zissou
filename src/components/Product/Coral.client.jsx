@@ -15,7 +15,7 @@ import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasCoral from '../../assets/gif_100_dias_coral.gif';
+const Gif100DiasCoral = parseUrl('gif_100_dias_coral.gif');
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
 import CoralCGI from '../../assets/coral_cgi.mp4';
