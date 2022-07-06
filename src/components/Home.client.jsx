@@ -13,8 +13,9 @@ import Reviews from '../components/Reviews/Reviews.client';
 import CoralOrBlue from '../components/CoralOrBlue/CoralOrBlue.client';
 import Klabin from '../components/Klabin/Klabin.client';
 import FamiliaZissou from '../components/FamiliaZissou/FamiliaZissou.client';
+import parseUrl from '../helpers/parseUrl';
 
-import Gif100Dias from '../assets/gif_100dias.gif';
+const Gif100Dias = parseUrl('gif_100dias.gif');
 
 export default function Home() {
   return (
