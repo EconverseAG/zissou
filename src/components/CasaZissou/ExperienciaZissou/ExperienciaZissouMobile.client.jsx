@@ -7,7 +7,7 @@ import parseUrl from '../../../helpers/parseUrl';
 
 const CasaZissou = parseUrl('casa-zissou.png');
 const ZissouNormandia = parseUrl('zissou-normandia.png');
-const ZissouGabriel = parseUrl('icon-loja-gabriel.png');
+const ZissouGabriel = parseUrl('icone_loja_gabriel.png');
 const EmBreve = parseUrl('em-breve.png');
 
 export default function ExperienciaZissouMobile() {
