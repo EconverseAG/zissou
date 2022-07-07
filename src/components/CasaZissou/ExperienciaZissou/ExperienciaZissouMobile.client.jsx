@@ -58,12 +58,14 @@ export default function ExperienciaZissouMobile() {
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to="https://g.page/zissoubr?share"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to="https://calendly.com/casa-zissou/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
                 </Link>
@@ -83,12 +85,14 @@ export default function ExperienciaZissouMobile() {
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to="https://goo.gl/maps/xGy6NdLi3iLZBMKy7"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to="https://calendly.com/zissou-normandia/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
                 </Link>
@@ -108,13 +112,15 @@ export default function ExperienciaZissouMobile() {
               <div className={styles.ExperienciaZissouStoreLinks}>
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
-                  to="https://g.page/r/Cenns6XMgBO1EAE"
+                  to="https://www.google.com/maps/place/Alameda+Gabriel+Monteiro+da+Silva,+1325+-+Jardim+America,+S%C3%A3o+Paulo+-+SP,+01441-000/@-23.5713041,-46.6808239,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce577087bf1391:0x4a50dea8cc64087a!8m2!3d-23.5713041!4d-46.6808239"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to="https://calendly.com/zissougabriel/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
                 </Link>
