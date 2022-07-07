@@ -4,23 +4,24 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './TravesseiroXRay.module.scss';
 
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import CombinacaoPlush from '../../assets/combinacao-plush.png';
-import CombinacaoNasNuvens from '../../assets/combinacao-nas-nuvens.png';
-import CombinacaoPlushNasNuvens from '../../assets/combinacao-plush-nas-nuvens.png';
-import CombinacaoUltraPlush from '../../assets/combinacao-ultra-plush.png';
-import CombinacaoOthers from '../../assets/combinacao-outras.png';
+const CombinacaoPlush = parseUrl('combinacao-plush.png');
+const CombinacaoNasNuvens = parseUrl('combinacao-nas-nuvens.png');
+const CombinacaoPlushNasNuvens = parseUrl('combinacao-plush-nas-nuvens.png');
+const CombinacaoUltraPlush = parseUrl('combinacao-ultra-plush.png');
+const CombinacaoOthers = parseUrl('combinacao-outras.png');
 
-import CamadaCapa from '../../assets/travesseiro-x-ray-capa.png';
-import CamadaPlush1 from '../../assets/travesseiro-x-ray-camada-plush-1.png';
-import CamadaNasNuvens from '../../assets/travesseiro-x-ray-camada-nas-nuvens.png';
-import CamadaPlush2 from '../../assets/travesseiro-x-ray-camada-plush-2.png';
+const CamadaCapa = parseUrl('travesseiro-x-ray-capa.png');
+const CamadaPlush1 = parseUrl('travesseiro-x-ray-camada-plush-1.png');
+const CamadaNasNuvens = parseUrl('travesseiro-x-ray-camada-nas-nuvens.png');
+const CamadaPlush2 = parseUrl('travesseiro-x-ray-camada-plush-2.png');
 
-import XRaySkeleton from '../../assets/travesseiro-x-ray-skeleton.png';
-import CapaFechada from '../../assets/capa-fechada.png';
+const XRaySkeleton = parseUrl('travesseiro-x-ray-skeleton.png');
+const CapaFechada = parseUrl('capa-fechada.png');
 
-import XRaySection from '../../assets/x-ray-section.png';
-import CombinacaoSection from '../../assets/combinacao-section.png';
+const XRaySection = parseUrl('x-ray-section.png');
+const CombinacaoSection = parseUrl('combinacao-section.png');
 
 function TravesseiroXRay() {
   const [showXRay, setShowXRay] = useState(false);
@@ -31,15 +32,15 @@ function TravesseiroXRay() {
 
   const handleScroll = useCallback(() => {
     setShowXRay(
-      window.pageYOffset >= xRay.current.offsetTop - 100 ||
-        window.pageYOffset >= xRay.current.offsetTop - 50,
+      window?.pageYOffset >= xRay.current.offsetTop - 100 ||
+        window?.pageYOffset >= xRay.current.offsetTop - 50,
     );
   }, [xRay]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window?.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window?.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   return (

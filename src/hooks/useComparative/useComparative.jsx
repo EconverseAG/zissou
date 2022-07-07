@@ -3,28 +3,29 @@ import {Image} from '@shopify/hydrogen/client';
 
 import useMobile from '../useMobile';
 import TableCheck from '../../components/ComparativoColchoes/TableCheck';
+import parseUrl from '../../helpers/parseUrl';
 
-import IconUmidade from '../../assets/icon-umidade.png';
+const IconUmidade = parseUrl('icon-umidade.png');
 
-import TextureSpark from '../../assets/textura-spark.png';
-import TextureBlue from '../../assets/textura-blue.png';
-import TextureCoral from '../../assets/textura-coral.png';
-import TextureCoralHybrid from '../../assets/textura-coral-hibrido.png';
+const TextureSpark = parseUrl('textura-spark.png');
+const TextureBlue = parseUrl('textura-blue.png');
+const TextureCoral = parseUrl('textura-coral.png');
+const TextureCoralHybrid = parseUrl('textura-coral-hibrido.png');
 
-import TextureSparkMobile from '../../assets/textura-spark-mobile.png';
-import TextureBlueMobile from '../../assets/textura-blue-mobile.png';
-import TextureCoralMobile from '../../assets/textura-coral-mobile.png';
-import TextureCoralHybridMobile from '../../assets/textura-coral-hibrido-mobile.png';
+const TextureSparkMobile = parseUrl('textura-spark-mobile.png');
+const TextureBlueMobile = parseUrl('textura-blue-mobile.png');
+const TextureCoralMobile = parseUrl('textura-coral-mobile.png');
+const TextureCoralHybridMobile = parseUrl('textura-coral-hibrido-mobile.png');
 
-import IconFrescor from '../../assets/icon-frescor.svg';
+const IconFrescor = parseUrl('icon-frescor.svg');
 
-import IconDispersaoUmidade from '../../assets/icon-dispersao-umidade.svg';
-import IconAir from '../../assets/icon-umidade.png';
-import Certifications from '../../assets/colchao-certificacoes.png';
+const IconDispersaoUmidade = parseUrl('icon-dispersao-umidade.svg');
+const IconAir = parseUrl('icon-umidade.png');
+const Certifications = parseUrl('colchao-certificacoes.png');
 
-import BounceLeve from '../../assets/bounce-leve.svg';
-import BounceModerado from '../../assets/bounce-moderado.svg';
-import BounceExtra from '../../assets/bounce-extra.svg';
+const BounceLeve = parseUrl('bounce-leve.svg');
+const BounceModerado = parseUrl('bounce-moderado.svg');
+const BounceExtra = parseUrl('bounce-extra.svg');
 
 const ComparativeContext = createContext({buyTogetherItems: []});
 const useComparative = () => useContext(ComparativeContext);

@@ -3,9 +3,10 @@ import useMobile from '../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen/client';
 
 import * as styles from './LencolDuvetBanner.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import BannerLencolDuvet from '../../assets/banner_lencol_duvet.png';
-import BannerLencolDuvetMobile from '../../assets/banner_lencol_duvet_mobile.png';
+const BannerLencolDuvet = parseUrl('banner_lencol_duvet.png');
+const BannerLencolDuvetMobile = parseUrl('banner_lencol_duvet_mobile.png');
 
 export default function LencolDuvetBanner() {
   const [isMobile, setTrueIsMobile] = useState(false);

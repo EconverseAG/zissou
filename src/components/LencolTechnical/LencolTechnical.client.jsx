@@ -5,10 +5,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './LencolTechnical.module.scss';
 
-import BackgroundImage from '../../assets/lencol-technical-background.png';
+const BackgroundImage = parseUrl('lencol-technical-background.png');
 
 import useMobile from '../../hooks/useMobile';
 

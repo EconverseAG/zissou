@@ -8,7 +8,7 @@ const tagManagerArgs = {
 
 export default function GoogleTagManager() {
   useEffect(() => {
-    if (!window.startGTM) {
+    if (!window?.startGTM) {
       TagManager.initialize(tagManagerArgs);
     }
     window.startGTM = true;

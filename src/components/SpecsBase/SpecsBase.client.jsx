@@ -1,12 +1,13 @@
 import {useCallback, useState} from 'react';
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
-import SelosBase from '../../assets/selos-base.png';
-import GifMontagem from '../../assets/base-montagem.gif';
-import SeloMontagemGratis from '../../assets/selo-montagem-gratis.png';
-import ComparacaoBase from '../../assets/comparacao-base.png';
-import SecondContentBackground from '../../assets/base-background-second-slide.png';
-import ThirdContentBackground from '../../assets/base-background-third-slide.png';
+const SelosBase = parseUrl('selos-base.png');
+const GifMontagem = parseUrl('base-montagem.gif');
+const SeloMontagemGratis = parseUrl('selo-montagem-gratis.png');
+const ComparacaoBase = parseUrl('comparacao-base.png');
+const SecondContentBackground = parseUrl('base-background-second-slide.png');
+const ThirdContentBackground = parseUrl('base-background-third-slide.png');
 
 import * as styles from './SpecsBase.module.scss';
 

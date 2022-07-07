@@ -1,10 +1,11 @@
 import {Link, Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../../helpers/parseUrl';
 
 import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './StillHaveDoubts.module.scss';
 
-import IconWhatsApp from '../../../assets/whatsapp-white.svg';
+const IconWhatsApp = parseUrl('whatsapp-white.svg');
 
 function StillHaveDoubts() {
   const {isMobile} = useMobile();

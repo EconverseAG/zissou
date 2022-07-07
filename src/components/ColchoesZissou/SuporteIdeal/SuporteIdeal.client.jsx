@@ -1,10 +1,11 @@
 import {Image} from '@shopify/hydrogen';
 import * as styles from './SuporteIdeal.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import Espuma from '../../../assets/espuma.png';
-import Mola from '../../../assets/mola.png';
-import EspumaMobile from '../../../assets/espuma_mobile.png';
-import MolaMobile from '../../../assets/mola_mobile.png';
+const Espuma = parseUrl('espuma.png');
+const Mola = parseUrl('mola.png');
+const EspumaMobile = parseUrl('espuma_mobile.png');
+const MolaMobile = parseUrl('mola_mobile.png');
 import useMobile from '../../../hooks/useMobile';
 
 export default function SuporteIdeal() {
@@ -53,6 +54,7 @@ export default function SuporteIdeal() {
             style={{
               marginTop: isMobile ? 'auto' : '',
               marginRight: isMobile ? 'auto' : '',
+              maxHeight: isMobile ? '190px' : '',
             }}
           />
           <span className={styles.SuporteIdealBottomContentSubtitle}>

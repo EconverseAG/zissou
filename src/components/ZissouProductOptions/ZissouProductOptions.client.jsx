@@ -4,8 +4,9 @@ import {Image, useProduct} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 import useProductContent from '../../hooks/useProductContent';
+import parseUrl from '../../helpers/parseUrl';
 
-import DropdownArrow from '../../assets/select-dropdown-arrow.svg';
+const DropdownArrow = parseUrl('select-dropdown-arrow.svg');
 
 import * as styles from './ZissouProductOptions.module.scss';
 import useOutsideClick from '../../hooks/useOutsideClick';

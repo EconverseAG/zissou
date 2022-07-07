@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useMobile() {
   const isWindowDefined = typeof window !== 'undefined';
@@ -11,7 +11,7 @@ export default function useMobile() {
   }
 
   useEffect(() => {
-    if(!isWindowDefined) return;
+    if (!isWindowDefined) return;
 
     window.addEventListener('resize', handleWindowSizeChange);
 
@@ -22,5 +22,5 @@ export default function useMobile() {
 
   const isMobile = width <= 768;
 
-  return {isMobile, width};
+  return { isMobile, width };
 }

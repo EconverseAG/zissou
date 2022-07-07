@@ -2,7 +2,8 @@ import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './FormulaMagica.module.scss';
 
-import VideoBastidores from '../../../assets/video_bastidores.mp4';
+const VideoBastidores =
+  'https://cdn.shopify.com/videos/c/o/v/156e36769e4d4f79ae4a87565e925381.mp4';
 
 export default function FormulaMagica() {
   const {isMobile} = useMobile();

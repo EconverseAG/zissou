@@ -1,14 +1,16 @@
 import {useCallback, useEffect, useState} from 'react';
 import {Image} from '@shopify/hydrogen';
 import {Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './InteractiveComparatorColchoes.module.scss';
-import SliderController from '../../assets/slider-controller.svg';
+const SliderController = parseUrl('slider-controller.svg');
 import useMobile from '../../hooks/useMobile';
 
 export default function InteractiveComparatorColchoes() {
   const [sliderPercent, setSliderPercent] = useState(50);
   const [isHolding, setIsHolding] = useState(false);
+  const isWindowDefined = typeof window !== 'undefined';
 
   const {isMobile} = useMobile();
 
@@ -18,7 +20,7 @@ export default function InteractiveComparatorColchoes() {
 
       const xPos = e.clientX || e.touches[0].clientX;
 
-      const percent = (xPos / window.innerWidth) * 100;
+      const percent = (xPos / window?.innerWidth) * 100;
 
       setSliderPercent(percent);
     },
@@ -34,10 +36,13 @@ export default function InteractiveComparatorColchoes() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('mouseup', handleControllerRelease);
+    if (!isWindowDefined) return;
 
-    return () => window.removeEventListener('mouseup', handleControllerRelease);
-  }, [handleControllerRelease]);
+    window?.addEventListener('mouseup', handleControllerRelease);
+
+    return () =>
+      window?.removeEventListener('mouseup', handleControllerRelease);
+  }, [handleControllerRelease, isWindowDefined]);
 
   return (
     <div

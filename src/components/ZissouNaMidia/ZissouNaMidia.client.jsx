@@ -1,11 +1,12 @@
 import {Image} from '@shopify/hydrogen';
 import * as styles from './ZissouNaMidia.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import Forbes from '../../assets/logo_Forbes.webp';
-import StartSe from '../../assets/logo_StartSe.webp';
-import Gol from '../../assets/logo_Gol.webp';
-import Gq from '../../assets/logo_GQ.webp';
-import ValorEconomico from '../../assets/logo_valor_economico.webp';
+const Forbes = parseUrl('logo_Forbes.webp');
+const StartSe = parseUrl('logo_StartSe.webp');
+const Gol = parseUrl('logo_Gol.webp');
+const Gq = parseUrl('logo_GQ.webp');
+const ValorEconomico = parseUrl('logo_valor_economico.webp');
 
 import useMobile from '../../hooks/useMobile';
 import Slider from 'react-slick/lib/slider';

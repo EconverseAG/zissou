@@ -2,22 +2,23 @@ import useMobile from '../../hooks/useMobile';
 import {Image, ProductProvider} from '@shopify/hydrogen';
 
 import * as styles from './ShelfCoral.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import SeloCoral from '../../assets/selo_coral.png';
-import SeloCoralMobile from '../../assets/selo_coral_mobile.png';
-import Geracao2021 from '../../assets/geracao_2021.png';
-import Geracao2021Mobile from '../../assets/geracao_2021_mobile.png';
-import ColchaoCoral from '../../assets/foto_coral.png';
-import ColchaoTour from '../../assets/tour_coral_pdp.png';
+const SeloCoral = parseUrl('selo_coral.png');
+const SeloCoralMobile = parseUrl('selo_coral_mobile.png');
+const Geracao2021 = parseUrl('geracao_2021.png');
+const Geracao2021Mobile = parseUrl('geracao_2021_mobile.png');
+const ColchaoCoral = parseUrl('foto_coral.png');
+const ColchaoTour = parseUrl('tour_coral_pdp.png');
+
+const CoralShelf1 = parseUrl('coral-shelf-1.png');
+const CoralShelf2 = parseUrl('coral-shelf-2.png');
+const CoralShelf3 = parseUrl('coral-shelf-3.png');
+const CoralShelf4 = parseUrl('coral-shelf-4.png');
+const CoralShelf5 = parseUrl('coral-shelf-5.png');
+const CoralShelf6 = parseUrl('coral-shelf-6.png');
 
 import Shelf from '../Shelf/Shelf.client';
-
-import CoralShelf1 from '../../assets/coral-shelf-1.png';
-import CoralShelf2 from '../../assets/coral-shelf-2.png';
-import CoralShelf3 from '../../assets/coral-shelf-3.png';
-import CoralShelf4 from '../../assets/coral-shelf-4.png';
-import CoralShelf5 from '../../assets/coral-shelf-5.png';
-import CoralShelf6 from '../../assets/coral-shelf-6.png';
 
 export default function ShelfCoral({content}) {
   const {isMobile} = useMobile();

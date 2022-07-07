@@ -1,11 +1,12 @@
 import {Image, useProduct} from '@shopify/hydrogen/client';
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
 import useBuyTogether from '../../hooks/useBuyTogether';
 
-import BaseCompreJunto from '../../assets/base_compre_junto.png';
-import TravesseiroCompreJunto from '../../assets/travesseiro_compre_junto.png';
-import LencolCompreJunto from '../../assets/lencol_compre_junto.png';
+const BaseCompreJunto = parseUrl('base_compre_junto.png');
+const TravesseiroCompreJunto = parseUrl('travesseiro_compre_junto.png');
+const LencolCompreJunto = parseUrl('lencol_compre_junto.png');
 
 import * as styles from './ZissouCompreJunto.module.scss';
 import useZissouProduct from '../../hooks/useZissouProduct';

@@ -4,13 +4,14 @@ import {Image} from '@shopify/hydrogen';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './BagCustomization.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import CustomBagTemplate from '../../assets/custom-bag-template.png';
+const CustomBagTemplate = parseUrl('custom-bag-template.png');
 
-import SeloInfinito from '../../assets/selo-infinito.png';
-import SeloTrevo from '../../assets/selo-trevo.png';
-import SeloPata from '../../assets/selo-pata.png';
-import SeloCoracao from '../../assets/selo-coracao.png';
+const SeloInfinito = parseUrl('selo-infinito.png');
+const SeloTrevo = parseUrl('selo-trevo.png');
+const SeloPata = parseUrl('selo-pata.png');
+const SeloCoracao = parseUrl('selo-coracao.png');
 
 function BagCustomization() {
   const [customizationConfirmed, setCustomizationConfirmed] = useState(false);

@@ -1,5 +1,7 @@
 import useMobile from '../../hooks/useMobile';
-import BannerSparkPDP from '../../assets/pdp-spark.png';
+import parseUrl from '../../helpers/parseUrl';
+
+const BannerSparkPDP = parseUrl('pdp-spark.jpg');
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';
@@ -11,14 +13,16 @@ import TryItFor100Days from '../TryItFor100Days/TryItFor100Days.client';
 import SparkProduct from '../SparkProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasSpark from '../../assets/gif-100-dias-Spark.gif';
+const Gif100DiasSpark = parseUrl('gif-100-dias-Spark.gif');
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 import SparkWhereAllStarts from '../SparkWhereAllStarts/SparkWhereAllStarts.client';
 import TourSpark from '../ProductPage/TourColchao/TourSpark.client';
 import SpecsColchaoSlick from '../ProductPage/SpecsColchaoSlick/SpecsColchaoSlick.client';
 
-import SparkCgi from '../../assets/spark-cgi.mp4';
-import SparkCgiMobile from '../../assets/spark-cgi-mobile.mp4';
+const SparkCgi =
+  'https://cdn.shopify.com/videos/c/o/v/b0b2f3f36dc445a9af653e7b35abdf82.mp4';
+const SparkCgiMobile =
+  'https://cdn.shopify.com/videos/c/o/v/ef7cb941960c413183064797d43f05ee.mp4';
 
 export default function Coral() {
   const {isMobile} = useMobile();

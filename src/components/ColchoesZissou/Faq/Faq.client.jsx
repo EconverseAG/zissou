@@ -1,9 +1,11 @@
 import {useState} from 'react';
 
 import {Image} from '@shopify/hydrogen';
+
+import parseUrl from '../../../helpers/parseUrl';
 import * as styles from './Faq.module.scss';
 
-import Colchao from '../../../assets/colchao_faq.png';
+const Colchao = parseUrl('colchao_faq.png');
 
 import Question1 from './Questions/Question1/Question1.client';
 import Question2 from './Questions/Question2/Question2.client';

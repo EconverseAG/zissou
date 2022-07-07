@@ -12,8 +12,9 @@ import useZissouProduct from '../../hooks/useZissouProduct';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TravesseiroSpecialOptions.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import TravesseiroLavavel from '../../assets/travesseiro-lavavel.png';
+const TravesseiroLavavel = parseUrl('travesseiro-lavavel.png');
 
 function TravesseiroSpecialOptions({className, ...rest}) {
   const [washablePriceDifference, setWashablePriceDifference] = useState({

@@ -3,9 +3,10 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './TravesseiroWashableOption.module.scss';
 
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import TravesseiroWashable from '../../assets/travesseiro-washable.png';
-import TravesseiroWashableMobile from '../../assets/travesseiro-washable-mobile.png';
+const TravesseiroWashable = parseUrl('travesseiro-washable.png');
+const TravesseiroWashableMobile = parseUrl('travesseiro-washable-mobile.png');
 
 export default function TravesseiroWashableOption() {
   const {isMobile} = useMobile();

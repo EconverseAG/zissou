@@ -1,6 +1,7 @@
 import {Image, Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
-import Banner from '../../assets/whatsapp-banner.gif';
+const Banner = parseUrl('whatsapp-banner.gif');
 
 import useMobile from '../../hooks/useMobile';
 

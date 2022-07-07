@@ -3,12 +3,12 @@ import {useState} from 'react';
 import * as styles from './experienciaZissou.module.scss';
 
 import {Image, Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../../helpers/parseUrl';
 
-import CasaZissou from '../../../assets/casa-zissou.png';
-import ZissouNormandia from '../../../assets/zissou-normandia.png';
-import ZissouGabriel from '../../../assets/icon-loja-gabriel.png';
-// import BolaRoxa from '../../../assets/bola-roxa.png';
-import EmBreve from '../../../assets/em-breve.png';
+const CasaZissou = parseUrl('casa-zissou.png');
+const ZissouNormandia = parseUrl('zissou-normandia.png');
+const ZissouGabriel = parseUrl('icon-loja-gabriel.png');
+const EmBreve = parseUrl('em-breve.png');
 
 export default function ExperienciaZissouMobile() {
   const [leftCityActive, setLeftCityTab] = useState(true);

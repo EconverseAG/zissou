@@ -1,10 +1,11 @@
 import Slider from 'react-slick/lib/slider';
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../helpers/parseUrl';
 
-import HumanFriendly1 from '../../assets/human-friendly-1.webp';
-import HumanFriendly2 from '../../assets/human-friendly-2.webp';
-import HumanFriendly3 from '../../assets/human-friendly-3.webp';
-import HumanFriendly4 from '../../assets/human-friendly-4.webp';
+const HumanFriendly1 = parseUrl('human-friendly-1.webp');
+const HumanFriendly2 = parseUrl('human-friendly-2.webp');
+const HumanFriendly3 = parseUrl('human-friendly-3.webp');
+const HumanFriendly4 = parseUrl('human-friendly-4.webp');
 
 import * as styles from './TocaHumanFriendly.module.scss';
 

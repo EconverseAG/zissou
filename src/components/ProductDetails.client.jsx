@@ -49,25 +49,25 @@ export default function ProductDetails({
       products.push({
         list_position: index,
         product_title: product.title,
-        product_id: window.atob(product.id).split('Product/')[1],
+        product_id: window?.atob(product.id).split('Product/')[1],
         variant_title: variant.node.title,
-        variant_id: window.atob(variant.node.id).split('Variant/')[1],
+        variant_id: window?.atob(variant.node.id).split('Variant/')[1],
         sku: variant.node.sku,
         quantity: 1,
-        id: window.atob(variant.node.id).split('Variant/')[1],
+        id: window?.atob(variant.node.id).split('Variant/')[1],
         price: variant.node.priceV2.amount,
         vendor: 'Zissou',
       });
     });
 
-    window.dataLayer.push({
+    window?.dataLayer.push({
       event: 'product_page_view',
       data: {
         items: products,
         source: 'product_page',
       },
     });
-  });
+  }, [product]);
 
   useEffect(() => {
     resetStates();

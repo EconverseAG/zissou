@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useState} from 'react';
 
 import useMobile from '../../../../../hooks/useMobile';
+import parseUrl from '../../../../../helpers/parseUrl';
 
 import {Image, Link} from '@shopify/hydrogen/client';
 
@@ -12,9 +13,9 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from '../../Faq.module.scss';
 
-import ColchaoSpark from '../../../../../assets/colchao-spark-faq.png';
-import ColchaoCoral from '../../../../../assets/colchao-coral-faq.png';
-import ColchaoBlue from '../../../../../assets/colchao-blue-faq.png';
+const ColchaoSpark = parseUrl('colchao-spark-faq.png');
+const ColchaoCoral = parseUrl('colchao-coral-faq.png');
+const ColchaoBlue = parseUrl('colchao-blue-faq.png');
 
 export default function Question2({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);

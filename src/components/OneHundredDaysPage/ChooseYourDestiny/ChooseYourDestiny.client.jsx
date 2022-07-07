@@ -1,11 +1,12 @@
 import ProductChoice from './ProductChoice';
 
 import * as styles from './ChooseYourDestiny.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import ColchoesImage from '../../../assets/colchoes-100-dias-page.png';
-import BaseImage from '../../../assets/base-100-dias-page.png';
-import TravesseiroImage from '../../../assets/travesseiro-100-dias-page.png';
-import LencolDuvetImage from '../../../assets/lencol-e-duvet-100-dias-page.png';
+const ColchoesImage = parseUrl('colchoes-100-dias-page.png');
+const BaseImage = parseUrl('base-100-dias-page.png');
+const TravesseiroImage = parseUrl('travesseiro-100-dias-page.png');
+const LencolDuvetImage = parseUrl('lencol-e-duvet-100-dias-page.png');
 import useMobile from '../../../hooks/useMobile';
 
 function ChooseYourDestiny() {

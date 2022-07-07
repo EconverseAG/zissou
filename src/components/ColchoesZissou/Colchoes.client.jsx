@@ -1,3 +1,4 @@
+import parseUrl from '../../helpers/parseUrl';
 import {LoadingProvider} from '../../hooks/useLoading';
 import useMobile from '../../hooks/useMobile';
 
@@ -14,7 +15,7 @@ import FormulaMagica from './FormulaMagica/FormulaMagica.client';
 import SleepAndLiveComparativo from './SleepAndLiveComparativo/SleepAndLiveComparativo.client';
 import SuporteIdeal from './SuporteIdeal/SuporteIdeal.client';
 
-import Gif100Dias from '../../assets/gif_100dias.gif';
+const Gif100Dias = parseUrl('gif_100dias.gif');
 
 export default function Colchoes({coral, blue, spark}) {
   const {isMobile} = useMobile();

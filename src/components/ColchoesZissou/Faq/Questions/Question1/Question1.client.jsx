@@ -10,10 +10,11 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
+import parseUrl from '../../../../../helpers/parseUrl';
 import * as styles from '../../Faq.module.scss';
 
-import Eua from '../../../../../assets/bandeira_eua.png';
-import Belgica from '../../../../../assets/bandeira_belgica.png';
+const Eua = parseUrl('bandeira_eua.png');
+const Belgica = parseUrl('bandeira_belgica.png');
 
 export default function Question1({setIsOpen}) {
   const [expanded, setExpanded] = useState(false);

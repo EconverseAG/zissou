@@ -1,28 +1,29 @@
 import {useState, useMemo, useEffect} from 'react';
 
 import useMobile from './useMobile';
+import parseUrl from '../helpers/parseUrl';
 
-import Illustration1 from '../assets/descrever-lencol-1.png';
-import Illustration2 from '../assets/descrever-lencol-2.png';
-import Illustration3 from '../assets/descrever-lencol-3.png';
-import Illustration4 from '../assets/descrever-lencol-4.png';
-import Illustration5 from '../assets/descrever-lencol-5.png';
-import Illustration6 from '../assets/descrever-lencol-6.png';
-import Illustration7 from '../assets/descrever-lencol-7.png';
-import Illustration8 from '../assets/descrever-lencol-8.png';
-import Illustration9 from '../assets/descrever-lencol-9.png';
-import Illustration10 from '../assets/descrever-lencol-10.png';
+const Illustration1 = parseUrl('descrever-lencol-1.png');
+const Illustration2 = parseUrl('descrever-lencol-2.png');
+const Illustration3 = parseUrl('descrever-lencol-3.png');
+const Illustration4 = parseUrl('descrever-lencol-4.png');
+const Illustration5 = parseUrl('descrever-lencol-5.png');
+const Illustration6 = parseUrl('descrever-lencol-6.png');
+const Illustration7 = parseUrl('descrever-lencol-7.png');
+const Illustration8 = parseUrl('descrever-lencol-8.png');
+const Illustration9 = parseUrl('descrever-lencol-9.png');
+const Illustration10 = parseUrl('descrever-lencol-10.png');
 
-import IllustrationMobile1 from '../assets/descrever-lencol-mobile-1.png';
-import IllustrationMobile2 from '../assets/descrever-lencol-mobile-2.png';
-import IllustrationMobile3 from '../assets/descrever-lencol-mobile-3.png';
-import IllustrationMobile4 from '../assets/descrever-lencol-mobile-4.png';
-import IllustrationMobile5 from '../assets/descrever-lencol-mobile-5.png';
-import IllustrationMobile6 from '../assets/descrever-lencol-mobile-6.png';
-import IllustrationMobile7 from '../assets/descrever-lencol-mobile-7.png';
-import IllustrationMobile8 from '../assets/descrever-lencol-mobile-8.png';
-import IllustrationMobile9 from '../assets/descrever-lencol-mobile-9.png';
-import IllustrationMobile10 from '../assets/descrever-lencol-mobile-10.png';
+const IllustrationMobile1 = parseUrl('descrever-lencol-mobile-1.png');
+const IllustrationMobile2 = parseUrl('descrever-lencol-mobile-2.png');
+const IllustrationMobile3 = parseUrl('descrever-lencol-mobile-3.png');
+const IllustrationMobile4 = parseUrl('descrever-lencol-mobile-4.png');
+const IllustrationMobile5 = parseUrl('descrever-lencol-mobile-5.png');
+const IllustrationMobile6 = parseUrl('descrever-lencol-mobile-6.png');
+const IllustrationMobile7 = parseUrl('descrever-lencol-mobile-7.png');
+const IllustrationMobile8 = parseUrl('descrever-lencol-mobile-8.png');
+const IllustrationMobile9 = parseUrl('descrever-lencol-mobile-9.png');
+const IllustrationMobile10 = parseUrl('descrever-lencol-mobile-10.png');
 
 const quoteList = [
   {

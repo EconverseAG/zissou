@@ -4,10 +4,11 @@ import {Image} from '@shopify/hydrogen';
 import * as styles from './DuvetInside.module.scss';
 
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import Inside from '../../assets/duvet-inside.png';
-import InsideDuvet from '../../assets/duvet-inside-duvet.png';
-import InsideEnchimento from '../../assets/duvet-inside-enchimento.png';
+const Inside = parseUrl('duvet-inside.png');
+const InsideDuvet = parseUrl('duvet-inside-duvet.png');
+const InsideEnchimento = parseUrl('duvet-inside-enchimento.png');
 
 function DuvetInside() {
   const [showDuvetInfo, setShowDuvetInfo] = useState(false);
