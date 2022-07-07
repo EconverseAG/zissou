@@ -11,7 +11,7 @@ const LogoZissou = parseUrl('logo-zissou-antigo.svg');
 const ColchaoCoral = parseUrl('menuItem__Coral.png');
 const ColchaoBlue = parseUrl('menuItem__Blue.png');
 const ColchaoSpark = parseUrl('menuItem__Spark.png');
-const WhatsAppMenu = parseUrl('whatsapp-menu.png');
+const WhatsAppMenu = parseUrl('whatsapp-menu.webp');
 const MenuLocator = parseUrl('menu-locator.png');
 
 const IconMessage = parseUrl('icone-menu-message.png');
@@ -94,7 +94,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       </li>
                       <li className={styles.blue}>
                         <Link to="/products/colchao-zissou-blue">
-                          <Image src={ColchaoBlue} width="205" height="27" />
+                          <Image src={ColchaoBlue} width="194" height="27" />
                         </Link>
                       </li>
                       <li className={styles.spark}>
