@@ -25,7 +25,7 @@ export default function Navigation() {
               </li>
               <li className={styles.blue}>
                 <Link to="/products/colchao-zissou-blue">
-                  <Image src={ColchaoBlue} width="205" height="27" />
+                  <Image src={ColchaoBlue} width="194" height="29" />
                 </Link>
               </li>
               <li className={styles.spark}>

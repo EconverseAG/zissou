@@ -1,7 +1,7 @@
 import useMobile from '../../hooks/useMobile';
 import parseUrl from '../../helpers/parseUrl';
 
-const BannerSparkPDP = parseUrl('pdp-spark.png');
+const BannerSparkPDP = parseUrl('pdp-spark.jpg');
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';
