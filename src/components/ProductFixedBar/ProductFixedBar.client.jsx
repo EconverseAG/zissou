@@ -31,7 +31,11 @@ function ProductFixedBar({title}) {
       {!isMobile && (
         <div className={styles.infos}>
           <h2>{title}</h2>
-          <span>Experimente por 100 dias. Um ano de garantia.</span>
+          <span>
+            {title.includes('Toca')
+              ? 'Experimente por 30 dias. Um ano de garantia.'
+              : 'Experimente por 100 dias. Um ano de garantia.'}
+          </span>
         </div>
       )}
       <ZissouAddToCart />
