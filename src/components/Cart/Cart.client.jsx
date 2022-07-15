@@ -28,6 +28,7 @@ import TotalMinicartPrices from '../../helpers/handleMinicartPrice';
 
 const TruckIcon = parseUrl('TruckIcon.png');
 const TravesseiroLavavel = parseUrl('travesseiro-lavavel.png');
+const TravesseiroImage = parseUrl('travesseiro-normal.webp');
 const LencolBranco = parseUrl('lencol_zissou.png');
 const LencolCinza = parseUrl('lencol_cinza.png');
 const DuvetBranco = parseUrl('duvet_branco.png');
@@ -252,7 +253,7 @@ function CartShelf() {
     },
     {
       title: 'Lençol Branco Queen',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc1NTk3Nw==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc4ODc0NQ==',
     },
     {
       title: 'Lençol Branco King BR',
@@ -268,11 +269,11 @@ function CartShelf() {
     },
     {
       title: 'Lençol Cinza Solteiro Especial',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk5OTgxMA==',
     },
     {
       title: 'Lençol Cinza Casal',
-      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+      id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjAzMjU3OA==',
     },
     {
       title: 'Lençol Cinza Queen',
@@ -445,7 +446,7 @@ function CartShelf() {
           </div>
           <div className={styles.slideItem}>
             <span>Travesseiro</span>
-            <Image src={TravesseiroLavavel} width="75" height="24" />
+            <Image src={TravesseiroImage} width="75" height="24" />
             <AddToCartButton
               variantId={
                 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjA3Njk2MzI3NDk0Ng=='

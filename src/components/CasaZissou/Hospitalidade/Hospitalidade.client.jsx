@@ -86,7 +86,7 @@ export default function Hospitalidade() {
                   height={isMobile ? '134' : '196'}
                 />
                 <figcaption className={styles.legenda}>
-                  FASANO <br /> BELO HORIZONTE
+                  FASANO <br /> ANGRA DOS REIS
                 </figcaption>
               </figure>
               <figure className={styles.legendaContainer}>

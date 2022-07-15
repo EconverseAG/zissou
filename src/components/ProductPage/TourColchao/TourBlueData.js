@@ -63,7 +63,7 @@ export default [
     },
   },
   {
-    title: 'Camada de <br /> aconhego',
+    title: 'Camada de <br /> aconchego',
     imageSrc: CamadaDeAconchegoFundo,
     modal: {
       title: 'VISCO FRESH',
