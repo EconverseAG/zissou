@@ -24,8 +24,6 @@ function ZissouAddToCart({
 
   const cart = useCart();
 
-  console.log(selectedVariant.id);
-
   const isOutOfStock = useMemo(
     () => !selectedVariant.availableForSale,
     [selectedVariant],

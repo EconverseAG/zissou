@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import {
   CartLineImage,
@@ -35,7 +35,7 @@ const DuvetBranco = parseUrl('duvet_branco.png');
 const DuvetCinza = parseUrl('duvet_cinza.png');
 const BaseZissou = parseUrl('base_zissou.png');
 
-export default function Cart() {
+export default function Cart({products}) {
   const {isCartOpen, closeCart} = useCartUI();
   const {totalQuantity, lines} = useCart();
   const {estimatedCost} = useCart();
@@ -58,7 +58,7 @@ export default function Cart() {
           ) : (
             <>
               <CartHeader />
-              <CartItems />
+              <CartItems products={products} />
               <CartFooter totalLine={totalLine} />
             </>
           )}
@@ -80,13 +80,13 @@ function CartHeader() {
   );
 }
 
-function CartItems() {
+function CartItems({products}) {
   return (
     <div className={styles.cartItems}>
       <CartLines>
         <LineInCart />
       </CartLines>
-      <CartShelf />
+      <CartShelf products={products} />
     </div>
   );
 }
@@ -197,7 +197,7 @@ function CartItemQuantity() {
   );
 }
 
-function CartShelf() {
+function CartShelf(props) {
   const [base, setBase] = useState('');
   const [whiteLencol, setWhiteLencol] = useState('');
   const [grayLencol, setGrayLencol] = useState('');
@@ -218,98 +218,161 @@ function CartShelf() {
     {
       title: 'Base Solteiro',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzA4NDg2Ng==',
+      metafields:
+        props.products.base.data.product.variants.edges[0].node.metafields,
     },
     {
       title: 'Base Solteiro Especial',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzExNzYzNA==',
+      metafields:
+        props.products.base.data.product.variants.edges[1].node.metafields,
     },
     {
       title: 'Base Casal',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzE1MDQwMg==',
+      metafields:
+        props.products.base.data.product.variants.edges[2].node.metafields,
     },
     {
       title: 'Base Queen',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzE4MzE3MA==',
+      metafields:
+        props.products.base.data.product.variants.edges[3].node.metafields,
     },
     {
       title: 'Base King BR',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzIxNTkzOA==',
+      metafields:
+        props.products.base.data.product.variants.edges[4].node.metafields,
     },
     {
       title: 'Base King',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTMzMDc5NzI0ODcwNg==',
+      metafields:
+        props.products.base.data.product.variants.edges[5].node.metafields,
     },
     {
       title: 'Lençol Branco Solteiro',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE2MzU0NjE4NQ==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[0].node
+          .metafields,
     },
     {
       title: 'Lençol Branco Solteiro Especial',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5NzcyMzIwOQ==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[1].node
+          .metafields,
     },
     {
       title: 'Lençol Branco Casal',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc1NTk3Nw==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[2].node
+          .metafields,
     },
     {
       title: 'Lençol Branco Queen',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzc4ODc0NQ==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[3].node
+          .metafields,
     },
     {
       title: 'Lençol Branco King BR',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5NzgyMTUxMw==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[4].node
+          .metafields,
     },
     {
       title: 'Lençol Branco King',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xOTU1ODE5Nzg1NDI4MQ==',
+      metafields:
+        props.products.whiteLencol.data.product.variants.edges[5].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza Solteiro',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk2NzA0Mg==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[0].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza Solteiro Especial',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MTk5OTgxMA==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[1].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza Casal',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjAzMjU3OA==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[2].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza Queen',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjA2NTM0Ng==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[3].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza King BR',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjA5ODExNA==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[4].node
+          .metafields,
     },
     {
       title: 'Lençol Cinza King',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4MjEzMDg4Mg==',
+      metafields:
+        props.products.grayLencol.data.product.variants.edges[5].node
+          .metafields,
     },
     {
       title: 'Duvet Branco Solteiro',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTQ0MjEyMQ==',
+      metafields:
+        props.products.whiteDuvet.data.product.variants.edges[0].node
+          .metafields,
     },
     {
       title: 'Duvet Branco Casal Queen',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTQ3NDg4OQ==',
+      metafields:
+        props.products.whiteDuvet.data.product.variants.edges[1].node
+          .metafields,
     },
     {
       title: 'Duvet Branco King King BR',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcwOTk4MTUwNzY1Nw==',
+      metafields:
+        props.products.whiteDuvet.data.product.variants.edges[2].node
+          .metafields,
     },
     {
       title: 'Duvet Cinza Solteiro',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4ODk3OTM5NA==',
+      metafields:
+        props.products.grayDuvet.data.product.variants.edges[0].node.metafields,
     },
     {
       title: 'Duvet Cinza Casal Queen',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTAxMjE2Mg==',
+      metafields:
+        props.products.grayDuvet.data.product.variants.edges[1].node.metafields,
     },
     {
       title: 'Duvet Cinza King King BR',
       id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MTQ4MjU4OTA0NDkzMA==',
+      metafields:
+        props.products.grayDuvet.data.product.variants.edges[2].node.metafields,
     },
   ];
 
@@ -360,12 +423,12 @@ function CartShelf() {
     });
 
     if (whiteLencolFiltered.length > 0) {
-      setWhiteLencol(whiteLencolFiltered[0]?.id);
+      setWhiteLencol(whiteLencolFiltered[0]);
     } else {
       setWhiteLencol(
         products.filter((product) => {
           return product.title.includes('Lençol Branco Solteiro');
-        })[0]?.id,
+        })[0],
       );
     }
 
@@ -374,12 +437,12 @@ function CartShelf() {
     });
 
     if (grayLencolFiltered.length > 0) {
-      setGrayLencol(grayLencolFiltered[0]?.id);
+      setGrayLencol(grayLencolFiltered[0]);
     } else {
       setGrayLencol(
         products.filter((product) => {
           return product.title.includes('Lençol Cinza Solteiro');
-        })[0]?.id,
+        })[0],
       );
     }
 
@@ -412,6 +475,12 @@ function CartShelf() {
     }
   }, [lines, productFiltered, products]);
 
+  const filterProductByMetafield = useCallback((product) => {
+    return product.metafields?.edges?.find(({node}) => {
+      return node.key === 'data_de_restoque';
+    });
+  }, []);
+
   return (
     <div className={styles.cartShelfContainer}>
       <span className={styles.cartShelfTitle}>
@@ -427,7 +496,18 @@ function CartShelf() {
             <div className={styles.slideItem}>
               <span>Base</span>
               <Image src={BaseZissou} width="60" height="40" />
-              <AddToCartButton variantId={base} onClickCapture={removeItem}>
+              <AddToCartButton
+                variantId={base}
+                attributes={
+                  filterProductByMetafield(base) && [
+                    {
+                      key: 'Encomenda',
+                      value: filterProductByMetafield(whiteLencol)?.node.value,
+                    },
+                  ]
+                }
+                onClickCapture={removeItem}
+              >
                 Adicionar
               </AddToCartButton>
             </div>
@@ -438,6 +518,20 @@ function CartShelf() {
             <AddToCartButton
               variantId={
                 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjA3Njk2MzQwNjAxOA=='
+              }
+              attributes={
+                filterProductByMetafield(
+                  props.products.travesseiroWashable.data.product.variants
+                    .edges[0].node.metafields,
+                ) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(
+                      props.products.travesseiroWashable.data.product.variants
+                        .edges[0].node.metafields,
+                    )?.node.value,
+                  },
+                ]
               }
               onClickCapture={removeItem}
             >
@@ -451,6 +545,20 @@ function CartShelf() {
               variantId={
                 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MjA3Njk2MzI3NDk0Ng=='
               }
+              attributes={
+                filterProductByMetafield(
+                  props.products.travesseiro.data.product.variants.edges[0].node
+                    .metafields,
+                ) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(
+                      props.products.travesseiro.data.product.variants.edges[0]
+                        .node.metafields,
+                    )?.node.value,
+                  },
+                ]
+              }
               onClickCapture={removeItem}
             >
               Adicionar
@@ -460,7 +568,15 @@ function CartShelf() {
             <span>Lençol Branco</span>
             <Image src={LencolBranco} width="60" height="45" />
             <AddToCartButton
-              variantId={whiteLencol}
+              variantId={whiteLencol.id}
+              attributes={
+                filterProductByMetafield(whiteLencol) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(whiteLencol)?.node.value,
+                  },
+                ]
+              }
               onClickCapture={removeItem}
             >
               Adicionar
@@ -469,21 +585,54 @@ function CartShelf() {
           <div className={styles.slideItem}>
             <span>Lençol Cinza</span>
             <Image src={LencolCinza} width="45" height="30" />
-            <AddToCartButton variantId={grayLencol} onClickCapture={removeItem}>
+            <AddToCartButton
+              variantId={grayLencol.id}
+              attributes={
+                filterProductByMetafield(grayLencol) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(whiteLencol)?.node.value,
+                  },
+                ]
+              }
+              onClickCapture={removeItem}
+            >
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Branco</span>
             <Image src={DuvetBranco} width="79" height="33" />
-            <AddToCartButton variantId={whiteDuvet} onClickCapture={removeItem}>
+            <AddToCartButton
+              variantId={whiteDuvet}
+              attributes={
+                filterProductByMetafield(whiteDuvet) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(whiteLencol)?.node.value,
+                  },
+                ]
+              }
+              onClickCapture={removeItem}
+            >
               Adicionar
             </AddToCartButton>
           </div>
           <div className={styles.slideItem}>
             <span>Duvet Cinza</span>
             <Image src={DuvetCinza} width="79" height="33" />
-            <AddToCartButton variantId={grayDuvet} onClickCapture={removeItem}>
+            <AddToCartButton
+              variantId={grayDuvet}
+              attributes={
+                filterProductByMetafield(grayDuvet) && [
+                  {
+                    key: 'Encomenda',
+                    value: filterProductByMetafield(whiteLencol)?.node.value,
+                  },
+                ]
+              }
+              onClickCapture={removeItem}
+            >
               Adicionar
             </AddToCartButton>
           </div>
