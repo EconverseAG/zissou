@@ -87,8 +87,8 @@ export default function EntregaFutura() {
             <>
               <div className={styles.SimulateOffer}>
                 <span className={styles.SimulateOfferTitle}>
-                  Insira a data ideal para receber o seu colchão e obtenha a
-                  melhor oferta
+                  Insira a data aproximada que deseja receber seu colchão e
+                  obtenha a melhor oferta
                 </span>
                 <div className={styles.SimulateOfferDates}>
                   <input
@@ -119,8 +119,9 @@ export default function EntregaFutura() {
                 </span>
               </div>
               <span className={styles.DiscountText}>
-                Para a entrega na data selecionada, {!isMobile && <br />} você
-                pode comprar o seu Colchão Zissou com:
+                Para a entrega a partir da data selecionada,{' '}
+                {!isMobile && <br />} você pode comprar o seu Colchão Zissou
+                com:
               </span>
               {dateToCompare < compare1Months(date) ? (
                 <strong
@@ -151,9 +152,9 @@ export default function EntregaFutura() {
                 is10OFF={dateToCompare > compare2Months(date)}
               />
               <span className={styles.TeamSuport}>
-                Lembrando que nosso time entrará em contato{' '}
-                {!isMobile && <br />} logo após sua compra para combinar tudo
-                direitinho ;)
+                *O prazo de entrega começa a contar a partir{' '}
+                {!isMobile && <br />} da data selecionada, e varia de acordo com
+                o seu CEP ;)
               </span>
               <button
                 className={styles.LowerDeadline}
