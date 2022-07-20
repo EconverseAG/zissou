@@ -82,6 +82,24 @@ function ZissouAddToCart({
       lines.push({
         merchandiseId: item.selectedVariant.id,
       });
+
+      const restockDate = item.selectedVariant.metafields.edges.filter(
+        (item) => item.node.key === 'data_de_restoque',
+      );
+
+      if (restockDate.length > 0) {
+        lines[lines.length - 1].attributes = [
+          {
+            key: 'Encomenda',
+            value:
+              restockDate[0].node.value.split('-')[2] +
+              '/' +
+              restockDate[0].node.value.split('-')[1] +
+              '/' +
+              restockDate[0].node.value.split('-')[0],
+          },
+        ];
+      }
     });
 
     if (!cart.id) {
