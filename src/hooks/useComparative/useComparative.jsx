@@ -50,14 +50,13 @@ function ComparativeProvider({children}) {
           freshness: <TableCheck />,
           tissueCharacteristics: (
             <div>
-              <h3>Velvet & Balanced</h3>
+              <h3>Velvet and balanced</h3>
               <br />
               <p>
                 • Tecido de origem americana
                 <br />
-                • Combina fibras de alta gramatura com toque de elastano
-                <br />• Construção de trama especial, que proporciona toque
-                aveludado com leve elasticidade
+                • Fibras de alta gramatura com toque de elastano
+                <br />• Toque aveludado com leve elasticidade
               </p>
             </div>
           ),
@@ -101,9 +100,7 @@ function ComparativeProvider({children}) {
                 • Espuma de alta resiliência com látex na composição, de origem
                 belga
                 <br /> • Material exclusivo dos colchões Zissou
-                <br /> • Excelente durabilidade
-                <br /> • Microclima saudável na cama
-                <br /> • Ótimas características ergonômicas
+                <br /> • Microclima saudável e características ergonômicas
               </p>
             </div>
           ),
@@ -139,9 +136,8 @@ function ComparativeProvider({children}) {
           supportedWeight: '150kg',
           materialDetails: (
             <p>
-              • Base de espuma de poliuretano de alta densidade e durabilidade
-              <br /> • Suporte uniforme ao corpo e às camadas de conforto
-              <br /> • Reforço do isolamento de movimento
+              • Espuma de poliuretano de alta densidade
+              <br /> • Suporte uniforme com reforço do isolamento de movimento
             </p>
           ),
         },
@@ -173,14 +169,13 @@ function ComparativeProvider({children}) {
           freshness: <TableCheck />,
           tissueCharacteristics: (
             <div>
-              <h3>Velvet & Balanced</h3>
+              <h3>Velvet and balanced</h3>
               <br />
               <p>
                 • Tecido de origem americana
                 <br />
-                • Combina fibras de alta gramatura com toque de elastano
-                <br />• Construção de trama especial, que proporciona toque
-                aveludado com leve elasticidade
+                • Fibras de alta gramatura com toque de elastano
+                <br />• Toque aveludado com leve elasticidade
               </p>
             </div>
           ),
@@ -224,9 +219,7 @@ function ComparativeProvider({children}) {
                 • Espuma de alta resiliência com látex na composição, de origem
                 belga
                 <br /> • Material exclusivo dos colchões Zissou
-                <br /> • Excelente durabilidade
-                <br /> • Microclima saudável na cama
-                <br /> • Ótimas características ergonômicas
+                <br /> • Microclima saudável e características ergonômicas
               </p>
             </div>
           ),
@@ -274,11 +267,9 @@ function ComparativeProvider({children}) {
           supportedWeight: '170kg',
           materialDetails: (
             <p>
-              • Sistema de suporte Leggett & Platt
-              <br /> • Combina espuma e molas com 12cm de altura
-              <br /> • A espuma macia tem alta densidade e durabilidade
-              <br /> • Molas ensacadas individualmente proporcionam maior
-              adaptabilidade do colchão às curvas do corpo
+              • Sistema de suporte de 12cm com espuma e molas Leggett & Platt
+              <br /> • Molas ensacadas individualmente para maior adaptabilidade
+              do colchão às curvas do corpo
             </p>
           ),
         },
@@ -322,7 +313,7 @@ function ComparativeProvider({children}) {
                 • Tecido premium de origem americana
                 <br />
                 • Altamente respirável
-                <br />• Tecnologia que previne o aquecimento do corpo
+                <br />• Previne aquecimento do corpo
               </p>
             </div>
           ),
@@ -374,12 +365,11 @@ function ComparativeProvider({children}) {
           ),
           materialDetails: (
             <div>
-              <h3>Látex Classic</h3>
+              <h3>Latex Classic</h3>
               <br />
               <p>
                 • Látex nobre e sofisticado
                 <br /> • Resiliência e suporte progressivo
-                <br /> • Excelente durabilidade
                 <br /> • Pequenas perfurações potencializam a circulação de ar
                 <br /> • Propriedades antimicrobianas e resistência a ácaros
               </p>
@@ -398,7 +388,7 @@ function ComparativeProvider({children}) {
               <p>
                 • Absorve e distribui o peso
                 <br /> • Alivia pontos de pressão
-                <br /> • Proporciona transferência mínima de movimento
+                <br /> • Transferência mínima de movimento
               </p>
             </div>
           ),
@@ -418,9 +408,8 @@ function ComparativeProvider({children}) {
           supportedWeight: '150kg',
           materialDetails: (
             <p>
-              • Base de espuma de poliuretano de alta densidade e durabilidade
-              <br /> • Suporte uniforme ao corpo e às camadas de conforto
-              <br /> • Reforço do isolamento de movimento
+              • Espuma de poliuretano de alta densidade
+              <br /> • Suporte uniforme com reforço do isolamento de movimento
             </p>
           ),
         },
@@ -464,7 +453,7 @@ function ComparativeProvider({children}) {
                 • Tecido premium de origem americana
                 <br />
                 • Altamente respirável
-                <br />• Tecnologia que previne o aquecimento do corpo
+                <br />• Previne aquecimento do corpo
               </p>
             </div>
           ),
@@ -516,12 +505,11 @@ function ComparativeProvider({children}) {
           ),
           materialDetails: (
             <div>
-              <h3>Látex Classic</h3>
+              <h3>Latex Classic</h3>
               <br />
               <p>
                 • Látex nobre e sofisticado
                 <br /> • Resiliência e suporte progressivo
-                <br /> • Excelente durabilidade
                 <br /> • Pequenas perfurações potencializam a circulação de ar
                 <br /> • Propriedades antimicrobianas e resistência a ácaros
               </p>
@@ -540,7 +528,8 @@ function ComparativeProvider({children}) {
               <p>
                 • Absorve e distribui o peso
                 <br /> • Alivia pontos de pressão
-                <br /> • Proporciona transferência mínima de movimento
+                <br /> • Transferência mínima de movimento
+                <br /> • Gel de cooling para maior frescor
               </p>
             </div>
           ),
@@ -573,12 +562,9 @@ function ComparativeProvider({children}) {
           supportedWeight: '170kg',
           materialDetails: (
             <p>
-              • Sistema de suporte Leggett & Platt
-              <br /> • Combina espuma e molas com 15cm de altura
-              <br /> • Camada de transição de espuma de poliuretano de alta
-              densidade oferece suporte uniforme ao corpo
-              <br /> • Molas ensacadas individualmente proporcionam maior
-              maleabilidade ao colchão e adaptação às curvas do corpo
+              • Sistema de suporte de 15cm com espuma e molas Leggett & Platt
+              <br /> • Molas ensacadas individualmente para maior maleabilidade
+              e adaptação às curvas do corpo
             </p>
           ),
         },
@@ -631,13 +617,10 @@ function ComparativeProvider({children}) {
               <h3>Plush & Cool</h3>
               <br />
               <p>
-                • Material produzido nos EUA
-                <br />
-                • Tecido matelassado, criando superfície acolchoada, que
-                proporciona mais maciez
+                • Tecido matelassado de origem americana, com superfície
+                acolchoada e maciez extra
                 <br />• Tecnologia Ultra Cooling, que potencializa a
                 condutividade térmica. criando o micro-clima ideal para o sono
-                de qualidade
               </p>
             </div>
           ),
@@ -699,16 +682,14 @@ function ComparativeProvider({children}) {
           ),
           materialDetails: (
             <div>
-              <h3>Látex Pulse</h3>
+              <h3>Latex Pulse</h3>
               <br />
               <p>
                 • Verdadeiramente único como camada de conforto
                 <br /> • Estrutura celular homogênea, que promove excelente
-                capacidade de conservação de suas propriedades, aumentando a
-                durabilidade
-                <br /> • Excelentes propriedades de ventilação, para um
-                microclima perfeitamente equilibrado
-                <br /> • Controle de umidade otimizado
+                capacidade de conservação de suas propriedades
+                <br /> • Excelentes propriedades de ventilação, para microclima
+                equilibrado e controle de umidade
                 <br /> • Maior elasticidade, facilitando a movimentação na cama
                 durante o sono
               </p>
@@ -727,7 +708,8 @@ function ComparativeProvider({children}) {
               <p>
                 • Absorve e distribui o peso
                 <br /> • Alivia pontos de pressão
-                <br /> • Proporciona transferência mínima de movimento
+                <br /> • Transferência mínima de movimento
+                <br /> • Gel de cooling para maior frescor
               </p>
             </div>
           ),
@@ -760,13 +742,13 @@ function ComparativeProvider({children}) {
           supportedWeight: '170kg',
           materialDetails: (
             <p>
-              • Sistema de suporte Leggett Inside com espuma e molas com 15cm de
-              altura
+              • Sistema de suporte de 15cm com espuma e molas Leggett & Platt
               <br /> • Molas com zoneamneto ergonômico, que proporcionam melhor
               alinhamento da coluna
-              <br /> • Molas ensacaddas individualmente proporcionam maior
-              maleabilidade ao colchão <br /> • Camada de transição de espuma de
-              poliuretano de alta densidade uniformiza a distribuição de peso
+              <br /> • Molas ensacaddas individualmente para maior maleabilidade
+              e adaptabilidade às curvas do corpo
+              <br /> • Camada de transição de espuma de poliuretano de alta
+              densidade uniformiza a distribuição de peso
             </p>
           ),
         },
