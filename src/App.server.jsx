@@ -28,6 +28,7 @@ function App(props) {
   };
 
   redirectOnExactMatch('/pages/colchoes-zissou', [
+    '/colchoes-zissou',
     '/products/colchoes-zissou',
     '/products/colchao-zissou',
   ]);

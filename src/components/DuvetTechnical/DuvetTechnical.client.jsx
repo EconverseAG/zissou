@@ -3,13 +3,14 @@ import {Image} from '@shopify/hydrogen';
 import {Accordion, AccordionDetails, AccordionSummary} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import parseUrl from '../../helpers/parseUrl';
 
 import useMobile from '../../hooks/useMobile';
 
-import DuvetTechnicalBackground from '../../assets/duvet-technical-background.png';
+const DuvetTechnicalBackground = parseUrl('duvet-technical-background.png');
 
-import DuvetComposicao1 from '../../assets/duvet-composicao-1.png';
-import DuvetComposicao2 from '../../assets/duvet-composicao-2.png';
+const DuvetComposicao1 = parseUrl('duvet-composicao-1.png');
+const DuvetComposicao2 = parseUrl('duvet-composicao-2.png');
 
 import * as styles from './DuvetTechnical.module.scss';
 

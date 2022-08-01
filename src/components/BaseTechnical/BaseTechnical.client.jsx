@@ -8,7 +8,9 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import * as styles from './BaseTechnical.module.scss';
 
-import BackgroundImage from '../../assets/base-technical-background.png';
+import parseUrl from '../../helpers/parseUrl';
+
+const BackgroundImage = parseUrl('base-technical-background.png');
 
 import useMobile from '../../hooks/useMobile';
 

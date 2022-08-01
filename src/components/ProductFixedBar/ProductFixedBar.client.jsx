@@ -11,15 +11,15 @@ function ProductFixedBar({title}) {
   const {isMobile} = useMobile();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 1028) {
+    window?.addEventListener('scroll', () => {
+      if (window?.scrollY > 1028) {
         setShow(true);
       } else {
         setShow(false);
       }
     });
 
-    return () => window.removeEventListener('scroll', () => {});
+    return () => window?.removeEventListener('scroll', () => {});
   }, []);
 
   return (
@@ -31,7 +31,11 @@ function ProductFixedBar({title}) {
       {!isMobile && (
         <div className={styles.infos}>
           <h2>{title}</h2>
-          <span>Experimente por 100 dias. Um ano de garantia.</span>
+          <span>
+            {title.includes('Toca')
+              ? 'Experimente por 30 dias. Um ano de garantia.'
+              : 'Experimente por 100 dias. Um ano de garantia.'}
+          </span>
         </div>
       )}
       <ZissouAddToCart />

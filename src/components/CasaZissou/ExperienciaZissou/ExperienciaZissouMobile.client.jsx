@@ -3,11 +3,12 @@ import {useState} from 'react';
 import * as styles from './experienciaZissou.module.scss';
 
 import {Image, Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../../helpers/parseUrl';
 
-import CasaZissou from '../../../assets/casa-zissou.png';
-import ZissouNormandia from '../../../assets/zissou-normandia.png';
-// import BolaRoxa from '../../../assets/bola-roxa.png';
-import EmBreve from '../../../assets/em-breve.png';
+const CasaZissou = parseUrl('casa-zissou.png');
+const ZissouNormandia = parseUrl('zissou-normandia.png');
+const ZissouGabriel = parseUrl('icone_loja_gabriel.png');
+const EmBreve = parseUrl('em-breve.png');
 
 export default function ExperienciaZissouMobile() {
   const [leftCityActive, setLeftCityTab] = useState(true);
@@ -57,12 +58,14 @@ export default function ExperienciaZissouMobile() {
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to="https://g.page/zissoubr?share"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to="https://calendly.com/casa-zissou/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
                 </Link>
@@ -82,19 +85,21 @@ export default function ExperienciaZissouMobile() {
                 <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
                   to="https://goo.gl/maps/xGy6NdLi3iLZBMKy7"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
                   to="https://calendly.com/zissou-normandia/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
                 </Link>
               </div>
             </div>
             <div className={styles.ExperienciaZissouStore}>
-              <Image src={EmBreve} width="96" height="96" />
+              <Image src={ZissouGabriel} width="96" height="96" />
               <div className={styles.ExperienciaZissouStoreInfo}>
                 <span className={styles.ExperienciaZissouRightStoreTitle}>
                   Zissou <br /> Gabriel
@@ -105,18 +110,20 @@ export default function ExperienciaZissouMobile() {
                 </p>
               </div>
               <div className={styles.ExperienciaZissouStoreLinks}>
-                {/* <Link
+                <Link
                   className={styles.ExperienciaZissouRightStoreHowToArrive}
-                  to=""
+                  to="https://www.google.com/maps/place/Alameda+Gabriel+Monteiro+da+Silva,+1325+-+Jardim+America,+S%C3%A3o+Paulo+-+SP,+01441-000/@-23.5713041,-46.6808239,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce577087bf1391:0x4a50dea8cc64087a!8m2!3d-23.5713041!4d-46.6808239"
+                  target={'_blank'}
                 >
                   Como chegar
                 </Link>
                 <Link
                   className={styles.ExperienciaZissouRightStoreScheduleHere}
-                  to="https://calendly.com/zissou-normandia/visita-agendada"
+                  to="https://calendly.com/zissougabriel/visita-agendada"
+                  target={'_blank'}
                 >
                   Agende aqui
-                </Link> */}
+                </Link>
               </div>
             </div>
           </>

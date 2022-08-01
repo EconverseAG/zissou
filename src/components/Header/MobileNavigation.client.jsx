@@ -5,20 +5,21 @@ import {FocusTrap} from '@headlessui/react';
 import OpenIcon from '../OpenIcon';
 
 import * as styles from './header.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import LogoZissou from '../../assets/logo-zissou-antigo.svg';
-import ColchaoCoral from '../../assets/menuItem__Coral.png';
-import ColchaoBlue from '../../assets/menuItem__Blue.png';
-import ColchaoSpark from '../../assets/menuItem__Spark.png';
-import WhatsAppMenu from '../../assets/whatsapp-menu.png';
-import MenuLocator from '../../assets/menu-locator.png';
+const LogoZissou = parseUrl('logo-zissou-antigo.svg');
+const ColchaoCoral = parseUrl('menuItem__Coral.png');
+const ColchaoBlue = parseUrl('menuItem__Blue.png');
+const ColchaoSpark = parseUrl('menuItem__Spark.png');
+const WhatsAppMenu = parseUrl('whatsapp-menu.webp');
+const MenuLocator = parseUrl('menu-locator.png');
 
-import IconMessage from '../../assets/icone-menu-message.png';
-import IconHelp from '../../assets/icone-menu-help.png';
-import IconAccount from '../../assets/icone-menu-account.png';
-import IconInstagram from '../../assets/icone-menu-instagram.png';
-import IconFacebook from '../../assets/icone-menu-facebook.png';
-import IconYoutube from '../../assets/icone-menu-youtube.png';
+const IconMessage = parseUrl('icone-menu-message.png');
+const IconHelp = parseUrl('icone-menu-help.png');
+const IconAccount = parseUrl('icone-menu-account.png');
+const IconInstagram = parseUrl('icone-menu-instagram.png');
+const IconFacebook = parseUrl('icone-menu-facebook.png');
+const IconYoutube = parseUrl('icone-menu-youtube.png');
 
 /**
  * A client component that defines the navigation for a mobile storefront
@@ -93,7 +94,7 @@ export default function MobileNavigation({isOpen, setIsOpen}) {
                       </li>
                       <li className={styles.blue}>
                         <Link to="/products/colchao-zissou-blue">
-                          <Image src={ColchaoBlue} width="205" height="27" />
+                          <Image src={ColchaoBlue} width="194" height="27" />
                         </Link>
                       </li>
                       <li className={styles.spark}>

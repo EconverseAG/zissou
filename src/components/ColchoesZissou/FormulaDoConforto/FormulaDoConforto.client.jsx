@@ -1,9 +1,10 @@
 import useMobile from '../../../hooks/useMobile';
 
+import parseUrl from '../../../helpers/parseUrl';
 import * as styles from './FormulaDoConforto.module.scss';
 
-import VideoLatex from '../../../assets/video_latex.gif';
-import VideoVisco from '../../../assets/video_visco.gif';
+const VideoLatex = parseUrl('video_latex.gif');
+const VideoVisco = parseUrl('video_visco.gif');
 import {Image} from '@shopify/hydrogen/client';
 
 export default function FormulaDoConforto() {

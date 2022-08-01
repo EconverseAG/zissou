@@ -2,9 +2,10 @@ import useMobile from '../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from './TecidoBambu.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import TecidoBambuImage from '../../assets/tecido_bambu.png';
-import TecidoBambuImageMobile from '../../assets/tecido_bambu_mobile.png';
+const TecidoBambuImage = parseUrl('tecido_bambu.png');
+const TecidoBambuImageMobile = parseUrl('tecido_bambu_mobile.png');
 
 export default function TecidoBambu() {
   const {isMobile} = useMobile();

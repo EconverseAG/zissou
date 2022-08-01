@@ -3,12 +3,13 @@ import {Image} from '@shopify/hydrogen';
 
 import * as styles from './TocaNossosEspecialistas.module.scss';
 
-import NossosEspecialistasImage from '../../assets/toca-nossos-especialistas.webp';
 import Slider from 'react-slick/lib/slider';
+import parseUrl from '../../helpers/parseUrl';
+const NossosEspecialistasImage = parseUrl('toca-nossos-especialistas.webp');
 
-import Especialista1 from '../../assets/especialista-1.webp';
-import Especialista2 from '../../assets/especialista-2.webp';
-import Especialista3 from '../../assets/especialista-3.webp';
+const Especialista1 = parseUrl('especialista-1.webp');
+const Especialista2 = parseUrl('especialista-2.webp');
+const Especialista3 = parseUrl('especialista-3.webp');
 
 export default function TocaNossosEspecialistas() {
   const {isMobile} = useMobile();

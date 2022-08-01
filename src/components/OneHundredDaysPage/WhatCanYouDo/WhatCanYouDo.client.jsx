@@ -5,13 +5,14 @@ import TimeComparisonCard from './TimeComparisonCard';
 import useMobile from '../../../hooks/useMobile';
 
 import * as styles from './WhatCanYouDo.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import IconMarathon from '../../../assets/icon-marathon.png';
-import IconClockWork from '../../../assets/icon-clock-work.png';
-import IconApollo from '../../../assets/icon-apollo-11.png';
-import IconElevator from '../../../assets/icon-elevator.png';
-import IconFriends from '../../../assets/icon-friends.png';
-import IconBeatles from '../../../assets/icon-beatles.png';
+const IconMarathon = parseUrl('icon-marathon.png');
+const IconClockWork = parseUrl('icon-clock-work.png');
+const IconApollo = parseUrl('icon-apollo-11.png');
+const IconElevator = parseUrl('icon-elevator.png');
+const IconFriends = parseUrl('icon-friends.png');
+const IconBeatles = parseUrl('icon-beatles.png');
 
 function WhatCanYouDo() {
   const [windowSize, setWindowSize] = useState();

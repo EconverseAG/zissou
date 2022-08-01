@@ -2,7 +2,8 @@ import {Image} from '@shopify/hydrogen';
 
 import useMobile from '../../../hooks/useMobile';
 
-import Uncheck from '../../../assets/uncheck.svg';
+import parseUrl from '../../../helpers/parseUrl';
+const Uncheck = parseUrl('uncheck.svg');
 import {useMemo} from 'react';
 
 function TableCheck({checked, colorBlue, colorSpark}) {

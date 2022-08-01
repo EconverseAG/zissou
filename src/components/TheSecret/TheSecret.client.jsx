@@ -3,8 +3,9 @@ import {useState, useEffect} from 'react';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './TheSecret.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import Panda from '../../assets/panda.gif';
+const Panda = parseUrl('panda.gif');
 import {Image} from '@shopify/hydrogen/client';
 
 function TheSecret({productName, open}) {

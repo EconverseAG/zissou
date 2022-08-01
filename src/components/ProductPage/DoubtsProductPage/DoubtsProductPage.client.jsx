@@ -1,8 +1,9 @@
 import {useState} from 'react';
 import {Image, Link} from '@shopify/hydrogen/client';
 import * as styles from './DoubtsProductPage.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import WhatsApp from '../../../assets/icone-menu-whatsapp-white.webp';
+const WhatsApp = parseUrl('icone-menu-whatsapp-white.webp');
 import useMobile from '../../../hooks/useMobile';
 
 export default function DoubtsProductPage({color, hover}) {

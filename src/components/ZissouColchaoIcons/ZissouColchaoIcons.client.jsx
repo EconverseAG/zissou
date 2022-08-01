@@ -1,19 +1,20 @@
 import {Image, useProduct} from '@shopify/hydrogen/client';
 import useZissouProduct from '../../hooks/useZissouProduct';
 import useMobile from '../../hooks/useMobile';
+import parseUrl from '../../helpers/parseUrl';
 
-import IconeGarantiaCoral from '../../assets/icone_garantia.png';
-import IconeGarantiaBlue from '../../assets/icone_garantia_blue.png';
-import IconeGarantiaSpark from '../../assets/icone_garantia_spark.svg';
-import IconeEntregaCoral from '../../assets/icone_entrega.png';
-import IconeEntregaSpark from '../../assets/icone_entrega_spark.svg';
-import IconeEntregaBlue from '../../assets/icone_entrega_prime.png';
-import IconeFreteCoral from '../../assets/icone_frete.png';
-import IconeFreteBlue from '../../assets/icone_frete_blue.png';
-import IconeFreteSpark from '../../assets/icone_frete_spark.svg';
-import Icone100DiasCoral from '../../assets/icone_100_dias.png';
-import Icone100DiasBlue from '../../assets/icone_100_dias_blue.png';
-import Icone100DiasSpark from '../../assets/icone_100_dias_spark.svg';
+const IconeGarantiaCoral = parseUrl('icone_garantia.png');
+const IconeGarantiaBlue = parseUrl('icone_garantia_blue.png');
+const IconeGarantiaSpark = parseUrl('icone_garantia_spark.svg');
+const IconeEntregaCoral = parseUrl('icone_entrega.png');
+const IconeEntregaSpark = parseUrl('icone_entrega_spark.svg');
+const IconeEntregaBlue = parseUrl('icone_entrega_prime.png');
+const IconeFreteCoral = parseUrl('icone_frete.png');
+const IconeFreteBlue = parseUrl('icone_frete_blue.png');
+const IconeFreteSpark = parseUrl('icone_frete_spark.svg');
+const Icone100DiasCoral = parseUrl('icone_100_dias.png');
+const Icone100DiasBlue = parseUrl('icone_100_dias_blue.png');
+const Icone100DiasSpark = parseUrl('icone_100_dias_spark.svg');
 
 import * as styles from './ZissouColchaoIcons.module.scss';
 

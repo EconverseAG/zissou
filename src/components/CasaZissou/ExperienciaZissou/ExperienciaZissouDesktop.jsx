@@ -1,10 +1,12 @@
 import * as styles from './experienciaZissou.module.scss';
 
 import {Image, Link} from '@shopify/hydrogen/client';
+import parseUrl from '../../../helpers/parseUrl';
 
-import CasaZissou from '../../../assets/casa-zissou.png';
-import ZissouNormandia from '../../../assets/zissou-normandia.png';
-import EmBreve from '../../../assets/em-breve.png';
+const CasaZissou = parseUrl('casa-zissou.png');
+const ZissouNormandia = parseUrl('zissou-normandia.png');
+const ZissouGabriel = parseUrl('icone_loja_gabriel.png');
+const EmBreve = parseUrl('em-breve.png');
 
 export default function ExperienciaZissouDesktop() {
   return (
@@ -55,7 +57,7 @@ export default function ExperienciaZissouDesktop() {
             </Link>
           </div>
           <div className={styles.ExperienciaZissouLeftStore}>
-            <Image src={EmBreve} width="230" height="230" />
+            <Image src={ZissouGabriel} width="230" height="230" />
             <span className={styles.ExperienciaZissouRightStoreTitle}>
               Zissou <br /> Gabriel
             </span>
@@ -63,18 +65,18 @@ export default function ExperienciaZissouDesktop() {
               Al. Gabriel Monteiro da Silva, 1325 <br /> Jardim Paulistano - SP{' '}
               <br /> Cep 01442-001
             </p>
-            {/* <Link
-              to="/"
+            <Link
+              to="https://www.google.com/maps/place/Alameda+Gabriel+Monteiro+da+Silva,+1325+-+Jardim+America,+S%C3%A3o+Paulo+-+SP,+01441-000/@-23.5713041,-46.6808239,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce577087bf1391:0x4a50dea8cc64087a!8m2!3d-23.5713041!4d-46.6808239"
               className={styles.ExperienciaZissouRightStoreHowToArrive}
             >
               COMO CHEGAR
             </Link>
             <Link
-              to="/"
+              to="https://calendly.com/zissougabriel/visita-agendada"
               className={styles.ExperienciaZissouRightStoreScheduleHere}
             >
               AGENDE AQUI
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

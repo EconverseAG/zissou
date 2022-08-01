@@ -1,7 +1,8 @@
 import useMobile from '../../../hooks/useMobile';
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../../helpers/parseUrl';
 
-import TourCoralPDP from '../../../assets/tour_coral_pdp.png';
+const TourCoralPDP = parseUrl('tour_coral_pdp.png');
 
 import * as styles from './TourColchao.module.scss';
 

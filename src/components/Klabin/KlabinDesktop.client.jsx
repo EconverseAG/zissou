@@ -1,11 +1,13 @@
 import {Image} from '@shopify/hydrogen';
 
 import * as styles from './Klabin.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import KlabinFundo from '../../assets/klabin_fundo.png';
+const KlabinFundo = parseUrl('klabin_fundo.png');
 import modalData from './ModalKlabinData';
 
-import VideoUboxing from '../../assets/video_unbox.mp4';
+const VideoUboxing =
+  'https://cdn.shopify.com/videos/c/o/v/7c4a727cec4c4c77af87c277552e56dc.mp4';
 
 import PopupContent from './Modal.client';
 

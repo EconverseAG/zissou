@@ -1,4 +1,4 @@
-import {Suspense, lazy} from 'react';
+import {Suspense} from 'react';
 import Layout from '../components/Layout.server';
 
 import {CacheDays} from '@shopify/hydrogen';

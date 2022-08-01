@@ -1,15 +1,17 @@
+/* eslint-disable hydrogen/prefer-image-component */
 import {Link, Image} from '@shopify/hydrogen/client';
+import parseUrl from '../../helpers/parseUrl';
 
 import * as styles from './footer.module.scss';
 
-import WhatsAppMenu from '../../assets/icone-menu-whatsapp-white.webp';
-import IconInstagram from '../../assets/icone-menu-instagram-white.webp';
-import IconFacebook from '../../assets/icone-menu-facebook-white.webp';
-import IconYoutube from '../../assets/icone-menu-youtube-white.webp';
-import IconTwitter from '../../assets/icone-menu-twitter-white.webp';
-import IconZissou from '../../assets/logo-zissou-white.webp';
-import IconSecure from '../../assets/shopifySecure.webp';
-import IconPayment from '../../assets/shopifyPayments.webp';
+const WhatsAppMenu = parseUrl('icone-menu-whatsapp-white.webp');
+const IconInstagram = parseUrl('icone-menu-instagram-white.webp');
+const IconFacebook = parseUrl('icone-menu-facebook-white.webp');
+const IconYoutube = parseUrl('icone-menu-youtube-white.webp');
+const IconTwitter = parseUrl('icone-menu-twitter-white.webp');
+const IconZissou = parseUrl('logo-zissou-white.webp');
+const IconSecure = parseUrl('shopifySecure.webp');
+const IconPayment = parseUrl('shopifyPayments.webp');
 
 /**
  * A server component that specifies the content of the footer on the website
@@ -39,9 +41,7 @@ export default function Footer() {
               <Link to="/pages/colchoes-zissou">Colchões</Link>
             </li>
             <li>
-              <Link to="/products/travesseiro-zissou">
-                Travesseiro Zissou
-              </Link>
+              <Link to="/products/travesseiro-zissou">Travesseiro Zissou</Link>
             </li>
             <li>
               <Link to="/pages/lencol-e-duvet-zissou">

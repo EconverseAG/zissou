@@ -4,9 +4,10 @@ import useMobile from '../../hooks/useMobile';
 import {LoadingProvider} from '../../hooks/useLoading';
 
 import * as styles from './OneHundredDaysPage.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import ColchaoTimeline from '../../assets/colchao-timeline.png';
-import ColchaoTimelineMobile from '../../assets/colchao-timeline-mobile.png';
+const ColchaoTimeline = parseUrl('colchao-timeline.png');
+const ColchaoTimelineMobile = parseUrl('colchao-timeline-mobile.png');
 import ChooseYourDestiny from './ChooseYourDestiny';
 import WhatCanYouDo from './WhatCanYouDo';
 

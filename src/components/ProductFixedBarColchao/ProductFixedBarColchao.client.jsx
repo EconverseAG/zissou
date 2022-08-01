@@ -1,5 +1,6 @@
 import {Image} from '@shopify/hydrogen';
 import {useState, useEffect} from 'react';
+import parseUrl from '../../helpers/parseUrl';
 
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
@@ -7,10 +8,10 @@ import ZissouAddToCart from '../ZissouAddToCart';
 
 import * as styles from './ProductFixedBarColchao.module.scss';
 
-import CoralBar from '../../assets/coral-bar.png';
-import BlueBar from '../../assets/blue-bar.png';
-import SparkBar from '../../assets/spark-bar.png';
-import SparkLogo from '../../assets/spark-logo.png';
+const CoralBar = parseUrl('coral-bar.png');
+const BlueBar = parseUrl('blue-bar.png');
+const SparkBar = parseUrl('spark-bar.png');
+const SparkLogo = parseUrl('spark-logo.png');
 
 function ProductFixedBarColchao({title, subtitle}) {
   const [show, setShow] = useState(false);
@@ -19,15 +20,15 @@ function ProductFixedBarColchao({title, subtitle}) {
   const {isMobile} = useMobile();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 1028) {
+    window?.addEventListener('scroll', () => {
+      if (window?.scrollY > 1028) {
         setShow(true);
       } else {
         setShow(false);
       }
     });
 
-    return () => window.removeEventListener('scroll', () => {});
+    return () => window?.removeEventListener('scroll', () => {});
   }, []);
 
   return (

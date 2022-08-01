@@ -1,11 +1,12 @@
 import {Image} from '@shopify/hydrogen/client';
 import * as styles from './Partners.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import FastShop from '../../assets/logo_Fast.webp';
-import ZissouCinza from '../../assets/zissou-cinza.png';
-import Fasano from '../../assets/logo_Fasano.webp';
-import Breton from '../../assets/logo_Breton.webp';
-import Ornare from '../../assets/logo_Ornare.webp';
+const FastShop = parseUrl('logo_Fast.webp');
+const ZissouCinza = parseUrl('zissou-cinza.png');
+const Fasano = parseUrl('logo_Fasano.webp');
+const Breton = parseUrl('logo_Breton.webp');
+const Ornare = parseUrl('logo_Ornare.webp');
 
 import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';

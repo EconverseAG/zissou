@@ -9,8 +9,9 @@ import useMobile from '../../hooks/useMobile';
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductIsHybrid.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import HybridColchao from '../../assets/hybrid-colchao.gif';
+const HybridColchao = parseUrl('hybrid-colchao.gif');
 
 export default function ZissouProductIsHybrid() {
   const [oldProduct, setOldProduct] = useState();

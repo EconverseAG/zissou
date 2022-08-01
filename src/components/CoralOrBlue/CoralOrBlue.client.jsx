@@ -1,8 +1,9 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 import * as styles from './CoralOrBlue.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import GifFundoMobile from '../../assets/gif_fundo_mobile.gif';
-import GifFundo from '../../assets/gif_coral_ou_blue_fundo.gif';
+const GifFundoMobile = parseUrl('gif_fundo_mobile.gif');
+const GifFundo = parseUrl('gif_coral_ou_blue_fundo.gif');
 import useMobile from '../../hooks/useMobile';
 
 export default function CoralOrBlue() {

@@ -1,5 +1,6 @@
 import useMobile from '../../hooks/useMobile';
-import BannerCoralPDP from '../../assets/pdp-coral.png';
+import parseUrl from '../../helpers/parseUrl';
+const BannerCoralPDP = parseUrl('pdp-coral.png');
 
 import BannerProductPage from '../ProductPage/BannerProductPage/BannerProductPage.client';
 import Reviews from '../Reviews/Reviews.client';
@@ -14,11 +15,13 @@ import TourColchao from '../ProductPage/TourColchao/TourColchao.client';
 import CoralProduct from '../CoralProduct';
 import {LoadingProvider} from '../../hooks/useLoading';
 
-import Gif100DiasCoral from '../../assets/gif_100_dias_coral.gif';
+const Gif100DiasCoral = parseUrl('gif_100_dias_coral.gif');
 import ProductFixedBarColchao from '../ProductFixedBarColchao/ProductFixedBarColchao.client';
 
-import CoralCGI from '../../assets/coral_cgi.mp4';
-import CoralCGIMobile from '../../assets/coral_cgi_mobile.mp4';
+const CoralCGI =
+  'https://cdn.shopify.com/videos/c/o/v/5b44078f5d6141e5a27e07f8d856e794.mp4';
+const CoralCGIMobile =
+  'https://cdn.shopify.com/videos/c/o/v/5b44078f5d6141e5a27e07f8d856e794.mp4';
 
 export default function Coral() {
   const {isMobile} = useMobile();

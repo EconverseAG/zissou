@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import useMobile from '../../../hooks/useMobile';
 
 import {Image} from '@shopify/hydrogen';
+import parseUrl from '../../../helpers/parseUrl';
 
-import TourBluePDP from '../../../assets/tour_blue_pdp.png';
+const TourBluePDP = parseUrl('tour_blue_pdp.png');
 
 import * as styles from './TourColchao.module.scss';
 

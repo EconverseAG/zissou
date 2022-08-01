@@ -1,9 +1,10 @@
+import parseUrl from '../../helpers/parseUrl';
 import useMobile from '../../hooks/useMobile';
 
 import * as styles from './DuvetHowToDescribe.module.scss';
 
-import Video from '../../assets/duvet-how-to-describe.mp4';
-import VideoMobile from '../../assets/duvet-how-to-describe-mobile.mp4';
+const Video = parseUrl('duvet-how-to-describe.mp4');
+const VideoMobile = parseUrl('duvet-how-to-describe-mobile.mp4');
 
 function DuvetHowToDescribe() {
   const {isMobile} = useMobile();

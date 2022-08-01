@@ -10,9 +10,10 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 import * as styles from './SelectLojas.module.scss';
+import parseUrl from '../../../helpers/parseUrl';
 
-import ZissouFastShop from '../../../assets/zissou-fastshop.png';
-import CamaZissouFastshop from '../../../assets/cama-zissou-fastshop.png';
+const ZissouFastShop = parseUrl('zissou-fastshop.png');
+const CamaZissouFastshop = parseUrl('cama-zissou-fastshop.png');
 
 import data from './data';
 

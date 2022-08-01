@@ -5,11 +5,12 @@ import CartToggle from '../Cart/CartToggle.client';
 import {useCartUI} from '../Cart/CartUIProvider.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
+import parseUrl from '../../helpers/parseUrl';
 
 import {Image} from '@shopify/hydrogen';
 
-import LogoZissou from '../../assets/logo-zissou.svg';
-import LogoWhatsApp from '../../assets/logo-whatsapp.svg';
+const LogoZissou = parseUrl('logo-zissou.svg');
+const LogoWhatsApp = parseUrl('logo-whatsapp.svg');
 
 import * as styles from './header.module.scss';
 import useMobile from '../../hooks/useMobile';
@@ -30,7 +31,7 @@ export default function Header({collections, storeName}) {
 
   useEffect(() => {
     const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
+      window?.innerWidth - document.documentElement.clientWidth;
 
     setScrollbarWidth(scrollbarWidth);
   }, [isCartOpen]);
@@ -41,7 +42,7 @@ export default function Header({collections, storeName}) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY = window?.scrollY;
       setScroll(currentScrollY);
 
       if (currentScrollY > 45) {
@@ -53,9 +54,9 @@ export default function Header({collections, storeName}) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, {passive: true});
+    window?.addEventListener('scroll', handleScroll, {passive: true});
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window?.removeEventListener('scroll', handleScroll);
   }, [scroll]);
 
   return (

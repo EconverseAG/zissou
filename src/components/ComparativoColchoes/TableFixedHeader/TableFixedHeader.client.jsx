@@ -5,7 +5,8 @@ import useMobile from '../../../hooks/useMobile';
 import Table from '../Table';
 import TableRow from '../TableRow';
 
-import LogoSpark from '../../../assets/spark-logo.png';
+import parseUrl from '../../../helpers/parseUrl';
+const LogoSpark = parseUrl('spark-logo.png');
 import useComparative from '../../../hooks/useComparative';
 
 import * as styles from './TableFixedHeader.module.scss';
@@ -18,7 +19,7 @@ function TableFixedHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY = window?.scrollY;
 
       if (currentScrollY > 200) {
         setIsScrolled(true);
@@ -29,10 +30,10 @@ function TableFixedHeader() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, {passive: true});
+    window?.addEventListener('scroll', handleScroll, {passive: true});
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
+    return () => window?.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <Table

@@ -1,11 +1,13 @@
 import {Link, Image} from '@shopify/hydrogen/client';
 
 import * as styles from './SleepAndLive.module.scss';
+import parseUrl from '../../helpers/parseUrl';
 
-import LogoSpark from '../../assets/spark-logo.png';
-import ColchaoSpark from '../../assets/colchao_spark.png';
-import ColchaoCoral from '../../assets/colchao_coral.webp';
-import ColchaoBlue from '../../assets/colchao_blue.webp';
+const LogoSpark = parseUrl('spark-logo.png');
+const ColchaoSpark = parseUrl('colchao_spark.png');
+const ColchaoCoral = parseUrl('colchao_coral.webp');
+const ColchaoBlue = parseUrl('colchao_blue.webp');
+
 import useMobile from '../../hooks/useMobile';
 
 export default function SleepAndLive() {

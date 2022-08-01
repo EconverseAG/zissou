@@ -1,29 +1,30 @@
 import {Image, useProduct} from '@shopify/hydrogen/client';
 import {useCallback, useMemo, useState} from 'react';
 import Slider from 'react-slick';
+import parseUrl from '../../helpers/parseUrl';
 
 import useZissouProduct from '../../hooks/useZissouProduct';
 
 import * as styles from './ZissouProductImages.module.scss';
 
-import ArrowNextSpark from '../../assets/next-arrow-spark.svg';
-import ArrowPrevSpark from '../../assets/prev-arrow-spark.svg';
-import ArrowNextBlue from '../../assets/next-arrow-blue.svg';
-import ArrowPrevBlue from '../../assets/prev-arrow-blue.svg';
-import ArrowNextCoral from '../../assets/next-arrow.svg';
-import ArrowPrevCoral from '../../assets/prev-arrow.svg';
-import ArrowNext from '../../assets/next-arrow-lilac.svg';
-import ArrowPrev from '../../assets/prev-arrow-lilac.svg';
-import TravesseiroBanner from '../../assets/travesseiro_banner_mobile.jpg';
-import BaseBanner from '../../assets/base-banner.gif';
-import LencolBanner from '../../assets/lencol-banner-background.png';
-import DuvetBanner from '../../assets/duvet-banner-background.png';
-import SparkBanner from '../../assets/pdp-spark-mobile.png';
-import CoralBanner from '../../assets/pdp_coral_mobile.png';
-import BlueBanner from '../../assets/pdp_blue_mobile.png';
-import SparkCaixa from '../../assets/spark-caixa.png';
-import CoralCaixa from '../../assets/caixas-coral.jpg';
-import BlueCaixa from '../../assets/blue-caixa.jpg';
+const ArrowNextSpark = parseUrl('next-arrow-spark.svg');
+const ArrowPrevSpark = parseUrl('prev-arrow-spark.svg');
+const ArrowNextBlue = parseUrl('next-arrow-blue.svg');
+const ArrowPrevBlue = parseUrl('prev-arrow-blue.svg');
+const ArrowNextCoral = parseUrl('next-arrow.svg');
+const ArrowPrevCoral = parseUrl('prev-arrow.svg');
+const ArrowNext = parseUrl('next-arrow-lilac.svg');
+const ArrowPrev = parseUrl('prev-arrow-lilac.svg');
+const TravesseiroBanner = parseUrl('Travesseiro_banner_mobile_1.jpg');
+const BaseBanner = parseUrl('base-banner.gif');
+const LencolBanner = parseUrl('lencol-banner-background.png');
+const DuvetBanner = parseUrl('duvet-banner-background.png');
+const SparkBanner = parseUrl('pdp-spark-mobile.png');
+const CoralBanner = parseUrl('pdp_coral_mobile.png');
+const BlueBanner = parseUrl('pdp_blue_mobile.png');
+const SparkCaixa = parseUrl('spark-caixa.png');
+const CoralCaixa = parseUrl('caixas-coral.jpg');
+const BlueCaixa = parseUrl('blue-caixa.jpg');
 import useMobile from '../../hooks/useMobile';
 
 const MODEL_3D_TYPE = 'MODEL_3D';
