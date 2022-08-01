@@ -23,7 +23,6 @@ import TruckIcon from '../../assets/TruckIcon.png';
 
 import * as styles from './Cart.module.scss';
 import Slider from 'react-slick/lib/slider';
-import {CheckoutButton} from '@cartpanda/hydrogen-checkout-button';
 import shopifyConfig from '../../../shopify.config';
 import TotalMinicartPrices from '../../helpers/handleMinicartPrice';
 
@@ -559,13 +558,6 @@ function CartFooter({totalLine}) {
           </div>
         </div>
       </div>
-      <CheckoutButton
-        className={styles.cartCheckout}
-        cart={cart}
-        config={shopifyConfig}
-      >
-        FINALIZAR COMPRA
-      </CheckoutButton>
     </footer>
   );
 }
